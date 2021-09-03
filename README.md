@@ -1,2 +1,3 @@
-# languagecloud-api-docs
-Language Cloud Public API Documentation
+# Language Cloud Public API Documentation
+
+Coming soon...
