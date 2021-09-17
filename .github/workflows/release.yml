@@ -42,3 +42,4 @@ jobs:
       - shell: pwsh
         run: |
           .\releaseDocs.ps1 "$GITHUB_ACTOR" "${{ secrets.GITHUB_TOKEN }}"
+        if: github.event_name != 'pull_request'
