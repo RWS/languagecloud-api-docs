@@ -16,3 +16,9 @@ At the moment, the [RWS Language Cloud API](https://languagecloud.sdl.com/lc/api
 
 ## Where to find the API Documentation ##
 The API documentation is currently hosted here - [RWS Language Cloud Public API](https://languagecloud.sdl.com/lc/api-docs/)
+
+## What's New ##
+The API documentation has a dedicated section where you can find out more about the recent additions here - [What's New](https://languagecloud.sdl.com/lc/api-docs/16d216d6237ee-what-s-new)
+
+## Deprecated Features ##
+Now and again, we need to make changes to the RWS Language Cloud Public API which can impact existing integrations and add-ons. We try to provide as much notice as possible when we do this. You can find a list of deprecated features in the API documentation here - [What's Deprecated](https://languagecloud.sdl.com/lc/api-docs/8ba4317de9d1e-what-s-deprecated)
