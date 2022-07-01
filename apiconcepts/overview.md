@@ -2,7 +2,7 @@
 The [RWS Language Cloud Public API](https://languagecloud.sdl.com/lc/api-docs/) enables external applications to interact with RWS Language Cloud.
 
 ## Product Configurations ##
-This applies to all products that are based on RWS Language Cloud, including, but not limited to, Trados Enterprise, Trados Live Team and Trados Live Essential. Note that, depending on the product and specific product configuration, certain functionaly may not be available or the rate might be limited through [the API](https://languagecloud.sdl.com/lc/api-docs/). In general, when certain functionality is available in your specific product configuration, the corresponding endpoints will also be available in [the API](https://languagecloud.sdl.com/lc/api-docs/).
+This applies to all products that are based on RWS Language Cloud. Note that, depending on the product and specific product configuration, certain functionaly may not be available or the rate might be limited through [the API](https://languagecloud.sdl.com/lc/api-docs/). In general, when certain functionality is available in your specific product configuration, the corresponding endpoints will also be available in [the API](https://languagecloud.sdl.com/lc/api-docs/).
 
 ## Functionality Overview ##
 At present, [the public API](https://languagecloud.sdl.com/lc/api-docs/) contains mainly functionality that enables the creation, management and tracking of cloud translation projects.
