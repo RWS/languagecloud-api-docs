@@ -22,3 +22,6 @@ The API documentation has a dedicated section where you can find out more about 
 
 ## Deprecated Features ##
 Now and again, we need to make changes to the RWS Language Cloud Public API which can impact existing integrations and add-ons. We try to provide as much notice as possible when we do this. You can find a list of deprecated features in the API documentation here - [What's Deprecated](https://languagecloud.sdl.com/lc/api-docs/8ba4317de9d1e-what-s-deprecated)
+
+## Reporting Issues ##
+If you want to report an issue with the Public API, you can find information on how to do this here - [How to report an issue](https://languagecloud.sdl.com/lc/api-docs/h5oizt92tuhtg-how-to-report-an-issue)
