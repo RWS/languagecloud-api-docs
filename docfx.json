@@ -1,4 +1,19 @@
 {
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "articles/BCM/Assembly/v1.3.1",
+          "files": [
+            "Sdl.Core.Bcm.BcmModel.dll"
+          ]
+        }
+      ],
+      "dest": "api/BCM",
+      "disableGitFeatures": true,
+      "disableDefaultFilter": false
+    }
+  ],
   "build": {
     "content": [
       {
@@ -15,7 +30,7 @@
         ]
       },
       { 
-	      "files": [
+        "files": [
           "apiconcepts/**.md",
           "apiconcepts/toc.yml"
         ]
