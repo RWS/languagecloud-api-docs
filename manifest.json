@@ -25,6 +25,1434 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html",
+          "hash": "084eM9zV8bfCy1JHSXNCx3TNHjLyrDA+6MIc+rKFJNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html",
+          "hash": "QRwx3/laFMBAOhdpXATHwU3QdgtQd9Da0kjMHfaRyy8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html",
+          "hash": "vG8x9QHduMZRQ10ckgANZ02imKsb25TUKWeq58sKCGM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.html",
+          "hash": "TY57vXcmd/UlLi85BpWx4N2XncsN530XPQRjfcTsSlU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.html",
+          "hash": "UfZVEq98gMwuYKNOKf+gn2bji1VrEv4xALCfcM7KHMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.html",
+          "hash": "FMGoxLaQU+aFapyzai8/7e3Aby5l/UtfYDXSIEbJMsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.html",
+          "hash": "uj1kFi/ULVF6FrKdTjwn3Xsgn8BXQSJaNGJGkY0cAhE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.html",
+          "hash": "tT/w2hL2/h90/B1S7JAOwVItxIqs66+lnx8kbXrIjcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html",
+          "hash": "y+INe5GHewUXLLgT1oUKdZ6P3JNv4YXU6G5OGXf+USQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.html",
+          "hash": "cm48C22uCalmsht1l0LEp09Pn9TkokdxQpEfeq5Y9AQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.html",
+          "hash": "aG0bmVpAf07uuF4jfSyv4t3bWOuPmHxa5CCWoHIuylU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html",
+          "hash": "vXa257EV/mLx0U/iO13PmSBDsNK+c/h3fRvSOlwuRPE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html",
+          "hash": "iqYthWY/OPQGOUvXRllyebko7BXhPJeNyFbiykxpOZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.html",
+          "hash": "VTSiWRGFXP5ttA4/YUBFXJQevYUxAH3M393rMsJhSLU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.html",
+          "hash": "7jZkUr9fLgBT1cc/UFcx+rnqPMAcSjaOlDh3R5rojm0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html",
+          "hash": "kKapConYTOlf8oMW2hgkfRzM8f0Bo0eOYtczn5WZhuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.html",
+          "hash": "HpiRozimsd04QZkg5/JI50QGACrSLqDe7tCArtuH0cE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html",
+          "hash": "grsSi3B4OFp+hz+FCWgoutTRp4VL85NVmvUtIisKprk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.html",
+          "hash": "x4WvWnWmE3/JpTzaWiRJdvBgofy5GCeH2ZE5Cp+E5jY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html",
+          "hash": "ZTGs+TiK9Ck/fCnFHAvlPxfvcqCRiJ/Ofnav0vGh5P8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html",
+          "hash": "soZP3jhNJmt1niphtiNB6xPM4f1J+xVPCw2LVAv+NJU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.html",
+          "hash": "LyX2ZrgvjR/EnaMhkbGjwJ2vpX1ujTo2tegm/3fmr4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.html",
+          "hash": "+mjzqjnrlo6FXvZ1GJSBLKxPqVZ9SXszoCF6eF/H/Oc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFile.html",
+          "hash": "+lFp9mTc8U8RTtrU2QUEKm0SQF5jFVE8u3/mP9cPDGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.html",
+          "hash": "Pv0zf8i5XAuZPhakz78r358NwpLSHuG6yHMMZWDaQgU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Document.html",
+          "hash": "etAabSMVKKkDQWbvJROphbLlspHATX6+w920dCnmWR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.html",
+          "hash": "qOd2eUAnQnorr7ztcC+C4x/xk7hMMl1H0L5TjrIXR8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.html",
+          "hash": "of3OCKS3lPuTF76vu7spx611NsD9d1ora8nHkKC6f0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html",
+          "hash": "Pq2IIbeVklywbaD1uaQpZvPrgiP01oUUZrNPsLChydg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackContainer.html",
+          "hash": "pcMXpxyytiyfcTQYxGosl0xh7mblNM0dwdDJMtZSqW8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackType.html",
+          "hash": "Mf0OrrrDM2u41h5YHMEp+/TAsAkpeI9RbrE0hwbPZj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.File.html",
+          "hash": "ohAmR1/zlj8SIGqUhIzwEtsewjGkONa7zQgDc6xWCSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.html",
+          "hash": "EbEWDD5hPiIwsy2N+BzMseIF4+3VKEXI0NzMEYrsobQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html",
+          "hash": "RMFyAZ52zdDPY+GncRxR042jjmBZsELwyO7HTkedzZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.html",
+          "hash": "hEAhNwYh1F1OVdmnInM9cv3Yd2NgoV4cUk/q5/ZvVuY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.html",
+          "hash": "nnetNzEGJ7URm6Svl3VwXHxUmitKvuT2MxeV1HvxtEI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LockedContentContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LockedContentContainer.html",
+          "hash": "CcYVximqyCwtv0RjBpG9InDx6s9SJK5OBTgGzQYmdKo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupData.html",
+          "hash": "8q/szMM3egGhH0hDIh1+V7rgNBgGtYb8HIW/L3J18oc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html",
+          "hash": "aGQEc7IPMETbRYlIY7OR4JhAZcYmct622j8dZDwvHLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MetadataContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MetadataContainer.html",
+          "hash": "2DiOfLTE2DF5V4tkzJ2U1TbgQRhEbo1shq95g/4M9tY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Paragraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Paragraph.html",
+          "hash": "qOWmyqO/BsEJxWg8ftgEiM/qk0t0HP5wHmEAyngvLmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnit.html",
+          "hash": "LKnyNQ1eExpio2Bxdv7XSiRS2E7WGwWWGL8uZCp+gYI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.html",
+          "hash": "JlhlSHB4XewPe8RyqjXnZp9pY4RbfEE9PvkDIPreRrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html",
+          "hash": "5zuQfGsH1DlFs+y6eUYv0917a5DhNswbrYvpg+DbCAk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html",
+          "hash": "WdeJBU0B/jtPxR2WgW9zLyQL5qUc+Xzq7ZHAlM/poqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html",
+          "hash": "/uBZh9uOQeynzEu0Fm3LEYid+2kxvcj0irMwqa8Efmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.html",
+          "hash": "eboilA7xtrBLM8kbdPM431bSW6BQ2bWqNrkP49MplzE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.html",
+          "hash": "hw/GWPj6iUSOypyNHYs8+hF1xvd254zEQ9+hgtl8HA4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html",
+          "hash": "KOvk6l9gVUmvVUoIbFrXOTiskJr5z7OG26ZqHd1vreU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.html",
+          "hash": "Y3fP8KjxjLa7FpJcxjglJM63oQYnobjpgx70aUSlcB4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.html",
+          "hash": "jBwQBZ0hLyZftqB737VmlpjKS/YBAk3Ecmj/KKH9xfA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.html",
+          "hash": "eteOwn5MGYrB8MXOvatcGotmofQLGg15wmwYNbO3GZY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PlaceholderTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PlaceholderTag.html",
+          "hash": "1OP5/dTHK8uRgP202wGj0rbgFSCdU0iupFKvwxzZ6oU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionContainer.html",
+          "hash": "yPnGCQ83VUiXC4vbDXtMcKUfv1kni3foLQ7Ojpo75/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionType.html",
+          "hash": "VcLsU9QdXYM9ia83x9Tj7SdVXK8RfDJmORaXeRP0fIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Segment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Segment.html",
+          "hash": "lLULkhLyqI9mxdCzgoWEYuM0MgB8vMBMlTdwLgv2Poc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.html",
+          "hash": "FUsILMnMrJ6vo4u1PDd1w4NnfF8EJtX8ZfkybpAcQrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentPair.html",
+          "hash": "0yrtdseSak5WLQF6SbpIkpONf2IFdzlOGLU7/CvP/4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentationHint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentationHint.html",
+          "hash": "AUblPcgRrROHQUg92FHoxm1PRdh5pDoFyIGsH7AdIeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.html",
+          "hash": "Q4vaZA/k1b8cE0u7XLLcRNNS0ONUQavO+pTjfV426/g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.html",
+          "hash": "wwOYV5c4nUUFbqrWxZOnGoTd5YwLRWs/Nts33XBm5cU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.html",
+          "hash": "14MmpLhmaF7unL/Yiob/GV7i1api4IDixIqy3AEn30s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html",
+          "hash": "at7U/X1b2HnW/5edJIbSGmLxg91Beu8vMlu7CmhpakQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.html",
+          "hash": "EBtZh2PzZ10R3ZEV5U7AxSQKHguiF1js91t6xjWmEPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Context.html",
+          "hash": "+qMM3TaffkS23g5EdlUzP00NEIGm6eefQ/r30MxXup0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html",
+          "hash": "rxSUdS2sjH1RZJHA1tBD+GaQs+6DdK3/P3sQcJowr4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html",
+          "hash": "pBLfp8wANxAR13mQPTmcbMhFGYdifZtITc+JP4Fe0NY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html",
+          "hash": "V7Ji72UnomDyidsz8thG/kxkNoQXygOr8LpGBN6Hmcg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.html",
+          "hash": "UKk0jMNCSqhxtOmZ1lz+1Z+mrkC9lJA+Fw7Poin9G3k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.html",
+          "hash": "US0/fT5ch2b80lUzzaixjSeIqYkcvnQH9MSEpF+n4TQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html",
+          "hash": "IebAR+awVSzzmF55yxESyfYOOotZ1VtEp4DOed5rlJ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html",
+          "hash": "E9HoAndto/CZV0T5aN5FLTSZCW3d22jH91tzeKfIfBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html",
+          "hash": "cwrnRPUnul5+5fgmJ4mK2KMzoJrvfYOYEvEG6ix3prU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html",
+          "hash": "wfI8uduhUOrxWHZnJV03PWBNZ8KEx/qDPk/bWYbpJ+k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html",
+          "hash": "5csM/wKwda0Q64bGcz4lj/oQrPZHloIAsehtyhieTm8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.html",
+          "hash": "MrdjoTTe/nmf4b9CmjJPUmIqrW7w66kxc24irqls0VY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html",
+          "hash": "6FqCmQjbxr1dTr7J+orh9JyZRW6xKjHNaAKwjYgOCPQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Term.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html",
+          "hash": "7N7XuNY6LF+HXtXeRJyq1nepiH7e6GTjljwpVWfRqpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html",
+          "hash": "cat1qCIqZKP71QpiY1c+G0lWI6CLmCpziFWueB7nylQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.html",
+          "hash": "qWyfgyUEG4tpDb2h5CC1P+lGc/oV8z6tUBUQHU9uWMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html",
+          "hash": "1MSTss23OZKISoAa/md+1LcY4K2KFv1Bsrs89WXwh9U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.html",
+          "hash": "d8V8ikcegnj8+b7grM1r3kDuSjpvOVWUlq6RGh8pUbw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.StructureTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.StructureTag.html",
+          "hash": "ebg3ZMe2CChZgVxBCVIPziOegJqF8nbZPoiNKh0nTms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPair.html",
+          "hash": "a+LBBZPb++CX34zC3HDo55tasRnyI98TiZ34wJZxowo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.html",
+          "hash": "X20GkBvApyPFQqZTSxI4GcBV9KnV8aokojtb6ql9V5k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.html",
+          "hash": "OtFKOTwezj8FcZXvyZ8HAOfbLT4PDfEy7yPkqRPq1rE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextMarkup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextMarkup.html",
+          "hash": "7s7/WJIf+pSFkXCfHIFm6eEbM7Z7Da9nQFGWSf4dooM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.html",
+          "hash": "2mFZBDl86oftFYHdFcp39JoHMIJoLKSEarTGjQtDWeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html",
+          "hash": "aqMMW+E10x+bLrTI+E0NjySU/KdEsvhbM2COAxDR7h8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html",
+          "hash": "+N5VhnjRsWX/hBd+uTRqO5bo1rYSWsmKPGS9JnQ9oFA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html",
+          "hash": "leI21Lm+zH1ohSb/7TFZ1tH27VpJUdPYeQAipp12A8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html",
+          "hash": "pAbDbNEfkeKuQdz/xF7zITB55WX3djdGG2Jz22OV0+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html",
+          "hash": "LuP790i5MApJZ7ebvWVPpk0ZBYI9xXn1u9rYepezeKA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html",
+          "hash": "2gAjWHhf79nxIpp/fTp3Esm+9moK3kqbH+DRVpnnFOU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html",
+          "hash": "AD0u+8/5u4VGVPeNl9isDfWTHaVD8Zga72uswlepbiI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html",
+          "hash": "/lKqxkJQquwoPtkayX6tYqqQErc9/l6Nt2iGciJdwfM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html",
+          "hash": "LmKIgFZ70n1AdAg+eS16EouNit5OYxB3fkSHFXawlTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html",
+          "hash": "QDfKRZMW1h9G0xYVQoZemQbutd+W/HFxtTSBdFY/4cU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html",
+          "hash": "EjD1mrFM7x8Uxe+GwrAm5z9zMbh4zP0Do6kWkZDGgVk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html",
+          "hash": "LlVsnnZOsEwu5tcueoOjdq7G+6A9mbCNBasJ2ygtx0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html",
+          "hash": "cQxGnYbvvywrN4NRGalogaW8hULLKOt5pmp1B/enlqQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html",
+          "hash": "/oxFyZ3ml/e5o/sQG2+Os7lPHoZnkjCREBIRHPMHJOo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html",
+          "hash": "q3LpTw1lpbEIr6mtCyc6jOe9xRcIeGy0nALlAXmBDgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html",
+          "hash": "NLOXpfjy63VtxuIGi7YZFL9dnqMVFPIcTKCNBAl8SUQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html",
+          "hash": "2S7Z4uve4CZvJKnfhNj8NOYDN4MzbH8BWfP2gPIWJPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html",
+          "hash": "HE+UbrEOFnX98IQjB/NP04RajHUfSeeQajQGsKlJFi8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html",
+          "hash": "ZyocJq3lcaZQBD3S0mCPyYfQlQ0YiMzPhOwNiHJdMkE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html",
+          "hash": "ycFHISzo8gucClkdeWjlONeT5Eh0vZhId9bBda3fNOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html",
+          "hash": "MBppCc9CNkF7cqvnDVSfbaBzpgPfTAC5AEgF4nfPmps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html",
+          "hash": "WhvwphtYQ7Lllb9/SMRiV20Oo+Nzf9g6TD/q+eCNunE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html",
+          "hash": "MRBh5DQ/LzKh9UtElX3UrRNxcBhgWaHcCHOUKEGNlcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.html",
+          "hash": "TyroOdw5OKuwDZrR9BJiVfkNFGLuhwWkA/Hg38J2YBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html",
+          "hash": "ZFMAzEPrI9kXV4oL6pSPaNhluaQWcb47pSLZ0N4Wcpg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html",
+          "hash": "uGeSJl+L41zMRYq2US5XXoArQtpTFUmYXYM0gRxu9ic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.html",
+          "hash": "CMt0af4OUul+xc4FQHI04f04MP6LAx23EKhVuKxq74E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html",
+          "hash": "qv10+oyHABzstzxz5Dd2h9JPPCygayrac9oFef5LES0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.html",
+          "hash": "I07Htya8Yn4r4sMjU8396orSjEozYAUQY/CzdWOOgMg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.html",
+          "hash": "d5T3o8G5pPeQYy3VNhcXHG70vNVTni2PrxLXlpeVFNY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/BCM/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/toc.html",
+          "hash": "LfCxaA1Q40mDy1OtELEHsnNc0eU9BQ7wy8kBP6F4KhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "apiconcepts/extensibility.md",
       "output": {
@@ -42,7 +1470,7 @@
       "output": {
         ".html": {
           "relative_path": "apiconcepts/overview.html",
-          "hash": "KgkF8tGjqbOzqZwFfXlWmC+eRUFsQoa1h3xsRZxewMA="
+          "hash": "yHQixNsGLkfNgYW8WHopv4F+m1cAxvcQyJcpsqEnD8k="
         }
       },
       "is_incremental": false,
@@ -55,6 +1483,30 @@
         ".html": {
           "relative_path": "apiconcepts/toc.html",
           "hash": "kGk58J0h7lYng41J2Z7XBPLw66TFVqsYZH7GG68AT/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/BCM.NET_client_API.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/BCM.NET_client_API.html",
+          "hash": "FBdR0sHYCG6f6IqXVCzLDkeekTabSlpaY4gUJILoy7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/BCM/Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/BCM/Samples.html",
+          "hash": "TmfrGgymme97l5/ViOSlJZg3ssWYkHxTWm/R6Lp01n0="
         }
       },
       "is_incremental": false,
@@ -78,7 +1530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "HocIIAtWaqxD7AXfetLGVcrBoI6sNur5KapGWRvN1y0="
+          "hash": "NQv5NMXsFzXlVQT5iu5Zymcl26D55zuvU7bDZjlyWsU="
         }
       },
       "is_incremental": false,
@@ -123,7 +1575,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 7,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 119,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

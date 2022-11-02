@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BCM .NET Client API Samples </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="BCM .NET Client API Samples ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <span class="glyphicon glyphicon-search search-icon"></span>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar-default">
+          <div class="container hide-when-search">
+            <div class="breadcrumb-container" id="breadcrumb">
+              <ul class="breadcrumb col-md-10">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bcm-net-client-api-samples">BCM .NET Client API Samples</h1>
+
+<h2 id="operations-with-comments">Operations with comments</h2>
+<h3 id="get-all-the-comments-in-a-bcm-document">Get all the comments in a BCM Document</h3>
+<pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
+
+IEnumerable&lt;SegmentPair&gt; allSegmentPairs = document.Files.Select(file =&gt; file.ParagraphUnits).SelectMany(p =&gt; p.AllSegmentPairs);
+
+List&lt;CommentContainer&gt; sourceComments = allSegmentPairs.Select(segmentPair =&gt; segmentPair.Source)
+                                                                .SelectMany(segment =&gt; segment.AllSubItems.OfType&lt;CommentContainer&gt;())
+                                                                .ToList();
+
+List&lt;CommentContainer&gt; targetComments = allSegmentPairs.Select(sp =&gt; sp.Target)
+                                                        .SelectMany(segment =&gt; segment.AllSubItems.OfType&lt;CommentContainer&gt;())
+                                                        .ToList();
+foreach (var comment in sourceComments)
+{
+    Console.WriteLine($&quot;Source comment in segment {comment.ParentSegment.SegmentNumber} with text {comment.Definition.Text}&quot;);
+}
+foreach (var comment in targetComments)
+{
+    Console.WriteLine($&quot;Target comment in segment {comment.ParentSegment.SegmentNumber} with text {comment.Definition.Text}&quot;);
+}
+</code></pre><h3 id="add-a-comment-over-a-text-element">Add a comment over a text element</h3>
+<pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
+
+var definition = new CommentDefinition
+{
+    Text = &quot;new comment&quot;,
+    CommentSeverity = CommentSeverity.Medium,
+    Author = &quot;author&quot;,
+    Date = DateTime.Now
+};
+
+var comment = new CommentContainer
+{
+    CommentDefinitionId = definition.Id
+};
+
+// Find a text element on which to add a Comment
+var text = document.Files.First().ParagraphUnits.SelectMany(x =&gt; x.Target.AllSubItems.OfType&lt;TextMarkup&gt;()).First();
+
+// Remove the Text from its current parent
+var parentElement = text.Parent;
+var indexInParent = text.IndexInParent;
+parentElement.Remove(text);
+// Add the Text to the newly created Comment element
+comment.Add(text);
+// Insert the new Comment element to replace the Text, in the same position
+parentElement.Insert(indexInParent, comment);
+</code></pre><h3 id="remove-a-comment">Remove a comment</h3>
+<pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
+var comment = document.Files.First().ParagraphUnits.SelectMany(x =&gt; x.Target.AllSubItems.OfType&lt;CommentContainer&gt;()).First();
+
+// Remove it from the FileSkeleton, where the Comment data is stored
+document.Files.First().Skeleton.CommentDefinitions.Remove(comment.Definition);
+
+// Remove the Comment from its parent element
+comment.Parent.Remove(comment);       
+</code></pre><h2 id="bcm-visitor">BCM Visitor</h2>
+<p>This sample gathers the translatable content from a BCM documents and creates a HTML file with the content.</p>
+<h3 id="htmloutputvisitor">HtmlOutputVisitor</h3>
+<pre><code class="lang-csharp">using Sdl.Core.Bcm.BcmModel;
+using Sdl.Core.Bcm.BcmModel.Annotations;
+using Sdl.Core.Bcm.BcmModel.Common;
+using System.Text;
+
+namespace Sdl.Core.Bcm.API.Samples.Visitor
+{
+    class HtmlOutputVisitor : BcmVisitor
+    {
+        // Gathers HTML content from the BCM content.
+        private readonly StringBuilder _result = new StringBuilder();
+
+        /// &lt;summary&gt;
+        /// Creates a new instance of &lt;see cref=&quot;HtmlOutputVisitor&quot;/&gt; and gathers content as HTML from &lt;paramref name=&quot;markupData&quot;/&gt; and all its descendant elements.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;markupData&quot;&gt;The &lt;see cref=&quot;MarkupData&quot;/&gt; element from which to extract HTML content.&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public static string Collect(MarkupData markupData)
+        {
+            var collector = new HtmlOutputVisitor();
+            markupData.AcceptVisitor(collector);
+            return collector.Result;
+        }
+
+        /// &lt;summary&gt;
+        /// After &lt;see cref=&quot;Collect(MarkupData)&quot;/&gt; is called, this will contain the HTML output text.
+        /// &lt;/summary&gt;
+        /// &lt;value&gt;
+        /// The result.
+        /// &lt;/value&gt;
+        public string Result =&gt; _result.ToString();
+
+        /// &lt;summary&gt;
+        /// Visits all the descendant elements of &lt;paramref name=&quot;container&quot;/&gt;.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;container&quot;&gt;The container.&lt;/param&gt;
+        public void VisitChildren(MarkupDataContainer container)
+        {
+            foreach (var markupData in container.Children)
+            {
+                markupData.AcceptVisitor(this);
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// Visits the descendants of a Comment element.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;commentContainer&quot;&gt;&lt;/param&gt;
+        public override void VisitCommentContainer(CommentContainer commentContainer)
+        {
+            VisitChildren(commentContainer);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits the descendants of a Feedback element.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;feedbackContainer&quot;&gt;&lt;/param&gt;
+        public override void VisitFeedbackContainer(FeedbackContainer feedbackContainer)
+        {
+            VisitChildren(feedbackContainer);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits the descendants of a Locked Content element.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;lockedContentContainer&quot;&gt;&lt;/param&gt;
+        public override void VisitLockedContentContainer(LockedContentContainer lockedContentContainer)
+        {
+            VisitChildren(lockedContentContainer);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits the target &lt;see cref=&quot;Paragraph&quot;/&gt; and wraps its content inside a DIV tag.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;paragraph&quot;&gt;&lt;/param&gt;
+        public override void VisitParagraph(Paragraph paragraph)
+        {
+            _result.Append($&quot;&lt;div type=\&quot;paragraph\&quot;&gt;&quot;);
+
+            VisitChildren(paragraph);
+
+            _result.Append($&quot;&lt;/div&gt;&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits a &lt;see cref=&quot;PlaceholderTag&quot;/&gt; non-translatable element and appends its content as a VAR tag.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;tag&quot;&gt;&lt;/param&gt;
+        public override void VisitPlaceholderTag(PlaceholderTag tag)
+        {
+            _result.Append($&quot;&lt;var id=\&quot;{tag.Id}\&quot;&gt;{tag.Definition.DisplayText}&lt;/var&gt;&quot;);
+        }
+
+        public override void VisitRevisionContainer(RevisionContainer revisionContainer)
+        {
+            VisitChildren(revisionContainer);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits a &lt;see cref=&quot;Segment&quot;/&gt; translatable element and appends its content as a DIV tag.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;segment&quot;&gt;&lt;/param&gt;
+        public override void VisitSegment(Segment segment)
+        {
+            _result.Append($&quot;&lt;div type=\&quot;segment\&quot; id=\&quot;{segment.Id}\&quot;&gt;&quot;);
+
+            VisitChildren(segment);
+
+            _result.Append($&quot;&lt;/div&gt;&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Structure elements are non-translatable elements which are ignored during the translation process.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;structureTag&quot;&gt;The structure tag.&lt;/param&gt;
+        public override void VisitStructure(StructureTag structureTag)
+        {
+        }
+
+        /// &lt;summary&gt;
+        /// Visits a &lt;see cref=&quot;TagPair&quot;/&gt; element and appends its content as a SPAN tag. 
+        /// Tag pairs are non-translatable elements which can contain translatable content. 
+        /// E.g.: Bold formatting (&lt;b&gt;text&lt;/b&gt;). The start and end Bold tags form the tag pair and the text is a child element.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;tagPair&quot;&gt;&lt;/param&gt;
+        public override void VisitTagPair(TagPair tagPair)
+        {
+            _result.Append($&quot;&lt;span id=\&quot;{tagPair.Id}\&quot;&gt;&quot;);
+
+            VisitChildren(tagPair);
+
+            _result.Append(&quot;&lt;/span&gt;&quot;);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits the descendants of a Terminology Annotation element.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;terminologyAnnotation&quot;&gt;&lt;/param&gt;
+        public override void VisitTerminologyContainer(TerminologyAnnotationContainer terminologyAnnotation)
+        {
+            VisitChildren(terminologyAnnotation);
+        }
+
+        /// &lt;summary&gt;
+        /// Visits a &lt;see cref=&quot;TextMarkup&quot;/&gt; element and appends its content as plain text.
+        /// These are translatable text elements.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;text&quot;&gt;&lt;/param&gt;
+        public override void VisitText(TextMarkup text)
+        {
+            _result.Append(text.Text);
+        }
+    }
+}
+</code></pre><h3 id="usage">Usage</h3>
+<pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
+
+var visitor = new HtmlOutputVisitor();
+
+// Surround content with an &lt;html&gt; tag.
+var result = new StringBuilder(&quot;&lt;html&gt;&quot;);
+
+// Extract content from each BCM File.
+// A File represents the content extracted from a native file. A BCM Document can have content extracted from multiple files.
+document.Files.ForEach(file =&gt;
+{
+    // Get all the target content in a File
+    var targetSegments = file.ParagraphUnits.Select(punit =&gt; punit.Target);
+
+    foreach (var targetSegment in targetSegments)
+    {
+        // Visit each target Segment and append its content as HTML
+        result.Append(HtmlOutputVisitor.Collect(targetSegment));
+    }
+});
+
+result.Append(&quot;&lt;/html&gt;&quot;);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/BCM/Samples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h4>On this page</h4>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
