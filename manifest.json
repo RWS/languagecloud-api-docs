@@ -1489,12 +1489,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/BCM.NET_client_API.md",
       "output": {
         ".html": {
           "relative_path": "articles/BCM.NET_client_API.html",
-          "hash": "FBdR0sHYCG6f6IqXVCzLDkeekTabSlpaY4gUJILoy7A="
+          "hash": "dplIBXAOq+UCgFyWcE+5ny2t2sOJq5NFO/BTxVYsm3U="
         }
       },
       "is_incremental": false,
