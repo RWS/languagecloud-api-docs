@@ -602,7 +602,12 @@
   "articles/BCM.NET_client_API.html": {
     "href": "articles/BCM.NET_client_API.html",
     "title": "Welcome to the BCM .NET client API documentation",
-    "keywords": "Welcome to the BCM .NET client API documentation BCM .NET Client API Documentation BCM .NET Client API Samples"
+    "keywords": "Welcome to the BCM .NET client API documentation BCM .NET Client API Reference API reference generated from the code of the BCM .NET Client. BCM .NET Client API Samples Samples documenting some usages of the BCM .NET Client."
+  },
+  "articles/BCM/API.html": {
+    "href": "articles/BCM/API.html",
+    "title": "BCM .NET Client API",
+    "keywords": "BCM .NET Client API Expand the API Refence in the sidebar to navigate through all the entities and APIs exposed by the BCM .NET Client."
   },
   "articles/BCM/Samples.html": {
     "href": "articles/BCM/Samples.html",
