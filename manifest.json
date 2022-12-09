@@ -1528,12 +1528,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "f+8i7OQ9xaY1a+q+ZoIC/6Xm9tqIlSM1vTytgCS+XLU="
+          "hash": "hxqH5kJ44jErsdMnHjNZIBFFd6yNUvJxo6gkq3lmr3I="
         }
       },
       "is_incremental": false,
