@@ -1442,42 +1442,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "apiconcepts/extensibility.md",
-      "output": {
-        ".html": {
-          "relative_path": "apiconcepts/extensibility.html",
-          "hash": "aIMgIDCIvrA1+v5stY1SyTAcRqnkmfkOZrojZ2nwwq4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "apiconcepts/overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "apiconcepts/overview.html",
-          "hash": "yHQixNsGLkfNgYW8WHopv4F+m1cAxvcQyJcpsqEnD8k="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "apiconcepts/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apiconcepts/toc.html",
-          "hash": "kGk58J0h7lYng41J2Z7XBPLw66TFVqsYZH7GG68AT/s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "articles/BCM.NET_client_API.md",
       "output": {
         ".html": {
@@ -1569,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "XT5WLPah9eZ36weJToelv/NitGerkX7SNF5DDyrKBfA="
+          "hash": "f+8i7OQ9xaY1a+q+ZoIC/6Xm9tqIlSM1vTytgCS+XLU="
         }
       },
       "is_incremental": false,
@@ -1590,7 +1554,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 8,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
