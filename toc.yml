@@ -1,4 +1,6 @@
-- name: Articles
-  href: articles/
-- name: Language Cloud APIs
-  href: apiconcepts/
+- name: API
+  href: https://languagecloud.sdl.com/lc/api-docs
+- name: Extensibility
+  href: https://languagecloud.sdl.com/lc/extensibility-docs
+- name: BCM
+  href: articles/BCM.NET_client_API.html
