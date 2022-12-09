@@ -13,3 +13,6 @@ To create an integration with any of the products listed above, you'll need to u
 
 ## Interacting with files
 Translatable content in <Var:ProductName> is held in a format called **BiLingual Content Model**, or **BCM** for short. You can find **BCM** reference documentation and samples on this site. Click [here](articles/BCM.NET_client_API.html) to find out more.
+
+## Reporting API issues ##
+If you want to report an issue with the API, you can find information on how to do this here - [How to report an issue](https://languagecloud.sdl.com/lc/api-docs/how-to-report-an-issue)
