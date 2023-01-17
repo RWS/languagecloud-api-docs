@@ -10803,6 +10803,18 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
   fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
   nameWithType: TranslationOrigin.CreatedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  name: CreatedOn
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreatedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  nameWithType: TranslationOrigin.CreatedOn
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn*
+  name: CreatedOn
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreatedOn_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  nameWithType: TranslationOrigin.CreatedOn
 - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
   name: CreationDate
   href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreationDate
@@ -10941,6 +10953,30 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
   fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
   nameWithType: TranslationOrigin.MatchPercent
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  name: ModifiedBy
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedBy
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  nameWithType: TranslationOrigin.ModifiedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy*
+  name: ModifiedBy
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedBy_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  nameWithType: TranslationOrigin.ModifiedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  name: ModifiedOn
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  nameWithType: TranslationOrigin.ModifiedOn
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn*
+  name: ModifiedOn
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedOn_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  nameWithType: TranslationOrigin.ModifiedOn
 - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
   name: OriginalTranslationHash
   href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginalTranslationHash
