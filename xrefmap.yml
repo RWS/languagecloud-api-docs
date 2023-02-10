@@ -31,6 +31,18 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.AlignmentData
   nameWithType: AlignmentData.AlignmentData
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone
+  name: Clone()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html#Sdl_Core_Bcm_BcmModel_Alignment_AlignmentData_Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone()
+  nameWithType: AlignmentData.Clone()
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone*
+  name: Clone
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html#Sdl_Core_Bcm_BcmModel_Alignment_AlignmentData_Clone_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.Clone
+  nameWithType: AlignmentData.Clone
 - uid: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.ContentInsertDate
   name: ContentInsertDate
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html#Sdl_Core_Bcm_BcmModel_Alignment_AlignmentData_ContentInsertDate
@@ -109,6 +121,18 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.LiftSpan
   nameWithType: LiftSpan.LiftSpan
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone
+  name: Clone()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html#Sdl_Core_Bcm_BcmModel_Alignment_LiftSpan_Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone()
+  nameWithType: LiftSpan.Clone()
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone*
+  name: Clone
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html#Sdl_Core_Bcm_BcmModel_Alignment_LiftSpan_Clone_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Clone
+  nameWithType: LiftSpan.Clone
 - uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.Length
   name: Length
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html#Sdl_Core_Bcm_BcmModel_Alignment_LiftSpan_Length
@@ -151,6 +175,18 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SpanPairNode
   nameWithType: SpanPairNode.SpanPairNode
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  name: Clone()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone()
+  nameWithType: SpanPairNode.Clone()
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone*
+  name: Clone
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Clone_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  nameWithType: SpanPairNode.Clone
 - uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
   name: Confidence
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Confidence
@@ -7767,120 +7803,6 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.value__
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.value__
   nameWithType: NumericSeparator.value__
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit
-  name: PhysicalUnit
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html
-  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit
-  nameWithType: PhysicalUnit
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory(System.String,System.String)
-  name: AreUnitsSameCategory(String, String)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_AreUnitsSameCategory_System_String_System_String_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory(System.String,System.String)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory(System.String, System.String)
-  nameWithType: PhysicalUnit.AreUnitsSameCategory(String, String)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory*
-  name: AreUnitsSameCategory
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_AreUnitsSameCategory_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitsSameCategory
-  nameWithType: PhysicalUnit.AreUnitsSameCategory
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible(Sdl.Core.Bcm.BcmModel.Tokenization.Unit,Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: AreUnitTypesCompatible(Unit, Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_AreUnitTypesCompatible_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible(Sdl.Core.Bcm.BcmModel.Tokenization.Unit,Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible(Sdl.Core.Bcm.BcmModel.Tokenization.Unit, Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.AreUnitTypesCompatible(Unit, Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible*
-  name: AreUnitTypesCompatible
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_AreUnitTypesCompatible_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.AreUnitTypesCompatible
-  nameWithType: PhysicalUnit.AreUnitTypesCompatible
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: GetAbbreviations(Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetAbbreviations_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.GetAbbreviations(Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations*
-  name: GetAbbreviations
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetAbbreviations_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetAbbreviations
-  nameWithType: PhysicalUnit.GetAbbreviations
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem(Sdl.Core.Bcm.BcmModel.Tokenization.UnitType,System.Globalization.CultureInfo)
-  name: GetDefaultSystem(UnitType, CultureInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetDefaultSystem_Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_System_Globalization_CultureInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem(Sdl.Core.Bcm.BcmModel.Tokenization.UnitType,System.Globalization.CultureInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem(Sdl.Core.Bcm.BcmModel.Tokenization.UnitType, System.Globalization.CultureInfo)
-  nameWithType: PhysicalUnit.GetDefaultSystem(UnitType, CultureInfo)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem*
-  name: GetDefaultSystem
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetDefaultSystem_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetDefaultSystem
-  nameWithType: PhysicalUnit.GetDefaultSystem
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: GetName(Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetName_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.GetName(Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName*
-  name: GetName
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetName_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetName
-  nameWithType: PhysicalUnit.GetName
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation(Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.Globalization.CultureInfo)
-  name: GetPreferredAbbreviation(Unit, CultureInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetPreferredAbbreviation_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_System_Globalization_CultureInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation(Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.Globalization.CultureInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation(Sdl.Core.Bcm.BcmModel.Tokenization.Unit, System.Globalization.CultureInfo)
-  nameWithType: PhysicalUnit.GetPreferredAbbreviation(Unit, CultureInfo)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation*
-  name: GetPreferredAbbreviation
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetPreferredAbbreviation_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetPreferredAbbreviation
-  nameWithType: PhysicalUnit.GetPreferredAbbreviation
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: GetSystem(Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetSystem_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.GetSystem(Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem*
-  name: GetSystem
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetSystem_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetSystem
-  nameWithType: PhysicalUnit.GetSystem
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: GetUnitType(Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetUnitType_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.GetUnitType(Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType*
-  name: GetUnitType
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_GetUnitType_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.GetUnitType
-  nameWithType: PhysicalUnit.GetUnitType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  name: IsMetric(Unit)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_IsMetric_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric(Sdl.Core.Bcm.BcmModel.Tokenization.Unit)
-  nameWithType: PhysicalUnit.IsMetric(Unit)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric*
-  name: IsMetric
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html#Sdl_Core_Bcm_BcmModel_Tokenization_PhysicalUnit_IsMetric_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.IsMetric
-  nameWithType: PhysicalUnit.IsMetric
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
   name: SegmentPosition
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html
@@ -8139,36 +8061,6 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Sign.value__
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.value__
   nameWithType: Sign.value__
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity
-  name: Similarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html
-  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Similarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity
-  nameWithType: Similarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalType
-  name: IdenticalType
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html#Sdl_Core_Bcm_BcmModel_Tokenization_Similarity_IdenticalType
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalType
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalType
-  nameWithType: Similarity.IdenticalType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalValueAndType
-  name: IdenticalValueAndType
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html#Sdl_Core_Bcm_BcmModel_Tokenization_Similarity_IdenticalValueAndType
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalValueAndType
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.IdenticalValueAndType
-  nameWithType: Similarity.IdenticalValueAndType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.None
-  name: None
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html#Sdl_Core_Bcm_BcmModel_Tokenization_Similarity_None
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.None
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.None
-  nameWithType: Similarity.None
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.value__
-  name: value__
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html#Sdl_Core_Bcm_BcmModel_Tokenization_Similarity_value__
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.value__
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.value__
-  nameWithType: Similarity.value__
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
   name: TagType
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html
@@ -8247,12 +8139,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.AbbreviationToken()
   nameWithType: AbbreviationToken.AbbreviationToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: AbbreviationToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.AbbreviationToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AbbreviationToken.AbbreviationToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.#ctor(System.String)
   name: AbbreviationToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken__ctor_System_String_
@@ -8265,54 +8151,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.AbbreviationToken
   nameWithType: AbbreviationToken.AbbreviationToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone()
-  nameWithType: AbbreviationToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Clone
-  nameWithType: AbbreviationToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals(System.Object)
-  nameWithType: AbbreviationToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Equals
-  nameWithType: AbbreviationToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode()
-  nameWithType: AbbreviationToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetHashCode
-  nameWithType: AbbreviationToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AbbreviationToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.GetSimilarity
-  nameWithType: AbbreviationToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AbbreviationToken_Type
@@ -8337,12 +8175,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.AcronymToken()
   nameWithType: AcronymToken.AcronymToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: AcronymToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.AcronymToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AcronymToken.AcronymToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.#ctor(System.String)
   name: AcronymToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken__ctor_System_String_
@@ -8355,78 +8187,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.AcronymToken
   nameWithType: AcronymToken.AcronymToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone()
-  nameWithType: AcronymToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Clone
-  nameWithType: AcronymToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals(System.Object)
-  nameWithType: AcronymToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Equals
-  nameWithType: AcronymToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode()
-  nameWithType: AcronymToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetHashCode
-  nameWithType: AcronymToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AcronymToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.GetSimilarity
-  nameWithType: AcronymToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable
-  nameWithType: AcronymToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsPlaceable
-  nameWithType: AcronymToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable
-  nameWithType: AcronymToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.IsSubstitutable
-  nameWithType: AcronymToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AcronymToken_Type
@@ -8451,12 +8211,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken()
   nameWithType: AlphanumericToken.AlphanumericToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: AlphanumericToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AlphanumericToken.AlphanumericToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(System.String)
   name: AlphanumericToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken__ctor_System_String_
@@ -8469,78 +8223,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken
   nameWithType: AlphanumericToken.AlphanumericToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone()
-  nameWithType: AlphanumericToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Clone
-  nameWithType: AlphanumericToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals(System.Object)
-  nameWithType: AlphanumericToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Equals
-  nameWithType: AlphanumericToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode()
-  nameWithType: AlphanumericToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetHashCode
-  nameWithType: AlphanumericToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: AlphanumericToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.GetSimilarity
-  nameWithType: AlphanumericToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable
-  nameWithType: AlphanumericToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsPlaceable
-  nameWithType: AlphanumericToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable
-  nameWithType: AlphanumericToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.IsSubstitutable
-  nameWithType: AlphanumericToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Type
@@ -8565,12 +8247,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.CharSequenceToken()
   nameWithType: CharSequenceToken.CharSequenceToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: CharSequenceToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.CharSequenceToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: CharSequenceToken.CharSequenceToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.#ctor(System.String)
   name: CharSequenceToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken__ctor_System_String_
@@ -8583,54 +8259,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.CharSequenceToken
   nameWithType: CharSequenceToken.CharSequenceToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone()
-  nameWithType: CharSequenceToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Clone
-  nameWithType: CharSequenceToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals(System.Object)
-  nameWithType: CharSequenceToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Equals
-  nameWithType: CharSequenceToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode()
-  nameWithType: CharSequenceToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetHashCode
-  nameWithType: CharSequenceToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: CharSequenceToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.GetSimilarity
-  nameWithType: CharSequenceToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_CharSequenceToken_Type
@@ -8655,12 +8283,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeToken()
   nameWithType: DateTimeToken.DateTimeToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken)
-  name: DateTimeToken(DateTimeToken)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken)
-  nameWithType: DateTimeToken.DateTimeToken(DateTimeToken)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.#ctor(System.String,System.DateTime,Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType)
   name: DateTimeToken(String, DateTime, DateTimePatternType)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken__ctor_System_String_System_DateTime_Sdl_Core_Bcm_BcmModel_Tokenization_DateTimePatternType_
@@ -8673,18 +8295,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeToken
   nameWithType: DateTimeToken.DateTimeToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone()
-  nameWithType: DateTimeToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Clone
-  nameWithType: DateTimeToken.Clone
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeType
   name: DateTimeType
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_DateTimeType
@@ -8697,90 +8307,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeType
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.DateTimeType
   nameWithType: DateTimeToken.DateTimeType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals(System.Object)
-  nameWithType: DateTimeToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Equals
-  nameWithType: DateTimeToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode()
-  nameWithType: DateTimeToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetHashCode
-  nameWithType: DateTimeToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: DateTimeToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.GetSimilarity
-  nameWithType: DateTimeToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken
-  name: IsDateToken
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsDateToken
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken
-  nameWithType: DateTimeToken.IsDateToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken*
-  name: IsDateToken
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsDateToken_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsDateToken
-  nameWithType: DateTimeToken.IsDateToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable
-  nameWithType: DateTimeToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsPlaceable
-  nameWithType: DateTimeToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable
-  nameWithType: DateTimeToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsSubstitutable
-  nameWithType: DateTimeToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken
-  name: IsTimeToken
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsTimeToken
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken
-  nameWithType: DateTimeToken.IsTimeToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken*
-  name: IsTimeToken
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_IsTimeToken_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.IsTimeToken
-  nameWithType: DateTimeToken.IsTimeToken
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_DateTimeToken_Type
@@ -8817,12 +8343,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GeneralPunctuationToken()
   nameWithType: GeneralPunctuationToken.GeneralPunctuationToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GeneralPunctuationToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GeneralPunctuationToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: GeneralPunctuationToken.GeneralPunctuationToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.#ctor(System.String)
   name: GeneralPunctuationToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken__ctor_System_String_
@@ -8835,54 +8355,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GeneralPunctuationToken
   nameWithType: GeneralPunctuationToken.GeneralPunctuationToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone()
-  nameWithType: GeneralPunctuationToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Clone
-  nameWithType: GeneralPunctuationToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals(System.Object)
-  nameWithType: GeneralPunctuationToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Equals
-  nameWithType: GeneralPunctuationToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode()
-  nameWithType: GeneralPunctuationToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetHashCode
-  nameWithType: GeneralPunctuationToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: GeneralPunctuationToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.GetSimilarity
-  nameWithType: GeneralPunctuationToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GeneralPunctuationToken_Type
@@ -8895,6 +8367,48 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Type
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.Type
   nameWithType: GeneralPunctuationToken.Type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  name: GenericPlaceableToken
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  nameWithType: GenericPlaceableToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.#ctor
+  name: GenericPlaceableToken()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken__ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.GenericPlaceableToken()
+  nameWithType: GenericPlaceableToken.GenericPlaceableToken()
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.#ctor*
+  name: GenericPlaceableToken
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken__ctor_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.GenericPlaceableToken
+  nameWithType: GenericPlaceableToken.GenericPlaceableToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass
+  name: TokenClass
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken_TokenClass
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass
+  nameWithType: GenericPlaceableToken.TokenClass
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass*
+  name: TokenClass
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken_TokenClass_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.TokenClass
+  nameWithType: GenericPlaceableToken.TokenClass
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type
+  name: Type
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken_Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type
+  nameWithType: GenericPlaceableToken.Type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type*
+  name: Type
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_GenericPlaceableToken_Type_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.Type
+  nameWithType: GenericPlaceableToken.Type
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
   name: IPAdressToken
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html
@@ -8907,12 +8421,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IPAdressToken()
   nameWithType: IPAdressToken.IPAdressToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: IPAdressToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IPAdressToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: IPAdressToken.IPAdressToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.#ctor(System.String)
   name: IPAdressToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken__ctor_System_String_
@@ -8925,78 +8433,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IPAdressToken
   nameWithType: IPAdressToken.IPAdressToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone()
-  nameWithType: IPAdressToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Clone
-  nameWithType: IPAdressToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals(System.Object)
-  nameWithType: IPAdressToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Equals
-  nameWithType: IPAdressToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode()
-  nameWithType: IPAdressToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetHashCode
-  nameWithType: IPAdressToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: IPAdressToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.GetSimilarity
-  nameWithType: IPAdressToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable
-  nameWithType: IPAdressToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsPlaceable
-  nameWithType: IPAdressToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable
-  nameWithType: IPAdressToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.IsSubstitutable
-  nameWithType: IPAdressToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_IPAdressToken_Type
@@ -9021,126 +8457,18 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.MeasureToken()
   nameWithType: MeasureToken.MeasureToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken)
-  name: MeasureToken(MeasureToken)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.MeasureToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken)
-  nameWithType: MeasureToken.MeasureToken(MeasureToken)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken,Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.String,System.Char)
   name: MeasureToken(String, NumberToken, Unit, String, Char)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken__ctor_System_String_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_System_String_System_Char_
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken,Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.String,System.Char)
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.MeasureToken(System.String, Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken, Sdl.Core.Bcm.BcmModel.Tokenization.Unit, System.String, System.Char)
   nameWithType: MeasureToken.MeasureToken(String, NumberToken, Unit, String, Char)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(System.String,System.String,System.String,System.String,Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.String,System.Char,System.Globalization.NumberFormatInfo)
-  name: MeasureToken(String, String, String, String, Unit, String, Char, NumberFormatInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken__ctor_System_String_System_String_System_String_System_String_Sdl_Core_Bcm_BcmModel_Tokenization_Unit_System_String_System_Char_System_Globalization_NumberFormatInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor(System.String,System.String,System.String,System.String,Sdl.Core.Bcm.BcmModel.Tokenization.Unit,System.String,System.Char,System.Globalization.NumberFormatInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.MeasureToken(System.String, System.String, System.String, System.String, Sdl.Core.Bcm.BcmModel.Tokenization.Unit, System.String, System.Char, System.Globalization.NumberFormatInfo)
-  nameWithType: MeasureToken.MeasureToken(String, String, String, String, Unit, String, Char, NumberFormatInfo)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor*
   name: MeasureToken
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken__ctor_
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.MeasureToken
   nameWithType: MeasureToken.MeasureToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone()
-  nameWithType: MeasureToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Clone
-  nameWithType: MeasureToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals(System.Object)
-  nameWithType: MeasureToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Equals
-  nameWithType: MeasureToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode()
-  nameWithType: MeasureToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetHashCode
-  nameWithType: MeasureToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: MeasureToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.GetSimilarity
-  nameWithType: MeasureToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable
-  nameWithType: MeasureToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsPlaceable
-  nameWithType: MeasureToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable
-  nameWithType: MeasureToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsSubstitutable
-  nameWithType: MeasureToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid
-  name: IsValid
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsValid
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid
-  nameWithType: MeasureToken.IsValid
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid*
-  name: IsValid
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_IsValid_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.IsValid
-  nameWithType: MeasureToken.IsValid
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token,System.Boolean)
-  name: SetValue(Token, Boolean)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_SetValue_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_System_Boolean_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token,System.Boolean)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token, System.Boolean)
-  nameWithType: MeasureToken.SetValue(Token, Boolean)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue*
-  name: SetValue
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_SetValue_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.SetValue
-  nameWithType: MeasureToken.SetValue
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_MeasureToken_Type
@@ -9201,24 +8529,12 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken()
   nameWithType: NumberToken.NumberToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken)
-  name: NumberToken(NumberToken)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken)
-  nameWithType: NumberToken.NumberToken(NumberToken)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)
   name: NumberToken(String, NumericSeparator, NumericSeparator, Char, Char, Sign, String, String, String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken__ctor_System_String_Sdl_Core_Bcm_BcmModel_Tokenization_NumericSeparator_Sdl_Core_Bcm_BcmModel_Tokenization_NumericSeparator_System_Char_System_Char_Sdl_Core_Bcm_BcmModel_Tokenization_Sign_System_String_System_String_System_String_
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken(System.String, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, System.Char, System.Char, Sdl.Core.Bcm.BcmModel.Tokenization.Sign, System.String, System.String, System.String)
   nameWithType: NumberToken.NumberToken(String, NumericSeparator, NumericSeparator, Char, Char, Sign, String, String, String)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,System.String,System.String,System.String,System.Globalization.NumberFormatInfo)
-  name: NumberToken(String, String, String, String, NumberFormatInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken__ctor_System_String_System_String_System_String_System_String_System_Globalization_NumberFormatInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,System.String,System.String,System.String,System.Globalization.NumberFormatInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken(System.String, System.String, System.String, System.String, System.Globalization.NumberFormatInfo)
-  nameWithType: NumberToken.NumberToken(String, String, String, String, NumberFormatInfo)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor*
   name: NumberToken
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken__ctor_
@@ -9249,18 +8565,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
   nameWithType: NumberToken.AlternateGroupSeparator
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone()
-  nameWithType: NumberToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Clone
-  nameWithType: NumberToken.Clone
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
   name: DecimalSeparator
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_DecimalSeparator
@@ -9273,60 +8577,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
   nameWithType: NumberToken.DecimalSeparator
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals(System.Object)
-  nameWithType: NumberToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Equals
-  nameWithType: NumberToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.CultureInfo)
-  name: FormatNumber(CultureInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_FormatNumber_System_Globalization_CultureInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.CultureInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.CultureInfo)
-  nameWithType: NumberToken.FormatNumber(CultureInfo)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.NumberFormatInfo)
-  name: FormatNumber(NumberFormatInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_FormatNumber_System_Globalization_NumberFormatInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.NumberFormatInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber(System.Globalization.NumberFormatInfo)
-  nameWithType: NumberToken.FormatNumber(NumberFormatInfo)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber*
-  name: FormatNumber
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_FormatNumber_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.FormatNumber
-  nameWithType: NumberToken.FormatNumber
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode()
-  nameWithType: NumberToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetHashCode
-  nameWithType: NumberToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: NumberToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GetSimilarity
-  nameWithType: NumberToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
   name: GroupSeparator
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GroupSeparator
@@ -9339,30 +8589,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
   nameWithType: NumberToken.GroupSeparator
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable
-  nameWithType: NumberToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsPlaceable
-  nameWithType: NumberToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable
-  nameWithType: NumberToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.IsSubstitutable
-  nameWithType: NumberToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
   name: RawDecimalDigits
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_RawDecimalDigits
@@ -9399,24 +8625,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
   nameWithType: NumberToken.RawSign
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token,System.Boolean)
-  name: SetValue(Token, Boolean)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_SetValue_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_System_Boolean_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token,System.Boolean)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token, System.Boolean)
-  nameWithType: NumberToken.SetValue(Token, Boolean)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(System.String,System.String,System.String,System.Globalization.NumberFormatInfo)
-  name: SetValue(String, String, String, NumberFormatInfo)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_SetValue_System_String_System_String_System_String_System_Globalization_NumberFormatInfo_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(System.String,System.String,System.String,System.Globalization.NumberFormatInfo)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue(System.String, System.String, System.String, System.Globalization.NumberFormatInfo)
-  nameWithType: NumberToken.SetValue(String, String, String, NumberFormatInfo)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue*
-  name: SetValue
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_SetValue_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.SetValue
-  nameWithType: NumberToken.SetValue
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
   name: Sign
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Sign
@@ -9441,30 +8649,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
   nameWithType: NumberToken.Type
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value
-  name: Value
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Value
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value
-  nameWithType: NumberToken.Value
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value*
-  name: Value
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Value_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Value
-  nameWithType: NumberToken.Value
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid
-  name: ValueValid
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_ValueValid
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid
-  nameWithType: NumberToken.ValueValid
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid*
-  name: ValueValid
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_ValueValid_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.ValueValid
-  nameWithType: NumberToken.ValueValid
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
   name: TagToken
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html
@@ -9477,30 +8661,12 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagToken()
   nameWithType: TagToken.TagToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32)
-  name: TagToken(TagType, String, Int32)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_TagType_System_String_System_Int32_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagToken(Sdl.Core.Bcm.BcmModel.Tokenization.TagType, System.String, System.Int32)
-  nameWithType: TagToken.TagToken(TagType, String, Int32)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32,System.Int32,System.String)
-  name: TagToken(TagType, String, Int32, Int32, String)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_TagType_System_String_System_Int32_System_Int32_System_String_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32,System.Int32,System.String)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagToken(Sdl.Core.Bcm.BcmModel.Tokenization.TagType, System.String, System.Int32, System.Int32, System.String)
-  nameWithType: TagToken.TagToken(TagType, String, Int32, Int32, String)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32,System.Int32,System.String,System.Boolean)
   name: TagToken(TagType, String, Int32, Int32, String, Boolean)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_TagType_System_String_System_Int32_System_Int32_System_String_System_Boolean_
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32,System.Int32,System.String,System.Boolean)
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagToken(Sdl.Core.Bcm.BcmModel.Tokenization.TagType, System.String, System.Int32, System.Int32, System.String, System.Boolean)
   nameWithType: TagToken.TagToken(TagType, String, Int32, Int32, String, Boolean)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken)
-  name: TagToken(TagToken)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken)
-  nameWithType: TagToken.TagToken(TagToken)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor*
   name: TagToken
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_
@@ -9543,102 +8709,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.CanHide
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.CanHide
   nameWithType: TagToken.CanHide
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone()
-  nameWithType: TagToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone
-  nameWithType: TagToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals(System.Object)
-  nameWithType: TagToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals
-  nameWithType: TagToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode()
-  nameWithType: TagToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode
-  nameWithType: TagToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: TagToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity
-  nameWithType: TagToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode
-  name: GetWeakHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetWeakHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode()
-  nameWithType: TagToken.GetWeakHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode*
-  name: GetWeakHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetWeakHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode
-  nameWithType: TagToken.GetWeakHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable
-  nameWithType: TagToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable
-  nameWithType: TagToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable
-  nameWithType: TagToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable
-  nameWithType: TagToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor
-  name: SeriliazedWihoutAnchor()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_SeriliazedWihoutAnchor
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor()
-  nameWithType: TagToken.SeriliazedWihoutAnchor()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor*
-  name: SeriliazedWihoutAnchor
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_SeriliazedWihoutAnchor_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor
-  nameWithType: TagToken.SeriliazedWihoutAnchor
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagId
   name: TagId
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_TagId
@@ -9711,12 +8781,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Token()
   nameWithType: Token.Token()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: Token(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Token(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: Token.Token(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.#ctor(System.String)
   name: Token(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token__ctor_System_String_
@@ -9741,78 +8805,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
   nameWithType: Token.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: Equals(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Equals_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: Token.Equals(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Equals
-  nameWithType: Token.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode()
-  nameWithType: Token.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetHashCode
-  nameWithType: Token.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: Token.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetSimilarity
-  nameWithType: Token.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode
-  name: GetWeakHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetWeakHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode()
-  nameWithType: Token.GetWeakHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode*
-  name: GetWeakHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetWeakHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.GetWeakHashCode
-  nameWithType: Token.GetWeakHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable
-  nameWithType: Token.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsPlaceable
-  nameWithType: Token.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable
-  nameWithType: Token.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.IsSubstitutable
-  nameWithType: Token.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
   name: Span
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Span
@@ -9873,12 +8865,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.URIToken()
   nameWithType: URIToken.URIToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: URIToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.URIToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: URIToken.URIToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.#ctor(System.String)
   name: URIToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken__ctor_System_String_
@@ -9891,78 +8877,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.URIToken
   nameWithType: URIToken.URIToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone()
-  nameWithType: URIToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Clone
-  nameWithType: URIToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals(System.Object)
-  nameWithType: URIToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Equals
-  nameWithType: URIToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode()
-  nameWithType: URIToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetHashCode
-  nameWithType: URIToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: URIToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.GetSimilarity
-  nameWithType: URIToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable
-  nameWithType: URIToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsPlaceable
-  nameWithType: URIToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable
-  nameWithType: URIToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.IsSubstitutable
-  nameWithType: URIToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_URIToken_Type
@@ -9987,12 +8901,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.VariableToken()
   nameWithType: VariableToken.VariableToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: VariableToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.VariableToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: VariableToken.VariableToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.#ctor(System.String)
   name: VariableToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken__ctor_System_String_
@@ -10005,78 +8913,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.VariableToken
   nameWithType: VariableToken.VariableToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone()
-  nameWithType: VariableToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Clone
-  nameWithType: VariableToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals(System.Object)
-  nameWithType: VariableToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Equals
-  nameWithType: VariableToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode()
-  nameWithType: VariableToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetHashCode
-  nameWithType: VariableToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: VariableToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.GetSimilarity
-  nameWithType: VariableToken.GetSimilarity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_IsPlaceable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable
-  nameWithType: VariableToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable*
-  name: IsPlaceable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_IsPlaceable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsPlaceable
-  nameWithType: VariableToken.IsPlaceable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_IsSubstitutable
-  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable
-  nameWithType: VariableToken.IsSubstitutable
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable*
-  name: IsSubstitutable
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_IsSubstitutable_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.IsSubstitutable
-  nameWithType: VariableToken.IsSubstitutable
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_VariableToken_Type
@@ -10101,12 +8937,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.WhiteSpaceToken()
   nameWithType: WhiteSpaceToken.WhiteSpaceToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: WhiteSpaceToken(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.WhiteSpaceToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: WhiteSpaceToken.WhiteSpaceToken(Token)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.#ctor(System.String)
   name: WhiteSpaceToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken__ctor_System_String_
@@ -10119,54 +8949,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.WhiteSpaceToken
   nameWithType: WhiteSpaceToken.WhiteSpaceToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone()
-  nameWithType: WhiteSpaceToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Clone
-  nameWithType: WhiteSpaceToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals(System.Object)
-  nameWithType: WhiteSpaceToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Equals
-  nameWithType: WhiteSpaceToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode()
-  nameWithType: WhiteSpaceToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetHashCode
-  nameWithType: WhiteSpaceToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: WhiteSpaceToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.GetSimilarity
-  nameWithType: WhiteSpaceToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.Type
   name: Type
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WhiteSpaceToken_Type
@@ -10191,12 +8973,6 @@ references:
   commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.WordToken()
   nameWithType: WordToken.WordToken()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken)
-  name: WordToken(WordToken)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.WordToken(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken)
-  nameWithType: WordToken.WordToken(WordToken)
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.#ctor(System.String)
   name: WordToken(String)
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken__ctor_System_String_
@@ -10209,54 +8985,6 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.#ctor
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.WordToken
   nameWithType: WordToken.WordToken
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone
-  name: Clone()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_Clone
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone()
-  nameWithType: WordToken.Clone()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone*
-  name: Clone
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_Clone_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Clone
-  nameWithType: WordToken.Clone
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals(System.Object)
-  name: Equals(Object)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_Equals_System_Object_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals(System.Object)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals(System.Object)
-  nameWithType: WordToken.Equals(Object)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals*
-  name: Equals
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_Equals_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.Equals
-  nameWithType: WordToken.Equals
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode
-  name: GetHashCode()
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_GetHashCode
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode()
-  nameWithType: WordToken.GetHashCode()
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode*
-  name: GetHashCode
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_GetHashCode_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetHashCode
-  nameWithType: WordToken.GetHashCode
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  name: GetSimilarity(Token)
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_
-  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
-  nameWithType: WordToken.GetSimilarity(Token)
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity*
-  name: GetSimilarity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_GetSimilarity_
-  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.GetSimilarity
-  nameWithType: WordToken.GetSimilarity
 - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.IsStopword
   name: IsStopword
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_WordToken_IsStopword
@@ -10641,108 +9369,6 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.value__
   fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.value__
   nameWithType: Unit.value__
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem
-  name: UnitSystem
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html
-  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem
-  nameWithType: UnitSystem
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BIS
-  name: BIS
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_BIS
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BIS
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BIS
-  nameWithType: UnitSystem.BIS
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUK
-  name: BISUK
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_BISUK
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUK
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUK
-  nameWithType: UnitSystem.BISUK
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSDry
-  name: BISUSDry
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_BISUSDry
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSDry
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSDry
-  nameWithType: UnitSystem.BISUSDry
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSFluid
-  name: BISUSFluid
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_BISUSFluid
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSFluid
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.BISUSFluid
-  nameWithType: UnitSystem.BISUSFluid
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.Metric
-  name: Metric
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_Metric
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.Metric
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.Metric
-  nameWithType: UnitSystem.Metric
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.NoSystem
-  name: NoSystem
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_NoSystem
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.NoSystem
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.NoSystem
-  nameWithType: UnitSystem.NoSystem
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.value__
-  name: value__
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitSystem_value__
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.value__
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.value__
-  nameWithType: UnitSystem.value__
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType
-  name: UnitType
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html
-  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType
-  nameWithType: UnitType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Area
-  name: Area
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Area
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Area
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Area
-  nameWithType: UnitType.Area
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Capacity
-  name: Capacity
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Capacity
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Capacity
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Capacity
-  nameWithType: UnitType.Capacity
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Length
-  name: Length
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Length
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Length
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Length
-  nameWithType: UnitType.Length
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Mass
-  name: Mass
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Mass
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Mass
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Mass
-  nameWithType: UnitType.Mass
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.NoType
-  name: NoType
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_NoType
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.NoType
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.NoType
-  nameWithType: UnitType.NoType
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Other
-  name: Other
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Other
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Other
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Other
-  nameWithType: UnitType.Other
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Temperature
-  name: Temperature
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_Temperature
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Temperature
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.Temperature
-  nameWithType: UnitType.Temperature
-- uid: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.value__
-  name: value__
-  href: api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html#Sdl_Core_Bcm_BcmModel_Tokenization_UnitType_value__
-  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.value__
-  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.value__
-  nameWithType: UnitType.value__
 - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
   name: TranslationOrigin
   href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html

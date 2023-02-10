@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html",
-          "hash": "RgWvnhmt/DTmH9jnyZrS6ZGA+cuwdSIM/HPcXU5MIWA="
+          "hash": "wzKzt49YQgZo3Re9ru5xwTd1UE/AIQ47Rc1eSPWJnTo="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html",
-          "hash": "pb8G2ltJuheMbkmynPmqnnhsLGrRVM3lHYjgnFErbyg="
+          "hash": "dxt6MOvIQp0wNpEO7tjiB4xH7Rqkwt3wTCxdB/WNLUQ="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html",
-          "hash": "BpTBeardB6XnzjBg4i27ZBp3BEC7xPP9xCIMJ8i3d2o="
+          "hash": "wnEyD2bmVF8rqUv8G/lyKNkJQ6MCv54UJ56OXu7VsW4="
         }
       },
       "is_incremental": false,
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html",
-          "hash": "cGydM4GdAeTkrpkqxTkzk1BH+Gj1ysIlW+iI7VmnJRA="
+          "hash": "pJeHzr95Td4+62g0hLknD0xqRQaKIMejsYaOIG0jD4M="
         }
       },
       "is_incremental": false,
@@ -546,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html",
-          "hash": "XxK6JkYcVo9Dn0CJ6NhvViVrsFemoApfcSerM7BgPj8="
+          "hash": "B+jwD+2j9XkdD0LlAphHgct8EWnhVwb6n9P2IOljVjo="
         }
       },
       "is_incremental": false,
@@ -558,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html",
-          "hash": "+GaxNtRQGGwsov+U+bG1Y0RII3+HTFdCnjSioBw3GJk="
+          "hash": "6IISw9cZsAP/nJ4es9QPUIpO32M9ucgbjw02wpHW2Ug="
         }
       },
       "is_incremental": false,
@@ -582,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.html",
-          "hash": "VdW3I3G/ilbEdNx1a/hUE304DQIVYFE5Yz0ZkGisdWw="
+          "hash": "ltOGLWV0+SHGg34JccfCCtESnrmFetUsasUpqkkB/c4="
         }
       },
       "is_incremental": false,
@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.html",
-          "hash": "rEu6z46xiDYqyxeSYxU/4QwbOTNbYtnXRrOyt3gCpP8="
+          "hash": "MXPfn1cTlilPuz8kC+4uwy8wosjikOxGpMuK82cfsUE="
         }
       },
       "is_incremental": false,
@@ -606,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html",
-          "hash": "G+ZrVe5nM2m+87I67iicf0r2FhNkIT2b5WGb79ej6NY="
+          "hash": "vfkGCdK5j3Zn5fjnPG8mWKJAs9JeBvhfZnT3yIwb2S0="
         }
       },
       "is_incremental": false,
@@ -618,7 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.html",
-          "hash": "NDiB4ZgqMUicZVmJkLD2ejvQ3xWFmsDeoeUoMWUxg94="
+          "hash": "P4kVfLSN1pNanaVIqVXIhwwSDwxcuS0zc7h6mNRDPmQ="
         }
       },
       "is_incremental": false,
@@ -630,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.html",
-          "hash": "YzgRpdz+w47OVOx/mH+QnTNvjwAGARRBf2i1ARR8luY="
+          "hash": "anIESALill4v9Hgxyi8B9FXnGxTvDZiSr9o+mjDYfuE="
         }
       },
       "is_incremental": false,
@@ -642,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.html",
-          "hash": "9QiKNwlxwzZlYVHcfM9PGrTC9yRpofxjAvsSx4DGfKY="
+          "hash": "9zpX61f+g/dVInPbp56nmDVamcSl4CRc8F6o/IT5ANY="
         }
       },
       "is_incremental": false,
@@ -1094,18 +1094,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.PhysicalUnit.html",
-          "hash": "GV1xTWXO+ksFg5dB2SS0xdtPQsa4fo/drkV0WRzSjmY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.yml",
       "output": {
         ".html": {
@@ -1142,18 +1130,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html",
-          "hash": "Ntk8vCD1Lp/OjlXxk6SphVIlzzmarHJYWrnebogEcpg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.yml",
       "output": {
         ".html": {
@@ -1170,7 +1146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html",
-          "hash": "Lv7PAY5HE4/n2wC4mF4sxaIOy9O9GY/o8rGqJ0lFlFI="
+          "hash": "9PEhH/NzIYyPbovb/gY1fl81S9dc6wZzyYZT1zQqUMU="
         }
       },
       "is_incremental": false,
@@ -1182,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html",
-          "hash": "Iot9VeVeCauoG+qncy/6ZfSExzqaQ0W0IjXQ2am/EKY="
+          "hash": "RmrkPFu4hAX+91NLmn58Ebbefn53GwAYB250xkz/CBI="
         }
       },
       "is_incremental": false,
@@ -1194,7 +1170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html",
-          "hash": "8bXUFFOAADjqL3iCO+m+PoDDKQlNW7sDo0o3vC8qKEE="
+          "hash": "zyitrFF2jDwx6rlryLNbUDpr++M6sfeMGIacJhKz01M="
         }
       },
       "is_incremental": false,
@@ -1206,7 +1182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html",
-          "hash": "l3MCgFbhaqVm7Z1XoL85H2878QnSQD9uqiy+R4H0tDg="
+          "hash": "KWt0TsGrjdONndJ5i7JUS4eGsGsZlRlwFAMvsZksy0o="
         }
       },
       "is_incremental": false,
@@ -1218,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html",
-          "hash": "c9N+hMx1oQWBB3BVZ3d3C2Zt/yMY3Qcs32wpE+HUTdY="
+          "hash": "6KnMbhWUkmfx5nmG9uen+iLqXL4ZF+niQs6LIvnz/To="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1206,19 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html",
-          "hash": "UNU6/YtsA2ynnOTygBdoTRrwYjYJ9WY5fhe6+PU2MmI="
+          "hash": "J1tB1tM7cCsFTC2SoPDzjmtZ2om60YGVqmq02y27qko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html",
+          "hash": "pwBmhKOPhcUc6cp9D5uePzkx3pZ1xZU6LzYiHzHLhYE="
         }
       },
       "is_incremental": false,
@@ -1242,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html",
-          "hash": "7IOFwqxCc+2WVPV2zysH2+5NL2C2jtA665QVVv17KtU="
+          "hash": "6dVka85y6yQgBkmbrG8d8B+GcfIjyyx7PxuJew8fyYM="
         }
       },
       "is_incremental": false,
@@ -1254,7 +1242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html",
-          "hash": "9FbuvLFv26G4Qs9gMdoFWGM3Xv4u43JYOrRwsG55hQQ="
+          "hash": "xjCgNxPnNCp/WpgB/qWnv7db4EZ9YHp06EXgvYMyqls="
         }
       },
       "is_incremental": false,
@@ -1266,7 +1254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html",
-          "hash": "wZaKdwc0pBmWDB5EnE9dH7yUUPyJU0qyxsNFg8Mkwy4="
+          "hash": "9Ta97kZ1By4Ir6GUIBOif5weRuP5MA1H/oT6kbUBO3g="
         }
       },
       "is_incremental": false,
@@ -1278,7 +1266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html",
-          "hash": "N3EhM+EyIt9xZId16BhhOnTFk/rPeg2xAM3MbDqF6AA="
+          "hash": "8SRbepAR81wTkL7UGamfB2rC2gsmqTrc6xh7uqilLaU="
         }
       },
       "is_incremental": false,
@@ -1290,7 +1278,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html",
-          "hash": "Oym4uPcd7UGSfH+9H2SU0ER9gkKA8XpI8Vz8a7SdBOM="
+          "hash": "zSa/7HKUckwtsDrFQiTEtgmj0oTpp8GjInaiY12BPqQ="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1290,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html",
-          "hash": "4mGwwJzzHb0oEPBWSjj4Edi+UTt68Rjc8sBlvKtn75o="
+          "hash": "6/KhxJyGQN25DAkRLl6KYMO6/Ah9Km+n2AsVhgG6BkM="
         }
       },
       "is_incremental": false,
@@ -1314,7 +1302,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html",
-          "hash": "nlGbxtACg9bAjL1T6nASxeBGM6GgKfNzOYZOQQT0D34="
+          "hash": "bkKUkrtRS4r9qXTFjO0ZACszew04mVfjIbo8lM/f8TY="
         }
       },
       "is_incremental": false,
@@ -1326,7 +1314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html",
-          "hash": "fpGQPrswWHvi8GytrwAnGZf9ativeTDD3qkkkZGuPAM="
+          "hash": "RGT+NxDxtO66DFMGTS/Ffg+/7TG+5eHfT5GzcEtbWsU="
         }
       },
       "is_incremental": false,
@@ -1338,7 +1326,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html",
-          "hash": "IgakrRfx4pCygRLaTyo07GYc4YkSxb3Nd5O5aQfrSKY="
+          "hash": "gFmrCw3Mr+c7I/3K4BqX2TS6nowBzZki6vulsu84E88="
         }
       },
       "is_incremental": false,
@@ -1350,7 +1338,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html",
-          "hash": "vXQpveZF6fg3EJl3T0DG9Z3lA60uKo75PPlrwhS3h3w="
+          "hash": "LzjOV+cGDu1nptXQYTa4WV4LqWzu3cQjQgdL23V+f50="
         }
       },
       "is_incremental": false,
@@ -1370,35 +1358,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitSystem.html",
-          "hash": "TotqwHGVKytYne7gEN1aVZATfRYcKGxVOvDsbA5cwOM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.UnitType.html",
-          "hash": "vRzrYmpuWyq7vJBEfxj0h0lW3hJCdmW3r0zdUMzsiNQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.yml",
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.html",
-          "hash": "B+kshTKwS0nIpkPVjCuKChIoFOQwuFfoPWkSDJcQNN4="
+          "hash": "cMC+l69qND7xhpxbJrwep48a78wQITpP4/gV/C2ZpJ8="
         }
       },
       "is_incremental": false,
@@ -1410,7 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html",
-          "hash": "lrbHYfeIPSnZEvrh1rM69I97JlxDfTKFLjqbH4O1K10="
+          "hash": "pESQ7exa+qzm4Nh2KyvJDEGJH5cRL0bQMrbMUsgWvQM="
         }
       },
       "is_incremental": false,
@@ -1482,7 +1446,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/BCM/toc.html",
-          "hash": "nl5sAtz1oi8i6JcVdJClG6ociBvR9DfxfDK8Av9yLkg="
+          "hash": "MMAW/+Ej2EkaRPu9wKCFaDMiMTIvGSSBfc75sjnF9ug="
         }
       },
       "is_incremental": false,
@@ -1563,7 +1527,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 119,
+          "total_file_count": 116,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

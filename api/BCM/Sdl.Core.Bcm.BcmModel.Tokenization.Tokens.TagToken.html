@@ -92,28 +92,23 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html">ExtensionDataContainer</a></div>
-    <div class="level2"><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a></div>
-    <div class="level3"><span class="xref">TagToken</span></div>
+    <div class="level1"><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a></div>
+    <div class="level2"><span class="xref">TagToken</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html">ICloneable</a>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a>&gt;</div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Equals_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_">Token.Equals(Token)</a>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone">Token.Clone()</a>
     </div>
     <div>
       <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Text">Token.Text</a>
     </div>
     <div>
       <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Span">Token.Span</a>
-    </div>
-    <div>
-      <a class="xref" href="Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData">ExtensionDataContainer.ExtensionData</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html">Sdl.Core.Bcm.BcmModel.Tokenization.Tokens</a></h6>
@@ -135,101 +130,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TagToken()</code></pre>
   </div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_TagType_System_String_System_Int32_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32)">TagToken(TagType, String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the Tag class with the specified type and anchor. The alignment anchor will be
-set to zero.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TagToken(TagType type, string tagId, int anchor)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html">TagType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The tag type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">tagId</span></td>
-        <td><p>The tag ID (user-defined)</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">anchor</span></td>
-        <td><p>The tag anchor.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_TagType_System_String_System_Int32_System_Int32_System_String_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.TagType,System.String,System.Int32,System.Int32,System.String)">TagToken(TagType, String, Int32, Int32, String)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the Tag class with the specified type and anchor.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TagToken(TagType type, string tagId, int anchor, int alignmentAnchor, string textEquivalent)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html">TagType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>The tag type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">tagId</span></td>
-        <td><p>The tag ID (user-defined)</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">anchor</span></td>
-        <td><p>The tag anchor.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">alignmentAnchor</span></td>
-        <td><p>An alignment anchor (cross-segment), if available</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">textEquivalent</span></td>
-        <td><p>A text equivalent string (ignored if the tag type is not TextPlaceholder or LockedContent)</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor*"></a>
@@ -285,35 +185,6 @@ set to zero.</p>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">canHide</span></td>
         <td><p>True if the tag represents inline formatting, false otherwise</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken__ctor_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken)">TagToken(TagToken)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the Tag class from another instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TagToken(TagToken other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html">TagToken</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>The other instance.</p>
 </td>
       </tr>
     </tbody>
@@ -400,62 +271,6 @@ is only relevant for start and end tags and has no cross-segment semantics.</p>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsPlaceable_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsPlaceable" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsPlaceable">IsPlaceable</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsPlaceable">IsPlaceable</a>. Always <code>true</code> for this class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsPlaceable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsPlaceable">Token.IsPlaceable</a></div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsSubstitutable_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_IsSubstitutable" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.IsSubstitutable">IsSubstitutable</h4>
-  <div class="markdown level1 summary"><p><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsSubstitutable">IsSubstitutable</a>. Always <code>true</code> for this class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsSubstitutable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_IsSubstitutable">Token.IsSubstitutable</a></div>
   
   
   <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_TagId_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.TagId*"></a>
@@ -568,208 +383,6 @@ used to represent a cross-format formatting class (such as &quot;bold&quot;).</p
   </h3>
   
   
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Clone_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Clone" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Clone">Clone()</h4>
-  <div class="markdown level1 summary"><p>Clones this instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Token Clone()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone">Token.Clone()</a></div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Equals_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_Equals_System_Object_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.Equals(System.Object)">Equals(Object)</h4>
-  <div class="markdown level1 summary"><p>Performs a deep-equals comparison.<br><span class="xref">System.Object.Equals(object)</span></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetHashCode_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetHashCode" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"><span class="xref">System.Object.GetHashCode</span>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>A hash code for this object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetHashCode">Token.GetHashCode()</a></div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetSimilarity_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetSimilarity(Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)">GetSimilarity(Token)</h4>
-  <div class="markdown level1 summary"><p>Computes the degree of similarity to another instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Similarity GetSimilarity(Token other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html">Token</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>The other instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Similarity.html">Similarity</a></td>
-        <td><p>A value indicating the degree of similarity to the provided segment element.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetSimilarity_Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_">Token.GetSimilarity(Token)</a></div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetWeakHashCode_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_GetWeakHashCode" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.GetWeakHashCode">GetWeakHashCode()</h4>
-  <div class="markdown level1 summary"><p>See <a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetWeakHashCode">GetWeakHashCode()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetWeakHashCode()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>A hash code independent of tag anchors.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_GetWeakHashCode">Token.GetWeakHashCode()</a></div>
-  
-  
-  <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_SeriliazedWihoutAnchor_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor*"></a>
-  <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_SeriliazedWihoutAnchor" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.SeriliazedWihoutAnchor">SeriliazedWihoutAnchor()</h4>
-  <div class="markdown level1 summary"><p>Same as ToString, but doesn&apos;t includes AlignmentAnchor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SeriliazedWihoutAnchor()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_ToString_" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.ToString*"></a>
   <h4 id="Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_TagToken_ToString" data-uid="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.ToString">ToString()</h4>
   <div class="markdown level1 summary"><span class="xref">System.Object.ToString</span>
@@ -800,9 +413,6 @@ used to represent a cross-format formatting class (such as &quot;bold&quot;).</p
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html">ICloneable&lt;T&gt;</a>
-  </div>
-  <div>
-      <span class="xref">System.IEquatable&lt;&gt;</span>
   </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">

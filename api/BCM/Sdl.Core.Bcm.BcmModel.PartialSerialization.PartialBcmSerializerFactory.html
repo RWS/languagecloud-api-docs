@@ -86,7 +86,8 @@
   
   <h1 id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory" class="text-break">Class PartialBcmSerializerFactory
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Creates IPartialBcmSerializer instances (either in-memory or temp file based)</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -117,7 +118,9 @@
   
   <a id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_FileSizeLimitInMBForInMemory_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory*"></a>
   <h4 id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_FileSizeLimitInMBForInMemory" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory">FileSizeLimitInMBForInMemory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Limit above which we will use a temp file based serializer
+instead of and in-memory one</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -144,7 +147,8 @@
   
   <a id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*"></a>
   <h4 id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_Sdl_Core_Bcm_BcmModel_Document_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)">CreateSerializer(Document)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates serializer from a Document instance</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,7 +190,8 @@
   
   <a id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*"></a>
   <h4 id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_System_IO_Stream_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.IO.Stream)">CreateSerializer(Stream)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates serializer from a stream containing bcm json content</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,7 +233,9 @@
   
   <a id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*"></a>
   <h4 id="Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_System_String_" data-uid="Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.String)">CreateSerializer(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates serializer based on a temp file with the bcm json content.
+Does not delete the file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
