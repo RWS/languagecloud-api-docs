@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "articles/BCM/Assembly/v1.6.0",
+          "src": "articles/BCM/Assembly/v2.0.0",
           "files": [
             "Sdl.Core.Bcm.BcmModel.dll"
           ]
