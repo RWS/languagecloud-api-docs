@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html",
-          "hash": "N14qb73YM5oQdTZasu9yw0tpb4ke6FGgwex7dXm6Alw="
+          "hash": "FJ+l+kONg2IGReLmnvhh5sMQxLm5h3q/aVTewmf0n4Q="
         }
       },
       "is_incremental": false,
@@ -474,7 +474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupData.html",
-          "hash": "EflWJjcU37taXJdPtnLSVvHxAWxgKkOw6Gi6hfBoQgc="
+          "hash": "p4VgF1gHbQ2kqDvrjMOz5giMmz6QQGgIJe51QwY/ivg="
         }
       },
       "is_incremental": false,
@@ -1394,11 +1394,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html",
+          "hash": "x9/HJnwDAwh9yrrNVMHKjzXoAyOY1PRNee/QeIRxd7g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.yml",
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.html",
-          "hash": "X6qUtr1uD5Ci5Ocnk2IWAWQn6CalTMY68bSbb4MRF+M="
+          "hash": "PFWhuoMxjgkVzbeQU5GDOHGfMdyomYMXB8h3m5ul/R0="
         }
       },
       "is_incremental": false,
@@ -1410,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/BCM.NET_client_API.html",
-          "hash": "erzGszqqRhLUFFH3fG7AQ0Tor0vzXpw/Arm5ntX1j4s="
+          "hash": "XGVhafpcvDl3Q2bpqTc3Dnfbd+F68ni7FLLUbilx3W0="
         }
       },
       "is_incremental": false,
@@ -1446,7 +1458,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/BCM/toc.html",
-          "hash": "MMAW/+Ej2EkaRPu9wKCFaDMiMTIvGSSBfc75sjnF9ug="
+          "hash": "SB7n5X6UoV2lZt28hZVevbtCls1h4ysl5L0PUMwwx8Q="
         }
       },
       "is_incremental": false,
@@ -1527,7 +1539,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 116,
+          "total_file_count": 117,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

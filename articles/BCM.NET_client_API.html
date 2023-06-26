@@ -86,6 +86,13 @@
 <p>API reference generated from the code of the  BCM .NET Client.</p>
 <h2 id="bcm-net-client-api-samplesbcmsamplesmd"><a href="BCM/Samples.html">BCM .NET Client API Samples</a></h2>
 <p>Samples documenting some usages of the BCM .NET Client.</p>
+<h2 id="knowledge-base">Knowledge Base</h2>
+<h4 id="datetime-serialization">DateTime serialization</h4>
+<p>The official format for DateTime serialization is <code>yyyy-MM-dd&#39;T&#39;HH:mm:ss.fff&#39;Z&#39;</code>. The BCM supports both this format and the default .NET DateTime serialization format <code>MM/dd/yyyy HH:mm:ss</code></p>
+<h4 id="unrecognized-token-deserialization">Unrecognized Token deserialization</h4>
+<p>Unrecognized Token objects in the serialized BCM are deserialized into a Token of type Word. E.g.: a new type of Token is introduced in the BCM, but an older client, who doesn&#39;t recognized this new type of Token, tries to deserialize it.</p>
+<h3 id="unrecognized-markupdata-deserialization">Unrecognized MarkupData deserialization</h3>
+<p>Unrecognized MarkupData objects in the serialized BCM are deserialized into a MarkupData of type UnknownMarkupData. This is to preserve the data of newly introduced MarkupData objects when deserializing BCM using older clients. Elements of type UnknownMarkupData should be ignored when manipulating BCM in memory.</p>
 </article>
           </div>
           

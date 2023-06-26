@@ -1056,6 +1056,12 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.Common.BcmConst.CurrentBcmModelVersion
   fullName: Sdl.Core.Bcm.BcmModel.Common.BcmConst.CurrentBcmModelVersion
   nameWithType: BcmConst.CurrentBcmModelVersion
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmConst.DateTimeFormat
+  name: DateTimeFormat
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html#Sdl_Core_Bcm_BcmModel_Common_BcmConst_DateTimeFormat
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.BcmConst.DateTimeFormat
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmConst.DateTimeFormat
+  nameWithType: BcmConst.DateTimeFormat
 - uid: Sdl.Core.Bcm.BcmModel.Common.BcmConst.FrameworkOriginalParagraphUnitId
   name: FrameworkOriginalParagraphUnitId
   href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html#Sdl_Core_Bcm_BcmModel_Common_BcmConst_FrameworkOriginalParagraphUnitId
@@ -9753,3 +9759,45 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.UseDisplayUsername
   fullName: Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.UseDisplayUsername
   nameWithType: TranslationOriginMetaData.UseDisplayUsername
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData
+  name: UnknownMarkupData
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html
+  commentId: T:Sdl.Core.Bcm.BcmModel.UnknownMarkupData
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData
+  nameWithType: UnknownMarkupData
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.#ctor
+  name: UnknownMarkupData()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData__ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.UnknownMarkupData()
+  nameWithType: UnknownMarkupData.UnknownMarkupData()
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.#ctor*
+  name: UnknownMarkupData
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData__ctor_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.UnknownMarkupData
+  nameWithType: UnknownMarkupData.UnknownMarkupData
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  name: AcceptVisitor(BcmVisitor)
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_
+  commentId: M:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  nameWithType: UnknownMarkupData.AcceptVisitor(BcmVisitor)
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor*
+  name: AcceptVisitor
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData_AcceptVisitor_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.AcceptVisitor
+  nameWithType: UnknownMarkupData.AcceptVisitor
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type
+  name: Type
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData_Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type
+  nameWithType: UnknownMarkupData.Type
+- uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type*
+  name: Type
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html#Sdl_Core_Bcm_BcmModel_UnknownMarkupData_Type_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type
+  fullName: Sdl.Core.Bcm.BcmModel.UnknownMarkupData.Type
+  nameWithType: UnknownMarkupData.Type
