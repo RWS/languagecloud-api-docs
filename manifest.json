@@ -278,11 +278,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html",
+          "hash": "VavzfNYMgn1sTWw71vDYSSJTBsEijKzdhaOXDHIh+OU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.yml",
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.html",
-          "hash": "BRx4mGQrMdXUXrTCtPpDKkS/9RLfg+ONheCH1TlCTVs="
+          "hash": "liAkxynbz/EDekgRLIr5N2P68FXCx9jQ1R0JXc2FMrQ="
         }
       },
       "is_incremental": false,
@@ -1374,7 +1386,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html",
-          "hash": "pESQ7exa+qzm4Nh2KyvJDEGJH5cRL0bQMrbMUsgWvQM="
+          "hash": "xffZVVgV0bo485FKNH6ZY1ZEXmbTGTgrErSvZiKbum4="
         }
       },
       "is_incremental": false,
@@ -1387,6 +1399,18 @@
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.html",
           "hash": "H/X3mfGTxOXvOOdkurv3oISdJtw46iQ+5crMoOl6A/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html",
+          "hash": "hNEf878hH+X20lOr9LIObZAYhTM0TCwQDi6A3Xy5IC8="
         }
       },
       "is_incremental": false,
@@ -1410,7 +1434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.html",
-          "hash": "PFWhuoMxjgkVzbeQU5GDOHGfMdyomYMXB8h3m5ul/R0="
+          "hash": "yW8F9P75STBcax60YgXWGbD5dzQRemvhQcbOrrjEu3c="
         }
       },
       "is_incremental": false,
@@ -1458,7 +1482,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/BCM/toc.html",
-          "hash": "SB7n5X6UoV2lZt28hZVevbtCls1h4ysl5L0PUMwwx8Q="
+          "hash": "Tq2IYYcM6pW8sT49n9yCHVI+UOAQM6wcSxEo6va6UlA="
         }
       },
       "is_incremental": false,
@@ -1539,7 +1563,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 117,
+          "total_file_count": 119,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

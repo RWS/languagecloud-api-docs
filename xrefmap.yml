@@ -1372,6 +1372,42 @@ references:
   fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual(Of TSource)(System.Collections.Generic.IList(Of TSource), System.Collections.Generic.IList(Of TSource))
   nameWithType: ModelExtensions.IsSequenceEqual<TSource>(IList<TSource>, IList<TSource>)
   nameWithType.vb: ModelExtensions.IsSequenceEqual(Of TSource)(IList(Of TSource), IList(Of TSource))
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  name: TranslationQualityEstimationConstants
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  nameWithType: TranslationQualityEstimationConstants
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeDescription
+  name: TqeDescription
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html#Sdl_Core_Bcm_BcmModel_Common_TranslationQualityEstimationConstants_TqeDescription
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeDescription
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeDescription
+  nameWithType: TranslationQualityEstimationConstants.TqeDescription
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeEvaluatedAt
+  name: TqeEvaluatedAt
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html#Sdl_Core_Bcm_BcmModel_Common_TranslationQualityEstimationConstants_TqeEvaluatedAt
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeEvaluatedAt
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeEvaluatedAt
+  nameWithType: TranslationQualityEstimationConstants.TqeEvaluatedAt
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeModel
+  name: TqeModel
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html#Sdl_Core_Bcm_BcmModel_Common_TranslationQualityEstimationConstants_TqeModel
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeModel
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeModel
+  nameWithType: TranslationQualityEstimationConstants.TqeModel
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeScore
+  name: TqeScore
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html#Sdl_Core_Bcm_BcmModel_Common_TranslationQualityEstimationConstants_TqeScore
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeScore
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeScore
+  nameWithType: TranslationQualityEstimationConstants.TqeScore
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeSystem
+  name: TqeSystem
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html#Sdl_Core_Bcm_BcmModel_Common_TranslationQualityEstimationConstants_TqeSystem
+  commentId: F:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeSystem
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.TqeSystem
+  nameWithType: TranslationQualityEstimationConstants.TqeSystem
 - uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
   name: ConfirmationLevel
   href: api/BCM/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.html
@@ -9669,6 +9705,18 @@ references:
   commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
   fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
   nameWithType: TranslationOrigin.TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  name: TranslationQualityEstimations
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_TranslationQualityEstimations
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  nameWithType: TranslationOrigin.TranslationQualityEstimations
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations*
+  name: TranslationQualityEstimations
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_TranslationQualityEstimations_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  nameWithType: TranslationOrigin.TranslationQualityEstimations
 - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
   name: UseCount
   href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_UseCount
@@ -9759,6 +9807,108 @@ references:
   commentId: F:Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.UseDisplayUsername
   fullName: Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.UseDisplayUsername
   nameWithType: TranslationOriginMetaData.UseDisplayUsername
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  name: TranslationQualityEstimation
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html
+  commentId: T:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  nameWithType: TranslationQualityEstimation
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  name: TranslationQualityEstimation()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation__ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.TranslationQualityEstimation()
+  nameWithType: TranslationQualityEstimation.TranslationQualityEstimation()
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor*
+  name: TranslationQualityEstimation
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation__ctor_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.TranslationQualityEstimation
+  nameWithType: TranslationQualityEstimation.TranslationQualityEstimation
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  name: Description
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Description
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  nameWithType: TranslationQualityEstimation.Description
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description*
+  name: Description
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Description_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  nameWithType: TranslationQualityEstimation.Description
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  name: Equals(Object)
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Equals_System_Object_
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  nameWithType: TranslationQualityEstimation.Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals*
+  name: Equals
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Equals_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals
+  nameWithType: TranslationQualityEstimation.Equals
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  name: EvaluatedAt
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_EvaluatedAt
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  nameWithType: TranslationQualityEstimation.EvaluatedAt
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt*
+  name: EvaluatedAt
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_EvaluatedAt_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  nameWithType: TranslationQualityEstimation.EvaluatedAt
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  name: GetHashCode()
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode()
+  nameWithType: TranslationQualityEstimation.GetHashCode()
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode*
+  name: GetHashCode
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_GetHashCode_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  nameWithType: TranslationQualityEstimation.GetHashCode
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  name: Model
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Model
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  nameWithType: TranslationQualityEstimation.Model
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model*
+  name: Model
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Model_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  nameWithType: TranslationQualityEstimation.Model
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  name: Score
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Score
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  nameWithType: TranslationQualityEstimation.Score
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score*
+  name: Score
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Score_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  nameWithType: TranslationQualityEstimation.Score
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  name: System
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_System
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  nameWithType: TranslationQualityEstimation.System
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System*
+  name: System
+  href: api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_System_
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  nameWithType: TranslationQualityEstimation.System
 - uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData
   name: UnknownMarkupData
   href: api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html
