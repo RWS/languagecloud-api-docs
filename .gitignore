@@ -7,4 +7,6 @@
 /**/bin/
 /**/obj/
 _site
-.vscode/
+.vscode
+.vs
+/api/bcm/*.yml

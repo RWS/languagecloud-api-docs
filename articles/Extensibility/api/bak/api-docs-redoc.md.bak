@@ -1,0 +1,38 @@
+﻿---
+title: "API Documentation"
+_disableBreadcrumb: false
+_disableAffix: true
+_enableSearch: false
+_disableToc: false
+---
+
+<div style="margin-bottom:15px;padding:10px;border-bottom:1px dashed #ccc;">
+   <a href="api-docs-stoplight.html" target="_blank" style="padding: 8px 15px; background-color: #006666; color: white; text-decoration: none; border-radius: 5px;">
+    🌐 Open API documentation in new tab
+  </a>
+  <p style="margin-top: 10px;font-size:11pt;color:#555;">
+    You may prefer viewing the API documentation in a full-screen.
+  </p>
+</div>
+
+<div id="redoc-container" style="margin-top:20px;"></div>
+
+<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+
+<script>
+  const config = {
+    theme: {
+      breakpoints: {
+        small: "120rem",
+        medium: "120rem",
+        large: "120rem"
+      },
+      rightPanel: { width: '0%' },     
+    },
+    sidebar: { width: '200px' },
+    layout: "stacked",
+    expandResponses: "200,201,202"
+  };
+
+  Redoc.init('AppAPI.v1.json', config, document.getElementById('redoc-container'));
+</script>

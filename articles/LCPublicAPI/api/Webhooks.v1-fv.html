@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Webhooks Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css" />
+        <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+                padding-top: 55px; /* ensures content below fixed header */
+            }
+
+            .api-container {
+                flex: 1 0 0;
+                overflow: visible;
+            }
+
+            elements-api {
+                height: calc(100vh - 55px);
+            }
+
+            .header-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: #006666;
+                color: white;
+                font-family: Arial, sans-serif;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 2px 3px rgba(0,0,0,.15);
+                z-index: 999;
+            }
+
+            .header-bar a {
+                color: white;
+                text-decoration: none;
+                font-size: 12px;
+                padding: 6px 12px;
+                border-radius: 5px;
+                background-color: rgba(255,255,255,0.15);
+                transition: background-color 0.2s;
+            }
+
+            .header-bar a:hover {
+                background-color: rgba(255,255,255,0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-bar">
+            <a href="Webhooks.v1.html">← Back to Documentation</a>
+        </div>
+
+        <elements-api id="docs" router="hash" layout="sidebar" hideTryIt="true"></elements-api>
+        <script>
+            (async () => {
+                const docs = document.getElementById('docs');
+                const text = await fetch('Webhooks.v1.json').then(res => res.text())
+                docs.apiDescriptionDocument = text;
+            })();
+        </script>
+    </body>
+</html>

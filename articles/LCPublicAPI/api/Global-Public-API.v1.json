@@ -1,0 +1,462 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "usvezyelg8nd5"
+  },
+  "info": {
+    "title": "Trados Cloud Platform Global API",
+    "description": "The Trados Cloud Platform API providing global functionality.",
+    "version": "1.0",
+    "contact": {},
+    "summary": ""
+  },
+  "servers": [
+    {
+      "url": "https://api.cloud.trados.com/public-api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Accounts",
+      "description": "Region related endpoints."
+    },
+    {
+      "name": "Public Keys",
+      "description": "Region related endpoints."
+    },
+    {
+      "name": "Region",
+      "description": "Region related endpoints."
+    }
+  ],
+  "paths": {
+    "/regions": {
+      "get": {
+        "summary": "List Regions",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-regions-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListRegions",
+        "x-stoplight": {
+          "id": "jxhiuihkb6v96"
+        },
+        "description": "Lists all the regions including domains names (hosts) for various services.",
+        "tags": [
+          "Region"
+        ]
+      }
+    },
+    "/.well-known/jwks.json": {
+      "get": {
+        "summary": "List Public Keys",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/well-known-jwks-response"
+                },
+                "examples": {
+                  "list-keys-ok": {
+                    "value": {
+                      "keys": [
+                        {
+                          "kty": "test-kty-1",
+                          "n": "test-n-1",
+                          "e": "test-e-1",
+                          "alg": "test-alg-1",
+                          "kid": "test-kid-1",
+                          "use": "test-use-1"
+                        },
+                        {
+                          "kty": "test-kty-2",
+                          "n": "test-n-2",
+                          "e": "test-e-2",
+                          "alg": "test-alg-2",
+                          "kid": "test-kid-2",
+                          "use": "test-use-2"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\":  The requested entity or one of it's dependencies attempted to retrieve data outside the allowed range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListPublicKeys",
+        "description": "List all available Public Keys.",
+        "x-internal": false,
+        "tags": [
+          "Public Keys"
+        ]
+      }
+    },
+    "/accounts": {
+      "get": {
+        "summary": "List My Accounts",
+        "tags": [
+          "Accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/list-my-accounts-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "ListMyAccounts",
+        "x-stoplight": {
+          "id": "vo1eh8g1njsy0"
+        },
+        "description": "Retrieves the accounts from all regions where the authenticated user is part of . \r\n\r\n> For service users only the account where the user is defined is returned.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "x-internal": true
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "list-regions-response": {
+        "title": "List Regions Response",
+        "x-stoplight": {
+          "id": "pmh357jix5qkq"
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "itemCount"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "mmi10qbgs3tud"
+            },
+            "items": {
+              "$ref": "#/components/schemas/region-details",
+              "x-stoplight": {
+                "id": "jo3ll1nh6n1pp"
+              }
+            }
+          },
+          "itemCount": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "nnxz2wzsd43cm"
+            }
+          }
+        },
+        "description": "Provides information about available regions and host addresses."
+      },
+      "region-details": {
+        "title": "Region Details",
+        "x-stoplight": {
+          "id": "spfb4bhcmhija"
+        },
+        "type": "object",
+        "required": [
+          "regionCode",
+          "name",
+          "location",
+          "hosts"
+        ],
+        "properties": {
+          "regionCode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wkqh30rzsshmd"
+            },
+            "description": "Region code that uniquely identifies the region. Possible values are `ca` and `eu`."
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rhjbrnh017f1m"
+            },
+            "description": "Region name.",
+            "example": "EU"
+          },
+          "location": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "asmilrimrxssy"
+            },
+            "description": "User friendly geographical location of the region.",
+            "example": "EU (Frankfurt, DE)"
+          },
+          "hosts": {
+            "$ref": "#/components/schemas/region-hosts",
+            "x-stoplight": {
+              "id": "t5ym78qgxg7ir"
+            }
+          }
+        }
+      },
+      "region-hosts": {
+        "title": "Region Hosts",
+        "x-stoplight": {
+          "id": "elvhb8u6i4vl3"
+        },
+        "type": "object",
+        "required": [
+          "apiHost"
+        ],
+        "properties": {
+          "apiHost": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "s7isz42nnk89u"
+            },
+            "description": "Trados Cloud Platform API host."
+          }
+        },
+        "description": ""
+      },
+      "list-jwks": {
+        "title": "List JWKs Response",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/jwk"
+        },
+        "x-internal": false
+      },
+      "jwk": {
+        "title": "JWK",
+        "type": "object",
+        "description": "A Json Web Key. \n<br>\nSee https://datatracker.ietf.org/doc/html/rfc7517 for details.",
+        "properties": {
+          "kty": {
+            "type": "string",
+            "description": "The cryptographic algorithm\n   family used with the key."
+          },
+          "n": {
+            "type": "string",
+            "description": "The RSA public modulus n."
+          },
+          "e": {
+            "type": "string",
+            "description": "The RSA public exponent e."
+          },
+          "alg": {
+            "type": "string",
+            "description": "The algorithm intended for use with the key."
+          },
+          "kid": {
+            "type": "string",
+            "description": "The \"kid\" (key ID) parameter is used to match a specific key."
+          },
+          "use": {
+            "type": "string",
+            "description": "The \"use\" parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data."
+          }
+        },
+        "x-internal": false
+      },
+      "error-response": {
+        "title": "Error Response",
+        "type": "object",
+        "description": "Error response properties.",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Retrieves a descriptive message that shows what went wrong."
+          },
+          "errorCode": {
+            "type": "string",
+            "description": "Concise code that describes the nature of the error."
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/error-detail-response"
+            }
+          }
+        },
+        "required": [
+          "message",
+          "errorCode"
+        ]
+      },
+      "error-detail-response": {
+        "title": "Error Detail Response",
+        "type": "object",
+        "description": "Error detail response properties.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": ""
+          },
+          "code": {
+            "type": "string",
+            "description": ""
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "well-known-jwks-response": {
+        "title": "Well Known Keys Response",
+        "x-stoplight": {
+          "id": "sf68ge9zrow9r"
+        },
+        "type": "object",
+        "properties": {
+          "keys": {
+            "$ref": "#/components/schemas/list-jwks",
+            "description": "The list of public keys."
+          }
+        },
+        "x-internal": false
+      },
+      "list-my-accounts-response": {
+        "title": "List My Accounts Response",
+        "type": "object",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/account"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "description": "A response for the List My Accounts endpoint.",
+        "x-internal": false
+      },
+      "account": {
+        "title": "Account",
+        "type": "object",
+        "required": [
+          "id",
+          "regionCode"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The account identifier."
+          },
+          "name": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The account name.</div> ",
+            "x-default-field": true
+          },
+          "regionCode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tp3uu68nb4946"
+            },
+            "description": "Region code that uniquely identifies the region."
+          }
+        },
+        "x-internal": false
+      }
+    },
+    "headers": {
+      "X-LC-TraceId": {
+        "required": true,
+        "schema": {
+          "type": "string",
+          "example": "df680285-adcd-4bda-8f79-0bba4a857287"
+        },
+        "description": "A unique identifier for the request. It should be saved in the logs as it can be used to troubleshoot potential issues. When raising a request for support, it should be provided to help with the investigation."
+      }
+    },
+    "parameters": {
+      "Authorization": {
+        "name": "Authorization",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The bearer access token provided by Auth0."
+      },
+      "X-LC-Tenant": {
+        "name": "X-LC-Tenant",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The identifier of the account where the request is executed."
+      }
+    }
+  }
+}
