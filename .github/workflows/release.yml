@@ -29,7 +29,7 @@ jobs:
 
       - name: install docfx
         run: |
-          choco install docfx --version=2.59.3
+          choco install docfx
           docfx init -q
 
       - name: build _site
