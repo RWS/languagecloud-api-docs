@@ -61,7 +61,7 @@
     "template": [
       "RWSTemplate"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
+    "postProcessors": [ "ExtractSearchIndex", "EnvironmentVariableProcessor" ],
     "globalMetadata": {
       "_enableSearch": true
     },
