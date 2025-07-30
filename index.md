@@ -3,7 +3,9 @@
 - Trados Enterprise
 - Trados Accelerate
 - Trados Team
+- Trados Ignite
 - Trados Studio (cloud capabilites)
+- Trados Go
 
 ## Integrating with <Var:ProductName> products
 To create an integration with any of the products listed above, you'll need to use the Public API. You can find the documentation for the API [here](https://languagecloud.sdl.com/lc/api-docs). Note that the API is updated regularly so make sure that you check out the [What's new](https://languagecloud.sdl.com/lc/api-docs/whats-new) section to find out information on recently added features. To enable RWS to extend and improve the API, and to support the latest features in the products, sometimes it's necessary to remove or change functionality. For that, you'll need to check the [What's deprecated](https://languagecloud.sdl.com/lc/api-docs/whats-deprecated) page where RWS will post advance notice of any API endpoints that will be removed or change in the future. Don't worry though because RWS will try and give six months notice of any breaking changes.

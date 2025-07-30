@@ -7,4 +7,9 @@
 /**/bin/
 /**/obj/
 _site
-.vscode/
+.DS_Store
+*.suo
+*.testlog
+.vscode
+.vs
+/Plugins/TradosStudioDocsPlugin/TradosStudioDocsPlugin/TradosStudioDocsPlugin.csproj.user

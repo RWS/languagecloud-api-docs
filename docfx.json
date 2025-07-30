@@ -9,7 +9,7 @@
           ]
         }
       ],
-      "dest": "api/BCM",
+      "dest": "api/bcm",
       "disableGitFeatures": true,
       "disableDefaultFilter": false
     }
@@ -28,18 +28,14 @@
           "toc.yml",
           "*.md"
         ]
-      },
-      { 
-        "files": [
-          "apiconcepts/**.md",
-          "apiconcepts/toc.yml"
-        ]
       }
     ],
     "resource": [
       {
         "files": [
-          "**/images/**"
+          "**/images/**",
+          "**/*.json",
+          "**/*.html"
         ]
       }
     ],
@@ -57,16 +53,18 @@
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "filemetadata":
-    { 
+    "filemetadata": {
       "langs": {
-      "api/**.yml": ["csharp", "vb", "fsharp", "cpp"]
+        "api/**.yml": [ "csharp", "vb", "fsharp", "cpp" ]
       }
     },
     "template": [
-      "RWSDocsTemplate"
+      "RWSTemplate"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
+    "postProcessors": [ "ExtractSearchIndex", "EnvironmentVariableProcessor" ],
+    "globalMetadata": {
+      "_enableSearch": true
+    },
     "markdownEngineName": "dfm",
     "noLangKeyword": false,
     "keepFileLink": false,
