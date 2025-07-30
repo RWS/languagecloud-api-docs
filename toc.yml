@@ -5,6 +5,6 @@
 - name: Extensibility
   href: https://languagecloud.sdl.com/lc/extensibility-docs
 - name: BCM
-  href: articles/BCM/BCM.NET_client_API.md
+  href: articles/bcm/BCM.NET_client_API.md
 - name: Developer License
   href: developer_license.md

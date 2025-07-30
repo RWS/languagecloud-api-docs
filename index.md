@@ -14,7 +14,7 @@ To create an integration with any of the products listed above, you'll need to u
 <Var:ProductName> products can be extended in a number of ways. For example, you may want to create an add-on to support a machine translation engine or you may want to create a custom workflow task. RWS provides an extensibility framework for the <Var:ProductName> suite of products. To get more information on what's required and how you can do this, visit the [<Var:ProductName> extensibility documentation](https://languagecloud.sdl.com/lc/extensibility-docs) pages. 
 
 ## Interacting with files
-Translatable content in <Var:ProductName> is held in a format called **Bilingual Content Model**, or **BCM** for short. You can find **BCM** reference documentation and samples on this site. Click [here](articles/BCM.NET_client_API.html) to find out more.
+Translatable content in <Var:ProductName> is held in a format called **Bilingual Content Model**, or **BCM** for short. You can find **BCM** reference documentation and samples on this site. Click [here](articles/bcm/BCM.NET_client_API.md) to find out more.
 
 ## Reporting API issues ##
 If you want to report an issue with the API, you can find information on how to do this here - [How to report an issue](https://languagecloud.sdl.com/lc/api-docs/how-to-report-an-issue)
