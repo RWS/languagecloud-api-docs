@@ -4,7 +4,7 @@
 - Trados Accelerate
 - Trados Team
 - Trados Ignite
-- Trados Studio (cloud capabilites)
+- Trados Studio (cloud capabilities)
 - Trados Go
 
 ## Integrating with <Var:ProductName> products
@@ -19,5 +19,5 @@ Translatable content in <Var:ProductName> is held in a format called **Bilingual
 ## Reporting API issues ##
 If you want to report an issue with the API, you can find information on how to do this here - [How to report an issue](https://languagecloud.sdl.com/lc/api-docs/how-to-report-an-issue)
 
-## Language Cloud API and Customer Portal API
-Please be aware that Language Cloud offers two different APIs. First is the modern Language Cloud API described on this page. Then there is the second API that is the [Mantra API](https://languagecloud.sdl.com/cp/api). Language Cloud API is the recommended option for new integrations as it is more modern and much effort is put into its continuous evolution along with Trados Enterprise. Please take care not to confuse the two of them as they are not interchangeable. 
+## Trados Cloud API and Customer Portal API
+Please be aware that Trados Cloud offers two different APIs. First is the modern Trados Cloud API described on this page. Then there is the second API that is the [Mantra API](https://languagecloud.sdl.com/cp/api). Trados Cloud API is the recommended option for new integrations as it is more modern and much effort is put into its continuous evolution along with Trados Enterprise. Please take care not to confuse the two of them as they are not interchangeable. 
