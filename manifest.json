@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "D:/a/languagecloud-api-docs/languagecloud-api-docs",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -9,1459 +8,1721 @@
         "resource": {
           "relative_path": "index.json"
         }
-      },
-      "is_incremental": false
+      }
     },
     {
       "type": "Conceptual",
       "source_relative_path": "README.md",
       "output": {
         ".html": {
-          "relative_path": "README.html",
-          "hash": "hDoRkWtsDP3tmdYqILDShqo/QXefnnFOZVfv3Opp3q4="
+          "relative_path": "README.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/Plugins/TradosStudioDocsPlugin.deps.json",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/Plugins/TradosStudioDocsPlugin.deps.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/search-stopwords.json",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/search-stopwords.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/token.json",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/token.json"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html",
-          "hash": "wzKzt49YQgZo3Re9ru5xwTd1UE/AIQ47Rc1eSPWJnTo="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.yml\" sourcestartlinenumber=\"1\">Alignment related information.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html",
-          "hash": "dxt6MOvIQp0wNpEO7tjiB4xH7Rqkwt3wTCxdB/WNLUQ="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.yml\" sourcestartlinenumber=\"1\">A class to represent a continous span of items in an ordered sequence</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html",
-          "hash": "wnEyD2bmVF8rqUv8G/lyKNkJQ6MCv54UJ56OXu7VsW4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.yml\" sourcestartlinenumber=\"1\">Stores information about an alignment between a pair of <xref href=\"Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan\" data-throw-if-not-resolved=\"false\"></xref> objects.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Alignment.html",
-          "hash": "yHq50q2sBiFhiuuhC63bCMZX910XHQA/yG7QB1idUho="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Alignment",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.html",
-          "hash": "tmqp212x/+hB18mMayWwvhPxAcJ1BlZYDNCsqRfdydM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.yml\" sourcestartlinenumber=\"1\">Abstract <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupDataContainer\" data-throw-if-not-resolved=\"false\"></xref>, marking a user annotation on the BCM.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.html",
-          "hash": "q/SmDlww0a5vZ4aRvk1EGOg14XCPiA/NIJ4RKGTZeH0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.yml\" sourcestartlinenumber=\"1\">An <xref href=\"Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer\" data-throw-if-not-resolved=\"false\"></xref> representing user comments.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.html",
-          "hash": "SAdAbvQ1kk6dhvvDR4PemlJ4SmGU6UkfZ65JEAnhXDY="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.yml\" sourcestartlinenumber=\"1\">An <xref href=\"Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer\" data-throw-if-not-resolved=\"false\"></xref> representing terminology-related annotations.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Annotations.html",
-          "hash": "q2yUJ0b326N836pJuSjEr9osJan/hjKZH8jnrXrw41o="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Annotations.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Annotations",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html",
-          "hash": "pC6FRwAdIq9XvT8IWq/mPkVrcj9Yn4lOlUudIEDdQKg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx<TKey, TValue>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml\" sourcestartlinenumber=\"1\">A dictionary with support for:</p>\n<ul sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml\" sourcestartlinenumber=\"2\">\n<li sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml\" sourcestartlinenumber=\"2\">deep Equals (instead of ref comparison)</li>\n<li sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.yml\" sourcestartlinenumber=\"3\">deep GetHashCode (2 refs with the same values will return the same hash code). The default dictionary returns hash code based on reference.</li>\n</ul>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.html",
-          "hash": "bBT4diORN9n2POjJSEfiAeh6YppL+bguvXyK4X0nu0o="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.FileCollection",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.FileCollection.yml\" sourcestartlinenumber=\"1\">A dictionary-based collection of <xref href=\"Sdl.Core.Bcm.BcmModel.File\" data-throw-if-not-resolved=\"false\"></xref>s.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.html",
-          "hash": "52VuH9lYfNc3zgrM24pbZ8F1hk4TVR/n+TXkYzbZkP8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt<TKey, TValue>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt-2.yml\" sourcestartlinenumber=\"1\">A dictionary which uses hashes generated from the key to store items in a backing dictionary. We may look at generating\nlong hashes eventually if there are many collisions detected.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html",
-          "hash": "rlYecNkKpUu7iQTPq3EobN1QCYdQhxFAxxvaVFMlPZ8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection%602\" data-throw-if-not-resolved=\"false\"></xref> implementation with support for deep equality.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html",
-          "hash": "FxzaewhZbs7xknB1dEFXYDAa+ii87FMG5QkMI/J9/V4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection%602\" data-throw-if-not-resolved=\"false\"></xref> of <xref href=\"Sdl.Core.Bcm.BcmModel.ParagraphUnit\" data-throw-if-not-resolved=\"false\"></xref>s.\nAdds support for setting the parent elements and additonal helper properties.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.html",
-          "hash": "LKr4e3vvb6kvXxv4B/ILAT25OpZ++eiLQSBRXb0FQ/4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection.yml\" sourcestartlinenumber=\"1\">A collection of <xref href=\"Sdl.Core.Bcm.BcmModel.SegmentPair\" data-throw-if-not-resolved=\"false\"></xref>s.\nAdds support for indexing by segment number.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Collections.html",
-          "hash": "H5ls/Ijm4LtCGRDgi1V5q31IbsHj02bGalASmxEXox0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Collections.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Collections",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmConst.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html",
-          "hash": "FJ+l+kONg2IGReLmnvhh5sMQxLm5h3q/aVTewmf0n4Q="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmConst.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.BcmConst",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmConst.yml\" sourcestartlinenumber=\"1\">Public constants.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.html",
-          "hash": "Kp/DnXVlPzcEwnVXDi2LZ7syX8eVJie256Nd42/7cUU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html",
-          "hash": "Dwgh/kyMLjcxURbdAADTNM3kkEnHFax5uSoEO+Rf7p4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.BcmVisitor",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.yml\" sourcestartlinenumber=\"1\">An abstract class using the Visitor pattern.\nCan be implemented for concrete processing of BCM documents.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.html",
-          "hash": "tfD0PZW9zBBcrmC/LOpH8hykOuRIRv6JyoJOevinDK4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.yml\" sourcestartlinenumber=\"1\">This class holds the constants that represent the suggested\ndefault values to use for the <xref href=\"TSdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType\" data-throw-if-not-resolved=\"false\"></xref> attribute.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html",
-          "hash": "F1pJBHQYjqcndKyUoIQC1Mqtdqimc3uzlj2OfjW75N0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.yml\" sourcestartlinenumber=\"1\">Typed ICloneable interface.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html",
-          "hash": "RzJSotgwGFVB4aws08dMhpzeAPDDBwO2ykHdoP62PM8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.ModelExtensions",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html",
-          "hash": "VavzfNYMgn1sTWw71vDYSSJTBsEijKzdhaOXDHIh+OU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.yml\" sourcestartlinenumber=\"1\">Defines constants for TQE metadata in Binlingual API content</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Common.html",
-          "hash": "liAkxynbz/EDekgRLIr5N2P68FXCx9jQ1R0JXc2FMrQ="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Common.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Common",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.html",
-          "hash": "yIG8Q/U3FvnMR+NjjW20f2qW1u4KpQcvA9ym/mVxvXc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.ConfirmationLevel",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.ConfirmationLevel.yml\" sourcestartlinenumber=\"1\">Different stages of translation and translation approval for a <xref href=\"Sdl.Core.Bcm.BcmModel.Segment\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFile.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFile.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFile.html",
-          "hash": "r7zr6illEZyQFKusUDvlT2Wg8ptr+UXHYQaZb4h3XXs="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFile.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.DependencyFile",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFile.yml\" sourcestartlinenumber=\"1\">Files marked as dependencies for the BCM content.\nUsed for conversion from and to native formats.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.html",
-          "hash": "DQm+t/U8qRYHzissQ3yJJyB+54j0kwjyjqOWg68I4KI="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.DependencyFileUsage",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.DependencyFileUsage.yml\" sourcestartlinenumber=\"1\">Defines the purpose of a <xref href=\"Sdl.Core.Bcm.BcmModel.DependencyFile\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Document.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Document.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Document.html",
-          "hash": "xu5lFrzl4IzUPf78Y82KWOJvtTdio+m4p/Qrhy1q3ts="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Document.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Document",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Document.yml\" sourcestartlinenumber=\"1\">The BCM root element.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.html",
-          "hash": "h7SXE4ChgWJk+595bOBgbwrBucR4AnHdnHw7A54lwds="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Exceptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Exceptions.html",
-          "hash": "V/Vg25tsyEm4QGve6PbX/Q+p1J+Y+f7iNPeIudLtldA="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Exceptions.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Exceptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html",
-          "hash": "pJeHzr95Td4+62g0hLknD0xqRQaKIMejsYaOIG0jD4M="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.ExtensionDataContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Newtonsoft.Json.JsonExtensionDataAttribute\" data-throw-if-not-resolved=\"false\"></xref> object used as base for elements that need to preserve unrecognized data on deserialization.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackContainer.html",
-          "hash": "LGLy/pWe+t0M8TwN1lA8pAb1Gwk0CNaEG9x/eJVS/1E="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.FeedbackContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackContainer.yml\" sourcestartlinenumber=\"1\">Holds feedback information created during the translation and review process.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackType.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FeedbackType.html",
-          "hash": "MLSdOad/3IShiWSUfNlu6PiRGDIL9kTh40rAjLqlZU8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackType.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.FeedbackType",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.FeedbackType.yml\" sourcestartlinenumber=\"1\">Types of feedback changes created during the translation/review process.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.File.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.File.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.File.html",
-          "hash": "lfwDFQaXX42wLHCTPlds3fWITwrKR2HGPQk7APTLYLc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.File.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.File",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.File.yml\" sourcestartlinenumber=\"1\">BCM data extracted from a native file.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.html",
-          "hash": "aim6+IHeuLR1h7frOzvTOoyH1KALPm/1qLYkC8CoC9E="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.FileMetaDataKeys",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.FileMetaDataKeys.yml\" sourcestartlinenumber=\"1\">Constants used for <xref href=\"Sdl.Core.Bcm.BcmModel.File\" data-throw-if-not-resolved=\"false\"></xref> metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html",
-          "hash": "SysIG+TNbVPyPlGqsODGjO6chYx0M3mIayEUabxJ5r0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Fragment",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.yml\" sourcestartlinenumber=\"1\">Class representing an independent fragment (slice) of a BCM <xref href=\"Sdl.Core.Bcm.BcmModel.Document\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.html",
-          "hash": "BaD7Ifv5+SwSq/ra0UBF1Vti+0fKWGE393kLiMNJ8qc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.ISkeletonItemReference<T>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.yml\" sourcestartlinenumber=\"1\">Marks a class as having its definition in the <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.html",
-          "hash": "/6aePXrnpLxBHSn1NpfTVYK21kUdq1ZH9d3g8rP6Pn0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.LocalizableSubContent",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.LocalizableSubContent.yml\" sourcestartlinenumber=\"1\">Subcontent of a particular BCM content element.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LockedContentContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.LockedContentContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.LockedContentContainer.html",
-          "hash": "NxYQKRl6Sp6DP64W3wCi4Zn65w4hzoXRe8dp72xOOkY="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.LockedContentContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.LockedContentContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.LockedContentContainer.yml\" sourcestartlinenumber=\"1\">Marks content that is locked for editing.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupData.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MarkupData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupData.html",
-          "hash": "p4VgF1gHbQ2kqDvrjMOz5giMmz6QQGgIJe51QwY/ivg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MarkupData.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.MarkupData",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.MarkupData.yml\" sourcestartlinenumber=\"1\">Abstract entity representing an item that can be included inside a <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupDataContainer\" data-throw-if-not-resolved=\"false\"></xref>.\nExamples: <xref href=\"Sdl.Core.Bcm.BcmModel.TextMarkup\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Sdl.Core.Bcm.BcmModel.PlaceholderTag\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Sdl.Core.Bcm.BcmModel.TagPair\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html",
-          "hash": "fBLKsci5jkZYHrupIxRyS1zZJMQMcyKVv6lhc3GCRQk="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.MarkupDataContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.MarkupDataContainer.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> element that can hold other <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MetadataContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MetadataContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.MetadataContainer.html",
-          "hash": "mNlMrWEqh4wnhuULj6lHNKetJ57tE6w6DVMAq8JTQrg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.MetadataContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.MetadataContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.MetadataContainer.yml\" sourcestartlinenumber=\"1\">An object that contains metadata in the form of a <xref href=\"Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx%602\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Paragraph.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Paragraph.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Paragraph.html",
-          "hash": "HSxPhzzN0vPPscKmPO8fjT81F4fWXCws7Wbjvp1QwqI="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Paragraph.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Paragraph",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Paragraph.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupDataContainer\" data-throw-if-not-resolved=\"false\"></xref> containing the source or target content of a <xref href=\"Sdl.Core.Bcm.BcmModel.ParagraphUnit\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnit.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnit.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnit.html",
-          "hash": "O5zLs6Sxdp/77+vY4ALKpm+SqeZ+jixBPgU1mamzSg8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnit.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.ParagraphUnit",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnit.yml\" sourcestartlinenumber=\"1\">The main element of translatable content. Contains a source and target <xref href=\"Sdl.Core.Bcm.BcmModel.Paragraph\" data-throw-if-not-resolved=\"false\"></xref> element.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.html",
-          "hash": "x3C8KPhA6LBczM33tEx+fMEnIiXzMemUuY986tg3Fw8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys.yml\" sourcestartlinenumber=\"1\">Constants with <xref href=\"Sdl.Core.Bcm.BcmModel.ParagraphUnit\" data-throw-if-not-resolved=\"false\"></xref> related metadata keys.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html",
-          "hash": "B+jwD+2j9XkdD0LlAphHgct8EWnhVwb6n9P2IOljVjo="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.yml\" sourcestartlinenumber=\"1\">Common superclass for the two types of serializer</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html",
-          "hash": "6IISw9cZsAP/nJ4es9QPUIpO32M9ucgbjw02wpHW2Ug="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.yml\" sourcestartlinenumber=\"1\">Bcm serialization interface that allows for not holding the whole bcm document in memory</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html",
-          "hash": "clM5vK+IvK/ma0Dc3Lxp5Z/7FlnepHn1YpN9LH90skM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.yml\" sourcestartlinenumber=\"1\">Bcm file serialization interface that allows for not holding the full file in memory</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.html",
-          "hash": "ltOGLWV0+SHGg34JccfCCtESnrmFetUsasUpqkkB/c4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.yml\" sourcestartlinenumber=\"1\">In-memory partial bcm serializer</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.html",
-          "hash": "MXPfn1cTlilPuz8kC+4uwy8wosjikOxGpMuK82cfsUE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html",
-          "hash": "vfkGCdK5j3Zn5fjnPG8mWKJAs9JeBvhfZnT3yIwb2S0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.yml\" sourcestartlinenumber=\"1\">Creates IPartialBcmSerializer instances (either in-memory or temp file based)</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.html",
-          "hash": "P4kVfLSN1pNanaVIqVXIhwwSDwxcuS0zc7h6mNRDPmQ="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.yml\" sourcestartlinenumber=\"1\">Temp file based bcm serializer variant</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.html",
-          "hash": "anIESALill4v9Hgxyi8B9FXnGxTvDZiSr9o+mjDYfuE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PartialSerialization.html",
-          "hash": "9zpX61f+g/dVInPbp56nmDVamcSl4CRc8F6o/IT5ANY="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PartialSerialization.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PartialSerialization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PlaceholderTag.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PlaceholderTag.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.PlaceholderTag.html",
-          "hash": "EqebbS4wfGkJnqeKIIWDfYkBCTPYGgnvA75sopnR/+M="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.PlaceholderTag.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.PlaceholderTag",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.PlaceholderTag.yml\" sourcestartlinenumber=\"1\">A tag with no translatable content.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.RevisionContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionContainer.html",
-          "hash": "3/YUOEelrjnJK0whFOLmYck52flp+RQ+XfcxC/VaF6M="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.RevisionContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.RevisionContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.RevisionContainer.yml\" sourcestartlinenumber=\"1\">Marks revisions to the translated content.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionType.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.RevisionType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.RevisionType.html",
-          "hash": "VJ7UcNay4zWfDBSZyEWEw8IN5mmknT/5xJK5XNcR2dM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.RevisionType.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.RevisionType",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.RevisionType.yml\" sourcestartlinenumber=\"1\">Types of <xref href=\"Sdl.Core.Bcm.BcmModel.RevisionContainer\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Segment.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Segment.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Segment.html",
-          "hash": "/rxPIdCd1WOItLxAtveffSLwua3BtVeP05P9hPqnyQU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Segment.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Segment",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Segment.yml\" sourcestartlinenumber=\"1\">Basic unit of translatable content.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.html",
-          "hash": "rAkYy6wkvknbi2aSBynRo1G4lyMKPUG6M1S2bonagNw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.yml\" sourcestartlinenumber=\"1\">Constants for <xref href=\"Sdl.Core.Bcm.BcmModel.Segment\" data-throw-if-not-resolved=\"false\"></xref> metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentPair.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentPair.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentPair.html",
-          "hash": "z8qXksxTN6IdIGhtjAEEezIJ4+LCX8S0QsRHcVtd5uY="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentPair.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.SegmentPair",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.SegmentPair.yml\" sourcestartlinenumber=\"1\">Class grouping together the source and equivalent target <xref href=\"Sdl.Core.Bcm.BcmModel.Segment\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentationHint.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentationHint.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.SegmentationHint.html",
-          "hash": "2xFKom9KJgcU5PUI5ABqGUvVSqTB4rFku01VpBu9fes="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.SegmentationHint.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.SegmentationHint",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.SegmentationHint.yml\" sourcestartlinenumber=\"1\">Information on how specific tags should be segmented.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.html",
-          "hash": "5u/4pbo+Wpp4jsq5VOnaCfgJVWbU30YUMi0bh+g9bbg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.yml\" sourcestartlinenumber=\"1\">Factory providing mapping between <xref href=\"MarkupData.Type\" data-throw-if-not-resolved=\"false\"></xref> string values and concrete implementations of <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.html",
-          "hash": "ZL0SMPfo7xcpmurXocNiDlsWUCV3iLKzqT9nvL5LcKc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.yml\" sourcestartlinenumber=\"1\">Class for mapping to different types of <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Serialization.html",
-          "hash": "VrL56GzBqIn8MmZnpVeCaNuKXQUaRvbzVOIGfbDGrl4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Serialization.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Serialization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html",
-          "hash": "lnbC/m2Os6os4Mmm7/wDzsHB5GDFPdLD/gVuP4Jt5fM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.yml\" sourcestartlinenumber=\"1\">Contains comment data. Can be referenced by multiple <xref href=\"Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.html",
-          "hash": "XD9OAdHnwDnA2iz0O2wDE/92suusIxVdCO/57gbOXpI="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.yml\" sourcestartlinenumber=\"1\">Supported values of comment severity.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Context.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Context.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Context.html",
-          "hash": "jxEBypx4Pw3n+HN5MU22CsfdnRrY3EsLRnBkhH3s1/g="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Context.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.Context",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Context.yml\" sourcestartlinenumber=\"1\">Context information, organized as a tree structure.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html",
-          "hash": "wW5zmQ2QH/05QLFCP/dNRJ18KALtyx/PgiOOblVwwmE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.yml\" sourcestartlinenumber=\"1\">Holds context data.\nCan be referenced by multiple <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.Context\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html",
-          "hash": "7fZHIpWykDy/1XjxYiDMvhxOjID4hKOVGU/m8D6LplE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.yml\" sourcestartlinenumber=\"1\">Holds data for a <xref href=\"Sdl.Core.Bcm.BcmModel.File\" data-throw-if-not-resolved=\"false\"></xref> that is referenced by different <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html",
-          "hash": "QzU2cPM6wX4knp5xTk3gsAl4KVe9U1mmJV0dfA+PMzw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.yml\" sourcestartlinenumber=\"1\">Holds formatting elements that can be applied to different elements of BCM content.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.html",
-          "hash": "ZMVRiOj40vtb5n/fWoz4rFfs0iF6cwyTlEWMyhzjaRg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.yml\" sourcestartlinenumber=\"1\">Interface for BCM elements containing terminology attributes.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.html",
-          "hash": "ODt20ukg78GKZpJM2xqq61Mk7NC8vyoqlOcptagfVlE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.yml\" sourcestartlinenumber=\"1\">Creates unique numeric IDs for all the elements in different <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton\" data-throw-if-not-resolved=\"false\"></xref> collection.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html",
-          "hash": "KnP4rdyun1uVzp7Ft/QquKBjgLEWWjm+lp4dW0CirOw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.yml\" sourcestartlinenumber=\"1\">Definition of a Placeholder.\nCan be referenced by multiple <xref href=\"Sdl.Core.Bcm.BcmModel.PlaceholderTag\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html",
-          "hash": "xStNlqhNFb2awOMXmlVE+Cn0he5QTpVx6HN4uG3SciU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<T>",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.yml\" sourcestartlinenumber=\"1\">Base class for collections used in a <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html",
-          "hash": "2+A907uYDNh87IhXImFhoONNKjefHvoOtiilfPT7Iaw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.yml\" sourcestartlinenumber=\"1\">Wrapper used for defining integer keys in the <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton\" data-throw-if-not-resolved=\"false\"></xref> collections.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html",
-          "hash": "eHh43QiknPmdTdmruYFZcjMKuixhJlqqORZiz4okT8o="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.yml\" sourcestartlinenumber=\"1\">Base class for different types of elements definied in a <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html",
-          "hash": "va7udCDqTE27USluj+pv71p3+VAPbxwEMix/2tQ/qZg="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.yml\" sourcestartlinenumber=\"1\">Definition of a StructureTag.\nCan be referenced by multiple <xref href=\"Sdl.Core.Bcm.BcmModel.StructureTag\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.html",
-          "hash": "kc2ctDEtwOGgrA8yq4mYiSqkKvVgOlxqWP1oRjen2Iw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.yml\" sourcestartlinenumber=\"1\">Collection of subcontent <xref href=\"Sdl.Core.Bcm.BcmModel.LocalizableSubContent\" data-throw-if-not-resolved=\"false\"></xref> elements.\nCan appear in different <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html",
-          "hash": "gRcfRKfxxPEhMAlQBY/Ud4hZWm8XmXTQIOUpPzcGc+E="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.yml\" sourcestartlinenumber=\"1\">Definition of a TagPair.\nCan be referenced by multiple <xref href=\"Sdl.Core.Bcm.BcmModel.TagPair\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Term.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html",
-          "hash": "De5TZWUT/Esu9sChQFzLRm+8nWYOAl5KBSpMZNl1qIM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.Term",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.yml\" sourcestartlinenumber=\"1\">Terminology element.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html",
-          "hash": "6T4DORh93aQWmyjsLbmumJmQwVfD3AG7DCIh1Lb2wBo="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.yml\" sourcestartlinenumber=\"1\">Data on the creation origin of <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.Term\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.html",
-          "hash": "I4bcf0qCOQyGFnxaLUIxVn0HadmE+fhETbllC/M+/c0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.yml\" sourcestartlinenumber=\"1\">Translation of a specific <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.Term\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html",
-          "hash": "/qldZEldW9eSF4Q2SmDDZVizQunccVZonpw7xkSoy2c="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.yml\" sourcestartlinenumber=\"1\">Data containing a list of <xref href=\"Sdl.Core.Bcm.BcmModel.Skeleton.Term\" data-throw-if-not-resolved=\"false\"></xref>s representing terminology information.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Skeleton.html",
-          "hash": "PDthqQPcaR5+RRm3ZaE1LOPbxHddgeErNKhelKgk/jM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Skeleton",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.StructureTag.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.StructureTag.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.StructureTag.html",
-          "hash": "2CHltEiQby8cutk/kA4VXito0ce4r/ecY5p52Z70Mw4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.StructureTag.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.StructureTag",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.StructureTag.yml\" sourcestartlinenumber=\"1\">A tag that is used for document structure only and has no translatable content.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPair.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TagPair.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPair.html",
-          "hash": "XDsGz7vGdYCL/rGxTNiGyO3Pya+lItmlTAy3S8LG0MI="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TagPair.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TagPair",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TagPair.yml\" sourcestartlinenumber=\"1\">A tag composed of a start and and end tag.\nCan contain other <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.html",
-          "hash": "h7Oqvr9n/aYb+XBQGFHY2DoibpkWQBiqzYrLUUPhVXo="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys.yml\" sourcestartlinenumber=\"1\">Constants used a keys for <xref href=\"Sdl.Core.Bcm.BcmModel.TagPair\" data-throw-if-not-resolved=\"false\"></xref> metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.html",
-          "hash": "hDZ2Kt6bz4RwlAjgJ+cF1wnLaFFH0IfJ6SycAqyKDeE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TextContextMatchLevel",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.yml\" sourcestartlinenumber=\"1\">Used with textual context matches to indicate the level of matching.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextMarkup.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TextMarkup.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TextMarkup.html",
-          "hash": "6up8Xo/nt62fEugtgE1U0b+OC2aAtVOdWz+foN5kvqQ="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TextMarkup.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TextMarkup",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TextMarkup.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> containing plain text.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.html",
-          "hash": "vSxiHJCpHXQtoWHWbU5SRggJITPqdW2nzuXsxfeTDHM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.yml\" sourcestartlinenumber=\"1\">DateTime patterns used by <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> elements.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html",
-          "hash": "Na+bOSWdytnVqmOMK41uP5Wt7PhY0OS7H7FoGViGNJw="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.yml\" sourcestartlinenumber=\"1\">The numeric separators type which can occur in a number token.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html",
-          "hash": "mARiwJRe4svxw762vdEJBGGNB7VkXmOhvLgLdoMDXG8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.yml\" sourcestartlinenumber=\"1\">Represents a position within a segment.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html",
-          "hash": "PJsR0DOTRehk9keBX0q3nCsfeXM42eZrZg7l4eo7Xq0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.yml\" sourcestartlinenumber=\"1\">A selection of content inside a <xref href=\"Sdl.Core.Bcm.BcmModel.Segment\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html",
-          "hash": "aBtQca5pzEGJePs7s3I2X5/EqEatF5cGegqRd1GtqT0="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Sign",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Sign.yml\" sourcestartlinenumber=\"1\">The sign of a number</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html",
-          "hash": "2/nXxLnBKfdxK+TTMrmVDYKT0ITy0eETVVc9PWWLhEc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.TagType",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.TagType.yml\" sourcestartlinenumber=\"1\">Types of tags appearing in tokenization data.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html",
-          "hash": "9PEhH/NzIYyPbovb/gY1fl81S9dc6wZzyYZT1zQqUMU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> used for abreviations.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html",
-          "hash": "RmrkPFu4hAX+91NLmn58Ebbefn53GwAYB250xkz/CBI="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing acronyms.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html",
-          "hash": "zyitrFF2jDwx6rlryLNbUDpr++M6sfeMGIacJhKz01M="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing alphanumeric tokens.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html",
-          "hash": "KWt0TsGrjdONndJ5i7JUS4eGsGsZlRlwFAMvsZksy0o="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing sequence of characters.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html",
-          "hash": "6KnMbhWUkmfx5nmG9uen+iLqXL4ZF+niQs6LIvnz/To="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> represent date/time tokens.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html",
-          "hash": "J1tB1tM7cCsFTC2SoPDzjmtZ2om60YGVqmq02y27qko="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing general punctuation tokens.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html",
-          "hash": "pwBmhKOPhcUc6cp9D5uePzkx3pZ1xZU6LzYiHzHLhYE="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.yml\" sourcestartlinenumber=\"1\">Abstract class for different token implementations.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html",
-          "hash": "6dVka85y6yQgBkmbrG8d8B+GcfIjyyx7PxuJew8fyYM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.yml\" sourcestartlinenumber=\"1\">Used for IP address tokens.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html",
-          "hash": "xjCgNxPnNCp/WpgB/qWnv7db4EZ9YHp06EXgvYMyqls="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing a measurement.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html",
-          "hash": "9Ta97kZ1By4Ir6GUIBOif5weRuP5MA1H/oT6kbUBO3g="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing a numerical value.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html",
-          "hash": "8SRbepAR81wTkL7UGamfB2rC2gsmqTrc6xh7uqilLaU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing a tag element.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html",
-          "hash": "zSa/7HKUckwtsDrFQiTEtgmj0oTpp8GjInaiY12BPqQ="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.yml\" sourcestartlinenumber=\"1\">Abstract class for different token implementations.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html",
-          "hash": "6/KhxJyGQN25DAkRLl6KYMO6/Ah9Km+n2AsVhgG6BkM="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.yml\" sourcestartlinenumber=\"1\">An URI token that is placeable but is not substitutable.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html",
-          "hash": "bkKUkrtRS4r9qXTFjO0ZACszew04mVfjIbo8lM/f8TY="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing a substitutable variable.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html",
-          "hash": "RGT+NxDxtO66DFMGTS/Ffg+/7TG+5eHfT5GzcEtbWsU="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> representing a a non-empty sequence of whitespace characters.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html",
-          "hash": "gFmrCw3Mr+c7I/3K4BqX2TS6nowBzZki6vulsu84E88="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token\" data-throw-if-not-resolved=\"false\"></xref> which represents a non-specific word.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html",
-          "hash": "LzjOV+cGDu1nptXQYTa4WV4LqWzu3cQjQgdL23V+f50="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Tokens",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.html",
-          "hash": "psqCTP8g5smCSczEdrXM37mzMhLrNPtGplQtNzId9rc="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization.Unit",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.Unit.yml\" sourcestartlinenumber=\"1\">Enumerates the units supported by Sdl.LanguagePlatform.Core.Tokenization.Unit</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.Tokenization.html",
-          "hash": "cMC+l69qND7xhpxbJrwep48a78wQITpP4/gV/C2ZpJ8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Tokenization.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.Tokenization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOrigin.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html",
-          "hash": "xffZVVgV0bo485FKNH6ZY1ZEXmbTGTgrErSvZiKbum4="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOrigin.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TranslationOrigin",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOrigin.yml\" sourcestartlinenumber=\"1\">Contains information on the origin of translation.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.html",
-          "hash": "H/X3mfGTxOXvOOdkurv3oISdJtw46iQ+5crMoOl6A/Q="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData.yml\" sourcestartlinenumber=\"1\">Metadata keys used for <xref href=\"Sdl.Core.Bcm.BcmModel.TranslationOrigin\" data-throw-if-not-resolved=\"false\"></xref> metadata.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html",
-          "hash": "hNEf878hH+X20lOr9LIObZAYhTM0TCwQDi6A3Xy5IC8="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.yml\" sourcestartlinenumber=\"1\">Model for persisting TQE(Translation Quality Estimation) information</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html",
-          "hash": "x9/HJnwDAwh9yrrNVMHKjzXoAyOY1PRNee/QeIRxd7g="
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel.UnknownMarkupData",
+      "Summary": "<p sourcefile=\"api/bcm/Sdl.Core.Bcm.BcmModel.UnknownMarkupData.yml\" sourcestartlinenumber=\"1\">A <xref href=\"Sdl.Core.Bcm.BcmModel.MarkupData\" data-throw-if-not-resolved=\"false\"></xref> which was not recognized during deserialization.\nUsed only to preserve its existing data and should not be used directly in BCM processing.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.yml",
+      "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Sdl.Core.Bcm.BcmModel",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/bcm/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/BCM/Sdl.Core.Bcm.BcmModel.html",
-          "hash": "yW8F9P75STBcax60YgXWGbD5dzQRemvhQcbOrrjEu3c="
+          "relative_path": "api/bcm/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/bcm/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/BCM.NET_client_API.md",
+      "source_relative_path": "articles/BCM/BCM.NET_client_API.md",
       "output": {
         ".html": {
-          "relative_path": "articles/BCM.NET_client_API.html",
-          "hash": "XGVhafpcvDl3Q2bpqTc3Dnfbd+F68ni7FLLUbilx3W0="
+          "relative_path": "articles/BCM/BCM.NET_client_API.html"
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/BCM/API.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/BCM/API.html",
-          "hash": "ZFmqy7tvQ92EOqPSki7Z0uTxuG+emYvnXzEREGhSOgc="
-        }
-      },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1469,11 +1730,9 @@
       "source_relative_path": "articles/BCM/Samples.md",
       "output": {
         ".html": {
-          "relative_path": "articles/BCM/Samples.html",
-          "hash": "rFlZdX1VXjnZ6DKc64DSssTA5oGtfXjpGN4egNrtXS0="
+          "relative_path": "articles/BCM/Samples.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -1481,112 +1740,58 @@
       "source_relative_path": "articles/BCM/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/BCM/toc.html",
-          "hash": "Tq2IYYcM6pW8sT49n9yCHVI+UOAQM6wcSxEo6va6UlA="
+          "relative_path": "articles/BCM/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/BCM/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "developer_license.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "1pLCl0gkOojC7I2Bh2+qzsi+W4KkWY4a7fBcWbP5hik="
+          "relative_path": "developer_license.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
+      "type": "Resource",
+      "source_relative_path": "docfx.json",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "NQv5NMXsFzXlVQT5iu5Zymcl26D55zuvU7bDZjlyWsU="
+        "resource": {
+          "relative_path": "docfx.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "skR4rH55+tACUPDavia5r68pu4mlcVc4kdJpUvhMFtg="
+          "relative_path": "index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "hxqH5kJ44jErsdMnHjNZIBFFd6yNUvJxo6gkq3lmr3I="
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     }
   ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 119,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
-    }
-  ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

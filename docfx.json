@@ -1,0 +1,74 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "resources/bcm/assembly/v2.1.3",
+          "files": [
+            "Sdl.Core.Bcm.BcmModel.dll"
+          ]
+        }
+      ],
+      "dest": "api/bcm",
+      "disableGitFeatures": true,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**",
+          "**/*.json",
+          "**/*.html"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "api/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "filemetadata": {
+      "langs": {
+        "api/**.yml": [ "csharp", "vb", "fsharp", "cpp" ]
+      }
+    },
+    "template": [
+      "RWSTemplate"
+    ],
+    "postProcessors": [ "ExtractSearchIndex", "EnvironmentVariableProcessor" ],
+    "globalMetadata": {
+      "_enableSearch": true
+    },
+    "markdownEngineName": "dfm",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class MarkupData </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class MarkupData ">
+    
+    <meta name="description" content="Abstract entity representing an item that can be included inside a . Examples: , , .">
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../../articles/BCM/toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <span class="glyphicon glyphicon-search search-icon"></span>
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData">
+
+
+
+  <h1 id="Sdl_Core_Bcm_BcmModel_MarkupData" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData" class="text-break">Class MarkupData</h1>
+  <div class="markdown level0 summary"><p>Abstract entity representing an item that can be included inside a <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a>.
+Examples: <a class="xref" href="Sdl.Core.Bcm.BcmModel.TextMarkup.html">TextMarkup</a>, <a class="xref" href="Sdl.Core.Bcm.BcmModel.PlaceholderTag.html">PlaceholderTag</a>, <a class="xref" href="Sdl.Core.Bcm.BcmModel.TagPair.html">TagPair</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html">ExtensionDataContainer</a></div>
+    <div class="level2"><a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html">MetadataContainer</a></div>
+    <div class="level3"><span class="xref">MarkupData</span></div>
+      <div class="level4"><a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a></div>
+      <div class="level4"><a class="xref" href="Sdl.Core.Bcm.BcmModel.PlaceholderTag.html">PlaceholderTag</a></div>
+      <div class="level4"><a class="xref" href="Sdl.Core.Bcm.BcmModel.StructureTag.html">StructureTag</a></div>
+      <div class="level4"><a class="xref" href="Sdl.Core.Bcm.BcmModel.TextMarkup.html">TextMarkup</a></div>
+      <div class="level4"><a class="xref" href="Sdl.Core.Bcm.BcmModel.UnknownMarkupData.html">UnknownMarkupData</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html">MetadataContainer</a>&gt;</div>
+    <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html">ICloneable</a>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_">MetadataContainer.GetMetadata(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_">MetadataContainer.SetMetadata(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_">MetadataContainer.Equals(MetadataContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata">MetadataContainer.ShouldSerialize_metadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata">MetadataContainer.Metadata</a>
+    </div>
+    <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData">ExtensionDataContainer.ExtensionData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Sdl.html">Sdl</a>.<a class="xref" href="Sdl.Core.html">Core</a>.<a class="xref" href="Sdl.Core.Bcm.html">Bcm</a>.<a class="xref" href="Sdl.Core.Bcm.BcmModel.html">BcmModel</a></h6>
+  <h6><strong>Assembly</strong>: Sdl.Core.Bcm.BcmModel.dll</h6>
+  <h5 id="Sdl_Core_Bcm_BcmModel_MarkupData_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+[JsonConverter(typeof(MarkupDataCreator))]
+public abstract class MarkupData : MetadataContainer, IEquatable&lt;MetadataContainer&gt;, ICloneable&lt;MarkupData&gt;, IEquatable&lt;MarkupData&gt;</code></pre>
+  </div>
+  <h5 id="Sdl_Core_Bcm_BcmModel_MarkupData_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Inheritors of MarkupData should not implement themselves <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>, but should override <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a> equality.</p>
+</div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.#ctor*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData__ctor" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.#ctor">MarkupData()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MarkupData()</code></pre>
+  </div>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData__ctor_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.#ctor*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData__ctor_System_String_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.#ctor(System.String)">MarkupData(string)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MarkupData(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Ancestors_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Ancestors" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors">Ancestors</h4>
+  <div class="markdown level1 summary"><p>This item's <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a> ancestors, in ascending order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;MarkupDataContainer&gt; Ancestors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Id_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Id*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Id" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Id">Id</h4>
+  <div class="markdown level1 summary"><p>Markup data unique id (GUID).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;id&quot;, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, Order = -2147483648)]
+public string Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_IndexInParent_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_IndexInParent" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent">IndexInParent</h4>
+  <div class="markdown level1 summary"><p>The index of this item in the parent <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a>.
+-1 if it doesn't have a parent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexInParent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_IsContainer_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_IsContainer" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer">IsContainer</h4>
+  <div class="markdown level1 summary"><p>True if this <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a> is a container. Otherwise false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsContainer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Parent_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Parent*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Parent" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a> parent container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarkupDataContainer Parent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html">MarkupDataContainer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentFragment_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentFragment" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment">ParentFragment</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.Fragment.html">Fragment</a> containing this item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Fragment ParentFragment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Fragment.html">Fragment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraph_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraph" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph">ParentParagraph</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.Paragraph.html">Paragraph</a> containing this item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Paragraph ParentParagraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Paragraph.html">Paragraph</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraphUnit_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraphUnit" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit">ParentParagraphUnit</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.ParagraphUnit.html">ParagraphUnit</a> containing this item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ParagraphUnit ParentParagraphUnit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.ParagraphUnit.html">ParagraphUnit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentSegment_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_ParentSegment" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment">ParentSegment</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.Segment.html">Segment</a> containing this item.
+Null if the item isn't inside of a Segment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Segment ParentSegment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Segment.html">Segment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Type_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Type*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Type" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type. Should be implement in derived classes to uniquely identify the type of <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a> on deserialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(&quot;type&quot;)]
+protected abstract string Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_AcceptVisitor_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)">AcceptVisitor(BcmVisitor)</h4>
+  <div class="markdown level1 summary"><p>Accepts a visitor of type <a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html">BcmVisitor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void AcceptVisitor(BcmVisitor visitor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html">BcmVisitor</a></td>
+        <td><span class="parametername">visitor</span></td>
+        <td><p>The <a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html">BcmVisitor</a> used to visit this item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Clone_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Clone*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Clone" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones the item to a new <a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual MarkupData Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Equals_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Equals*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Equals_Sdl_Core_Bcm_BcmModel_MarkupData_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)">Equals(MarkupData)</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Equals(MarkupData other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>An object to compare with this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_Equals_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Equals*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_Equals_System_Object_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.Equals(System.Object)">Equals(object)</h4>
+  <div class="markdown level1 summary"><p>Performs a deep-equals comparison.<br>
+<span class="xref">System.Object.Equals(object)</span></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_">MetadataContainer.Equals(object)</a></div>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_GetHashCode_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.GetHashCode*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_GetHashCode" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns a hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>A hash code for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode">MetadataContainer.GetHashCode()</a></div>
+
+
+  <a id="Sdl_Core_Bcm_BcmModel_MarkupData_UniqueClone_" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.UniqueClone*"></a>
+  <h4 id="Sdl_Core_Bcm_BcmModel_MarkupData_UniqueClone" data-uid="Sdl.Core.Bcm.BcmModel.MarkupData.UniqueClone">UniqueClone()</h4>
+  <div class="markdown level1 summary"><p>Creates clone of the current object, with a new unique Id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual MarkupData UniqueClone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Sdl.Core.Bcm.BcmModel.MarkupData.html">MarkupData</a></td>
+        <td><p>A clone with a new unique Id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html">ICloneable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

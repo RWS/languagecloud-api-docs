@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>BCM .NET Client API Samples </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="BCM .NET Client API Samples ">
-    <meta name="generator" content="docfx 2.59.3.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>BCM .NET Client API Samples </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="BCM .NET Client API Samples ">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
-      <header>
-        
+      <header>        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
-              <a class="navbar-brand" href="../../index.html">
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
                 <img id="logo" class="svg" src="../../logo.svg" alt="">
               </a>
             </div>
@@ -48,29 +48,29 @@
             </div>
           </div>
         </nav>
-        
-        <div class="subnav navbar-default">
-          <div class="container hide-when-search">
-            <div class="breadcrumb-container" id="breadcrumb">
-              <ul class="breadcrumb col-md-10">
-                <li></li>
-              </ul>
-            </div>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
           </div>
         </div>
       </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
-      </div>
+
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -103,7 +103,8 @@ foreach (var comment in targetComments)
 {
     Console.WriteLine($&quot;Target comment in segment {comment.ParentSegment.SegmentNumber} with text {comment.Definition.Text}&quot;);
 }
-</code></pre><h3 id="add-a-comment-over-a-text-element">Add a comment over a text element</h3>
+</code></pre>
+<h3 id="add-a-comment-over-a-text-element">Add a comment over a text element</h3>
 <pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
 
 var definition = new CommentDefinition
@@ -130,7 +131,8 @@ parentElement.Remove(text);
 comment.Add(text);
 // Insert the new Comment element to replace the Text, in the same position
 parentElement.Insert(indexInParent, comment);
-</code></pre><h3 id="remove-a-comment">Remove a comment</h3>
+</code></pre>
+<h3 id="remove-a-comment">Remove a comment</h3>
 <pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
 var comment = document.Files.First().ParagraphUnits.SelectMany(x =&gt; x.Target.AllSubItems.OfType&lt;CommentContainer&gt;()).First();
 
@@ -139,7 +141,8 @@ document.Files.First().Skeleton.CommentDefinitions.Remove(comment.Definition);
 
 // Remove the Comment from its parent element
 comment.Parent.Remove(comment);       
-</code></pre><h2 id="bcm-visitor">BCM Visitor</h2>
+</code></pre>
+<h2 id="bcm-visitor">BCM Visitor</h2>
 <p>This sample gathers the translatable content from a BCM documents and creates a HTML file with the content.</p>
 <h3 id="htmloutputvisitor">HtmlOutputVisitor</h3>
 <pre><code class="lang-csharp">using Sdl.Core.Bcm.BcmModel;
@@ -296,7 +299,8 @@ namespace Sdl.Core.Bcm.API.Samples.Visitor
         }
     }
 }
-</code></pre><h3 id="usage">Usage</h3>
+</code></pre>
+<h3 id="usage">Usage</h3>
 <pre><code class="lang-csharp">Document document; // a BCM Document deserialized from JSON
 
 var visitor = new HtmlOutputVisitor();
@@ -319,9 +323,11 @@ document.Files.ForEach(file =&gt;
 });
 
 result.Append(&quot;&lt;/html&gt;&quot;);
-</code></pre></article>
+</code></pre>
+
+</article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -332,14 +338,14 @@ result.Append(&quot;&lt;/html&gt;&quot;);
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h4>On this page</h4>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -347,14 +353,14 @@ result.Append(&quot;&lt;/html&gt;&quot;);
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../styles/main.js"></script>
   </body>

@@ -1,29 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Access the Language Cloud APIs </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Access the Language Cloud APIs ">
-    <meta name="generator" content="docfx 2.59.3.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Access the Trados Cloud APIs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Access the Trados Cloud APIs ">
     
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/docfx.vendor.css">
-    <link rel="stylesheet" href="styles/docfx.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
-      <header>
-        
+      <header>        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
-              <a class="navbar-brand" href="index.html">
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
             </div>
@@ -48,53 +48,56 @@
             </div>
           </div>
         </nav>
-        
-        <div class="subnav navbar-default">
-          <div class="container hide-when-search">
-            <div class="breadcrumb-container" id="breadcrumb">
-              <ul class="breadcrumb col-md-10">
-                <li></li>
-              </ul>
-            </div>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
           </div>
         </div>
       </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
-      </div>
+
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="access-the-varproductname-apis">Access the Language Cloud APIs</h1>
+<h1 id="access-the-varproductname-apis">Access the <a href="Trados Cloud">Trados Cloud</a> APIs</h1>
 
-<p>Language Cloud is the platform on which RWS host a number of products. You&#39;re in the right place if you&#39;re looking for API documentation for any of the following:</p>
+<p><a href="Trados Cloud">Trados Cloud</a> is the platform on which RWS host a number of products. You're in the right place if you're looking for API documentation for any of the following:</p>
 <ul>
 <li>Trados Enterprise</li>
 <li>Trados Accelerate</li>
 <li>Trados Team</li>
-<li>Trados Studio (cloud capabilites)</li>
+<li>Trados Ignite</li>
+<li>Trados Studio (cloud capabilities)</li>
+<li>Trados Go</li>
 </ul>
-<h2 id="integrating-with-varproductname-products">Integrating with Language Cloud products</h2>
-<p>To create an integration with any of the products listed above, you&#39;ll need to use the Public API. You can find the documentation for the API <a href="https://languagecloud.sdl.com/lc/api-docs">here</a>. Note that the API is updated regularly so make sure that you check out the <a href="https://languagecloud.sdl.com/lc/api-docs/whats-new">What&#39;s new</a> section to find out information on recently added features. To enable RWS to extend and improve the API, and to support the latest features in the products, sometimes it&#39;s necessary to remove or change functionality. For that, you&#39;ll need to check the <a href="https://languagecloud.sdl.com/lc/api-docs/whats-deprecated">What&#39;s deprecated</a> page where RWS will post advance notice of any API endpoints that will be removed or change in the future. Don&#39;t worry though because RWS will try and give six months notice of any breaking changes.</p>
-<h2 id="extending-varproductname-products">Extending Language Cloud products</h2>
-<p>Language Cloud products can be extended in a number of ways. For example, you may want to create an add-on to support a machine translation engine or you may want to create a custom workflow task. RWS provides an extensibility framework for the Language Cloud suite of products. To get more information on what&#39;s required and how you can do this, visit the <a href="https://languagecloud.sdl.com/lc/extensibility-docs">Language Cloud extensibility documentation</a> pages. </p>
+<h2 id="integrating-with-varproductname-products">Integrating with <a href="Trados Cloud">Trados Cloud</a> products</h2>
+<p>To create an integration with any of the products listed above, you'll need to use the Public API. You can find the documentation for the API <a href="https://languagecloud.sdl.com/lc/api-docs">here</a>. Note that the API is updated regularly so make sure that you check out the <a href="https://languagecloud.sdl.com/lc/api-docs/whats-new">What's new</a> section to find out information on recently added features. To enable RWS to extend and improve the API, and to support the latest features in the products, sometimes it's necessary to remove or change functionality. For that, you'll need to check the <a href="https://languagecloud.sdl.com/lc/api-docs/whats-deprecated">What's deprecated</a> page where RWS will post advance notice of any API endpoints that will be removed or change in the future. Don't worry though because RWS will try and give six months notice of any breaking changes.</p>
+<h2 id="extending-varproductname-products">Extending <a href="Trados Cloud">Trados Cloud</a> products</h2>
+<p><a href="Trados Cloud">Trados Cloud</a> products can be extended in a number of ways. For example, you may want to create an add-on to support a machine translation engine or you may want to create a custom workflow task. RWS provides an extensibility framework for the <a href="Trados Cloud">Trados Cloud</a> suite of products. To get more information on what's required and how you can do this, visit the <a href="https://languagecloud.sdl.com/lc/extensibility-docs"><a href="Trados Cloud">Trados Cloud</a> extensibility documentation pages.</p>
 <h2 id="interacting-with-files">Interacting with files</h2>
-<p>Translatable content in Language Cloud is held in a format called <strong>Bilingual Content Model</strong>, or <strong>BCM</strong> for short. You can find <strong>BCM</strong> reference documentation and samples on this site. Click <a href="articles/BCM.NET_client_API.html">here</a> to find out more.</p>
+<p>Translatable content in <a href="Trados Cloud">Trados Cloud</a> is held in a format called <strong>Bilingual Content Model</strong>, or <strong>BCM</strong> for short. You can find <strong>BCM</strong> reference documentation and samples on this site. Click <a href="articles/BCM/BCM.NET_client_API.html">here</a> to find out more.</p>
 <h2 id="reporting-api-issues">Reporting API issues</h2>
 <p>If you want to report an issue with the API, you can find information on how to do this here - <a href="https://languagecloud.sdl.com/lc/api-docs/how-to-report-an-issue">How to report an issue</a></p>
-<h2 id="language-cloud-api-and-customer-portal-api">Language Cloud API and Customer Portal API</h2>
-<p>Please be aware that Language Cloud offers two different APIs. First is the modern Language Cloud API described on this page. Then there is the second API that is the <a href="https://languagecloud.sdl.com/cp/api">Mantra API</a>. Language Cloud API is the recommended option for new integrations as it is more modern and much effort is put into its continuous evolution along with Trados Enterprise. Please take care not to confuse the two of them as they are not interchangeable. </p>
+<h2 id="trados-cloud-api-and-customer-portal-api">Trados Cloud API and Customer Portal API</h2>
+<p>Please be aware that Trados Cloud offers two different APIs. First is the modern Trados Cloud API described on this page. Then there is the second API that is the <a href="https://languagecloud.sdl.com/cp/api">Mantra API</a>. Trados Cloud API is the recommended option for new integrations as it is more modern and much effort is put into its continuous evolution along with Trados Enterprise. Please take care not to confuse the two of them as they are not interchangeable.</p>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -105,14 +108,14 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h4>On this page</h4>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -120,14 +123,14 @@
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
   </body>
