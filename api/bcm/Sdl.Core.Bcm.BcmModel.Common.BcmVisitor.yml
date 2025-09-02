@@ -1,0 +1,905 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  id: BcmVisitor
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  children:
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer(Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackContainer)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer(Sdl.Core.Bcm.BcmModel.LockedContentContainer)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph(Sdl.Core.Bcm.BcmModel.Paragraph)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag(Sdl.Core.Bcm.BcmModel.PlaceholderTag)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer(Sdl.Core.Bcm.BcmModel.RevisionContainer)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment(Sdl.Core.Bcm.BcmModel.Segment)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure(Sdl.Core.Bcm.BcmModel.StructureTag)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair(Sdl.Core.Bcm.BcmModel.TagPair)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer(Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer)
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText(Sdl.Core.Bcm.BcmModel.TextMarkup)
+  langs:
+  - csharp
+  - vb
+  name: BcmVisitor
+  nameWithType: BcmVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: >-
+    An abstract class using the Visitor pattern.
+
+    Can be implemented for concrete processing of BCM documents.
+  example: []
+  syntax:
+    content: public abstract class BcmVisitor
+    content.vb: Public MustInherit Class BcmVisitor
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure(Sdl.Core.Bcm.BcmModel.StructureTag)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure(Sdl.Core.Bcm.BcmModel.StructureTag)
+  id: VisitStructure(Sdl.Core.Bcm.BcmModel.StructureTag)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitStructure(StructureTag)
+  nameWithType: BcmVisitor.VisitStructure(StructureTag)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure(Sdl.Core.Bcm.BcmModel.StructureTag)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.StructureTag" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitStructure(StructureTag structureTag)
+    parameters:
+    - id: structureTag
+      type: Sdl.Core.Bcm.BcmModel.StructureTag
+      description: The structure tag.
+    content.vb: Public MustOverride Sub VisitStructure(structureTag As StructureTag)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair(Sdl.Core.Bcm.BcmModel.TagPair)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair(Sdl.Core.Bcm.BcmModel.TagPair)
+  id: VisitTagPair(Sdl.Core.Bcm.BcmModel.TagPair)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitTagPair(TagPair)
+  nameWithType: BcmVisitor.VisitTagPair(TagPair)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair(Sdl.Core.Bcm.BcmModel.TagPair)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.StructureTag" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitTagPair(TagPair tagPair)
+    parameters:
+    - id: tagPair
+      type: Sdl.Core.Bcm.BcmModel.TagPair
+      description: ''
+    content.vb: Public MustOverride Sub VisitTagPair(tagPair As TagPair)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag(Sdl.Core.Bcm.BcmModel.PlaceholderTag)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag(Sdl.Core.Bcm.BcmModel.PlaceholderTag)
+  id: VisitPlaceholderTag(Sdl.Core.Bcm.BcmModel.PlaceholderTag)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitPlaceholderTag(PlaceholderTag)
+  nameWithType: BcmVisitor.VisitPlaceholderTag(PlaceholderTag)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag(Sdl.Core.Bcm.BcmModel.PlaceholderTag)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.PlaceholderTag" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitPlaceholderTag(PlaceholderTag tag)
+    parameters:
+    - id: tag
+      type: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+      description: ''
+    content.vb: Public MustOverride Sub VisitPlaceholderTag(tag As PlaceholderTag)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText(Sdl.Core.Bcm.BcmModel.TextMarkup)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText(Sdl.Core.Bcm.BcmModel.TextMarkup)
+  id: VisitText(Sdl.Core.Bcm.BcmModel.TextMarkup)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitText(TextMarkup)
+  nameWithType: BcmVisitor.VisitText(TextMarkup)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText(Sdl.Core.Bcm.BcmModel.TextMarkup)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.TextMarkup" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitText(TextMarkup text)
+    parameters:
+    - id: text
+      type: Sdl.Core.Bcm.BcmModel.TextMarkup
+      description: ''
+    content.vb: Public MustOverride Sub VisitText(text As TextMarkup)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment(Sdl.Core.Bcm.BcmModel.Segment)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment(Sdl.Core.Bcm.BcmModel.Segment)
+  id: VisitSegment(Sdl.Core.Bcm.BcmModel.Segment)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitSegment(Segment)
+  nameWithType: BcmVisitor.VisitSegment(Segment)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment(Sdl.Core.Bcm.BcmModel.Segment)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitSegment(Segment segment)
+    parameters:
+    - id: segment
+      type: Sdl.Core.Bcm.BcmModel.Segment
+      description: ''
+    content.vb: Public MustOverride Sub VisitSegment(segment As Segment)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer(Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer(Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer)
+  id: VisitCommentContainer(Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitCommentContainer(CommentContainer)
+  nameWithType: BcmVisitor.VisitCommentContainer(CommentContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer(Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitCommentContainer(CommentContainer commentContainer)
+    parameters:
+    - id: commentContainer
+      type: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+      description: ''
+    content.vb: Public MustOverride Sub VisitCommentContainer(commentContainer As CommentContainer)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer(Sdl.Core.Bcm.BcmModel.LockedContentContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer(Sdl.Core.Bcm.BcmModel.LockedContentContainer)
+  id: VisitLockedContentContainer(Sdl.Core.Bcm.BcmModel.LockedContentContainer)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitLockedContentContainer(LockedContentContainer)
+  nameWithType: BcmVisitor.VisitLockedContentContainer(LockedContentContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer(Sdl.Core.Bcm.BcmModel.LockedContentContainer)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.LockedContentContainer" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitLockedContentContainer(LockedContentContainer lockedContentContainer)
+    parameters:
+    - id: lockedContentContainer
+      type: Sdl.Core.Bcm.BcmModel.LockedContentContainer
+    content.vb: Public MustOverride Sub VisitLockedContentContainer(lockedContentContainer As LockedContentContainer)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer(Sdl.Core.Bcm.BcmModel.RevisionContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer(Sdl.Core.Bcm.BcmModel.RevisionContainer)
+  id: VisitRevisionContainer(Sdl.Core.Bcm.BcmModel.RevisionContainer)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitRevisionContainer(RevisionContainer)
+  nameWithType: BcmVisitor.VisitRevisionContainer(RevisionContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer(Sdl.Core.Bcm.BcmModel.RevisionContainer)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.RevisionContainer" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitRevisionContainer(RevisionContainer revisionContainer)
+    parameters:
+    - id: revisionContainer
+      type: Sdl.Core.Bcm.BcmModel.RevisionContainer
+      description: ''
+    content.vb: Public MustOverride Sub VisitRevisionContainer(revisionContainer As RevisionContainer)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackContainer)
+  id: VisitFeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackContainer)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitFeedbackContainer(FeedbackContainer)
+  nameWithType: BcmVisitor.VisitFeedbackContainer(FeedbackContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackContainer)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.FeedbackContainer" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitFeedbackContainer(FeedbackContainer feedbackContainer)
+    parameters:
+    - id: feedbackContainer
+      type: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+      description: ''
+    content.vb: Public MustOverride Sub VisitFeedbackContainer(feedbackContainer As FeedbackContainer)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph(Sdl.Core.Bcm.BcmModel.Paragraph)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph(Sdl.Core.Bcm.BcmModel.Paragraph)
+  id: VisitParagraph(Sdl.Core.Bcm.BcmModel.Paragraph)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitParagraph(Paragraph)
+  nameWithType: BcmVisitor.VisitParagraph(Paragraph)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph(Sdl.Core.Bcm.BcmModel.Paragraph)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.Paragraph" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitParagraph(Paragraph paragraph)
+    parameters:
+    - id: paragraph
+      type: Sdl.Core.Bcm.BcmModel.Paragraph
+      description: ''
+    content.vb: Public MustOverride Sub VisitParagraph(paragraph As Paragraph)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer(Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer(Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer)
+  id: VisitTerminologyContainer(Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer)
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: VisitTerminologyContainer(TerminologyAnnotationContainer)
+  nameWithType: BcmVisitor.VisitTerminologyContainer(TerminologyAnnotationContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer(Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  summary: Visits a <xref href="Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public abstract void VisitTerminologyContainer(TerminologyAnnotationContainer terminologyAnnotation)
+    parameters:
+    - id: terminologyAnnotation
+      type: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+      description: ''
+    content.vb: Public MustOverride Sub VisitTerminologyContainer(terminologyAnnotation As TerminologyAnnotationContainer)
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer*
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  langs:
+  - csharp
+  - vb
+  name: BcmVisitor()
+  nameWithType: BcmVisitor.BcmVisitor()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.BcmVisitor()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Common
+  syntax:
+    content: protected BcmVisitor()
+    content.vb: Protected Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor*
+  nameWithType.vb: BcmVisitor.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.New()
+  name.vb: New()
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.StructureTag
+  commentId: T:Sdl.Core.Bcm.BcmModel.StructureTag
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.StructureTag.html
+  name: StructureTag
+  nameWithType: StructureTag
+  fullName: Sdl.Core.Bcm.BcmModel.StructureTag
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitStructure_Sdl_Core_Bcm_BcmModel_StructureTag_
+  name: VisitStructure
+  nameWithType: BcmVisitor.VisitStructure
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitStructure
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitTagPair_Sdl_Core_Bcm_BcmModel_TagPair_
+  name: VisitTagPair
+  nameWithType: BcmVisitor.VisitTagPair
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTagPair
+- uid: Sdl.Core.Bcm.BcmModel.TagPair
+  commentId: T:Sdl.Core.Bcm.BcmModel.TagPair
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TagPair.html
+  name: TagPair
+  nameWithType: TagPair
+  fullName: Sdl.Core.Bcm.BcmModel.TagPair
+- uid: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+  commentId: T:Sdl.Core.Bcm.BcmModel.PlaceholderTag
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PlaceholderTag.html
+  name: PlaceholderTag
+  nameWithType: PlaceholderTag
+  fullName: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitPlaceholderTag_Sdl_Core_Bcm_BcmModel_PlaceholderTag_
+  name: VisitPlaceholderTag
+  nameWithType: BcmVisitor.VisitPlaceholderTag
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitPlaceholderTag
+- uid: Sdl.Core.Bcm.BcmModel.TextMarkup
+  commentId: T:Sdl.Core.Bcm.BcmModel.TextMarkup
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TextMarkup.html
+  name: TextMarkup
+  nameWithType: TextMarkup
+  fullName: Sdl.Core.Bcm.BcmModel.TextMarkup
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitText_Sdl_Core_Bcm_BcmModel_TextMarkup_
+  name: VisitText
+  nameWithType: BcmVisitor.VisitText
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitText
+- uid: Sdl.Core.Bcm.BcmModel.Segment
+  commentId: T:Sdl.Core.Bcm.BcmModel.Segment
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Segment.html
+  name: Segment
+  nameWithType: Segment
+  fullName: Sdl.Core.Bcm.BcmModel.Segment
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitSegment_Sdl_Core_Bcm_BcmModel_Segment_
+  name: VisitSegment
+  nameWithType: BcmVisitor.VisitSegment
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitSegment
+- uid: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+  parent: Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.html
+  name: CommentContainer
+  nameWithType: CommentContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitCommentContainer_Sdl_Core_Bcm_BcmModel_Annotations_CommentContainer_
+  name: VisitCommentContainer
+  nameWithType: BcmVisitor.VisitCommentContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitCommentContainer
+- uid: Sdl.Core.Bcm.BcmModel.Annotations
+  commentId: N:Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Annotations
+  nameWithType: Sdl.Core.Bcm.BcmModel.Annotations
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations
+    name: Annotations
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Annotations.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations
+    name: Annotations
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Annotations.html
+- uid: Sdl.Core.Bcm.BcmModel.LockedContentContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.LockedContentContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.LockedContentContainer.html
+  name: LockedContentContainer
+  nameWithType: LockedContentContainer
+  fullName: Sdl.Core.Bcm.BcmModel.LockedContentContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitLockedContentContainer_Sdl_Core_Bcm_BcmModel_LockedContentContainer_
+  name: VisitLockedContentContainer
+  nameWithType: BcmVisitor.VisitLockedContentContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitLockedContentContainer
+- uid: Sdl.Core.Bcm.BcmModel.RevisionContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.RevisionContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.RevisionContainer.html
+  name: RevisionContainer
+  nameWithType: RevisionContainer
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitRevisionContainer_Sdl_Core_Bcm_BcmModel_RevisionContainer_
+  name: VisitRevisionContainer
+  nameWithType: BcmVisitor.VisitRevisionContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitRevisionContainer
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html
+  name: FeedbackContainer
+  nameWithType: FeedbackContainer
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitFeedbackContainer_Sdl_Core_Bcm_BcmModel_FeedbackContainer_
+  name: VisitFeedbackContainer
+  nameWithType: BcmVisitor.VisitFeedbackContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitFeedbackContainer
+- uid: Sdl.Core.Bcm.BcmModel.Paragraph
+  commentId: T:Sdl.Core.Bcm.BcmModel.Paragraph
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Paragraph.html
+  name: Paragraph
+  nameWithType: Paragraph
+  fullName: Sdl.Core.Bcm.BcmModel.Paragraph
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitParagraph_Sdl_Core_Bcm_BcmModel_Paragraph_
+  name: VisitParagraph
+  nameWithType: BcmVisitor.VisitParagraph
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitParagraph
+- uid: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+  parent: Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.html
+  name: TerminologyAnnotationContainer
+  nameWithType: TerminologyAnnotationContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_VisitTerminologyContainer_Sdl_Core_Bcm_BcmModel_Annotations_TerminologyAnnotationContainer_
+  name: VisitTerminologyContainer
+  nameWithType: BcmVisitor.VisitTerminologyContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.VisitTerminologyContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html#Sdl_Core_Bcm_BcmModel_Common_BcmVisitor__ctor
+  name: BcmVisitor
+  nameWithType: BcmVisitor.BcmVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.BcmVisitor
+  nameWithType.vb: BcmVisitor.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.New
+  name.vb: New

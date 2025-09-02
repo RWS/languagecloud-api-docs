@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackType
+  id: FeedbackType
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.FeedbackType.Added
+  - Sdl.Core.Bcm.BcmModel.FeedbackType.Comment
+  - Sdl.Core.Bcm.BcmModel.FeedbackType.Deleted
+  langs:
+  - csharp
+  - vb
+  name: FeedbackType
+  nameWithType: FeedbackType
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Types of feedback changes created during the translation/review process.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EnumConverter))]
+
+      public enum FeedbackType
+    content.vb: >-
+      <JsonConverter(GetType(EnumConverter))>
+
+      Public Enum FeedbackType
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType.Added
+  commentId: F:Sdl.Core.Bcm.BcmModel.FeedbackType.Added
+  id: Added
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackType
+  langs:
+  - csharp
+  - vb
+  name: Added
+  nameWithType: FeedbackType.Added
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType.Added
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Added content.
+  example: []
+  syntax:
+    content: Added = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackType
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType.Deleted
+  commentId: F:Sdl.Core.Bcm.BcmModel.FeedbackType.Deleted
+  id: Deleted
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackType
+  langs:
+  - csharp
+  - vb
+  name: Deleted
+  nameWithType: FeedbackType.Deleted
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType.Deleted
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Deleted content.
+  example: []
+  syntax:
+    content: Deleted = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackType
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType.Comment
+  commentId: F:Sdl.Core.Bcm.BcmModel.FeedbackType.Comment
+  id: Comment
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackType
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: FeedbackType.Comment
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType.Comment
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: A feedback comment was added.
+  example: []
+  syntax:
+    content: Comment = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackType
+references:
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackType
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackType.html
+  name: FeedbackType
+  nameWithType: FeedbackType
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType

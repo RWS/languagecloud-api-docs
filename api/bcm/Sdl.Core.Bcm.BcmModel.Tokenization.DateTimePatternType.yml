@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  id: DateTimePatternType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongDate
+  - Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongTime
+  - Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortDate
+  - Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortTime
+  langs:
+  - csharp
+  - vb
+  name: DateTimePatternType
+  nameWithType: DateTimePatternType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: DateTime patterns used by <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token" data-throw-if-not-resolved="false"></xref> elements.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum DateTimePatternType
+    content.vb: >-
+      <Flags>
+
+      Public Enum DateTimePatternType
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongDate
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongDate
+  id: LongDate
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  langs:
+  - csharp
+  - vb
+  name: LongDate
+  nameWithType: DateTimePatternType.LongDate
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongDate
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The pattern represents a long date pattern
+  example: []
+  syntax:
+    content: LongDate = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortDate
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortDate
+  id: ShortDate
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  langs:
+  - csharp
+  - vb
+  name: ShortDate
+  nameWithType: DateTimePatternType.ShortDate
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortDate
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The pattern represents a short date pattern
+  example: []
+  syntax:
+    content: ShortDate = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortTime
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortTime
+  id: ShortTime
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  langs:
+  - csharp
+  - vb
+  name: ShortTime
+  nameWithType: DateTimePatternType.ShortTime
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.ShortTime
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The pattern represents a short time pattern
+  example: []
+  syntax:
+    content: ShortTime = 4
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongTime
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongTime
+  id: LongTime
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  langs:
+  - csharp
+  - vb
+  name: LongTime
+  nameWithType: DateTimePatternType.LongTime
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.LongTime
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The pattern represents a long time pattern
+  example: []
+  syntax:
+    content: LongTime = 8
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  name: Token
+  nameWithType: Token
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.html
+  name: DateTimePatternType
+  nameWithType: DateTimePatternType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType

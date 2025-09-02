@@ -1,0 +1,1650 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  id: TagPairDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+  langs:
+  - csharp
+  - vb
+  name: TagPairDefinition
+  nameWithType: TagPairDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Definition of a TagPair.
+
+    Can be referenced by multiple <xref href="Sdl.Core.Bcm.BcmModel.TagPair" data-throw-if-not-resolved="false"></xref> elements.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class TagPairDefinition : SkeletonItem, IEquatable<MetadataContainer>, IEquatable<SkeletonItem>, ICloneable<TagPairDefinition>, IEquatable<TagPairDefinition>
+    content.vb: >-
+      <DataContract>
+
+      Public Class TagPairDefinition Inherits SkeletonItem Implements IEquatable(Of MetadataContainer), IEquatable(Of SkeletonItem), ICloneable(Of TagPairDefinition), IEquatable(Of TagPairDefinition)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: TagPairDefinition()
+  nameWithType: TagPairDefinition.TagPairDefinition()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.TagPairDefinition()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public TagPairDefinition()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor*
+  nameWithType.vb: TagPairDefinition.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: TagPairDefinition.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public TagPairDefinition Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+      description: ''
+    content.vb: Public Function Clone() As TagPairDefinition
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone*
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: Equals(TagPairDefinition)
+  nameWithType: TagPairDefinition.Equals(TagPairDefinition)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(TagPairDefinition other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As TagPairDefinition) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: TagPairDefinition.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals*
+  nameWithType.vb: TagPairDefinition.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TagPairDefinition.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+  id: StartTagDisplayText
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: StartTagDisplayText
+  nameWithType: TagPairDefinition.StartTagDisplayText
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the start tag display text.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "startTagDisplayText", EmitDefaultValue = false)]
+
+      public string StartTagDisplayText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The start tag display text.
+    content.vb: >-
+      <DataMember(Name:="startTagDisplayText", EmitDefaultValue:=False)>
+
+      Public Property StartTagDisplayText As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: startTagDisplayText
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+  id: StartTagContent
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: StartTagContent
+  nameWithType: TagPairDefinition.StartTagContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the raw start tag conten.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "startTagContent", EmitDefaultValue = false)]
+
+      public string StartTagContent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The raw start tag content.
+    content.vb: >-
+      <DataMember(Name:="startTagContent", EmitDefaultValue:=False)>
+
+      Public Property StartTagContent As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: startTagContent
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+  id: EndTagDisplayText
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: EndTagDisplayText
+  nameWithType: TagPairDefinition.EndTagDisplayText
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the end tag display text.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "endTagDisplayText", EmitDefaultValue = false)]
+
+      public string EndTagDisplayText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The end tag display text.
+    content.vb: >-
+      <DataMember(Name:="endTagDisplayText", EmitDefaultValue:=False)>
+
+      Public Property EndTagDisplayText As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: endTagDisplayText
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+  id: EndTagContent
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: EndTagContent
+  nameWithType: TagPairDefinition.EndTagContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the raw end tag content.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "endTagContent", EmitDefaultValue = false)]
+
+      public string EndTagContent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The raw end tag content.
+    content.vb: >-
+      <DataMember(Name:="endTagContent", EmitDefaultValue:=False)>
+
+      Public Property EndTagContent As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: endTagContent
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+  id: CanHide
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: CanHide
+  nameWithType: TagPairDefinition.CanHide
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets a value indicating whether this tag can be hidden when displayed.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "canHide")]
+
+      public bool CanHide { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if this tag can be hidden when displayed; otherwise, <code>false</code>.
+    content.vb: >-
+      <DataMember(Name:="canHide")>
+
+      Public Property CanHide As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: canHide
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+  id: SegmentationHint
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: SegmentationHint
+  nameWithType: TagPairDefinition.SegmentationHint
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the segmentation hint.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "segmentationHint", EmitDefaultValue = false)]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+
+      public SegmentationHint SegmentationHint { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.SegmentationHint
+      description: The segmentation hint.
+    content.vb: >-
+      <DataMember(Name:="segmentationHint", EmitDefaultValue:=False)>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore, DefaultValueHandling:=DefaultValueHandling.IgnoreAndPopulate)>
+
+      Public Property SegmentationHint As SegmentationHint
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: segmentationHint
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 3
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+  id: FormattingGroupId
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: FormattingGroupId
+  nameWithType: TagPairDefinition.FormattingGroupId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the formatting group identifier.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "formattingGroupId")]
+
+      public int FormattingGroupId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The formatting group identifier.
+    content.vb: >-
+      <DataMember(Name:="formattingGroupId")>
+
+      Public Property FormattingGroupId As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: formattingGroupId
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+  id: SubContent
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: SubContent
+  nameWithType: TagPairDefinition.SubContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the localizable subcontent.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "subContent", EmitDefaultValue = false)]
+
+      public SubContentCollection SubContent { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+      description: The localizable subcontent.
+    content.vb: >-
+      <DataMember(Name:="subContent", EmitDefaultValue:=False)>
+
+      Public Property SubContent As SubContentCollection
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: subContent
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId
+  id: QuickInsertId
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  langs:
+  - csharp
+  - vb
+  name: QuickInsertId
+  nameWithType: TagPairDefinition.QuickInsertId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the QuickInsert identifier of this tag.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "quickInsertId", EmitDefaultValue = false)]
+
+      public string QuickInsertId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The QuickInsert identifier of this tag.
+    content.vb: >-
+      <DataMember(Name:="quickInsertId", EmitDefaultValue:=False)>
+
+      Public Property QuickInsertId As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: quickInsertId
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+references:
+- uid: Sdl.Core.Bcm.BcmModel.TagPair
+  commentId: T:Sdl.Core.Bcm.BcmModel.TagPair
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TagPair.html
+  name: TagPair
+  nameWithType: TagPair
+  fullName: Sdl.Core.Bcm.BcmModel.TagPair
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  name: MetadataContainer
+  nameWithType: MetadataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  name: SkeletonItem
+  nameWithType: SkeletonItem
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MetadataContainer>
+  nameWithType: IEquatable<MetadataContainer>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MetadataContainer>
+  nameWithType.vb: IEquatable(Of MetadataContainer)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  name.vb: IEquatable(Of MetadataContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<SkeletonItem>
+  nameWithType: IEquatable<SkeletonItem>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem>
+  nameWithType.vb: IEquatable(Of SkeletonItem)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  name.vb: IEquatable(Of SkeletonItem)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<TagPairDefinition>
+  nameWithType: ICloneable<TagPairDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition>
+  nameWithType.vb: ICloneable(Of TagPairDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  name.vb: ICloneable(Of TagPairDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TagPairDefinition>
+  nameWithType: IEquatable<TagPairDefinition>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition>
+  nameWithType.vb: IEquatable(Of TagPairDefinition)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  name.vb: IEquatable(Of TagPairDefinition)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_
+  name: Equals(SkeletonItem)
+  nameWithType: SkeletonItem.Equals(SkeletonItem)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Id
+  name: Id
+  nameWithType: SkeletonItem.Id
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  name: GetMetadata(string)
+  nameWithType: MetadataContainer.GetMetadata(string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(string)
+  nameWithType.vb: MetadataContainer.GetMetadata(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(String)
+  name.vb: GetMetadata(String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  name: SetMetadata(string, string)
+  nameWithType: MetadataContainer.SetMetadata(string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(string, string)
+  nameWithType.vb: MetadataContainer.SetMetadata(String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(String, String)
+  name.vb: SetMetadata(String, String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  name: Equals(MetadataContainer)
+  nameWithType: MetadataContainer.Equals(MetadataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  name: ShouldSerialize_metadata()
+  nameWithType: MetadataContainer.ShouldSerialize_metadata()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  commentId: P:Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata
+  name: Metadata
+  nameWithType: MetadataContainer.Metadata
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  name: TagPairDefinition
+  nameWithType: TagPairDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition__ctor
+  name: TagPairDefinition
+  nameWithType: TagPairDefinition.TagPairDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.TagPairDefinition
+  nameWithType.vb: TagPairDefinition.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_Clone
+  name: Clone
+  nameWithType: TagPairDefinition.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<TagPairDefinition>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition>.Clone()
+  nameWithType.vb: ICloneable(Of TagPairDefinition).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<T>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>.Clone()
+  nameWithType.vb: ICloneable(Of T).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_
+  name: Equals
+  nameWithType: TagPairDefinition.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(TagPairDefinition)
+  nameWithType: IEquatable<TagPairDefinition>.Equals(TagPairDefinition)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition>.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  nameWithType.vb: IEquatable(Of TagPairDefinition).Equals(TagPairDefinition)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition).Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: SkeletonItem.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(object)
+  nameWithType.vb: SkeletonItem.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_GetHashCode
+  name: GetHashCode()
+  nameWithType: SkeletonItem.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_GetHashCode
+  name: GetHashCode
+  nameWithType: TagPairDefinition.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_StartTagDisplayText
+  name: StartTagDisplayText
+  nameWithType: TagPairDefinition.StartTagDisplayText
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagDisplayText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_StartTagContent
+  name: StartTagContent
+  nameWithType: TagPairDefinition.StartTagContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.StartTagContent
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_EndTagDisplayText
+  name: EndTagDisplayText
+  nameWithType: TagPairDefinition.EndTagDisplayText
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagDisplayText
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_EndTagContent
+  name: EndTagContent
+  nameWithType: TagPairDefinition.EndTagContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.EndTagContent
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_CanHide
+  name: CanHide
+  nameWithType: TagPairDefinition.CanHide
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.CanHide
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_SegmentationHint
+  name: SegmentationHint
+  nameWithType: TagPairDefinition.SegmentationHint
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  commentId: T:Sdl.Core.Bcm.BcmModel.SegmentationHint
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.SegmentationHint.html
+  name: SegmentationHint
+  nameWithType: SegmentationHint
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_FormattingGroupId
+  name: FormattingGroupId
+  nameWithType: TagPairDefinition.FormattingGroupId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.FormattingGroupId
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_SubContent
+  name: SubContent
+  nameWithType: TagPairDefinition.SubContent
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.SubContent
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.html
+  name: SubContentCollection
+  nameWithType: SubContentCollection
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html#Sdl_Core_Bcm_BcmModel_Skeleton_TagPairDefinition_QuickInsertId
+  name: QuickInsertId
+  nameWithType: TagPairDefinition.QuickInsertId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.QuickInsertId

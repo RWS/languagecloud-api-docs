@@ -1,0 +1,857 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  id: SegmentRange
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(System.Int32,System.Int32,System.Int32)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString
+  langs:
+  - csharp
+  - vb
+  name: SegmentRange
+  nameWithType: SegmentRange
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: A selection of content inside a <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class SegmentRange : ExtensionDataContainer
+    content.vb: >-
+      <DataContract>
+
+      Public Class SegmentRange Inherits ExtensionDataContainer
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: SegmentRange()
+  nameWithType: SegmentRange.SegmentRange()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.SegmentRange()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public SegmentRange()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor*
+  nameWithType.vb: SegmentRange.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)
+  id: '#ctor(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: SegmentRange(SegmentPosition, SegmentPosition)
+  nameWithType: SegmentRange.SegmentRange(SegmentPosition, SegmentPosition)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.SegmentRange(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition, Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Initializes a new instance with the provided positions.
+  remarks: No checks are performed to verify that the start position precedes the end position.
+  example: []
+  syntax:
+    content: public SegmentRange(SegmentPosition from, SegmentPosition into)
+    parameters:
+    - id: from
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+      description: The start position.
+    - id: into
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+      description: The end position.
+    content.vb: Public Sub New(from As SegmentPosition, into As SegmentPosition)
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor*
+  nameWithType.vb: SegmentRange.New(SegmentPosition, SegmentPosition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.New(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition, Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition)
+  name.vb: New(SegmentPosition, SegmentPosition)
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(System.Int32,System.Int32,System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor(System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32)'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: SegmentRange(int, int, int)
+  nameWithType: SegmentRange.SegmentRange(int, int, int)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.SegmentRange(int, int, int)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Initializes a new instance of with the given parameters.
+  example: []
+  syntax:
+    content: public SegmentRange(int runIndex, int fromIndex, int intoIndex)
+    parameters:
+    - id: runIndex
+      type: System.Int32
+      description: The segment element index (run) of the range.
+    - id: fromIndex
+      type: System.Int32
+      description: The start position in the run.
+    - id: intoIndex
+      type: System.Int32
+      description: The end position (inclusive) in the run.
+    content.vb: Public Sub New(runIndex As Integer, fromIndex As Integer, intoIndex As Integer)
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor*
+  nameWithType.vb: SegmentRange.New(Integer, Integer, Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.New(Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer)
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: Equals(SegmentRange)
+  nameWithType: SegmentRange.Equals(SegmentRange)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Compares the current range to another segment range.
+  example: []
+  syntax:
+    content: public bool Equals(SegmentRange other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+      description: The range to compare with.
+    return:
+      type: System.Boolean
+      description: true if both ranges are identical.
+    content.vb: Public Function Equals(other As SegmentRange) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals*
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: SegmentRange.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current object.
+    return:
+      type: System.Boolean
+      description: >-
+        true if the specified object is equal to the current object;
+                    otherwise, false.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals*
+  nameWithType.vb: SegmentRange.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SegmentRange.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: <xref href="System.Object.GetHashCode(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  id: Compare(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange,Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: Compare(SegmentRange, SegmentRange)
+  nameWithType: SegmentRange.Compare(SegmentRange, SegmentRange)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare(Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange, Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Compares two segment ranges and returns a value indicating their order.
+  example: []
+  syntax:
+    content: public static int Compare(SegmentRange a, SegmentRange b)
+    parameters:
+    - id: a
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+      description: The first of the two items to compare.
+    - id: b
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+      description: The second of the two items to compare.
+    return:
+      type: System.Int32
+      description: >-
+        An integer value less than zero if a precedes b, zero if a and b are in the same range, 
+                    and a value greater than zero if a follows b. Only the start positions are compared.
+    content.vb: Public Shared Function Compare(a As SegmentRange, b As SegmentRange) As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare*
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: SegmentRange.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Creates a new instance that is a deep copy of this instance.
+  example: []
+  syntax:
+    content: public SegmentRange Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+      description: A new instance that is a deep copy of this instance.
+    content.vb: Public Function Clone() As SegmentRange
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone*
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString
+  id: ToString
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SegmentRange.ToString()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: <xref href="System.Object.ToString" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of the object, for display purposes.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString*
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+  id: From
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: From
+  nameWithType: SegmentRange.From
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Gets or sets the start <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition" data-throw-if-not-resolved="false"></xref> in the segment.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "from")]
+
+      public SegmentPosition From { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+      description: The start <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition" data-throw-if-not-resolved="false"></xref> in the segment.
+    content.vb: >-
+      <DataMember(Name:="from")>
+
+      Public Property From As SegmentPosition
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: from
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into
+  id: Into
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  langs:
+  - csharp
+  - vb
+  name: Into
+  nameWithType: SegmentRange.Into
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Gets or sets the end <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition" data-throw-if-not-resolved="false"></xref> in the segment.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "into")]
+
+      public SegmentPosition Into { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+      description: The end <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition" data-throw-if-not-resolved="false"></xref> in the segment.
+    content.vb: >-
+      <DataMember(Name:="into")>
+
+      Public Property Into As SegmentPosition
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: into
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Segment
+  commentId: T:Sdl.Core.Bcm.BcmModel.Segment
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Segment.html
+  name: Segment
+  nameWithType: Segment
+  fullName: Sdl.Core.Bcm.BcmModel.Segment
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html
+  name: SegmentRange
+  nameWithType: SegmentRange
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange__ctor
+  name: SegmentRange
+  nameWithType: SegmentRange.SegmentRange
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.SegmentRange
+  nameWithType.vb: SegmentRange.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html
+  name: SegmentPosition
+  nameWithType: SegmentPosition
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_Equals_Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_
+  name: Equals
+  nameWithType: SegmentRange.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode(object)
+  commentId: M:System.Object.GetHashCode(object)
+  isExternal: true
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_GetHashCode
+  name: GetHashCode
+  nameWithType: SegmentRange.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.GetHashCode
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_Compare_Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_
+  name: Compare
+  nameWithType: SegmentRange.Compare
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Compare
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_Clone
+  name: Clone
+  nameWithType: SegmentRange.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Clone
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_ToString
+  name: ToString
+  nameWithType: SegmentRange.ToString
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_From
+  name: From
+  nameWithType: SegmentRange.From
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.From
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html#Sdl_Core_Bcm_BcmModel_Tokenization_SegmentRange_Into
+  name: Into
+  nameWithType: SegmentRange.Into
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.Into

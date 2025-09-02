@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.RevisionType
+  commentId: T:Sdl.Core.Bcm.BcmModel.RevisionType
+  id: RevisionType
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.RevisionType.Deleted
+  - Sdl.Core.Bcm.BcmModel.RevisionType.Inserted
+  - Sdl.Core.Bcm.BcmModel.RevisionType.Unchanged
+  langs:
+  - csharp
+  - vb
+  name: RevisionType
+  nameWithType: RevisionType
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionType
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Types of <xref href="Sdl.Core.Bcm.BcmModel.RevisionContainer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      [JsonConverter(typeof(EnumConverter))]
+
+      public enum RevisionType
+    content.vb: >-
+      <DataContract>
+
+      <JsonConverter(GetType(EnumConverter))>
+
+      Public Enum RevisionType
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.RevisionType.Inserted
+  commentId: F:Sdl.Core.Bcm.BcmModel.RevisionType.Inserted
+  id: Inserted
+  parent: Sdl.Core.Bcm.BcmModel.RevisionType
+  langs:
+  - csharp
+  - vb
+  name: Inserted
+  nameWithType: RevisionType.Inserted
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionType.Inserted
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Content was inserted.
+  example: []
+  syntax:
+    content: Inserted = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.RevisionType
+- uid: Sdl.Core.Bcm.BcmModel.RevisionType.Deleted
+  commentId: F:Sdl.Core.Bcm.BcmModel.RevisionType.Deleted
+  id: Deleted
+  parent: Sdl.Core.Bcm.BcmModel.RevisionType
+  langs:
+  - csharp
+  - vb
+  name: Deleted
+  nameWithType: RevisionType.Deleted
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionType.Deleted
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Content was deleted.
+  example: []
+  syntax:
+    content: Deleted = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.RevisionType
+- uid: Sdl.Core.Bcm.BcmModel.RevisionType.Unchanged
+  commentId: F:Sdl.Core.Bcm.BcmModel.RevisionType.Unchanged
+  id: Unchanged
+  parent: Sdl.Core.Bcm.BcmModel.RevisionType
+  langs:
+  - csharp
+  - vb
+  name: Unchanged
+  nameWithType: RevisionType.Unchanged
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionType.Unchanged
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: The content was not changed.
+  example: []
+  syntax:
+    content: Unchanged = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.RevisionType
+references:
+- uid: Sdl.Core.Bcm.BcmModel.RevisionContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.RevisionContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.RevisionContainer.html
+  name: RevisionContainer
+  nameWithType: RevisionContainer
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionContainer
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.RevisionType
+  commentId: T:Sdl.Core.Bcm.BcmModel.RevisionType
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.RevisionType.html
+  name: RevisionType
+  nameWithType: RevisionType
+  fullName: Sdl.Core.Bcm.BcmModel.RevisionType

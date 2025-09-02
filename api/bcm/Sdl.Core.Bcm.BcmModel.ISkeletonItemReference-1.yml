@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1
+  id: ISkeletonItemReference`1
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition
+  langs:
+  - csharp
+  - vb
+  name: ISkeletonItemReference<T>
+  nameWithType: ISkeletonItemReference<T>
+  fullName: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference<T>
+  type: Interface
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Marks a class as having its definition in the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface ISkeletonItemReference<out T> where T : SkeletonItem'
+    typeParameters:
+    - id: T
+      description: Type parameter. Should be an item from the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Interface ISkeletonItemReference(Of Out T As SkeletonItem)
+  nameWithType.vb: ISkeletonItemReference(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference(Of T)
+  name.vb: ISkeletonItemReference(Of T)
+- uid: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition
+  commentId: P:Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition
+  id: Definition
+  parent: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1
+  langs:
+  - csharp
+  - vb
+  name: Definition
+  nameWithType: ISkeletonItemReference<T>.Definition
+  fullName: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference<T>.Definition
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets the definition of this item from the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: T Definition { get; }
+    parameters: []
+    return:
+      type: '{T}'
+      description: The definition of this item from the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref>.
+    content.vb: ReadOnly Property Definition As T
+  overload: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition*
+  nameWithType.vb: ISkeletonItemReference(Of T).Definition
+  fullName.vb: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference(Of T).Definition
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1.Definition
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference-1.html#Sdl_Core_Bcm_BcmModel_ISkeletonItemReference_1_Definition
+  name: Definition
+  nameWithType: ISkeletonItemReference<T>.Definition
+  fullName: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference<T>.Definition
+  nameWithType.vb: ISkeletonItemReference(Of T).Definition
+  fullName.vb: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference(Of T).Definition
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

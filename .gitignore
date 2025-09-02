@@ -7,4 +7,8 @@
 /**/bin/
 /**/obj/
 _site
-.vscode/
+.DS_Store
+*.suo
+*.testlog
+.vscode
+.vs

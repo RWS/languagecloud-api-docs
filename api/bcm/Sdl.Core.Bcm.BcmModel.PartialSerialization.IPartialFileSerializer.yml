@@ -1,0 +1,778 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  id: IPartialFileSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  children:
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.String)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.String)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange(System.Int32,System.Int32)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits(Sdl.Core.Bcm.BcmModel.File)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  langs:
+  - csharp
+  - vb
+  name: IPartialFileSerializer
+  nameWithType: IPartialFileSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  type: Interface
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Bcm file serialization interface that allows for not holding the full file in memory
+  example: []
+  syntax:
+    content: 'public interface IPartialFileSerializer : IDisposable'
+    content.vb: Public Interface IPartialFileSerializer Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits
+  id: GetFileWithoutParagraphUnits
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetFileWithoutParagraphUnits()
+  nameWithType: IPartialFileSerializer.GetFileWithoutParagraphUnits()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Gets file attributes and skeleton without any paragraph units in it.
+  example: []
+  syntax:
+    content: File GetFileWithoutParagraphUnits()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.File
+    content.vb: Function GetFileWithoutParagraphUnits() As File
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits(Sdl.Core.Bcm.BcmModel.File)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits(Sdl.Core.Bcm.BcmModel.File)
+  id: UpdateFileDataWithoutParagraphUnits(Sdl.Core.Bcm.BcmModel.File)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: UpdateFileDataWithoutParagraphUnits(File)
+  nameWithType: IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits(File)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits(Sdl.Core.Bcm.BcmModel.File)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Updates file attributes and skeleton. Array of paragraph units must be empty.
+  example: []
+  syntax:
+    content: void UpdateFileDataWithoutParagraphUnits(File file)
+    parameters:
+    - id: file
+      type: Sdl.Core.Bcm.BcmModel.File
+    content.vb: Sub UpdateFileDataWithoutParagraphUnits(file As File)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount
+  id: GetParagraphUnitCount
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetParagraphUnitCount()
+  nameWithType: IPartialFileSerializer.GetParagraphUnitCount()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Returns the number of paragraph units in this file
+  example: []
+  syntax:
+    content: int GetParagraphUnitCount()
+    return:
+      type: System.Int32
+    content.vb: Function GetParagraphUnitCount() As Integer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds
+  id: GetParagraphUnitIds
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetParagraphUnitIds()
+  nameWithType: IPartialFileSerializer.GetParagraphUnitIds()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Returns the paragraph unit ids from this file
+  example: []
+  syntax:
+    content: IReadOnlyList<string> GetParagraphUnitIds()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Function GetParagraphUnitIds() As IReadOnlyList(Of String)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits
+  id: GetAllParagraphUnits
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetAllParagraphUnits()
+  nameWithType: IPartialFileSerializer.GetAllParagraphUnits()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Returns a sequence of paragraph units from this file, deserialized one by one
+  example: []
+  syntax:
+    content: IEnumerable<ParagraphUnit> GetAllParagraphUnits()
+    return:
+      type: System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+    content.vb: Function GetAllParagraphUnits() As IEnumerable(Of ParagraphUnit)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.Int32)
+  id: GetSpecificParagraphUnit(System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetSpecificParagraphUnit(int)
+  nameWithType: IPartialFileSerializer.GetSpecificParagraphUnit(int)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(int)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Deserializes the paragraph unit with specific index in file
+  example: []
+  syntax:
+    content: ParagraphUnit GetSpecificParagraphUnit(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    content.vb: Function GetSpecificParagraphUnit(index As Integer) As ParagraphUnit
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit*
+  nameWithType.vb: IPartialFileSerializer.GetSpecificParagraphUnit(Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(Integer)
+  name.vb: GetSpecificParagraphUnit(Integer)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(System.String)
+  id: GetSpecificParagraphUnit(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetSpecificParagraphUnit(string)
+  nameWithType: IPartialFileSerializer.GetSpecificParagraphUnit(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Deserializes the paragraph unit with specific id in file
+  example: []
+  syntax:
+    content: ParagraphUnit GetSpecificParagraphUnit(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    content.vb: Function GetSpecificParagraphUnit(id As String) As ParagraphUnit
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit*
+  nameWithType.vb: IPartialFileSerializer.GetSpecificParagraphUnit(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit(String)
+  name.vb: GetSpecificParagraphUnit(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  id: UpdateParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: UpdateParagraphUnit(ParagraphUnit)
+  nameWithType: IPartialFileSerializer.UpdateParagraphUnit(ParagraphUnit)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Updates paragraph unit in file
+  example: []
+  syntax:
+    content: void UpdateParagraphUnit(ParagraphUnit paragraphUnit)
+    parameters:
+    - id: paragraphUnit
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    content.vb: Sub UpdateParagraphUnit(paragraphUnit As ParagraphUnit)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  id: AddParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: AddParagraphUnit(ParagraphUnit)
+  nameWithType: IPartialFileSerializer.AddParagraphUnit(ParagraphUnit)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Adds a paragraph unit at the end of the paragraph units list in the file
+  example: []
+  syntax:
+    content: void AddParagraphUnit(ParagraphUnit paragraphUnit)
+    parameters:
+    - id: paragraphUnit
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    content.vb: Sub AddParagraphUnit(paragraphUnit As ParagraphUnit)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  id: InsertParagraphUnit(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: InsertParagraphUnit(int, ParagraphUnit)
+  nameWithType: IPartialFileSerializer.InsertParagraphUnit(int, ParagraphUnit)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Inserts paragraph unit at specific index in file
+  example: []
+  syntax:
+    content: void InsertParagraphUnit(int index, ParagraphUnit paragraphUnit)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: paragraphUnit
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    content.vb: Sub InsertParagraphUnit(index As Integer, paragraphUnit As ParagraphUnit)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit*
+  nameWithType.vb: IPartialFileSerializer.InsertParagraphUnit(Integer, ParagraphUnit)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: InsertParagraphUnit(Integer, ParagraphUnit)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.Int32)
+  id: RemoveParagraphUnit(System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: RemoveParagraphUnit(int)
+  nameWithType: IPartialFileSerializer.RemoveParagraphUnit(int)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(int)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Removes paragraph unit with specific index from file
+  example: []
+  syntax:
+    content: void RemoveParagraphUnit(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Sub RemoveParagraphUnit(index As Integer)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit*
+  nameWithType.vb: IPartialFileSerializer.RemoveParagraphUnit(Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(Integer)
+  name.vb: RemoveParagraphUnit(Integer)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(System.String)
+  id: RemoveParagraphUnit(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: RemoveParagraphUnit(string)
+  nameWithType: IPartialFileSerializer.RemoveParagraphUnit(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Removes paragraph unit from file
+  example: []
+  syntax:
+    content: void RemoveParagraphUnit(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub RemoveParagraphUnit(id As String)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit*
+  nameWithType.vb: IPartialFileSerializer.RemoveParagraphUnit(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit(String)
+  name.vb: RemoveParagraphUnit(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange(System.Int32,System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange(System.Int32,System.Int32)
+  id: RemoveParagraphUnitRange(System.Int32,System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  langs:
+  - csharp
+  - vb
+  name: RemoveParagraphUnitRange(int, int)
+  nameWithType: IPartialFileSerializer.RemoveParagraphUnitRange(int, int)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange(int, int)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Removes multiple paragraph units based on index
+  example: []
+  syntax:
+    content: void RemoveParagraphUnitRange(int startIndex, int count)
+    parameters:
+    - id: startIndex
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    content.vb: Sub RemoveParagraphUnitRange(startIndex As Integer, count As Integer)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange*
+  nameWithType.vb: IPartialFileSerializer.RemoveParagraphUnitRange(Integer, Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange(Integer, Integer)
+  name.vb: RemoveParagraphUnitRange(Integer, Integer)
+references:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_GetFileWithoutParagraphUnits
+  name: GetFileWithoutParagraphUnits
+  nameWithType: IPartialFileSerializer.GetFileWithoutParagraphUnits
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetFileWithoutParagraphUnits
+- uid: Sdl.Core.Bcm.BcmModel.File
+  commentId: T:Sdl.Core.Bcm.BcmModel.File
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.File.html
+  name: File
+  nameWithType: File
+  fullName: Sdl.Core.Bcm.BcmModel.File
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_UpdateFileDataWithoutParagraphUnits_Sdl_Core_Bcm_BcmModel_File_
+  name: UpdateFileDataWithoutParagraphUnits
+  nameWithType: IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateFileDataWithoutParagraphUnits
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_GetParagraphUnitCount
+  name: GetParagraphUnitCount
+  nameWithType: IPartialFileSerializer.GetParagraphUnitCount
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_GetParagraphUnitIds
+  name: GetParagraphUnitIds
+  nameWithType: IPartialFileSerializer.GetParagraphUnitIds
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetParagraphUnitIds
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_GetAllParagraphUnits
+  name: GetAllParagraphUnits
+  nameWithType: IPartialFileSerializer.GetAllParagraphUnits
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetAllParagraphUnits
+- uid: System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ParagraphUnit>
+  nameWithType: IEnumerable<ParagraphUnit>
+  fullName: System.Collections.Generic.IEnumerable<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: IEnumerable(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: IEnumerable(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_GetSpecificParagraphUnit_System_Int32_
+  name: GetSpecificParagraphUnit
+  nameWithType: IPartialFileSerializer.GetSpecificParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.GetSpecificParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  commentId: T:Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  name: ParagraphUnit
+  nameWithType: ParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_UpdateParagraphUnit_Sdl_Core_Bcm_BcmModel_ParagraphUnit_
+  name: UpdateParagraphUnit
+  nameWithType: IPartialFileSerializer.UpdateParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.UpdateParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_AddParagraphUnit_Sdl_Core_Bcm_BcmModel_ParagraphUnit_
+  name: AddParagraphUnit
+  nameWithType: IPartialFileSerializer.AddParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.AddParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_InsertParagraphUnit_System_Int32_Sdl_Core_Bcm_BcmModel_ParagraphUnit_
+  name: InsertParagraphUnit
+  nameWithType: IPartialFileSerializer.InsertParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.InsertParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_RemoveParagraphUnit_System_Int32_
+  name: RemoveParagraphUnit
+  nameWithType: IPartialFileSerializer.RemoveParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialFileSerializer_RemoveParagraphUnitRange_System_Int32_System_Int32_
+  name: RemoveParagraphUnitRange
+  nameWithType: IPartialFileSerializer.RemoveParagraphUnitRange
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.RemoveParagraphUnitRange

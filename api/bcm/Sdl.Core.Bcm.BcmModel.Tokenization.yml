@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  id: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  - Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+  - Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType.html
+  name: DateTimePatternType
+  nameWithType: DateTimePatternType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html
+  name: NumericSeparator
+  nameWithType: NumericSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition.html
+  name: SegmentPosition
+  nameWithType: SegmentPosition
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange.html
+  name: SegmentRange
+  nameWithType: SegmentRange
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html
+  name: Sign
+  nameWithType: Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html
+  name: TagType
+  nameWithType: TagType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.html
+  name: Unit
+  nameWithType: Unit
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html

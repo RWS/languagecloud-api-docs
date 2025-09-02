@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  id: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  - Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  - Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  - Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  - Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+  - Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  - Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.Term
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html
+  name: CommentDefinition
+  nameWithType: CommentDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.html
+  name: CommentSeverity
+  nameWithType: CommentSeverity
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.Context.html
+  name: Context
+  nameWithType: Context
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html
+  name: ContextDefinition
+  nameWithType: ContextDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html
+  name: FormattingGroup
+  nameWithType: FormattingGroup
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.html
+  name: IdGenerator
+  nameWithType: IdGenerator
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.html
+  name: ITermAttributeContainer
+  nameWithType: ITermAttributeContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html
+  name: PlaceholderTagDefinition
+  nameWithType: PlaceholderTagDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<T>
+  nameWithType: SkeletonCollection<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<T>
+  nameWithType.vb: SkeletonCollection(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of T)
+  name.vb: SkeletonCollection(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  name: SkeletonCollectionKey
+  nameWithType: SkeletonCollectionKey
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  name: SkeletonItem
+  nameWithType: SkeletonItem
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html
+  name: StructureTagDefinition
+  nameWithType: StructureTagDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection.html
+  name: SubContentCollection
+  nameWithType: SubContentCollection
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  name: TagPairDefinition
+  nameWithType: TagPairDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.Term
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.Term
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.Term.html
+  name: Term
+  nameWithType: Term
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.Term
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html
+  name: TerminologyData
+  nameWithType: TerminologyData
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  name: TermOrigin
+  nameWithType: TermOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation.html
+  name: TermTranslation
+  nameWithType: TermTranslation
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html

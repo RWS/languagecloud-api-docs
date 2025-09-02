@@ -1,0 +1,716 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  commentId: T:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  id: TranslationQualityEstimation
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  - Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  langs:
+  - csharp
+  - vb
+  name: TranslationQualityEstimation
+  nameWithType: TranslationQualityEstimation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Model for persisting TQE(Translation Quality Estimation) information
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class TranslationQualityEstimation
+    content.vb: >-
+      <DataContract>
+
+      Public Class TranslationQualityEstimation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: TranslationQualityEstimation.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Equals override
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals*
+  nameWithType.vb: TranslationQualityEstimation.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TranslationQualityEstimation.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: GetHashCodd override
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: TranslationQualityEstimation()
+  nameWithType: TranslationQualityEstimation.TranslationQualityEstimation()
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.TranslationQualityEstimation()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  syntax:
+    content: public TranslationQualityEstimation()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor*
+  nameWithType.vb: TranslationQualityEstimation.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  id: System
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: System
+  nameWithType: TranslationQualityEstimation.System
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores the system which originated this data - e.g. lw-evolve
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "system", IsRequired = true)]
+
+      public string System { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="system", IsRequired:=True)>
+
+      Public Property System As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: system
+    - name: IsRequired
+      type: System.Boolean
+      value: true
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  id: Score
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: Score
+  nameWithType: TranslationQualityEstimation.Score
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores the score of this estimation (0-100)
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "score", IsRequired = true)]
+
+      public int Score { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <DataMember(Name:="score", IsRequired:=True)>
+
+      Public Property Score As Integer
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: score
+    - name: IsRequired
+      type: System.Boolean
+      value: true
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  id: Model
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: Model
+  nameWithType: TranslationQualityEstimation.Model
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores the model used for the estimation, - e.g. daVinci, bedrock
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "model", IsRequired = true)]
+
+      public string Model { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="model", IsRequired:=True)>
+
+      Public Property Model As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: model
+    - name: IsRequired
+      type: System.Boolean
+      value: true
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  id: Description
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TranslationQualityEstimation.Description
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores a description which is generated by the system generating the TQE data
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "description", IsRequired = false)]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="description", IsRequired:=False)>
+
+      Public Property Description As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: description
+    - name: IsRequired
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  id: EvaluatedAt
+  parent: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+  langs:
+  - csharp
+  - vb
+  name: EvaluatedAt
+  nameWithType: TranslationQualityEstimation.EvaluatedAt
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores the UTC date and time when the evaluation took place
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "evaluatedAt", IsRequired = true)]
+
+      [JsonConverter(typeof(DateTimeConverter))]
+
+      public DateTime EvaluatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <DataMember(Name:="evaluatedAt", IsRequired:=True)>
+
+      <JsonConverter(GetType(DateTimeConverter))>
+
+      Public Property EvaluatedAt As Date
+  overload: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: evaluatedAt
+    - name: IsRequired
+      type: System.Boolean
+      value: true
+references:
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Equals_System_Object_
+  name: Equals
+  nameWithType: TranslationQualityEstimation.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_GetHashCode
+  name: GetHashCode
+  nameWithType: TranslationQualityEstimation.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation__ctor
+  name: TranslationQualityEstimation
+  nameWithType: TranslationQualityEstimation.TranslationQualityEstimation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.TranslationQualityEstimation
+  nameWithType.vb: TranslationQualityEstimation.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_System
+  name: System
+  nameWithType: TranslationQualityEstimation.System
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Score
+  name: Score
+  nameWithType: TranslationQualityEstimation.Score
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Score
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Model
+  name: Model
+  nameWithType: TranslationQualityEstimation.Model
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Model
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_Description
+  name: Description
+  nameWithType: TranslationQualityEstimation.Description
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.Description
+- uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html#Sdl_Core_Bcm_BcmModel_TranslationQualityEstimation_EvaluatedAt
+  name: EvaluatedAt
+  nameWithType: TranslationQualityEstimation.EvaluatedAt
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.EvaluatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date

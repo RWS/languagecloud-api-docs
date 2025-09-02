@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  id: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  children:
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer.html
+  name: TempFileBasedBcmSerializer
+  nameWithType: TempFileBasedBcmSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer

@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  id: Sdl.Core.Bcm.BcmModel.Common
+  children:
+  - Sdl.Core.Bcm.BcmModel.Common.BcmConst
+  - Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation
+  - Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  - Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  - Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  - Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmConst
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.BcmConst
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmConst.html
+  name: BcmConst
+  nameWithType: BcmConst
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmConst
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation.html
+  name: BcmModelValidation
+  nameWithType: BcmModelValidation
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html
+  name: BcmVisitor
+  nameWithType: BcmVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+- uid: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.html
+  name: DefaultTranslationOrigin
+  nameWithType: DefaultTranslationOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html
+  name: ModelExtensions
+  nameWithType: ModelExtensions
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+- uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants.html
+  name: TranslationQualityEstimationConstants
+  nameWithType: TranslationQualityEstimationConstants
+  fullName: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html

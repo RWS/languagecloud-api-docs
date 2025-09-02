@@ -1,0 +1,2417 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  id: FeedbackContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor(Sdl.Core.Bcm.BcmModel.FeedbackType)
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
+  - Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone
+  langs:
+  - csharp
+  - vb
+  name: FeedbackContainer
+  nameWithType: FeedbackContainer
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Holds feedback information created during the translation and review process.
+  remarks: Used by the Translation Quality Assessment process(TQA).
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class FeedbackContainer : MarkupDataContainer, IEquatable<MetadataContainer>, ICloneable<MarkupData>, IEquatable<MarkupData>
+    content.vb: >-
+      <DataContract>
+
+      Public Class FeedbackContainer Inherits MarkupDataContainer Implements IEquatable(Of MetadataContainer), ICloneable(Of MarkupData), IEquatable(Of MarkupData)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer
+  - Sdl.Core.Bcm.BcmModel.MarkupData
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AutoClonedTagPairKey
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func{Sdl.Core.Bcm.BcmModel.MarkupData,System.Boolean})
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{{T},System.Boolean})
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.MarkupData})
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.MarkupData)
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer,System.Int32,System.Int32,System.Int32)
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Children
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AllSubItems
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Count
+  - Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Item(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.MarkupData.Id
+  - Sdl.Core.Bcm.BcmModel.MarkupData.Parent
+  - Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment
+  - Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph
+  - Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit
+  - Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors
+  - Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment
+  - Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer
+  - Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: FeedbackContainer()
+  nameWithType: FeedbackContainer.FeedbackContainer()
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackContainer()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.FeedbackContainer" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FeedbackContainer()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor*
+  nameWithType.vb: FeedbackContainer.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.FeedbackContainer.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor(Sdl.Core.Bcm.BcmModel.FeedbackType)
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor(Sdl.Core.Bcm.BcmModel.FeedbackType)
+  id: '#ctor(Sdl.Core.Bcm.BcmModel.FeedbackType)'
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: FeedbackContainer(FeedbackType)
+  nameWithType: FeedbackContainer.FeedbackContainer(FeedbackType)
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackContainer(Sdl.Core.Bcm.BcmModel.FeedbackType)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.FeedbackContainer" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FeedbackContainer(FeedbackType feedbackType)
+    parameters:
+    - id: feedbackType
+      type: Sdl.Core.Bcm.BcmModel.FeedbackType
+      description: Type of the feedback.
+    content.vb: Public Sub New(feedbackType As FeedbackType)
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor*
+  nameWithType.vb: FeedbackContainer.New(FeedbackType)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.FeedbackContainer.New(Sdl.Core.Bcm.BcmModel.FeedbackType)
+  name.vb: New(FeedbackType)
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  id: AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: AcceptVisitor(BcmVisitor)
+  nameWithType: FeedbackContainer.AcceptVisitor(BcmVisitor)
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Accepts a visitor of type <xref href="Sdl.Core.Bcm.BcmModel.Common.BcmVisitor" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override void AcceptVisitor(BcmVisitor visitor)
+    parameters:
+    - id: visitor
+      type: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+      description: The <xref href="Sdl.Core.Bcm.BcmModel.Common.BcmVisitor" data-throw-if-not-resolved="false"></xref> used to visit this item.
+    content.vb: Public Overrides Sub AcceptVisitor(visitor As BcmVisitor)
+  overridden: Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor*
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: FeedbackContainer.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public FeedbackContainer Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+      description: A deep clone of this instance.
+    content.vb: Public Function Clone() As FeedbackContainer
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone*
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone
+  id: UniqueClone
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: UniqueClone()
+  nameWithType: FeedbackContainer.UniqueClone()
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Clones this instance with a new unique ID.
+  example: []
+  syntax:
+    content: public FeedbackContainer UniqueClone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+      description: A deep clone with a new unique ID.
+    content.vb: Public Function UniqueClone() As FeedbackContainer
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone*
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  id: Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Equals(MarkupData)
+  nameWithType: FeedbackContainer.Equals(MarkupData)
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Performs a deep equals comparison.
+  example: []
+  syntax:
+    content: public override bool Equals(MarkupData other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.MarkupData
+      description: The other <xref href="Sdl.Core.Bcm.BcmModel.MarkupData" data-throw-if-not-resolved="false"></xref> used for comparison..
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(other As MarkupData) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals*
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: FeedbackContainer.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals*
+  nameWithType.vb: FeedbackContainer.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: FeedbackContainer.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+  id: Author
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Author
+  nameWithType: FeedbackContainer.Author
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the author.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "author")]
+
+      public string Author { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The author.
+    content.vb: >-
+      <DataMember(Name:="author")>
+
+      Public Property Author As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: author
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+  id: Timestamp
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: FeedbackContainer.Timestamp
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the creation date.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "timestamp")]
+
+      public DateTime? Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+      description: The creation date.
+    content.vb: >-
+      <DataMember(Name:="timestamp")>
+
+      Public Property Timestamp As Date?
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: timestamp
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+  id: Category
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: FeedbackContainer.Category
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the custom category of this feedback.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "category")]
+
+      public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The category.
+    content.vb: >-
+      <DataMember(Name:="category")>
+
+      Public Property Category As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: category
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+  id: DocumentCategory
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: DocumentCategory
+  nameWithType: FeedbackContainer.DocumentCategory
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the document category.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "documentCategory")]
+
+      public string DocumentCategory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The document category.
+    content.vb: >-
+      <DataMember(Name:="documentCategory")>
+
+      Public Property DocumentCategory As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: documentCategory
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+  id: Severity
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: FeedbackContainer.Severity
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the custom severity.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "severity")]
+
+      public string Severity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The custom severity.
+    content.vb: >-
+      <DataMember(Name:="severity")>
+
+      Public Property Severity As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: severity
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+  id: CommentDefinitionId
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: CommentDefinitionId
+  nameWithType: FeedbackContainer.CommentDefinitionId
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    <p>OBSOLETE</p>
+
+    Gets or sets the comment definition identifier.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("SHOULD be removed in next MAJOR release")]
+
+      [DataMember(Name = "commentDefinitionId")]
+
+      public int CommentDefinitionId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The comment definition identifier.
+    content.vb: >-
+      <Obsolete("SHOULD be removed in next MAJOR release")>
+
+      <DataMember(Name:="commentDefinitionId")>
+
+      Public Property CommentDefinitionId As Integer
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: SHOULD be removed in next MAJOR release
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: commentDefinitionId
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+  id: FeedbackType
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: FeedbackType
+  nameWithType: FeedbackContainer.FeedbackType
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the type of the feedback.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "feedbackType")]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+      public FeedbackType FeedbackType { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.FeedbackType
+      description: The type of the feedback.
+    content.vb: >-
+      <DataMember(Name:="feedbackType")>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property FeedbackType As FeedbackType
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: feedbackType
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+  id: ReplacementId
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: ReplacementId
+  nameWithType: FeedbackContainer.ReplacementId
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the replacement identifier.
+  remarks: >-
+    Id which is used for identifying TQA replacements (replacing an existing piece of markup with new markup).
+
+    Both original and new markup (adjacent FeedbackDeleted and FeedbackAdded markers) will contain 
+
+    an identical ReplacementId GUID in their properties indicating it is a replacement.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "replacementId")]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+      public string ReplacementId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The replacement identifier.
+    content.vb: >-
+      <DataMember(Name:="replacementId")>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property ReplacementId As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: replacementId
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+  id: Comment
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: FeedbackContainer.Comment
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the comment on this review feedback.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "comment")]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+      public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The comment.
+    content.vb: >-
+      <DataMember(Name:="comment")>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property Comment As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: comment
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+  id: Origin
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: FeedbackContainer.Origin
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Gets or sets the feedback origin.
+
+    Example values: "auto-filled", "auto-categorized", "interactive"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "origin")]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+      public string Origin { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="origin")>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property Origin As String
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: origin
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
+  id: Type
+  parent: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: FeedbackContainer.Type
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the custom feedback type.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("type")]
+
+      protected override string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The feedback type.
+    content.vb: >-
+      <JsonProperty("type")>
+
+      Protected Overrides Property Type As String
+  overridden: Sdl.Core.Bcm.BcmModel.MarkupData.Type
+  overload: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+references:
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  name: MetadataContainer
+  nameWithType: MetadataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData
+  commentId: T:Sdl.Core.Bcm.BcmModel.MarkupData
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  name: MarkupData
+  nameWithType: MarkupData
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html
+  name: MarkupDataContainer
+  nameWithType: MarkupDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MetadataContainer>
+  nameWithType: IEquatable<MetadataContainer>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MetadataContainer>
+  nameWithType.vb: IEquatable(Of MetadataContainer)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  name.vb: IEquatable(Of MetadataContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<MarkupData>
+  nameWithType: ICloneable<MarkupData>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.MarkupData>
+  nameWithType.vb: ICloneable(Of MarkupData)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.MarkupData)
+  name.vb: ICloneable(Of MarkupData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MarkupData}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MarkupData>
+  nameWithType: IEquatable<MarkupData>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MarkupData>
+  nameWithType.vb: IEquatable(Of MarkupData)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MarkupData)
+  name.vb: IEquatable(Of MarkupData)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AutoClonedTagPairKey
+  commentId: F:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AutoClonedTagPairKey
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_AutoClonedTagPairKey
+  name: AutoClonedTagPairKey
+  nameWithType: MarkupDataContainer.AutoClonedTagPairKey
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AutoClonedTagPairKey
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func{Sdl.Core.Bcm.BcmModel.MarkupData,System.Boolean})
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func{Sdl.Core.Bcm.BcmModel.MarkupData,System.Boolean})
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren_System_Func_Sdl_Core_Bcm_BcmModel_MarkupData_System_Boolean__
+  name: GetAllChildren(Func<MarkupData, bool>)
+  nameWithType: MarkupDataContainer.GetAllChildren(Func<MarkupData, bool>)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func<Sdl.Core.Bcm.BcmModel.MarkupData, bool>)
+  nameWithType.vb: MarkupDataContainer.GetAllChildren(Func(Of MarkupData, Boolean))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func(Of Sdl.Core.Bcm.BcmModel.MarkupData, Boolean))
+  name.vb: GetAllChildren(Func(Of MarkupData, Boolean))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func{Sdl.Core.Bcm.BcmModel.MarkupData,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren_System_Func_Sdl_Core_Bcm_BcmModel_MarkupData_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(System.Func{Sdl.Core.Bcm.BcmModel.MarkupData,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren_System_Func_Sdl_Core_Bcm_BcmModel_MarkupData_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{{T},System.Boolean})
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  definition: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  name: GetAllChildren<T>(Func<T, bool>)
+  nameWithType: MarkupDataContainer.GetAllChildren<T>(Func<T, bool>)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren<T>(System.Func<T, bool>)
+  nameWithType.vb: MarkupDataContainer.GetAllChildren(Of T)(Func(Of T, Boolean))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(Of T)(System.Func(Of T, Boolean))
+  name.vb: GetAllChildren(Of T)(Func(Of T, Boolean))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_Sdl_Core_Bcm_BcmModel_MarkupData_
+  name: Add(MarkupData)
+  nameWithType: MarkupDataContainer.Add(MarkupData)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Add
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Add
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.MarkupData})
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.MarkupData})
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_System_Collections_Generic_IEnumerable_Sdl_Core_Bcm_BcmModel_MarkupData__
+  name: Add(IEnumerable<MarkupData>)
+  nameWithType: MarkupDataContainer.Add(IEnumerable<MarkupData>)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable<Sdl.Core.Bcm.BcmModel.MarkupData>)
+  nameWithType.vb: MarkupDataContainer.Add(IEnumerable(Of MarkupData))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable(Of Sdl.Core.Bcm.BcmModel.MarkupData))
+  name.vb: Add(IEnumerable(Of MarkupData))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.MarkupData})
+    name: Add
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_System_Collections_Generic_IEnumerable_Sdl_Core_Bcm_BcmModel_MarkupData__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Add(System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.MarkupData})
+    name: Add
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Add_System_Collections_Generic_IEnumerable_Sdl_Core_Bcm_BcmModel_MarkupData__
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.MarkupData)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.MarkupData)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Insert_System_Int32_Sdl_Core_Bcm_BcmModel_MarkupData_
+  name: Insert(int, MarkupData)
+  nameWithType: MarkupDataContainer.Insert(int, MarkupData)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(int, Sdl.Core.Bcm.BcmModel.MarkupData)
+  nameWithType.vb: MarkupDataContainer.Insert(Integer, MarkupData)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(Integer, Sdl.Core.Bcm.BcmModel.MarkupData)
+  name.vb: Insert(Integer, MarkupData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Insert
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Insert_System_Int32_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Insert
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Insert_System_Int32_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Remove_Sdl_Core_Bcm_BcmModel_MarkupData_
+  name: Remove(MarkupData)
+  nameWithType: MarkupDataContainer.Remove(MarkupData)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Remove
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Remove_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Remove(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Remove
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Remove_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Clear
+  name: Clear()
+  nameWithType: MarkupDataContainer.Clear()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear
+    name: Clear
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Clear
+    name: Clear
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Clear
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetEnumerator
+  name: GetEnumerator()
+  nameWithType: MarkupDataContainer.GetEnumerator()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetEnumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetEnumerator
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer,System.Int32,System.Int32,System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer,System.Int32,System.Int32,System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_MoveToContainer_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_System_Int32_System_Int32_System_Int32_
+  name: MoveToContainer(MarkupDataContainer, int, int, int)
+  nameWithType: MarkupDataContainer.MoveToContainer(MarkupDataContainer, int, int, int)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer, int, int, int)
+  nameWithType.vb: MarkupDataContainer.MoveToContainer(MarkupDataContainer, Integer, Integer, Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer, Integer, Integer, Integer)
+  name.vb: MoveToContainer(MarkupDataContainer, Integer, Integer, Integer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer,System.Int32,System.Int32,System.Int32)
+    name: MoveToContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_MoveToContainer_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+    name: MarkupDataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.MoveToContainer(Sdl.Core.Bcm.BcmModel.MarkupDataContainer,System.Int32,System.Int32,System.Int32)
+    name: MoveToContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_MoveToContainer_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+    name: MarkupDataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_
+  name: Equals(MarkupDataContainer)
+  nameWithType: MarkupDataContainer.Equals(MarkupDataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+    name: MarkupDataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupDataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupDataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+    name: MarkupDataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_ToString
+  name: ToString()
+  nameWithType: MarkupDataContainer.ToString()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_ToString
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_OnDeserialized
+  name: OnDeserialized()
+  nameWithType: MarkupDataContainer.OnDeserialized()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized
+    name: OnDeserialized
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_OnDeserialized
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.OnDeserialized
+    name: OnDeserialized
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_OnDeserialized
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_CloneWithoutChildren
+  name: CloneWithoutChildren()
+  nameWithType: MarkupDataContainer.CloneWithoutChildren()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren
+    name: CloneWithoutChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_CloneWithoutChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.CloneWithoutChildren
+    name: CloneWithoutChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_CloneWithoutChildren
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Children
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Children
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Children
+  name: Children
+  nameWithType: MarkupDataContainer.Children
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Children
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AllSubItems
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AllSubItems
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_AllSubItems
+  name: AllSubItems
+  nameWithType: MarkupDataContainer.AllSubItems
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.AllSubItems
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Count
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Count
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Count
+  name: Count
+  nameWithType: MarkupDataContainer.Count
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Count
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Item(System.Int32)
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Item(System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: MarkupDataContainer.this[int]
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.this[int]
+  nameWithType.vb: MarkupDataContainer.this[](Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Item_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.Id
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.Id
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_Id
+  name: Id
+  nameWithType: MarkupData.Id
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.Id
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.Parent
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.Parent
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_Parent
+  name: Parent
+  nameWithType: MarkupData.Parent
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.Parent
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_ParentFragment
+  name: ParentFragment
+  nameWithType: MarkupData.ParentFragment
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.ParentFragment
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraph
+  name: ParentParagraph
+  nameWithType: MarkupData.ParentParagraph
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraph
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_ParentParagraphUnit
+  name: ParentParagraphUnit
+  nameWithType: MarkupData.ParentParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.ParentParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_Ancestors
+  name: Ancestors
+  nameWithType: MarkupData.Ancestors
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.Ancestors
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_ParentSegment
+  name: ParentSegment
+  nameWithType: MarkupData.ParentSegment
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.ParentSegment
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_IsContainer
+  name: IsContainer
+  nameWithType: MarkupData.IsContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.IsContainer
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_IndexInParent
+  name: IndexInParent
+  nameWithType: MarkupData.IndexInParent
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.IndexInParent
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  name: GetMetadata(string)
+  nameWithType: MetadataContainer.GetMetadata(string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(string)
+  nameWithType.vb: MetadataContainer.GetMetadata(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(String)
+  name.vb: GetMetadata(String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  name: SetMetadata(string, string)
+  nameWithType: MetadataContainer.SetMetadata(string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(string, string)
+  nameWithType.vb: MetadataContainer.SetMetadata(String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(String, String)
+  name.vb: SetMetadata(String, String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  name: Equals(MetadataContainer)
+  nameWithType: MetadataContainer.Equals(MetadataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  name: ShouldSerialize_metadata()
+  nameWithType: MetadataContainer.ShouldSerialize_metadata()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  commentId: P:Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata
+  name: Metadata
+  nameWithType: MetadataContainer.Metadata
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  name: GetAllChildren<T>(Func<T, bool>)
+  nameWithType: MarkupDataContainer.GetAllChildren<T>(Func<T, bool>)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren<T>(System.Func<T, bool>)
+  nameWithType.vb: MarkupDataContainer.GetAllChildren(Of T)(Func(Of T, Boolean))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren(Of T)(System.Func(Of T, Boolean))
+  name.vb: GetAllChildren(Of T)(Func(Of T, Boolean))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetAllChildren``1(System.Func{``0,System.Boolean})
+    name: GetAllChildren
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetAllChildren__1_System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html
+  name: FeedbackContainer
+  nameWithType: FeedbackContainer
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer__ctor
+  name: FeedbackContainer
+  nameWithType: FeedbackContainer.FeedbackContainer
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackContainer
+  nameWithType.vb: FeedbackContainer.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.FeedbackContainer.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackType
+  commentId: T:Sdl.Core.Bcm.BcmModel.FeedbackType
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackType.html
+  name: FeedbackType
+  nameWithType: FeedbackType
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackType
+- uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html
+  name: BcmVisitor
+  nameWithType: BcmVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_
+  name: AcceptVisitor(BcmVisitor)
+  nameWithType: MarkupData.AcceptVisitor(BcmVisitor)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+    name: AcceptVisitor
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+    name: BcmVisitor
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData.AcceptVisitor(Sdl.Core.Bcm.BcmModel.Common.BcmVisitor)
+    name: AcceptVisitor
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+    name: BcmVisitor
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_AcceptVisitor_Sdl_Core_Bcm_BcmModel_Common_BcmVisitor_
+  name: AcceptVisitor
+  nameWithType: FeedbackContainer.AcceptVisitor
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.AcceptVisitor
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Clone
+  name: Clone
+  nameWithType: FeedbackContainer.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Clone
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_UniqueClone
+  name: UniqueClone
+  nameWithType: FeedbackContainer.UniqueClone
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.UniqueClone
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupData_
+  name: Equals(MarkupData)
+  nameWithType: MarkupDataContainer.Equals(MarkupData)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Sdl.Core.Bcm.BcmModel.MarkupData)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupData_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Equals_Sdl_Core_Bcm_BcmModel_MarkupData_
+  name: Equals
+  nameWithType: FeedbackContainer.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MarkupDataContainer.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(object)
+  nameWithType.vb: MarkupDataContainer.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MarkupDataContainer.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MarkupDataContainer.html#Sdl_Core_Bcm_BcmModel_MarkupDataContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_GetHashCode
+  name: GetHashCode
+  nameWithType: FeedbackContainer.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Author
+  name: Author
+  nameWithType: FeedbackContainer.Author
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Author
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Timestamp
+  name: Timestamp
+  nameWithType: FeedbackContainer.Timestamp
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Timestamp
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Category
+  name: Category
+  nameWithType: FeedbackContainer.Category
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Category
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_DocumentCategory
+  name: DocumentCategory
+  nameWithType: FeedbackContainer.DocumentCategory
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.DocumentCategory
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Severity
+  name: Severity
+  nameWithType: FeedbackContainer.Severity
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Severity
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_CommentDefinitionId
+  name: CommentDefinitionId
+  nameWithType: FeedbackContainer.CommentDefinitionId
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.CommentDefinitionId
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_FeedbackType
+  name: FeedbackType
+  nameWithType: FeedbackContainer.FeedbackType
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.FeedbackType
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_ReplacementId
+  name: ReplacementId
+  nameWithType: FeedbackContainer.ReplacementId
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.ReplacementId
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Comment
+  name: Comment
+  nameWithType: FeedbackContainer.Comment
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Comment
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Origin
+  name: Origin
+  nameWithType: FeedbackContainer.Origin
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Origin
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.MarkupData.Type
+  parent: Sdl.Core.Bcm.BcmModel.MarkupData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html#Sdl_Core_Bcm_BcmModel_MarkupData_Type
+  name: Type
+  nameWithType: MarkupData.Type
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData.Type
+- uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.FeedbackContainer.html#Sdl_Core_Bcm_BcmModel_FeedbackContainer_Type
+  name: Type
+  nameWithType: FeedbackContainer.Type
+  fullName: Sdl.Core.Bcm.BcmModel.FeedbackContainer.Type
