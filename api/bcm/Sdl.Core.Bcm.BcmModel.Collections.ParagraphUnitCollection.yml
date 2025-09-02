@@ -1,0 +1,3513 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  id: ParagraphUnitCollection
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  children:
+  - Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor
+  - Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+  - Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+  - Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount
+  langs:
+  - csharp
+  - vb
+  name: ParagraphUnitCollection
+  nameWithType: ParagraphUnitCollection
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: >-
+    A <xref href="Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection%602" data-throw-if-not-resolved="false"></xref> of <xref href="Sdl.Core.Bcm.BcmModel.ParagraphUnit" data-throw-if-not-resolved="false"></xref>s.
+
+    Adds support for setting the parent elements and additonal helper properties.
+  example: []
+  syntax:
+    content: 'public class ParagraphUnitCollection : KeyBasedCollection<string, ParagraphUnit>, IList<ParagraphUnit>, ICollection<ParagraphUnit>, IList, ICollection, IReadOnlyList<ParagraphUnit>, IReadOnlyCollection<ParagraphUnit>, IEnumerable<ParagraphUnit>, IEnumerable, IEquatable<KeyBasedCollection<string, ParagraphUnit>>'
+    content.vb: Public Class ParagraphUnitCollection Inherits KeyBasedCollection(Of String, ParagraphUnit) Implements IList(Of ParagraphUnit), ICollection(Of ParagraphUnit), IList, ICollection, IReadOnlyList(Of ParagraphUnit), IReadOnlyCollection(Of ParagraphUnit), IEnumerable(Of ParagraphUnit), IEnumerable, IEquatable(Of KeyBasedCollection(Of String, ParagraphUnit))
+  inheritance:
+  - System.Object
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  implements:
+  - System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.Generic.ICollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.IList
+  - System.Collections.ICollection
+  - System.Collections.Generic.IReadOnlyList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.Generic.IReadOnlyCollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  - System.Collections.IEnumerable
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.KeySelector
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ForEach(System.Action{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(System.String)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.TryGetValue(System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit@)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(System.String)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit,System.String)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Comparer
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.String)
+  - System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Dictionary
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Clear
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[],System.Int32)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetEnumerator
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveAt(System.Int32)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Count
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Items
+  - System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.Int32)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  extensionMethods:
+  - System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  langs:
+  - csharp
+  - vb
+  name: ParagraphUnitCollection()
+  nameWithType: ParagraphUnitCollection.ParagraphUnitCollection()
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParagraphUnitCollection()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ParagraphUnitCollection()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor*
+  nameWithType.vb: ParagraphUnitCollection.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  id: InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  langs:
+  - csharp
+  - vb
+  name: InsertItem(int, ParagraphUnit)
+  nameWithType: ParagraphUnitCollection.InsertItem(int, ParagraphUnit)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: Inserts an element into the <xref href="System.Collections.ObjectModel.KeyedCollection%602" data-throw-if-not-resolved="false"></xref> at the specified index.
+  example: []
+  syntax:
+    content: protected override void InsertItem(int index, ParagraphUnit item)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which <code class="paramref">item</code> should be inserted.
+    - id: item
+      type: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+      description: The object to insert.
+    content.vb: Protected Overrides Sub InsertItem(index As Integer, item As ParagraphUnit)
+  overridden: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  overload: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem*
+  nameWithType.vb: ParagraphUnitCollection.InsertItem(Integer, ParagraphUnit)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: InsertItem(Integer, ParagraphUnit)
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+  commentId: P:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+  id: ParentFile
+  parent: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  langs:
+  - csharp
+  - vb
+  name: ParentFile
+  nameWithType: ParagraphUnitCollection.ParentFile
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: Gets or sets the parent file.
+  example: []
+  syntax:
+    content: public File ParentFile { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.File
+      description: The parent file.
+    content.vb: Public Property ParentFile As File
+  overload: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile*
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+  commentId: P:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+  id: AllSegmentPairs
+  parent: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  langs:
+  - csharp
+  - vb
+  name: AllSegmentPairs
+  nameWithType: ParagraphUnitCollection.AllSegmentPairs
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: Gets all segment pairs.
+  example: []
+  syntax:
+    content: public IEnumerable<SegmentPair> AllSegmentPairs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.SegmentPair}
+      description: All segment pairs.
+    content.vb: Public ReadOnly Property AllSegmentPairs As IEnumerable(Of SegmentPair)
+  overload: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs*
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount
+  commentId: P:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount
+  id: SegmentCount
+  parent: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  langs:
+  - csharp
+  - vb
+  name: SegmentCount
+  nameWithType: ParagraphUnitCollection.SegmentCount
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Collections
+  summary: Gets the segment count.
+  example: []
+  syntax:
+    content: public int SegmentCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The segment count.
+    content.vb: Public ReadOnly Property SegmentCount As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  name: KeyBasedCollection<TKey, TValue>
+  nameWithType: KeyBasedCollection<TKey, TValue>
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue)
+  name.vb: KeyBasedCollection(Of TKey, TValue)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  commentId: T:Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  name: ParagraphUnit
+  nameWithType: ParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.Collections
+  commentId: N:Sdl.Core.Bcm.BcmModel.Collections
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Collections
+  nameWithType: Sdl.Core.Bcm.BcmModel.Collections
+  fullName: Sdl.Core.Bcm.BcmModel.Collections
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Collections
+    name: Collections
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Collections
+    name: Collections
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.Collection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  name: Collection<ParagraphUnit>
+  nameWithType: Collection<ParagraphUnit>
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: Collection(Of ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: Collection(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.KeyedCollection`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  name: KeyedCollection<string, ParagraphUnit>
+  nameWithType: KeyedCollection<string, ParagraphUnit>
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: KeyedCollection(Of String, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2
+    name: KeyedCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2
+    name: KeyedCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  name: KeyBasedCollection<string, ParagraphUnit>
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: KeyBasedCollection(Of String, ParagraphUnit)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<ParagraphUnit>
+  nameWithType: IList<ParagraphUnit>
+  fullName: System.Collections.Generic.IList<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: IList(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.IList(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: IList(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.Generic.ICollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.ICollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<ParagraphUnit>
+  nameWithType: ICollection<ParagraphUnit>
+  fullName: System.Collections.Generic.ICollection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: ICollection(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.ICollection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: ICollection(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.IList
+  commentId: T:System.Collections.IList
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  name: IList
+  nameWithType: IList
+  fullName: System.Collections.IList
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Collections.Generic.IReadOnlyList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<ParagraphUnit>
+  nameWithType: IReadOnlyList<ParagraphUnit>
+  fullName: System.Collections.Generic.IReadOnlyList<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: IReadOnlyList(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: IReadOnlyList(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<ParagraphUnit>
+  nameWithType: IReadOnlyCollection<ParagraphUnit>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: IReadOnlyCollection(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: IReadOnlyCollection(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  commentId: T:System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ParagraphUnit>
+  nameWithType: IEnumerable<ParagraphUnit>
+  fullName: System.Collections.Generic.IEnumerable<Sdl.Core.Bcm.BcmModel.ParagraphUnit>
+  nameWithType.vb: IEnumerable(Of ParagraphUnit)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: IEnumerable(Of ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<KeyBasedCollection<string, ParagraphUnit>>
+  nameWithType: IEquatable<KeyBasedCollection<string, ParagraphUnit>>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>>
+  nameWithType.vb: IEquatable(Of KeyBasedCollection(Of String, ParagraphUnit))
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit))
+  name.vb: IEquatable(Of KeyBasedCollection(Of String, ParagraphUnit))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.KeySelector
+  commentId: F:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.KeySelector
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.KeySelector
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_KeySelector
+  name: KeySelector
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.KeySelector
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.KeySelector
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).KeySelector
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).KeySelector
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ForEach(System.Action{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ForEach(System.Action{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.ForEach(System.Action{`1})
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  name: ForEach(Action<ParagraphUnit>)
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.ForEach(Action<ParagraphUnit>)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.ForEach(System.Action<Sdl.Core.Bcm.BcmModel.ParagraphUnit>)
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).ForEach(Action(Of ParagraphUnit))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).ForEach(System.Action(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit))
+  name.vb: ForEach(Action(Of ParagraphUnit))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ForEach(System.Action{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: ForEach
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ForEach(System.Action{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: ForEach
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{`0,`1})
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  name: Equals(KeyBasedCollection<string, ParagraphUnit>)
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.Equals(KeyBasedCollection<string, ParagraphUnit>)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>)
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).Equals(KeyBasedCollection(Of String, ParagraphUnit))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit))
+  name.vb: Equals(KeyBasedCollection(Of String, ParagraphUnit))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(System.Object)
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Equals(object)
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetHashCode
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  name: GetHashCode()
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.GetHashCode()
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).GetHashCode()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetKeyForItem(`1)
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  name: GetKeyForItem(ParagraphUnit)
+  nameWithType: KeyBasedCollection<string, ParagraphUnit>.GetKeyForItem(ParagraphUnit)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: KeyBasedCollection(Of String, ParagraphUnit).GetKeyForItem(ParagraphUnit)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: GetKeyForItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetKeyForItem(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: GetKeyForItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(System.String)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(System.String)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.Contains(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  name: Contains(string)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.Contains(string)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Contains(string)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).Contains(String)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Contains(String)
+  name.vb: Contains(String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(System.String)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(System.String)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.TryGetValue(System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit@)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.TryGetValue(System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit@)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.TryGetValue(`0,`1@)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  name: TryGetValue(string, out ParagraphUnit)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.TryGetValue(string, out ParagraphUnit)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.TryGetValue(string, out Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).TryGetValue(String, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).TryGetValue(String, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: TryGetValue(String, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.TryGetValue(System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit@)
+    name: TryGetValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.TryGetValue(System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit@)
+    name: TryGetValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(System.String)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(System.String)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.Remove(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  name: Remove(string)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.Remove(string)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Remove(string)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).Remove(String)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Remove(String)
+  name.vb: Remove(String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(System.String)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(System.String)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit,System.String)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit,System.String)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.ChangeItemKey(`1,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  name: ChangeItemKey(ParagraphUnit, string)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.ChangeItemKey(ParagraphUnit, string)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit, string)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).ChangeItemKey(ParagraphUnit, String)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit, String)
+  name.vb: ChangeItemKey(ParagraphUnit, String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit,System.String)
+    name: ChangeItemKey
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ChangeItemKey(Sdl.Core.Bcm.BcmModel.ParagraphUnit,System.String)
+    name: ChangeItemKey
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.ClearItems
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  name: ClearItems()
+  nameWithType: KeyedCollection<string, ParagraphUnit>.ClearItems()
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.ClearItems()
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).ClearItems()
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).ClearItems()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.InsertItem(System.Int32,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  name: InsertItem(int, ParagraphUnit)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.InsertItem(int, ParagraphUnit)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.InsertItem(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).InsertItem(Integer, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).InsertItem(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: InsertItem(Integer, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: InsertItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.InsertItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: InsertItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.RemoveItem(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  name: RemoveItem(int)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.RemoveItem(int)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.RemoveItem(int)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).RemoveItem(Integer)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).RemoveItem(Integer)
+  name.vb: RemoveItem(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.SetItem(System.Int32,`1)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  name: SetItem(int, ParagraphUnit)
+  nameWithType: KeyedCollection<string, ParagraphUnit>.SetItem(int, ParagraphUnit)
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.SetItem(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).SetItem(Integer, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).SetItem(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: SetItem(Integer, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Comparer
+  commentId: P:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Comparer
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.Comparer
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.comparer
+  name: Comparer
+  nameWithType: KeyedCollection<string, ParagraphUnit>.Comparer
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Comparer
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).Comparer
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Comparer
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.String)
+  commentId: P:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.String)
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.Item(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: this[string]
+  nameWithType: KeyedCollection<string, ParagraphUnit>.this[string]
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.this[string]
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).this[](String)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).this[](String)
+  name.vb: this[](String)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.String)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.item
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Dictionary
+  commentId: P:System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Dictionary
+  parent: System.Collections.ObjectModel.KeyedCollection{System.String,Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.KeyedCollection`2.Dictionary
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.dictionary
+  name: Dictionary
+  nameWithType: KeyedCollection<string, ParagraphUnit>.Dictionary
+  fullName: System.Collections.ObjectModel.KeyedCollection<string, Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Dictionary
+  nameWithType.vb: KeyedCollection(Of String, ParagraphUnit).Dictionary
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of String, Sdl.Core.Bcm.BcmModel.ParagraphUnit).Dictionary
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Add(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  name: Add(ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.Add(ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).Add(ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Add(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Clear
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Clear
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Clear
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  name: Clear()
+  nameWithType: Collection<ParagraphUnit>.Clear()
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Clear()
+  nameWithType.vb: Collection(Of ParagraphUnit).Clear()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Clear()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[],System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[],System.Int32)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.CopyTo(`0[],System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  name: CopyTo(ParagraphUnit[], int)
+  nameWithType: Collection<ParagraphUnit>.CopyTo(ParagraphUnit[], int)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[], int)
+  nameWithType.vb: Collection(Of ParagraphUnit).CopyTo(ParagraphUnit(), Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit(), Integer)
+  name.vb: CopyTo(ParagraphUnit(), Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.CopyTo(Sdl.Core.Bcm.BcmModel.ParagraphUnit[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Contains(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  name: Contains(ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.Contains(ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).Contains(ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Contains(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetEnumerator
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetEnumerator
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: Collection<ParagraphUnit>.GetEnumerator()
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.GetEnumerator()
+  nameWithType.vb: Collection(Of ParagraphUnit).GetEnumerator()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.IndexOf(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  name: IndexOf(ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.IndexOf(ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).IndexOf(ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.IndexOf(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Insert(System.Int32,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  name: Insert(int, ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.Insert(int, ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Insert(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).Insert(Integer, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Insert(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: Insert(Integer, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Insert(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Remove(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  name: Remove(ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.Remove(ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).Remove(ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Remove(Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveAt(System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveAt(System.Int32)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.RemoveAt(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  name: RemoveAt(int)
+  nameWithType: Collection<ParagraphUnit>.RemoveAt(int)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.RemoveAt(int)
+  nameWithType.vb: Collection(Of ParagraphUnit).RemoveAt(Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.ClearItems
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  name: ClearItems()
+  nameWithType: Collection<ParagraphUnit>.ClearItems()
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.ClearItems()
+  nameWithType.vb: Collection(Of ParagraphUnit).ClearItems()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).ClearItems()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.RemoveItem(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  name: RemoveItem(int)
+  nameWithType: Collection<ParagraphUnit>.RemoveItem(int)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.RemoveItem(int)
+  nameWithType.vb: Collection(Of ParagraphUnit).RemoveItem(Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).RemoveItem(Integer)
+  name.vb: RemoveItem(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  commentId: M:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.SetItem(System.Int32,`0)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  name: SetItem(int, ParagraphUnit)
+  nameWithType: Collection<ParagraphUnit>.SetItem(int, ParagraphUnit)
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.SetItem(int, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  nameWithType.vb: Collection(Of ParagraphUnit).SetItem(Integer, ParagraphUnit)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).SetItem(Integer, Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+  name.vb: SetItem(Integer, ParagraphUnit)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.SetItem(System.Int32,Sdl.Core.Bcm.BcmModel.ParagraphUnit)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Count
+  commentId: P:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Count
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Count
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.count
+  name: Count
+  nameWithType: Collection<ParagraphUnit>.Count
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Count
+  nameWithType.vb: Collection(Of ParagraphUnit).Count
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Count
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Items
+  commentId: P:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Items
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Items
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.items
+  name: Items
+  nameWithType: Collection<ParagraphUnit>.Items
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.Items
+  nameWithType.vb: Collection(Of ParagraphUnit).Items
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).Items
+- uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.Int32)
+  commentId: P:System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.Int32)
+  parent: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}
+  definition: System.Collections.ObjectModel.Collection`1.Item(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: Collection<ParagraphUnit>.this[int]
+  fullName: System.Collections.ObjectModel.Collection<Sdl.Core.Bcm.BcmModel.ParagraphUnit>.this[int]
+  nameWithType.vb: Collection(Of ParagraphUnit).this[](Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit}.Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+  parent: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  definition: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+  href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  name: IsSequenceEqual<ParagraphUnit>(IList<ParagraphUnit>, IList<ParagraphUnit>)
+  nameWithType: ModelExtensions.IsSequenceEqual<ParagraphUnit>(IList<ParagraphUnit>, IList<ParagraphUnit>)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual<Sdl.Core.Bcm.BcmModel.ParagraphUnit>(System.Collections.Generic.IList<Sdl.Core.Bcm.BcmModel.ParagraphUnit>, System.Collections.Generic.IList<Sdl.Core.Bcm.BcmModel.ParagraphUnit>)
+  nameWithType.vb: ModelExtensions.IsSequenceEqual(Of ParagraphUnit)(IList(Of ParagraphUnit), IList(Of ParagraphUnit))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit)(System.Collections.Generic.IList(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit), System.Collections.Generic.IList(Of Sdl.Core.Bcm.BcmModel.ParagraphUnit))
+  name.vb: IsSequenceEqual(Of ParagraphUnit)(IList(Of ParagraphUnit), IList(Of ParagraphUnit))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit},System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: IsSequenceEqual
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit},System.Collections.Generic.IList{Sdl.Core.Bcm.BcmModel.ParagraphUnit})
+    name: IsSequenceEqual
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.ObjectModel.Collection`1
+  commentId: T:System.Collections.ObjectModel.Collection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: System.Collections.ObjectModel.KeyedCollection`2
+  commentId: T:System.Collections.ObjectModel.KeyedCollection`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  name: KeyedCollection<TKey, TItem>
+  nameWithType: KeyedCollection<TKey, TItem>
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>
+  nameWithType.vb: KeyedCollection(Of TKey, TItem)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem)
+  name.vb: KeyedCollection(Of TKey, TItem)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2
+    name: KeyedCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2
+    name: KeyedCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.KeySelector
+  commentId: F:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.KeySelector
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_KeySelector
+  name: KeySelector
+  nameWithType: KeyBasedCollection<TKey, TValue>.KeySelector
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.KeySelector
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).KeySelector
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).KeySelector
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.ForEach(System.Action{`1})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.ForEach(System.Action{`1})
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  name: ForEach(Action<TValue>)
+  nameWithType: KeyBasedCollection<TKey, TValue>.ForEach(Action<TValue>)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.ForEach(System.Action<TValue>)
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).ForEach(Action(Of TValue))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).ForEach(System.Action(Of TValue))
+  name.vb: ForEach(Action(Of TValue))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.ForEach(System.Action{`1})
+    name: ForEach
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.ForEach(System.Action{`1})
+    name: ForEach
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_ForEach_System_Action__1__
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{`0,`1})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{`0,`1})
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  name: Equals(KeyBasedCollection<TKey, TValue>)
+  nameWithType: KeyBasedCollection<TKey, TValue>.Equals(KeyBasedCollection<TKey, TValue>)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>)
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).Equals(KeyBasedCollection(Of TKey, TValue))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue))
+  name.vb: Equals(KeyBasedCollection(Of TKey, TValue))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{`0,`1})
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection{`0,`1})
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection__0__1__
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(System.Object)
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: KeyBasedCollection<TKey, TValue>.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.Equals(object)
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  name: GetHashCode()
+  nameWithType: KeyBasedCollection<TKey, TValue>.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.GetHashCode()
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).GetHashCode()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetKeyForItem(`1)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetKeyForItem(`1)
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  name: GetKeyForItem(TValue)
+  nameWithType: KeyBasedCollection<TKey, TValue>.GetKeyForItem(TValue)
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection<TKey, TValue>.GetKeyForItem(TValue)
+  nameWithType.vb: KeyBasedCollection(Of TKey, TValue).GetKeyForItem(TValue)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection(Of TKey, TValue).GetKeyForItem(TValue)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetKeyForItem(`1)
+    name: GetKeyForItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  - name: (
+  - name: TValue
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2.GetKeyForItem(`1)
+    name: GetKeyForItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection-2.html#Sdl_Core_Bcm_BcmModel_Collections_KeyBasedCollection_2_GetKeyForItem__1_
+  - name: (
+  - name: TValue
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.Contains(`0)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.Contains(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  name: Contains(TKey)
+  nameWithType: KeyedCollection<TKey, TItem>.Contains(TKey)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.Contains(TKey)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).Contains(TKey)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).Contains(TKey)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  - name: (
+  - name: TKey
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.contains
+  - name: (
+  - name: TKey
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.TryGetValue(`0,`1@)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.TryGetValue(`0,`1@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  name: TryGetValue(TKey, out TItem)
+  nameWithType: KeyedCollection<TKey, TItem>.TryGetValue(TKey, out TItem)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.TryGetValue(TKey, out TItem)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).TryGetValue(TKey, TItem)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).TryGetValue(TKey, TItem)
+  name.vb: TryGetValue(TKey, TItem)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.TryGetValue(`0,`1@)
+    name: TryGetValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  - name: (
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TItem
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.TryGetValue(`0,`1@)
+    name: TryGetValue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.trygetvalue
+  - name: (
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.Remove(`0)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.Remove(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  name: Remove(TKey)
+  nameWithType: KeyedCollection<TKey, TItem>.Remove(TKey)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.Remove(TKey)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).Remove(TKey)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).Remove(TKey)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  - name: (
+  - name: TKey
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.remove
+  - name: (
+  - name: TKey
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.ChangeItemKey(`1,`0)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.ChangeItemKey(`1,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  name: ChangeItemKey(TItem, TKey)
+  nameWithType: KeyedCollection<TKey, TItem>.ChangeItemKey(TItem, TKey)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.ChangeItemKey(TItem, TKey)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).ChangeItemKey(TItem, TKey)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).ChangeItemKey(TItem, TKey)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.ChangeItemKey(`1,`0)
+    name: ChangeItemKey
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  - name: (
+  - name: TItem
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.ChangeItemKey(`1,`0)
+    name: ChangeItemKey
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.changeitemkey
+  - name: (
+  - name: TItem
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.ClearItems
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.ClearItems
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  name: ClearItems()
+  nameWithType: KeyedCollection<TKey, TItem>.ClearItems()
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.ClearItems()
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).ClearItems()
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).ClearItems()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.clearitems
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.InsertItem(System.Int32,`1)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.InsertItem(System.Int32,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  name: InsertItem(int, TItem)
+  nameWithType: KeyedCollection<TKey, TItem>.InsertItem(int, TItem)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.InsertItem(int, TItem)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).InsertItem(Integer, TItem)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).InsertItem(Integer, TItem)
+  name.vb: InsertItem(Integer, TItem)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.InsertItem(System.Int32,`1)
+    name: InsertItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.InsertItem(System.Int32,`1)
+    name: InsertItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.insertitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.RemoveItem(System.Int32)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.RemoveItem(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  name: RemoveItem(int)
+  nameWithType: KeyedCollection<TKey, TItem>.RemoveItem(int)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.RemoveItem(int)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).RemoveItem(Integer)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).RemoveItem(Integer)
+  name.vb: RemoveItem(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.removeitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.SetItem(System.Int32,`1)
+  commentId: M:System.Collections.ObjectModel.KeyedCollection`2.SetItem(System.Int32,`1)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  name: SetItem(int, TItem)
+  nameWithType: KeyedCollection<TKey, TItem>.SetItem(int, TItem)
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.SetItem(int, TItem)
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).SetItem(Integer, TItem)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).SetItem(Integer, TItem)
+  name.vb: SetItem(Integer, TItem)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.SetItem(System.Int32,`1)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.SetItem(System.Int32,`1)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.setitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: TItem
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.Comparer
+  commentId: P:System.Collections.ObjectModel.KeyedCollection`2.Comparer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.comparer
+  name: Comparer
+  nameWithType: KeyedCollection<TKey, TItem>.Comparer
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.Comparer
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).Comparer
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).Comparer
+- uid: System.Collections.ObjectModel.KeyedCollection`2.Item(`0)
+  commentId: P:System.Collections.ObjectModel.KeyedCollection`2.Item(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.item
+  name: this[TKey]
+  nameWithType: KeyedCollection<TKey, TItem>.this[TKey]
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.this[TKey]
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).this[](TKey)
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).this[](TKey)
+  name.vb: this[](TKey)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - name: TKey
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.KeyedCollection`2.Item(`0)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.item
+  - name: (
+  - name: TKey
+  - name: )
+- uid: System.Collections.ObjectModel.KeyedCollection`2.Dictionary
+  commentId: P:System.Collections.ObjectModel.KeyedCollection`2.Dictionary
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.keyedcollection-2.dictionary
+  name: Dictionary
+  nameWithType: KeyedCollection<TKey, TItem>.Dictionary
+  fullName: System.Collections.ObjectModel.KeyedCollection<TKey, TItem>.Dictionary
+  nameWithType.vb: KeyedCollection(Of TKey, TItem).Dictionary
+  fullName.vb: System.Collections.ObjectModel.KeyedCollection(Of TKey, TItem).Dictionary
+- uid: System.Collections.ObjectModel.Collection`1.Add(`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.Add(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  name: Add(T)
+  nameWithType: Collection<T>.Add(T)
+  fullName: System.Collections.ObjectModel.Collection<T>.Add(T)
+  nameWithType.vb: Collection(Of T).Add(T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Add(T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.Add(`0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Add(`0)
+    name: Add
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.add
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.Clear
+  commentId: M:System.Collections.ObjectModel.Collection`1.Clear
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  name: Clear()
+  nameWithType: Collection<T>.Clear()
+  fullName: System.Collections.ObjectModel.Collection<T>.Clear()
+  nameWithType.vb: Collection(Of T).Clear()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Clear()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Clear
+    name: Clear
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clear
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.CopyTo(`0[],System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection`1.CopyTo(`0[],System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  name: CopyTo(T[], int)
+  nameWithType: Collection<T>.CopyTo(T[], int)
+  fullName: System.Collections.ObjectModel.Collection<T>.CopyTo(T[], int)
+  nameWithType.vb: Collection(Of T).CopyTo(T(), Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).CopyTo(T(), Integer)
+  name.vb: CopyTo(T(), Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  - name: (
+  - name: T
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.copyto
+  - name: (
+  - name: T
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.Contains(`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.Contains(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  name: Contains(T)
+  nameWithType: Collection<T>.Contains(T)
+  fullName: System.Collections.ObjectModel.Collection<T>.Contains(T)
+  nameWithType.vb: Collection(Of T).Contains(T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Contains(T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Contains(`0)
+    name: Contains
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.contains
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.GetEnumerator
+  commentId: M:System.Collections.ObjectModel.Collection`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: Collection<T>.GetEnumerator()
+  fullName: System.Collections.ObjectModel.Collection<T>.GetEnumerator()
+  nameWithType.vb: Collection(Of T).GetEnumerator()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.IndexOf(`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.IndexOf(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  name: IndexOf(T)
+  nameWithType: Collection<T>.IndexOf(T)
+  fullName: System.Collections.ObjectModel.Collection<T>.IndexOf(T)
+  nameWithType.vb: Collection(Of T).IndexOf(T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).IndexOf(T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.IndexOf(`0)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.IndexOf(`0)
+    name: IndexOf
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.indexof
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.Insert(System.Int32,`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.Insert(System.Int32,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  name: Insert(int, T)
+  nameWithType: Collection<T>.Insert(int, T)
+  fullName: System.Collections.ObjectModel.Collection<T>.Insert(int, T)
+  nameWithType.vb: Collection(Of T).Insert(Integer, T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Insert(Integer, T)
+  name.vb: Insert(Integer, T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.Insert(System.Int32,`0)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Insert(System.Int32,`0)
+    name: Insert
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.insert
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.Remove(`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.Remove(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  name: Remove(T)
+  nameWithType: Collection<T>.Remove(T)
+  fullName: System.Collections.ObjectModel.Collection<T>.Remove(T)
+  nameWithType.vb: Collection(Of T).Remove(T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Remove(T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Remove(`0)
+    name: Remove
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.remove
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.RemoveAt(System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection`1.RemoveAt(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  name: RemoveAt(int)
+  nameWithType: Collection<T>.RemoveAt(int)
+  fullName: System.Collections.ObjectModel.Collection<T>.RemoveAt(int)
+  nameWithType.vb: Collection(Of T).RemoveAt(Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).RemoveAt(Integer)
+  name.vb: RemoveAt(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeat
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.ClearItems
+  commentId: M:System.Collections.ObjectModel.Collection`1.ClearItems
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  name: ClearItems()
+  nameWithType: Collection<T>.ClearItems()
+  fullName: System.Collections.ObjectModel.Collection<T>.ClearItems()
+  nameWithType.vb: Collection(Of T).ClearItems()
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).ClearItems()
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.ClearItems
+    name: ClearItems
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.clearitems
+  - name: (
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.RemoveItem(System.Int32)
+  commentId: M:System.Collections.ObjectModel.Collection`1.RemoveItem(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  name: RemoveItem(int)
+  nameWithType: Collection<T>.RemoveItem(int)
+  fullName: System.Collections.ObjectModel.Collection<T>.RemoveItem(int)
+  nameWithType.vb: Collection(Of T).RemoveItem(Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).RemoveItem(Integer)
+  name.vb: RemoveItem(Integer)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.RemoveItem(System.Int32)
+    name: RemoveItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.removeitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.SetItem(System.Int32,`0)
+  commentId: M:System.Collections.ObjectModel.Collection`1.SetItem(System.Int32,`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  name: SetItem(int, T)
+  nameWithType: Collection<T>.SetItem(int, T)
+  fullName: System.Collections.ObjectModel.Collection<T>.SetItem(int, T)
+  nameWithType.vb: Collection(Of T).SetItem(Integer, T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).SetItem(Integer, T)
+  name.vb: SetItem(Integer, T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1.SetItem(System.Int32,`0)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.SetItem(System.Int32,`0)
+    name: SetItem
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.setitem
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel.Collection`1.Count
+  commentId: P:System.Collections.ObjectModel.Collection`1.Count
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.count
+  name: Count
+  nameWithType: Collection<T>.Count
+  fullName: System.Collections.ObjectModel.Collection<T>.Count
+  nameWithType.vb: Collection(Of T).Count
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Count
+- uid: System.Collections.ObjectModel.Collection`1.Items
+  commentId: P:System.Collections.ObjectModel.Collection`1.Items
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.items
+  name: Items
+  nameWithType: Collection<T>.Items
+  fullName: System.Collections.ObjectModel.Collection<T>.Items
+  nameWithType.vb: Collection(Of T).Items
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).Items
+- uid: System.Collections.ObjectModel.Collection`1.Item(System.Int32)
+  commentId: P:System.Collections.ObjectModel.Collection`1.Item(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: Collection<T>.this[int]
+  fullName: System.Collections.ObjectModel.Collection<T>.this[int]
+  nameWithType.vb: Collection(Of T).this[](Integer)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  name: IsSequenceEqual<TSource>(IList<TSource>, IList<TSource>)
+  nameWithType: ModelExtensions.IsSequenceEqual<TSource>(IList<TSource>, IList<TSource>)
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual<TSource>(System.Collections.Generic.IList<TSource>, System.Collections.Generic.IList<TSource>)
+  nameWithType.vb: ModelExtensions.IsSequenceEqual(Of TSource)(IList(Of TSource), IList(Of TSource))
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual(Of TSource)(System.Collections.Generic.IList(Of TSource), System.Collections.Generic.IList(Of TSource))
+  name.vb: IsSequenceEqual(Of TSource)(IList(Of TSource), IList(Of TSource))
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+    name: IsSequenceEqual
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.IsSequenceEqual``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})
+    name: IsSequenceEqual
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html#Sdl_Core_Bcm_BcmModel_Common_ModelExtensions_IsSequenceEqual__1_System_Collections_Generic_IList___0__System_Collections_Generic_IList___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions.html
+  name: ModelExtensions
+  nameWithType: ModelExtensions
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html
+  name: ParagraphUnitCollection
+  nameWithType: ParagraphUnitCollection
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html#Sdl_Core_Bcm_BcmModel_Collections_ParagraphUnitCollection__ctor
+  name: ParagraphUnitCollection
+  nameWithType: ParagraphUnitCollection.ParagraphUnitCollection
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParagraphUnitCollection
+  nameWithType.vb: ParagraphUnitCollection.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html#Sdl_Core_Bcm_BcmModel_Collections_ParagraphUnitCollection_InsertItem_System_Int32_Sdl_Core_Bcm_BcmModel_ParagraphUnit_
+  name: InsertItem
+  nameWithType: ParagraphUnitCollection.InsertItem
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.InsertItem
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html#Sdl_Core_Bcm_BcmModel_Collections_ParagraphUnitCollection_ParentFile
+  name: ParentFile
+  nameWithType: ParagraphUnitCollection.ParentFile
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.ParentFile
+- uid: Sdl.Core.Bcm.BcmModel.File
+  commentId: T:Sdl.Core.Bcm.BcmModel.File
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.File.html
+  name: File
+  nameWithType: File
+  fullName: Sdl.Core.Bcm.BcmModel.File
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html#Sdl_Core_Bcm_BcmModel_Collections_ParagraphUnitCollection_AllSegmentPairs
+  name: AllSegmentPairs
+  nameWithType: ParagraphUnitCollection.AllSegmentPairs
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.AllSegmentPairs
+- uid: System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.SegmentPair}
+  commentId: T:System.Collections.Generic.IEnumerable{Sdl.Core.Bcm.BcmModel.SegmentPair}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<SegmentPair>
+  nameWithType: IEnumerable<SegmentPair>
+  fullName: System.Collections.Generic.IEnumerable<Sdl.Core.Bcm.BcmModel.SegmentPair>
+  nameWithType.vb: IEnumerable(Of SegmentPair)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Sdl.Core.Bcm.BcmModel.SegmentPair)
+  name.vb: IEnumerable(Of SegmentPair)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.SegmentPair
+    name: SegmentPair
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.SegmentPair.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.SegmentPair
+    name: SegmentPair
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.SegmentPair.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.html#Sdl_Core_Bcm_BcmModel_Collections_ParagraphUnitCollection_SegmentCount
+  name: SegmentCount
+  nameWithType: ParagraphUnitCollection.SegmentCount
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection.SegmentCount

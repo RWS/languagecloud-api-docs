@@ -1,1 +1,370 @@
 ### YamlMime:TableOfContent
+items:
+- uid: Sdl.Core.Bcm.BcmModel
+  name: Sdl.Core.Bcm.BcmModel
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+    name: ConfirmationLevel
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.DependencyFile
+    name: DependencyFile
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+    name: DependencyFileUsage
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Document
+    name: Document
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+    name: ExtensionDataContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.FeedbackContainer
+    name: FeedbackContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.FeedbackType
+    name: FeedbackType
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.File
+    name: File
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.FileMetaDataKeys
+    name: FileMetaDataKeys
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Fragment
+    name: Fragment
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.ISkeletonItemReference`1
+    name: ISkeletonItemReference<T>
+    type: Interface
+  - uid: Sdl.Core.Bcm.BcmModel.LocalizableSubContent
+    name: LocalizableSubContent
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.LockedContentContainer
+    name: LockedContentContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupData
+    name: MarkupData
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.MarkupDataContainer
+    name: MarkupDataContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Paragraph
+    name: Paragraph
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+    name: ParagraphUnit
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.ParagraphUnitMetadataKeys
+    name: ParagraphUnitMetadataKeys
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+    name: PlaceholderTag
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.RevisionContainer
+    name: RevisionContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.RevisionType
+    name: RevisionType
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Segment
+    name: Segment
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+    name: SegmentMetaDataKeys
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.SegmentPair
+    name: SegmentPair
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.SegmentationHint
+    name: SegmentationHint
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.StructureTag
+    name: StructureTag
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TagPair
+    name: TagPair
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TagPairMetaDataKeys
+    name: TagPairMetaDataKeys
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+    name: TextContextMatchLevel
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.TextMarkup
+    name: TextMarkup
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOriginMetaData
+    name: TranslationOriginMetaData
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+    name: TranslationQualityEstimation
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.UnknownMarkupData
+    name: UnknownMarkupData
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Alignment
+  name: Sdl.Core.Bcm.BcmModel.Alignment
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData
+    name: AlignmentData
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+    name: LiftSpan
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+    name: SpanPairNode
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Annotations
+  name: Sdl.Core.Bcm.BcmModel.Annotations
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer
+    name: AnnotationContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+    name: CommentContainer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+    name: TerminologyAnnotationContainer
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Collections
+  name: Sdl.Core.Bcm.BcmModel.Collections
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+    name: DictionaryEx<TKey, TValue>
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.FileCollection
+    name: FileCollection
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.HashDictionaryInt`2
+    name: HashDictionaryInt<TKey, TValue>
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.KeyBasedCollection`2
+    name: KeyBasedCollection<TKey, TValue>
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.ParagraphUnitCollection
+    name: ParagraphUnitCollection
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.SegmentPairCollection
+    name: SegmentPairCollection
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  name: Sdl.Core.Bcm.BcmModel.Common
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.BcmConst
+    name: BcmConst
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Common.BcmModelValidation
+    name: BcmModelValidation
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Common.BcmVisitor
+    name: BcmVisitor
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+    name: DefaultTranslationOrigin
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable<T>
+    type: Interface
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ModelExtensions
+    name: ModelExtensions
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Common.TranslationQualityEstimationConstants
+    name: TranslationQualityEstimationConstants
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Exceptions
+  name: Sdl.Core.Bcm.BcmModel.Exceptions
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException
+    name: InvalidBcmDocumentException
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer
+    name: AbstractPartialBcmSerializer
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+    name: IPartialBcmSerializer
+    type: Interface
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+    name: IPartialFileSerializer
+    type: Interface
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+    name: PartialBcmSerializerFactory
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer
+    name: InMemoryBcmSerializer
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.TempFileBased.TempFileBasedBcmSerializer
+    name: TempFileBasedBcmSerializer
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Serialization
+  name: Sdl.Core.Bcm.BcmModel.Serialization
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping
+    name: MarkupDataMapping
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping
+    name: TokenMapping
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+    name: CommentDefinition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+    name: CommentSeverity
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+    name: Context
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+    name: ContextDefinition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+    name: FormattingGroup
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+    name: ITermAttributeContainer
+    type: Interface
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+    name: IdGenerator
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+    name: PlaceholderTagDefinition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    type: Struct
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection<T>
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+    name: StructureTagDefinition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SubContentCollection
+    name: SubContentCollection
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.Term
+    name: Term
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermTranslation
+    name: TermTranslation
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+    name: TerminologyData
+    type: Class
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.DateTimePatternType
+    name: DateTimePatternType
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+    name: NumericSeparator
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentPosition
+    name: SegmentPosition
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.SegmentRange
+    name: SegmentRange
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+    name: Sign
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+    name: TagType
+    type: Enum
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+    name: Unit
+    type: Enum
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  type: Namespace
+  items:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken
+    name: AbbreviationToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken
+    name: AcronymToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+    name: AlphanumericToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken
+    name: CharSequenceToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken
+    name: DateTimeToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken
+    name: GeneralPunctuationToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+    name: GenericPlaceableToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
+    name: IPAdressToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+    name: MeasureToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+    name: NumberToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
+    name: TagToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    name: Token
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken
+    name: URIToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken
+    name: VariableToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken
+    name: WhiteSpaceToken
+    type: Class
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken
+    name: WordToken
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization
+  id: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  children:
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html
+  name: AbstractPartialBcmSerializer
+  nameWithType: AbstractPartialBcmSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html
+  name: IPartialBcmSerializer
+  nameWithType: IPartialBcmSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html
+  name: IPartialFileSerializer
+  nameWithType: IPartialFileSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html
+  name: PartialBcmSerializerFactory
+  nameWithType: PartialBcmSerializerFactory
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html

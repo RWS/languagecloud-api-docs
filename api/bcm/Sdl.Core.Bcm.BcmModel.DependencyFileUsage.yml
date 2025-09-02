@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  commentId: T:Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  id: DependencyFileUsage
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Extraction
+  - Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Final
+  - Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Generation
+  - Sdl.Core.Bcm.BcmModel.DependencyFileUsage.None
+  langs:
+  - csharp
+  - vb
+  name: DependencyFileUsage
+  nameWithType: DependencyFileUsage
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Defines the purpose of a <xref href="Sdl.Core.Bcm.BcmModel.DependencyFile" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EnumConverter), new object[] { DependencyFileUsage.None })]
+
+      public enum DependencyFileUsage
+    content.vb: >-
+      <JsonConverter(GetType(EnumConverter), New Object() { DependencyFileUsage.None })>
+
+      Public Enum DependencyFileUsage
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.None
+  commentId: F:Sdl.Core.Bcm.BcmModel.DependencyFileUsage.None
+  id: None
+  parent: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: DependencyFileUsage.None
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.None
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Unknown or not specified.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Extraction
+  commentId: F:Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Extraction
+  id: Extraction
+  parent: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  langs:
+  - csharp
+  - vb
+  name: Extraction
+  nameWithType: DependencyFileUsage.Extraction
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Extraction
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Used during the extraction phase.
+  example: []
+  syntax:
+    content: Extraction = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Generation
+  commentId: F:Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Generation
+  id: Generation
+  parent: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  langs:
+  - csharp
+  - vb
+  name: Generation
+  nameWithType: DependencyFileUsage.Generation
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Generation
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Used during the generate phase.
+  example: []
+  syntax:
+    content: Generation = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Final
+  commentId: F:Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Final
+  id: Final
+  parent: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  langs:
+  - csharp
+  - vb
+  name: Final
+  nameWithType: DependencyFileUsage.Final
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.Final
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Used or required for correct operation of the final (localized) file.
+  example: []
+  syntax:
+    content: Final = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+references:
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFile
+  commentId: T:Sdl.Core.Bcm.BcmModel.DependencyFile
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.DependencyFile.html
+  name: DependencyFile
+  nameWithType: DependencyFile
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFile
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  commentId: T:Sdl.Core.Bcm.BcmModel.DependencyFileUsage
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.DependencyFileUsage.html
+  name: DependencyFileUsage
+  nameWithType: DependencyFileUsage
+  fullName: Sdl.Core.Bcm.BcmModel.DependencyFileUsage

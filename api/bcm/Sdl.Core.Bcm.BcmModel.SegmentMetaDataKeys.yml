@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  commentId: T:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  id: SegmentMetaDataKeys
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.AlignmentTimestamp
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.Contexts
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.CustomFields
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.SystemFields
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuGuId
+  - Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuId
+  langs:
+  - csharp
+  - vb
+  name: SegmentMetaDataKeys
+  nameWithType: SegmentMetaDataKeys
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Constants for <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata.
+  example: []
+  syntax:
+    content: public static class SegmentMetaDataKeys
+    content.vb: Public Module SegmentMetaDataKeys
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.SystemFields
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.SystemFields
+  id: SystemFields
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: SystemFields
+  nameWithType: SegmentMetaDataKeys.SystemFields
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.SystemFields
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing system fields.
+  example: []
+  syntax:
+    content: public const string SystemFields = "SystemFields"
+    return:
+      type: System.String
+    content.vb: Public Const SystemFields As String = "SystemFields"
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.CustomFields
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.CustomFields
+  id: CustomFields
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: CustomFields
+  nameWithType: SegmentMetaDataKeys.CustomFields
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.CustomFields
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing custom fields.
+  example: []
+  syntax:
+    content: public const string CustomFields = "CustomFields"
+    return:
+      type: System.String
+    content.vb: Public Const CustomFields As String = "CustomFields"
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.AlignmentTimestamp
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.AlignmentTimestamp
+  id: AlignmentTimestamp
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: AlignmentTimestamp
+  nameWithType: SegmentMetaDataKeys.AlignmentTimestamp
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.AlignmentTimestamp
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing alignment date.
+  example: []
+  syntax:
+    content: public const string AlignmentTimestamp = "tuInsertDate"
+    return:
+      type: System.String
+    content.vb: Public Const AlignmentTimestamp As String = "tuInsertDate"
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuId
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuId
+  id: TuId
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: TuId
+  nameWithType: SegmentMetaDataKeys.TuId
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuId
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing the Translation Unit numerical id.
+  example: []
+  syntax:
+    content: public const string TuId = "tuid"
+    return:
+      type: System.String
+    content.vb: Public Const TuId As String = "tuid"
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuGuId
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuGuId
+  id: TuGuId
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: TuGuId
+  nameWithType: SegmentMetaDataKeys.TuGuId
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.TuGuId
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing the Translation Unit GUID id.
+  example: []
+  syntax:
+    content: public const string TuGuId = "tuguid"
+    return:
+      type: System.String
+    content.vb: Public Const TuGuId As String = "tuguid"
+- uid: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.Contexts
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.Contexts
+  id: Contexts
+  parent: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys
+  langs:
+  - csharp
+  - vb
+  name: Contexts
+  nameWithType: SegmentMetaDataKeys.Contexts
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentMetaDataKeys.Contexts
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref> metadata key for accesing the associated contexts.
+  example: []
+  syntax:
+    content: public const string Contexts = "Contexts"
+    return:
+      type: System.String
+    content.vb: Public Const Contexts As String = "Contexts"
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Segment
+  commentId: T:Sdl.Core.Bcm.BcmModel.Segment
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Segment.html
+  name: Segment
+  nameWithType: Segment
+  fullName: Sdl.Core.Bcm.BcmModel.Segment
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

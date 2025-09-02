@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  id: CommentSeverity
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.High
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Low
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Medium
+  langs:
+  - csharp
+  - vb
+  name: CommentSeverity
+  nameWithType: CommentSeverity
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Supported values of comment severity.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      [JsonConverter(typeof(EnumConverter), new object[] { CommentSeverity.Medium })]
+
+      public enum CommentSeverity
+    content.vb: >-
+      <DataContract>
+
+      <JsonConverter(GetType(EnumConverter), New Object() { CommentSeverity.Medium })>
+
+      Public Enum CommentSeverity
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Low
+  commentId: F:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Low
+  id: Low
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: CommentSeverity.Low
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Low
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Low comment severity.
+  example: []
+  syntax:
+    content: Low = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Medium
+  commentId: F:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Medium
+  id: Medium
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  langs:
+  - csharp
+  - vb
+  name: Medium
+  nameWithType: CommentSeverity.Medium
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.Medium
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Medium comment severity (default).
+  example: []
+  syntax:
+    content: Medium = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.High
+  commentId: F:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.High
+  id: High
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: CommentSeverity.High
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.High
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: High comment severity.
+  example: []
+  syntax:
+    content: High = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity.html
+  name: CommentSeverity
+  nameWithType: CommentSeverity
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentSeverity

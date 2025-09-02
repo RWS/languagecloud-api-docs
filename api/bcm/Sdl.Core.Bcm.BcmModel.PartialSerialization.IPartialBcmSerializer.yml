@@ -1,0 +1,704 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  id: IPartialBcmSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  children:
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile(Sdl.Core.Bcm.BcmModel.File)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.String)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer(System.String)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile(System.Int32,Sdl.Core.Bcm.BcmModel.File)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.Stream)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.TextWriter)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IPartialBcmSerializer
+  nameWithType: IPartialBcmSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  type: Interface
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Bcm serialization interface that allows for not holding the whole bcm document in memory
+  example: []
+  syntax:
+    content: 'public interface IPartialBcmSerializer : IDisposable'
+    content.vb: Public Interface IPartialBcmSerializer Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles
+  id: GetDocumentWithoutFiles
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetDocumentWithoutFiles()
+  nameWithType: IPartialBcmSerializer.GetDocumentWithoutFiles()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: >-
+    Gets document attributes and metadata without the files list.
+
+    Updates made to the object returned will be reflected automatically
+
+    in the result in case the updated bcm is requested.
+  example: []
+  syntax:
+    content: Document GetDocumentWithoutFiles()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Document
+    content.vb: Function GetDocumentWithoutFiles() As Document
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount
+  id: GetFileCount
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetFileCount()
+  nameWithType: IPartialBcmSerializer.GetFileCount()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Number of files in this document
+  example: []
+  syntax:
+    content: int GetFileCount()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Function GetFileCount() As Integer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds
+  id: GetFileIds
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetFileIds()
+  nameWithType: IPartialBcmSerializer.GetFileIds()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: All file ids in this document
+  example: []
+  syntax:
+    content: IReadOnlyList<string> GetFileIds()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+      description: ''
+    content.vb: Function GetFileIds() As IReadOnlyList(Of String)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer(System.String)
+  id: GetFileSerializer(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: GetFileSerializer(string)
+  nameWithType: IPartialBcmSerializer.GetFileSerializer(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Gets serialization wrapper for specific file
+  example: []
+  syntax:
+    content: IPartialFileSerializer GetFileSerializer(string fileId)
+    parameters:
+    - id: fileId
+      type: System.String
+    return:
+      type: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+    content.vb: Function GetFileSerializer(fileId As String) As IPartialFileSerializer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer*
+  nameWithType.vb: IPartialBcmSerializer.GetFileSerializer(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer(String)
+  name.vb: GetFileSerializer(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile(Sdl.Core.Bcm.BcmModel.File)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile(Sdl.Core.Bcm.BcmModel.File)
+  id: AddFile(Sdl.Core.Bcm.BcmModel.File)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: AddFile(File)
+  nameWithType: IPartialBcmSerializer.AddFile(File)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile(Sdl.Core.Bcm.BcmModel.File)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: >-
+    Adds a file, based on the attributes and skeleton in the parameter.
+
+    Array of paragraph units must be empty.
+  example: []
+  syntax:
+    content: void AddFile(File file)
+    parameters:
+    - id: file
+      type: Sdl.Core.Bcm.BcmModel.File
+    content.vb: Sub AddFile(file As File)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile(System.Int32,Sdl.Core.Bcm.BcmModel.File)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile(System.Int32,Sdl.Core.Bcm.BcmModel.File)
+  id: InsertFile(System.Int32,Sdl.Core.Bcm.BcmModel.File)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: InsertFile(int, File)
+  nameWithType: IPartialBcmSerializer.InsertFile(int, File)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile(int, Sdl.Core.Bcm.BcmModel.File)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: >-
+    Inserts a file to a specific position, based on the attributes and skeleton
+
+    in the parameter. Array of paragraph units must be empty.
+  example: []
+  syntax:
+    content: void InsertFile(int index, File file)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: file
+      type: Sdl.Core.Bcm.BcmModel.File
+    content.vb: Sub InsertFile(index As Integer, file As File)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile*
+  nameWithType.vb: IPartialBcmSerializer.InsertFile(Integer, File)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile(Integer, Sdl.Core.Bcm.BcmModel.File)
+  name.vb: InsertFile(Integer, File)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.Int32)
+  id: DeleteFile(System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeleteFile(int)
+  nameWithType: IPartialBcmSerializer.DeleteFile(int)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(int)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Deletes the file from the document.
+  example: []
+  syntax:
+    content: void DeleteFile(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    content.vb: Sub DeleteFile(index As Integer)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile*
+  nameWithType.vb: IPartialBcmSerializer.DeleteFile(Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(Integer)
+  name.vb: DeleteFile(Integer)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(System.String)
+  id: DeleteFile(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: DeleteFile(string)
+  nameWithType: IPartialBcmSerializer.DeleteFile(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Deletes the file from the document.
+  example: []
+  syntax:
+    content: void DeleteFile(string id)
+    parameters:
+    - id: id
+      type: System.String
+    content.vb: Sub DeleteFile(id As String)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile*
+  nameWithType.vb: IPartialBcmSerializer.DeleteFile(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile(String)
+  name.vb: DeleteFile(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.String)
+  id: SaveAsJson(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: SaveAsJson(string)
+  nameWithType: IPartialBcmSerializer.SaveAsJson(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Saves bcm document as single json object
+  example: []
+  syntax:
+    content: void SaveAsJson(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    content.vb: Sub SaveAsJson(filePath As String)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson*
+  nameWithType.vb: IPartialBcmSerializer.SaveAsJson(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(String)
+  name.vb: SaveAsJson(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.Stream)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.Stream)
+  id: SaveAsJson(System.IO.Stream)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: SaveAsJson(Stream)
+  nameWithType: IPartialBcmSerializer.SaveAsJson(Stream)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.Stream)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Saves bcm document as single json object
+  example: []
+  syntax:
+    content: void SaveAsJson(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    content.vb: Sub SaveAsJson(stream As Stream)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.TextWriter)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.TextWriter)
+  id: SaveAsJson(System.IO.TextWriter)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  langs:
+  - csharp
+  - vb
+  name: SaveAsJson(TextWriter)
+  nameWithType: IPartialBcmSerializer.SaveAsJson(TextWriter)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson(System.IO.TextWriter)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Saves bcm document as single json object to TextWriter
+  example: []
+  syntax:
+    content: void SaveAsJson(TextWriter textWriter)
+    parameters:
+    - id: textWriter
+      type: System.IO.TextWriter
+    content.vb: Sub SaveAsJson(textWriter As TextWriter)
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_GetDocumentWithoutFiles
+  name: GetDocumentWithoutFiles
+  nameWithType: IPartialBcmSerializer.GetDocumentWithoutFiles
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetDocumentWithoutFiles
+- uid: Sdl.Core.Bcm.BcmModel.Document
+  commentId: T:Sdl.Core.Bcm.BcmModel.Document
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: Sdl.Core.Bcm.BcmModel.Document
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_GetFileCount
+  name: GetFileCount
+  nameWithType: IPartialBcmSerializer.GetFileCount
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_GetFileIds
+  name: GetFileIds
+  nameWithType: IPartialBcmSerializer.GetFileIds
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileIds
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_GetFileSerializer_System_String_
+  name: GetFileSerializer
+  nameWithType: IPartialBcmSerializer.GetFileSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.GetFileSerializer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer.html
+  name: IPartialFileSerializer
+  nameWithType: IPartialFileSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialFileSerializer
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_AddFile_Sdl_Core_Bcm_BcmModel_File_
+  name: AddFile
+  nameWithType: IPartialBcmSerializer.AddFile
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.AddFile
+- uid: Sdl.Core.Bcm.BcmModel.File
+  commentId: T:Sdl.Core.Bcm.BcmModel.File
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.File.html
+  name: File
+  nameWithType: File
+  fullName: Sdl.Core.Bcm.BcmModel.File
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_InsertFile_System_Int32_Sdl_Core_Bcm_BcmModel_File_
+  name: InsertFile
+  nameWithType: IPartialBcmSerializer.InsertFile
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.InsertFile
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_DeleteFile_System_Int32_
+  name: DeleteFile
+  nameWithType: IPartialBcmSerializer.DeleteFile
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.DeleteFile
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_IPartialBcmSerializer_SaveAsJson_System_String_
+  name: SaveAsJson
+  nameWithType: IPartialBcmSerializer.SaveAsJson
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.SaveAsJson
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
