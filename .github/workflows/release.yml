@@ -21,7 +21,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      ProductName: Trados Cloud
+      ProductName: 'Trados Cloud'
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
