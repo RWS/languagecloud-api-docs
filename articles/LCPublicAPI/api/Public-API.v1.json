@@ -22,6 +22,10 @@
       "description": "Account"
     },
     {
+      "name": "Connected AI",
+      "description": "Connected AI"
+    },
+    {
       "name": "Custom Field",
       "description": "Custom Field"
     },
@@ -130,6 +134,10 @@
       "description": "TQA Profile"
     },
     {
+      "name": "Translation Domain",
+      "description": "Translation Domain"
+    },
+    {
       "name": "Translation Engine",
       "description": "Translation Engine"
     },
@@ -144,6 +152,10 @@
     {
       "name": "Translation Memory Import",
       "description": "Translation Memory Import"
+    },
+    {
+      "name": "Translation",
+      "description": "Translation"
     },
     {
       "name": "User",
@@ -237,6 +249,77 @@
           }
         },
         "operationId": "ListMyAccounts"
+      }
+    },
+    "/connected-ai/llm-configurations": {
+      "get": {
+        "summary": "List LLM Configurations",
+        "tags": [
+          "Connected AI"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-llm-configurations-response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "\"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "ListLlmConfigurations",
+        "x-stoplight": {
+          "id": "inxxqoo6ktslt"
+        },
+        "description": "List the account configured Large Language Models.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
       }
     },
     "/customers/{customerId}": {
@@ -1372,7 +1455,7 @@
     "/files": {
       "post": {
         "summary": "Upload Zip File",
-        "description": "Uploads an archive with source files in a .zip format, to be extracted and used at project creation.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Uploads an archive containing source files in `.zip` format, which will be extracted and used during project creation.\n\nStatus of the upload operation can be tracked using the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint.\n\nOnce this Upload Zip File operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint. Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\n\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "operationId": "UploadZipFile",
         "requestBody": {
           "content": {
@@ -1420,7 +1503,7 @@
             }
           },
           "400": {
-            "description": "In case of:\n* empty or missing file in request\n* no valid multipart request\n* other file attachment extension than \".zip\"",
+            "description": "Error code “invalid” in case of:\n * Empty or missing file in request\n * Not valid multipart request\n * File parameter contains other extension than the one expected by specification.",
             "content": {
               "application/json": {
                 "schema": {
@@ -1455,6 +1538,300 @@
         ]
       },
       "parameters": []
+    },
+    "/files/analysis": {
+      "post": {
+        "summary": "Request File Analysis",
+        "responses": {
+          "202": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/file-analysis-operation-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the request body parameter mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* \"forbidden\": the authenticated user is not allowed to read resource.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the resource could not be found.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "RequestFileAnalysis",
+        "x-stoplight": {
+          "id": "t57g1xy8y9r75"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fileIds",
+                  "sourceLanguage",
+                  "languageProcessingRuleId"
+                ],
+                "properties": {
+                  "fileIds": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "azlzt85a5lkl5"
+                    },
+                    "description": "The file identifiers for which the analysis will be performed.",
+                    "items": {
+                      "x-stoplight": {
+                        "id": "g73xta7jy2re2"
+                      },
+                      "type": "string"
+                    }
+                  },
+                  "sourceLanguage": {
+                    "$ref": "#/components/schemas/source-language-request",
+                    "x-stoplight": {
+                      "id": "86x0qedyrl4rv"
+                    },
+                    "description": "The source language."
+                  },
+                  "languageProcessingRuleId": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "1g8puz69o0xu8"
+                    },
+                    "description": "The identifier of the Language Processing Rule to be used when determining word count."
+                  },
+                  "fileProcessingConfigurationId": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "hu1k8l2pqv2o8"
+                    },
+                    "description": "The identifier of the File Processing Configuration to be used when converting a file for analysis.<br> \r\nA default configuration will be used if not specified."
+                  },
+                  "quotingOptions": {
+                    "type": "object",
+                    "x-stoplight": {
+                      "id": "5l3iznluoo6kn"
+                    },
+                    "description": "Set these resources to calculate an estimated translation cost.",
+                    "required": [
+                      "pricingModelId",
+                      "targetLanguages"
+                    ],
+                    "properties": {
+                      "pricingModelId": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "5rf92aw1gkge2"
+                        },
+                        "description": "The identifier of the Pricing Model to be used when calculating the cost."
+                      },
+                      "targetLanguages": {
+                        "type": "array",
+                        "x-stoplight": {
+                          "id": "vyfoxy7wp48vl"
+                        },
+                        "description": "The target languages for which the cost will be calculated.",
+                        "items": {
+                          "$ref": "#/components/schemas/target-language-request",
+                          "x-stoplight": {
+                            "id": "pwvr1t18i9dym"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint allows you to request the word count and an estimated cost for your files. \r\n\r\nUse the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) / [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoints to upload your files and get the `fileIds`. Send these `fileIds` together with the `languageProcessingRuleId` and `sourceLanguage` to receive the word count.\r\n\r\nOptionally, send the `quotingOptions` object to receive the `estimatedCosts`.\r\n\r\nUse the [Poll File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis~1{operationId}/get) endpoint to monitor the operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "tags": [
+          "File"
+        ]
+      },
+      "parameters": []
+    },
+    "/files/analysis/{operationId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "operationId",
+          "in": "path",
+          "required": true,
+          "description": "The file analysis operation identifier."
+        }
+      ],
+      "get": {
+        "summary": "Poll File Analysis",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/file-analysis-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* \"forbidden\": the authenticated user is not allowed to read resource.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the quoting operation could not be found.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PollFileAnalysis",
+        "x-stoplight": {
+          "id": "8iqm2m3c577th"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "description": "Monitor the [File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "tags": [
+          "File"
+        ]
+      }
     },
     "/files/{fileId}": {
       "parameters": [
@@ -1541,7 +1918,7 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
         ],
-        "description": "Monitors the unzipping operation for a previously uploaded archive and gets details on the extracted files.",
+        "description": "Monitors the unzipping operation for a previously uploaded archive and retrieves details about the extracted files.\r\n\r\nOnce the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint.\r\n Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\r\n",
         "tags": [
           "File"
         ]
@@ -3519,6 +3896,99 @@
           }
         },
         "operationId": "ListPricingModels"
+      },
+      "post": {
+        "summary": "Create Pricing Model",
+        "tags": [
+          "Pricing Model"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/pricing-model"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\r\n* \"empty\": Empty mandatory value mentioned in the \"name\" field on the error response.\r\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\r\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response. \r\n",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* “forbidden”: The authenticated user is not allowed to create the pricing model\r\n",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreatePricingModel",
+        "x-stoplight": {
+          "id": "5xf6yyxydnib9"
+        },
+        "description": "Creates a new pricing model.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pricing-model-create-request"
+              }
+            }
+          }
+        }
       }
     },
     "/pricing-models/{pricingModelId}": {
@@ -3622,7 +4092,194 @@
         {
           "$ref": "#/components/parameters/pricingModelId"
         }
-      ]
+      ],
+      "put": {
+        "summary": "Update Pricing Model",
+        "tags": [
+          "Pricing Model"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\r\n* \"empty\": Empty mandatory value mentioned in the \"name\" field on the error response.\r\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\r\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\r\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response. ",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* \"forbidden\": the authenticated user is not allowed to update the pricing model.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the pricing model could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "UpdatePricingModel",
+        "x-stoplight": {
+          "id": "519y1mm5q2twn"
+        },
+        "description": "Updates a pricing model.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/pricing-model-update-request"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Pricing Model",
+        "tags": [
+          "Pricing Model"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* \"forbidden\": the authenticated user is not allowed to delete the pricing model.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the pricing model could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "DeletePricingModel",
+        "x-stoplight": {
+          "id": "48vkxmoxbdoz0"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "description": "Deletes a pricing model."
+      }
     },
     "/projects": {
       "get": {
@@ -4917,6 +5574,365 @@
         }
       ]
     },
+    "/projects/{projectId}/files/exports": {
+      "post": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Export Project Files",
+        "operationId": "ExportProjectFiles",
+        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}/get)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Export Operation was triggered successfully",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/zip-file-export-response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": - the authenticated user is not allowed to trigger an export on the specified project, or does not have access to the project.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the project could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/zip-file-export-request"
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "5hbbqpkqxmfyt"
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        }
+      ]
+    },
+    "/projects/{projectId}/files/exports/{exportId}": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Poll Project Files Export",
+        "operationId": "ExportProjectFilesStatus",
+        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}~1download/get).",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/zip-file-export-response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": - the authenticated user is not allowed to retrieve the details of the export.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the export operation could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "exportId",
+            "in": "path",
+            "required": true,
+            "description": "The export identifier."
+          }
+        ],
+        "x-stoplight": {
+          "id": "uyc9zdzlangtw"
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        }
+      ]
+    },
+    "/projects/{projectId}/files/exports/{exportId}/download": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Download Exported Project Files",
+        "description": "Downloads the generated `zip` file containing the files according to initial export operation parameters. \n\nThe final ZIP file will be named using the project name. \n\n When the export operation is performed with `downloadFlat=true` and one target language specified, the resulting ZIP file name will be a combination of the project name and the target language code, as defined by the [Export Project Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports/post) endpoint.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the file could not be found by identifier.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"conflict\": the export operation is not done yet.\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "x-codegen-download": true,
+        "operationId": "DownloadFile",
+        "x-stoplight": {
+          "id": "r8ac4c1ortxtw"
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "projectId",
+          "in": "path",
+          "required": true,
+          "description": "The identifier of the project."
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "exportId",
+          "in": "path",
+          "required": true,
+          "description": "The identifier of the export operation."
+        }
+      ]
+    },
     "/projects/{projectId}/source-files": {
       "get": {
         "tags": [
@@ -5043,7 +6059,7 @@
           "Source File"
         ],
         "summary": "Add Source File",
-        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.",
+        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n\n> Note: Zip files will be added as reference files. If you want to upload zip files, please use the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -5258,7 +6274,7 @@
           "Source File"
         ],
         "summary": "Attach Source Files",
-        "description": "Adds multiple source files to the project. Files must be uploaded before attaching them to a project. When a file is attached after the project was started, a new start project request should be performed.\n\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
+        "description": "This endpoint can only be used after files have been uploaded via the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint. It allows you to add multiple source files to a project. \n\n Each file must be individually attached by setting the `fileUrl` to the `associatedFiles.id` returned by the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint, once the `unzipStatus` is `extracted`. \n\nIf a file is attached after the project has already been started, a new start project request must be made.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -7292,7 +8308,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid file uploaded, mentioned in the “name” field on the error response.",
+            "description": "Error code “invalid” in case of:\n * Empty or missing file in request\n * Not valid multipart request\n * File parameter contains other extension than the one expected by specification.",
             "content": {
               "application/json": {
                 "schema": {
@@ -11153,7 +12169,7 @@
         "operationId": "UpdateTranslationEngine",
         "responses": {
           "204": {
-            "description": "",
+            "description": "No Content",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -11179,9 +12195,7 @@
             "description": "The user could not be identified.",
             "headers": {
               "X-LC-TraceId": {
-                "schema": {
-                  "type": "string"
-                }
+                "$ref": "#/components/headers/X-LC-TraceId"
               }
             },
             "content": {
@@ -11238,7 +12252,7 @@
             }
           }
         },
-        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project endpoint](https://sdl-language-tech.stoplight.io/docs/lcpublicapi/fd9ee0beb37ca-get-project).\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating works](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put).",
+        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project](https://sdl-language-tech.stoplight.io/docs/lcpublicapi/fd9ee0beb37ca-get-project) endpoint.\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put) works.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11995,6 +13009,21 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/termbase-structure"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error code “invalid” in case of:\r\n * Empty or missing file in request\r\n * Not valid multipart request\r\n * File parameter contains other extension than the one expected by specification.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
                 }
               }
             },
@@ -14428,6 +15457,9 @@
                   "file"
                 ],
                 "properties": {
+                  "properties": {
+                    "$ref": "#/components/schemas/termbase-import-request"
+                  },
                   "file": {
                     "type": "string",
                     "format": "binary",
@@ -15871,7 +16903,7 @@
           },
           "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
-        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](../reference/Public-API.v1.json/paths/~1translation-memory~1imports~1{importId}/get).\n",
+        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](../reference/Public-API.v1.json/paths/~1translation-memory~1imports~1{importId}/get).",
         "tags": [
           "Translation Memory Import"
         ]
@@ -16299,6 +17331,445 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
         ]
+      }
+    },
+    "/translations/lookup": {
+      "post": {
+        "summary": "Lookup",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-search-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \n\n  * \"empty\": Empty value for variable mentioned in the \"name\" field on the error response. \n\n  * \"invalid\": Invalid input mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to use translation engine.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": - translation engine not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "TranslationsLookup",
+        "x-stoplight": {
+          "id": "e1b35d4bkp1dq"
+        },
+        "tags": [
+          "Translation"
+        ],
+        "description": "Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/translation-search-request"
+              }
+            }
+          },
+          "description": "Learn more about Translation Memory standard penalties [here](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/trados-tm-penalties-1159224).\r\n<br>\r\nLearn more about Translation Unit status penalties [here](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/editing-project-tm-and-verification-settings-800732)."
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/translations/concordance": {
+      "post": {
+        "summary": "Concordance",
+        "tags": [
+          "Translation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-concordance-search-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \n\n  * \"empty\": Empty value for variable mentioned in the \"name\" field on the error response. \n\n  * \"invalid\": Invalid input mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to use translation engine.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": - translation engine not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "TranslationsConcordanceSearch",
+        "x-stoplight": {
+          "id": "w7q4r8d7hum33"
+        },
+        "description": "Performs a concordance search for a given text within the TM linked to the specified translation engine. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/translation-concordance-search-request"
+              }
+            }
+          },
+          "description": "Learn more about Translation Memory standard penalties [here](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/trados-tm-penalties-1159224).\r\n<br>\r\nLearn more about Translation Unit status penalties [here](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/editing-project-tm-and-verification-settings-800732)."
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/translations/translation-unit": {
+      "put": {
+        "summary": "Update Translation Unit",
+        "tags": [
+          "Translation"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-unit-add-update-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \n\n  * \"empty\": Empty value for variable mentioned in the \"name\" field on the error response. \n\n  * \"invalid\": Invalid input mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to use translation engine.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": - translation engine not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "TranslationsUpdate",
+        "x-stoplight": {
+          "id": "pyjdd2h02zm8z"
+        },
+        "description": "Updates a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/translation-update-request"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add Translation Unit",
+        "tags": [
+          "Translation"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-unit-add-update-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \n\n  * \"empty\": Empty value for variable mentioned in the \"name\" field on the error response. \n\n  * \"invalid\": Invalid input mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Unauthorized to use translation engine.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": - translation engine not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "TranslationsAdd",
+        "description": "Adds a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/translation-add-request"
+              }
+            }
+          }
+        }
       }
     },
     "/users/me": {
@@ -17116,6 +18587,59 @@
         "description": "Allows updating individual custom fields on a project.",
         "parameters": []
       }
+    },
+    "/translation-domain/service-types": {
+      "get": {
+        "summary": "List Service Types",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-translation-service-types-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListTranslationServiceTypes",
+        "x-stoplight": {
+          "id": "014dsosfughtk"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "tags": [
+          "Translation Domain"
+        ],
+        "description": "List all available service types."
+      }
     }
   },
   "components": {
@@ -17212,25 +18736,26 @@
           "id"
         ]
       },
-      "additional-cost": {
-        "title": "Additional Cost",
+      "project-cost": {
+        "title": "Project Cost",
+        "x-stoplight": {
+          "id": "34d171ee75017"
+        },
         "type": "object",
+        "required": [
+          "name",
+          "type",
+          "index",
+          "costPerUnit",
+          "unitCount"
+        ],
         "properties": {
           "name": {
             "type": "string",
             "description": "The name of the additional cost. "
           },
           "type": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "perTargetLanguage",
-              "perFile",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
+            "$ref": "#/components/schemas/project-cost-type",
             "description": "The type of the additional cost."
           },
           "index": {
@@ -17246,126 +18771,108 @@
             "description": "The number of units for which a cost is applied."
           },
           "volumeUnitType": {
-            "type": "string",
-            "description": "The unit type of the 'volume' cost, used as reference for the unit cost.",
-            "enum": [
-              "words",
-              "characters"
-            ]
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
           },
           "conditionalCostType": {
-            "type": "string",
-            "description": "Only for the Conditional type.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ]
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
           },
           "costOperator": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-operator",
             "description": "Only for the Conditional type.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ]
+            "x-stoplight": {
+              "id": "dw5wpcfk70z9c"
+            }
           },
           "costVariable": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-variable",
             "description": "Only for the Conditional type.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ]
+            "x-stoplight": {
+              "id": "np7a8b8w5ra70"
+            }
           },
           "operand": {
             "type": "number",
             "description": "Operand of the Conditional type cost."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "gkyey7knc4j3v"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
+            "items": {
+              "x-stoplight": {
+                "id": "3e6kwmu58ut0p"
+              },
+              "type": "string"
+            }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rovgmbrayoltf"
+            },
+            "description": "The name of the custom unit."
           }
+        }
+      },
+      "language-cost": {
+        "title": "Language Cost",
+        "x-stoplight": {
+          "id": "28d3xstakbk6t"
         },
+        "type": "object",
         "required": [
           "name",
           "type",
           "index",
           "costPerUnit",
-          "unitCount",
-          "volumeUnitType",
-          "conditionalCostType",
-          "costOperator",
-          "costVariable",
-          "operand"
-        ]
-      },
-      "additional-cost-language": {
-        "title": "Additional Cost",
-        "x-stoplight": {
-          "id": "28d3xstakbk6t"
-        },
-        "type": "object",
+          "unitCount"
+        ],
         "properties": {
           "name": {
             "type": "string",
             "description": "The name of the additional cost. "
           },
           "type": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
+            "$ref": "#/components/schemas/language-cost-type",
             "description": "The type of the additional cost."
           },
           "index": {
             "type": "number",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The number of the additional cost."
+            "description": "The number of the additional cost."
           },
           "costPerUnit": {
             "type": "number",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The cost of a unit."
+            "description": "The cost of a unit."
           },
           "unitCount": {
             "type": "number",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The number of units for which a cost is applied."
+            "description": "The number of units for which a cost is applied."
           },
           "volumeUnitType": {
-            "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The unit type of the 'volume' cost, used as reference for the unit cost.",
-            "enum": [
-              "words",
-              "characters"
-            ]
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
           },
           "conditionalCostType": {
-            "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Only for the Conditional type.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ]
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
           },
           "costOperator": {
-            "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Only for the Conditional type.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ]
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "ak744d5hs26tb"
+            }
           },
           "costVariable": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-variable",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Only for the Conditional type.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ]
+            "x-stoplight": {
+              "id": "la3r0xwre29qy"
+            }
           },
           "operand": {
             "type": "number",
@@ -17376,19 +18883,22 @@
             "x-stoplight": {
               "id": "gkyey7knc4j3v"
             },
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of task type identifiers where this additional cost is applied.",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
             "items": {
               "x-stoplight": {
                 "id": "3e6kwmu58ut0p"
               },
               "type": "string"
             }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6o3o1f3p0863z"
+            },
+            "description": "The name of the custom unit."
           }
-        },
-        "required": [
-          "name",
-          "type"
-        ]
+        }
       },
       "analysis-statistics": {
         "title": "Analysis Statistics",
@@ -17792,6 +19302,39 @@
           }
         }
       },
+      "conditional-cost-operator": {
+        "title": "Conditional Cost Operator",
+        "x-stoplight": {
+          "id": "u0in7jsh95abi"
+        },
+        "enum": [
+          "less",
+          "lessOrEqual",
+          "greater",
+          "greaterOrEqual"
+        ]
+      },
+      "conditional-cost-type": {
+        "title": "Conditional Cost Type",
+        "x-stoplight": {
+          "id": "br34ph3abddli"
+        },
+        "enum": [
+          "absolute",
+          "relative",
+          "percentage"
+        ]
+      },
+      "conditional-cost-variable": {
+        "title": "Conditional Cost Variable",
+        "x-stoplight": {
+          "id": "e97vbe2580u68"
+        },
+        "enum": [
+          "wordCount",
+          "runningTotal"
+        ]
+      },
       "customer": {
         "title": "Customer",
         "type": "object",
@@ -18123,6 +19666,28 @@
           }
         }
       },
+      "translation-error-detail-response": {
+        "title": "Translation Errors Response",
+        "type": "object",
+        "description": "Translation error details response properties.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> ",
+            "x-default-field": true
+          },
+          "code": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> ",
+            "x-default-field": true
+          },
+          "value": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> ",
+            "x-default-field": true
+          }
+        }
+      },
       "export-quote-report-response": {
         "title": "Export Quote Report Response",
         "type": "object",
@@ -18159,6 +19724,160 @@
           "id",
           "name"
         ]
+      },
+      "file-analysis-response": {
+        "title": "File Analysis Response",
+        "x-stoplight": {
+          "id": "jzn363iiki313"
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "x-stoplight": {
+              "id": "dfww4v5fop36i"
+            },
+            "description": "The status of the file analysis operation.\r\n\r\n`converting` - The files are being converted for analysis.<br>\r\n`analysis` - Extracting the word count from the files.<br>\r\n`costEstimation` - Estimating the cost.<br>\r\n`completed` - The file analysis is completed.<br>\r\n`error` - The file analysis was unsuccessful. See the `errorMessage` field for more details.",
+            "enum": [
+              "converting",
+              "analysis",
+              "costCalculation",
+              "completed",
+              "error"
+            ]
+          },
+          "wordCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "hprd8di53gl2v"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The total word count of the files.</div> ",
+            "x-default-field": true
+          },
+          "estimatedCosts": {
+            "$ref": "#/components/schemas/file-analysis-cost-response",
+            "x-stoplight": {
+              "id": "z0yw6q0m1yaq3"
+            },
+            "description": "The estimated costs."
+          },
+          "fileStatistics": {
+            "x-stoplight": {
+              "id": "0v204bl8ergop"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The word count breakdown by files.</div> ",
+            "x-default-field": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/file-analysis-file-statistics",
+              "x-stoplight": {
+                "id": "umj4xnnmpqam9"
+              }
+            }
+          },
+          "errorMessage": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "trjzuxk6rorpo"
+            },
+            "description": "The cause of the error when the status is `error`."
+          }
+        }
+      },
+      "file-analysis-operation-response": {
+        "x-stoplight": {
+          "id": "0ptcnthovbi2q"
+        },
+        "title": "File Analysis Operation Response",
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "20knift0n9bey"
+            },
+            "description": "The analysis operation id. Use this to poll it's status."
+          }
+        }
+      },
+      "file-analysis-cost-response": {
+        "title": "File Analysis Cost Response",
+        "x-stoplight": {
+          "id": "w8nmywx87l747"
+        },
+        "type": "object",
+        "required": [
+          "total"
+        ],
+        "properties": {
+          "currencyCode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "hprd8di53gl2v"
+            },
+            "description": "The currency code (ISO 4217)."
+          },
+          "total": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "dfww4v5fop36i"
+            },
+            "description": "The total cost calculated for the provided files and language pairs. <br> \r\nIt represents the sum of the `translationCosts`, `languageCosts` and `additionalCosts`."
+          },
+          "translationCosts": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "8tiwwuff0g2eh"
+            },
+            "description": "The base translation costs."
+          },
+          "languageCosts": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "z0yw6q0m1yaq3"
+            },
+            "description": "The additional language costs."
+          },
+          "additionalCosts": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ardngvieg6vrm"
+            },
+            "description": "The additional translation costs."
+          }
+        }
+      },
+      "file-analysis-file-statistics": {
+        "title": "File Analysis File Statistics",
+        "x-stoplight": {
+          "id": "67ic0f0jm8by8"
+        },
+        "type": "object",
+        "required": [
+          "fileId",
+          "wordCount"
+        ],
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "2azn3zm063bur"
+            },
+            "description": "The file identifier."
+          },
+          "wordCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ivreutiffxph6"
+            },
+            "description": "The number of words in this file."
+          }
+        }
       },
       "file-processing-configuration": {
         "title": "File Processing Configuration",
@@ -18692,6 +20411,95 @@
           "languageCode"
         ]
       },
+      "language-cost-request": {
+        "title": "Language Cost Request",
+        "x-stoplight": {
+          "id": "jnli6j6ma7ofy"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the additional cost. "
+          },
+          "type": {
+            "$ref": "#/components/schemas/language-cost-type",
+            "description": "The type of the cost."
+          },
+          "index": {
+            "type": "number",
+            "description": "The number of the cost."
+          },
+          "costPerUnit": {
+            "type": "number",
+            "description": "The cost of a unit."
+          },
+          "unitCount": {
+            "type": "number",
+            "description": "The number of units for which a cost is applied."
+          },
+          "volumeUnitType": {
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
+          },
+          "conditionalCostType": {
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
+          },
+          "conditionalCostOperator": {
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "Only for the Conditional type."
+          },
+          "conditionalCostVariable": {
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "Only for the Conditional type."
+          },
+          "operand": {
+            "type": "number",
+            "description": "Operand of the Conditional type cost."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "pm59yzs7tif7v"
+            },
+            "description": "Array of Service Type identifiers where this cost is applied.",
+            "items": {
+              "x-stoplight": {
+                "id": "24m354vpsw2oa"
+              },
+              "type": "string"
+            }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "5khq8y9o6v7pg"
+            },
+            "maxLength": 100,
+            "description": "The name of the custom unit. Required when `volumeUnitType` is `custom`."
+          }
+        }
+      },
+      "language-cost-type": {
+        "title": "Language Cost Type",
+        "x-stoplight": {
+          "id": "95486073d14e0"
+        },
+        "enum": [
+          "volume",
+          "hourly",
+          "percentage",
+          "perPage",
+          "conditional",
+          "adhoc",
+          "adhocVolume"
+        ]
+      },
       "language-direction": {
         "title": "Language Direction",
         "type": "object",
@@ -18716,6 +20524,84 @@
           "sourceLanguage",
           "targetLanguage"
         ]
+      },
+      "language-direction-cost-request": {
+        "title": "Language Direction Cost Request",
+        "x-stoplight": {
+          "id": "e9lv9sdx92twt"
+        },
+        "type": "object",
+        "required": [
+          "sourceLanguage",
+          "targetLanguage"
+        ],
+        "properties": {
+          "sourceLanguage": {
+            "type": "string",
+            "description": "The source language code. For example: \"en-US\", \"de-DE\"."
+          },
+          "targetLanguage": {
+            "type": "string",
+            "description": "The target language code. For example: \"en-US\", \"de-DE\"."
+          },
+          "contextMatch": {
+            "type": "number",
+            "description": "The price of context matches.",
+            "x-default-field": true
+          },
+          "exactMatch": {
+            "type": "number",
+            "description": "The price of exact matches.",
+            "x-default-field": true
+          },
+          "new": {
+            "description": "The price of new matches.",
+            "type": "number",
+            "x-default-field": true
+          },
+          "perfectMatch": {
+            "type": "number",
+            "description": "The price of PerfectMatches.",
+            "x-default-field": true
+          },
+          "repetition": {
+            "type": "number",
+            "description": "The price of repetition matches.",
+            "x-default-field": true
+          },
+          "machineTranslation": {
+            "type": "number",
+            "description": "The price of machine translation matches.",
+            "x-default-field": true
+          },
+          "pricingUnit": {
+            "$ref": "#/components/schemas/pricing-unit-type",
+            "x-default-field": true,
+            "description": "The type of the pricing unit. If not specified, `words` will be used as the default value."
+          },
+          "fuzzyMatches": {
+            "type": "array",
+            "x-default-field": true,
+            "description": "All fuzzyMatches categories should be the same for all the language directions.",
+            "items": {
+              "$ref": "#/components/schemas/fuzzy-match",
+              "x-stoplight": {
+                "id": "0m8m8t4mg06hy"
+              }
+            }
+          },
+          "additionalCosts": {
+            "x-default-field": true,
+            "description": "Additional costs applied at language level.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/language-cost-request",
+              "x-stoplight": {
+                "id": "p0j2ohoyogy3q"
+              }
+            }
+          }
+        }
       },
       "language-direction-no-statistics": {
         "title": "Language Direction",
@@ -18756,12 +20642,16 @@
           "id"
         ]
       },
-      "language-price": {
-        "title": "Language Prices",
+      "language-direction-cost": {
+        "title": "Language Direction Cost",
         "x-stoplight": {
           "id": "a0c8ffb7ad3c9"
         },
         "type": "object",
+        "required": [
+          "sourceLanguage",
+          "targetLanguage"
+        ],
         "properties": {
           "sourceLanguage": {
             "type": "string",
@@ -18802,15 +20692,10 @@
             "x-default-field": true
           },
           "pricingUnit": {
-            "x-stoplight": {
-              "id": "tg3y5wcaunacs"
-            },
+            "$ref": "#/components/schemas/pricing-unit-type",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">",
             "x-default-field": true,
-            "enum": [
-              "words",
-              "characters"
-            ]
+            "nullable": true
           },
           "fuzzyMatches": {
             "type": "array",
@@ -18819,7 +20704,7 @@
             "items": {
               "$ref": "#/components/schemas/fuzzy-match",
               "x-stoplight": {
-                "id": "0m8m8t4mg06hy"
+                "id": "i06cxve7hjibt"
               }
             }
           },
@@ -18828,17 +20713,13 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">",
             "x-default-field": true,
             "items": {
-              "$ref": "#/components/schemas/additional-cost-language",
+              "$ref": "#/components/schemas/language-cost",
               "x-stoplight": {
                 "id": "eskiho7o9q38f"
               }
             }
           }
-        },
-        "required": [
-          "sourceLanguage",
-          "targetLanguage"
-        ]
+        }
       },
       "language-direction-request": {
         "title": "Language Direction Request",
@@ -18926,10 +20807,24 @@
         },
         "type": "object",
         "description": "Resource describing a Translation Memory, Termbase or Machine Translation used in a Translation Engine.",
+        "required": [
+          "id",
+          "type"
+        ],
         "properties": {
           "id": {
             "type": "string",
-            "description": "The identifier of the Translation Memory, the Termbase or the Machine Translation."
+            "x-stoplight": {
+              "id": "0xwwyeclt9qb9"
+            },
+            "description": "The identifier of the Translation Memory, Termbase, Machine Translation or LLM."
+          },
+          "systemId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "xvf797250xe34"
+            },
+            "description": "Required only for neural Machine Translation resources."
           },
           "type": {
             "type": "string",
@@ -18940,45 +20835,53 @@
             "enum": [
               "TM",
               "MT",
-              "TB"
+              "TB",
+              "LLM"
             ]
           },
           "penalty": {
             "type": "integer",
             "x-stoplight": {
               "id": "465u0rm7i1n97"
-            }
+            },
+            "description": "Only for TM"
           },
           "lookup": {
             "type": "boolean",
             "x-stoplight": {
               "id": "bnsbqsinf3azu"
-            }
+            },
+            "description": "Only for TM, TB"
           },
           "concordance": {
             "type": "boolean",
             "x-stoplight": {
               "id": "6h3n7qz9llokc"
-            }
+            },
+            "description": "Only for TM"
           },
           "update": {
             "type": "boolean",
             "x-stoplight": {
               "id": "euo2zyycwz99m"
-            }
-          },
-          "systemId": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "xvf797250xe34"
             },
-            "description": "Required only for neural Machine Translation resources."
+            "description": "Only for TM, TB"
+          },
+          "generativeTranslation": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "inxa0qoemlw46"
+            },
+            "description": "Only for LLM"
+          },
+          "smartReview": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "s7x3mcw5kgyr4"
+            },
+            "description": "Only for LLM"
           }
-        },
-        "required": [
-          "id",
-          "type"
-        ]
+        }
       },
       "list-customers-response": {
         "title": "List Customers Response",
@@ -19648,6 +21551,38 @@
           "items"
         ]
       },
+      "list-translation-service-types-response": {
+        "title": "List Translation Service Types Response",
+        "x-stoplight": {
+          "id": "hfotzd0fq5zx2"
+        },
+        "type": "object",
+        "description": "A response for the List Translation Service Types endpoint.",
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "properties": {
+          "itemCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "izsgcvo2ilhmt"
+            }
+          },
+          "items": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "dvdp579kl1cc5"
+            },
+            "items": {
+              "$ref": "#/components/schemas/translation-service-type",
+              "x-stoplight": {
+                "id": "b2c2bbjsoepdb"
+              }
+            }
+          }
+        }
+      },
       "list-users-response": {
         "title": "List Users Response",
         "type": "object",
@@ -19687,6 +21622,102 @@
           "items"
         ],
         "description": "A response for the List Workflows endpoint."
+      },
+      "llm-configuration-response": {
+        "title": "LLM Configuration Response",
+        "x-stoplight": {
+          "id": "kp7sn68d75t8z"
+        },
+        "type": "object",
+        "description": "The LLM configuration details",
+        "required": [
+          "id",
+          "model",
+          "type",
+          "isDefault",
+          "isActive"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "53ri5rgnwgj3c"
+            },
+            "description": "The LLM configuraiton identifier."
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "l1t1rrfi16rl6"
+            },
+            "description": "The configuration description."
+          },
+          "model": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "83vangex352aj"
+            },
+            "description": "The model name."
+          },
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "lsb4gvpmerg7z"
+            },
+            "enum": [
+              "azureOpenAI",
+              "awsBedrock"
+            ],
+            "description": "The LLM provider type."
+          },
+          "isDefault": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "8co4b9p37he2y"
+            },
+            "description": "Flag representing whether the LLM configuration is default."
+          },
+          "isActive": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "1bw7exz7k43o4"
+            },
+            "description": "Flag representing whether the LLM configuration is active."
+          }
+        }
+      },
+      "list-llm-configurations-response": {
+        "title": "List LLM Configurations Response",
+        "x-stoplight": {
+          "id": "zax5a75zj3u5f"
+        },
+        "type": "object",
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "properties": {
+          "itemCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "xt0e6xcbjnlds"
+            },
+            "description": "The total item count."
+          },
+          "items": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "zdj0fmsdrjuma"
+            },
+            "items": {
+              "$ref": "#/components/schemas/llm-configuration-response",
+              "x-stoplight": {
+                "id": "834zntr25p2xt"
+              }
+            }
+          }
+        },
+        "description": "A response for the List LLM Configurations endpoint."
       },
       "machine-translation": {
         "title": "Machine Translation",
@@ -20493,6 +22524,9 @@
         "title": "Pricing Model",
         "type": "object",
         "description": "Pricing Model resource.  (Not available for List Projects endpoint)",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -20500,7 +22534,7 @@
           },
           "name": {
             "type": "string",
-            "description": "The name of the Pricing Model. "
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The name of the Pricing Model.</div>"
           },
           "description": {
             "type": "string",
@@ -20520,27 +22554,156 @@
           },
           "languageDirectionPricing": {
             "type": "array",
+            "description": "Costs applied for languages.",
             "items": {
-              "$ref": "#/components/schemas/language-price",
+              "$ref": "#/components/schemas/language-direction-cost",
               "x-stoplight": {
                 "id": "iulcrkpbt2dkl"
               }
             }
           },
           "additionalCosts": {
+            "description": "Additional costs applied at project level.",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/additional-cost",
+              "$ref": "#/components/schemas/project-cost",
               "x-stoplight": {
                 "id": "8mgl2ge6it23h"
               }
             }
           }
+        }
+      },
+      "pricing-model-create-request": {
+        "title": "Pricing Model Create Request",
+        "x-stoplight": {
+          "id": "84rdt11xy57je"
         },
+        "type": "object",
         "required": [
-          "id",
-          "name"
-        ]
+          "name",
+          "currencyCode",
+          "location",
+          "languageDirectionPricing"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ux0n1of3l2fcg"
+            },
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "The name of the Pricing Model. "
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "lqs1u6y1jp99p"
+            },
+            "maxLength": 1000,
+            "description": "The description of the Pricing Model. "
+          },
+          "currencyCode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "p7je5zmdu0oft"
+            },
+            "description": "The currency code (ISO 4217)."
+          },
+          "location": {
+            "x-stoplight": {
+              "id": "ut6kllrmvrxi3"
+            },
+            "type": "string",
+            "description": "The location of the pricing model."
+          },
+          "languageDirectionPricing": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "5fvs81l6ulki3"
+            },
+            "description": "Costs applied for languages.",
+            "items": {
+              "$ref": "#/components/schemas/language-direction-cost-request",
+              "x-stoplight": {
+                "id": "bx0acxg9bor4s"
+              }
+            }
+          },
+          "additionalCosts": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "ibv6uo16upgzt"
+            },
+            "description": "Additional costs applied at project level.",
+            "items": {
+              "$ref": "#/components/schemas/project-cost-request",
+              "x-stoplight": {
+                "id": "lj22tg789rgr1"
+              }
+            }
+          }
+        }
+      },
+      "pricing-model-update-request": {
+        "title": "Pricing Model Update Request",
+        "x-stoplight": {
+          "id": "1c3gw712tops3"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "xv08h2p68irht"
+            },
+            "description": "The name of the Pricing Model. ",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kqq1pm5c0nbkt"
+            },
+            "description": "The description of the Pricing Model. ",
+            "maxLength": 1000
+          },
+          "currencyCode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "640ojrh29nljb"
+            },
+            "description": "The currency code (ISO 4217)."
+          },
+          "languageDirectionPricing": {
+            "x-stoplight": {
+              "id": "24gog5ehhl04i"
+            },
+            "description": "Costs applied for languages.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/language-direction-cost-request",
+              "x-stoplight": {
+                "id": "8bkrkdfcb2s15"
+              }
+            }
+          },
+          "additionalCosts": {
+            "x-stoplight": {
+              "id": "buk3e62if233x"
+            },
+            "description": "Additional costs applied at project level.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/project-cost-request",
+              "x-stoplight": {
+                "id": "dd4fhfzp4hqx2"
+              }
+            }
+          }
+        }
       },
       "project-pricing-model-update-request": {
         "title": "Update project pricing model request",
@@ -20563,6 +22726,13 @@
             ]
           }
         }
+      },
+      "pricing-unit-type": {
+        "title": "Pricing Unit Type",
+        "enum": [
+          "words",
+          "characters"
+        ]
       },
       "project": {
         "title": "Project",
@@ -20851,6 +23021,103 @@
             "description": "The PerfectMatch mapping to be associated with the project."
           }
         }
+      },
+      "project-cost-request": {
+        "title": "Project Cost Request",
+        "x-stoplight": {
+          "id": "c3890498b55df"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the additional cost. "
+          },
+          "type": {
+            "$ref": "#/components/schemas/project-cost-type",
+            "description": "The type of the additional cost."
+          },
+          "index": {
+            "type": "number",
+            "description": "The number of the additional cost."
+          },
+          "costPerUnit": {
+            "type": "number",
+            "description": "The cost of a unit."
+          },
+          "unitCount": {
+            "type": "number",
+            "description": "The number of units for which a cost is applied."
+          },
+          "volumeUnitType": {
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
+          },
+          "conditionalCostType": {
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
+          },
+          "costOperator": {
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "zqif0hjssiw1a"
+            }
+          },
+          "costVariable": {
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "3a5ok8ukdtldt"
+            }
+          },
+          "operand": {
+            "type": "number",
+            "description": "Operand of the Conditional type cost."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "k49y0alzptb99"
+            },
+            "description": "Array of Service Type identifiers where this additional cost is applied.",
+            "items": {
+              "x-stoplight": {
+                "id": "mg7w7sqohrgze"
+              },
+              "type": "string"
+            }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "1jvy04hcveeqt"
+            },
+            "maxLength": 100,
+            "description": "The name of the custom unit. Required when `volumeUnitType` is `custom`."
+          }
+        }
+      },
+      "project-cost-type": {
+        "title": "Project Cost Type",
+        "x-stoplight": {
+          "id": "nu6db8fhwsnqb"
+        },
+        "enum": [
+          "volume",
+          "perTargetLanguage",
+          "perFile",
+          "hourly",
+          "percentage",
+          "perPage",
+          "conditional",
+          "adhoc",
+          "adhocVolume"
+        ]
       },
       "project-group": {
         "title": "Project Group",
@@ -23377,27 +25644,12 @@
             "nullable": true
           },
           "costType": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "perTargetLanguage",
-              "perFile",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
-            "description": "The type of the additional cost.",
-            "nullable": true
+            "$ref": "#/components/schemas/project-cost-type",
+            "description": "The type of the additional cost."
           },
           "volumeUnitType": {
-            "type": "string",
-            "description": "The unit type of the 'volume' cost, used as a reference for the unit cost.",
-            "enum": [
-              "words",
-              "characters"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as a reference for the unit cost."
           },
           "costOrder": {
             "type": "integer",
@@ -23405,34 +25657,16 @@
             "nullable": true
           },
           "conditionalCostType": {
-            "type": "string",
-            "description": "Describes how the cost of type 'conditional' will be added to total cost.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Describes how the cost of type 'conditional' will be added to total cost."
           },
           "conditionalCostOperator": {
-            "type": "string",
-            "description": "The operator applied between the 'costVariable' and 'operand'.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "The operator applied between the 'costVariable' and 'operand'."
           },
           "conditionalCostVariable": {
-            "type": "string",
-            "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'."
           },
           "conditionalCostThreshold": {
             "description": "The value that is evaluated against the 'costVariable' based on the 'costOperator'.",
@@ -23443,12 +25677,26 @@
             "type": "number",
             "description": "The sum of all the previously computed costs.",
             "nullable": true
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "sh8ttf4ncbt4f"
+            },
+            "description": "The name of the custom unit."
           }
         }
       },
       "quote-additional-cost-request": {
         "title": "Quote Additional Cost Request",
         "type": "object",
+        "required": [
+          "name",
+          "count",
+          "cost",
+          "costOrder",
+          "conditionalCostThreshold"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -23463,26 +25711,13 @@
             "description": "The cost of a unit."
           },
           "costType": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "perTargetLanguage",
-              "perFile",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
+            "$ref": "#/components/schemas/project-cost-type",
             "description": "The type of the additional cost.",
             "nullable": true
           },
           "volumeUnitType": {
-            "type": "string",
+            "$ref": "#/components/schemas/volume-unit-type",
             "description": "The unit type of the 'volume' cost, used for counting the units.",
-            "enum": [
-              "words",
-              "characters"
-            ],
             "nullable": true
           },
           "costOrder": {
@@ -23490,47 +25725,25 @@
             "description": "Indicates the order in which the additional cost is computed."
           },
           "conditionalCostType": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-type",
             "description": "Describes how the cost of type 'conditional' will be added to total cost.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ],
             "nullable": true
           },
           "conditionalCostOperator": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-operator",
             "description": "The operator applied between the 'costVariable' and 'operand'.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ],
             "nullable": true
           },
           "conditionalCostVariable": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-variable",
             "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ],
             "nullable": true
           },
           "conditionalCostThreshold": {
             "description": "The value that is evaluated against the 'costVariable' based on the 'costOperator'.",
             "type": "number"
           }
-        },
-        "required": [
-          "name",
-          "count",
-          "cost",
-          "costOrder",
-          "conditionalCostThreshold"
-        ]
+        }
       },
       "quote-language-cost": {
         "title": "Quote Language Cost",
@@ -23559,27 +25772,12 @@
             "nullable": true
           },
           "costType": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "perTargetLanguage",
-              "perFile",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
-            "description": "The type of the additional cost.",
-            "nullable": true
+            "$ref": "#/components/schemas/language-cost-type",
+            "description": "The type of the additional cost."
           },
           "volumeUnitType": {
-            "type": "string",
-            "description": "The unit type of the 'volume' cost, used as a reference for the unit cost.",
-            "enum": [
-              "words",
-              "characters"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as a reference for the unit cost."
           },
           "targetLanguage": {
             "$ref": "#/components/schemas/language"
@@ -23590,34 +25788,16 @@
             "nullable": true
           },
           "conditionalCostType": {
-            "type": "string",
-            "description": "The condition type of the conditional cost.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "The condition type of the conditional cost."
           },
           "conditionalCostOperator": {
-            "type": "string",
-            "description": "The operator applied between the 'costVariable' and 'operand'.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "The operator applied between the 'costVariable' and 'operand'."
           },
           "conditionalCostVariable": {
-            "type": "string",
-            "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ],
-            "nullable": true
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'."
           },
           "conditionalCostThreshold": {
             "description": "The value that is evaluated against the 'costVariable' based on the 'costOperator'.",
@@ -23628,12 +25808,26 @@
             "type": "number",
             "description": "The sum of all the previously computed costs.",
             "nullable": true
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tdfu8mqyo09if"
+            },
+            "description": "The name of the custom unit."
           }
         }
       },
       "quote-language-cost-request": {
         "title": "Quote Language Cost Request",
         "type": "object",
+        "required": [
+          "name",
+          "count",
+          "cost",
+          "costOrder",
+          "conditionalCostThreshold"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -23648,26 +25842,13 @@
             "description": "The cost of a unit."
           },
           "costType": {
-            "type": "string",
-            "enum": [
-              "volume",
-              "perTargetLanguage",
-              "perFile",
-              "hourly",
-              "percentage",
-              "perPage",
-              "conditional"
-            ],
+            "$ref": "#/components/schemas/language-cost-type",
             "description": "The type of the additional cost.",
             "nullable": true
           },
           "volumeUnitType": {
-            "type": "string",
+            "$ref": "#/components/schemas/volume-unit-type",
             "description": "The unit type of the 'volume' cost, used for counting the units.",
-            "enum": [
-              "words",
-              "characters"
-            ],
             "nullable": true
           },
           "targetLanguage": {
@@ -23678,47 +25859,25 @@
             "description": "Indicates the order in which the additional cost is computed."
           },
           "conditionalCostType": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-type",
             "description": "Describes how the cost of type 'conditional' will be added to total cost.",
-            "enum": [
-              "absolute",
-              "relative",
-              "percentage"
-            ],
             "nullable": true
           },
           "conditionalCostOperator": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-operator",
             "description": "The operator applied between the 'costVariable' and 'operand'.",
-            "enum": [
-              "less",
-              "lessOrEqual",
-              "greater",
-              "greaterOrEqual"
-            ],
             "nullable": true
           },
           "conditionalCostVariable": {
-            "type": "string",
+            "$ref": "#/components/schemas/conditional-cost-variable",
             "description": "The variable that is evaluated against the 'operand' based on the 'costOperator'.",
-            "enum": [
-              "wordCount",
-              "runningTotal"
-            ],
             "nullable": true
           },
           "conditionalCostThreshold": {
             "description": "The value that is evaluated against the 'costVariable' based on the 'costOperator'.",
             "type": "number"
           }
-        },
-        "required": [
-          "name",
-          "count",
-          "cost",
-          "costOrder",
-          "conditionalCostThreshold"
-        ]
+        }
       },
       "quote-translation-cost": {
         "title": "Quote Translation Cost",
@@ -24228,6 +26387,9 @@
         "title": "Source File",
         "type": "object",
         "description": "Source File.",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string"
@@ -24263,11 +26425,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "totalWords": {
+            "type": "integer",
+            "description": "Word count in the source file. \r\n</br>\r\nAvailable only for translatable source files, and only after the workflow task with Task Type `convert` (File Format Conversion) was executed on the source file.\r\n</br>\r\nAvailable only on the List Source Files endpoint."
           }
-        },
-        "required": [
-          "id"
-        ]
+        }
       },
       "source-file-request": {
         "type": "object",
@@ -24282,7 +26445,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the source file.\n\n\nThe character limit is calculated together with the `path` length.",
+            "description": "The name of the source file. For example `Finance_2021_dummy_EN.txt`.\n\n\nThe character limit is calculated together with the `path` length.",
             "minLength": 1,
             "maxLength": 255
           },
@@ -24317,7 +26480,7 @@
           },
           "path": {
             "type": "array",
-            "description": "Path represents the hierarchy of the source file inside the zip. For example `/ZipWithFolders/Finance/2021/Finance_2021_dummy_EN.txt` would be sent as: \n\n```json \n\"path\": [ \n  \"ZipWithFolders\", \n  \"Finance\", \n  \"2021\", \n  \"Finance_2021_dummy_EN.txt\" \n]\n```\n\nThe character limit is calculated together with the `name` length.",
+            "description": "Path represents the hierarchy of the source file inside the project.\n\nFor example `/ZipWithFolders/Finance/2021/Finance_2021_dummy_EN.txt` would be sent as: \n\n```json \n\"path\": [ \n  \"ZipWithFolders\", \n  \"Finance\", \n  \"2021\"\n]\n```\n\nThe character limit is calculated together with the `name` length.",
             "items": {
               "type": "string",
               "minLength": 0,
@@ -24416,10 +26579,17 @@
         "title": "Source File Attachment Request Item",
         "type": "object",
         "description": "Attached Source File properties referencing previously uploaded file",
+        "required": [
+          "name",
+          "role",
+          "fileUrl",
+          "type",
+          "language"
+        ],
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the source file.\n\nThe character limit is calculated together with the `path` length.",
+            "description": "The name of the source file. For example `Finance_2021_dummy_EN.txt`. \n\nThe character limit is calculated together with the `path` length.",
             "maxLength": 200,
             "minLength": 1
           },
@@ -24457,21 +26627,14 @@
           },
           "path": {
             "type": "array",
-            "description": "Path represents the hierarchy of the source file inside the zip. For example `/ZipWithFolders/Finance/2021/Finance_2021_dummy_EN.txt` would be sent as: \n\n```json \n\"path\": [ \n  \"ZipWithFolders\", \n  \"Finance\", \n  \"2021\", \n  \"Finance_2021_dummy_EN.txt\" \n]\n```\n\nThe character limit is calculated together with the   `name` length.",
+            "description": "Path represents the hierarchy of the source file inside the project.\n\nFor example `/ZipWithFolders/Finance/2021/Finance_2021_dummy_EN.txt` would be sent as: \n\n```json \n\"path\": [ \n  \"ZipWithFolders\", \n  \"Finance\", \n  \"2021\" \n]\n```\n\nThe character limit is calculated together with the   `name` length.",
             "items": {
               "type": "string",
               "maxLength": 200,
               "minLength": 0
             }
           }
-        },
-        "required": [
-          "name",
-          "role",
-          "fileUrl",
-          "type",
-          "language"
-        ]
+        }
       },
       "source-file-properties-response": {
         "title": "Source File Properties Response",
@@ -26023,6 +28186,10 @@
         "title": "Termbase Entry Term",
         "type": "object",
         "description": "The termbase entry term.",
+        "required": [
+          "id",
+          "text"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -26057,17 +28224,22 @@
           },
           "lastModifiedBy": {
             "$ref": "#/components/schemas/user"
+          },
+          "systemStatus": {
+            "$ref": "#/components/schemas/termbase-entry-term-system-status",
+            "x-stoplight": {
+              "id": "xx4xvu4isws0c"
+            }
           }
-        },
-        "required": [
-          "id",
-          "text"
-        ]
+        }
       },
       "termbase-entry-term-update-request": {
         "title": "Termbase Entry Term Update Request",
         "type": "object",
         "description": "The termbase entry term update request.",
+        "required": [
+          "text"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -26079,21 +28251,27 @@
             "minLength": 1,
             "maxLength": 1024
           },
+          "systemStatus": {
+            "$ref": "#/components/schemas/termbase-entry-term-system-status-request",
+            "x-stoplight": {
+              "id": "lpm4ttzn58ku0"
+            }
+          },
           "termbaseFieldValues": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/termbase-field-value-update-request"
             }
           }
-        },
-        "required": [
-          "text"
-        ]
+        }
       },
       "termbase-term-create-request": {
         "title": "Termbase Entry Term Create Request",
         "type": "object",
         "description": "The termbase entry term request.",
+        "required": [
+          "text"
+        ],
         "properties": {
           "text": {
             "type": "string",
@@ -26101,16 +28279,19 @@
             "maxLength": 1024,
             "minLength": 1
           },
+          "systemStatus": {
+            "$ref": "#/components/schemas/termbase-entry-term-system-status-request",
+            "x-stoplight": {
+              "id": "cvo2q7bu0gkix"
+            }
+          },
           "termbaseFieldValues": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/termbase-field-value-create-request"
             }
           }
-        },
-        "required": [
-          "text"
-        ]
+        }
       },
       "termbase-entry-language": {
         "title": "Termbase Entry Language",
@@ -26324,6 +28505,43 @@
           "languages"
         ]
       },
+      "termbase-entry-term-system-status": {
+        "title": "Termbase Entry Term System Status",
+        "type": "string",
+        "nullable": true,
+        "x-stoplight": {
+          "id": "k477x1xb11mvw"
+        },
+        "enum": [
+          "preferred",
+          "draft",
+          "inReview",
+          "deprecated",
+          "recommended",
+          "admitted",
+          "forbidden",
+          "rejected",
+          "superseded"
+        ]
+      },
+      "termbase-entry-term-system-status-request": {
+        "title": "Termbase Entry Term System Status",
+        "type": "string",
+        "x-stoplight": {
+          "id": "k477x1xb11mvw"
+        },
+        "enum": [
+          "preferred",
+          "draft",
+          "inReview",
+          "deprecated",
+          "recommended",
+          "admitted",
+          "forbidden",
+          "rejected",
+          "superseded"
+        ]
+      },
       "termbase-export-properties-request": {
         "title": "Termbase Export Properties Request",
         "type": "object",
@@ -26489,6 +28707,58 @@
           "status"
         ]
       },
+      "termbase-import-request": {
+        "type": "object",
+        "title": "Termbase Import Properties",
+        "description": "Properties required for system status mapping",
+        "properties": {
+          "statusMapping": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "jr1v619dgm5k8"
+            },
+            "items": {
+              "$ref": "#/components/schemas/termbase-system-status-mapping",
+              "x-stoplight": {
+                "id": "jjw6bvzbbc0eg"
+              }
+            }
+          }
+        }
+      },
+      "termbase-system-status-mapping": {
+        "title": "Termbase System Status Mapping",
+        "x-stoplight": {
+          "id": "3o7f2m7gb63yw"
+        },
+        "type": "object",
+        "description": "A mapping between a termbase term system status and termbase statuses.",
+        "required": [
+          "systemStatusValue",
+          "statuses"
+        ],
+        "properties": {
+          "systemStatusValue": {
+            "$ref": "#/components/schemas/termbase-entry-term-system-status-request",
+            "x-stoplight": {
+              "id": "kznc76h6wxicr"
+            }
+          },
+          "statuses": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "3isyr4742q3jg"
+            },
+            "minItems": 1,
+            "items": {
+              "x-stoplight": {
+                "id": "6lvylhb8t3n96"
+              },
+              "type": "string"
+            }
+          }
+        }
+      },
       "tqa-profile": {
         "title": "TQA Profile",
         "type": "object",
@@ -26636,6 +28906,657 @@
           }
         }
       },
+      "translation-search-request": {
+        "title": "Translation Search Request",
+        "x-stoplight": {
+          "id": "pfa7dyujl86lv"
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "languageDirection",
+          "definition"
+        ],
+        "properties": {
+          "input": {
+            "$ref": "#/components/schemas/translation-lookup-input-request",
+            "x-stoplight": {
+              "id": "gj1t64z5swfgk"
+            }
+          },
+          "languageDirection": {
+            "$ref": "#/components/schemas/language-direction-general-request",
+            "x-stoplight": {
+              "id": "h62z5gy3c4otv"
+            }
+          },
+          "definition": {
+            "$ref": "#/components/schemas/translation-definition",
+            "x-stoplight": {
+              "id": "f9rodrj2q7z6e"
+            }
+          },
+          "settings": {
+            "$ref": "#/components/schemas/translation-search-settings",
+            "x-stoplight": {
+              "id": "vkle6tvpl4amf"
+            }
+          }
+        }
+      },
+      "translation-search-response": {
+        "title": "Translation Search Response",
+        "x-stoplight": {
+          "id": "6zhfxtway5o0e"
+        },
+        "type": "object",
+        "required": [
+          "translations"
+        ],
+        "properties": {
+          "translations": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "ags6uqvpedq4l"
+            },
+            "description": "Translations from different resource origins such as `TM`. The origin information is found in the BCM fragment.",
+            "items": {
+              "$ref": "#/components/schemas/translation",
+              "x-stoplight": {
+                "id": "5px5mphkbp2rr"
+              }
+            }
+          },
+          "appliedResourcesStatus": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "3v56u017sssw8"
+            },
+            "items": {
+              "$ref": "#/components/schemas/translation-applied-resource-status",
+              "x-stoplight": {
+                "id": "gexmk4z2gsbyb"
+              }
+            }
+          }
+        }
+      },
+      "translation-concordance-search-response": {
+        "title": "Translation Concordance Search Response",
+        "x-stoplight": {
+          "id": "6zhfxtway5o0e"
+        },
+        "type": "object",
+        "required": [
+          "translations"
+        ],
+        "properties": {
+          "translations": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "ags6uqvpedq4l"
+            },
+            "description": "Translations from different resource origins such as `TM`. The origin information is found in the BCM fragment. Only the top 5 matches are displayed",
+            "items": {
+              "$ref": "#/components/schemas/translation-concordance",
+              "x-stoplight": {
+                "id": "5px5mphkbp2rr"
+              }
+            }
+          },
+          "appliedResourcesStatus": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "3v56u017sssw8"
+            },
+            "items": {
+              "$ref": "#/components/schemas/translation-concordance-search-applied-resource-status",
+              "x-stoplight": {
+                "id": "gexmk4z2gsbyb"
+              }
+            }
+          }
+        }
+      },
+	    "translation-unit-add-update-response": {
+        "title": "Translation Unit Response",
+        "type": "object",
+        "required": [
+          "success"
+        ],
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "A flag indicating whether the overall operation was successful executed"
+          },
+          "insights": {
+            "type": "array",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The operation insights.</div> ",
+            "x-default-field": true,
+            "items": {
+              "$ref": "#/components/schemas/translation-unit-insight-model"
+            }
+          },
+          "errorInsights": {
+            "type": "array",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The operation error insights.</div> ",
+            "x-default-field": true,
+            "items": {
+              "$ref": "#/components/schemas/translation-error-detail-response"
+            }
+          }
+        }
+      },
+	  "translation-unit-insight-model": {
+				"title": "Translation Unit Insight Model",
+				"type": "object",
+				"description": "Detailed insight information about the processed translation unit.",
+				"required": [
+					"resourceId",
+					"translationHash",
+					"action"
+				],
+				"properties": {
+					"resourceId": {
+						"type": "string",
+            "description": "The translation memory identifier."
+					},
+					"translationHash": {
+						"type": "string",
+            "description": "The translation unit hash code."
+					},
+					"action": {
+						"type": "string",
+            "description": "The action performed",
+            "enum": [
+              "discard",
+              "add",
+              "merge",
+              "overwrite",
+              "error",
+              "delete"
+            ]
+					}
+				}
+			},
+      "translation-unit-resource-type": {
+				"title": "Translation Unit Resource Type",
+				"type": "string",
+				"description": "Enumeration of available translation unit resource types.",
+				"enum": [
+					"TM"
+				]
+			},
+      "translation-applied-resource-status": {
+        "title": "Translation Applied Resource Status",
+        "x-stoplight": {
+          "id": "l8qfj2wt8ex3q"
+        },
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ijitw3244ojkf"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The resource identifier."
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/translation-resource-type",
+            "x-stoplight": {
+              "id": "3y8wplo4peutt"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The type of resource applied."
+          },
+          "status": {
+            "x-stoplight": {
+              "id": "vacv71ru214af"
+            },
+            "type": "string",
+            "enum": [
+              "successful",
+              "unsuccessful"
+            ],
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The status of the applied resource."
+          },
+          "message": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wj0qjf9jfalmv"
+            },
+            "description": "A message describing the applied resource."
+          },
+          "translationErrors": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "o91qwrova4eay"
+            },
+            "description": "Details of possible errors.",
+            "items": {
+              "$ref": "#/components/schemas/translation-error-detail-response",
+              "x-stoplight": {
+                "id": "rllzog6wfm1te"
+              }
+            }
+          }
+        }
+      },
+      "translation-concordance-search-applied-resource-status": {
+        "title": "Translation Concordance Search Applied Resource Status",
+        "x-stoplight": {
+          "id": "l8qfj2wt8ex3q"
+        },
+        "type": "object",
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ijitw3244ojkf"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The resource identifier."
+          },
+          "resourceType": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3y8wplo4peutt"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The type of resource applied.",
+            "enum": [
+              "TM"
+            ]
+          },
+          "status": {
+            "x-stoplight": {
+              "id": "vacv71ru214af"
+            },
+            "type": "string",
+            "enum": [
+              "successful",
+              "unsuccessful"
+            ],
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>The status of the applied resource."
+          },
+          "message": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wj0qjf9jfalmv"
+            },
+            "description": "A message describing the applied resource."
+          },
+          "translationErrors": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "o91qwrova4eay"
+            },
+            "description": "Details of possible errors.",
+            "items": {
+              "$ref": "#/components/schemas/translation-error-detail-response",
+              "x-stoplight": {
+                "id": "rllzog6wfm1te"
+              }
+            }
+          }
+        }
+      },
+      "translation-definition": {
+        "title": "Translation Definition",
+        "x-stoplight": {
+          "id": "1ajyhlvlclubb"
+        },
+        "type": "object",
+        "required": [
+          "translationEngineId"
+        ],
+        "properties": {
+          "translationEngineId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "546wr95sonkhe"
+            },
+            "description": "The translation engine identifier."
+          }
+        }
+      },
+      "translation-concordance-search-definition": {
+        "title": "Translation Concordance Search Definition",
+        "x-stoplight": {
+          "id": "1ajyhlvlclubb"
+        },
+        "type": "object",
+        "required": [
+          "translationEngineId"
+        ],
+        "properties": {
+          "translationEngineId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "546wr95sonkhe"
+            },
+            "description": "The translation engine identifier."
+          }
+        }
+      },
+      "translation-resource": {
+        "title": "Translation Resource",
+        "x-stoplight": {
+          "id": "vrs494q2buzhy"
+        },
+        "type": "object",
+        "required": [
+          "resourceId",
+          "type"
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "1wr6q3uu0ow0s"
+            },
+            "description": "The resource identifier."
+          },
+          "type": {
+            "$ref": "#/components/schemas/translation-resource-type",
+            "x-stoplight": {
+              "id": "mn8n0t9bwutha"
+            }
+          }
+        }
+      },
+      "translation-resource-type": {
+        "title": "Translation Resource Type",
+        "type": "string",
+        "x-stoplight": {
+          "id": "zr6udmd1g99q4"
+        },
+        "description": "The translation resource type",
+        "enum": [
+          "TM",
+          "MT",
+          "TB"
+        ]
+      },
+      "translation-concordance-resource-type": {
+        "title": "Translation Resource Type",
+        "type": "string",
+        "x-stoplight": {
+          "id": "zr6udmd1g99q4"
+        },
+        "description": "The translation resource type",
+        "enum": [
+          "TM"
+        ]
+      },
+      "translation": {
+        "title": "Translation",
+        "x-stoplight": {
+          "id": "a0g18gy80z5p1"
+        },
+        "type": "object",
+        "required": [
+          "translationProposal",
+          "resourceType"
+        ],
+        "properties": {
+          "translationProposal": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "siqg2y0t0s38m"
+            },
+            "description": "The translation content serialized as JSON. BCM fragment for `TM` and `MT`. BCM term for `TB`."
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/translation-resource-type",
+            "x-stoplight": {
+              "id": "gkon15o12wfc8"
+            }
+          },
+          "sourceLocation": {
+            "$ref": "#/components/schemas/translation-source-locations",
+            "description": "The source location is only available for `TB`."
+          }
+        }
+      },
+      "translation-concordance": {
+        "title": "Translation",
+        "x-stoplight": {
+          "id": "a0g18gy80z5p1"
+        },
+        "type": "object",
+        "required": [
+          "translationProposal",
+          "resourceType"
+        ],
+        "properties": {
+          "translationProposal": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "siqg2y0t0s38m"
+            },
+            "description": "The translation content serialized as JSON. BCM fragment for `TM`."
+          },
+          "resourceType": {
+            "$ref": "#/components/schemas/translation-concordance-resource-type",
+            "x-stoplight": {
+              "id": "gkon15o12wfc8"
+            }
+          }
+        }
+      },
+      "translation-source-locations": {
+        "title": "sourceLocations",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/translation-source-location"
+        }
+      },
+      "translation-source-location": {
+        "title": "sourceLocation",
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "integer"
+          },
+          "length": {
+            "type": "integer"
+          }
+        }
+      },
+      "translation-concordance-search-request": {
+        "title": "Translation Concordance Search Request",
+        "x-stoplight": {
+          "id": "mu51b39komenk"
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "languageDirection",
+          "definition"
+        ],
+        "properties": {
+          "input": {
+            "$ref": "#/components/schemas/translation-concordance-input-request",
+            "x-stoplight": {
+              "id": "15af4h5jkfyvj"
+            }
+          },
+          "languageDirection": {
+            "$ref": "#/components/schemas/language-direction-general-request",
+            "x-stoplight": {
+              "id": "o84ns9q1ulxkz"
+            }
+          },
+          "definition": {
+            "$ref": "#/components/schemas/translation-concordance-search-definition",
+            "x-stoplight": {
+              "id": "d6yrwalewio7h"
+            }
+          },
+          "targetOnly": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "ffjvv0xao6ykz"
+            },
+            "default": false,
+            "description": "Indicates whether the search should be performed only in the target segments."
+          },
+          "settings": {
+            "$ref": "#/components/schemas/concordance-search-settings",
+            "x-stoplight": {
+              "id": "49cht6969uysn"
+            }
+          }
+        }
+      },
+      "translation-add-request": {
+        "title": "Translation Add Request",
+        "x-stoplight": {
+          "id": "44r5oq5khi1fs"
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "definition"
+        ],
+        "properties": {
+          "input": {
+            "$ref": "#/components/schemas/translation-tu-update-input-request",
+            "x-stoplight": {
+              "id": "4an4r6b9854aq"
+            }
+          },
+          "definition": {
+            "$ref": "#/components/schemas/translation-update-definition",
+            "x-stoplight": {
+              "id": "rv8rlalk5d2a7"
+            }
+          },
+          "settings": {
+            "$ref": "#/components/schemas/translation-add-settings",
+            "x-stoplight": {
+              "id": "uy8l353n2uh3g"
+            }
+          }
+        }
+      },
+      "translation-update-request": {
+        "title": "Translation Update Request",
+        "x-stoplight": {
+          "id": "44r5oq5khi1fs"
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "definition"
+        ],
+        "properties": {
+          "input": {
+            "$ref": "#/components/schemas/translation-tu-update-input-request",
+            "x-stoplight": {
+              "id": "4an4r6b9854aq"
+            }
+          },
+          "definition": {
+            "$ref": "#/components/schemas/translation-update-definition",
+            "x-stoplight": {
+              "id": "rv8rlalk5d2a7"
+            }
+          },
+          "settings": {
+            "$ref": "#/components/schemas/translation-update-settings",
+            "x-stoplight": {
+              "id": "uy8l353n2uh3g"
+            }
+          }
+        }
+      },
+      "translation-add-settings": {
+        "title": "Translation Add Settings",
+        "x-stoplight": {
+          "id": "4rfs3hgmqnjnl"
+        },
+        "type": "object",
+        "properties": {
+          "fields": {
+            "x-stoplight": {
+              "id": "q2x1e7tqb6bjj"
+            },
+            "type": "array",
+            "description": "The Translation Unit fields to update. They are defined in the Field Template associated to your Translation Memory.",
+            "items": {
+              "$ref": "#/components/schemas/translation-update-field",
+              "x-stoplight": {
+                "id": "zrkulmef1pa37"
+              }
+            }
+          },
+          "ifTargetSegmentsDiffer": {
+            "x-stoplight": {
+              "id": "9kr4dv5q5yko5"
+            },
+            "type": "string",
+            "enum": [
+              "addNew",
+              "overwrite",
+              "leaveUnchanged",
+              "keepMostRecent",
+              "merge"
+            ],
+            "description": "Update behavior when the translation unit already exists but target differs."
+          }
+        }
+      },
+      "translation-update-settings": {
+        "title": "Translation Update Settings",
+        "x-stoplight": {
+          "id": "4rfs3hgmqnjnl"
+        },
+        "type": "object",
+        "properties": {
+          "fields": {
+            "x-stoplight": {
+              "id": "q2x1e7tqb6bjj"
+            },
+            "type": "array",
+            "description": "The Translation Unit fields to update. They are defined in the Field Template associated to your Translation Memory.",
+            "items": {
+              "$ref": "#/components/schemas/translation-update-field",
+              "x-stoplight": {
+                "id": "zrkulmef1pa37"
+              }
+            }
+          }
+        }
+      },
+      "translation-update-resource": {
+        "title": "Translation Update Resource",
+        "x-stoplight": {
+          "id": "kk5sxng7r7rcv"
+        },
+        "type": "object",
+        "required": [
+          "resourceId",
+          "type"
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ht1329zmz3hgp"
+            },
+            "description": "The resource identifier."
+          },
+          "type": {
+            "x-stoplight": {
+              "id": "dmov4sqorfrf3"
+            },
+            "type": "string",
+            "enum": [
+              "TM"
+            ],
+            "description": "The translation resource type."
+          }
+        }
+      },
       "translation-cost-item": {
         "title": "Translation Cost Item",
         "type": "object",
@@ -26766,6 +29687,9 @@
         },
         "type": "object",
         "description": "The definition of a translation engine.",
+        "required": [
+          "languageProcessingRuleId"
+        ],
         "properties": {
           "languageProcessingRuleId": {
             "type": "string"
@@ -26782,6 +29706,43 @@
               "x-stoplight": {
                 "id": "nbfh6uvky8c4o"
               }
+            }
+          },
+          "sequence": {
+            "$ref": "#/components/schemas/remote-translation-engine-sequence"
+          }
+        }
+      },
+      "remote-translation-engine-sequence": {
+        "title": "Translation Engine Sequence",
+        "description": "Lists of IDs for Translation Memories, Termbases, Machine Translations and Large Language Models, in order of their use",
+        "properties": {
+          "tm":{
+            "type": "array",
+            "description": "Translation Memories",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tb":{
+            "type": "array",
+            "description": "Termbases",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mt":{
+            "type": "array",
+            "description": "Machine Translations",
+            "items":{
+              "type": "string"
+            }
+          },
+          "llm":{
+            "type": "array",
+            "description": "Large Language Models",
+            "items": {
+              "type": "string"
             }
           }
         }
@@ -27582,6 +30543,32 @@
           "languageDirection"
         ]
       },
+      "translation-service-type": {
+        "title": "Service Type",
+        "x-stoplight": {
+          "id": "qxo8dvfuhtpvn"
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "y8k58twki2cx2"
+            },
+            "description": "The Service Type identifier."
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "at815peslzdx2"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The Service Type name.</div> "
+          }
+        }
+      },
       "update-translation-memory": {
         "title": "Update Translation Memory",
         "x-stoplight": {
@@ -27782,6 +30769,17 @@
         },
         "required": [
           "id"
+        ]
+      },
+      "volume-unit-type": {
+        "title": "Volume Unit Type",
+        "x-stoplight": {
+          "id": "xo217uws14jb2"
+        },
+        "enum": [
+          "words",
+          "characters",
+          "custom"
         ]
       },
       "workflow": {
@@ -28140,6 +31138,632 @@
               "id": "dbkidlpmb0wk4"
             },
             "description": "The list of public keys."
+          }
+        }
+      },
+      "translation-update-definition": {
+        "title": "Translation Update Definition",
+        "x-stoplight": {
+          "id": "9qqwmpya8mbgb"
+        },
+        "type": "object",
+        "required": [
+          "translationEngineId"
+        ],
+        "properties": {
+          "translationEngineId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "57wk8minjka59"
+            },
+            "description": "The translation engine id. The translation engine must have a `TM` resource."
+          }
+        }
+      },
+      "translation-update-field": {
+        "title": "Translation Update Field",
+        "x-stoplight": {
+          "id": "ivfrnlswg3n8o"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "values"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "w0z5ip16a75jo"
+            },
+            "description": "Field name"
+          },
+          "values": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "jzd3s8buqkhyh"
+            },
+            "description": "Field values",
+            "items": {
+              "x-stoplight": {
+                "id": "vxkufz4upb8e0"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "description": ""
+      },
+      "translation-search-settings": {
+        "title": "Translation Search Settings",
+        "x-stoplight": {
+          "id": "k6reff6ihojws"
+        },
+        "type": "object",
+        "properties": {
+          "translationMemory": {
+            "$ref": "#/components/schemas/translation-search-settings-tm",
+            "x-stoplight": {
+              "id": "6d8m3xqn7kla8"
+            }
+          }
+        }
+      },
+      "concordance-search-settings": {
+        "title": "Concordance Search Settings",
+        "x-stoplight": {
+          "id": "k6reff6ihojws"
+        },
+        "type": "object",
+        "properties": {
+          "translationMemory": {
+            "$ref": "#/components/schemas/concordance-search-settings-tm",
+            "x-stoplight": {
+              "id": "6d8m3xqn7kla8"
+            }
+          }
+        }
+      },
+      "translation-search-settings-tm": {
+        "title": "Translation Memory Search Settings",
+        "x-stoplight": {
+          "id": "7b6bn72a6ldvj"
+        },
+        "type": "object",
+        "properties": {
+          "minimumMatchValue": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "br24y2myv21e0"
+            },
+            "description": "This is the degree of match that must exist between a source document segment and a translation memory segment in order for the segment translation to be offered as a match. The default is 70%, but you can set a value between 30% and 100%.\r\n\r\nThe selected value is inclusive, meaning that matches with your exact selected value are also included in translation results.",
+            "minimum": 30,
+            "maximum": 100,
+            "default": 70
+          },
+          "penalties": {
+            "$ref": "#/components/schemas/translation-search-TM-penalties",
+            "x-stoplight": {
+              "id": "fkru1d5bfhm2w"
+            }
+          }
+        }
+      },
+      "concordance-search-settings-tm": {
+        "title": "Translation Memory Concordance Search Settings",
+        "x-stoplight": {
+          "id": "7b6bn72a6ldvj"
+        },
+        "type": "object",
+        "properties": {
+          "minimumMatchValue": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "br24y2myv21e0"
+            },
+            "description": "This is the degree of match that must exist between a source document segment and a translation memory segment in order for the segment translation to be offered as a match. The default is 70%, but you can set a value between 30% and 100%.\r\n\r\nThe selected value is inclusive, meaning that matches with your exact selected value are also included in translation results.",
+            "minimum": 30,
+            "maximum": 100,
+            "default": 70
+          },
+          "penalties": {
+            "$ref": "#/components/schemas/concordance-search-TM-penalties",
+            "x-stoplight": {
+              "id": "fkru1d5bfhm2w"
+            }
+          }
+        }
+      },
+      "translation-search-standard-penalties": {
+        "title": "Translation Memory Standard Penalties",
+        "x-stoplight": {
+          "id": "9c3abb6urgvqh"
+        },
+        "type": "object",
+        "properties": {
+          "missingFormatting": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "g8mtup7862xdn"
+            },
+            "minimum": 0,
+            "maximum": 20,
+            "default": 1
+          },
+          "differentFormatting": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "pao1qvu6sbjc9"
+            },
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "multipleTranslations": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "y9awj7oyd87ye"
+            },
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "autoLocalization": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "y85nv8a0u4ptr"
+            },
+            "default": 0,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "textReplacement": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "t7hvtgxzazgy0"
+            },
+            "default": 0,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "alignment": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ipk0iaseeokla"
+            },
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "characterWidthDifference": {
+            "type": "integer",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          }
+        },
+        "description": ""
+      },
+      "translation-search-unit-status-penalties": {
+        "title": "Translation Unit Status Penalties",
+        "x-stoplight": {
+          "id": "x6ufijbtx0mff"
+        },
+        "type": "object",
+        "description": "The penalties to apply depending on the status of the translation unit.",
+        "properties": {
+          "translated": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "c2kh1fiux8bl7"
+            }
+          },
+          "translationRejected": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "o3ezy93r7i26i"
+            }
+          },
+          "translationApproved": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "9380xqwtvbrsl"
+            }
+          },
+          "signOffRejected": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "ahddzpafpv7mv"
+            }
+          },
+          "signOff": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "yijp1eutihsi4"
+            }
+          },
+          "notTranslated": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "ezuj0yylywjk7"
+            }
+          },
+          "draft": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "aibykf8ozjqmt"
+            }
+          }
+        }
+      },
+      "translation-concordance-search-standard-penalties": {
+        "title": "Translation Memory Concordance Standard Penalties",
+        "x-stoplight": {
+          "id": "9c3abb6urgvqh"
+        },
+        "type": "object",
+        "properties": {
+          "alignment": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ipk0iaseeokla"
+            },
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          },
+          "characterWidthDifference": {
+            "type": "integer",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 20
+          }
+        },
+        "description": ""
+      },
+      "translation-concordance-search-unit-status-penalties": {
+        "title": "Translation Unit Status Concordance Penalties",
+        "x-stoplight": {
+          "id": "x6ufijbtx0mff"
+        },
+        "type": "object",
+        "description": "The penalties to apply depending on the status of the translation unit.",
+        "properties": {
+          "translated": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "c2kh1fiux8bl7"
+            }
+          },
+          "translationRejected": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "o3ezy93r7i26i"
+            }
+          },
+          "translationApproved": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "9380xqwtvbrsl"
+            }
+          },
+          "signOffRejected": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "ahddzpafpv7mv"
+            }
+          },
+          "signOff": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "yijp1eutihsi4"
+            }
+          },
+          "notTranslated": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "ezuj0yylywjk7"
+            }
+          },
+          "draft": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 20,
+            "default": 0,
+            "x-stoplight": {
+              "id": "aibykf8ozjqmt"
+            }
+          }
+        }
+      },
+      "translation-search-TM-penalties": {
+        "title": "Translation TM Penalties",
+        "x-stoplight": {
+          "id": "6kx5w2gbj2696"
+        },
+        "type": "object",
+        "properties": {
+          "standardPenalties": {
+            "$ref": "#/components/schemas/translation-search-standard-penalties",
+            "x-stoplight": {
+              "id": "q58i9rha03e0z"
+            }
+          },
+          "translationUnitStatusPenalties": {
+            "$ref": "#/components/schemas/translation-search-unit-status-penalties",
+            "x-stoplight": {
+              "id": "8pzly4obx7tiz"
+            }
+          }
+        }
+      },
+      "concordance-search-TM-penalties": {
+        "title": "Concordance Search TM Penalties",
+        "x-stoplight": {
+          "id": "6kx5w2gbj2696"
+        },
+        "type": "object",
+        "properties": {
+          "standardPenalties": {
+            "$ref": "#/components/schemas/translation-concordance-search-standard-penalties",
+            "x-stoplight": {
+              "id": "q58i9rha03e0z"
+            }
+          },
+          "translationUnitStatusPenalties": {
+            "$ref": "#/components/schemas/translation-concordance-search-unit-status-penalties",
+            "x-stoplight": {
+              "id": "8pzly4obx7tiz"
+            }
+          }
+        }
+      },
+      "translation-concordance-search-resource": {
+        "title": "Translation Concordance Search Resource",
+        "x-stoplight": {
+          "id": "20ixo2ym2xerq"
+        },
+        "type": "object",
+        "required": [
+          "resourceId",
+          "type"
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9rewrlat7xg1p"
+            },
+            "description": "The resource identifier."
+          },
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ablx3ujgx5zyg"
+            },
+            "enum": [
+              "TM"
+            ],
+            "description": "The resource type."
+          }
+        }
+      },
+      "language-direction-general-request": {
+        "title": "Language Direction General Request",
+        "x-stoplight": {
+          "id": "0pezqwl74njpv"
+        },
+        "type": "object",
+        "description": "The language directions model used for creating or updating a resource.",
+        "properties": {
+          "sourceLanguage": {
+            "$ref": "#/components/schemas/source-language-request",
+            "x-stoplight": {
+              "id": "ik01rev5dxdym"
+            }
+          },
+          "targetLanguage": {
+            "$ref": "#/components/schemas/target-language-request",
+            "x-stoplight": {
+              "id": "72zo0gp14dpdp"
+            }
+          }
+        }
+      },
+      "translation-lookup-input-request": {
+        "title": "Translation Lookup Input Request",
+        "x-stoplight": {
+          "id": "k91lzmo3d80y4"
+        },
+        "type": "object",
+        "description": "The translation input.",
+        "required": [
+          "content",
+          "contentType"
+        ],
+        "properties": {
+          "content": {
+            "type": [
+              "string"
+            ],
+            "x-stoplight": {
+              "id": "d90k7nxt66cq9"
+            },
+            "description": "A plain text phrase or a BCM fragment with a single segment serialized as JSON string."
+          },
+          "contentType": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7lkm3ehfoeipb"
+            },
+            "enum": [
+              "text",
+              "bcmFragment"
+            ],
+            "description": "The content type."
+          }
+        }
+      },
+      "translation-concordance-input-request": {
+        "title": "Translation Concordance Input Request",
+        "x-stoplight": {
+          "id": "gzgvhcqrx5qjh"
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "properties": {
+          "content": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "8t10luex044ia"
+            },
+            "description": "Text to search for."
+          }
+        }
+      },
+      "translation-tu-update-input-request": {
+        "title": "Translation TU Input Request",
+        "x-stoplight": {
+          "id": "wstvyd816xr0e"
+        },
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "properties": {
+          "content": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "srf6ctoqfhljn"
+            },
+            "description": "The Translation Unit update content as a BCM fragment serialized in JSON string."
+          }
+        }
+      },
+      "zip-file-export-request": {
+        "title": "Export Project Files Request",
+        "type": "object",
+        "properties": {
+          "referenceFiles": {
+            "$ref": "#/components/schemas/zip-file-export-reference-files-request"
+          },
+          "targetFiles": {
+            "$ref": "#/components/schemas/zip-file-export-target-files-request"
+          }
+        }
+      },
+      "zip-file-export-reference-files-request": {
+        "title": "Export Project Reference Files Request",
+        "type": "object",
+        "description": "Reference files associated with the project.",
+        "properties": {
+          "include": {
+            "type": "boolean",
+            "description": "Add reference files to the export package.",
+            "default": true
+          }
+        }
+      },
+      "zip-file-export-target-files-request": {
+        "title": "Export Project Target Files Request",
+        "type": "object",
+        "description": "Target files associated with the project.",
+        "properties": {
+          "includeVersions": {
+            "type": "string",
+            "enum": [
+              "currentVersion",
+              "none",
+              "nativeVersion"
+            ],
+            "description": "Include target files with these versions into the export.",
+            "default": "currentVersion",
+            "x-stoplight": {
+              "id": "7s4voozws4tse"
+            }
+          },
+          "targetLanguages": {
+            "type": "array",
+            "description": "Include target files for the specified languages (e.g., 'en-US', 'de-DE'). Only one target language is supported when `downloadFlat` is set to `true`.",
+            "items": {
+              "x-stoplight": {
+                "id": "3pr8zsp16si53"
+              },
+              "type": "string"
+            }
+          },
+          "downloadFlat": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "ebjydtoffk5xl"
+            },
+            "description": "If this flag is set to `true`, folder structure will reflect exactly the file paths. If the flag is set to `false`, a ZIP folder will be generated with a structure similar to the one provided by Trados.",
+            "default": false
+          }
+        }
+      },
+      "zip-file-export-response": {
+        "title": "Project Files export poll response",
+        "type": "object",
+        "required": [
+          "exportId",
+          "state"
+        ],
+        "properties": {
+          "exportId": {
+            "type": "string",
+            "description": "The identifier of the export operation"
+          },
+          "state": {
+            "description": "The status of the export",
+            "default": "created",
+            "enum": [
+              "created",
+              "processing",
+              "done",
+              "error"
+            ]
           }
         }
       }

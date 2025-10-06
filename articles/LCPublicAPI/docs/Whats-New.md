@@ -1,6 +1,52 @@
 # What's new
 
-</br>
+</br> 
+
+## 10 September 2025
+- With this release we deliver [Lookup](../reference/Public-API.v1.json/paths/~1translations~1lookup/post), [Concordance](../reference/Public-API.v1.json/paths/~1translations~1concordance/post), [Add](../reference/Public-API.v1.json/paths/~1translations~1translation-unit/post) and [Update](../reference/Public-API.v1.json/paths/~1translations~1translation-unit/put) translation units to a translation memory. See [this](./translations/Translations.md) page for more details.
+- You can now [obtain](../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/get) and [update](../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/put) the resources sequence information for a Translation Engine.
+- A new project event `PROJECT.STARTED` has been added. See [this](./webhooks/Webhooks-payload.md) page for more details.
+
+
+## 18 August 2025
+
+- The new, modernized Trados Cloud Platform SDK for Java is now available. See the upgrade guide [here](../docs/api-clients/java/Java-Client-Upgrade-Guide.md).
+
+## 12 August 2025
+
+- You can now get word count and cost estimation analysis of files without the need to create a project. The functionality is accessible via the [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) and [Poll File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis~1{operationId}/get) endpoints.
+- As previously announced, the `languageProcessingRuleId` parameter is now mandatory for [Update Translation Engine](../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/put) endpoint.
+- We fixed various bugs.
+
+## 15 July 2025
+- You can now add the `systemStatus` property on termbase entries. See [Update Termbase Entry](../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries~1{entryId}/put).
+- We've improved the documentation around zip files on [Add Source File](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post) and [Attach Source File](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoints.
+- As a reminder, we want to let our users know that the field `languageProcessingRuleId` under [Update Translation Engine](../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/put) endpoint will be mandatory.
+- [Import Termbase](../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1imports/post) and [Poll Termbase Import](../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1imports~1{importId}/get) endpoints will return `pending` instead of `queued` for the status. This change is scheduled to take effect no sooner than six months from now.
+
+## 8 May 2025
+- You can now download the target files associated with a project in a ZIP format. This functionality is accessible through three endpoints: [Export](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports/post), [Poll](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}/get), and [Download](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}~1download/get).
+- With this release we deliver the [Create](../reference/Public-API.v1.json/paths/~1pricing-models/post), [Update](../reference/Public-API.v1.json/paths/~1pricing-models~1{pricingModelId}/put) and [Delete](../reference/Public-API.v1.json/paths/~1pricing-models~1{pricingModelId}/delete) pricing model endpoints. Together with these, several changes were required to correct the pricing model response:
+    - `name` : changed from required to default.
+    - `additionalCosts.volumeUnitType` changed from required to non required.
+    - `additionalCosts.conditionalCostType` changed from required to non required.
+    - `additionalCosts.costOperator` changed from required to non required.
+    - `additionalCosts.costVariable` changed from required to non required.
+    - `additionalCosts.operand` changed from required to non required.
+    - `perTargetLanguage` and `perFile` cost types have been removed from `languageCosts` to clean up the structure.
+
+- We have expanded the cost types by introducing two new values: **adhoc** and **adhoc volume**.
+- Import and Export TM endpoints are now subject to API limits. For more details, please refer to [this page](../docs/API-rate-limits.md).
+- We updated the [Java Client samples](../docs/api-clients/java/Java-Samples.md) to reflect the usage of the latest version.
+- We fixed various bugs.
+
+## 1 April 2025
+- As part of the Connected AI feature, we have added the following updates and new endpoints:
+  - We have introduced a new endpoint for listing [Large Language Models](../reference/Public-API.v1.json/paths/~1connected-ai~1llm-configurations/get) (LLMs).
+  - We have added the functionality to [update your translation engines](../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/put) with the new LLM resource type. 
+- We have added the source word count to the [List Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/get) endpoint.
+- We fixed various bugs.
+
 
 ## 10 March 2025
 

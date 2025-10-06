@@ -7,7 +7,8 @@ The request body follows the [Webhook Batch](../../reference/Webhooks.v1.json/co
 
 * Create the webhook endpoint to handle batched webhooks. The endpoint must be capable of processing multiple events in a single request.  
 * The same [webhook authenticity](Webhooks-setup.md#webhook-authenticity) rules apply to both batched and single webhooks.  
-* The same **success/failure** rules for webhook notifications apply, as described in [notification responses](Webhooks-setup.md#return-notification-responses).  
+* The same **success/failure** rules for webhook notifications apply, as described in [notification responses](Webhooks-setup.md#return-notification-responses).
+  * **Note:** A notification delivery is considered successful if the application responds with a 2xx status code within 20 seconds (compared to 3 seconds for individual webhooks).
 * The **retry policies** and **circuit breaker** mechanisms for webhook notifications are the same as those described in [notification responses](Webhooks-setup.md#return-notification-responses).  
 * The same **headers** are included in batched webhooks as in single webhooks, as outlined in the [reference](Webhooks-setup.md#reference).  
 

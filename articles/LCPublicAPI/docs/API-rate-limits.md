@@ -32,6 +32,11 @@ each tenant is entitled to:
 2. Up to 10 API requests per minute.
 3. Up to 1000 API requests per day.
 
+#### Import / Export Translation Memory limits:
+1. Up to 2 API requests per second.
+2. Up to 10 API requests per minute.
+3. Up to 2000 API requests per day.
+
 ####  Project Files Rate Limits
 For each of the API operations listed below:
 

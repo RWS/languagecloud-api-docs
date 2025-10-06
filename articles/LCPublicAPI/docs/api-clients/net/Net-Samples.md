@@ -1,15 +1,23 @@
 # Trados Cloud Platform SDK Samples for .NET
-</br>
+
+This document is designed to help developers get started with the Trados Cloud Platform SDK in .NET applications. You'll find practical sample code and clear guidance for instantiating API clients using credentials, context scoping, or custom handlers. The examples also show how to integrate the SDK into ASP.NET Web API projects, including tips for dependency injection and custom authentication. Use these samples to quickly implement Trados Cloud Platform features in your console or web API projects.
+
+Here is some guidance to help you decide which sample to follow:
+
+- If your application targets a single tenant, the quickest way to get started is the [Instantiating a client using credentials (single tenant)](#instantiating-a-client-using-credentials-single-tenant) sample.
+- For background processes that must handle multiple tenants, see the [Instantiating a client using context scoping](#instantiating-a-client-using-context-scoping) sample.
+- If you're building a multi-tenant web application and need Dependency Injection that depends on the current user, start with the [Web API Dependency Injection Sample](#web-api-dependency-injection-sample).
+- If you require a custom authentication flow, the SDK supports supplying your own handler — see [Instantiating a client using a custom handler](#instantiating-a-client-using-a-custom-handler).
 
 ## Console Application Sample
 
 The console application sample is available for download on [GitHub](https://github.com/RWS/language-cloud-public-api-samples/tree/main/.Net/PublicApi.Sample.Console).
 
-It contains 3 examples of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK. You can either use the supplied provider, or handle the client instantiation on you own: 
+It contains three examples of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK. You can either use the supplied provider, or handle the client instantiation on your own:
 
-### Instantiating a client using credentials
+### Instantiating a client using credentials (single tenant)
 
-You can instantiate a client using the supplied `LanguageCloudClientProvider` class. This method requires you provide a `ServiceCredentials` object, which contains your `clientID`, `clientSecret` and the `tenant`. *See the [Authentication](../../../docs/Authentication.md) page for more details.*
+You can instantiate a client using the supplied `LanguageCloudClientProvider` class. This method requires you to provide a `ServiceCredentials` object, which contains your `clientID`, `clientSecret` and the `tenant`. *See the [Authentication](../../../docs/Authentication.md) page for more details.*
 
 ```csharp
 using Rws.LanguageCloud.Sdk;
@@ -29,7 +37,7 @@ var projectClient = clientProvider.GetProjectClient(credentials);
 var projectsResponse = await projectClient.ListProjectsAsync();
 ```
 
- *\*Using this method, a unique TraceId will be generated on each request.*
+*Using this method, a unique TraceId will be generated for each request.*
 
 <!-- theme: info -->
 
@@ -37,12 +45,11 @@ var projectsResponse = await projectClient.ListProjectsAsync();
 >
 > Make sure you always keep your credentials safe.
 
-
 ### Instantiating a client using context scoping
 
-This method allows you to make an API call with 2 different users, using the same client instance. 
+This method lets you make API calls as two different users using the same client instance.
 
-We provide an `ApiClientContext` which exposes some scoping options. You can use this to scope your API calls in different contexts. The sample contains an example with 2 different users:
+We provide an `ApiClientContext` which exposes scoping options. You can use it to scope API calls for different users; the sample shows an example with two users:
 
 ```csharp
 using Rws.LanguageCloud.Sdk;
@@ -59,7 +66,7 @@ ServiceCredentials credentials_2 = new ServiceCredentials("client-id-2", "client
 var clientProvider = new LanguageCloudClientProvider("eu");
 
 // instantiate the client without credentials
-var client = clientProvider.GetProjectClient();
+var projectClient = clientProvider.GetProjectClient();
 
 // create a context scope and use the client. You can also provide your own traceId
 using (ApiClientContext.BeginScope(new LCContext(credentials_1, "trace-id-1")))
@@ -97,9 +104,9 @@ var client = clientProvider.GetProjectClientNoAuth(handler);
 var projectsResponse = await projectClient.ListProjectsAsync();
 
 ```
-<br></br>
 
 ## Web API Dependency Injection Sample
+
 The web API sample is available for download on [GitHub](https://github.com/RWS/language-cloud-public-api-samples/tree/main/.Net/PublicApi.WebApiSample).
 
 It contains an example of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK for ASP .Net.
@@ -108,10 +115,10 @@ It contains an example of how to instantiate and work with an API client provide
 
 > If you want to handle authentication and tracing on you own, you could implement your own `DelegatingHandler`.
 
-In our example, we've created the `LcHandler` class, which inherits from `LCCustomAuthenticationHandler`. The `LCCustomAuthenticationHandler` class already provides us with an authentication mechanism. We've overwritten the `GetServiceCredentials` and `GetTraceId` methods and provided our own implementations, as these will be called by `LCCustomAuthenticationHandler`:
+In our example, we've created the `LcHandler` class, which inherits from `LCCustomAuthenticationHandler`. The `LCCustomAuthenticationHandler` class already provides an authentication mechanism. We've overridden the `GetServiceCredentials` and `GetTraceId` methods and provided our own implementations; these will be called by `LCCustomAuthenticationHandler`:
 
 ```csharp
-// Provide you own implementation. A possible example can be:
+// Provide your own implementation. A possible example:
 protected override ServiceCredentials GetServiceCredentials()
 {
     int accountId = int.Parse(context.HttpContext.User.Claims.Single(x => x.Type.Equals("aid")).Value);
@@ -121,8 +128,8 @@ protected override ServiceCredentials GetServiceCredentials()
 }
 
 ...
-	
-// Provide you own implementation. A possible example can be:
+
+// Provide your own implementation. A possible example:
 protected override string GetTraceId()
 {
     return DateTimeOffset.UtcNow.ToString();
@@ -130,12 +137,13 @@ protected override string GetTraceId()
 ```
 
 We'll need a bit of custom magic to make sure dependency injection works correctly for multi-region. We'll create a custom Factory to provide our clients. An example implementation would be a factory class to provide a per region factory. We'll make sure to have all instances initialized only once, to avoid problems:
+
 ```csharp
 
     class RegionClientContainerFactory
     {
-        LanguageCloudClientProvider _languageCloudClientProvider;
-        IServiceProvider _serviceProvider;
+        private readonly LanguageCloudClientProvider _languageCloudClientProvider;
+        private readonly IServiceProvider _serviceProvider;
 
         private IAccountClient _accountClient;
 
@@ -193,11 +201,11 @@ We'll need a bit of custom magic to make sure dependency injection works correct
 We register our handler `LcHandler` as a transient service and a Factory class with factory, in the `Startup` class:
 
 ```csharp
-// handlers must always be transient
+// Handlers should be registered as transient
 services.AddTransient<LcHandler>();
 
-// register a client
-services.AddSingleton(provider => new LanguageCloudClientFactory(provider.GetService<LcHandler>());
+// Register the LanguageCloudClientFactory as a singleton. Resolve the handler from the provider when needed.
+services.AddSingleton(provider => new LanguageCloudClientFactory(provider.GetRequiredService<LcHandler>()));
 ```
 
 We can then use the registered client in the controller (or any other class resolved through Dependency Injection):
@@ -222,5 +230,3 @@ public class LanguageCloudApiSampleController : ControllerBase
     ...
 }
 ```
-
-
