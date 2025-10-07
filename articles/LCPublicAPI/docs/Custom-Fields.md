@@ -1,14 +1,14 @@
-# Custom fields
+﻿# Custom fields
 
 Custom Fields allow associating custom data with a project. Custom Fields can be defined in the UI, and then listed and accessed using the List and Get endpoints. The Custom Field values are retrieved through the Project endpoints.
 
 ## Custom Field Definitions
 
-To list the available Custom Field Definitions make a `GET` request to the [`/custom-field-definitions`](../reference/Public-API.v1.json/paths/~1custom-field-definitions/get) endpoint. The response contains: the Custom Fields total count, and by default, the `id` and the `name` for each Custom Field. By specifying the `fields` query parameter, the other properties of these entities can be retrieved.
+To list the available Custom Field Definitions make a `GET` request to the [`/custom-field-definitions`](../api/Public-API.v1-fv.html#/operations/ListCustomFields) endpoint. The response contains: the Custom Fields total count, and by default, the `id` and the `name` for each Custom Field. By specifying the `fields` query parameter, the other properties of these entities can be retrieved.
 
 ![List custom fields](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListCustomFieldsPostman.gif?raw=true)
 
-To get a particular Custom Field Definition make a `GET` request to the [`/custom-field-definitions/{customFieldDefinitionId}`](../reference/Public-API.v1.json/paths/~1custom-field-definitions~1{customFieldDefinitionId}/get) endpoint, and specify the `customFieldDefinitionId` path parameter.
+To get a particular Custom Field Definition make a `GET` request to the [`/custom-field-definitions/{customFieldDefinitionId}`](../api/Public-API.v1-fv.html#/operations/GetCustomField) endpoint, and specify the `customFieldDefinitionId` path parameter.
 The default fields for custom field are `id` and `name`, but the other fields can be seen by specifying them into `fields` query param. For example: `id,key,description,type,defaultValue`
 
 ![Get custom field](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetCustomFieldPostman.gif?raw=true)
@@ -153,13 +153,13 @@ This will have an HTTP code 400 Bad Request
 
 **Updating projects with Custom Fields**
  
-To update the Custom Fields of a project make a `PUT` request to the [`/projects/{projectId}`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/put) endpoint. Specify new values for the Custom Fields that need updating.
+To update the Custom Fields of a project make a `PUT` request to the [`/projects/{projectId}`](../api/Public-API.v1-fv.html#/operations/UpdateProject) endpoint. Specify new values for the Custom Fields that need updating.
 
 ![Update project with custom fields](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/UpdateProjectWithCustomFieldsPostman.gif?raw=true)
 
 **Getting Custom Fields for projects**
 
-To get the Custom Fields for a project, make a `GET` request to the [`/projects/{projectId}`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/get) endpoint and request the desired fields in the `fields` query parameters: `customFields.id,customFields.key,customFields.value`. Similarly, this can be done when making a `GET` request to the [`/projects`](../reference/Public-API.v1.json/paths/~1projects/get) endpoint.
+To get the Custom Fields for a project, make a `GET` request to the [`/projects/{projectId}`](../api/Public-API.v1-fv.html#/operations/GetProject) endpoint and request the desired fields in the `fields` query parameters: `customFields.id,customFields.key,customFields.value`. Similarly, this can be done when making a `GET` request to the [`/projects`](../api/Public-API.v1-fv.html#/operations/ListProjects) endpoint.
 
 ![Get project with custom fields](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetProjectWithCustomFieldsPostman.gif?raw=true)
 
@@ -167,6 +167,6 @@ To get the Custom Fields for a project, make a `GET` request to the [`/projects/
 
 Custom Fields can be defined in Project Templates. `isMandatory` on a Custom Field indicates that it must be populated when a project is created with that template.
 
-To get the Custom Fields for a project template, make a `GET` request to the [`/project-templates/{projectTemplateId}`](../reference/Public-API.v1.json/paths/~1project-templates~1{projectTemplateId}/get) endpoint or a `GET` request to the [`/project-templates`](../reference/Public-API.v1.json/paths/~1project-templates/get) endpoint and specify the desired fields in the `fields` query parameters: `customFields.id,customFields.key,customFields.value`.
+To get the Custom Fields for a project template, make a `GET` request to the [`/project-templates/{projectTemplateId}`](../api/Public-API.v1-fv.html#/operations/GetProjectTemplate) endpoint or a `GET` request to the [`/project-templates`](../api/Public-API.v1-fv.html#/operations/ListProjectTemplates) endpoint and specify the desired fields in the `fields` query parameters: `customFields.id,customFields.key,customFields.value`.
 
 ![Get project template with custom fields](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetProjectTemplateWithCustomFieldsPostman.gif?raw=true)

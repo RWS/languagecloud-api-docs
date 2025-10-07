@@ -1,9 +1,9 @@
-# Termbase entries 
+﻿# Termbase entries 
 </br>
 
 ## Creating a termbase entry
 
-A termbase entry can be created by making a `POST` request to the [`/termbases/{termbaseId}/entries`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries/post) endpoint.
+A termbase entry can be created by making a `POST` request to the [`/termbases/{termbaseId}/entries`](../../api/Public-API.v1-fv.html#/operations/CreateTermbaseEntry) endpoint.
 
 Request example for an entry using language code `en`: `POST /termbases/61b70c0775ed5f14d8190fab/entries`
 ```json
@@ -96,7 +96,7 @@ Postman example:
 
 ## Updating a termbase entry
 
-A termbase entry can be updated by making a `PUT` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries~1{entryId}/put) endpoint.
+A termbase entry can be updated by making a `PUT` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../api/Public-API.v1-fv.html#/operations/UpdateTermbaseEntry) endpoint.
 
 The update action changes the entire structure of an entry, it doesn't only update the terms specified in the request body. The terms that are not specified, are deleted. If some terms should not be updated, their structure must be send in the request as it currently is.
 
@@ -142,7 +142,7 @@ Request example: `PUT /termbases/61b70c0775ed5f14d8190fab/entries/61b73e4475ed5f
 
 ## Retrieving a termbase entry
 
-A termbase entry can be retrieved by making a `GET` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries~1{entryId}/get) endpoint. Postman example:
+A termbase entry can be retrieved by making a `GET` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../api/Public-API.v1-fv.html#/operations/GetTermbaseEntry) endpoint. Postman example:
 
 
 ![Get termbase entry with fields](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetTermbaseEntryPostman.gif?raw=true)
@@ -183,7 +183,7 @@ Response example:
 
 ## Retrieving the list of termbase entries
 
-You can retrieve the list of termbase entries by making a `GET` request to the [`/termbases/{termbaseId}/entries`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries/get) endpoint.
+You can retrieve the list of termbase entries by making a `GET` request to the [`/termbases/{termbaseId}/entries`](../../api/Public-API.v1-fv.html#/operations/ListTermbaseEntries) endpoint.
 
 Request example: `GET /termbases/61b70c0775ed5f14d8190fab/entries?fields=humanReadableId,languages.terms,languages.terms.termbaseFieldValues`
 
@@ -273,13 +273,14 @@ Response example:
 
 ## Deleting a termbase entry
 
-A termbase entry can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries~1{entryId}/delete) endpoint.
+A termbase entry can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}/entries/{entryId}`](../../api/Public-API.v1-fv.html#/operations/DeleteTermbaseEntry) endpoint.
 
 Request example: `DELETE /termbases/61b70c0775ed5f14d8190fab/entries/61b73e4475ed5f14d81ae5e7`
 
 
 ## Deleting all termbase entries
 
-All termbase entries can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}/entries`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1entries/delete) endpoint.
+All termbase entries can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}/entries`](../../api/Public-API.v1-fv.html#/operations/DeleteTermbaseEntries) endpoint.
 
 Request example: `DELETE /termbases/61b70c0775ed5f14d8190fab/entries`
+

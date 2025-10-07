@@ -1,9 +1,9 @@
-# Termbase templates
+﻿# Termbase templates
 </br>
 
 ## Creating a termbase template
 
-A termbase template can be created by making a `POST` request to the [`/termbase-templates`](../../reference/Public-API.v1.json/paths/~1termbase-templates/post) endpoint.
+A termbase template can be created by making a `POST` request to the [`/termbase-templates`](../../api/Public-API.v1-fv.html#/operations/CreateTermbaseTemplate) endpoint.
 
 > Note: If the `location` is not specified, the template will be created in the root folder.
 
@@ -75,7 +75,7 @@ Response example:
 
 ## Updating a termbase template
 
-A termbase template can be updated by making a `PUT` request to the [`/termbase-templates/{termbaseTemplateId}`](../../reference/Public-API.v1.json/paths/~1termbase-templates~1{termbaseTemplateId}/put) endpoint. Postman example:
+A termbase template can be updated by making a `PUT` request to the [`/termbase-templates/{termbaseTemplateId}`](../../api/Public-API.v1-fv.html#/operations/UpdateTermbaseTemplate) endpoint. Postman example:
 
 
 ![Update Termbase Template](https://raw.githubusercontent.com/RWS/language-cloud-public-api-doc-resources/main/PublicAPI/UpdateTermbaseTemplate.gif?raw=true)
@@ -105,7 +105,7 @@ Request example: `PUT /termbase-templates/6156bbc7a638696c7686db7f`
 
 ## Retrieving a termbase template
 
-A termbase template can be retrieved by making a `GET` request to the [`/termbase-templates/{termbaseTemplateId}`](../../reference/Public-API.v1.json/paths/~1termbase-templates~1{termbaseTemplateId}/get) endpoint.
+A termbase template can be retrieved by making a `GET` request to the [`/termbase-templates/{termbaseTemplateId}`](../../api/Public-API.v1-fv.html#/operations/GetTermbaseTemplate) endpoint.
 
 Request example: `GET /termbase-templates/6156bbc7a638696c7686db7f?fields=name,location,description,languages,fields`
 
@@ -140,7 +140,7 @@ Response example:
 
 ## Retrieving termbase templates
 
-You can retrieve the list of termbase templates by making a `GET` request to the [`/termbase-templates`](../../reference/Public-API.v1.json/paths/~1termbase-templates/get) endpoint.
+You can retrieve the list of termbase templates by making a `GET` request to the [`/termbase-templates`](../../api/Public-API.v1-fv.html#/operations/ListTermbaseTemplates) endpoint.
 
 Request example: `GET /termbase-templates?fields=name,description`
 
@@ -171,7 +171,7 @@ Response example:
 
 ## Deleting termbase templates
 
-A termbase template can be deleted by making a `DELETE` request to the [`/termbase-templates/{termbaseTemplateId}`](../../reference/Public-API.v1.json/paths/~1termbase-templates~1{termbaseTemplateId}/delete) endpoint.
+A termbase template can be deleted by making a `DELETE` request to the [`/termbase-templates/{termbaseTemplateId}`](../../api/Public-API.v1-fv.html#/operations/DeleteTermbaseTemplate) endpoint.
 
 > Note: You can only delete the `userDefined` termbases.
 

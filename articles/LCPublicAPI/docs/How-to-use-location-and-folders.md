@@ -1,4 +1,4 @@
-# How to use location and folders
+﻿# How to use location and folders
 
 The Trados Cloud Platform API supports [folder-based](https://docs.rws.com/791595/984983/trados-enterprise/how-do-folder-structure-and-inheritance-help-you-get-organized-) access management to all resources. The users have access to resources based on the permissions associated with the group (role) they belong to. For information about creating a user you can check the [Service credentials](../docs/Service-credentials.md) page. 
 
@@ -18,7 +18,7 @@ The folders structure in Trados Cloud Platform API is hierarchical. For more inf
 
 Depending on how the account was provisioned, configured and on the groups which the user belongs to, the rights for a user can be more restrictive or permissive.
 
-Users can learn where they were created, the exact folder, and what groups they belong to, by executing a [Get My User](../reference/Public-API.v1.json/paths/~1users~1me/get) call with the `fields` query parameters set to *"location.name,location.path,groups"*.
+Users can learn where they were created, the exact folder, and what groups they belong to, by executing a [Get My User](../api/Public-API.v1-fv.html#/operations/GetMyUser) call with the `fields` query parameters set to *"location.name,location.path,groups"*.
 
 For example, let's assume that an account has the following hierarchy of folders (with associated unique identifiers simplified for readability):
 
@@ -159,5 +159,6 @@ If the list project endpoint is used with:
 - `location` = "fea...a0b,fea...0a0" (Customers and Customer3 folder identifiers) AND `locationStrategy` = "lineage"
     <br>
     Project2, Project3 (only once) and Project4 are returned.
+
 
 

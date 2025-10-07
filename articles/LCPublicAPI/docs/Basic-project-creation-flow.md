@@ -1,4 +1,4 @@
-# Basic project creation flow
+﻿# Basic project creation flow
 
 Please read carefully about [authentication and prerequisites](../docs/Authentication.md) , and take into consideration that some steps might be done by Trados engineering.
 
@@ -8,7 +8,7 @@ Additional information regarding file and project size limits can be found [here
 
 > This small [Postman collection](https://raw.githubusercontent.com/RWS/language-cloud-public-api-postman/develop/basicProjectCreationFlow.json) can help you get started with the basic project creation flow. For details on Postman setup please see the main [Postman](../docs/Language-Cloud-APIs-for-Postman.md) page.
 > 
-> In the [Create Project](../reference/Public-API.v1.json/paths/~1projects/post) endpoint body, the `projectTemplate` value should be replaced with a valid `templateId`. From that point on all the necessary identifiers will be automatically populated throughout Postman.
+> In the [Create Project](../api/Public-API.v1-fv.html#/operations/CreateProject) endpoint body, the `projectTemplate` value should be replaced with a valid `templateId`. From that point on all the necessary identifiers will be automatically populated throughout Postman.
 >
 > Check the [Multi-Region](../docs/Multi-region.md) page for regional API details.
 
@@ -25,7 +25,7 @@ Steps to create a basic translation project:
 ### 1. Create Project	
 Creates a new project.
 
-Endpoint: [`POST /projects`](../reference/Public-API.v1.json/paths/~1projects/post)
+Endpoint: [`POST /projects`](../api/Public-API.v1-fv.html#/operations/CreateProject)
 
 For running this endpoint you need to supply the required project details (body tab in Postman):
 > `POST` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects
@@ -50,11 +50,11 @@ For running this endpoint you need to supply the required project details (body 
 }
 ```
 
-Source and Target Language Codes can be obtained from [here](../reference/Public-API.v1.json/paths/~1languages/get).
+Source and Target Language Codes can be obtained from [here](../api/Public-API.v1-fv.html#/operations/ListLanguages).
 
 The API should respond with:
 - HTTP Status Code: 201 Created.
-- Body – your project details consisting of `projectId`, `project name`, `language direction`, `location` and other optional fields.
+- Body â€“ your project details consisting of `projectId`, `project name`, `language direction`, `location` and other optional fields.
 
 Example:
 ```json
@@ -125,13 +125,13 @@ Detailed information about location and folders can be found on the [How to use 
 
 ![Create project with location](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateProjectWithLocationPostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects/post).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/CreateProject).
 
 ### 2. Add Source File
 
 Adds a source file to the project.
 
-Endpoint: [`POST /projects/{projectId}/source-files`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post)
+Endpoint: [`POST /projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
@@ -150,18 +150,18 @@ Properties field:
 
 Responses:
 -	HTTP Code 201 Created.
--	Body –  a list with the identifier, name and role of the file.
+-	Body â€“  a list with the identifier, name and role of the file.
 
 
 ![Add source file](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/AddSourceFilePostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/AddSourceFile).
 
 ### 3. Start Project
 
 Starts a project.
 
-Endpoint: [`PUT /projects/{projectId}/start`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1start/put)
+Endpoint: [`PUT /projects/{projectId}/start`](../api/Public-API.v1-fv.html#/operations/StartProject)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
@@ -173,13 +173,13 @@ Responses:
 
 ![Start project](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/StartProjectPostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1start/put).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/StartProject).
 
 ### 4. List Project's Tasks
 
 List the tasks of a specific project. If all the tasks have the status `completed`, all the files are translated.
 
-Endpoint: [`GET /projects/{projectId}/tasks`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1tasks/get)
+Endpoint: [`GET /projects/{projectId}/tasks`](../api/Public-API.v1-fv.html#/operations/ListProjectTasks)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
@@ -189,7 +189,7 @@ Use `?fields=taskType` if you want to observe the task name.
 
 Responses:
 -	HTTP Code 200 Ok.
--	Body –  a list with task identifier and status.
+-	Body â€“  a list with task identifier and status.
 
 Example:
 ```json
@@ -223,13 +223,13 @@ Example:
 
 ![List project's task](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectTasks.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1tasks/get).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/ListProjectTasks).
 
 ### 5. List Project Target Files
 
 Retrieves the target `fileId` for a project and the latest version for the translated file.
 
-Endpoint: [`GET /projects/{projectId}/target-files`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files/get)
+Endpoint: [`GET /projects/{projectId}/target-files`](../api/Public-API.v1-fv.html#/operations/ListTargetFiles)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
@@ -237,7 +237,7 @@ For running this endpoint you need to:
 
 Responses:
 -	HTTP Code 200 Ok.
--	Body – a list with objects that contain: 
+-	Body â€“ a list with objects that contain: 
       - source file and target file identifiers
       - source and target languages
 
@@ -268,13 +268,13 @@ Example:
 
 ![List project target files](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectTargetFilesPostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files/get).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/ListTargetFiles).
 
 ### 6. Download File
 
 Downloads the translated file.
 
-Endpoint: [`GET /projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1download/get)
+Endpoint: [`GET /projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download`](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response
@@ -285,19 +285,19 @@ For running this endpoint you need to:
 
 Responses:
 -	HTTP Code 200 OK.
--	Body –  the translated file. The file can be also saved from Save Response option.
+-	Body â€“  the translated file. The file can be also saved from Save Response option.
 
 
 ![Download file](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/DownloadFilePostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1download/get).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion).
 
 
 ### 7. Complete Project
 
 Marks a project as `completed`.
 
-Endpoint: [`PUT /projects/{projectId}/complete`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1complete/put)
+Endpoint: [`PUT /projects/{projectId}/complete`](../api/Public-API.v1-fv.html#/operations/CompleteProject)
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response
@@ -309,20 +309,20 @@ Responses:
 
 ![Complete project](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CompleteProjectPostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1complete/put).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/CompleteProject).
 
 ### 8. List Projects	
 
 Retrieves a list of all the projects in the account.
 
-Endpoint: [`GET /projects`](../reference/Public-API.v1.json/paths/~1projects/get)
+Endpoint: [`GET /projects`](../api/Public-API.v1-fv.html#/operations/ListProjects)
 
 For running this endpoint make a request to:
 > `GET` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects
  
 Responses:
 -	HTTP Code 200 OK.
-- Body – a list of projects with details consisting of project identifier, project name, language direction, location and other optional fields
+- Body â€“ a list of projects with details consisting of project identifier, project name, language direction, location and other optional fields
 
 Example:
 ```json
@@ -378,4 +378,4 @@ Example:
 
 ![List projects](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectsPostman.gif?raw=true)
 
-More details about this endpoint can be found [here](../reference/Public-API.v1.json/paths/~1projects/get).
+More details about this endpoint can be found [here](../api/Public-API.v1-fv.html#/operations/ListProjects).

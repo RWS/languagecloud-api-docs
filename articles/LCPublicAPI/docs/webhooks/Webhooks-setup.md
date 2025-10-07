@@ -1,4 +1,4 @@
----
+﻿---
 stoplight-id: eg4ja9nrs9wtk
 ---
 
@@ -24,9 +24,9 @@ Here are the detailed steps:
 2. Expand the account menu on the top right-hand corner and select **Integrations**. 
 3. Select the **Applications** sub-tab.
 4. Select **New Application** and enter the following information:
-    - **Name** – Enter a unique name for your custom application.
-    - (Optional) **URL** – Enter your custom application URL.
-    - **Service User** – Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
+    - **Name** â€“ Enter a unique name for your custom application.
+    - (Optional) **URL** â€“ Enter your custom application URL.
+    - **Service User** â€“ Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
 5. Select **Add**.
 6. Back in the **Applications** sub-tab, select the check box corresponding to your application.
 7. Select **Edit**.
@@ -71,7 +71,7 @@ The followings are true:
 
 
 
-Remember that each time events occur, Trados Cloud Platform will call your server on a `POST` request, on the URL you configured in the Trados Cloud Platform application, and the request body will emulate the [Webhook](../../reference/Webhooks.v1.json/components/schemas/webhook)  object format. 
+Remember that each time events occur, Trados Cloud Platform will call your server on a `POST` request, on the URL you configured in the Trados Cloud Platform application, and the request body will emulate the [Webhook](../../api/Webhooks.v1-fv.html#/schemas/webhook)  object format. 
 
 ## Validate the Webhook notifications
 
@@ -103,12 +103,12 @@ checksum.update(event.getBytes(UTF_8));
 long crc32Val = checksum.getValue();
 
 //build the message
-String message = transmissionTime + “|” + applicationId + “|” + webhookId + “|” + crc32Val;
+String message = transmissionTime + â€ś|â€ť + applicationId + â€ś|â€ť + webhookId + â€ś|â€ť + crc32Val;
 
 //build PublicKey
 byte[]  bytes = org.springframework.security.crypto.codec.Base64.decode(publicKeyAsString.getBytes());
 X509EncodeKeySpec ks = new X509EncodeKeySpec(bytes);
-KeyFactory kf = KeyFactory.getInstance(“RSA”);
+KeyFactory kf = KeyFactory.getInstance(â€śRSAâ€ť);
 PublicKey publicKey = kf.generatePublic(ks);
 
 //verify signature
@@ -197,3 +197,4 @@ The circuit breaker is triggered when 3 calls to a URL fail within a short time 
 * `X-LC-Webhook`: Unique identifier of the webhook defined for the LC application which is the recipient of the webhook message. It can be ignored because it is not exposed in the Trados UI.
 
 * `X-LC-Region`: Region of the account of the user, which is the recipient of the webhook message.
+

@@ -1,5 +1,5 @@
-# Update project quote
-To update a quote, make a `PUT` request to the [`/projects/{projectId}`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/put) end point, and specify the `quote` field.
+﻿# Update project quote
+To update a quote, make a `PUT` request to the [`/projects/{projectId}`](../api/Public-API.v1-fv.html#/operations/UpdateProject) end point, and specify the `quote` field.
 
 ## Cost types
 

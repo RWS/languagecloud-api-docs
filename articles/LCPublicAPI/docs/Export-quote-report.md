@@ -1,15 +1,15 @@
-# Export quote report
+﻿# Export quote report
 The export quote mechanism has been updated and 
 it is now composed of three relevant endpoints.
 The old export quote endpoint is deprecated, you can read about it in this section [`What's new`](https://languagecloud.sdl.com/lc/api-docs/16d216d6237ee-what-s-new#12-august-2022).
 
 The next endpoints would need to be executed in this specific order:
 
-1. To trigger a quote report generation for a given project, make a `POST` request to the  [`/projects/{projectId}/quote-report/export`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/post) endpoint. If successful, the response will contain an "Accepted" status, and you can proceed to the next step.
+1. To trigger a quote report generation for a given project, make a `POST` request to the  [`/projects/{projectId}/quote-report/export`](../api/Public-API.v1-fv.html#/operations/ExportQuoteReport) endpoint. If successful, the response will contain an "Accepted" status, and you can proceed to the next step.
 
-2. To verify the status of the quote report generation, make a `GET` request to the [`/projects/{projectId}/quote-report/export`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/get) endpoint. As soon as the response body contains  a "completed" status, then you can proceed to the next step.
+2. To verify the status of the quote report generation, make a `GET` request to the [`/projects/{projectId}/quote-report/export`](../api/Public-API.v1-fv.html#/operations/PollQuoteReportExport) endpoint. As soon as the response body contains  a "completed" status, then you can proceed to the next step.
 
-3. To download the generated project quote, make a `GET` request to the [`/projects/{projectId}/quote-report/download`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1download/get) endpoint.
+3. To download the generated project quote, make a `GET` request to the [`/projects/{projectId}/quote-report/download`](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) endpoint.
 
 
 ## Report format
@@ -41,7 +41,7 @@ The next screenshot illustrates a sample of an exported PDF quote.
 </br>
 
 # Update project quote
-To update a quote, make a `PUT` request to the [`/projects/{projectId}`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/put) endpoint, and specify the `quote` field.
+To update a quote, make a `PUT` request to the [`/projects/{projectId}`](../api/Public-API.v1-fv.html#/operations/UpdateProject) endpoint, and specify the `quote` field.
 
 ## Cost types
 

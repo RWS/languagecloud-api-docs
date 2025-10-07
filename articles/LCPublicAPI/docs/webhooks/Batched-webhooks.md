@@ -1,7 +1,7 @@
-# Batched Webhooks  
+﻿# Batched Webhooks  
 
 Webhooks can be batched to reduce the number of HTTP requests. Batched webhooks are sent as a single HTTP request to the configured webhook URL.  
-The request body follows the [Webhook Batch](../../reference/Webhooks.v1.json/components/schemas/webhook-batch) structure and contains a set of [Trados Cloud Platform events](../../reference/Webhooks.v1.json/components/schemas/webhook).  
+The request body follows the [Webhook Batch](../../api/Webhooks.v1-fv.html#/schemas/webhook-batch) structure and contains a set of [Trados Cloud Platform events](../../api/Webhooks.v1-fv.html#/schemas/webhook).  
 
 ## Considerations for Consuming Batched Webhooks																																	 
 
@@ -53,3 +53,4 @@ The current configuration for the Trados Cloud Platform is:
 
 * Ensure that a single URL is set for receiving batched webhooks in the Trados Cloud Platform.  
 * Create a single webhook under [Webhooks Setup](Webhooks-setup.md#subscribe-to-webhook-events) that subscribes to multiple event types.  
+

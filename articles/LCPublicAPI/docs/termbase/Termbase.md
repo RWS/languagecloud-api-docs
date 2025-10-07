@@ -1,9 +1,9 @@
-# Termbases
+﻿# Termbases
 </br>
 
 ## Creating a termbase
 
-A termbase can be created by making a `POST` request to the [`/termbases`](../../reference/Public-API.v1.json/paths/~1termbases/post) endpoint.
+A termbase can be created by making a `POST` request to the [`/termbases`](../../api/Public-API.v1-fv.html#/operations/CreateTermbase) endpoint.
 
 You can create a termbase based on an existing termbase template by providing the `termbaseTemplateId`. This will create the termbase using the structure described by the template. For details about termbase templates, see [`Termbase Template`](../../docs/termbase/Termbase-templates.md). Postman example:
 
@@ -78,7 +78,7 @@ Response example:
 ## Updating a termbase
 > You can update the fields for a termbase only if the termbase you want to update was not created using a termbase template or if it does not already have fields defined.
 
-A termbase can be updated by making a `PUT` request to the [`/termbases/{termbaseId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}/put) endpoint and providing the `termbaseTemplateId`.
+A termbase can be updated by making a `PUT` request to the [`/termbases/{termbaseId}`](../../api/Public-API.v1-fv.html#/operations/UpdateTermbase) endpoint and providing the `termbaseTemplateId`.
 
 Request example: `PUT /termbases/616d0efa7a11677d6085b0be`
 ```json
@@ -127,7 +127,7 @@ Request example: `PUT /termbases/616d0efa7a11677d6085b0be`
 
 ## Retrieving a termbase
 
-A termbase can be retrieved by making a `GET` request to the [`/termbases/{termbaseId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}/get) endpoint.
+A termbase can be retrieved by making a `GET` request to the [`/termbases/{termbaseId}`](../../api/Public-API.v1-fv.html#/operations/GetTermbase) endpoint.
 
 Request example: `GET /termbases/616d0efa7a11677d6085b0be`
 
@@ -147,7 +147,7 @@ Response example:
 
 ## Retrieving the list of termbases
 
-You can retrieve the list of termbases by making a `GET` request to the [`/termbases`](../../reference/Public-API.v1.json/paths/~1termbases/get) endpoint.
+You can retrieve the list of termbases by making a `GET` request to the [`/termbases`](../../api/Public-API.v1-fv.html#/operations/ListTermbase) endpoint.
 
 Request example: `GET /termbases`
 
@@ -180,6 +180,6 @@ Response example:
 
 ## Deleting termbases
 
-A termbase can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}`](../../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}/delete) endpoint.
+A termbase can be deleted by making a `DELETE` request to the [`/termbases/{termbaseId}`](../../api/Public-API.v1-fv.html#/operations/DeleteTermbase) endpoint.
 
 Request example: `DELETE /termbases/616d0efa7a11677d6085b0be`

@@ -1,4 +1,4 @@
----
+﻿---
 stoplight-id: nfdrob1smwn00
 ---
 
@@ -20,4 +20,4 @@ This information is especially relevant if you are building multi-tenant integra
 
 The provided .NET and Java SDKs already support multiple regions. For details on using these SDKs, refer to their documentation.
 
-> If you're building your own client, avoid hard-coding Trados Cloud Platform API hosts, as new regions may be added in the future, requiring updates to hard-coded hosts. You can discover all available regions and their corresponding Public API hosts using the [List Regions](../reference/Global-Public-API.v1.json/paths/~1regions/get) endpoint from the new Global Public API, which is accessible on a new global host `api.cloud.trados.com`.
+> If you're building your own client, avoid hard-coding Trados Cloud Platform API hosts, as new regions may be added in the future, requiring updates to hard-coded hosts. You can discover all available regions and their corresponding Public API hosts using the [List Regions](../api/Global-Public-API.v1-fv.html#/operations/ListRegions) endpoint from the new Global Public API, which is accessible on a new global host `api.cloud.trados.com`.

@@ -1,4 +1,4 @@
-# Headers considerations
+﻿# Headers considerations
 
 The purpose of this page is to showcase the header types that could capture your interest.
 
@@ -23,7 +23,7 @@ in a file, read more in the [RFC2046](https://www.rfc-editor.org/rfc/rfc2046#sec
 For operations expected to return content that can be handled as a file, the `Content-Disposition` header can be sent in the response headers to provide more information about the response payload. The Trados Cloud Platform API will provide this header in certain situations, and its primary goal is to supply a file name for the content being downloaded or exported.
 You can read more about the `Content-Disposition` header on the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) website or in the [RFC6266](https://www.rfc-editor.org/rfc/rfc6266) space.
 
-The `Content-Disposition` response header can be usually found on various download API endpoints like [Download Source File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1{sourceFileId}~1versions~1{fileVersionId}~1download/get), [Download Target File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1download/get), [Download Exported Quote Report](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1download/get) and others.
+The `Content-Disposition` response header can be usually found on various download API endpoints like [Download Source File Version](../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion), [Download Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion), [Download Exported Quote Report](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) and others.
 
 > Please note that both `Content-Type` and `Content-Disposition` are  **not required** and APIs might not include them in the response. There are no guarantees that an endpoint that used to return a `Content-Type` or `Content-Disposition` header will still do so, under any circumstance. Please treat these headers as **optional** for all APIs.
 

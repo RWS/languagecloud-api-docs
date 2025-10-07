@@ -1,4 +1,4 @@
----
+﻿---
 stoplight-id: 1hfz3c15wpkbf
 ---
 
@@ -12,7 +12,7 @@ This page goes into deeper details for uploading files. Generally you might be i
 
 Whenever you make use of endpoints that do file uploads using `multipart/form-data`, some additional details may be required to be sent alongside the file, for example a `properties` part.
 
-Let's take as an example the [Add Source File Version](../reference/Public-API.v1.json/paths/~1tasks~1{taskId}~1source-files~1{sourceFileId}~1versions/post) endpoint. The API specifies that the request content is `multipart/form-data` and has a `properties` part that should be serialized as a JSON (this might not be mentioned explicitly in the documentation, but any structures in multiparts should be serialized as JSON). The second property is `file` and though it is of type `string`, that means that the raw content of the file should be sent in that part.
+Let's take as an example the [Add Source File Version](../api/Public-API.v1-fv.html#/operations/AddSourceFileVersion) endpoint. The API specifies that the request content is `multipart/form-data` and has a `properties` part that should be serialized as a JSON (this might not be mentioned explicitly in the documentation, but any structures in multiparts should be serialized as JSON). The second property is `file` and though it is of type `string`, that means that the raw content of the file should be sent in that part.
 
 > The order of parts is important! Please send the parts in the order these are specified in the API contract.
 
@@ -30,8 +30,8 @@ Content-Disposition: form-data; name="properties"
 Content-Type: application/json
 
 { 
-  "type":"native",
-  "fileTypeSettingsId": "<FILE_TYPE_SETTINGS_ID>"
+â€â€"type":"native",
+â€â€"fileTypeSettingsId": "<FILE_TYPE_SETTINGS_ID>"
 }
 ----------------------------818668410602542750275539
 Content-Disposition: form-data; name="file"; filename="<FILENAME.EXTENSION>"
@@ -43,5 +43,6 @@ Content-Type: <MATCHING CONTENT TYPE FOR YOUR FILE TYPE>
 ```
 
 For the file, there is usually the filename that needs to be sent, along with file `Content-type` and finally the content.
+
 
 

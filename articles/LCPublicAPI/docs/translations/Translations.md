@@ -1,4 +1,4 @@
-# Translation API
+﻿# Translation API
 
 The Translation API provides endpoints for performing translation operations using translation engines. These endpoints allow you to lookup translations, perform concordance searches, and manage translation units within your translation memories.
 
@@ -19,7 +19,7 @@ All translation operations require a translation engine that defines which trans
 
 ### Translation Lookup
 
-[`POST /translations/lookup`](../../reference/Public-API.v1.json/paths/~1translations~1lookup/post)
+[`POST /translations/lookup`](../../api/Public-API.v1-fv.html#/operations/TranslationsLookup)
 
 Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a [BCM fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html).
 
@@ -71,7 +71,7 @@ Translates a phrase in plain text or a BCM fragment containing a single segment.
 
 ### Concordance Search
 
-[`POST /translations/concordance`](../../reference/Public-API.v1.json/paths/~1translations~1concordance/post)
+[`POST /translations/concordance`](../../api/Public-API.v1-fv.html#/operations/TranslationsConcordanceSearch)
 
 Performs a concordance search for a given text within the translation memories linked to the specified translation engine. This helps you find segments that contain specific words or phrases.
 
@@ -119,7 +119,7 @@ Performs a concordance search for a given text within the translation memories l
 
 #### Update Translation Unit
 
-[`PUT /translations/translation-unit`](../../reference/Public-API.v1.json/paths/~1translations~1translation-unit/put)
+[`PUT /translations/translation-unit`](../../api/Public-API.v1-fv.html#/operations/TranslationsUpdate)
 
 Updates an existing translation unit in the translation memories. The system identifies matching translation units based on the `originalTranslationHash` provided in the BCM fragment.
 
@@ -164,7 +164,7 @@ Updates an existing translation unit in the translation memories. The system ide
 
 #### Add Translation Unit
 
-[`POST /translations/translation-unit`](../../reference/Public-API.v1.json/paths/~1translations~1translation-unit/post)
+[`POST /translations/translation-unit`](../../api/Public-API.v1-fv.html#/operations/TranslationsAdd)
 
 Adds a new translation unit to the translation memories.
 
@@ -209,7 +209,7 @@ Example of a BCM fragment:
 				"type": "placeholderTag",
 				"metadata": {
 					"SDL:IsSoftBreak": "True",
-					"SpecialCharacterPlaceholder": "‌",
+					"SpecialCharacterPlaceholder": "â€Ś",
 					"frameworkOriginalTagId": "50",
 					"SDL:IsWordStop": "False"
 				}
@@ -299,7 +299,7 @@ Learn more about [Translation Memory penalties](https://docs.rws.com/en-US/trado
 ## Related APIs
 
 - **[Translation Memory API](../translation-memory/Translation-memory-import-export.md)**: Bulk import/export of translation memories
-- **[Translation Engine API](../../reference/Public-API.v1.json/paths/~1translation-engines~1{translationEngineId}/put)**: Manage translation engine configurations
+- **[Translation Engine API](../../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine)**: Manage translation engine configurations
 - **[Termbase API](../termbase/Termbase.md)**: Manage terminology resources
 
 ## Examples and Use Cases

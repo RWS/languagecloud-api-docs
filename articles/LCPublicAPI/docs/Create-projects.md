@@ -1,4 +1,4 @@
-# Create projects
+﻿# Create projects
 To create a project, you need to specify the following resources:
 - A translation engine: determines which translation memories, MT engines and termbases should be used in the project
 - A file processing configuration: determines which translatable file types this project should support, and the specific configuration of those file types
@@ -17,24 +17,24 @@ You cannot specify custom fields and project settings directly via the Trados Cl
 ### 1. Decide which project resources you want to use.
 
 Make a `GET` request to the following resource endpoints and identify the identifiers of the resources you want to include in your project:
-- [`/translation-engine`](../reference/Public-API.v1.json/paths/~1translation-engines/get) *required*
-- [`/file-processing-configuration`](../reference/Public-API.v1.json/paths/~1file-processing-configurations/get) *required*
-- [`/workflow`](../reference/Public-API.v1.json/paths/~1workflows/get) *required*
-- [`/pricing-model`](../reference/Public-API.v1.json/paths/~1pricing-models/get) *optional*
-- [`/custom-field-definitions`](../reference/Public-API.v1.json/paths/~1custom-field-definitions/get) *optional*
+- [`/translation-engine`](../api/Public-API.v1-fv.html#/operations/ListTranslationEngines) *required*
+- [`/file-processing-configuration`](../api/Public-API.v1-fv.html#/operations/ListFileProcessingConfigurations) *required*
+- [`/workflow`](../api/Public-API.v1-fv.html#/operations/ListWorkflows) *required*
+- [`/pricing-model`](../api/Public-API.v1-fv.html#/operations/ListPricingModels) *optional*
+- [`/custom-field-definitions`](../api/Public-API.v1-fv.html#/operations/ListCustomFields) *optional*
 
 
-### 2. Decide which language pairs (source – target) you want to use.
+### 2. Decide which language pairs (source â€“ target) you want to use.
 
-Make a `GET` request to the [`/languages`](../reference/Public-API.v1.json/paths/~1languages/get) endpoint and identify the `languageCode` parameter values.
+Make a `GET` request to the [`/languages`](../api/Public-API.v1-fv.html#/operations/ListLanguages) endpoint and identify the `languageCode` parameter values.
 
 ### 3. Decide where you want to save your project.
 
-When you create your project, you must save it in a location (or customer folder). You will need the `locationId` of that customer folder. To retrieve the `locationId` of a given customer folder, make a `GET` request to the [`/customers/{customerId}`](../reference/Public-API.v1.json/paths/~1customers~1{customerId}/get) endpoint and check the `locationId` value in the response. If you do not specify a location, the project will be created in the Root folder.
+When you create your project, you must save it in a location (or customer folder). You will need the `locationId` of that customer folder. To retrieve the `locationId` of a given customer folder, make a `GET` request to the [`/customers/{customerId}`](../api/Public-API.v1-fv.html#/operations/GetCustomer) endpoint and check the `locationId` value in the response. If you do not specify a location, the project will be created in the Root folder.
 
 ### 4. Create your project.
 
-Make a `POST` request to the [`/projects`](../reference/Public-API.v1.json/paths/~1projects/post) endpoint. You must provide identifiers for all the **required** resources: translation engine, file processing configuration and workflow.
+Make a `POST` request to the [`/projects`](../api/Public-API.v1-fv.html#/operations/CreateProject) endpoint. You must provide identifiers for all the **required** resources: translation engine, file processing configuration and workflow.
 
 Each resource object has a `strategy` parameter you must specify in the request body. The strategy parameter has 2 available values: `copy` and `use`. Trados recommends that you choose the `copy` value, which means that you include a copy (clone) of your resource in the project. If you choose the `use` value, then the actual resource is included in your project.
 
@@ -44,14 +44,14 @@ Make sure that you remember the value of the project `id` parameter in the respo
 
 ### 5. Add your project files.
 
-Make a `POST` request to the [`/projects/{projectId}/source-files`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property – native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements. 
+Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property â€“ native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements. 
 
 ### 5.1 Perfect Match (optional)
-At this point you can make use of the [PerfectMatch](../reference/Public-API.v1.json/paths/~1perfect-match-mappings/post) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).
+At this point you can make use of the [PerfectMatch](../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).
 
 ### 6. Start your project.
 
-Make a `PUT` request to the [`/projects/{projectId}/start`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1start/put) endpoint.
+Make a `PUT` request to the [`/projects/{projectId}/start`](../api/Public-API.v1-fv.html#/operations/StartProject) endpoint.
 
 
 ## Create projects based on a template
@@ -59,32 +59,32 @@ You can create projects based on a project template already configured from the 
 
 ### 1. Decide which project template you want to use.
 
-Make a `GET` request to the [`/project-templates`](../reference/Public-API.v1.json/paths/~1project-templates/get) endpoint. Remember the project template `id` parameter in the response.
+Make a `GET` request to the [`/project-templates`](../api/Public-API.v1-fv.html#/operations/ListProjectTemplates) endpoint. Remember the project template `id` parameter in the response.
 
-### 2. Decide which language pairs (source – target) you want to use.
+### 2. Decide which language pairs (source â€“ target) you want to use.
 
-A project template may include more languages than you need. If this is the case, you can keep only the languages of interest. Make a `GET` request to the [`/languages`](../reference/Public-API.v1.json/paths/~1languages/get) endpoint and identify the `languageCode` parameter values.
+A project template may include more languages than you need. If this is the case, you can keep only the languages of interest. Make a `GET` request to the [`/languages`](../api/Public-API.v1-fv.html#/operations/ListLanguages) endpoint and identify the `languageCode` parameter values.
 
 ### 3. Decide where you want to save your project.
 
-A project template is saved in a location or a customer folder. Most of the times, when you create your project, you want to save it in the same location (customer folder) as the project template it is based on. You will need the `locationId` of that customer folder. To retrieve the `locationId` of a given customer folder, make a `GET` request to the [`/customers/{customerId}`](../reference/Public-API.v1.json/paths/~1customers~1{customerId}/get) endpoint and check the `locationId` value in the response.
+A project template is saved in a location or a customer folder. Most of the times, when you create your project, you want to save it in the same location (customer folder) as the project template it is based on. You will need the `locationId` of that customer folder. To retrieve the `locationId` of a given customer folder, make a `GET` request to the [`/customers/{customerId}`](../api/Public-API.v1-fv.html#/operations/GetCustomer) endpoint and check the `locationId` value in the response.
 
 ### 4. Create your project.
 
-Make a `POST` request to the [`/projects`](../reference/Public-API.v1.json/paths/~1projects/post) endpoint. Provide the project template `id` and the location `id`. 
+Make a `POST` request to the [`/projects`](../api/Public-API.v1-fv.html#/operations/CreateProject) endpoint. Provide the project template `id` and the location `id`. 
 
 Make sure that you remember the value of the project `id` parameter in the response. You will need it for tracking your project, interacting with tasks, and completing projects.
 
 ### 5. Add your project files
 
-Make a `POST` request to the [`/projects/{projectId}/source-files`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property – native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements.
+Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property â€“ native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements.
 
 ### 5.1 Perfect Match (optional)
-At this point you can make use of the [PerfectMatch](../reference/Public-API.v1.json/paths/~1perfect-match-mappings/post) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).
+At this point you can make use of the [PerfectMatch](../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).
 
 ### 6. Start your project.
 
-Make a `PUT` request to the [`/projects/{projectId}/start`](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1start/put) endpoint.
+Make a `PUT` request to the [`/projects/{projectId}/start`](../api/Public-API.v1-fv.html#/operations/StartProject) endpoint.
 
 ## Restrict file downloads for a project
 To restrict file downloads for certain roles, you may create a project as usual and choose to:

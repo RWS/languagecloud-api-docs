@@ -1,4 +1,4 @@
-# API rate limits
+﻿# API rate limits
 
 Trados Cloud Platform API enforces rate limits to prevent overuse and spikes of requests that could degrade the platform performance. 
 
@@ -17,7 +17,7 @@ Each tenant is entitled to:
 3. Up to 200 000 API requests per day.
 
 ####  Projects Rate Limits
-For [Create Project Operation](../reference/Public-API.v1.json/paths/~1projects/post): 
+For [Create Project Operation](../api/Public-API.v1-fv.html#/operations/CreateProject): 
 
 each tenant is entitled to:
 1. Up to 2 API requests per second.
@@ -25,7 +25,7 @@ each tenant is entitled to:
 3. Up to 500 API requests per day.
 
 ####  Export Quote Rate Limits
-For [Export Quote Report](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/post): 
+For [Export Quote Report](../api/Public-API.v1-fv.html#/operations/ExportQuoteReport): 
 
 each tenant is entitled to:
 1. Up to 2 API requests per second.
@@ -40,13 +40,13 @@ each tenant is entitled to:
 ####  Project Files Rate Limits
 For each of the API operations listed below:
 
-- [Add Source File](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/post)
-- [Download Source File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1{sourceFileId}~1versions~1{fileVersionId}~1download/get)
-- [Download Exported Target File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1exports~1{exportId}~1download/get)
-- [Download Target File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1download/get)
-- [Add Source File Version](../reference/Public-API.v1.json/paths/~1tasks~1{taskId}~1source-files~1{sourceFileId}~1versions/post)
-- [Add Target File Version](../reference/Public-API.v1.json/paths/~1tasks~1{taskId}~1target-files~1{targetFileId}~1versions/post)
-- [Import Target File Version](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1imports/post)
+- [Add Source File](../api/Public-API.v1-fv.html#/operations/AddSourceFile)
+- [Download Source File Version](../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion)
+- [Download Exported Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadExportedTargetFileVersion)
+- [Download Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion)
+- [Add Source File Version](../api/Public-API.v1-fv.html#/operations/AddSourceFileVersion)
+- [Add Target File Version](../api/Public-API.v1-fv.html#/operations/AddTargetFileVersion)
+- [Import Target File Version](../api/Public-API.v1-fv.html#/operations/ImportTargetFileVersion)
 
 each tenant is entitled to:
 1. Up to 5 API requests per second.
@@ -58,7 +58,7 @@ each tenant is entitled to:
 #### Rate Limit verification endpoint
 Individual rate limits can be consulted below:
 
-- [List Rate Limits](../reference/Public-API.v1.json/paths/~1rate-limits/get)
+- [List Rate Limits](../api/Public-API.v1-fv.html#/operations/ListRateLimits)
 
 ## Rejection response
 
@@ -77,7 +77,7 @@ Response headers can provide more details:
 - `X-RateLimit-Limit`: the limit that was exceeded. For example, the value "2" represents the available quota. It does not provide the type of limit that has been exceeded, for those details  the `X-RateLimit-Reset` and `X-RateLimit-Policy` should be used (for deciding when to retry the call).
 - `X-RateLimit-Reset`: the exact moment in time when the Client can resume activity. This is datetime in RFC-1123 format, for example: "Tue, 3 Jun 2008 11:05:30 GMT".
 - `X-RateLimit-Remaining`: the value is always  "0". This is reserved for future enhancements.
-- `X-RateLimit-Policy`: the name of the Rate Limit policy that was violated, made up by the operation and the time interval. Please see also the [List Rate Limits](../reference/Public-API.v1.json/paths/~1rate-limits/get). 
+- `X-RateLimit-Policy`: the name of the Rate Limit policy that was violated, made up by the operation and the time interval. Please see also the [List Rate Limits](../api/Public-API.v1-fv.html#/operations/ListRateLimits). 
 
 ## Implementation recommendations
 

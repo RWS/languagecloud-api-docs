@@ -1,4 +1,4 @@
-# Translation Memory import and export
+﻿# Translation Memory import and export
 
 ## Concepts
 
@@ -12,9 +12,9 @@ Concept | Explanation |
 
 The translation memory that you want to import must have one of the following formats: `tmx`, `sdltm`, `zip`, `tmx.gz` or `sdlxliff`.
 
-> Before the import action, make sure you have already created a translation memory using the [Create Translation Memory](../../reference/Public-API.v1.json/paths/~1translation-memory/post) endpoint.
+> Before the import action, make sure you have already created a translation memory using the [Create Translation Memory](../../api/Public-API.v1-fv.html#/operations/CreateTranslationMemory) endpoint.
 
-To import a translation memory, perform a `POST` request to the [Import Translation Memory](../../reference/Public-API.v1.json/paths/~1translation-memory~1{translationMemoryId}~1imports/post) endpoint and provide these details: `translationMemoryId`, the translation memory file and a couple of properties.
+To import a translation memory, perform a `POST` request to the [Import Translation Memory](../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory) endpoint and provide these details: `translationMemoryId`, the translation memory file and a couple of properties.
 
 <!-- theme: warning -->
 > Pay special attention to the order of `properties` and `file`. It must be exactly as described in the contract (properties first).
@@ -54,12 +54,12 @@ For more details about translation memory imports you can also check out the [Im
 ## Polling a translation memory import
 Some imports may take longer, depending on the size of the Translation Memory. 
 
-To check if the import finished, you can perform a `GET` request to the [Poll Translation Memory Import](../../reference/Public-API.v1.json/paths/~1translation-memory~1imports~1{importId}/get) endpoint and supply the `importId` and the `translationMemoryId`. The import is complete when the status is `done`.
+To check if the import finished, you can perform a `GET` request to the [Poll Translation Memory Import](../../api/Public-API.v1-fv.html#/operations/PollTMImport) endpoint and supply the `importId` and the `translationMemoryId`. The import is complete when the status is `done`.
 
 
 ## Exporting a translation memory
 
-To export a translation memory, perform a `POST` request to the [Export Translation Memory](../../reference/Public-API.v1.json/paths/~1translation-memory~1{translationMemoryId}~1exports/post) endpoint and provide the `translationMemoryId` and a valid `languageDirection` of your translation memory. 
+To export a translation memory, perform a `POST` request to the [Export Translation Memory](../../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory) endpoint and provide the `translationMemoryId` and a valid `languageDirection` of your translation memory. 
 
 If the export is successful, you will get back an `exportId` and the export `status`. If the export did not succeed, the response will contain an error message.
 
@@ -69,8 +69,9 @@ If the export is successful, you will get back an `exportId` and the export `sta
 
 Some exports may take longer, depending on the size of the Translation Memory.
 
-To check if the export finished, you can perform a `GET` request to the [Poll Translation Memory Export](../../reference/Public-API.v1.json/paths/~1translation-memory~1exports~1{exportId}/get) endpoint and supply the `exportId`. The export is complete when the status is `done`.
+To check if the export finished, you can perform a `GET` request to the [Poll Translation Memory Export](../../api/Public-API.v1-fv.html#/operations/PollTranslationMemoryExport) endpoint and supply the `exportId`. The export is complete when the status is `done`.
 
 ## Downloading a translation memory export
 
-If an export is completed successfully (the status received at the polling is `done`), it can be downloaded by performing a `GET` request to the [Download Exported Translation Memory](../../reference/Public-API.v1.json/paths/~1translation-memory~1exports~1{exportId}~1download/get) endpoint. Just supply as `path` parameter the `exportId` and the response will contain the exported translation memory file in `tmx.gz` format.
+If an export is completed successfully (the status received at the polling is `done`), it can be downloaded by performing a `GET` request to the [Download Exported Translation Memory](../../api/Public-API.v1-fv.html#/operations/DownloadExportedTranslationMemory) endpoint. Just supply as `path` parameter the `exportId` and the response will contain the exported translation memory file in `tmx.gz` format.
+
