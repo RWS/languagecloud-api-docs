@@ -871,7 +871,7 @@
             }
           }
         },
-        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](#/schemas/PreviewProvider.MainResponse)",
         "tags": [
           "Preview Provider"
         ],
@@ -931,7 +931,7 @@
             }
           }
         },
-        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](#/schemas/PreviewProvider.MainResponse)",
         "tags": [
           "Preview Provider"
         ],
@@ -1109,7 +1109,7 @@
             }
           }
         },
-        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](AddOn-API.v1.json/components/schemas/VerificationProvider.MainResponse)",
+        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](#/schemas/VerificationProvider.MainResponse)",
         "security": [
           {
             "Trados Cloud Platform JWS Token": []
