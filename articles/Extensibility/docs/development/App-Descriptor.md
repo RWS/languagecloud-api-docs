@@ -90,7 +90,7 @@ Any extension will have the generic set of properties:
 Read more on how to define the extensions for your app in our development guides:
 1. Automatic Task [guide](./Automatic-Task-App-development-guide.md).
 2. Machine Translation [guide](./MT-App-development-guide.md).
-3. Preview [guide](./Dynamic-Preview-guide.md).
+3. Preview [guide](./Preview-App-development-guide.md).
 
 ## Configuration
 

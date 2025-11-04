@@ -52,7 +52,7 @@ AppRegistrationEntity appRegistration = await _appRegistrationRepository.GetRegi
 ClientCredentialsEntity clientCredentials = appRegistration.ClientCredentials;
 ```
 
-For more details see the [Trados Cloud Platform API guide](../Language-Cloud-API.md#Credentials).
+For more details see the [Trados Cloud Platform API guide](../Trados-Cloud-API.md#credentials).
 
 ## Summary
 
