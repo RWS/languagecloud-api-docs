@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Annotations
+  commentId: N:Sdl.Core.Bcm.BcmModel.Annotations
+  id: Sdl.Core.Bcm.BcmModel.Annotations
+  children:
+  - Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer
+  - Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+  - Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Annotations
+  nameWithType: Sdl.Core.Bcm.BcmModel.Annotations
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer
+  parent: Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer.html
+  name: AnnotationContainer
+  nameWithType: AnnotationContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations.AnnotationContainer
+- uid: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+  parent: Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer.html
+  name: CommentContainer
+  nameWithType: CommentContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations.CommentContainer
+- uid: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+  parent: Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer.html
+  name: TerminologyAnnotationContainer
+  nameWithType: TerminologyAnnotationContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations.TerminologyAnnotationContainer
+- uid: Sdl.Core.Bcm.BcmModel.Annotations
+  commentId: N:Sdl.Core.Bcm.BcmModel.Annotations
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Annotations
+  nameWithType: Sdl.Core.Bcm.BcmModel.Annotations
+  fullName: Sdl.Core.Bcm.BcmModel.Annotations
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations
+    name: Annotations
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Annotations.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Annotations
+    name: Annotations
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Annotations.html

@@ -1,0 +1,32 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Serialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Serialization
+  id: Sdl.Core.Bcm.BcmModel.Serialization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping
+  - Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Serialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Serialization
+  fullName: Sdl.Core.Bcm.BcmModel.Serialization
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping
+  commentId: T:Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping.html
+  name: MarkupDataMapping
+  nameWithType: MarkupDataMapping
+  fullName: Sdl.Core.Bcm.BcmModel.Serialization.MarkupDataMapping
+- uid: Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping
+  commentId: T:Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping.html
+  name: TokenMapping
+  nameWithType: TokenMapping
+  fullName: Sdl.Core.Bcm.BcmModel.Serialization.TokenMapping

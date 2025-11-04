@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  id: Sign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Minus
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Sign.None
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Plus
+  langs:
+  - csharp
+  - vb
+  name: Sign
+  nameWithType: Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The sign of a number
+  example: []
+  syntax:
+    content: public enum Sign
+    content.vb: Public Enum Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.None
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Sign.None
+  id: None
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Sign.None
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.None
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: No explicit sign at the start of the number.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Plus
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Plus
+  id: Plus
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  langs:
+  - csharp
+  - vb
+  name: Plus
+  nameWithType: Sign.Plus
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Plus
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: An explicit plus sign at the start of the number.
+  example: []
+  syntax:
+    content: Plus = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Minus
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Minus
+  id: Minus
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  langs:
+  - csharp
+  - vb
+  name: Minus
+  nameWithType: Sign.Minus
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.Minus
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: A minus sign at the start of the number.
+  example: []
+  syntax:
+    content: Minus = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html
+  name: Sign
+  nameWithType: Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign

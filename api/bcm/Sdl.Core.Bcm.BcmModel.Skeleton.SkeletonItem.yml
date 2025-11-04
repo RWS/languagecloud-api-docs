@@ -1,0 +1,941 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  id: SkeletonItem
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  langs:
+  - csharp
+  - vb
+  name: SkeletonItem
+  nameWithType: SkeletonItem
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Base class for different types of elements definied in a <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public abstract class SkeletonItem : MetadataContainer, IEquatable<MetadataContainer>, IEquatable<SkeletonItem>
+    content.vb: >-
+      <DataContract>
+
+      Public MustInherit Class SkeletonItem Inherits MetadataContainer Implements IEquatable(Of MetadataContainer), IEquatable(Of SkeletonItem)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer
+  derivedClasses:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  - Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  - Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  langs:
+  - csharp
+  - vb
+  name: Equals(SkeletonItem)
+  nameWithType: SkeletonItem.Equals(SkeletonItem)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(SkeletonItem other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As SkeletonItem) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: SkeletonItem.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals*
+  nameWithType.vb: SkeletonItem.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SkeletonItem.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  langs:
+  - csharp
+  - vb
+  name: SkeletonItem()
+  nameWithType: SkeletonItem.SkeletonItem()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.SkeletonItem()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  syntax:
+    content: protected SkeletonItem()
+    content.vb: Protected Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor*
+  nameWithType.vb: SkeletonItem.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  id: Id
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SkeletonItem.Id
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the identifier.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "id", Order = -2147483648)]
+
+      public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The identifier.
+    content.vb: >-
+      <JsonProperty(PropertyName:="id", Order:=-2147483648)>
+
+      Public Property Id As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: id
+    - name: Order
+      type: System.Int32
+      value: -2147483648
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  name: MetadataContainer
+  nameWithType: MetadataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MetadataContainer>
+  nameWithType: IEquatable<MetadataContainer>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MetadataContainer>
+  nameWithType.vb: IEquatable(Of MetadataContainer)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  name.vb: IEquatable(Of MetadataContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<SkeletonItem>
+  nameWithType: IEquatable<SkeletonItem>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem>
+  nameWithType.vb: IEquatable(Of SkeletonItem)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  name.vb: IEquatable(Of SkeletonItem)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  name: GetMetadata(string)
+  nameWithType: MetadataContainer.GetMetadata(string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(string)
+  nameWithType.vb: MetadataContainer.GetMetadata(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(String)
+  name.vb: GetMetadata(String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  name: SetMetadata(string, string)
+  nameWithType: MetadataContainer.SetMetadata(string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(string, string)
+  nameWithType.vb: MetadataContainer.SetMetadata(String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(String, String)
+  name.vb: SetMetadata(String, String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  name: Equals(MetadataContainer)
+  nameWithType: MetadataContainer.Equals(MetadataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  name: ShouldSerialize_metadata()
+  nameWithType: MetadataContainer.ShouldSerialize_metadata()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  commentId: P:Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata
+  name: Metadata
+  nameWithType: MetadataContainer.Metadata
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_
+  name: Equals
+  nameWithType: SkeletonItem.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(SkeletonItem)
+  nameWithType: IEquatable<SkeletonItem>.Equals(SkeletonItem)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem>.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  nameWithType.vb: IEquatable(Of SkeletonItem).Equals(SkeletonItem)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem).Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+    name: SkeletonItem
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html
+  name: SkeletonItem
+  nameWithType: SkeletonItem
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MetadataContainer.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(object)
+  nameWithType.vb: MetadataContainer.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MetadataContainer.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_GetHashCode
+  name: GetHashCode
+  nameWithType: SkeletonItem.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem__ctor
+  name: SkeletonItem
+  nameWithType: SkeletonItem.SkeletonItem
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.SkeletonItem
+  nameWithType.vb: SkeletonItem.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonItem_Id
+  name: Id
+  nameWithType: SkeletonItem.Id
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonItem.Id

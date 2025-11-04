@@ -1,0 +1,1267 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  id: Unit
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISacre
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUK
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUSDry
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUK
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUS
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISfurlong
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUK
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUS
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlb
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongHW
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongTon
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISoz
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUK
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUS
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUSDry
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISqtUK
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortHW
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortTon
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISstone
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Currency
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ma
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcentigrade
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcl
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm3
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdegree
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdl
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdm
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mfahrenheit
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mg
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mha
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkelvin
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkg
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ml
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm3
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmg
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mml
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm2
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mpercent
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mt
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.NoUnit
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Other
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: Unit
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Enumerates the units supported by Sdl.LanguagePlatform.Core.Tokenization.Unit
+  example: []
+  syntax:
+    content: public enum Unit
+    content.vb: Public Enum Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm
+  id: Mmm
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mmm
+  nameWithType: Unit.Mmm
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric millimeters
+  example: []
+  syntax:
+    content: Mmm = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm
+  id: Mcm
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mcm
+  nameWithType: Unit.Mcm
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric centimeters
+  example: []
+  syntax:
+    content: Mcm = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdm
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdm
+  id: Mdm
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mdm
+  nameWithType: Unit.Mdm
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdm
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric decimeters
+  example: []
+  syntax:
+    content: Mdm = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm
+  id: Mm
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mm
+  nameWithType: Unit.Mm
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric meters
+  example: []
+  syntax:
+    content: Mm = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm
+  id: Mkm
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mkm
+  nameWithType: Unit.Mkm
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric kilometers
+  example: []
+  syntax:
+    content: Mkm = 4
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm2
+  id: Mmm2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mmm2
+  nameWithType: Unit.Mmm2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmm2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric square millimeters
+  example: []
+  syntax:
+    content: Mmm2 = 5
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm2
+  id: Mcm2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mcm2
+  nameWithType: Unit.Mcm2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric square centimeters
+  example: []
+  syntax:
+    content: Mcm2 = 6
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm2
+  id: Mm2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mm2
+  nameWithType: Unit.Mm2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric square meters
+  example: []
+  syntax:
+    content: Mm2 = 7
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ma
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ma
+  id: Ma
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Ma
+  nameWithType: Unit.Ma
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ma
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric are
+  example: []
+  syntax:
+    content: Ma = 8
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mha
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mha
+  id: Mha
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mha
+  nameWithType: Unit.Mha
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mha
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric hectare
+  example: []
+  syntax:
+    content: Mha = 9
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm2
+  id: Mkm2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mkm2
+  nameWithType: Unit.Mkm2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkm2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric square kilometers
+  example: []
+  syntax:
+    content: Mkm2 = 10
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmg
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmg
+  id: Mmg
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mmg
+  nameWithType: Unit.Mmg
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mmg
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric milligrams
+  example: []
+  syntax:
+    content: Mmg = 11
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mg
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mg
+  id: Mg
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mg
+  nameWithType: Unit.Mg
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mg
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric grams
+  example: []
+  syntax:
+    content: Mg = 12
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkg
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkg
+  id: Mkg
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mkg
+  nameWithType: Unit.Mkg
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkg
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric kilograms
+  example: []
+  syntax:
+    content: Mkg = 13
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mt
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mt
+  id: Mt
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mt
+  nameWithType: Unit.Mt
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mt
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric tons
+  example: []
+  syntax:
+    content: Mt = 14
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mml
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mml
+  id: Mml
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mml
+  nameWithType: Unit.Mml
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mml
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric milliliters
+  example: []
+  syntax:
+    content: Mml = 15
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm3
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm3
+  id: Mcm3
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mcm3
+  nameWithType: Unit.Mcm3
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcm3
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric cubic centimeters
+  example: []
+  syntax:
+    content: Mcm3 = 16
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcl
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcl
+  id: Mcl
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mcl
+  nameWithType: Unit.Mcl
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcl
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric centiliters
+  example: []
+  syntax:
+    content: Mcl = 17
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdl
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdl
+  id: Mdl
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mdl
+  nameWithType: Unit.Mdl
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdl
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric deciliters
+  example: []
+  syntax:
+    content: Mdl = 18
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ml
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ml
+  id: Ml
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Ml
+  nameWithType: Unit.Ml
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Ml
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric liters
+  example: []
+  syntax:
+    content: Ml = 19
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm3
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm3
+  id: Mm3
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mm3
+  nameWithType: Unit.Mm3
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mm3
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Metric cubic meters
+  example: []
+  syntax:
+    content: Mm3 = 20
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcentigrade
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcentigrade
+  id: Mcentigrade
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mcentigrade
+  nameWithType: Unit.Mcentigrade
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mcentigrade
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Mcentigrade
+  example: []
+  syntax:
+    content: Mcentigrade = 21
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mfahrenheit
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mfahrenheit
+  id: Mfahrenheit
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mfahrenheit
+  nameWithType: Unit.Mfahrenheit
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mfahrenheit
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Mfahrenheit
+  example: []
+  syntax:
+    content: Mfahrenheit = 22
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkelvin
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkelvin
+  id: Mkelvin
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mkelvin
+  nameWithType: Unit.Mkelvin
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mkelvin
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Mkelvin
+  example: []
+  syntax:
+    content: Mkelvin = 23
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mpercent
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mpercent
+  id: Mpercent
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mpercent
+  nameWithType: Unit.Mpercent
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mpercent
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Mpercent
+  example: []
+  syntax:
+    content: Mpercent = 24
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdegree
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdegree
+  id: Mdegree
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Mdegree
+  nameWithType: Unit.Mdegree
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Mdegree
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Mdegree
+  example: []
+  syntax:
+    content: Mdegree = 25
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin
+  id: BISin
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISin
+  nameWithType: Unit.BISin
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISin
+  example: []
+  syntax:
+    content: BISin = 26
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft
+  id: BISft
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISft
+  nameWithType: Unit.BISft
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISft
+  example: []
+  syntax:
+    content: BISft = 27
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd
+  id: BISyd
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISyd
+  nameWithType: Unit.BISyd
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISyd
+  example: []
+  syntax:
+    content: BISyd = 28
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISfurlong
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISfurlong
+  id: BISfurlong
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISfurlong
+  nameWithType: Unit.BISfurlong
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISfurlong
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISfurlong
+  example: []
+  syntax:
+    content: BISfurlong = 29
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi
+  id: BISmi
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISmi
+  nameWithType: Unit.BISmi
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISmi
+  example: []
+  syntax:
+    content: BISmi = 30
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin2
+  id: BISin2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISin2
+  nameWithType: Unit.BISin2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISin2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISin2
+  example: []
+  syntax:
+    content: BISin2 = 31
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft2
+  id: BISft2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISft2
+  nameWithType: Unit.BISft2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISft2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISft2
+  example: []
+  syntax:
+    content: BISft2 = 32
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd2
+  id: BISyd2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISyd2
+  nameWithType: Unit.BISyd2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISyd2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISyd2
+  example: []
+  syntax:
+    content: BISyd2 = 33
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISacre
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISacre
+  id: BISacre
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISacre
+  nameWithType: Unit.BISacre
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISacre
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISacre
+  example: []
+  syntax:
+    content: BISacre = 34
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi2
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi2
+  id: BISmi2
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISmi2
+  nameWithType: Unit.BISmi2
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISmi2
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISmi2
+  example: []
+  syntax:
+    content: BISmi2 = 35
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISoz
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISoz
+  id: BISoz
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISoz
+  nameWithType: Unit.BISoz
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISoz
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISoz
+  example: []
+  syntax:
+    content: BISoz = 36
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlb
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlb
+  id: BISlb
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISlb
+  nameWithType: Unit.BISlb
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlb
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISlb
+  example: []
+  syntax:
+    content: BISlb = 37
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISstone
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISstone
+  id: BISstone
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISstone
+  nameWithType: Unit.BISstone
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISstone
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISstone
+  example: []
+  syntax:
+    content: BISstone = 38
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortHW
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortHW
+  id: BISshortHW
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISshortHW
+  nameWithType: Unit.BISshortHW
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortHW
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISshortHW
+  example: []
+  syntax:
+    content: BISshortHW = 39
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongHW
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongHW
+  id: BISlongHW
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISlongHW
+  nameWithType: Unit.BISlongHW
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongHW
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISlongHW
+  example: []
+  syntax:
+    content: BISlongHW = 40
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortTon
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortTon
+  id: BISshortTon
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISshortTon
+  nameWithType: Unit.BISshortTon
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISshortTon
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISshortTon
+  example: []
+  syntax:
+    content: BISshortTon = 41
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongTon
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongTon
+  id: BISlongTon
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISlongTon
+  nameWithType: Unit.BISlongTon
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISlongTon
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISlongTon
+  example: []
+  syntax:
+    content: BISlongTon = 42
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUK
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUK
+  id: BISflozUK
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISflozUK
+  nameWithType: Unit.BISflozUK
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUK
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISflozUK
+  example: []
+  syntax:
+    content: BISflozUK = 43
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUK
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUK
+  id: BISptUK
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISptUK
+  nameWithType: Unit.BISptUK
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUK
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISptUK
+  example: []
+  syntax:
+    content: BISptUK = 44
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISqtUK
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISqtUK
+  id: BISqtUK
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISqtUK
+  nameWithType: Unit.BISqtUK
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISqtUK
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISqtUK
+  example: []
+  syntax:
+    content: BISqtUK = 45
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUK
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUK
+  id: BISgalUK
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISgalUK
+  nameWithType: Unit.BISgalUK
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUK
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISgalUK
+  example: []
+  syntax:
+    content: BISgalUK = 46
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUK
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUK
+  id: BISbuUK
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISbuUK
+  nameWithType: Unit.BISbuUK
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUK
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISbuUK
+  example: []
+  syntax:
+    content: BISbuUK = 47
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUS
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUS
+  id: BISflozUS
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISflozUS
+  nameWithType: Unit.BISflozUS
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISflozUS
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISflozUS
+  example: []
+  syntax:
+    content: BISflozUS = 48
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUS
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUS
+  id: BISptUS
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISptUS
+  nameWithType: Unit.BISptUS
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUS
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISptUS
+  example: []
+  syntax:
+    content: BISptUS = 49
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUS
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUS
+  id: BISgalUS
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISgalUS
+  nameWithType: Unit.BISgalUS
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISgalUS
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISgalUS
+  example: []
+  syntax:
+    content: BISgalUS = 50
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUSDry
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUSDry
+  id: BISptUSDry
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISptUSDry
+  nameWithType: Unit.BISptUSDry
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISptUSDry
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISptUSDry
+  example: []
+  syntax:
+    content: BISptUSDry = 51
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUSDry
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUSDry
+  id: BISbuUSDry
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: BISbuUSDry
+  nameWithType: Unit.BISbuUSDry
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.BISbuUSDry
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: BISbuUSDry
+  example: []
+  syntax:
+    content: BISbuUSDry = 52
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Other
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Other
+  id: Other
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Other
+  nameWithType: Unit.Other
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Other
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: >-
+    The unit represents another, general unit for which no cross-system conversion will
+
+    be available.
+  example: []
+  syntax:
+    content: Other = 53
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Currency
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Currency
+  id: Currency
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: Currency
+  nameWithType: Unit.Currency
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.Currency
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The unit represents a currency
+  example: []
+  syntax:
+    content: Currency = 54
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.NoUnit
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.Unit.NoUnit
+  id: NoUnit
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  langs:
+  - csharp
+  - vb
+  name: NoUnit
+  nameWithType: Unit.NoUnit
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.NoUnit
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: A sentinel, should not be used
+  example: []
+  syntax:
+    content: NoUnit = 55
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Unit
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Unit.html
+  name: Unit
+  nameWithType: Unit
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Unit

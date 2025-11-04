@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Alignment
+  commentId: N:Sdl.Core.Bcm.BcmModel.Alignment
+  id: Sdl.Core.Bcm.BcmModel.Alignment
+  children:
+  - Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData
+  - Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Alignment
+  nameWithType: Sdl.Core.Bcm.BcmModel.Alignment
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.html
+  name: AlignmentData
+  nameWithType: AlignmentData
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html
+  name: LiftSpan
+  nameWithType: LiftSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html
+  name: SpanPairNode
+  nameWithType: SpanPairNode
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+- uid: Sdl.Core.Bcm.BcmModel.Alignment
+  commentId: N:Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Alignment
+  nameWithType: Sdl.Core.Bcm.BcmModel.Alignment
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment
+    name: Alignment
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment
+    name: Alignment
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.html

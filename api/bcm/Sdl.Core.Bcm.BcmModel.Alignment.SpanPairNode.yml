@@ -1,0 +1,794 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  id: SpanPairNode
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  children:
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+  - Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+  langs:
+  - csharp
+  - vb
+  name: SpanPairNode
+  nameWithType: SpanPairNode
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: Stores information about an alignment between a pair of <xref href="Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan" data-throw-if-not-resolved="false"></xref> objects.
+  example: []
+  syntax:
+    content: 'public class SpanPairNode : ExtensionDataContainer, ICloneable<SpanPairNode>'
+    content.vb: Public Class SpanPairNode Inherits ExtensionDataContainer Implements ICloneable(Of SpanPairNode)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: SpanPairNode.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public SpanPairNode Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+      description: ''
+    content.vb: Public Function Clone() As SpanPairNode
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone*
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: SpanPairNode()
+  nameWithType: SpanPairNode.SpanPairNode()
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SpanPairNode()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  syntax:
+    content: public SpanPairNode()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor*
+  nameWithType.vb: SpanPairNode.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+  commentId: P:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+  id: SourceSpan
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: SourceSpan
+  nameWithType: SpanPairNode.SourceSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: The source <xref href="Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public LiftSpan SourceSpan { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+    content.vb: Public Property SourceSpan As LiftSpan
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan*
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+  commentId: P:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+  id: TargetSpan
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: TargetSpan
+  nameWithType: SpanPairNode.TargetSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: The target <xref href="Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public LiftSpan TargetSpan { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+    content.vb: Public Property TargetSpan As LiftSpan
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan*
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+  commentId: P:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+  id: Confidence
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: Confidence
+  nameWithType: SpanPairNode.Confidence
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: >-
+    A value indicating how reliable this alignment should be considered to be.
+
+    A zero value indicates that no reliability-value can be applied. Otherwise, the value should be no greater than 1, which indicates maximum reliability.
+  example: []
+  syntax:
+    content: public float Confidence { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Confidence As Single
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence*
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+  commentId: P:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+  id: Provenance
+  parent: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  langs:
+  - csharp
+  - vb
+  name: Provenance
+  nameWithType: SpanPairNode.Provenance
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Alignment
+  summary: >-
+    A value recording how the alignment was produced.
+
+    <table><thead><tr><th class="term">Value</th><th class="description">Description</th></tr></thead><tbody><tr><td class="term">1</td><td class="description">NodeAlignment</td></tr><tr><td class="term">2</td><td class="description">SeedConfirmation</td></tr><tr><td class="term">3</td><td class="description">PlaceableAlignment</td></tr><tr><td class="term">4</td><td class="description">PhraseExtractor</td></tr><tr><td class="term">5</td><td class="description">Structure</td></tr><tr><td class="term">6</td><td class="description">TrainedAligner</td></tr><tr><td class="term">7</td><td class="description">Other</td></tr></tbody></table>
+  example: []
+  syntax:
+    content: public int Provenance { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Provenance As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan.html
+  name: LiftSpan
+  nameWithType: LiftSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.LiftSpan
+- uid: Sdl.Core.Bcm.BcmModel.Alignment
+  commentId: N:Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Alignment
+  nameWithType: Sdl.Core.Bcm.BcmModel.Alignment
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment
+    name: Alignment
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment
+    name: Alignment
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<SpanPairNode>
+  nameWithType: ICloneable<SpanPairNode>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode>
+  nameWithType.vb: ICloneable(Of SpanPairNode)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode)
+  name.vb: ICloneable(Of SpanPairNode)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+    name: SpanPairNode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+    name: SpanPairNode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Clone
+  name: Clone
+  nameWithType: SpanPairNode.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<SpanPairNode>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode>.Clone()
+  nameWithType.vb: ICloneable(Of SpanPairNode).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  commentId: T:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+  parent: Sdl.Core.Bcm.BcmModel.Alignment
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html
+  name: SpanPairNode
+  nameWithType: SpanPairNode
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<T>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>.Clone()
+  nameWithType.vb: ICloneable(Of T).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode__ctor
+  name: SpanPairNode
+  nameWithType: SpanPairNode.SpanPairNode
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SpanPairNode
+  nameWithType.vb: SpanPairNode.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_SourceSpan
+  name: SourceSpan
+  nameWithType: SpanPairNode.SourceSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.SourceSpan
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_TargetSpan
+  name: TargetSpan
+  nameWithType: SpanPairNode.TargetSpan
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.TargetSpan
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Confidence
+  name: Confidence
+  nameWithType: SpanPairNode.Confidence
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Confidence
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.html#Sdl_Core_Bcm_BcmModel_Alignment_SpanPairNode_Provenance
+  name: Provenance
+  nameWithType: SpanPairNode.Provenance
+  fullName: Sdl.Core.Bcm.BcmModel.Alignment.SpanPairNode.Provenance
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -1,0 +1,2525 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  id: FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  - Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  langs:
+  - csharp
+  - vb
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Holds data for a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref> that is referenced by different <xref href="Sdl.Core.Bcm.BcmModel.MarkupData" data-throw-if-not-resolved="false"></xref> elements.
+  example:
+  - A <xref href="Sdl.Core.Bcm.BcmModel.PlaceholderTag" data-throw-if-not-resolved="false"></xref> element has a DefinitionId that points to an element in the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions" data-throw-if-not-resolved="false"></xref> collection.
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class FileSkeleton : MetadataContainer, IEquatable<MetadataContainer>, ICloneable<FileSkeleton>, IEquatable<FileSkeleton>
+    content.vb: >-
+      <DataContract>
+
+      Public Class FileSkeleton Inherits MetadataContainer Implements IEquatable(Of MetadataContainer), ICloneable(Of FileSkeleton), IEquatable(Of FileSkeleton)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: FileSkeleton()
+  nameWithType: FileSkeleton.FileSkeleton()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileSkeleton()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Public constructor.
+  example: []
+  syntax:
+    content: public FileSkeleton()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor*
+  nameWithType.vb: FileSkeleton.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: FileSkeleton.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public FileSkeleton Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+      description: ''
+    content.vb: Public Function Clone() As FileSkeleton
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone*
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: Equals(FileSkeleton)
+  nameWithType: FileSkeleton.Equals(FileSkeleton)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public bool Equals(FileSkeleton other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As FileSkeleton) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: FileSkeleton.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals*
+  nameWithType.vb: FileSkeleton.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: FileSkeleton.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions
+  id: ShouldSerializeCommentDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeCommentDefinitions()
+  nameWithType: FileSkeleton.ShouldSerializeCommentDefinitions()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeCommentDefinitions()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeCommentDefinitions() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions
+  id: ShouldSerializeContextDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeContextDefinitions()
+  nameWithType: FileSkeleton.ShouldSerializeContextDefinitions()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeContextDefinitions()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeContextDefinitions() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts
+  id: ShouldSerializeContexts
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeContexts()
+  nameWithType: FileSkeleton.ShouldSerializeContexts()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeContexts()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeContexts() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups
+  id: ShouldSerializeFormattingGroups
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeFormattingGroups()
+  nameWithType: FileSkeleton.ShouldSerializeFormattingGroups()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeFormattingGroups()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeFormattingGroups() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions
+  id: ShouldSerializeStructureTagDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeStructureTagDefinitions()
+  nameWithType: FileSkeleton.ShouldSerializeStructureTagDefinitions()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeStructureTagDefinitions()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeStructureTagDefinitions() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions
+  id: ShouldSerializeTagPairDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeTagPairDefinitions()
+  nameWithType: FileSkeleton.ShouldSerializeTagPairDefinitions()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeTagPairDefinitions()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeTagPairDefinitions() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+  id: ShouldSerializePlaceholderTagDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializePlaceholderTagDefinitions()
+  nameWithType: FileSkeleton.ShouldSerializePlaceholderTagDefinitions()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializePlaceholderTagDefinitions()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializePlaceholderTagDefinitions() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData
+  id: ShouldSerializeTerminologyData
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeTerminologyData()
+  nameWithType: FileSkeleton.ShouldSerializeTerminologyData()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeTerminologyData()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeTerminologyData() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs
+  id: ShouldSerializeSubContentPUs
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeSubContentPUs()
+  nameWithType: FileSkeleton.ShouldSerializeSubContentPUs()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeSubContentPUs()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeSubContentPUs() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds
+  id: ShouldSerializeQuickInsertIds
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ShouldSerializeQuickInsertIds()
+  nameWithType: FileSkeleton.ShouldSerializeQuickInsertIds()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Used by JSON serialization.
+  example: []
+  syntax:
+    content: public bool ShouldSerializeQuickInsertIds()
+    return:
+      type: System.Boolean
+      description: <code>True</code> if <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds" data-throw-if-not-resolved="false"></xref> should be serialized.
+    content.vb: Public Function ShouldSerializeQuickInsertIds() As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+  id: FileId
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: FileId
+  nameWithType: FileSkeleton.FileId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: The <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref> id.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "fileId", EmitDefaultValue = false)]
+
+      public string FileId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="fileId", EmitDefaultValue:=False)>
+
+      Public Property FileId As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: fileId
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  id: CommentDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: CommentDefinitions
+  nameWithType: FileSkeleton.CommentDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "commentDefinitions")]
+
+      public SkeletonCollection<CommentDefinition> CommentDefinitions { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition}
+    content.vb: >-
+      <DataMember(Name:="commentDefinitions")>
+
+      Public Property CommentDefinitions As SkeletonCollection(Of CommentDefinition)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: commentDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  id: ContextDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ContextDefinitions
+  nameWithType: FileSkeleton.ContextDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition" data-throw-if-not-resolved="false"></xref>elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "contextDefinitions")]
+
+      public SkeletonCollection<ContextDefinition> ContextDefinitions { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition}
+    content.vb: >-
+      <DataMember(Name:="contextDefinitions")>
+
+      Public Property ContextDefinitions As SkeletonCollection(Of ContextDefinition)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: contextDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  id: Contexts
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: Contexts
+  nameWithType: FileSkeleton.Contexts
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.Context" data-throw-if-not-resolved="false"></xref>elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "contexts")]
+
+      public SkeletonCollection<Context> Contexts { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.Context}
+    content.vb: >-
+      <DataMember(Name:="contexts")>
+
+      Public Property Contexts As SkeletonCollection(Of Context)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: contexts
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  id: FormattingGroups
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: FormattingGroups
+  nameWithType: FileSkeleton.FormattingGroups
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "formattingGroups")]
+
+      public SkeletonCollection<FormattingGroup> FormattingGroups { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup}
+    content.vb: >-
+      <DataMember(Name:="formattingGroups")>
+
+      Public Property FormattingGroups As SkeletonCollection(Of FormattingGroup)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: formattingGroups
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+  id: StructureTagDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: StructureTagDefinitions
+  nameWithType: FileSkeleton.StructureTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "structureTagDefinitions")]
+
+      public SkeletonCollection<StructureTagDefinition> StructureTagDefinitions { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition}
+    content.vb: >-
+      <DataMember(Name:="structureTagDefinitions")>
+
+      Public Property StructureTagDefinitions As SkeletonCollection(Of StructureTagDefinition)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: structureTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  id: TagPairDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: TagPairDefinitions
+  nameWithType: FileSkeleton.TagPairDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "tagPairDefinitions")]
+
+      public SkeletonCollection<TagPairDefinition> TagPairDefinitions { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+    content.vb: >-
+      <DataMember(Name:="tagPairDefinitions")>
+
+      Public Property TagPairDefinitions As SkeletonCollection(Of TagPairDefinition)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: tagPairDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  id: PlaceholderTagDefinitions
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: PlaceholderTagDefinitions
+  nameWithType: FileSkeleton.PlaceholderTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "placeholderTagDefinitions")]
+
+      public SkeletonCollection<PlaceholderTagDefinition> PlaceholderTagDefinitions { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition}
+    content.vb: >-
+      <DataMember(Name:="placeholderTagDefinitions")>
+
+      Public Property PlaceholderTagDefinitions As SkeletonCollection(Of PlaceholderTagDefinition)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: placeholderTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  id: TerminologyData
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: TerminologyData
+  nameWithType: FileSkeleton.TerminologyData
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData" data-throw-if-not-resolved="false"></xref> elements referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "terminologyData")]
+
+      public SkeletonCollection<TerminologyData> TerminologyData { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData}
+    content.vb: >-
+      <DataMember(Name:="terminologyData")>
+
+      Public Property TerminologyData As SkeletonCollection(Of TerminologyData)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: terminologyData
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  id: QuickInsertIds
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: QuickInsertIds
+  nameWithType: FileSkeleton.QuickInsertIds
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Collection of all the QuickInsert IDs referenced in a <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "quickInsertIds", EmitDefaultValue = false)]
+
+      public List<string> QuickInsertIds { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <DataMember(Name:="quickInsertIds", EmitDefaultValue:=False)>
+
+      Public Property QuickInsertIds As List(Of String)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: quickInsertIds
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  id: SubContentPUs
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: SubContentPUs
+  nameWithType: FileSkeleton.SubContentPUs
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: List of all the IDs of <xref href="Sdl.Core.Bcm.BcmModel.ParagraphUnit" data-throw-if-not-resolved="false"></xref>s that are sub-content elements.
+  example: []
+  syntax:
+    content: public List<string> SubContentPUs { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property SubContentPUs As List(Of String)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+  id: ParentFile
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: ParentFile
+  nameWithType: FileSkeleton.ParentFile
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: The <xref href="Sdl.Core.Bcm.BcmModel.File" data-throw-if-not-resolved="false"></xref> for which this <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref> is defined.
+  example: []
+  syntax:
+    content: public File ParentFile { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.File
+    content.vb: Public Property ParentFile As File
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  id: IdGenerator
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  langs:
+  - csharp
+  - vb
+  name: IdGenerator
+  nameWithType: FileSkeleton.IdGenerator
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: An <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator" data-throw-if-not-resolved="false"></xref> instance that creates unique numeric IDs for all the elements in different <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref> collection.
+  example: []
+  syntax:
+    content: public IdGenerator IdGenerator { get; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+    content.vb: Public ReadOnly Property IdGenerator As IdGenerator
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.File
+  commentId: T:Sdl.Core.Bcm.BcmModel.File
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.File.html
+  name: File
+  nameWithType: File
+  fullName: Sdl.Core.Bcm.BcmModel.File
+- uid: Sdl.Core.Bcm.BcmModel.MarkupData
+  commentId: T:Sdl.Core.Bcm.BcmModel.MarkupData
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MarkupData.html
+  name: MarkupData
+  nameWithType: MarkupData
+  fullName: Sdl.Core.Bcm.BcmModel.MarkupData
+- uid: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+  commentId: T:Sdl.Core.Bcm.BcmModel.PlaceholderTag
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PlaceholderTag.html
+  name: PlaceholderTag
+  nameWithType: PlaceholderTag
+  fullName: Sdl.Core.Bcm.BcmModel.PlaceholderTag
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_PlaceholderTagDefinitions
+  name: PlaceholderTagDefinitions
+  nameWithType: FileSkeleton.PlaceholderTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  name: MetadataContainer
+  nameWithType: MetadataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MetadataContainer>
+  nameWithType: IEquatable<MetadataContainer>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MetadataContainer>
+  nameWithType.vb: IEquatable(Of MetadataContainer)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  name.vb: IEquatable(Of MetadataContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<FileSkeleton>
+  nameWithType: ICloneable<FileSkeleton>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton>
+  nameWithType.vb: ICloneable(Of FileSkeleton)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  name.vb: ICloneable(Of FileSkeleton)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<FileSkeleton>
+  nameWithType: IEquatable<FileSkeleton>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton>
+  nameWithType.vb: IEquatable(Of FileSkeleton)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  name.vb: IEquatable(Of FileSkeleton)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  name: GetMetadata(string)
+  nameWithType: MetadataContainer.GetMetadata(string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(string)
+  nameWithType.vb: MetadataContainer.GetMetadata(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(String)
+  name.vb: GetMetadata(String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  name: SetMetadata(string, string)
+  nameWithType: MetadataContainer.SetMetadata(string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(string, string)
+  nameWithType.vb: MetadataContainer.SetMetadata(String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(String, String)
+  name.vb: SetMetadata(String, String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  name: Equals(MetadataContainer)
+  nameWithType: MetadataContainer.Equals(MetadataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  name: ShouldSerialize_metadata()
+  nameWithType: MetadataContainer.ShouldSerialize_metadata()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  commentId: P:Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata
+  name: Metadata
+  nameWithType: MetadataContainer.Metadata
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton__ctor
+  name: FileSkeleton
+  nameWithType: FileSkeleton.FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileSkeleton
+  nameWithType.vb: FileSkeleton.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_Clone
+  name: Clone
+  nameWithType: FileSkeleton.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<FileSkeleton>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton>.Clone()
+  nameWithType.vb: ICloneable(Of FileSkeleton).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<T>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>.Clone()
+  nameWithType.vb: ICloneable(Of T).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_
+  name: Equals
+  nameWithType: FileSkeleton.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(FileSkeleton)
+  nameWithType: IEquatable<FileSkeleton>.Equals(FileSkeleton)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton>.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  nameWithType.vb: IEquatable(Of FileSkeleton).Equals(FileSkeleton)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton).Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+    name: FileSkeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MetadataContainer.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(object)
+  nameWithType.vb: MetadataContainer.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MetadataContainer.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_GetHashCode
+  name: GetHashCode
+  nameWithType: FileSkeleton.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_CommentDefinitions
+  name: CommentDefinitions
+  nameWithType: FileSkeleton.CommentDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeCommentDefinitions
+  name: ShouldSerializeCommentDefinitions
+  nameWithType: FileSkeleton.ShouldSerializeCommentDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeCommentDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ContextDefinitions
+  name: ContextDefinitions
+  nameWithType: FileSkeleton.ContextDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeContextDefinitions
+  name: ShouldSerializeContextDefinitions
+  nameWithType: FileSkeleton.ShouldSerializeContextDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContextDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_Contexts
+  name: Contexts
+  nameWithType: FileSkeleton.Contexts
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeContexts
+  name: ShouldSerializeContexts
+  nameWithType: FileSkeleton.ShouldSerializeContexts
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeContexts
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_FormattingGroups
+  name: FormattingGroups
+  nameWithType: FileSkeleton.FormattingGroups
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeFormattingGroups
+  name: ShouldSerializeFormattingGroups
+  nameWithType: FileSkeleton.ShouldSerializeFormattingGroups
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeFormattingGroups
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeStructureTagDefinitions
+  name: ShouldSerializeStructureTagDefinitions
+  nameWithType: FileSkeleton.ShouldSerializeStructureTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeStructureTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_TagPairDefinitions
+  name: TagPairDefinitions
+  nameWithType: FileSkeleton.TagPairDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeTagPairDefinitions
+  name: ShouldSerializeTagPairDefinitions
+  nameWithType: FileSkeleton.ShouldSerializeTagPairDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTagPairDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializePlaceholderTagDefinitions
+  name: ShouldSerializePlaceholderTagDefinitions
+  nameWithType: FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializePlaceholderTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_TerminologyData
+  name: TerminologyData
+  nameWithType: FileSkeleton.TerminologyData
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeTerminologyData
+  name: ShouldSerializeTerminologyData
+  nameWithType: FileSkeleton.ShouldSerializeTerminologyData
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeTerminologyData
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_SubContentPUs
+  name: SubContentPUs
+  nameWithType: FileSkeleton.SubContentPUs
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeSubContentPUs
+  name: ShouldSerializeSubContentPUs
+  nameWithType: FileSkeleton.ShouldSerializeSubContentPUs
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeSubContentPUs
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_QuickInsertIds
+  name: QuickInsertIds
+  nameWithType: FileSkeleton.QuickInsertIds
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ShouldSerializeQuickInsertIds
+  name: ShouldSerializeQuickInsertIds
+  nameWithType: FileSkeleton.ShouldSerializeQuickInsertIds
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ShouldSerializeQuickInsertIds
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_FileId
+  name: FileId
+  nameWithType: FileSkeleton.FileId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FileId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html
+  name: CommentDefinition
+  nameWithType: CommentDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_CommentDefinitions
+  name: CommentDefinitions
+  nameWithType: FileSkeleton.CommentDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.CommentDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<CommentDefinition>
+  nameWithType: SkeletonCollection<CommentDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition>
+  nameWithType.vb: SkeletonCollection(Of CommentDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition)
+  name.vb: SkeletonCollection(Of CommentDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+    name: CommentDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition
+    name: CommentDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.CommentDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<T>
+  nameWithType: SkeletonCollection<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<T>
+  nameWithType.vb: SkeletonCollection(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of T)
+  name.vb: SkeletonCollection(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html
+  name: ContextDefinition
+  nameWithType: ContextDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ContextDefinitions
+  name: ContextDefinitions
+  nameWithType: FileSkeleton.ContextDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ContextDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<ContextDefinition>
+  nameWithType: SkeletonCollection<ContextDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition>
+  nameWithType.vb: SkeletonCollection(Of ContextDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition)
+  name.vb: SkeletonCollection(Of ContextDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+    name: ContextDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition
+    name: ContextDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.ContextDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.Context
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.Context.html
+  name: Context
+  nameWithType: Context
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_Contexts
+  name: Contexts
+  nameWithType: FileSkeleton.Contexts
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.Contexts
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.Context}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.Context}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<Context>
+  nameWithType: SkeletonCollection<Context>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.Context>
+  nameWithType.vb: SkeletonCollection(Of Context)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.Context)
+  name.vb: SkeletonCollection(Of Context)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+    name: Context
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.Context.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.Context
+    name: Context
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.Context.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html
+  name: FormattingGroup
+  nameWithType: FormattingGroup
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_FormattingGroups
+  name: FormattingGroups
+  nameWithType: FileSkeleton.FormattingGroups
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.FormattingGroups
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<FormattingGroup>
+  nameWithType: SkeletonCollection<FormattingGroup>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup>
+  nameWithType.vb: SkeletonCollection(Of FormattingGroup)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup)
+  name.vb: SkeletonCollection(Of FormattingGroup)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+    name: FormattingGroup
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup
+    name: FormattingGroup
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.FormattingGroup.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html
+  name: StructureTagDefinition
+  nameWithType: StructureTagDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_StructureTagDefinitions
+  name: StructureTagDefinitions
+  nameWithType: FileSkeleton.StructureTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.StructureTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<StructureTagDefinition>
+  nameWithType: SkeletonCollection<StructureTagDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition>
+  nameWithType.vb: SkeletonCollection(Of StructureTagDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition)
+  name.vb: SkeletonCollection(Of StructureTagDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+    name: StructureTagDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition
+    name: StructureTagDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.StructureTagDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  name: TagPairDefinition
+  nameWithType: TagPairDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_TagPairDefinitions
+  name: TagPairDefinitions
+  nameWithType: FileSkeleton.TagPairDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TagPairDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<TagPairDefinition>
+  nameWithType: SkeletonCollection<TagPairDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition>
+  nameWithType.vb: SkeletonCollection(Of TagPairDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition)
+  name.vb: SkeletonCollection(Of TagPairDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition
+    name: TagPairDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TagPairDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html
+  name: PlaceholderTagDefinition
+  nameWithType: PlaceholderTagDefinition
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_PlaceholderTagDefinitions
+  name: PlaceholderTagDefinitions
+  nameWithType: FileSkeleton.PlaceholderTagDefinitions
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.PlaceholderTagDefinitions
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<PlaceholderTagDefinition>
+  nameWithType: SkeletonCollection<PlaceholderTagDefinition>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition>
+  nameWithType.vb: SkeletonCollection(Of PlaceholderTagDefinition)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition)
+  name.vb: SkeletonCollection(Of PlaceholderTagDefinition)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+    name: PlaceholderTagDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition
+    name: PlaceholderTagDefinition
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.PlaceholderTagDefinition.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_TerminologyData
+  name: TerminologyData
+  nameWithType: FileSkeleton.TerminologyData
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.TerminologyData
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection{Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData}
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  definition: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  name: SkeletonCollection<TerminologyData>
+  nameWithType: SkeletonCollection<TerminologyData>
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection<Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData>
+  nameWithType.vb: SkeletonCollection(Of TerminologyData)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection(Of Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData)
+  name.vb: SkeletonCollection(Of TerminologyData)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+    name: TerminologyData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection`1
+    name: SkeletonCollection
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData
+    name: TerminologyData
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TerminologyData.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_QuickInsertIds
+  name: QuickInsertIds
+  nameWithType: FileSkeleton.QuickInsertIds
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.QuickInsertIds
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  commentId: T:Sdl.Core.Bcm.BcmModel.ParagraphUnit
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ParagraphUnit.html
+  name: ParagraphUnit
+  nameWithType: ParagraphUnit
+  fullName: Sdl.Core.Bcm.BcmModel.ParagraphUnit
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_SubContentPUs
+  name: SubContentPUs
+  nameWithType: FileSkeleton.SubContentPUs
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.SubContentPUs
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_ParentFile
+  name: ParentFile
+  nameWithType: FileSkeleton.ParentFile
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.ParentFile
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_IdGenerator
+  name: IdGenerator
+  nameWithType: FileSkeleton.IdGenerator
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html#Sdl_Core_Bcm_BcmModel_Skeleton_FileSkeleton_IdGenerator
+  name: IdGenerator
+  nameWithType: FileSkeleton.IdGenerator
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.IdGenerator
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator.html
+  name: IdGenerator
+  nameWithType: IdGenerator
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.IdGenerator

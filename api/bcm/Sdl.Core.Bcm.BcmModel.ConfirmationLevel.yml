@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  commentId: T:Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  id: ConfirmationLevel
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedSignOff
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedTranslation
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Draft
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.NotTranslated
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedSignOff
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedTranslation
+  - Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Translated
+  langs:
+  - csharp
+  - vb
+  name: ConfirmationLevel
+  nameWithType: ConfirmationLevel
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Different stages of translation and translation approval for a <xref href="Sdl.Core.Bcm.BcmModel.Segment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EnumConverter), new object[] { ConfirmationLevel.NotTranslated })]
+
+      public enum ConfirmationLevel
+    content.vb: >-
+      <JsonConverter(GetType(EnumConverter), New Object() { ConfirmationLevel.NotTranslated })>
+
+      Public Enum ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.NotTranslated
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.NotTranslated
+  id: NotTranslated
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: NotTranslated
+  nameWithType: ConfirmationLevel.NotTranslated
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.NotTranslated
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Untranslated content.
+  example: []
+  syntax:
+    content: NotTranslated = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Draft
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Draft
+  id: Draft
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: Draft
+  nameWithType: ConfirmationLevel.Draft
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Draft
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Draft (edited) content.
+  example: []
+  syntax:
+    content: Draft = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Translated
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Translated
+  id: Translated
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: Translated
+  nameWithType: ConfirmationLevel.Translated
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.Translated
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Translated content.
+  example: []
+  syntax:
+    content: Translated = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedTranslation
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedTranslation
+  id: RejectedTranslation
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: RejectedTranslation
+  nameWithType: ConfirmationLevel.RejectedTranslation
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedTranslation
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Translated content marked as Rejected.
+  example: []
+  syntax:
+    content: RejectedTranslation = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedTranslation
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedTranslation
+  id: ApprovedTranslation
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: ApprovedTranslation
+  nameWithType: ConfirmationLevel.ApprovedTranslation
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedTranslation
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Translated content marked as Approved.
+  example: []
+  syntax:
+    content: ApprovedTranslation = 4
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedSignOff
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedSignOff
+  id: RejectedSignOff
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: RejectedSignOff
+  nameWithType: ConfirmationLevel.RejectedSignOff
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.RejectedSignOff
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Translated content Rejected at Sign-off.
+  example: []
+  syntax:
+    content: RejectedSignOff = 5
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedSignOff
+  commentId: F:Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedSignOff
+  id: ApprovedSignOff
+  parent: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  langs:
+  - csharp
+  - vb
+  name: ApprovedSignOff
+  nameWithType: ConfirmationLevel.ApprovedSignOff
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.ApprovedSignOff
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Translated content Approved at Sign-off.
+  example: []
+  syntax:
+    content: ApprovedSignOff = 6
+    return:
+      type: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Segment
+  commentId: T:Sdl.Core.Bcm.BcmModel.Segment
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Segment.html
+  name: Segment
+  nameWithType: Segment
+  fullName: Sdl.Core.Bcm.BcmModel.Segment
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  commentId: T:Sdl.Core.Bcm.BcmModel.ConfirmationLevel
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ConfirmationLevel.html
+  name: ConfirmationLevel
+  nameWithType: ConfirmationLevel
+  fullName: Sdl.Core.Bcm.BcmModel.ConfirmationLevel

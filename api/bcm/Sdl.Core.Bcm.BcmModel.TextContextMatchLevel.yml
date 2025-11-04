@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  commentId: T:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  id: TextContextMatchLevel
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.None
+  - Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.Source
+  - Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.SourceAndTarget
+  langs:
+  - csharp
+  - vb
+  name: TextContextMatchLevel
+  nameWithType: TextContextMatchLevel
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Used with textual context matches to indicate the level of matching.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EnumConverter), new object[] { TextContextMatchLevel.None })]
+
+      public enum TextContextMatchLevel
+    content.vb: >-
+      <JsonConverter(GetType(EnumConverter), New Object() { TextContextMatchLevel.None })>
+
+      Public Enum TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.None
+  commentId: F:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.None
+  id: None
+  parent: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: TextContextMatchLevel.None
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.None
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: The textual context does not match.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.Source
+  commentId: F:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.Source
+  id: Source
+  parent: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: TextContextMatchLevel.Source
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.Source
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Source content matches with surrounding source content.
+  example: []
+  syntax:
+    content: Source = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.SourceAndTarget
+  commentId: F:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.SourceAndTarget
+  id: SourceAndTarget
+  parent: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  langs:
+  - csharp
+  - vb
+  name: SourceAndTarget
+  nameWithType: TextContextMatchLevel.SourceAndTarget
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.SourceAndTarget
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Source and target matches surrounding source and target content.
+  example: []
+  syntax:
+    content: SourceAndTarget = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+references:
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  commentId: T:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.html
+  name: TextContextMatchLevel
+  nameWithType: TextContextMatchLevel
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel

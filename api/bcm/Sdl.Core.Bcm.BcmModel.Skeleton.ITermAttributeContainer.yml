@@ -1,0 +1,251 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  id: ITermAttributeContainer
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+  langs:
+  - csharp
+  - vb
+  name: ITermAttributeContainer
+  nameWithType: ITermAttributeContainer
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  type: Interface
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Interface for BCM elements containing terminology attributes.
+  example: []
+  syntax:
+    content: public interface ITermAttributeContainer
+    content.vb: Public Interface ITermAttributeContainer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+  id: TermAttributes
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer
+  langs:
+  - csharp
+  - vb
+  name: TermAttributes
+  nameWithType: ITermAttributeContainer.TermAttributes
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the term attributes.
+  example: []
+  syntax:
+    content: DictionaryEx<string, object> TermAttributes { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx{System.String,System.Object}
+      description: The term attributes.
+    content.vb: Property TermAttributes As DictionaryEx(Of String, Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.html#Sdl_Core_Bcm_BcmModel_Skeleton_ITermAttributeContainer_TermAttributes
+  name: TermAttributes
+  nameWithType: ITermAttributeContainer.TermAttributes
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.ITermAttributeContainer.TermAttributes
+- uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx{System.String,System.Object}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx{System.String,System.Object}
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  definition: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+  href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  name: DictionaryEx<string, object>
+  nameWithType: DictionaryEx<string, object>
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx<string, object>
+  nameWithType.vb: DictionaryEx(Of String, Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx(Of String, Object)
+  name.vb: DictionaryEx(Of String, Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+    name: DictionaryEx
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+    name: DictionaryEx
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+  commentId: T:Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+  parent: Sdl.Core.Bcm.BcmModel.Collections
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  name: DictionaryEx<TKey, TValue>
+  nameWithType: DictionaryEx<TKey, TValue>
+  fullName: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx<TKey, TValue>
+  nameWithType.vb: DictionaryEx(Of TKey, TValue)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx(Of TKey, TValue)
+  name.vb: DictionaryEx(Of TKey, TValue)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+    name: DictionaryEx
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx`2
+    name: DictionaryEx
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.DictionaryEx-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Collections
+  commentId: N:Sdl.Core.Bcm.BcmModel.Collections
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Collections
+  nameWithType: Sdl.Core.Bcm.BcmModel.Collections
+  fullName: Sdl.Core.Bcm.BcmModel.Collections
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Collections
+    name: Collections
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Collections
+    name: Collections
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Collections.html

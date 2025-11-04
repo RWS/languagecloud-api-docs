@@ -1,0 +1,655 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  id: AlphanumericToken
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(System.String)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
+  langs:
+  - csharp
+  - vb
+  name: AlphanumericToken
+  nameWithType: AlphanumericToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: A <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token" data-throw-if-not-resolved="false"></xref> representing alphanumeric tokens.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class AlphanumericToken : Token, ICloneable<Token>
+    content.vb: >-
+      <DataContract>
+
+      Public Class AlphanumericToken Inherits Token Implements ICloneable(Of Token)
+  seealso:
+  - linkId: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  langs:
+  - csharp
+  - vb
+  name: AlphanumericToken()
+  nameWithType: AlphanumericToken.AlphanumericToken()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public AlphanumericToken()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor*
+  nameWithType.vb: AlphanumericToken.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  langs:
+  - csharp
+  - vb
+  name: AlphanumericToken(string)
+  nameWithType: AlphanumericToken.AlphanumericToken(string)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken(string)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public AlphanumericToken(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The token text
+    content.vb: Public Sub New(text As String)
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor*
+  nameWithType.vb: AlphanumericToken.New(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.New(String)
+  name.vb: New(String)
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
+  id: Type
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AlphanumericToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets the type of <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "type")]
+
+      protected override string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The type.
+    content.vb: >-
+      <DataMember(Name:="type")>
+
+      Protected Overrides ReadOnly Property Type As String
+  overridden: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: type
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  name: Token
+  nameWithType: Token
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<Token>
+  nameWithType: ICloneable<Token>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token>
+  nameWithType.vb: ICloneable(Of Token)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
+  name.vb: ICloneable(Of Token)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    name: Token
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    name: Token
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  name: Clone()
+  nameWithType: Token.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  name: ToString()
+  nameWithType: Token.ToString()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Text
+  name: Text
+  nameWithType: Token.Text
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Span
+  name: Span
+  nameWithType: Token.Span
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html
+  name: AlphanumericToken
+  nameWithType: AlphanumericToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken__ctor
+  name: AlphanumericToken
+  nameWithType: AlphanumericToken.AlphanumericToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.AlphanumericToken
+  nameWithType.vb: AlphanumericToken.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Type
+  name: Type
+  nameWithType: Token.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_AlphanumericToken_Type
+  name: Type
+  nameWithType: AlphanumericToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.Type

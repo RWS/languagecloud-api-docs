@@ -1,5 +1,7 @@
 - name: Trados Cloud
   href: index.md
+- name: Trados Cloud
+  href: index.md
 - name: API
   href: articles/LCPublicAPI/
 - name: Extensibility

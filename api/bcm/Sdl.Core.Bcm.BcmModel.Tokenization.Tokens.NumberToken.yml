@@ -1,0 +1,1138 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  id: NumberToken
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+  langs:
+  - csharp
+  - vb
+  name: NumberToken
+  nameWithType: NumberToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: A <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token" data-throw-if-not-resolved="false"></xref> representing a numerical value.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class NumberToken : Token, ICloneable<Token>
+    content.vb: >-
+      <DataContract>
+
+      Public Class NumberToken Inherits Token Implements ICloneable(Of Token)
+  seealso:
+  - linkId: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  derivedClasses:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: NumberToken()
+  nameWithType: NumberToken.NumberToken()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public NumberToken()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor*
+  nameWithType.vb: NumberToken.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)
+  id: '#ctor(System.String,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator,System.Char,System.Char,Sdl.Core.Bcm.BcmModel.Tokenization.Sign,System.String,System.String,System.String)'
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: NumberToken(string, NumericSeparator, NumericSeparator, char, char, Sign, string, string, string)
+  nameWithType: NumberToken.NumberToken(string, NumericSeparator, NumericSeparator, char, char, Sign, string, string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken(string, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, char, char, Sdl.Core.Bcm.BcmModel.Tokenization.Sign, string, string, string)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Initializes a new instance with the specified values.
+  example: []
+  syntax:
+    content: public NumberToken(string text, NumericSeparator groupSeparator, NumericSeparator decimalSeparator, char alternateGroupSeparator, char alternateDecimalSeparator, Sign sign, string rawSign, string rawDecimalDigits, string rawFractionalDigits)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text of the token, as it appeared in the input
+    - id: groupSeparator
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+      description: The type of group separator used
+    - id: decimalSeparator
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+      description: The type of decimal separator used
+    - id: alternateGroupSeparator
+      type: System.Char
+      description: The character of an alternative group separator, if used
+    - id: alternateDecimalSeparator
+      type: System.Char
+      description: The character of an alternative decimal separator, if used
+    - id: sign
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+      description: The type of sign used
+    - id: rawSign
+      type: System.String
+      description: The "raw text" of the sign
+    - id: rawDecimalDigits
+      type: System.String
+      description: The "raw decimal digits", without separators, between 0-9
+    - id: rawFractionalDigits
+      type: System.String
+      description: The "raw fractional digits", without separators, between 0-9
+    content.vb: Public Sub New(text As String, groupSeparator As NumericSeparator, decimalSeparator As NumericSeparator, alternateGroupSeparator As Char, alternateDecimalSeparator As Char, sign As Sign, rawSign As String, rawDecimalDigits As String, rawFractionalDigits As String)
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor*
+  nameWithType.vb: NumberToken.New(String, NumericSeparator, NumericSeparator, Char, Char, Sign, String, String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.New(String, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator, Char, Char, Sdl.Core.Bcm.BcmModel.Tokenization.Sign, String, String, String)
+  name.vb: New(String, NumericSeparator, NumericSeparator, Char, Char, Sign, String, String, String)
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+  id: Type
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: NumberToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets the type of <xref href="Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "type")]
+
+      protected override string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The type.
+    content.vb: >-
+      <DataMember(Name:="type")>
+
+      Protected Overrides ReadOnly Property Type As String
+  overridden: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+  id: Sign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: Sign
+  nameWithType: NumberToken.Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets or sets the sign.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "sign")]
+
+      public Sign Sign { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+    content.vb: >-
+      <DataMember(Name:="sign")>
+
+      Public Property Sign As Sign
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+  id: RawSign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: RawSign
+  nameWithType: NumberToken.RawSign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets or sets the "raw" sign, i.e. the textual representation of the sign
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "rawSign")]
+
+      public string RawSign { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="rawSign")>
+
+      Public Property RawSign As String
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: rawSign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+  id: DecimalSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: DecimalSeparator
+  nameWithType: NumberToken.DecimalSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets or sets the decimal separator
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "decimalSeparator")]
+
+      public NumericSeparator DecimalSeparator { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+    content.vb: >-
+      <DataMember(Name:="decimalSeparator")>
+
+      Public Property DecimalSeparator As NumericSeparator
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: decimalSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+  id: GroupSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: GroupSeparator
+  nameWithType: NumberToken.GroupSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: Gets or sets the group separator
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "groupSeparator")]
+
+      public NumericSeparator GroupSeparator { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+    content.vb: >-
+      <DataMember(Name:="groupSeparator")>
+
+      Public Property GroupSeparator As NumericSeparator
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: groupSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+  id: AlternateGroupSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: AlternateGroupSeparator
+  nameWithType: NumberToken.AlternateGroupSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: >-
+    Gets or sets an alternate group separator, which is a single char if an alternate
+
+    separator is used, or the null character if no alternate separator is used.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "alternateGroupSeparator")]
+
+      public char AlternateGroupSeparator { get; set; }
+    parameters: []
+    return:
+      type: System.Char
+    content.vb: >-
+      <DataMember(Name:="alternateGroupSeparator")>
+
+      Public Property AlternateGroupSeparator As Char
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: alternateGroupSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+  id: AlternateDecimalSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: AlternateDecimalSeparator
+  nameWithType: NumberToken.AlternateDecimalSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: >-
+    Gets or sets an alternate decimal separator, which is a single char if an alternate
+
+    separator is used, or the null character if no alternate separator is used.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "alternateDecimalSeparator")]
+
+      public char AlternateDecimalSeparator { get; set; }
+    parameters: []
+    return:
+      type: System.Char
+    content.vb: >-
+      <DataMember(Name:="alternateDecimalSeparator")>
+
+      Public Property AlternateDecimalSeparator As Char
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: alternateDecimalSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+  id: RawFractionalDigits
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: RawFractionalDigits
+  nameWithType: NumberToken.RawFractionalDigits
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: >-
+    Gets or sets the raw fractional digits, which are a sequence of digits without
+
+    separators or signs.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "rawFractionalDigits")]
+
+      public string RawFractionalDigits { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="rawFractionalDigits")>
+
+      Public Property RawFractionalDigits As String
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: rawFractionalDigits
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
+  id: RawDecimalDigits
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  langs:
+  - csharp
+  - vb
+  name: RawDecimalDigits
+  nameWithType: NumberToken.RawDecimalDigits
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  summary: >-
+    Gets or sets the raw decimal digits, which are a sequence of digits without
+
+    separators or signs.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "rawDecimalDigits")]
+
+      public string RawDecimalDigits { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="rawDecimalDigits")>
+
+      Public Property RawDecimalDigits As String
+  overload: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: rawDecimalDigits
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  name: Token
+  nameWithType: Token
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<Token>
+  nameWithType: ICloneable<Token>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token>
+  nameWithType.vb: ICloneable(Of Token)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token)
+  name.vb: ICloneable(Of Token)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    name: Token
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+    name: Token
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  name: Clone()
+  nameWithType: Token.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  commentId: M:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  name: ToString()
+  nameWithType: Token.ToString()
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.ToString
+    name: ToString
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_ToString
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Text
+  name: Text
+  nameWithType: Token.Text
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Text
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Span
+  name: Span
+  nameWithType: Token.Span
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Span
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html
+  name: NumberToken
+  nameWithType: NumberToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken__ctor
+  name: NumberToken
+  nameWithType: NumberToken.NumberToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.NumberToken
+  nameWithType.vb: NumberToken.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html
+  name: NumericSeparator
+  nameWithType: NumericSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Sign.html
+  name: Sign
+  nameWithType: Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  commentId: P:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_Token_Type
+  name: Type
+  nameWithType: Token.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.Type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Type
+  name: Type
+  nameWithType: NumberToken.Type
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Type
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_Sign
+  name: Sign
+  nameWithType: NumberToken.Sign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.Sign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_RawSign
+  name: RawSign
+  nameWithType: NumberToken.RawSign
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawSign
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_DecimalSeparator
+  name: DecimalSeparator
+  nameWithType: NumberToken.DecimalSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.DecimalSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_GroupSeparator
+  name: GroupSeparator
+  nameWithType: NumberToken.GroupSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.GroupSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_AlternateGroupSeparator
+  name: AlternateGroupSeparator
+  nameWithType: NumberToken.AlternateGroupSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateGroupSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_AlternateDecimalSeparator
+  name: AlternateDecimalSeparator
+  nameWithType: NumberToken.AlternateDecimalSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.AlternateDecimalSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_RawFractionalDigits
+  name: RawFractionalDigits
+  nameWithType: NumberToken.RawFractionalDigits
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawFractionalDigits
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html#Sdl_Core_Bcm_BcmModel_Tokenization_Tokens_NumberToken_RawDecimalDigits
+  name: RawDecimalDigits
+  nameWithType: NumberToken.RawDecimalDigits
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.RawDecimalDigits

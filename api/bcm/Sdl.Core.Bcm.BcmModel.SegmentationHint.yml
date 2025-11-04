@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  commentId: T:Sdl.Core.Bcm.BcmModel.SegmentationHint
+  id: SegmentationHint
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.SegmentationHint.Exclude
+  - Sdl.Core.Bcm.BcmModel.SegmentationHint.Include
+  - Sdl.Core.Bcm.BcmModel.SegmentationHint.IncludeWithText
+  - Sdl.Core.Bcm.BcmModel.SegmentationHint.MayExclude
+  langs:
+  - csharp
+  - vb
+  name: SegmentationHint
+  nameWithType: SegmentationHint
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Information on how specific tags should be segmented.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EnumConverter), new object[] { SegmentationHint.MayExclude })]
+
+      public enum SegmentationHint
+    content.vb: >-
+      <JsonConverter(GetType(EnumConverter), New Object() { SegmentationHint.MayExclude })>
+
+      Public Enum SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint.Include
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentationHint.Include
+  id: Include
+  parent: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  langs:
+  - csharp
+  - vb
+  name: Include
+  nameWithType: SegmentationHint.Include
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint.Include
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: If possible, the segmentation engine should always include this tag inside a segment.
+  example: []
+  syntax:
+    content: Include = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint.MayExclude
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentationHint.MayExclude
+  id: MayExclude
+  parent: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  langs:
+  - csharp
+  - vb
+  name: MayExclude
+  nameWithType: SegmentationHint.MayExclude
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint.MayExclude
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: The tag may be left outside of the segment, e.g. if it appears at a segment boundary.
+  example: []
+  syntax:
+    content: MayExclude = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint.IncludeWithText
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentationHint.IncludeWithText
+  id: IncludeWithText
+  parent: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  langs:
+  - csharp
+  - vb
+  name: IncludeWithText
+  nameWithType: SegmentationHint.IncludeWithText
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint.IncludeWithText
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    The tag will be included in a segment if the segment also contains text content,
+
+    otherwise it will not be included in a segment (in order to prevent segment-only tags).
+  example: []
+  syntax:
+    content: IncludeWithText = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.SegmentationHint
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint.Exclude
+  commentId: F:Sdl.Core.Bcm.BcmModel.SegmentationHint.Exclude
+  id: Exclude
+  parent: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  langs:
+  - csharp
+  - vb
+  name: Exclude
+  nameWithType: SegmentationHint.Exclude
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint.Exclude
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: The tag will be excluded from a segment, even if this means changing the segmentation. This is used for sub-content processing.
+  example: []
+  syntax:
+    content: Exclude = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.SegmentationHint
+references:
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.SegmentationHint
+  commentId: T:Sdl.Core.Bcm.BcmModel.SegmentationHint
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.SegmentationHint.html
+  name: SegmentationHint
+  nameWithType: SegmentationHint
+  fullName: Sdl.Core.Bcm.BcmModel.SegmentationHint
