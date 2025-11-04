@@ -7,7 +7,7 @@ stoplight-id: b7cdff09ad767
 There might be times when you need to make changes to your app. Whether you want to fix bugs, correct flaws, or add new functionality, the changes should eventually reach your registered app instance. That's why RWS Trados supports app versioning.
 
 To update the app you need to:
-1. Increment the `version` field in the app's [descriptor](../../App-API.v1.json/paths/~1descriptor/get), as Trados relies on it to detect the newer versions.
+1. Increment the `version` field in the app's [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor), as Trados relies on it to detect the newer versions.
 2. Wait for Trados to detect the new version. It could take up to 2 minutes to detect it.
 3. You should also receive an email notification informing you that there's a new app version available.
 4. Check the new version on the app details page. If you don't see it, please contact our support team.

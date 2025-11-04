@@ -10,7 +10,7 @@ The app developer must accurately fill in all the details within the descriptor,
 
 ## Basic Information
 
-The descriptor model defines attributes that provide basic information like `name`, `description`, `releaseNotes`. The [model](../../App-API.v1.json/paths/~1descriptor/get) provides documentation for all the fields.
+The descriptor model defines attributes that provide basic information like `name`, `description`, `releaseNotes`. The [model](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) provides documentation for all the fields.
 
 ## Version
 
@@ -56,7 +56,7 @@ Standard endpoints are defined under the `Standard` tag. The actual path should 
 ### Lifecycle Endpoint
 
 Additionally, in the `standardEnpoints` section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an `INSTALLED` event along with some data for that account. The app should react and save the received data.
-- `appLifecycle` - is used for all types of events: `REGISTERED`, `UNREGISTERED`, `INSTALLED`, and `UNINSTALLED`. See the contract [here](../../App-API.v1.json/paths/~1app-lifecycle/post).
+- `appLifecycle` - is used for all types of events: `REGISTERED`, `UNREGISTERED`, `INSTALLED`, and `UNINSTALLED`. See the contract [here](../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle).
 
 > If your app is built from our blueprints, you shouldn't have to change anything, as these endpoints work out of the box.
 

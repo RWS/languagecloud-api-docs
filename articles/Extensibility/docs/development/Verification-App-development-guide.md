@@ -115,7 +115,7 @@ There are described in a little more detail here:
 ##### StartVerification
 This endpoint is called by Trados to initiate the document verification operation. Generally, a background job is started when this call is made and it returns 201(Created)
 The background job then prepares batches of verification messages which it then publishes to Trados via the Trados Cloud Platform API using the PublishMessages endpoint URL which is provided in the initial StartVerification request. Please see the API documentation for more details: 
-[StartVerification](../../App-API.v1.json/paths/~1lc.verification.startverification~1{requestId}/post)
+[StartVerification](../../api/Extensibility-API.v1-fv.html#/operations/VerificationProviderStartVerification)
 
 Example:
 ```html
@@ -229,7 +229,7 @@ Each message contains the following fields:
 
 ##### VerifySegment
 This endpoint is called by Trados to validate an individual segment. This endpoint responds with a collection of messages which relate to any issues found for this segment. Please see the API documentation for more details: 
-[VerifySegment](../../App-API.v1.json/paths/~1lc.verification.verifysegment/post)
+[VerifySegment](../../api/Extensibility-API.v1-fv.html#/operations/VerificationProviderVerifySegment)
 
 Example:
 ```html
@@ -267,7 +267,7 @@ The request is structured as follows:
 
 ##### GetMessagesByCulture
 This endpoint is called by Trados to retrieve localized resources for the messages. The culture is specified in the call as a URL parameter. The app can support localized resources for various languages which will allow the messages to be displayed in the native language of the user in the UI. Please see the API documentation for more details: 
-[GetMessagesByCulture](../../App-API.v1.json/paths/~1lc.verification.getmessagesbyculture~1{culture}/get)
+[GetMessagesByCulture](../../api/Extensibility-API.v1-fv.html#/operations/VerificationProviderGetMessagesByCulture)
 
 Example:
 ```html
@@ -276,7 +276,7 @@ GET https://your-app.com/messages/es-ES
 
 ##### GetSettingsSchema
 This endpoint is called by Trados to retrieve the schema related to any settings which the extension supports. **A note on schemas - once you define your settings schema for the extension, it should only be modified in a backwards compatible way, i.e. only adding of extra fields is allowed, not removing or renaming existing fields.** Please see the API documentation for more details: 
-[GetSettingsSchema](../../App-API.v1.json/paths/~1lc.verification.getsettingsschema/get)
+[GetSettingsSchema](../../api/Extensibility-API.v1-fv.html#/operations/VerificationProviderGetSettingsSchema)
 
 Example:
 ```html

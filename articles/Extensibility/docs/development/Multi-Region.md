@@ -7,7 +7,7 @@ tags: [Development]
 
 To fulfill the requirements of our customers, Trados Enterprise allows multi-region deployments of your app.
 
-To enable multi-region on your app you must provide regional instances of your app and include their `regionalBaseUrls` in your [descriptor](../../App-API.v1.json/paths/~1descriptor/get).
+To enable multi-region on your app you must provide regional instances of your app and include their `regionalBaseUrls` in your [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 
 > Multi-Region is only supported on apps starting with `decriptorVersion: 1.4`
 
@@ -34,7 +34,7 @@ The `INSTALLED` lifecycle event now includes the region information for the acco
 
 ## Base URL vs Multi-Region Base URLs
 
-The `baseUrl` property from [descriptor](../../App-API.v1.json/paths/~1descriptor/get) remains mandatory even if you add the `regionalBaseUrls` property(which is optional).
+The `baseUrl` property from [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) remains mandatory even if you add the `regionalBaseUrls` property(which is optional).
 
 <!-- theme: warning -->
 > The `baseUrl` in your app should stay fixed and not change based on region. When an App is registered, `baseUrl` from that initial descriptor is used for setting audience for all future authentication requests, independent of regions (it is possible to change it later, see [Changing Base URL](App-Descriptor.md#changing-base-url). 

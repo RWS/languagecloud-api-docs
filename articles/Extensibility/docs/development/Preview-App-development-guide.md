@@ -16,7 +16,7 @@ To build a new preview app we recommend to start by using the provided [app blue
 
 ## Preview App Extension
 
-A preview app needs to define at least one preview extension within its [descriptor](../../App-API.v1.json/paths/~1descriptor/get).
+A preview app needs to define at least one preview extension within its [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 For example: 
 
 ```json
@@ -153,7 +153,7 @@ This endpoint is used to initiate a preview session on the app. When this endpoi
 This should be the first endpoint called for any given session - if another endpoint is called for a given session ID before this one, an error should be returned.
 
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.preview.startpreview/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/StartPreview) for further details.
 
 #### RefreshPreview
 The _refreshPreview_ endpoint refreshes an existing preview. The mechanism for this in entirely up to the Extension implementation in that it might keep state from the initial preview generation from _startPreview_ in order to speed up the refresh.
@@ -168,7 +168,7 @@ POST https://your-app.com/refresh-preview
 Endpoint usage:
 This endpoint is called when a preview refresh is requested by the user. Any state the app holds from the initial preview generation may be used to speed up the refresh.
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.preview.refreshpreview/put) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/RefreshPreview) for further details.
 
 #### UpdateSegment
 The _updateSegment_ endpoint accepts a list of BCM document fragments along with their associated segment IDs. The Extension will generate and return an HTML rendered fragment for each BCM document fragment sent in this manner.
@@ -226,7 +226,7 @@ POST https://your-app.com/update-segment
 Endpoint usage:
 This endpoint is called when the user is updating one or more segments in the Editor. For each segment, the extension will render an equivalent HTML fragment based on the input BCM document fragment.
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.preview.updatesegment/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/UpdateSegment) for further details.
 
 #### EndPreview
 The _endPreview_ endpoint is called when a given preview session associated with the previewSessionId is finished. This is called so that the app may perform any required cleanup.
@@ -245,7 +245,7 @@ POST https://your-app.com/end-preview
 Endpoint usage:
 Called to indicate a preview session has terminated. Any required cleanup should be performed by the app.
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.preview.endpreview/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/EndPreview) for further details.
 
 ### Javascript Communication Protocol
 

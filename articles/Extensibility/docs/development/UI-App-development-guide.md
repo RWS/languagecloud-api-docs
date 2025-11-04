@@ -16,7 +16,7 @@ UI extensions offer the possibility to add custom user interface elements and fu
 > * A UI extension's JavaScript file will be loaded in an isolated context, independent from Trados.
 > * The communication model between App UI and Backend will change in the final version and will have to be redesigned.
 
-A UI extension is defined in the app [descriptor](../../App-API.v1.json/paths/\~1descriptor/get) in the `extensions` array.
+A UI extension is defined in the app [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) in the `extensions` array.
 
 ```json
 {
@@ -40,7 +40,7 @@ A UI extension is defined in the app [descriptor](../../App-API.v1.json/paths/\~
 
 The `extensionPointId` is always **"lc.ui"**.
 
-The `configuration`'s `scriptPath` is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the `basePath` in the [descriptor](../../App-API.v1.json/paths/\~1descriptor/get). This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.
+The `configuration`'s `scriptPath` is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the `basePath` in the [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor). This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ If you don't already have Node.js installed, you can download the most recent LT
     npm run build-dev
     ```
       
-    - The `build` (or `build-dev`) command will create a `my-ui-extension-script.js` file in `Rws.LC.UISampleApp/Resources/frontend/dist/`. This is the path you need to use in the [descriptor](../../App-API.v1.json/paths/\~1descriptor/get) for your extension's configuration `scriptPath`, for example `Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js`.
+    - The `build` (or `build-dev`) command will create a `my-ui-extension-script.js` file in `Rws.LC.UISampleApp/Resources/frontend/dist/`. This is the path you need to use in the [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) for your extension's configuration `scriptPath`, for example `Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js`.
 
     - You can change the `my-ui-extension-script.js` file name by editing
       - the `module.exports`' `output.filename` property in `Rws.LC.UISampleApp/Resources/frontend/webpack.config.js` and
