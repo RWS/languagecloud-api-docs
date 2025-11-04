@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Extensibility API Documentation"
 _disableBreadcrumb: false
 _disableAffix: true

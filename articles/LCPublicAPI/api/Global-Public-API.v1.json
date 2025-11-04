@@ -180,7 +180,7 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
         ],
-        "x-internal": true
+        "x-internal": false
       }
     }
   },
@@ -277,10 +277,9 @@
             "x-stoplight": {
               "id": "s7isz42nnk89u"
             },
-            "description": "Trados Cloud Platform API host."
+            "description": "Trados Cloud Platform API host. It contains the host and is should be suffixed with the path of the Public API and version."
           }
-        },
-        "description": ""
+        }
       },
       "list-jwks": {
         "title": "List JWKs Response",

@@ -5,7 +5,7 @@
 
 The following termbase formats are supported: `tbx` and `xml`. 
 
-> Before importing a termbase, make sure you already created one using the [Create Termbase](../../api/Public-API.v1-fv.html#/operations/CreateTermbase) endpoint. Only empty termbases support importing content.
+> Before importing a termbase, make sure you already created one using the [Create Termbase](../../api/Public-API.v1-fv.html#/operations/CreateTermbase) endpoint.
 
 To import a `tbx` or an `xml` termbase, perform a `POST` request to the [Import Termbase](../../api/Public-API.v1-fv.html#/operations/ImportTermbase) endpoint and provide the `termbaseId` and the termbase file. Optionally, you can specify two import settings via query parameters:
 

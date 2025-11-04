@@ -197,4 +197,3 @@ The circuit breaker is triggered when 3 calls to a URL fail within a short time 
 * `X-LC-Webhook`: Unique identifier of the webhook defined for the LC application which is the recipient of the webhook message. It can be ignored because it is not exposed in the Trados UI.
 
 * `X-LC-Region`: Region of the account of the user, which is the recipient of the webhook message.
-

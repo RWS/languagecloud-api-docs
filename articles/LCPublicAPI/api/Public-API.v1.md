@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Public API Documentation"
 _disableBreadcrumb: false
 _disableAffix: true

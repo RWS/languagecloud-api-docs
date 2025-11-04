@@ -134,6 +134,10 @@
       "description": "TQA Profile"
     },
     {
+      "name": "Translation",
+      "description": "Translation"
+    },
+    {
       "name": "Translation Domain",
       "description": "Translation Domain"
     },
@@ -152,10 +156,6 @@
     {
       "name": "Translation Memory Import",
       "description": "Translation Memory Import"
-    },
-    {
-      "name": "Translation",
-      "description": "Translation"
     },
     {
       "name": "User",
@@ -3196,7 +3196,7 @@
             }
           }
         },
-        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](../docs/Updating-data-with-PUT.html).",
+        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put).",
         "x-stoplight": {
           "id": "k414o2pdrvauv"
         }
@@ -19304,6 +19304,7 @@
       },
       "conditional-cost-operator": {
         "title": "Conditional Cost Operator",
+        "type": "string",
         "x-stoplight": {
           "id": "u0in7jsh95abi"
         },
@@ -19316,6 +19317,7 @@
       },
       "conditional-cost-type": {
         "title": "Conditional Cost Type",
+        "type": "string",
         "x-stoplight": {
           "id": "br34ph3abddli"
         },
@@ -19327,6 +19329,7 @@
       },
       "conditional-cost-variable": {
         "title": "Conditional Cost Variable",
+        "type": "string",
         "x-stoplight": {
           "id": "e97vbe2580u68"
         },
@@ -19356,6 +19359,7 @@
             "$ref": "#/components/schemas/folder-v2"
           },
           "ragStatus": {
+            "type": "string",
             "x-stoplight": {
               "id": "z7v6f1w7qrqdj"
             },
@@ -19736,6 +19740,7 @@
         ],
         "properties": {
           "status": {
+            "type": "string",
             "x-stoplight": {
               "id": "dfww4v5fop36i"
             },
@@ -20487,6 +20492,7 @@
       },
       "language-cost-type": {
         "title": "Language Cost Type",
+        "type": "string",
         "x-stoplight": {
           "id": "95486073d14e0"
         },
@@ -22729,6 +22735,7 @@
       },
       "pricing-unit-type": {
         "title": "Pricing Unit Type",
+        "type": "string",
         "enum": [
           "words",
           "characters"
@@ -23104,6 +23111,7 @@
       },
       "project-cost-type": {
         "title": "Project Cost Type",
+        "type": "string",
         "x-stoplight": {
           "id": "nu6db8fhwsnqb"
         },
@@ -23968,6 +23976,7 @@
             "x-default-field": true
           },
           "translationOverwriteMode": {
+            "type": "string",
             "enum": [
               "keepExisting",
               "overwriteIfBetter",
@@ -23983,6 +23992,7 @@
             "x-default-field": true,
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Default: `confirmExactMatches`, `confirmContextMatches`</div> ",
             "items": {
+              "type": "string",
               "enum": [
                 "confirmExactMatches",
                 "confirmContextMatches",
@@ -23996,6 +24006,7 @@
             }
           },
           "noMatchFoundAction": {
+            "type": "string",
             "enum": [
               "leaveTargetSegmentsEmpty",
               "copySourceToTarget"
@@ -24040,6 +24051,7 @@
             "x-stoplight": {
               "id": "ceijjmhck9qpn"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24060,6 +24072,7 @@
             "x-stoplight": {
               "id": "v1367u510xuxk"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24080,6 +24093,7 @@
             "x-stoplight": {
               "id": "61mcttvp5oynd"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24100,6 +24114,7 @@
             "x-stoplight": {
               "id": "a8nhawfmukkbc"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24312,6 +24327,7 @@
             "x-stoplight": {
               "id": "0jd2dz8tdy6br"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24332,6 +24348,7 @@
             "x-stoplight": {
               "id": "c907ccbq4vdxn"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24402,6 +24419,7 @@
             "x-stoplight": {
               "id": "17melvff79o5q"
             },
+            "type": "string",
             "enum": [
               "words",
               "characters"
@@ -24431,6 +24449,7 @@
             "x-stoplight": {
               "id": "widdgh98t4w1g"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24554,6 +24573,7 @@
             "x-stoplight": {
               "id": "24w5oqpge9vtt"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24580,6 +24600,7 @@
             "x-stoplight": {
               "id": "bsouwbxqv95ye"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24614,6 +24635,7 @@
             "x-stoplight": {
               "id": "72j1swplvu10s"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24648,6 +24670,7 @@
             "x-stoplight": {
               "id": "ry42m8y5j21he"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24695,6 +24718,7 @@
             "x-stoplight": {
               "id": "1fcl96sxrs5wx"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24715,6 +24739,7 @@
             "x-stoplight": {
               "id": "f0umcr7ywjnsf"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24735,6 +24760,7 @@
             "x-stoplight": {
               "id": "9up0q78jlw73a"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24769,6 +24795,7 @@
             "x-stoplight": {
               "id": "z1snyx22cm8kp"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24789,6 +24816,7 @@
             "x-stoplight": {
               "id": "s3nerdbtbe17i"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24818,6 +24846,7 @@
             "x-stoplight": {
               "id": "b9qsayeygu8d5"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24838,6 +24867,7 @@
             "x-stoplight": {
               "id": "btsm5s1bzz7aq"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24858,6 +24888,7 @@
             "x-stoplight": {
               "id": "4eohngzh0e2bc"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24878,6 +24909,7 @@
             "x-stoplight": {
               "id": "f8rpatoa21n08"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24907,6 +24939,7 @@
             "x-stoplight": {
               "id": "05931rv7v34yd"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24927,6 +24960,7 @@
             "x-stoplight": {
               "id": "p7a2a445i131t"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24947,6 +24981,7 @@
             "x-stoplight": {
               "id": "9e40z6bd9mv8q"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -24967,6 +25002,7 @@
             "x-stoplight": {
               "id": "5isqhxzz365vq"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -25012,6 +25048,7 @@
             "x-stoplight": {
               "id": "4dxqub35774eb"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -25073,6 +25110,7 @@
             "x-stoplight": {
               "id": "xmi8dmu62uzi8"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -25143,6 +25181,7 @@
             "x-stoplight": {
               "id": "nmhpp19inyk2n"
             },
+            "type": "string",
             "enum": [
               "targetAndSource",
               "targetNotSource",
@@ -25175,6 +25214,7 @@
             "x-stoplight": {
               "id": "dfa7w4qetxl2c"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -25229,6 +25269,7 @@
             "x-stoplight": {
               "id": "3wlsd7f20hftl"
             },
+            "type": "string",
             "enum": [
               "error",
               "warning",
@@ -25241,6 +25282,7 @@
               "id": "147n1oindvqf3"
             },
             "x-default-field": true,
+            "type": "string",
             "enum": [
               "fileSpecificLimit",
               "absoluteCharacterCount"
@@ -29079,14 +29121,6 @@
 					}
 				}
 			},
-      "translation-unit-resource-type": {
-				"title": "Translation Unit Resource Type",
-				"type": "string",
-				"description": "Enumeration of available translation unit resource types.",
-				"enum": [
-					"TM"
-				]
-			},
       "translation-applied-resource-status": {
         "title": "Translation Applied Resource Status",
         "x-stoplight": {
@@ -29233,32 +29267,6 @@
               "id": "546wr95sonkhe"
             },
             "description": "The translation engine identifier."
-          }
-        }
-      },
-      "translation-resource": {
-        "title": "Translation Resource",
-        "x-stoplight": {
-          "id": "vrs494q2buzhy"
-        },
-        "type": "object",
-        "required": [
-          "resourceId",
-          "type"
-        ],
-        "properties": {
-          "resourceId": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "1wr6q3uu0ow0s"
-            },
-            "description": "The resource identifier."
-          },
-          "type": {
-            "$ref": "#/components/schemas/translation-resource-type",
-            "x-stoplight": {
-              "id": "mn8n0t9bwutha"
-            }
           }
         }
       },
@@ -29524,36 +29532,6 @@
                 "id": "zrkulmef1pa37"
               }
             }
-          }
-        }
-      },
-      "translation-update-resource": {
-        "title": "Translation Update Resource",
-        "x-stoplight": {
-          "id": "kk5sxng7r7rcv"
-        },
-        "type": "object",
-        "required": [
-          "resourceId",
-          "type"
-        ],
-        "properties": {
-          "resourceId": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ht1329zmz3hgp"
-            },
-            "description": "The resource identifier."
-          },
-          "type": {
-            "x-stoplight": {
-              "id": "dmov4sqorfrf3"
-            },
-            "type": "string",
-            "enum": [
-              "TM"
-            ],
-            "description": "The translation resource type."
           }
         }
       },
@@ -30773,6 +30751,7 @@
       },
       "volume-unit-type": {
         "title": "Volume Unit Type",
+        "type": "string",
         "x-stoplight": {
           "id": "xo217uws14jb2"
         },
@@ -31557,36 +31536,6 @@
           }
         }
       },
-      "translation-concordance-search-resource": {
-        "title": "Translation Concordance Search Resource",
-        "x-stoplight": {
-          "id": "20ixo2ym2xerq"
-        },
-        "type": "object",
-        "required": [
-          "resourceId",
-          "type"
-        ],
-        "properties": {
-          "resourceId": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "9rewrlat7xg1p"
-            },
-            "description": "The resource identifier."
-          },
-          "type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ablx3ujgx5zyg"
-            },
-            "enum": [
-              "TM"
-            ],
-            "description": "The resource type."
-          }
-        }
-      },
       "language-direction-general-request": {
         "title": "Language Direction General Request",
         "x-stoplight": {
@@ -31756,6 +31705,7 @@
             "description": "The identifier of the export operation"
           },
           "state": {
+            "type": "string",
             "description": "The status of the export",
             "default": "created",
             "enum": [
