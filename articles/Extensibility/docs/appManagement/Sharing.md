@@ -5,6 +5,8 @@ stoplight-id: ruuiy7dsn27on
 # Sharing the App
 By default, a newly registered app is private, meaning that only the developer tenant has access to it. However, you can share your app with other tenants even if it hasn't been published yet.
 
+A private version of a public app can also be shared prior to its publication. Please note that once the app is published, the Share button will no longer be visible. 
+
 To share the app you need to:
 1. Test that it works as expected.
 2. Select your app from the **My Apps** tab and click the **Share** button.

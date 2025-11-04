@@ -1,27 +1,30 @@
 ---
-stoplight-id: 0rl7inhtg6utq
+stoplight-id: 9r7ku59767q11
 ---
 
 
 # Verification Provider
 
 ## Overview
+
 Trados provides verification functionality on translatable content (source and/or target) in several ways:
+
 -	Batch Verification Task (set in project workflows)
 -	Editor Document Verification Task
 -	Editor Segment-level Verification operation
+
 The first two verification tasks validate the whole document, whereas the last operation, validates a single segment.
 
 For document validation, native verification is also possible. This allows for validation of a native file or a native annotated file. The difference between an annotated file and a non-annotated file is that the first allows for the generation of location information and the second does not. For native verification, a verification resource package may also be retrieved by the extension. This would contain ancillary files such as schemas, for example, in the case of XML validation.
 
 Trados supports a set of internal verifiers which are fixed in nature and the user can decide, through settings, what will be verified using these. Some of them are, for example:
+
 -	QA Checker
 -	Tag Verifier
+
 To allow for extending of the verification functionality, Trados supports the creation of extensible or external verifiers. These are hosted in apps which are essentially a self-contained serviced offering the verification functionality.
 
 Extensible verifiers would normally only support a small set of verification types, such as a target segment length check (against the length of the source) for example, or perhaps, a punctuation checker.
-
-Each verifier will generate a set of error or warning messages based on the type of validation they perform. The user can change validation settings in the LC UI Project Settings which will affect how or when the messages are generated. External verifiers also have the option to specify resource packages in the settings which will allow the user to upload support files required during the validation process. This option is verifier specific as not all verifiers might require a package.
 
 There are 2 types of verification which are supported by extensibility:
  - Bilingual Document Verification
@@ -30,6 +33,8 @@ There are 2 types of verification which are supported by extensibility:
  With Bilingual Document Verification, the verifier has access to the BCM document and can validate each segment as required
 
  Native File Verification validates the native source or target file. This file might also be annotated to allow for the easy determination of segment identifiers. An example of native file verification would be schema validation on an XML file. The aim of native verification is to establish if the translation process has broken any of the document structure and rendered an invalid document.
+
+Each verifier will generate a set of error or warning messages based on the type of validation they perform. The user can change validation settings in the LC UI Project Settings which will affect how or when the messages are generated. External verifiers also have the option to specify resource packages in the settings which will allow the user to upload support files required during the validation process. This option is verifier specific as not all verifiers might require a package.
 
 The user can see generated verification messages in the Editor UI and can choose to ignore certain messages by message type or individually, depending on their needs. They can subsequently un-ignore them at a later stage if desired.
 Verifiers may also provide localized messages which can be displayed in the same language the Editor UI is presenting in.
@@ -40,9 +45,7 @@ Flows:
 
 ![Verification Flow 2](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/verification-flow2.png?raw=true)
 
-
-
-#### Notes on the above Flow Diagrams
+#### Notes on the Flow Diagrams
 
 The ***StartVerification*** request initiates the background job on the extension. The background job will be responsible for generating the verification messages.
 
@@ -57,21 +60,16 @@ The app receives a VerifyDocument request from Trados. The request specifies cer
 
 These resources are downloaded to the app via the Trados Cloud Platform API and can be stored locally during the verification operation.
 
-When the request is received, the app responds with 201(Created) and starts a background job which will generate the verification messages. For each verification error or warning the app creates, it needs to send this back to Trados via the Trados Cloud Platform API. These messages may grouped into batches to minimize chatty behaviour between the app and the Trados Cloud Platform API.
+When the request is received, the app responds with 201(Created) and starts a background job which will generate the verification messages. For each verification error or warning the app creates, it needs to send this back to Trados via the Trados Cloud Platform API. These messages may be grouped into batches to minimize chatty behavior between the app and the Trados Cloud Platform API.
 
 The app may also receive a request to verify a single segment. All interactions between the app and Trados Cloud Platform API are via REST calls.
 
-## APIs
-The extensible verifier API consists of a number of endpoints - an overview of their purpose is given here - there are currently two versions of the API
+### API Overview
+The extensible verifier API consists of a number of endpoints - an overview of their purpose is given here:
 
-
-### API V1
-
-A verification extension defines the following in its descriptor - and specific details are shown below which are defined inside the `extensions` array
+A verification extension defines the following in its descriptor:
 
 ```json
-...
-"extensions": [
 {
   "extensionPointId": "lc.verificationprovider",
   "id": "string",
@@ -88,7 +86,6 @@ A verification extension defines the following in its descriptor - and specific 
     "validationInputType": "string",
   }
 }
-]
 ``` 
 The extensionPointId must always be ***"lc.verificationprovider"***
 
@@ -100,90 +97,11 @@ The validationInputType defines which type of validation will happen based on th
 
 The respective download URL(s) will be provided in the *StartVerification* request and the extension must download and store these resources as required.
 
-The endpoints for V1 are:
-
-VerifyDocument: 
-```html
-POST /v1/verify/document
-```
-VerifySegment: 
-```html
-POST /v1/verify/segment
-```
-GetMessagesByCulture:
-```html
-GET /v1/messages
-```
-GetSettingsSchema:
-```html
-GET /v1/schemas
-```
-
-### API V2
-The only difference between the V1 and V2 APIs is in the descriptor where the validationInputType has changed its name to validationInputFiles and its type to an array of strings in addition to versioning and the addition of the validatorType and supportedFileTypes fields
-
-```json
-...
-"extensions": [
-{
-  "extensionPointId": "lc.verificationprovider",
-  "id": "string",
-  "name": "string",
-  "description": "string",
-  "extensionPointVersion": "2.0",
-  "configuration": {
-    "endpoints": {
-      "lc.verification.startverification.v2": "string",
-      "lc.verification.verifysegment.v2": "string",
-      "lc.verification.getmessagesbyculture.v2": "string",
-      "lc.verification.getsettingsschema.v2": "string"
-    },
-    "validationInputFiles": ["string"],
-    "validatorType": "string",
-    "supportedFileTypes": ["string"]}
-  }
-]
-``` 
-The extensionPointId must always be `lc.verificationprovider`
-
-The `validationInputFiles` defines which files should be provided for the validation and can be one or more of the following, having unique entries in the array - NativeSource and NativeTarget are mutually exclusive selections:
-- BilingualDocument
-- NativeSource
-- NativeTarget
-- NativeAnnotatedTarget
-
-The `validatorType` defines which type of validator should be used. It can be one of the following:
-- BilingualDocumentValidator
-- NativeSourceValidator
-- NativeTargetValidator
-- NativeAnnotatedTargetValidator
-
-The `supportedFileTypes` field defines an array of FileTypeDefinitionIds to which this validator may be assigned to.
-
-The respective download URL(s) will be provided in the *StartVerification* request and the extension must download and store these resources as required.
-
-The endpoints for V2 are:
-
-VerifyDocument: 
-```html
-POST /v2/verify/document
-```
-VerifySegment: 
-```html
-POST /v2/verify/segment
-```
-GetMessagesByCulture:
-```html
-GET /v2/messages
-```
-GetSettingsSchema:
-```html
-GET /v2/schemas
-```
-
-
-
-### API V1 and V2 Common
+- `endpoints` - the required endpoints for the verification extension, should be relative to your `baseUrl`.
+  - `lc.verification.startverification` - the endpoint used to start the verification operation. For ex: `/verify/document`.
+  - `lc.verification.verifysegment` - the endpoint used to verify a single segment. For ex: `/verify/segment`.
+  - `lc.verification.getmessagesbyculture` - the endpoint used to retrieve localized messages. For ex: `/messages`.
+  - `lc.verification.getsettingsschema` - the endpoint used to retrieve the settings schema. For ex: `/schemas`.
 
 There are four endpoints which the extension supports:
 
@@ -197,7 +115,12 @@ There are described in a little more detail here:
 ##### StartVerification
 This endpoint is called by Trados to initiate the document verification operation. Generally, a background job is started when this call is made and it returns 201(Created)
 The background job then prepares batches of verification messages which it then publishes to Trados via the Trados Cloud Platform API using the PublishMessages endpoint URL which is provided in the initial StartVerification request. Please see the API documentation for more details: 
-[StartVerification](../../App-API.v1.json/paths/~1lc.verification.startverification.v2~1{requestId}/post)
+[StartVerification](../../App-API.v1.json/paths/~1lc.verification.startverification~1{requestId}/post)
+
+Example:
+```html
+POST https://your-app.com/verify/document
+```
 
 The request for StartVerification is shown below:
 
@@ -304,11 +227,14 @@ Each message contains the following fields:
 
 `messageLocation` - the offsets within the segment representing the error span
 
-
-
 ##### VerifySegment
 This endpoint is called by Trados to validate an individual segment. This endpoint responds with a collection of messages which relate to any issues found for this segment. Please see the API documentation for more details: 
-[VerifySegment](../../App-API.v1.json/paths/~1lc.verification.verifysegment.v2/post)
+[VerifySegment](../../App-API.v1.json/paths/~1lc.verification.verifysegment/post)
+
+Example:
+```html
+POST https://your-app.com/verify/segment
+```
 
 The request is structured as follows:
 
@@ -341,11 +267,21 @@ The request is structured as follows:
 
 ##### GetMessagesByCulture
 This endpoint is called by Trados to retrieve localized resources for the messages. The culture is specified in the call as a URL parameter. The app can support localized resources for various languages which will allow the messages to be displayed in the native language of the user in the UI. Please see the API documentation for more details: 
-[GetMessagesByCulture](../../App-API.v1.json/paths/~1lc.verification.getmessagesbyculture.v2~1{culture}/get)
+[GetMessagesByCulture](../../App-API.v1.json/paths/~1lc.verification.getmessagesbyculture~1{culture}/get)
+
+Example:
+```html
+GET https://your-app.com/messages/es-ES
+```
 
 ##### GetSettingsSchema
-This endpoint is called by Trados to retrieve the schema related to any settings which the extension supports. **A note on schemas - once you define your settings schema for the extension, it should only be modified in a backwards compatible way, i.e. only adding of additional fields is allowed, not removing or renaming existing fields.** Please see the API documentation for more details: 
-[GetSettingsSchema](../../App-API.v1.json/paths/~1lc.verification.getsettingsschema.v2/get)
+This endpoint is called by Trados to retrieve the schema related to any settings which the extension supports. **A note on schemas - once you define your settings schema for the extension, it should only be modified in a backwards compatible way, i.e. only adding of extra fields is allowed, not removing or renaming existing fields.** Please see the API documentation for more details: 
+[GetSettingsSchema](../../App-API.v1.json/paths/~1lc.verification.getsettingsschema/get)
+
+Example:
+```html
+GET https://your-app.com/schemas
+```
 
 An example schema is shown below:
 ```json
@@ -362,6 +298,7 @@ An example schema is shown below:
     },
     "verificationResourcePackage": {
       "type": "object",
+      "properties": {
         "platformSettingType": {
           "type": "string",
           "enum": [

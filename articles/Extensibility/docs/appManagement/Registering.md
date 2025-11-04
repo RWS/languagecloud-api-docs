@@ -17,12 +17,13 @@ focus: false
 2. Go to **My Apps** tab, select **New App** and provide the following details:
     - the *Development Name* and *Development Description*, which will only be visible to the developer tenant (do not confuse them with the name and the description of the app descriptor)
     - the *App Descriptor URL* is the app's [descriptor](../../App-API.v1.json/paths/~1descriptor/get) address. This must be a secure URL.
+    - the *Development App* checkbox represents whether your app is intended for development and testing purposes. Development apps cannot be published. 
 3. After filling in these fields, finish the registration by clicking the **Register** button.
 
 <!--
 focus: false
 -->
-![Register](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/RegisterApp.gif?raw=true)
+![Register](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/RegisterAppDevCheckbox.gif?raw=true)
 
 Common issues that may occur during registration include:
 

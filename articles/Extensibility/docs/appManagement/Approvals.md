@@ -8,7 +8,7 @@ stoplight-id: f0cb88dbb2089
 
 All apps have to go through the **Approval Process** in order to achieve certain results. The **Approval Process** is our way of validating that your apps comply with the RWS Trados policies. We have a dedicated **RWS Support** team responsible for the apps validations. The support team has full rights over the registered apps.
 
-After having registered your app in Trados, you will gain access to the comments panel within the app's details page. Here you can leave comments or questions for our **RWS Support** team. The replies received from the Support team members will be displayed in the same panel. 
+After having registered your app in Trados, you will gain access to the comments panel within the app's details page. Here you can leave comments or questions for our **RWS Support** team. The replies received from the Support team members will be displayed in the same panel.
 
 <!--
 focus: false

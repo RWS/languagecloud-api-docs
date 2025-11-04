@@ -6,7 +6,7 @@ tags: [Development]
 # Custom Elements and Locations
 
 The platform supports the addition of various UI elements, including **buttons** (generic, link, and dropdown) and **panels** (generic, sidebar, and tab).
-These elements can be incorporated into specific sections of the user interface in the **Inbox** and **Projects** areas.
+These elements can be incorporated into specific sections of the user interface in the **Inbox, Orders, Projects and Reports** areas.
 
 <table>
   <thead>
@@ -21,7 +21,17 @@ These elements can be incorporated into specific sections of the user interface 
 	</thead>
   <tbody>
     <tr>
-      <td rowspan="12">Inbox</td>
+      <td rowspan="13">Inbox</td>
+      <td>Tasks list</td>
+      <td>
+        tasks-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/tasks-list-tabpanel.png?raw=true" alt="tasks-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
       <td rowspan="2">New tasks list</td>
       <td>
         new-tasks-list-sidebar
@@ -135,8 +145,28 @@ These elements can be incorporated into specific sections of the user interface 
       <td></td>
     </tr>
     <tr>
-      <td rowspan="11">Projects</td>
-      <td rowspan="2">Projects list</td>
+      <td>Orders</td>
+      <td>Orders list</td>
+      <td>
+        orders-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/orders-list-tabpanel.png?raw=true" alt="orders-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="12">Projects</td>
+      <td rowspan="3">Projects list</td>
+      <td>
+        projects-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/projects-list-tabpanel.png?raw=true" alt="projects-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
       <td>
 		projects-list-toolbar
         <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/projects-list-toolbar.png?raw=true" alt="projects-list-toolbar location">
@@ -234,6 +264,17 @@ These elements can be incorporated into specific sections of the user interface 
 	  </td>
       <td>sidebarBox</td>
       <td>projectDetailsActiveTab, projectDetails, projectTaskHistory</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Reports</td>
+      <td>Reports list</td>
+      <td>
+        reports-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/reports-list-tabpanel.png?raw=true" alt="reports-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
       <td></td>
     </tr>
   </tbody>

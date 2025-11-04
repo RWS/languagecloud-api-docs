@@ -1,5 +1,18 @@
 # What's New
 
+## July 2025
+
+- We've expanded support for custom tabs to additional [locations](../docs/development/UI-App-custom-elements-locations.md). You can now use them in the following views:
+    - tasks list
+    - orders list
+    - projects list
+    - reports list
+
+## April 2025
+
+- To facilitate the management of large translation requests, batching support has been added for MT provider apps. This update includes the introduction of a new parameter, `extensions.configuration.segmentBatchSize`, which can be added to your [descriptor](../App-API.v1.json/paths/~1descriptor/get), along with a new error response featuring status code [413](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/413) on the translation [endpoint](../App-API.v1.json/paths/~1lc.mtprovider.translate/post).
+- A new option has been introduced on the app registration [page](../docs/appManagement/Registering.md), allowing users to designate their app for development purposes by selecting a checkbox.
+
 ## December 2024
 - We have officially rebranded from RWS Language Cloud API to Trados Cloud Platform API. All references to our previous brand name will now reflect our new identity, Trados.
 
