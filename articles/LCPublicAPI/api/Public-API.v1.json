@@ -1,4 +1,4 @@
-{
+﻿{
   "openapi": "3.1.0",
   "info": {
     "title": "Trados Cloud Platform API",
@@ -1455,7 +1455,7 @@
     "/files": {
       "post": {
         "summary": "Upload Zip File",
-        "description": "Uploads an archive containing source files in `.zip` format, which will be extracted and used during project creation.\n\nStatus of the upload operation can be tracked using the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint.\n\nOnce this Upload Zip File operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint. Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\n\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Uploads an archive containing source files in `.zip` format, which will be extracted and used during project creation.\n\nStatus of the upload operation can be tracked using the [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoint.\n\nOnce this Upload Zip File operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](#/operations/AddSourceFiles) endpoint. Alternatively, they can be used to [Request File Analysis](#/operations/RequestFileAnalysis) details like word counts and estimated costs.\n\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "operationId": "UploadZipFile",
         "requestBody": {
           "content": {
@@ -1476,7 +1476,7 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
         "parameters": [
           {
@@ -1714,7 +1714,7 @@
             }
           }
         },
-        "description": "This endpoint allows you to request the word count and an estimated cost for your files. \r\n\r\nUse the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) / [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoints to upload your files and get the `fileIds`. Send these `fileIds` together with the `languageProcessingRuleId` and `sourceLanguage` to receive the word count.\r\n\r\nOptionally, send the `quotingOptions` object to receive the `estimatedCosts`.\r\n\r\nUse the [Poll File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis~1{operationId}/get) endpoint to monitor the operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "description": "This endpoint allows you to request the word count and an estimated cost for your files. \r\n\r\nUse the [Upload Zip File](#/operations/UploadZipFile) / [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoints to upload your files and get the `fileIds`. Send these `fileIds` together with the `languageProcessingRuleId` and `sourceLanguage` to receive the word count.\r\n\r\nOptionally, send the `quotingOptions` object to receive the `estimatedCosts`.\r\n\r\nUse the [Poll File Analysis](#/operations/PollFileAnalysis) endpoint to monitor the operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
         "tags": [
           "File"
         ]
@@ -1827,7 +1827,7 @@
             "$ref": "#/components/parameters/fields"
           }
         ],
-        "description": "Monitor the [File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "description": "Monitor the [File Analysis](#/operations/RequestFileAnalysis) operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
         "tags": [
           "File"
         ]
@@ -1918,7 +1918,7 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
         ],
-        "description": "Monitors the unzipping operation for a previously uploaded archive and retrieves details about the extracted files.\r\n\r\nOnce the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint.\r\n Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\r\n",
+        "description": "Monitors the unzipping operation for a previously uploaded archive and retrieves details about the extracted files.\r\n\r\nOnce the [Upload Zip File](#/operations/UploadZipFile) operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](#/operations/AddSourceFiles) endpoint.\r\n Alternatively, they can be used to [Request File Analysis](#/operations/RequestFileAnalysis) details like word counts and estimated costs.\r\n",
         "tags": [
           "File"
         ]
@@ -2792,7 +2792,7 @@
         "x-stoplight": {
           "id": "thyh9npsnqozm"
         },
-        "description": "For more details on the PerfectMatch feature please consult the [official documentation](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).\r\n\r\nAfter creating a mapping, target files from the `matchingProjects` are automatically matched to the source files in the new project. This is a long-running background operation, and its `status` can be tracked by polling  the [Get PerfectMatch Mapping](../reference/Public-API.v1.json/paths/~1perfect-match-mappings~1{mappingId}/get) endpoint.",
+        "description": "For more details on the PerfectMatch feature please consult the [official documentation](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).\r\n\r\nAfter creating a mapping, target files from the `matchingProjects` are automatically matched to the source files in the new project. This is a long-running background operation, and its `status` can be tracked by polling  the [Get PerfectMatch Mapping](#/operations/GetPerfectMatchMapping) endpoint.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3196,7 +3196,7 @@
             }
           }
         },
-        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put).",
+        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](../docs/Updating-data-with-PUT.html).",
         "x-stoplight": {
           "id": "k414o2pdrvauv"
         }
@@ -3329,7 +3329,7 @@
             }
           }
         },
-        "description": "Updates a PerfectMatch file mapping with an existing target file from a PerfectMatch candidate. Only valid candidates can be used to request an update.\r\n\r\nUse the [Candidates](../reference/Public-API.v1.json/paths/~1perfect-match-mappings~1{mappingId}~1batch-mappings~1{batchMappingId}~1file-mappings~1{fileMappingId}~1target-languages~1{targetLanguage}~1candidates/get) endpoint to retrieve a list of valid `fileId` and `projectId` to provide as matching data. "
+        "description": "Updates a PerfectMatch file mapping with an existing target file from a PerfectMatch candidate. Only valid candidates can be used to request an update.\r\n\r\nUse the [Candidates](#/operations/GetPerfectMatchCandidates) endpoint to retrieve a list of valid `fileId` and `projectId` to provide as matching data. "
       }
     },
     "/perfect-match-mappings/{mappingId}/batch-mappings/{batchMappingId}/file-mappings/{fileMappingId}/file": {
@@ -5581,7 +5581,7 @@
         ],
         "summary": "Export Project Files",
         "operationId": "ExportProjectFiles",
-        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}/get)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.",
+        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](#/operations/ExportProjectFilesStatus)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -5693,7 +5693,7 @@
         ],
         "summary": "Poll Project Files Export",
         "operationId": "ExportProjectFilesStatus",
-        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports~1{exportId}~1download/get).",
+        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](#/operations/DownloadFile).",
         "responses": {
           "200": {
             "description": "OK",
@@ -5804,7 +5804,7 @@
           "Project"
         ],
         "summary": "Download Exported Project Files",
-        "description": "Downloads the generated `zip` file containing the files according to initial export operation parameters. \n\nThe final ZIP file will be named using the project name. \n\n When the export operation is performed with `downloadFlat=true` and one target language specified, the resulting ZIP file name will be a combination of the project name and the target language code, as defined by the [Export Project Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports/post) endpoint.",
+        "description": "Downloads the generated `zip` file containing the files according to initial export operation parameters. \n\nThe final ZIP file will be named using the project name. \n\n When the export operation is performed with `downloadFlat=true` and one target language specified, the resulting ZIP file name will be a combination of the project name and the target language code, as defined by the [Export Project Files](#/operations/ExportProjectFiles) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6059,7 +6059,7 @@
           "Source File"
         ],
         "summary": "Add Source File",
-        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n\n> Note: Zip files will be added as reference files. If you want to upload zip files, please use the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint.",
+        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n\n> Note: Zip files will be added as reference files. If you want to upload zip files, please use the [Upload Zip File](#/operations/UploadZipFile) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6091,7 +6091,7 @@
             }
           },
           "required": true,
-          "description": "For details on how to send multipart/form-data with `properties` see this [article](../docs/How-to-multipart.md)."
+          "description": "For details on how to send multipart/form-data with `properties` see this [article](../docs/How-to-multipart.html)."
         },
         "responses": {
           "201": {
@@ -6274,7 +6274,7 @@
           "Source File"
         ],
         "summary": "Attach Source Files",
-        "description": "This endpoint can only be used after files have been uploaded via the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint. It allows you to add multiple source files to a project. \n\n Each file must be individually attached by setting the `fileUrl` to the `associatedFiles.id` returned by the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint, once the `unzipStatus` is `extracted`. \n\nIf a file is attached after the project has already been started, a new start project request must be made.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
+        "description": "This endpoint can only be used after files have been uploaded via the [Upload Zip File](#/operations/UploadZipFile) endpoint. It allows you to add multiple source files to a project. \n\n Each file must be individually attached by setting the `fileUrl` to the `associatedFiles.id` returned by the [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoint, once the `unzipStatus` is `extracted`. \n\nIf a file is attached after the project has already been started, a new start project request must be made.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6833,9 +6833,9 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
-        "description": "Adds a new version of the source file in [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) or native format. More information about file formats can be found on the [File formats](../docs/File-formats.md) page.\n\nThe version is added on the task represented by `taskId`. To successfully  execute the add operation the task should already be assigned and accepted by a user. If the task is automatic, it's possible to add a source file version only when the status of task is `inProgress`.\n\nThe file versions added need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a source file version using an extension task, the configuration of the task must declare the `scope`'s value as \"file\".\n\nIf the file type of the new added file is different than the supported source file type, the new `fileTypeSettingsId` must be specified in the body or an update of file type should be performed after the add operation, using the [Update Source File Properties](../reference/Public-API.v1.json/paths/~1tasks~1{taskId}~1source-files~1{sourceFileId}/put).\n\nThe value of `fileTypeSettingsId` is one of the identifiers listed by the [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get) endpoint.\n\nThe [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get) endpoint must be called with the File Processing Configuration identifier of your project.\n\nThe File Processing Configuration of your project can be retrieved from [Get Project](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/get) endpoint.\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation. \n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when adding files.\n",
+        "description": "Adds a new version of the source file in [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) or native format. More information about file formats can be found on the [File formats](../docs/File-formats.html) page.\n\nThe version is added on the task represented by `taskId`. To successfully  execute the add operation the task should already be assigned and accepted by a user. If the task is automatic, it's possible to add a source file version only when the status of task is `inProgress`.\n\nThe file versions added need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a source file version using an extension task, the configuration of the task must declare the `scope`'s value as \"file\".\n\nIf the file type of the new added file is different than the supported source file type, the new `fileTypeSettingsId` must be specified in the body or an update of file type should be performed after the add operation, using the [Update Source File Properties](#/operations/UpdateSourceProperties).\n\nThe value of `fileTypeSettingsId` is one of the identifiers listed by the [List File Type Settings](#/operations/ListFileTypeSettings) endpoint.\n\nThe [List File Type Settings](#/operations/ListFileTypeSettings) endpoint must be called with the File Processing Configuration identifier of your project.\n\nThe File Processing Configuration of your project can be retrieved from [Get Project](#/operations/GetProject) endpoint.\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation. \n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when adding files.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -7147,7 +7147,7 @@
             }
           }
         },
-        "description": "Updates the properties of the source file.\n\n\nThe value of `fileTypeSettingsId` should be one of the identifiers listed by the [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get)  endpoint called with an identifier of a File Processing Configuration that exists on the project. The list of File Processing Configurations from a project can be retrieved by using the [List File Processing Configurations](../reference/Public-API.v1.json/paths/~1file-processing-configurations/get) endpoint.",
+        "description": "Updates the properties of the source file.\n\n\nThe value of `fileTypeSettingsId` should be one of the identifiers listed by the [List File Type Settings](#/operations/ListFileTypeSettings)  endpoint called with an identifier of a File Processing Configuration that exists on the project. The list of File Processing Configurations from a project can be retrieved by using the [List File Processing Configurations](#/operations/ListFileProcessingConfigurations) endpoint.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7824,7 +7824,7 @@
           "Target File"
         ],
         "summary": "Export Target File Version",
-        "description": "Generates an asynchronous export operation. Use the [Get Target File Version Export](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1exports~1{exportId}/get) endpoint to poll until the export is completed. Used only for [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file versions.\n\nThis operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format, based on the value of the `format` query parameter used.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Generates an asynchronous export operation. Use the [Get Target File Version Export](#/operations/PollTargetFileVersionExport) endpoint to poll until the export is completed. Used only for [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file versions.\n\nThis operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format, based on the value of the `format` query parameter used.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8261,7 +8261,7 @@
           "Target File"
         ],
         "summary": "Import Target File Version",
-        "description": "Generates an asynchronous import operation. Use [Poll Target File Version Import endpoint](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1imports~1{importId}/get) to poll until the import is completed. Only `sdlxliff` files can be imported.\n\nImport should be used when a file is downloaded as an `sdlxliff`, processed and then, replaced. \nThe import operation triggers internally the update of the [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file associated with the imported file. It should mostly be used for offline work.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Generates an asynchronous import operation. Use [Poll Target File Version Import endpoint](#/operations/PollTargetFileVersionImport) to poll until the import is completed. Only `sdlxliff` files can be imported.\n\nImport should be used when a file is downloaded as an `sdlxliff`, processed and then, replaced. \nThe import operation triggers internally the update of the [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file associated with the imported file. It should mostly be used for offline work.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8289,7 +8289,7 @@
             }
           },
           "required": true,
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
         "responses": {
           "200": {
@@ -8598,9 +8598,9 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
-        "description": "Adds a new  version of the target file. Only the `native` and `bcm` file formats are accepted. For the `sdlxliff` files, you should use the [Import Target File endpoint](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1imports/post). More information about file formats can be found on the [File formats](../docs/File-formats.md) page. Additional details on BCM files can be found [here](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html).\n\nThe version is added on the task represented by `taskId`. To be able to execute the add operation the task should be assigned and accepted by user. If the task is automatic, it is possible to add a target file version only if the status is `inProgress`.\n\nThe added file versions need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as \"file\".\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Adds a new  version of the target file. Only the `native` and `bcm` file formats are accepted. For the `sdlxliff` files, you should use the [Import Target File endpoint](#/operations/ImportTargetFileVersion). More information about file formats can be found on the [File formats](../docs/File-formats.html) page. Additional details on BCM files can be found [here](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html).\n\nThe version is added on the task represented by `taskId`. To be able to execute the add operation the task should be assigned and accepted by user. If the task is automatic, it is possible to add a target file version only if the status is `inProgress`.\n\nThe added file versions need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as \"file\".\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8808,7 +8808,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/get) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.",
+        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](#/operations/PollQuoteReportExport) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8916,7 +8916,7 @@
             }
           }
         },
-        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1download/get) once the status is \"completed\". The recommended polling interval is 20 seconds. If polling does not return a success status in 20 minutes, it should be abandoned and a new export should be retried.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.",
+        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](#/operations/DownloadQuoteReport) once the status is \"completed\". The recommended polling interval is 20 seconds. If polling does not return a success status in 20 minutes, it should be abandoned and a new export should be retried.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9028,7 +9028,7 @@
             }
           }
         },
-        "description": "Downloads a quote report generated by the [asynchronous export operation](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/post). \n\nIf the `exportId` query parameter is not provided, the last generated export quote will be downloaded.",
+        "description": "Downloads a quote report generated by the [asynchronous export operation](#/operations/ExportQuoteReport). \n\nIf the `exportId` query parameter is not provided, the last generated export quote will be downloaded.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9662,7 +9662,7 @@
           "Project Group"
         ],
         "summary": "Add Projects To Group",
-        "description": "Adds projects to the project group.\n\nThe projects are not added instantly. To check the status use the [Get Project Group](../reference/Public-API.v1.json/paths/~1project-groups~1{projectGroupId}/get) endpoint.",
+        "description": "Adds projects to the project group.\n\nThe projects are not added instantly. To check the status use the [Get Project Group](#/operations/GetProjectGroup) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9783,7 +9783,7 @@
           "Project Group"
         ],
         "summary": "Remove Projects From Group",
-        "description": "Removes projects from the project group.\n\nThe projects are not removed instantly. To check the status use the [Get Project Group](../reference/Public-API.v1.json/paths/~1project-groups~1{projectGroupId}/get) endpoint.",
+        "description": "Removes projects from the project group.\n\nThe projects are not removed instantly. To check the status use the [Get Project Group](#/operations/GetProjectGroup) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -13094,7 +13094,7 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
         "tags": [
           "Termbase Template"
@@ -14222,7 +14222,7 @@
             "$ref": "#/components/parameters/fields"
           }
         ],
-        "description": "Creates a new termbase entry. For more information about how to use `fieldValueLinks` see [`Create termbase entry`](../docs/termbase/Termbase-entries.md#creating-a-termbase-entry).",
+        "description": "Creates a new termbase entry. For more information about how to use `fieldValueLinks` see [`Create termbase entry`](../docs/termbase/Termbase-entries.html#creating-a-termbase-entry).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -14841,7 +14841,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous export operation.<br>\nUse the [Poll Export Termbase](../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1exports~1{exportId}/get) endpoint to poll until the export status is `done`.",
+        "description": "Generates an asynchronous export operation.<br>\nUse the [Poll Export Termbase](#/operations/PollExportTermbase) endpoint to poll until the export status is `done`.",
         "tags": [
           "Termbase Export"
         ]
@@ -15470,7 +15470,7 @@
               "examples": {}
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
         "description": "Generates an asynchronous import operation.<br>\nUse the Poll Import Termbase endpoint to poll until the import status is `done`.<br>",
         "tags": [
@@ -16022,7 +16022,7 @@
             }
           }
         },
-        "description": "Updates a Translation Memory. We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.md).",
+        "description": "Updates a Translation Memory. We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.html).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -16901,9 +16901,9 @@
               "examples": {}
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
         },
-        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](../reference/Public-API.v1.json/paths/~1translation-memory~1imports~1{importId}/get).",
+        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](#/operations/PollTMImport).",
         "tags": [
           "Translation Memory Import"
         ]
@@ -17109,7 +17109,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous export operation.\nUse the [Poll Translation Memory Export](../reference/Public-API.v1.json/paths/~1translation-memory~1exports~1{exportId}/get) endpoint to poll until the export status is `done`.",
+        "description": "Generates an asynchronous export operation.\nUse the [Poll Translation Memory Export](#/operations/PollTranslationMemoryExport) endpoint to poll until the export status is `done`.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -17420,7 +17420,7 @@
         "tags": [
           "Translation"
         ],
-        "description": "Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "description": "Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -17532,7 +17532,7 @@
         "x-stoplight": {
           "id": "w7q4r8d7hum33"
         },
-        "description": "Performs a concordance search for a given text within the TM linked to the specified translation engine. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "description": "Performs a concordance search for a given text within the TM linked to the specified translation engine. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -17644,7 +17644,7 @@
         "x-stoplight": {
           "id": "pyjdd2h02zm8z"
         },
-        "description": "Updates a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "description": "Updates a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -17749,7 +17749,7 @@
           }
         },
         "operationId": "TranslationsAdd",
-        "description": "Adds a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
+        "description": "Adds a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"

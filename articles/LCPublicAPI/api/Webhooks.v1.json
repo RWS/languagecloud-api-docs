@@ -1,4 +1,4 @@
-{
+﻿{
   "openapi": "3.1.0",
   "info": {
     "title": "Webhooks",
@@ -628,7 +628,7 @@
       "webhook": {
         "title": "Webhook",
         "type": "object",
-        "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.md) page.",
+        "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.html) page.",
         "properties": {
           "eventId": {
             "type": "string",
@@ -737,7 +737,7 @@
             },
             "items": {
               "$ref": "#/components/schemas/webhook",
-              "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.md) page.",
+              "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.html) page.",
               "x-stoplight": {
                 "id": "6ff5pybiu7n07"
               }
