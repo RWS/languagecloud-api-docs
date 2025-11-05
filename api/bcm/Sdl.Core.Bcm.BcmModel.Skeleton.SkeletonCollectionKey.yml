@@ -1,0 +1,807 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  id: SkeletonCollectionKey
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From(System.Int32)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  langs:
+  - csharp
+  - vb
+  name: SkeletonCollectionKey
+  nameWithType: SkeletonCollectionKey
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  type: Struct
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Wrapper used for defining integer keys in the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton" data-throw-if-not-resolved="false"></xref> collections.
+  example: []
+  syntax:
+    content: 'public struct SkeletonCollectionKey : IEquatable<SkeletonCollectionKey>'
+    content.vb: Public Structure SkeletonCollectionKey Implements IEquatable(Of SkeletonCollectionKey)
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor(System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: SkeletonCollectionKey(int)
+  nameWithType: SkeletonCollectionKey.SkeletonCollectionKey(int)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.SkeletonCollectionKey(int)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
+  syntax:
+    content: public SkeletonCollectionKey(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The identifier.
+    content.vb: Public Sub New(id As Integer)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor*
+  nameWithType.vb: SkeletonCollectionKey.New(Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.New(Integer)
+  name.vb: New(Integer)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From(System.Int32)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From(System.Int32)
+  id: From(System.Int32)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: From(int)
+  nameWithType: SkeletonCollectionKey.From(int)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From(int)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Creates a new <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey" data-throw-if-not-resolved="false"></xref> from an integer.
+  example: []
+  syntax:
+    content: public static SkeletonCollectionKey From(int from)
+    parameters:
+    - id: from
+      type: System.Int32
+      description: The value with which to initialize this instance.
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+      description: A new instance of the <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Function From(from As Integer) As SkeletonCollectionKey
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From*
+  nameWithType.vb: SkeletonCollectionKey.From(Integer)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From(Integer)
+  name.vb: From(Integer)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: Equals(SkeletonCollectionKey)
+  nameWithType: SkeletonCollectionKey.Equals(SkeletonCollectionKey)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public bool Equals(SkeletonCollectionKey other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As SkeletonCollectionKey) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: SkeletonCollectionKey.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals*
+  nameWithType.vb: SkeletonCollectionKey.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SkeletonCollectionKey.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  id: op_Equality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: operator ==(SkeletonCollectionKey, SkeletonCollectionKey)
+  nameWithType: SkeletonCollectionKey.operator ==(SkeletonCollectionKey, SkeletonCollectionKey)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.operator ==(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey, Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  type: Operator
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Implements the operator ==.
+  example: []
+  syntax:
+    content: public static bool operator ==(SkeletonCollectionKey left, SkeletonCollectionKey right)
+    parameters:
+    - id: left
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+      description: The left hand item.
+    - id: right
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+      description: The right hand item.
+    return:
+      type: System.Boolean
+      description: The result of <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Operator =(left As SkeletonCollectionKey, right As SkeletonCollectionKey) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality*
+  nameWithType.vb: SkeletonCollectionKey.=(SkeletonCollectionKey, SkeletonCollectionKey)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.=(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey, Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  name.vb: =(SkeletonCollectionKey, SkeletonCollectionKey)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  id: op_Inequality(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey,Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: operator !=(SkeletonCollectionKey, SkeletonCollectionKey)
+  nameWithType: SkeletonCollectionKey.operator !=(SkeletonCollectionKey, SkeletonCollectionKey)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.operator !=(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey, Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  type: Operator
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Implements the operator !=.
+  example: []
+  syntax:
+    content: public static bool operator !=(SkeletonCollectionKey left, SkeletonCollectionKey right)
+    parameters:
+    - id: left
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+      description: The left hand item.
+    - id: right
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+      description: The right hand item.
+    return:
+      type: System.Boolean
+      description: The negated result of <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Operator <>(left As SkeletonCollectionKey, right As SkeletonCollectionKey) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality*
+  nameWithType.vb: SkeletonCollectionKey.<>(SkeletonCollectionKey, SkeletonCollectionKey)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.<>(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey, Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  name.vb: <>(SkeletonCollectionKey, SkeletonCollectionKey)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id
+  id: Id
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SkeletonCollectionKey.Id
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the identifier.
+  example: []
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The identifier.
+    content.vb: Public Property Id As Integer
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton.html
+  name: FileSkeleton
+  nameWithType: FileSkeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.FileSkeleton
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<SkeletonCollectionKey>
+  nameWithType: IEquatable<SkeletonCollectionKey>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey>
+  nameWithType.vb: IEquatable(Of SkeletonCollectionKey)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  name.vb: IEquatable(Of SkeletonCollectionKey)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  name: SkeletonCollectionKey
+  nameWithType: SkeletonCollectionKey
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey__ctor_System_Int32_
+  name: SkeletonCollectionKey
+  nameWithType: SkeletonCollectionKey.SkeletonCollectionKey
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.SkeletonCollectionKey
+  nameWithType.vb: SkeletonCollectionKey.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_From_System_Int32_
+  name: From
+  nameWithType: SkeletonCollectionKey.From
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.From
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  name: Equals
+  nameWithType: SkeletonCollectionKey.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(SkeletonCollectionKey)
+  nameWithType: IEquatable<SkeletonCollectionKey>.Equals(SkeletonCollectionKey)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey>.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  nameWithType.vb: IEquatable(Of SkeletonCollectionKey).Equals(SkeletonCollectionKey)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey).Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_GetHashCode
+  name: GetHashCode
+  nameWithType: SkeletonCollectionKey.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.GetHashCode
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  name: Equals(SkeletonCollectionKey)
+  nameWithType: SkeletonCollectionKey.Equals(SkeletonCollectionKey)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey
+    name: SkeletonCollectionKey
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_op_Equality_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  name: operator ==
+  nameWithType: SkeletonCollectionKey.operator ==
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.operator ==
+  nameWithType.vb: SkeletonCollectionKey.=
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Equality*
+    name: ==
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_op_Equality_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_op_Inequality_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+  name: operator !=
+  nameWithType: SkeletonCollectionKey.operator !=
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.operator !=
+  nameWithType.vb: SkeletonCollectionKey.<>
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.op_Inequality*
+    name: '!='
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_op_Inequality_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.html#Sdl_Core_Bcm_BcmModel_Skeleton_SkeletonCollectionKey_Id
+  name: Id
+  nameWithType: SkeletonCollectionKey.Id
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.SkeletonCollectionKey.Id

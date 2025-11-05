@@ -1,0 +1,213 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  id: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken
+  - Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken.html
+  name: AbbreviationToken
+  nameWithType: AbbreviationToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AbbreviationToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken.html
+  name: AcronymToken
+  nameWithType: AcronymToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AcronymToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken.html
+  name: AlphanumericToken
+  nameWithType: AlphanumericToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.AlphanumericToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken.html
+  name: CharSequenceToken
+  nameWithType: CharSequenceToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.CharSequenceToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken.html
+  name: DateTimeToken
+  nameWithType: DateTimeToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.DateTimeToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken.html
+  name: GeneralPunctuationToken
+  nameWithType: GeneralPunctuationToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GeneralPunctuationToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken.html
+  name: GenericPlaceableToken
+  nameWithType: GenericPlaceableToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.GenericPlaceableToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken.html
+  name: IPAdressToken
+  nameWithType: IPAdressToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.IPAdressToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken.html
+  name: MeasureToken
+  nameWithType: MeasureToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.MeasureToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken.html
+  name: NumberToken
+  nameWithType: NumberToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.NumberToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken.html
+  name: TagToken
+  nameWithType: TagToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.TagToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token.html
+  name: Token
+  nameWithType: Token
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.Token
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken.html
+  name: URIToken
+  nameWithType: URIToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.URIToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken.html
+  name: VariableToken
+  nameWithType: VariableToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.VariableToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken.html
+  name: WhiteSpaceToken
+  nameWithType: WhiteSpaceToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WhiteSpaceToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken.html
+  name: WordToken
+  nameWithType: WordToken
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.WordToken
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens
+    name: Tokens
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.Tokens.html

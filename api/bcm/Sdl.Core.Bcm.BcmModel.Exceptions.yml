@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Exceptions
+  commentId: N:Sdl.Core.Bcm.BcmModel.Exceptions
+  id: Sdl.Core.Bcm.BcmModel.Exceptions
+  children:
+  - Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException
+  langs:
+  - csharp
+  - vb
+  name: Sdl.Core.Bcm.BcmModel.Exceptions
+  nameWithType: Sdl.Core.Bcm.BcmModel.Exceptions
+  fullName: Sdl.Core.Bcm.BcmModel.Exceptions
+  type: Namespace
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException
+  commentId: T:Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.html
+  name: InvalidBcmDocumentException
+  nameWithType: InvalidBcmDocumentException
+  fullName: Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException

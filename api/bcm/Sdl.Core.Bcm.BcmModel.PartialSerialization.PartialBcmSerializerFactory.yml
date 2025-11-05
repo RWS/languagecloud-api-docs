@@ -1,0 +1,604 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  id: PartialBcmSerializerFactory
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  children:
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.IO.Stream)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.String)
+  - Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  langs:
+  - csharp
+  - vb
+  name: PartialBcmSerializerFactory
+  nameWithType: PartialBcmSerializerFactory
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Creates IPartialBcmSerializer instances (either in-memory or temp file based)
+  example: []
+  syntax:
+    content: public class PartialBcmSerializerFactory
+    content.vb: Public Class PartialBcmSerializerFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.String)
+  id: CreateSerializer(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateSerializer(string)
+  nameWithType: PartialBcmSerializerFactory.CreateSerializer(string)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(string)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: >-
+    Creates serializer based on a temp file with the bcm json content.
+
+    Does not delete the file.
+  example: []
+  syntax:
+    content: public IPartialBcmSerializer CreateSerializer(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+    content.vb: Public Function CreateSerializer(filePath As String) As IPartialBcmSerializer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*
+  nameWithType.vb: PartialBcmSerializerFactory.CreateSerializer(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(String)
+  name.vb: CreateSerializer(String)
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.IO.Stream)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.IO.Stream)
+  id: CreateSerializer(System.IO.Stream)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateSerializer(Stream)
+  nameWithType: PartialBcmSerializerFactory.CreateSerializer(Stream)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(System.IO.Stream)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Creates serializer from a stream containing bcm json content
+  example: []
+  syntax:
+    content: public IPartialBcmSerializer CreateSerializer(Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+    return:
+      type: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+    content.vb: Public Function CreateSerializer(stream As Stream) As IPartialBcmSerializer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)
+  id: CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateSerializer(Document)
+  nameWithType: PartialBcmSerializerFactory.CreateSerializer(Document)
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer(Sdl.Core.Bcm.BcmModel.Document)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: Creates serializer from a Document instance
+  example: []
+  syntax:
+    content: public IPartialBcmSerializer CreateSerializer(Document existingDocument)
+    parameters:
+    - id: existingDocument
+      type: Sdl.Core.Bcm.BcmModel.Document
+    return:
+      type: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+    content.vb: Public Function CreateSerializer(existingDocument As Document) As IPartialBcmSerializer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: PartialBcmSerializerFactory()
+  nameWithType: PartialBcmSerializerFactory.PartialBcmSerializerFactory()
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.PartialBcmSerializerFactory()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  syntax:
+    content: public PartialBcmSerializerFactory()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor*
+  nameWithType.vb: PartialBcmSerializerFactory.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  commentId: P:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  id: FileSizeLimitInMBForInMemory
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory
+  langs:
+  - csharp
+  - vb
+  name: FileSizeLimitInMBForInMemory
+  nameWithType: PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  summary: >-
+    Limit above which we will use a temp file based serializer
+
+    instead of and in-memory one
+  example: []
+  syntax:
+    content: public int FileSizeLimitInMBForInMemory { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FileSizeLimitInMBForInMemory As Integer
+  overload: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  commentId: N:Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  nameWithType: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization
+    name: PartialSerialization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.PartialSerialization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_CreateSerializer_System_String_
+  name: CreateSerializer
+  nameWithType: PartialBcmSerializerFactory.CreateSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.CreateSerializer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  commentId: T:Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+  parent: Sdl.Core.Bcm.BcmModel.PartialSerialization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer.html
+  name: IPartialBcmSerializer
+  nameWithType: IPartialBcmSerializer
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.IPartialBcmSerializer
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: Sdl.Core.Bcm.BcmModel.Document
+  commentId: T:Sdl.Core.Bcm.BcmModel.Document
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Document.html
+  name: Document
+  nameWithType: Document
+  fullName: Sdl.Core.Bcm.BcmModel.Document
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory__ctor
+  name: PartialBcmSerializerFactory
+  nameWithType: PartialBcmSerializerFactory.PartialBcmSerializerFactory
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.PartialBcmSerializerFactory
+  nameWithType.vb: PartialBcmSerializerFactory.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_PartialBcmSerializerFactory_FileSizeLimitInMBForInMemory
+  name: FileSizeLimitInMBForInMemory
+  nameWithType: PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+  fullName: Sdl.Core.Bcm.BcmModel.PartialSerialization.PartialBcmSerializerFactory.FileSizeLimitInMBForInMemory
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

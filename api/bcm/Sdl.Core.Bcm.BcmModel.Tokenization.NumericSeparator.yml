@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  id: NumericSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Alternate
+  - Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.None
+  - Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Primary
+  langs:
+  - csharp
+  - vb
+  name: NumericSeparator
+  nameWithType: NumericSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: The numeric separators type which can occur in a number token.
+  example: []
+  syntax:
+    content: public enum NumericSeparator
+    content.vb: Public Enum NumericSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.None
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.None
+  id: None
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: NumericSeparator.None
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.None
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Indicates that no explicit separator is used.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Primary
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Primary
+  id: Primary
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  langs:
+  - csharp
+  - vb
+  name: Primary
+  nameWithType: NumericSeparator.Primary
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Primary
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Indicates that the culture's primary separator (group or decimal separator) is used.
+  example: []
+  syntax:
+    content: Primary = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Alternate
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Alternate
+  id: Alternate
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  langs:
+  - csharp
+  - vb
+  name: Alternate
+  nameWithType: NumericSeparator.Alternate
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.Alternate
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Indicates that an alternate separator (group or decimal separator) is used.
+  example: []
+  syntax:
+    content: Alternate = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator.html
+  name: NumericSeparator
+  nameWithType: NumericSeparator
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.NumericSeparator

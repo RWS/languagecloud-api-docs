@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  id: TagType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  children:
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.End
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.LockedContent
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Standalone
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Start
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.TextPlaceholder
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Undefined
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedEnd
+  - Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedStart
+  langs:
+  - csharp
+  - vb
+  name: TagType
+  nameWithType: TagType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  type: Enum
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Types of tags appearing in tokenization data.
+  example: []
+  syntax:
+    content: public enum TagType
+    content.vb: Public Enum TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Undefined
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Undefined
+  id: Undefined
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: Undefined
+  nameWithType: TagType.Undefined
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Undefined
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: >-
+    Represents an undefined tag type. This is also used for "dummy tags" which may 
+
+    be added to a segment in case a tag was deleted from the original segment. Such
+
+    a situation occurs when the translation engine deletes tags, but the number of 
+
+    tokens must remain constant in the translation proposal as otherwise the token
+
+    positions will become invalid.
+  example: []
+  syntax:
+    content: Undefined = 0
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Start
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Start
+  id: Start
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: TagType.Start
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Start
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Represents a starting tag.
+  example: []
+  syntax:
+    content: Start = 1
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.End
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.End
+  id: End
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: TagType.End
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.End
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Represents an ending tag.
+  example: []
+  syntax:
+    content: End = 2
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Standalone
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Standalone
+  id: Standalone
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: Standalone
+  nameWithType: TagType.Standalone
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.Standalone
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Represents a standalone tag.
+  example: []
+  syntax:
+    content: Standalone = 3
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.TextPlaceholder
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.TextPlaceholder
+  id: TextPlaceholder
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: TextPlaceholder
+  nameWithType: TagType.TextPlaceholder
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.TextPlaceholder
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: A standalone tag which represents text, not formatting.
+  example: []
+  syntax:
+    content: TextPlaceholder = 4
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.LockedContent
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.LockedContent
+  id: LockedContent
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: LockedContent
+  nameWithType: TagType.LockedContent
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.LockedContent
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: Group of (locked) tag/text content that should be treated as a single placeable.
+  example: []
+  syntax:
+    content: LockedContent = 5
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedStart
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedStart
+  id: UnmatchedStart
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: UnmatchedStart
+  nameWithType: TagType.UnmatchedStart
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedStart
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: 'For TMX processing only: unmatched start tag (it pos=start)'
+  example: []
+  syntax:
+    content: UnmatchedStart = 6
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedEnd
+  commentId: F:Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedEnd
+  id: UnmatchedEnd
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  langs:
+  - csharp
+  - vb
+  name: UnmatchedEnd
+  nameWithType: TagType.UnmatchedEnd
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.UnmatchedEnd
+  type: Field
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Tokenization
+  summary: 'For TMX processing only: unmatched end tag (it pos=end)'
+  example: []
+  syntax:
+    content: UnmatchedEnd = 7
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization
+  commentId: N:Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Tokenization
+  nameWithType: Sdl.Core.Bcm.BcmModel.Tokenization
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Tokenization
+    name: Tokenization
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Tokenization.html
+- uid: Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  commentId: T:Sdl.Core.Bcm.BcmModel.Tokenization.TagType
+  parent: Sdl.Core.Bcm.BcmModel.Tokenization
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Tokenization.TagType.html
+  name: TagType
+  nameWithType: TagType
+  fullName: Sdl.Core.Bcm.BcmModel.Tokenization.TagType

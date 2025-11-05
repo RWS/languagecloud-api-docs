@@ -1,0 +1,2279 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  id: TranslationOrigin
+  parent: Sdl.Core.Bcm.BcmModel
+  children:
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor(System.String,System.String,System.Int32,System.Boolean,System.Boolean,Sdl.Core.Bcm.BcmModel.TextContextMatchLevel,System.String,Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+  - Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername
+  langs:
+  - csharp
+  - vb
+  name: TranslationOrigin
+  nameWithType: TranslationOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Contains information on the origin of translation.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class TranslationOrigin : MetadataContainer, IEquatable<MetadataContainer>, ICloneable<TranslationOrigin>, IEquatable<TranslationOrigin>
+    content.vb: >-
+      <DataContract>
+
+      Public Class TranslationOrigin Inherits MetadataContainer Implements IEquatable(Of MetadataContainer), ICloneable(Of TranslationOrigin), IEquatable(Of TranslationOrigin)
+  seealso:
+  - linkId: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  - Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: TranslationOrigin()
+  nameWithType: TranslationOrigin.TranslationOrigin()
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationOrigin()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  syntax:
+    content: public TranslationOrigin()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor*
+  nameWithType.vb: TranslationOrigin.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationOrigin.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor(System.String,System.String,System.Int32,System.Boolean,System.Boolean,Sdl.Core.Bcm.BcmModel.TextContextMatchLevel,System.String,Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor(System.String,System.String,System.Int32,System.Boolean,System.Boolean,Sdl.Core.Bcm.BcmModel.TextContextMatchLevel,System.String,Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  id: '#ctor(System.String,System.String,System.Int32,System.Boolean,System.Boolean,Sdl.Core.Bcm.BcmModel.TextContextMatchLevel,System.String,Sdl.Core.Bcm.BcmModel.TranslationOrigin)'
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: TranslationOrigin(string, string, int, bool, bool, TextContextMatchLevel, string, TranslationOrigin)
+  nameWithType: TranslationOrigin.TranslationOrigin(string, string, int, bool, bool, TextContextMatchLevel, string, TranslationOrigin)
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationOrigin(string, string, int, bool, bool, Sdl.Core.Bcm.BcmModel.TextContextMatchLevel, string, Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Initializes a new instance of the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public TranslationOrigin(string originType, string originSystem, int matchPercent, bool isStructureContextMatch, bool isSidContextMatch, TextContextMatchLevel textContextMatchLevel, string originalTranslationHash, TranslationOrigin originBeforeAdaptation)
+    parameters:
+    - id: originType
+      type: System.String
+      description: Type of the origin.
+    - id: originSystem
+      type: System.String
+      description: The origin system.
+    - id: matchPercent
+      type: System.Int32
+      description: The match percent.
+    - id: isStructureContextMatch
+      type: System.Boolean
+      description: if set to <code>true</code> the translation is a structure context match.
+    - id: isSidContextMatch
+      type: System.Boolean
+      description: if set to <code>true</code> the translation is a sID context match.
+    - id: textContextMatchLevel
+      type: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+      description: The text context match level.
+    - id: originalTranslationHash
+      type: System.String
+      description: The original translation hash.
+    - id: originBeforeAdaptation
+      type: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+      description: The <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin" data-throw-if-not-resolved="false"></xref> before adaptation.
+    content.vb: Public Sub New(originType As String, originSystem As String, matchPercent As Integer, isStructureContextMatch As Boolean, isSidContextMatch As Boolean, textContextMatchLevel As TextContextMatchLevel, originalTranslationHash As String, originBeforeAdaptation As TranslationOrigin)
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor*
+  nameWithType.vb: TranslationOrigin.New(String, String, Integer, Boolean, Boolean, TextContextMatchLevel, String, TranslationOrigin)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationOrigin.New(String, String, Integer, Boolean, Boolean, Sdl.Core.Bcm.BcmModel.TextContextMatchLevel, String, Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  name.vb: New(String, String, Integer, Boolean, Boolean, TextContextMatchLevel, String, TranslationOrigin)
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: TranslationOrigin.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public TranslationOrigin Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+      description: A deep clone of this instance.
+    content.vb: Public Function Clone() As TranslationOrigin
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone*
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Clone
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  id: Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: Equals(TranslationOrigin)
+  nameWithType: TranslationOrigin.Equals(TranslationOrigin)
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(TranslationOrigin other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+      description: An object to compare with this object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(other As TranslationOrigin) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: TranslationOrigin.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals*
+  nameWithType.vb: TranslationOrigin.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TranslationOrigin.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+  id: OriginType
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: OriginType
+  nameWithType: TranslationOrigin.OriginType
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the translation origin type.
+  remarks: Seed <xref href="Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin" data-throw-if-not-resolved="false"></xref> for default values.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "originType")]
+
+      public string OriginType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The translation origin type.
+    content.vb: >-
+      <DataMember(Name:="originType")>
+
+      Public Property OriginType As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: originType
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+  id: OriginSystem
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: OriginSystem
+  nameWithType: TranslationOrigin.OriginSystem
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the origin system.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "originSystem")]
+
+      public string OriginSystem { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The originating system name for a segment translation.
+    content.vb: >-
+      <DataMember(Name:="originSystem")>
+
+      Public Property OriginSystem As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: originSystem
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+  id: MatchPercent
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: MatchPercent
+  nameWithType: TranslationOrigin.MatchPercent
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the match percent.
+  remarks: >-
+    <p>
+
+    When a match gets adapted by interactive translation, the original match value can be read from
+
+    this property on the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation" data-throw-if-not-resolved="false"></xref> properties.
+
+    </p>
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "matchPercent")]
+
+      public int MatchPercent { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: >-
+        The match value for a translation memory match, or the confidence level for a machine translation.
+
+        Should be a percentage value from 0 - 100%
+    content.vb: >-
+      <DataMember(Name:="matchPercent")>
+
+      Public Property MatchPercent As Integer
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: matchPercent
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+  id: IsStructureContextMatch
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: IsStructureContextMatch
+  nameWithType: TranslationOrigin.IsStructureContextMatch
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets a value indicating whether this instance is structure context match.
+  remarks: >-
+    If <code>true</code>, indicates that the translation originates from a system that takes 
+
+    structural context information into account, and that the structure context matches.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "isStructureContextMatch", EmitDefaultValue = false)]
+
+      public bool IsStructureContextMatch { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if this instance is structure context match; otherwise, <code>false</code>.
+    content.vb: >-
+      <DataMember(Name:="isStructureContextMatch", EmitDefaultValue:=False)>
+
+      Public Property IsStructureContextMatch As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: isStructureContextMatch
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+  id: IsSidContextMatch
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: IsSidContextMatch
+  nameWithType: TranslationOrigin.IsSidContextMatch
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    If <code>true</code>, indicates that the translation originates from a system that takes 
+
+    ID context information into account, and that the ID context matches.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "isSidContextMatch", EmitDefaultValue = false)]
+
+      public bool IsSidContextMatch { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if this instance is sID context match; otherwise, <code>false</code>.
+    content.vb: >-
+      <DataMember(Name:="isSidContextMatch", EmitDefaultValue:=False)>
+
+      Public Property IsSidContextMatch As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: isSidContextMatch
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+  id: TextContextMatchLevel
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: TextContextMatchLevel
+  nameWithType: TranslationOrigin.TextContextMatchLevel
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Indicates whether the match originates from a source where the textual surrounding content 
+
+    corresponds to the text surrounding this segment.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "textContextMatchLevel")]
+
+      [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+      public TextContextMatchLevel TextContextMatchLevel { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+      description: The <xref href="Sdl.Core.Bcm.BcmModel.TextContextMatchLevel" data-throw-if-not-resolved="false"></xref> value.
+    content.vb: >-
+      <DataMember(Name:="textContextMatchLevel")>
+
+      <JsonProperty(NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property TextContextMatchLevel As TextContextMatchLevel
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: textContextMatchLevel
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+  id: OriginalTranslationHash
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: OriginalTranslationHash
+  nameWithType: TranslationOrigin.OriginalTranslationHash
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    A hash value that identifies the entry in the TM that provided the translation. This is used 
+
+    to update the correct TM entry if a translator provides an updated version of the translation.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "originalTranslationHash", EmitDefaultValue = false)]
+
+      public string OriginalTranslationHash { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The original translation hash.
+    content.vb: >-
+      <DataMember(Name:="originalTranslationHash", EmitDefaultValue:=False)>
+
+      Public Property OriginalTranslationHash As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: originalTranslationHash
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  id: OriginBeforeAdaptation
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: OriginBeforeAdaptation
+  nameWithType: TranslationOrigin.OriginBeforeAdaptation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin" data-throw-if-not-resolved="false"></xref> before adaptation.
+  remarks: <code>Null</code> or the origin information for the originally adapted target content.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "originBeforeAdaptation", EmitDefaultValue = false)]
+
+      public TranslationOrigin OriginBeforeAdaptation { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+      description: The <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin" data-throw-if-not-resolved="false"></xref> before adaptation.
+    content.vb: >-
+      <DataMember(Name:="originBeforeAdaptation", EmitDefaultValue:=False)>
+
+      Public Property OriginBeforeAdaptation As TranslationOrigin
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: originBeforeAdaptation
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+  id: CreatedBy
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: CreatedBy
+  nameWithType: TranslationOrigin.CreatedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the identifier of the user who created the translation.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "createdBy", EmitDefaultValue = false)]
+
+      public string CreatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="createdBy", EmitDefaultValue:=False)>
+
+      Public Property CreatedBy As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: createdBy
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  id: CreatedOn
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: CreatedOn
+  nameWithType: TranslationOrigin.CreatedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the date and time when the translation was created.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "createdOn", EmitDefaultValue = false)]
+
+      [JsonConverter(typeof(DateTimeConverter))]
+
+      public DateTime? CreatedOn { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <DataMember(Name:="createdOn", EmitDefaultValue:=False)>
+
+      <JsonConverter(GetType(DateTimeConverter))>
+
+      Public Property CreatedOn As Date?
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: createdOn
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  id: ModifiedBy
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: ModifiedBy
+  nameWithType: TranslationOrigin.ModifiedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the identifier of the user who modified the translation.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "modifiedBy", EmitDefaultValue = false)]
+
+      public string ModifiedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="modifiedBy", EmitDefaultValue:=False)>
+
+      Public Property ModifiedBy As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: modifiedBy
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  id: ModifiedOn
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: ModifiedOn
+  nameWithType: TranslationOrigin.ModifiedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the date and time when the translation was modified.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "modifiedOn", EmitDefaultValue = false)]
+
+      [JsonConverter(typeof(DateTimeConverter))]
+
+      public DateTime? ModifiedOn { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <DataMember(Name:="modifiedOn", EmitDefaultValue:=False)>
+
+      <JsonConverter(GetType(DateTimeConverter))>
+
+      Public Property ModifiedOn As Date?
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: modifiedOn
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  id: TranslationQualityEstimations
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: TranslationQualityEstimations
+  nameWithType: TranslationOrigin.TranslationQualityEstimations
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Stores a list of TranslationEstimation (persisting TQE data) objects
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "translationQualityEstimations", EmitDefaultValue = false, IsRequired = false)]
+
+      public List<TranslationQualityEstimation> TranslationQualityEstimations { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation}
+    content.vb: >-
+      <DataMember(Name:="translationQualityEstimations", EmitDefaultValue:=False, IsRequired:=False)>
+
+      Public Property TranslationQualityEstimations As List(Of TranslationQualityEstimation)
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: translationQualityEstimations
+    - name: EmitDefaultValue
+      type: System.Boolean
+      value: false
+    - name: IsRequired
+      type: System.Boolean
+      value: false
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+  id: CreationDate
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: CreationDate
+  nameWithType: TranslationOrigin.CreationDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Gets or sets the <code>created_on</code> metadata.
+
+    Made obsolete by the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn" data-throw-if-not-resolved="false"></xref> property.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use the CreatedOn property instead.")]
+
+      public string CreationDate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>created_on</code> metadata value.
+    content.vb: >-
+      <Obsolete("Use the CreatedOn property instead.")>
+
+      Public Property CreationDate As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use the CreatedOn property instead.
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+  id: LastModifiedUserId
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: LastModifiedUserId
+  nameWithType: TranslationOrigin.LastModifiedUserId
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Gets or sets the <code>last_modified_by</code> metadata. 
+
+    Made obsolete by the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy" data-throw-if-not-resolved="false"></xref> property.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use the ModifiedBy property instead.")]
+
+      public string LastModifiedUserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>last_modified_by</code> metadata value.
+    content.vb: >-
+      <Obsolete("Use the ModifiedBy property instead.")>
+
+      Public Property LastModifiedUserId As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use the ModifiedBy property instead.
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+  id: LastModifiedDate
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: LastModifiedDate
+  nameWithType: TranslationOrigin.LastModifiedDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: >-
+    Gets or sets the <code>modified_on</code> metadata.
+
+    Made obsolete by the <xref href="Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn" data-throw-if-not-resolved="false"></xref> property.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use the ModifiedOn property instead.")]
+
+      public string LastModifiedDate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>modified_on</code> metadata value.
+    content.vb: >-
+      <Obsolete("Use the ModifiedOn property instead.")>
+
+      Public Property LastModifiedDate As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use the ModifiedOn property instead.
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+  id: LastUsedUserId
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: LastUsedUserId
+  nameWithType: TranslationOrigin.LastUsedUserId
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>used_by</code> metadata.
+  example: []
+  syntax:
+    content: public string LastUsedUserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>used_by</code> metadata value.
+    content.vb: Public Property LastUsedUserId As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+  id: LastUsedDate
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: LastUsedDate
+  nameWithType: TranslationOrigin.LastUsedDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>used_on</code> metadata.
+  example: []
+  syntax:
+    content: public string LastUsedDate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>used_on</code> metadata value.
+    content.vb: Public Property LastUsedDate As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+  id: UseCount
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: UseCount
+  nameWithType: TranslationOrigin.UseCount
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>used_on</code> metadata.
+  example: []
+  syntax:
+    content: public string UseCount { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>used_on</code> metadata value.
+    content.vb: Public Property UseCount As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+  id: CreationDisplayUsername
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: CreationDisplayUsername
+  nameWithType: TranslationOrigin.CreationDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>created_by_username</code> metadata.
+  example: []
+  syntax:
+    content: public string CreationDisplayUsername { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>created_by_username</code> metadata value.
+    content.vb: Public Property CreationDisplayUsername As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+  id: ChangeDisplayUsername
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: ChangeDisplayUsername
+  nameWithType: TranslationOrigin.ChangeDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>created_by_username</code> metadata.
+  example: []
+  syntax:
+    content: public string ChangeDisplayUsername { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>created_by_username</code> metadata value.
+    content.vb: Public Property ChangeDisplayUsername As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername*
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername
+  id: UseDisplayUsername
+  parent: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  langs:
+  - csharp
+  - vb
+  name: UseDisplayUsername
+  nameWithType: TranslationOrigin.UseDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel
+  summary: Gets or sets the <code>use_by_username</code> metadata.
+  example: []
+  syntax:
+    content: public string UseDisplayUsername { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The <code>use_by_username</code> metadata value.
+    content.vb: Public Property UseDisplayUsername As String
+  overload: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername*
+references:
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.MetadataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  name: MetadataContainer
+  nameWithType: MetadataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.MetadataContainer}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MetadataContainer>
+  nameWithType: IEquatable<MetadataContainer>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.MetadataContainer>
+  nameWithType.vb: IEquatable(Of MetadataContainer)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  name.vb: IEquatable(Of MetadataContainer)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<TranslationOrigin>
+  nameWithType: ICloneable<TranslationOrigin>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.TranslationOrigin>
+  nameWithType.vb: ICloneable(Of TranslationOrigin)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  name.vb: ICloneable(Of TranslationOrigin)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TranslationOrigin>
+  nameWithType: IEquatable<TranslationOrigin>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.TranslationOrigin>
+  nameWithType.vb: IEquatable(Of TranslationOrigin)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  name.vb: IEquatable(Of TranslationOrigin)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  name: GetMetadata(string)
+  nameWithType: MetadataContainer.GetMetadata(string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(string)
+  nameWithType.vb: MetadataContainer.GetMetadata(String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(String)
+  name.vb: GetMetadata(String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetMetadata(System.String)
+    name: GetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetMetadata_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  name: SetMetadata(string, string)
+  nameWithType: MetadataContainer.SetMetadata(string, string)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(string, string)
+  nameWithType.vb: MetadataContainer.SetMetadata(String, String)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(String, String)
+  name.vb: SetMetadata(String, String)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.SetMetadata(System.String,System.String)
+    name: SetMetadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_SetMetadata_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  name: Equals(MetadataContainer)
+  nameWithType: MetadataContainer.Equals(MetadataContainer)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Sdl.Core.Bcm.BcmModel.MetadataContainer)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_Sdl_Core_Bcm_BcmModel_MetadataContainer_
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer
+    name: MetadataContainer
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  name: ShouldSerialize_metadata()
+  nameWithType: MetadataContainer.ShouldSerialize_metadata()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.ShouldSerialize_metadata
+    name: ShouldSerialize_metadata
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_ShouldSerialize_metadata
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  commentId: P:Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Metadata
+  name: Metadata
+  nameWithType: MetadataContainer.Metadata
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Metadata
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin__ctor
+  name: TranslationOrigin
+  nameWithType: TranslationOrigin.TranslationOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationOrigin
+  nameWithType.vb: TranslationOrigin.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.TranslationOrigin.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.TranslationOrigin
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  name: TranslationOrigin
+  nameWithType: TranslationOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  commentId: T:Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel.html
+  name: TextContextMatchLevel
+  nameWithType: TextContextMatchLevel
+  fullName: Sdl.Core.Bcm.BcmModel.TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_Clone
+  name: Clone
+  nameWithType: TranslationOrigin.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<TranslationOrigin>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.TranslationOrigin>.Clone()
+  nameWithType.vb: ICloneable(Of TranslationOrigin).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.TranslationOrigin).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<T>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>.Clone()
+  nameWithType.vb: ICloneable(Of T).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_Equals_Sdl_Core_Bcm_BcmModel_TranslationOrigin_
+  name: Equals
+  nameWithType: TranslationOrigin.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(TranslationOrigin)
+  nameWithType: IEquatable<TranslationOrigin>.Equals(TranslationOrigin)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.TranslationOrigin>.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  nameWithType.vb: IEquatable(Of TranslationOrigin).Equals(TranslationOrigin)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.TranslationOrigin).Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.TranslationOrigin}.Equals(Sdl.Core.Bcm.BcmModel.TranslationOrigin)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin
+    name: TranslationOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: MetadataContainer.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(object)
+  nameWithType.vb: MetadataContainer.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.MetadataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  name: GetHashCode()
+  nameWithType: MetadataContainer.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.MetadataContainer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.MetadataContainer.html#Sdl_Core_Bcm_BcmModel_MetadataContainer_GetHashCode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_GetHashCode
+  name: GetHashCode
+  nameWithType: TranslationOrigin.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.GetHashCode
+- uid: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin.html
+  name: DefaultTranslationOrigin
+  nameWithType: DefaultTranslationOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Common.DefaultTranslationOrigin
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginType
+  name: OriginType
+  nameWithType: TranslationOrigin.OriginType
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginType
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginSystem
+  name: OriginSystem
+  nameWithType: TranslationOrigin.OriginSystem
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginSystem
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginBeforeAdaptation
+  name: OriginBeforeAdaptation
+  nameWithType: TranslationOrigin.OriginBeforeAdaptation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_MatchPercent
+  name: MatchPercent
+  nameWithType: TranslationOrigin.MatchPercent
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.MatchPercent
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_IsStructureContextMatch
+  name: IsStructureContextMatch
+  nameWithType: TranslationOrigin.IsStructureContextMatch
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsStructureContextMatch
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_IsSidContextMatch
+  name: IsSidContextMatch
+  nameWithType: TranslationOrigin.IsSidContextMatch
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.IsSidContextMatch
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_TextContextMatchLevel
+  name: TextContextMatchLevel
+  nameWithType: TranslationOrigin.TextContextMatchLevel
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TextContextMatchLevel
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginalTranslationHash
+  name: OriginalTranslationHash
+  nameWithType: TranslationOrigin.OriginalTranslationHash
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginalTranslationHash
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_OriginBeforeAdaptation
+  name: OriginBeforeAdaptation
+  nameWithType: TranslationOrigin.OriginBeforeAdaptation
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.OriginBeforeAdaptation
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreatedBy
+  name: CreatedBy
+  nameWithType: TranslationOrigin.CreatedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreatedOn
+  name: CreatedOn
+  nameWithType: TranslationOrigin.CreatedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedBy
+  name: ModifiedBy
+  nameWithType: TranslationOrigin.ModifiedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedOn
+  name: ModifiedOn
+  nameWithType: TranslationOrigin.ModifiedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_TranslationQualityEstimations
+  name: TranslationQualityEstimations
+  nameWithType: TranslationOrigin.TranslationQualityEstimations
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.TranslationQualityEstimations
+- uid: System.Collections.Generic.List{Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation}
+  commentId: T:System.Collections.Generic.List{Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TranslationQualityEstimation>
+  nameWithType: List<TranslationQualityEstimation>
+  fullName: System.Collections.Generic.List<Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation>
+  nameWithType.vb: List(Of TranslationQualityEstimation)
+  fullName.vb: System.Collections.Generic.List(Of Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation)
+  name.vb: List(Of TranslationQualityEstimation)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+    name: TranslationQualityEstimation
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation
+    name: TranslationQualityEstimation
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.TranslationQualityEstimation.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreatedOn
+  name: CreatedOn
+  nameWithType: TranslationOrigin.CreatedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreatedOn
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreationDate
+  name: CreationDate
+  nameWithType: TranslationOrigin.CreationDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDate
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedBy
+  name: ModifiedBy
+  nameWithType: TranslationOrigin.ModifiedBy
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedBy
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_LastModifiedUserId
+  name: LastModifiedUserId
+  nameWithType: TranslationOrigin.LastModifiedUserId
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedUserId
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  commentId: P:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ModifiedOn
+  name: ModifiedOn
+  nameWithType: TranslationOrigin.ModifiedOn
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ModifiedOn
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_LastModifiedDate
+  name: LastModifiedDate
+  nameWithType: TranslationOrigin.LastModifiedDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastModifiedDate
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_LastUsedUserId
+  name: LastUsedUserId
+  nameWithType: TranslationOrigin.LastUsedUserId
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedUserId
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_LastUsedDate
+  name: LastUsedDate
+  nameWithType: TranslationOrigin.LastUsedDate
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.LastUsedDate
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_UseCount
+  name: UseCount
+  nameWithType: TranslationOrigin.UseCount
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseCount
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_CreationDisplayUsername
+  name: CreationDisplayUsername
+  nameWithType: TranslationOrigin.CreationDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.CreationDisplayUsername
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_ChangeDisplayUsername
+  name: ChangeDisplayUsername
+  nameWithType: TranslationOrigin.ChangeDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.ChangeDisplayUsername
+- uid: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.TranslationOrigin.html#Sdl_Core_Bcm_BcmModel_TranslationOrigin_UseDisplayUsername
+  name: UseDisplayUsername
+  nameWithType: TranslationOrigin.UseDisplayUsername
+  fullName: Sdl.Core.Bcm.BcmModel.TranslationOrigin.UseDisplayUsername

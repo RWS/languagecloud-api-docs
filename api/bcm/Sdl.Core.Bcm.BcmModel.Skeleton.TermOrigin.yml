@@ -1,0 +1,1094 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  id: TermOrigin
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  children:
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(System.Object)
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+  - Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+  langs:
+  - csharp
+  - vb
+  name: TermOrigin
+  nameWithType: TermOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  type: Class
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Data on the creation origin of <xref href="Sdl.Core.Bcm.BcmModel.Skeleton.Term" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class TermOrigin : ExtensionDataContainer, ICloneable<TermOrigin>, IEquatable<TermOrigin>
+    content.vb: >-
+      <DataContract>
+
+      Public Class TermOrigin Inherits ExtensionDataContainer Implements ICloneable(Of TermOrigin), IEquatable(Of TermOrigin)
+  inheritance:
+  - System.Object
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  inheritedMembers:
+  - Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  - System.Object.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone
+  id: Clone
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: TermOrigin.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Clones this instance.
+  example: []
+  syntax:
+    content: public TermOrigin Clone()
+    return:
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+      description: ''
+    content.vb: Public Function Clone() As TermOrigin
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone*
+  implements:
+  - Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  id: Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: Equals(TermOrigin)
+  nameWithType: TermOrigin.Equals(TermOrigin)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public bool Equals(TermOrigin other)
+    parameters:
+    - id: other
+      type: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As TermOrigin) As Boolean
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals*
+  implements:
+  - System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(System.Object)
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: TermOrigin.Equals(object)
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(object)
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: >-
+    Performs a deep-equals comparison.        
+
+    <xref href="System.Object.Equals(object)" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals*
+  nameWithType.vb: TermOrigin.Equals(Object)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals(Object)
+  name.vb: Equals(Object)
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode
+  id: GetHashCode
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: TermOrigin.GetHashCode()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode()
+  type: Method
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Returns a hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode*
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor
+  commentId: M:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor
+  id: '#ctor'
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: TermOrigin()
+  nameWithType: TermOrigin.TermOrigin()
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.TermOrigin()
+  type: Constructor
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  syntax:
+    content: public TermOrigin()
+    content.vb: Public Sub New()
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor*
+  nameWithType.vb: TermOrigin.New()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.New()
+  name.vb: New()
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+  id: SystemId
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: SystemId
+  nameWithType: TermOrigin.SystemId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the identifier of the terminology system.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "systemId")]
+
+      public string SystemId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The terminology system identifier.
+    content.vb: >-
+      <DataMember(Name:="systemId")>
+
+      Public Property SystemId As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: systemId
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+  id: SystemName
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: SystemName
+  nameWithType: TermOrigin.SystemName
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the terminology system nane.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "systemName")]
+
+      public string SystemName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The terminology system name.
+    content.vb: >-
+      <DataMember(Name:="systemName")>
+
+      Public Property SystemName As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: systemName
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+  id: ResourceId
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: ResourceId
+  nameWithType: TermOrigin.ResourceId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the terminology resource identifier.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "resourceId")]
+
+      public string ResourceId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The terminology resource identifier.
+    content.vb: >-
+      <DataMember(Name:="resourceId")>
+
+      Public Property ResourceId As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: resourceId
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
+  commentId: P:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
+  id: ResourceName
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  langs:
+  - csharp
+  - vb
+  name: ResourceName
+  nameWithType: TermOrigin.ResourceName
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
+  type: Property
+  assemblies:
+  - Sdl.Core.Bcm.BcmModel
+  namespace: Sdl.Core.Bcm.BcmModel.Skeleton
+  summary: Gets or sets the name of the terminology resource.
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "resourceName")]
+
+      public string ResourceName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the terminology resource.
+    content.vb: >-
+      <DataMember(Name:="resourceName")>
+
+      Public Property ResourceName As String
+  overload: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: resourceName
+references:
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.Term
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.Term
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.Term.html
+  name: Term
+  nameWithType: Term
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.Term
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton
+  commentId: N:Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Skeleton
+  nameWithType: Sdl.Core.Bcm.BcmModel.Skeleton
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton
+    name: Skeleton
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  commentId: T:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  parent: Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html
+  name: ExtensionDataContainer
+  nameWithType: ExtensionDataContainer
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  parent: Sdl.Core.Bcm.BcmModel.Common
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<TermOrigin>
+  nameWithType: ICloneable<TermOrigin>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin>
+  nameWithType.vb: ICloneable(Of TermOrigin)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  name.vb: ICloneable(Of TermOrigin)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: )
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  commentId: T:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TermOrigin>
+  nameWithType: IEquatable<TermOrigin>
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin>
+  nameWithType.vb: IEquatable(Of TermOrigin)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  name.vb: IEquatable(Of TermOrigin)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  commentId: P:Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+  parent: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.html#Sdl_Core_Bcm_BcmModel_ExtensionDataContainer_ExtensionData
+  name: ExtensionData
+  nameWithType: ExtensionDataContainer.ExtensionData
+  fullName: Sdl.Core.Bcm.BcmModel.ExtensionDataContainer.ExtensionData
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.Core.Bcm.BcmModel
+  commentId: N:Sdl.Core.Bcm.BcmModel
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel
+  nameWithType: Sdl.Core.Bcm.BcmModel
+  fullName: Sdl.Core.Bcm.BcmModel
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  commentId: T:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  name: ICloneable<T>
+  nameWithType: ICloneable<T>
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>
+  nameWithType.vb: ICloneable(Of T)
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T)
+  name.vb: ICloneable(Of T)
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1
+    name: ICloneable
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Common
+  commentId: N:Sdl.Core.Bcm.BcmModel.Common
+  isExternal: true
+  href: Sdl.html
+  name: Sdl.Core.Bcm.BcmModel.Common
+  nameWithType: Sdl.Core.Bcm.BcmModel.Common
+  fullName: Sdl.Core.Bcm.BcmModel.Common
+  spec.csharp:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+  spec.vb:
+  - uid: Sdl
+    name: Sdl
+    isExternal: true
+    href: Sdl.html
+  - name: .
+  - uid: Sdl.Core
+    name: Core
+    isExternal: true
+    href: Sdl.Core.html
+  - name: .
+  - uid: Sdl.Core.Bcm
+    name: Bcm
+    isExternal: true
+    href: Sdl.Core.Bcm.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel
+    name: BcmModel
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.html
+  - name: .
+  - uid: Sdl.Core.Bcm.BcmModel.Common
+    name: Common
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_Clone
+  name: Clone
+  nameWithType: TermOrigin.Clone
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Clone
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Clone
+  parent: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  definition: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<TermOrigin>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin>.Clone()
+  nameWithType.vb: ICloneable(Of TermOrigin).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  commentId: T:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+  parent: Sdl.Core.Bcm.BcmModel.Skeleton
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  name: TermOrigin
+  nameWithType: TermOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+- uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  commentId: M:Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  name: Clone()
+  nameWithType: ICloneable<T>.Clone()
+  fullName: Sdl.Core.Bcm.BcmModel.Common.ICloneable<T>.Clone()
+  nameWithType.vb: ICloneable(Of T).Clone()
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Common.ICloneable(Of T).Clone()
+  spec.csharp:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Sdl.Core.Bcm.BcmModel.Common.ICloneable`1.Clone
+    name: Clone
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Common.ICloneable-1.html#Sdl_Core_Bcm_BcmModel_Common_ICloneable_1_Clone
+  - name: (
+  - name: )
+- uid: System.Object.Equals(object)
+  commentId: M:System.Object.Equals(object)
+  isExternal: true
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_Equals_Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_
+  name: Equals
+  nameWithType: TermOrigin.Equals
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.Equals
+- uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  commentId: M:System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  parent: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(TermOrigin)
+  nameWithType: IEquatable<TermOrigin>.Equals(TermOrigin)
+  fullName: System.IEquatable<Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin>.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  nameWithType.vb: IEquatable(Of TermOrigin).Equals(TermOrigin)
+  fullName.vb: System.IEquatable(Of Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin).Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+  spec.csharp:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin}.Equals(Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin
+    name: TermOrigin
+    isExternal: true
+    href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_GetHashCode
+  name: GetHashCode
+  nameWithType: TermOrigin.GetHashCode
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.#ctor
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin__ctor
+  name: TermOrigin
+  nameWithType: TermOrigin.TermOrigin
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.TermOrigin
+  nameWithType.vb: TermOrigin.New
+  fullName.vb: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.New
+  name.vb: New
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_SystemId
+  name: SystemId
+  nameWithType: TermOrigin.SystemId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_SystemName
+  name: SystemName
+  nameWithType: TermOrigin.SystemName
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.SystemName
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_ResourceId
+  name: ResourceId
+  nameWithType: TermOrigin.ResourceId
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceId
+- uid: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName*
+  commentId: Overload:Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
+  isExternal: true
+  href: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.html#Sdl_Core_Bcm_BcmModel_Skeleton_TermOrigin_ResourceName
+  name: ResourceName
+  nameWithType: TermOrigin.ResourceName
+  fullName: Sdl.Core.Bcm.BcmModel.Skeleton.TermOrigin.ResourceName
