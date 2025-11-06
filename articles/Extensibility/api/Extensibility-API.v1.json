@@ -2430,14 +2430,14 @@
           "id": "8j8v4sxg1flul"
         },
         "type": "object",
-        "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html",
+        "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html",
         "properties": {
           "segmentId": {
             "type": "string"
           },
           "fragment": {
             "type": "object",
-            "description": "This object represents a BCM fragment. The documentation for the BCM fragment can be found here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html"
+            "description": "This object represents a BCM fragment. The documentation for the BCM fragment can be found here: https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html"
           }
         }
       },
