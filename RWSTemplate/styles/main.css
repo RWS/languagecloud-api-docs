@@ -603,28 +603,28 @@ article h4 {
 }
 
 .alert-info>h5 {
-  color: #1976d2;
-  border-bottom: 4px solid #1976d2;
-  background-color: #e3f2fd;
+  color: #ffffff;
+  /* border-bottom: 4px solid #1976d2; */
+  background-color: #1976d2;
 }
 
 .alert-warning>h5 {
-  color: #f57f17;
-  border-bottom: 4px solid #f57f17;
-  background-color: #fff3e0;
+  color: #ffffff;
+  /* border-bottom: 4px solid #ffc700; */
+  background-color: #ffae00;
 }
 
 .alert-danger>h5 {
-  color: #d32f2f;
-  border-bottom: 4px solid #d32f2f;
-  background-color: #ffebee;
+  color: #ffffff;
+  /* border-bottom: 4px solid #d32f2f; */
+  background-color: #d32f2f;
 }
 
 /* CODE HIGHLIGHT */
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
-  background-color: #111722 !important;
+  background-color: #17151b !important;
   color: #e6f3ff !important;
   word-break: break-all;
   word-wrap: break-word;
@@ -657,19 +657,18 @@ code {
 
 a code {
   font-family: monospace, monospace;
-  color: #0081CC;
+  color: #4A90E2;
   background-color: #fafcff;
   border: solid 1px #E8E8E8;
 }
 
 a code:hover {
-  text-decoration: underline;
-  color: #064c74;
+  color: #3a70ad;
   border: solid 1px #E8E8E8;
 }
 
 .hljs-keyword {
-  color: #87ceeb;
+  color: #ff7b72;
   font-weight: bold;
 }
 
@@ -695,7 +694,7 @@ a code:hover {
 }
 
 .hljs-built_in {
-  color: #dda0dd;
+  color: #ff7b72;
 }
 
 .hljs-type {
@@ -707,6 +706,30 @@ a code:hover {
 }
 
 .hljs-attribute {
+  color: #87ceeb;
+}
+
+.hljs-comment>.hljs-doctag {
+  color: #b5b5b5;
+}
+
+.hljs-title {
+  color: #87ceeb;
+}
+
+.hljs-title.class_ {
+  color: #87ceeb;
+}
+
+.hljs-operator {
+  color: #ff7b72;
+}
+
+.hljs-title.function_ {
+  color: #87ceeb;
+}
+
+.hljs-meta {
   color: #87ceeb;
 }
 
