@@ -8,6 +8,7 @@ All but a few of the endpoints are required to check for valid Authentication. T
 
 Trados might send the Authorization header even on the endpoints that do not need authentication, but the app is not required to validate them. If the header is sent, the app should either ignore it or validate it. But if the token is not valid, then this should result in a 401/403 result.
 
+> [!NOTE]
 > Note: the provided blueprints (both Java and .NET Core) have authentication implemented and working out of the box. You can skip the rest of this document unless you're interested in the technical details.
 
 ## Authorization header

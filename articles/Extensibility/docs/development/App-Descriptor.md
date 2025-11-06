@@ -42,7 +42,7 @@ When updating the host, you also have to update `baseUrl` to match the new host.
 
 You must still support old host as all previous installs will be calling on the `baseUrl` at the installed version. In order to be able to decomission the old host, you must make sure all consumers updated their installs to latest version.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new `baseUrl`. See [Request Authentication](Request-Authentication.md). 
 
 ## Standard Endpoints
@@ -58,6 +58,7 @@ Standard endpoints are defined under the `Standard` tag. The actual path should 
 Additionally, in the `standardEnpoints` section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an `INSTALLED` event along with some data for that account. The app should react and save the received data.
 - `appLifecycle` - is used for all types of events: `REGISTERED`, `UNREGISTERED`, `INSTALLED`, and `UNINSTALLED`. See the contract [here](../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle).
 
+> [!NOTE]
 > If your app is built from our blueprints, you shouldn't have to change anything, as these endpoints work out of the box.
 
 ## Extensions
@@ -96,6 +97,7 @@ Read more on how to define the extensions for your app in our development guides
 
 An app can request configuration details at installation time (and it can be edited later).
 
+> [!NOTE]
 > On an update, new configuration settings can be added, and the user will be requested to enter the newer configuration values.
 
 Configurations are app scoped. If you need to assign configuration values for individual extensions within the app, use clear and explicit naming conventions so users understand what information to input into each field. Additionally, tooltips can be provided by setting the description attribute.
@@ -121,6 +123,8 @@ Example:
   ...
 }
 ```
+
+> [!NOTE]
 > Note that in the example the `optional` and `defaultValue` properties have not been specified, so these will be set to their default values, as specified in the contract ( false for `optional` and undefined for `defaultValue`).
 
 Moreover, you have the option to define a list of choices using the `options` field. When this field is filled, the values will be presented in a dropdown menu. It's important to note that the only acceptable `dataType` in this scenario is `string`.
@@ -134,6 +138,7 @@ The scopes advised in the descriptor will be presented to the consumers during i
 
 Once access is granted, the app will be able to perform authorized requests to the Trados Cloud Platform API.
 
+> [!NOTE]
 > If the app doesn't make requests to Trados Cloud Platform API, no scopes should be specified.
 
 ## Webhooks

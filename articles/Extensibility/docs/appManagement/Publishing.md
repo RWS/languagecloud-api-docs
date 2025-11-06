@@ -20,4 +20,5 @@ focus: false
 -->
 ![Publish](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/Publish.gif?raw=true)
 
+> [!NOTE]
 > Publishing a private app will always publish its latest version.

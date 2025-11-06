@@ -25,4 +25,5 @@ focus: false
 -->
 ![Install](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/InstallApp.gif?raw=true)
 
+> [!NOTE]
 > The configuration settings can be modified anytime by clicking the **Edit App Configuration** button.

@@ -6,6 +6,7 @@ Before continuing here, we recommend reading the [basic testing guide](./Testing
 
 The only additional prerequisite to Ngrok and MongoDB (which we mention in the basic guide) is [Docker Desktop](https://www.docker.com/products/docker-desktop). You can find a setup guide [here](https://docs.docker.com/get-docker/).
 
+> [!NOTE]
 > Please note that Docker Desktop is no longer free for large businesses.
 
 ## Docker files
@@ -22,7 +23,7 @@ Before proceeding to run the app from a Docker container, there are a few config
 
 Because a Linux Docker container can be considered as a VM, and communicating from your container to your host machine cannot be done through localhost, you need to allow MongoDB connections on your machine IP, so that the application from your container can connect to it from an "external" machine. 
 
-<!-- theme: warning -->
+> [!WARNING]
 > This might open your database to access from outside your machine if your firewall is not configured correctly or installed.
 
 To configure your MongoDB follow these steps:

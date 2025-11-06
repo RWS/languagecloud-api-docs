@@ -18,4 +18,5 @@ focus: false
 -->
 ![Share](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/Share.gif?raw=true)
 
+> [!NOTE]
 > The number of sharing links and shared installed instances is restricted by the sharing benefit quota from your account subscription.

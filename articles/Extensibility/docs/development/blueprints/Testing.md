@@ -77,6 +77,7 @@ You can find a quick guide on how to install and set up Ngrok [here](https://ngr
 
 4. [Register](../../appManagement/Registering.md) the app in Trados using the URL provided by Ngrok. 
 
+> [!NOTE]
 > You can restart the app application anytime while running a Ngrok session, without having to start a new session.
 
 ## MongoDB
@@ -117,7 +118,7 @@ You can edit the Mongo settings in the configuration files of the blueprints:
     ...
     ```
 
-<!-- theme: warning -->
+> [!WARNING]
 > If you decide to use a different database, you should also modify your code accordingly.
 
 If you plan to package your app into a Docker container, here is a dedicated article for [Testing with Docker](./Testing-with-Docker.md).

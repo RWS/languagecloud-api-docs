@@ -11,7 +11,7 @@ Apps can specify a list of webhooks that will be registered automatically when t
 
 Not all accounts have webhooks enabled. Installing of the app requiring webhooks will be disabled (grayed out in UI) on accounts that don't have webhooks enabled.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Webhooks require one of the following [scopes](./Trados-Cloud-API.md#scopes) to be delivered: `TENANT` or `TENANT_READ`.
 
 ## Setup
@@ -52,6 +52,7 @@ The webhook payload description can be found in our [Trados Cloud Platform API d
 
 Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsability of the app developer to handle the events from the batch accordingly to their `accountId` from the event body.
 
+> [!NOTE]
 > **Note:** For *Webhook Authenticity*, ignore the described behavior in the above link and only consider the following chapter about *Signature Validation*.
 
 

@@ -9,14 +9,15 @@ To fulfill the requirements of our customers, Trados Enterprise allows multi-reg
 
 To enable multi-region on your app you must provide regional instances of your app and include their `regionalBaseUrls` in your [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 
+> [!NOTE]
 > Multi-Region is only supported on apps starting with `decriptorVersion: 1.4`
 
-<!-- theme: warning -->
+> [!WARNING]
 > Please note that the responsibility for ensuring region-specific URLs lies with the developer. The URLs should accurately reflect the physical location of the instances.
 
 Currently, the supported regions are Europe(`eu`) and Canada(`ca`). Depending on where your app is deployed you can choose either one or both of them. This will tell Trados what endpoints to invoke based on where the consumer tenant is living.
 
-<!-- theme: warning -->
+> [!WARNING]
 > All instances, in all regions should provide the exact same descriptor.
 
 ## Installing an App with Multi-Region support
@@ -27,7 +28,7 @@ If your app does not provide the region where the consumer tenant belongs, the c
 
 ![RegionalInstall](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/RegionalInstallPopupNew.png?raw=true)
 
-<!-- theme: warning -->
+> [!WARNING]
 > Once installed globally, if the app adds support for a new region, the consumers will have to reinstall it to change the region. 
 
 The `INSTALLED` lifecycle event now includes the region information for the account where the app is installed so you can save it in the database and use it to identify to which regions calls should be made (for ex. which region/url to use for Public API). That is already implemented in the provided [Java](https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/javaAppBlueprint) and [.NET](https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/dotNetAppBlueprint) blueprints.
@@ -36,7 +37,7 @@ The `INSTALLED` lifecycle event now includes the region information for the acco
 
 The `baseUrl` property from [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) remains mandatory even if you add the `regionalBaseUrls` property(which is optional).
 
-<!-- theme: warning -->
+> [!WARNING]
 > The `baseUrl` in your app should stay fixed and not change based on region. When an App is registered, `baseUrl` from that initial descriptor is used for setting audience for all future authentication requests, independent of regions (it is possible to change it later, see [Changing Base URL](App-Descriptor.md#changing-base-url). 
 
 Your "multi-region descriptor" should look something like this:
@@ -51,12 +52,15 @@ Your "multi-region descriptor" should look something like this:
   //..
 }
 ```
+
+> [!NOTE]
 > It is also acceptable to have the same URL in `baseUrl` as for one of regions in your `regionalBaseUrls` property.
 
 The `baseUrl` is treated as a global region URL and is still used in the following scenarios even if `regionalBaseUrls` is also defined:
 
 1. Health checks - the `/health` endpoint that is periodically invoked to check the health status of your app
 2. Version checks - the `/descriptor` endpoint that is periodically invoked to check for new versions(by the `version` property). 
+    > [!NOTE]
     > It is the developer's responsibility to keep the version of the regional instances in sync.
 3. `UPDATED` lifecycle event - explained below in the [Special Case](#special-case) section.
 

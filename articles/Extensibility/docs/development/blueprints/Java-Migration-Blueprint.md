@@ -12,6 +12,7 @@ There are a couple of main points to consider when doing the upgrade:
 
 First and foremost you'll need to change the `descriptorVersion` field to `1.4` in the descriptor JSON. This is the version that tells Trados Enterprise that your add-on has became an app and needs to be handled accordingly.
 
+> [!NOTE]
 > In addition to `descriptorVersion`, the `version` field also needs to be updated to signal Trados Enterprise that there's a new descriptor available, as per usual.
 
 ### App Lifecycle Endpoint

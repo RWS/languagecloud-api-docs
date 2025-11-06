@@ -7,8 +7,7 @@ tags: [Development]
 
 UI extensions offer the possibility to add custom user interface elements and functionality. Custom [buttons and panels can be added to specific places](UI-App-custom-elements-locations.md) within the user interface.
 
-<!-- theme: danger -->
-
+> [!CAUTION]
 > #### This feature is currently in BETA.
 > Please note that in a future phase, we will introduce significant changes as we move towards the official release:
 > * The current implementation utilizes the authorization token of the logged-in Trados user for the Trados Cloud Platform API and the app's own API calls. In a future update, a different authorization token will be introduced for these operation.
@@ -62,6 +61,7 @@ If you don't already have Node.js installed, you can download the most recent LT
 
 ## Getting started
 
+> [!NOTE]
 > Make sure you are familiar with Trados app development and testing presented in the [Getting Started with Blueprints](blueprints/Getting-Started.md) and [Testing](blueprints/Testing.md) articles.
 
 1. Download the [.NET sample app which contains a UI extension](https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp).
@@ -90,6 +90,7 @@ If you don't already have Node.js installed, you can download the most recent LT
     - You can change the `my-ui-extension-script.js` file name by editing
       - the `module.exports`' `output.filename` property in `Rws.LC.UISampleApp/Resources/frontend/webpack.config.js` and
       - the extension's configuration `scriptPath` field.
+      > [!NOTE]
       > If your app is already registered, after changing the extension's configuration `scriptPath` field you need to [update](../appManagement/Updating.md) your app to a new version.
 
     - Once you have built your new JavaScript file, refresh the Trados browser tab to see your changes.
@@ -234,15 +235,13 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 
 ### Notes
 
-<!-- theme: info -->
-
+> [!NOTE]
 > #### Custom elements display order
 > Within a single UI extension: custom elements in your extension that have the same `location` are displayed in the same order in which they are present in your `ExtensionElement`s array.
 > 
 > With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.
 
 
-<!-- theme: info -->
-
+> [!NOTE]
 > #### Unexpected re-renders
 > A custom element's `onrender` event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding `eventHandler` gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of `onrender` `eventHandler`.
