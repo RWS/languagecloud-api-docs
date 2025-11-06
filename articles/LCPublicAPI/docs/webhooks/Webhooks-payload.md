@@ -30,8 +30,8 @@ An example of request for a `PROJECT_CREATED` event:
   }
 }
 ```
-
-> Note: Depending on the event type, the `data` field will contain a different object, representing the Data Payload Object as mentioned in the next example. This will include different details relevant to that event type, please check the table below.
+> [!NOTE]
+> Depending on the event type, the `data` field will contain a different object, representing the Data Payload Object as mentioned in the next example. This will include different details relevant to that event type, please check the table below.
 
 This is the envelope that is common to all events, and only the < Data Payload Object part > is specific and depending on the event type.
 

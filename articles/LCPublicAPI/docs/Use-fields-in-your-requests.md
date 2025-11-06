@@ -16,7 +16,7 @@ We will perform a `GET` request to the [`/projects/projectId`](../api/Public-API
 
 #### 1. Fields consist of properties and subproperties. Here are some examples:
 - `Properties`: `id`; `name`; `customer`; `createdBy` and so on
-- `Subproperties`: `customer.name`; `customer.keyContact`; `customer.Location`; `createdBy.email` and so on
+- `Subproperties`: `customer.name`; `customer.keyContact`; `customer.location`; `createdBy.email` and so on
 
 #### 2. You can make calls in several ways:
 - No field customization

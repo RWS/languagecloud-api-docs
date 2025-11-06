@@ -92,6 +92,9 @@
     - name: Translation Memory import and export
       href: docs/translation-memory/Translation-memory-import-export.md
 
+    - name: Translation Memory Advanced Configuration
+      href: docs/translation-memory/Translation-memory-advanced-configuration.md
+
 - name: Translations
   items:
     - name: Translations

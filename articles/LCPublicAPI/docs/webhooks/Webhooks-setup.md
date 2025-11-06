@@ -6,6 +6,7 @@ stoplight-id: eg4ja9nrs9wtk
 
 A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.
 
+> [!NOTE]
 > When integrating with our webhook service, please be aware that we cannot guarantee the order of webhook event deliveries. This means that notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. Instead, make use of the `timestamp` field to determine the event generation time.
  
 ## Subscribe to Webhook events
@@ -39,6 +40,7 @@ Here are the detailed steps:
 
 A webhook is triggered for all the projects located in the same folder as the selected service user. 
 
+> [!NOTE]
 > Similar to other resource types, webhooks are governed by inheritance, the propagation rule giving users visibility and work access with resources in the [account hierarchy](https://docs.rws.com/791595/797020/trados-enterprise---accelerate/inheritance-within-the-account). <br>
 > Please be aware that the webhooks will be delivered only for the users having the READ permission on the resource triggering the webhook.
 
@@ -137,6 +139,7 @@ To ensure that the message cannot be read by 3rd-parties, Trados Cloud Platform 
 
 A notification delivery is considered successful when applications respond with a 2xx status code within 3 seconds.
 
+> [!NOTE]
 > It is recommended that applications perform little processing when receiving events and, for instance, that they make use of a queuing mechanism to perform further processing asynchronously after having acknowledged the event notification request.
 
 Trados Cloud Platform does not inspect the HTTP response body.
@@ -175,6 +178,7 @@ To protect the platform and ensure problems from one tenant do not affect other 
 
 The circuit breaker is triggered when 3 calls to a URL fail within a short time window. The circuit breaker is opened for an hour only for that URL, not for the tenant. During that hour, any webhooks sent to that URL are scheduled for the next retry.
 
+> [!NOTE]
 > Frequent timeouts may compromise the performance of our delivery system. <br>
 > We may need to remove your webhook from our database without advance notice if it is negatively impacting the platform. <br>
 > This action is reserved for cases of major incidents and is necessary to prevent potential issues that can arise from  repeated delivery attempts.
@@ -197,3 +201,4 @@ The circuit breaker is triggered when 3 calls to a URL fail within a short time 
 * `X-LC-Webhook`: Unique identifier of the webhook defined for the LC application which is the recipient of the webhook message. It can be ignored because it is not exposed in the Trados UI.
 
 * `X-LC-Region`: Region of the account of the user, which is the recipient of the webhook message.
+

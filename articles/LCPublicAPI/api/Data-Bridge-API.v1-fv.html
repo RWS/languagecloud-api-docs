@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Data Bridge API Documentation</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css" />
-        <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <title>Data Bridge API Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <style>
-            body {
-                display: flex;
-                flex-direction: column;
-                height: 100vh;
-                margin: 0;
-                padding-top: 55px; /* ensures content below fixed header */
-            }
+    <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css" />
+    <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
 
-            .api-container {
-                flex: 1 0 0;
-                overflow: visible;
-            }
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            padding-top: 55px;
+            /* ensures content below fixed header */
+        }
 
-            elements-api {
-                height: calc(100vh - 55px);
-            }
+        .api-container {
+            flex: 1 0 0;
+            overflow: visible;
+        }
 
-            .header-bar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                background-color: #006666;
-                color: white;
-                font-family: Arial, sans-serif;
-                padding: 10px 15px;
-                display: flex;
-                align-items: center;
-                box-shadow: 0 2px 3px rgba(0,0,0,.15);
-                z-index: 999;
-            }
+        elements-api {
+            height: calc(100vh - 55px);
+        }
 
-            .header-bar a {
-                color: white;
-                text-decoration: none;
-                font-size: 12px;
-                padding: 6px 12px;
-                border-radius: 5px;
-                background-color: rgba(255,255,255,0.15);
-                transition: background-color 0.2s;
-            }
+        .header-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #0081CC;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
+            z-index: 999;
+        }
 
-            .header-bar a:hover {
-                background-color: rgba(255,255,255,0.3);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header-bar">
-            <a href="Data-Bridge-API.v1.html">← Back to Documentation</a>
-        </div>
+        .header-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: background-color 0.2s;
+        }
 
-        <elements-api id="docs" router="hash" layout="sidebar" hideTryIt="true"></elements-api>
-        <script>
-            (async () => {
-                const docs = document.getElementById('docs');
-                const text = await fetch('Data-Bridge-API.v1.json').then(res => res.text())
-                docs.apiDescriptionDocument = text;
-            })();
-        </script>
-    </body>
+        .header-bar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-bar">
+        <a href="Data-Bridge-API.v1.html">← Back to Documentation</a>
+    </div>
+
+    <elements-api id="docs" router="hash" layout="sidebar" hideTryIt="true"></elements-api>
+    <script>
+        (async () => {
+            const docs = document.getElementById('docs');
+            const text = await fetch('Data-Bridge-API.v1.json').then(res => res.text())
+            docs.apiDescriptionDocument = text;
+        })();
+    </script>
+</body>
+
 </html>

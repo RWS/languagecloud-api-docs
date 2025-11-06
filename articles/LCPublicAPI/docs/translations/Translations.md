@@ -12,7 +12,7 @@ The Translation API enables you to:
 
 All translation operations require a translation engine that defines which translation memories, machine translation engines, and termbases to use for the translation process.
 
-<!-- theme: info -->
+> [!NOTE]
 > The BCM fragment format is used for input and output as JSON string, meaning that you will need to serialize and deserialize the BCM fragments when sending requests or processing responses. For .NET you can use the `Sdl.Core.Bcm.API` [nuget package](https://www.nuget.org/packages/Sdl.Core.Bcm.API).
 
 ## Endpoints
@@ -66,7 +66,7 @@ Translates a phrase in plain text or a BCM fragment containing a single segment.
 }
 ```
 
-<!-- theme: info -->
+> [!NOTE]
 > The `translationProposal` field in the response can be either a BCM fragment or a term. You can rely on the `responseType` field to determine the content type and deserialize it accordingly.
 
 ### Concordance Search
@@ -86,7 +86,7 @@ Performs a concordance search for a given text within the translation memories l
 - Configurable search parameters and penalties
 - Returns matching segments with context
 
-<!-- theme: info -->
+> [!NOTE]
 > The Translation Memory penalty defined in the Translation Engine will be automatically included in the translation score.
 
 **Request body example:**
@@ -123,11 +123,11 @@ Performs a concordance search for a given text within the translation memories l
 
 Updates an existing translation unit in the translation memories. The system identifies matching translation units based on the `originalTranslationHash` provided in the BCM fragment.
 
-<!-- theme: info -->
+> [!NOTE]
 > After each update the `targetContent.translationOrigin.originalTranslationHash` is updated. The new values are returned in the response on the `translationHash` field.
 > Subsequent updates can be performed by updating the `targetContent.translationOrigin.originalTranslationHash` in the BCM fragment with the new `translationHash`, otherwise the system will add a new translation unit instead of updating the existing one.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Changing any fields in the `sourceContent` of a BCM fragment will result in a new translation unit being added instead of updating the existing one.
 
 **Use cases:**

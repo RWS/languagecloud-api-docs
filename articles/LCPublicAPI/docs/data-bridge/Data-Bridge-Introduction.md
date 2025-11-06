@@ -32,14 +32,16 @@ Trados Cloud Platform operates in multiple regions, and it's essential to know i
 
 To see the host on different regions, check the API base URL in the contract.
 
-## Authentication & Authorization
 
-To start working with the Trados Data Bridge API, you first need to authenticate.
+## Authentication & Authorization
+To start working with the Trados Data Bridge API, you first need to authenticate. 
 The Data Bridge API uses the same authentication mechanism as the Public API.
 
 Follow the instructions under the [Service users and custom applications](../Service-users-and-custom-applications.md) and the [Service Credentials](../Service-credentials.md) pages to create a service user and an application, and then authenticate, following the [Authentication](../Authentication.md) page, by using the application's `client_id` and `client_secret`.
 
+
 Before running requests, set `{{lc_tenant}}` to your account ID (for example, `LC-00000000000000000`).
+
 
 ![image](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/SetLCTenant.png?raw=true)
 
@@ -50,11 +52,11 @@ Before running requests, set `{{lc_tenant}}` to your account ID (for example, `L
 Data Bridge API is governed by the same rate limits as Public API [API rate limits](../API-rate-limits.md)
 
 In addition, Data Bridge enforces a daily data transfer quota:
-
 - Quota is measured by data volume retrieved (not request count)
 - Europe region: quota resets at midnight UTC
 - Canada region: quota resets at midnight EST
 - Requests that exceed the quota return HTTP 429 (Too Many Requests) until the reset time
+
 
 ## Postman Collection
 
@@ -63,7 +65,6 @@ Use the provided [Postman](../../docs/data-bridge/Trados-Data-Bridge-APIs-for-Po
 ## Data Availability
 
 Data availability varies by data set:
-
 - Most data becomes available after the **Analysis workflow task** completes
 - Revenue data requires **Quote Generation task** completion
 - Some metrics are updated in real-time as workflow tasks complete

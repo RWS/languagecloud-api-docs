@@ -117,7 +117,7 @@ You can edit the Mongo settings in the configuration files of the blueprints:
     ...
     ```
 
-<!-- theme: warning -->
+> [!WARNING]
 > If you decide to use a different database, you should also modify your code accordingly.
 
 If you plan to package your app into a Docker container, here is a dedicated article for [Testing with Docker](./Testing-with-Docker.md).

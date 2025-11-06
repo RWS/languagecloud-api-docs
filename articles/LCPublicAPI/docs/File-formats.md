@@ -35,7 +35,8 @@ New source file versions can be added in native or BCM format using the [Add Sou
 
 If a project having attached a native source file with an unsupported extension is started, an error task will be generated in the *File Type Detection* task and the workflow is interrupted.
 
->Note: For adding a source file version using an extension task, the configuration of the task type must declare the `scope`'s value as "file". 
+> [!NOTE]
+> For adding a source file version using an extension task, the configuration of the task type must declare the `scope`'s value as "file". 
 
 
 #### Download Source File Versions
@@ -49,7 +50,8 @@ The *Copy source to target* task converts the native file to a new target file v
 #### Upload Target File Versions
 Adding a new version for a target file in native or BCM format can be executed with the [Add Target File Version](../api/Public-API.v1-fv.html#/operations/AddTargetFileVersion) endpoint.
 
->Note: For adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as "file". 
+> [!NOTE]
+> For adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as "file". 
 
 
 #### Download Target File Versions
@@ -59,7 +61,8 @@ The BCM and native target file versions can be downloaded by using [Download Tar
 #### Export Target File Versions
 The BCM target file versions can be exported in native or SDLXLIFF format by calling the [Export Target File Version](../api/Public-API.v1-fv.html#/operations/ExportTargetFileVersion) endpoint. This operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format based on the value of the `format` query parameter used. The endpoint starts an export operation which can be monitored using the [polling endpoint](../api/Public-API.v1-fv.html#/operations/PollTargetFileVersionExport). After the export is done, the files can be downloaded using the [Download Exported Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadExportedTargetFileVersion) endpoint. 
 
-> Note: The export endpoint is dedicated to file versions of BCM format and cannot be used on files in native or SDLXLIFF format. The export operation can only be executed on tasks where the supported output file is a bilingual target file. You can consult the output file types for tasks on the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center.
+> [!NOTE]
+> The export endpoint is dedicated to file versions of BCM format and cannot be used on files in native or SDLXLIFF format. The export operation can only be executed on tasks where the supported output file is a bilingual target file. You can consult the output file types for tasks on the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center.
 >
 >In order to download file versions of BCM or native type, please use the [Download Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion) endpoint.
 

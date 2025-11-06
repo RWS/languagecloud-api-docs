@@ -4,7 +4,7 @@
 
 It is built on .NET Standard 2.0. For compatibility information, see the [Microsoft implementation support page](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#net-implementation-support).
 
-<!-- theme: info -->
+> [!NOTE]
 >  The .NET Client library is auto-generated from the current API contracts, so any updates to the contract will reflect as changes in the SDK client. Minor version increases do not guarantee backwards compatibility.
 
 ## Installation
@@ -40,7 +40,7 @@ You can request a new API client from the `LanguageCloudClientProvider` instance
     GetProjectClient (params DelegatingHandler[] handlers)`
   This method accepts custom handlers and can be used to authenticate using scoping/context.
 
-<!-- theme: warning -->
+> [!WARNING]
 >  On each call to GetProjectClient or GetProjectClientNoAuth a new instance is created. That means a new HttpClient for each one. You should avoid having more than one instance - and should share that using Dependency Injection or other mechanisms.
 
 In this example we will use the credentials options to get a new Project Client and we won't supply any additional handlers:

@@ -47,10 +47,7 @@ An eventual breaking change or an endpoint retirement will be announced:
 - on a new blog post in the [Language Developers Blog](https://community.rws.com/developers-more/developers/language-developers/b/language-developers-blog) and [Trados Blog](https://community.rws.com/product-groups/trados-portfolio/trados-live/b/blog)
     
 Any breaking change will be announced six months in advance.
-<!-- theme: info -->
-
-> #### Info
->
+> [!NOTE]
 > We may introduce breaking changes for critical bugs or security vulnerabilities.
 
 ## What is our process for testing changes before releasing them to the Trados Cloud Platform API?

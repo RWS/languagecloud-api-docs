@@ -38,6 +38,7 @@ Make a `POST` request to the [`/projects`](../api/Public-API.v1-fv.html#/operati
 
 Each resource object has a `strategy` parameter you must specify in the request body. The strategy parameter has 2 available values: `copy` and `use`. Trados recommends that you choose the `copy` value, which means that you include a copy (clone) of your resource in the project. If you choose the `use` value, then the actual resource is included in your project.
 
+> [!NOTE]
 > Issues may arise when `strategy=use` because you have no control over how the resource is updated from the other places where it is being used.
 
 Make sure that you remember the value of the project `id` parameter in the response. You will need it for tracking your project, interacting with tasks, and completing projects.

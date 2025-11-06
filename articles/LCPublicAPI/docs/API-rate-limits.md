@@ -6,9 +6,11 @@ The default limits are chosen as to cover the needs of most integrators, but the
 
 
 ## Default Trados Cloud Platform API Rate Limits
-> Note: Please remember our current limits and that they are subject to change without notice. You must always rely on response headers and never hardcode any limit values.
+> [!NOTE]
+> Please remember our current limits and that they are subject to change without notice. You must always rely on response headers and never hardcode any limit values.
 
->Note: Daily limits are calculated in a fixed time window, that is reset nightly at 00:00 UTC.
+> [!NOTE]
+> Daily limits are calculated in a fixed time window, that is reset nightly at 00:00 UTC.
 
 Each tenant is entitled to:
 

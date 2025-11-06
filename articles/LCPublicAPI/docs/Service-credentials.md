@@ -40,4 +40,5 @@ Before service users can authenticate with the Trados Cloud Platform API, they n
     - Enter a value for **Webhook URL** (this is your Webhook endpoint URL which you expose and which Trados Cloud Platform calls), select one or more event types, and hit Enter. You can create a separate webhook for every event you are interested in or combine notifications for multiple event types to one webhook. If you delete your application, all its associated webhooks are also deleted.
 10. Finally, from the **API Access** page you can retrieve your **Client ID** and **Client Secret**.
 
+> [!NOTE]
 > Although you have the option to change the **Service User** later on, it is not recommended. Due to the caching layers, changes from one **Service User** to another can take between 10 to 20 minutes to fully take effect. During this period, calls made with this **Application**'s credentials may randomly use either the new or the old **Service User.** If you can't stop your services to wait for the cache to expire, it's recommended to create a new **Application** with the new **Service User** and delete the old one.

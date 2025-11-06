@@ -5,9 +5,10 @@
 
 A termbase template can be created by making a `POST` request to the [`/termbase-templates`](../../api/Public-API.v1-fv.html#/operations/CreateTermbaseTemplate) endpoint.
 
-> Note: If the `location` is not specified, the template will be created in the root folder.
-
-> Note: When `dataType` is `picklist`, the `pickListValues` array must be filled in or the `allowCustomValues` must be set to true.
+> [!NOTE]
+> If the `location` is not specified, the template will be created in the root folder.
+> [!NOTE]
+> When `dataType` is `picklist`, the `pickListValues` array must be filled in or the `allowCustomValues` must be set to true.
 
 Postman example:
 
@@ -173,6 +174,7 @@ Response example:
 
 A termbase template can be deleted by making a `DELETE` request to the [`/termbase-templates/{termbaseTemplateId}`](../../api/Public-API.v1-fv.html#/operations/DeleteTermbaseTemplate) endpoint.
 
-> Note: You can only delete the `userDefined` termbases.
+> [!NOTE]
+> You can only delete the `userDefined` termbases.
 
 Request example: `DELETE /termbase-templates/6156bbc7a638696c7686db7f`

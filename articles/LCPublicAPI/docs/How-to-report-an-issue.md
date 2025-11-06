@@ -75,4 +75,6 @@ You can simply copy the format from above and fill in the details. For example:
 - Actual result: The project is not created due to `projectTemplate.id` not being found.
 - Description: When attempting to create a new project I get the error mentioned above.
 
+
+> [!NOTE]
 > Check the [Multi-Region](../docs/Multi-region.md) page for regional API details.

@@ -2,7 +2,8 @@
 
 This page lists the known bugs and issues for Trados Cloud Platform API.
 
-> Note: 5xx status codes might be returned on any endpoint. This means that the server has encountered an unexpected error. If the error persists, use the [How to report an issue](../docs/How-to-report-an-issue.md) guideline to gather the needed information for reporting the issue.
+> [!NOTE]
+> 5xx status codes might be returned on any endpoint. This means that the server has encountered an unexpected error. If the error persists, use the [How to report an issue](../docs/How-to-report-an-issue.md) guideline to gather the needed information for reporting the issue.
 
 ### Download Exported Quote Report
 

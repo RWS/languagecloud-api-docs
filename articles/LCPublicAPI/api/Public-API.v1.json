@@ -4698,7 +4698,7 @@
           "Project"
         ],
         "summary": "Get Project",
-        "description": "Retrieves a project by identifier.",
+        "description": "Retrieves a project by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
         "parameters": [
           {
             "$ref": "#/components/parameters/fields"
@@ -4871,7 +4871,7 @@
           "Project"
         ],
         "summary": "Update Project",
-        "description": "Updates the project in terms of: name, description, due date, quote, and project resources. Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386). \n\nProject rescheduling (updating dueBy) is permitted only if: \n* there is no Customer Quote Approval task in the associated flow \n* at least one Customer Quote Approval was closed(in case multiple project batches) \n\nUpdate `projectPlan.taskConfigurations` are now permitted before project is started. Elements are now pre-populated at project creation time.",
+        "description": "Updates the project in terms of: name, description, due date, quote, and project resources. Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386). \n\nProject rescheduling (updating dueBy) is permitted only if: \n* there is no Customer Quote Approval task in the associated flow \n* at least one Customer Quote Approval was closed(in case multiple project batches) \n\nUpdate `projectPlan.taskConfigurations` are now permitted before project is started. Elements are now pre-populated at project creation time.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9146,6 +9146,79 @@
         }
       ]
     },
+    "/projects/{projectId}/tasks/reschedule": {
+      "patch": {
+        "tags": [
+          "Project"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/reschedule-tasks-request"
+              }
+            }
+          },
+          "required": true
+        },
+        "summary": "Reschedule Project Tasks",
+        "description": "Reschedules the tasks of a specific project.",
+        "responses": {
+          "200": {
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "description": "OK"
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "RescheduleProjectTasks",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        }
+      ]
+    },
     "/project-groups": {
       "get": {
         "tags": [
@@ -9906,7 +9979,7 @@
           "Project Template"
         ],
         "summary": "Get Project Template",
-        "description": "Retrieves a project template by identifier.",
+        "description": "Retrieves a project template by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -10005,6 +10078,7 @@
       "put": {
         "summary": "Update Project Template",
         "operationId": "UpdateProjectTemplate",
+        "description": "Updates a project template by id.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -10085,7 +10159,6 @@
             }
           }
         },
-        "description": "Updates a project template by id.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -18939,6 +19012,11 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Statistics count.</div> ",
             "x-default-field": true
           },
+          "locked": {
+            "$ref": "#/components/schemas/count",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Statistics count.</div> ",
+            "x-default-field": true
+          },
           "fuzzyMatch": {
             "type": "array",
             "items": {
@@ -19385,6 +19463,9 @@
         "title": "Custom Field",
         "type": "object",
         "description": "A Custom Field model.",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -19403,12 +19484,9 @@
           },
           "value": {
             "type": "object",
-            "description": "The value of the custom property. A date will be serialised as an ISO_8601 string."
+            "description": "The value of the custom property. A date will be serialized as an ISO_8601 string."
           }
-        },
-        "required": [
-          "id"
-        ]
+        }
       },
       "customer-create-request": {
         "title": "Customer Create Request",
@@ -22975,7 +23053,7 @@
             "$ref": "#/components/schemas/configuration-resource-request"
           },
           "settings": {
-            "$ref": "#/components/schemas/project-settings-request",
+            "$ref": "#/components/schemas/project-settings-create-request",
             "x-stoplight": {
               "id": "53re0us2no8zk"
             }
@@ -23026,6 +23104,51 @@
               "id": "84cmud84h1lf6"
             },
             "description": "The PerfectMatch mapping to be associated with the project."
+          }
+        }
+      },
+      "translation-memory-settings-request": {
+        "title": "Translation Memory Settings Request",
+        "x-stoplight": {
+          "id": "p358c4e03ac34"
+        },
+        "type": "object",
+        "description": "Translation Memory settings Request",
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/translation-memory-filters-request"
+          },
+          "updateTranslationMemoryFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memory-update-TM-fields-request"
+            }
+          }
+        }
+      },
+      "translation-memory-filters-request": {
+        "type": "object",
+        "title": "Translation Memory Filters Request",
+        "description": "Translation Memory filter settings request",
+        "properties": {
+          "hardFilter": {
+            "$ref": "#/components/schemas/translation-memory-hard-filter-request"
+          }
+        }
+      },
+      "translation-memory-hard-filter-request": {
+        "title": "Translation Memory Hard Filter Request",
+        "type": "object",
+        "description": "Hard filter configuration for Translation Memory matching request",
+        "required": [
+          "expression",
+          "fields"
+        ],
+        "properties": {
+          "expression": {
+            "type": "string",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. <br/>An atomic expression describes the relationship of a field to a value."
           }
         }
       },
@@ -23372,18 +23495,27 @@
           }
         }
       },
-      "project-settings-request": {
-        "title": "Project Settings",
+      "project-settings-create-request": {
+        "title": "Project Settings Create Request",
         "x-stoplight": {
           "id": "7hz2hdu01vw0w"
         },
         "type": "object",
         "properties": {
           "general": {
-            "$ref": "#/components/schemas/project-settings-general-request",
-            "x-stoplight": {
-              "id": "uv85h82rgn4ao"
-            }
+            "$ref": "#/components/schemas/project-settings-general-request"
+          }
+        }
+      },
+      "project-settings-update-request": {
+        "title": "Project Settings Update Request",
+        "type": "object",
+        "properties": {
+          "general": {
+            "$ref": "#/components/schemas/project-settings-general-request"
+          },
+          "translationMemorySettings": {
+            "$ref": "#/components/schemas/translation-memory-settings-request"
           }
         }
       },
@@ -23397,6 +23529,10 @@
           "general": {
             "$ref": "#/components/schemas/project-settings-general-response",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div>\r\n"
+          },
+          "translationMemorySettings": {
+            "$ref": "#/components/schemas/project-translation-memory-settings-response",
+            "description": "(Not available for List Projects endpoint)"
           }
         }
       },
@@ -23488,7 +23624,7 @@
             }
           },
           "settings": {
-            "$ref": "#/components/schemas/project-settings-request",
+            "$ref": "#/components/schemas/project-settings-update-request",
             "x-stoplight": {
               "id": "xd2b0b8qrxmfl"
             }
@@ -23744,6 +23880,9 @@
           },
           "qualityManagement": {
             "$ref": "#/components/schemas/project-template-quality-management-settings"
+          },
+          "translationMemorySettings": {
+            "$ref": "#/components/schemas/translation-memory-settings-request"
           }
         }
       },
@@ -23753,7 +23892,7 @@
           "id": "rfvf2oks12otx"
         },
         "type": "object",
-        "description": "Project Template settings. See detailed description of options on the <a href=\"https://docs.rws.com/791595/1054430/trados-enterprise---accelerate/creating-project-templates/procedure\">Official Documentation</a> page. \n\r (Not available for List Projects/ProjectTemplates endpoint)",
+        "description": "Project Template settings. See detailed description of options on the <a href=\"https://docs.rws.com/791595/1054430/trados-enterprise---accelerate/creating-project-templates/procedure\">Official Documentation</a> page. \n\n (Not available for List Project Templates endpoint)",
         "properties": {
           "general": {
             "$ref": "#/components/schemas/project-template-general-settings-response",
@@ -23769,8 +23908,11 @@
           "qualityManagement": {
             "$ref": "#/components/schemas/project-template-quality-management-settings-response"
           },
+          "termbaseSettings": {
+            "$ref": "#/components/schemas/project-template-termbase-settings-response"
+          },
           "translationMemorySettings": {
-            "$ref": "#/components/schemas/project-template-translation-memory-settings"
+            "$ref": "#/components/schemas/project-template-translation-memory-settings-response"
           }
         }
       },
@@ -23945,7 +24087,7 @@
           }
         }
       },
-      "project-template-translation-memory-settings": {
+      "project-template-translation-memory-settings-response": {
         "title": "Translation Memory settings",
         "x-stoplight": {
           "id": "f358c4e03ac33"
@@ -23956,6 +24098,41 @@
           "penalties": {
             "$ref": "#/components/schemas/project-template-TM-penalties",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> "
+          },
+          "filters": {
+            "$ref": "#/components/schemas/translation-memory-settings-filters-response"
+          },
+          "updateTranslationMemoryFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memory-settings-update-field-response",
+              "x-stoplight": {
+                "id": "8pklc1ze82xxu"
+              }
+            }
+          }
+        }
+      },
+      "project-translation-memory-settings-response": {
+        "title": "Translation Memory settings",
+        "x-stoplight": {
+          "id": "a1b2c3d4e5f6g7h8i9j0"
+        },
+        "type": "object",
+        "description": "Translation Memory settings",
+        "properties": {
+          "filters": {
+            "$ref": "#/components/schemas/translation-memory-settings-filters-response",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> "
+          },
+          "updateTranslationMemoryFields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memory-settings-update-field-response",
+              "x-stoplight": {
+                "id": "8pklc1ze82xxu"
+              }
+            }
           }
         }
       },
@@ -24024,6 +24201,43 @@
             "type": "boolean",
             "default": false,
             "description": "If enabled locked segments (content that must not be translated) are excluded from translation. "
+          }
+        }
+      },
+      "project-template-termbase-general-settings": {
+        "title": "General Settings",
+        "type": "object",
+        "properties": {
+          "showRecognizedTermsWithNoTranslation": {
+            "type": "boolean"
+          },
+          "enableRecognitionOfTwoLetterTerms": {
+            "type": "boolean"
+          },
+          "allowOverlappingTerms": {
+            "type": "boolean"
+          },
+          "minimumScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "default": 70
+          },
+          "termLength": {
+            "type": "number",
+            "minimum": 0,
+            "default": 2
+          }
+        }
+      },
+      "project-template-termbase-settings-response": {
+        "title": "Termbase Settings",
+        "type": "object",
+        "properties": {
+          "general": {
+            "x-default-field": true,
+            "$ref": "#/components/schemas/project-template-termbase-general-settings",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> "
           }
         }
       },
@@ -26096,6 +26310,26 @@
         "required": [
           "id"
         ]
+      },
+      "reschedule-tasks-request": {
+        "description": "Reschedule tasks.",
+        "properties": {
+          "dueBy": {
+            "description": "The task due date. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\"",
+            "example": "2022-01-12T12:00:00.000Z",
+            "format": "date-time",
+            "type": "string"
+          },
+          "taskIds": {
+            "description": "Identifiers of the tasks to be rescheduled.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "title": "Reschedule Tasks Request",
+        "type": "object"
       },
       "remove-projects-from-group-request": {
         "title": "Remove Projects From Group Request",
@@ -29060,7 +29294,7 @@
           }
         }
       },
-	    "translation-unit-add-update-response": {
+      "translation-unit-add-update-response": {
         "title": "Translation Unit Response",
         "type": "object",
         "required": [
@@ -29089,26 +29323,26 @@
           }
         }
       },
-	  "translation-unit-insight-model": {
-				"title": "Translation Unit Insight Model",
-				"type": "object",
-				"description": "Detailed insight information about the processed translation unit.",
-				"required": [
-					"resourceId",
-					"translationHash",
-					"action"
-				],
-				"properties": {
-					"resourceId": {
-						"type": "string",
+      "translation-unit-insight-model": {
+        "title": "Translation Unit Insight Model",
+        "type": "object",
+        "description": "Detailed insight information about the processed translation unit.",
+        "required": [
+          "resourceId",
+          "translationHash",
+          "action"
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string",
             "description": "The translation memory identifier."
-					},
-					"translationHash": {
-						"type": "string",
+          },
+          "translationHash": {
+            "type": "string",
             "description": "The translation unit hash code."
-					},
-					"action": {
-						"type": "string",
+          },
+          "action": {
+            "type": "string",
             "description": "The action performed",
             "enum": [
               "discard",
@@ -29118,9 +29352,9 @@
               "error",
               "delete"
             ]
-					}
-				}
-			},
+          }
+        }
+      },
       "translation-applied-resource-status": {
         "title": "Translation Applied Resource Status",
         "x-stoplight": {
@@ -29695,28 +29929,28 @@
         "title": "Translation Engine Sequence",
         "description": "Lists of IDs for Translation Memories, Termbases, Machine Translations and Large Language Models, in order of their use",
         "properties": {
-          "tm":{
+          "tm": {
             "type": "array",
             "description": "Translation Memories",
             "items": {
               "type": "string"
             }
           },
-          "tb":{
+          "tb": {
             "type": "array",
             "description": "Termbases",
             "items": {
               "type": "string"
             }
           },
-          "mt":{
+          "mt": {
             "type": "array",
             "description": "Machine Translations",
-            "items":{
+            "items": {
               "type": "string"
             }
           },
-          "llm":{
+          "llm": {
             "type": "array",
             "description": "Large Language Models",
             "items": {
@@ -29985,6 +30219,27 @@
           "values",
           "type"
         ]
+      },
+      "translation-memory-update-TM-fields-request": {
+        "title": "Translation Memory Update TM Fields Request",
+        "type": "object",
+        "required": [
+          "fieldId",
+          "values"
+        ],
+        "properties": {
+          "fieldId": {
+            "type": "string",
+            "description": "The identifier of the translation memory field."
+          },
+          "values": {
+            "type": "array",
+            "description": "A single value or a collection of values. Based on field type, can be of different formats for `singleString`, `multipleString`, `singlePicklist`, `multiplePicklist`, `dateTime`, `integer`.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       },
       "translation-memory-fields-settings": {
         "title": "Translation Memory Fields Settings",
@@ -30519,6 +30774,144 @@
         },
         "required": [
           "languageDirection"
+        ]
+      },
+      "translation-memory-settings-filters-response": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "e80cfbb6b57e0"
+        },
+        "title": "Translation Memory Filters",
+        "description": "Translation Memory filter settings.",
+        "properties": {
+          "hardFilter": {
+            "$ref": "#/components/schemas/translation-memory-settings-hard-filter-response",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Hard filter configuration for Translation Memory matching.</div> ",
+            "x-default-field": true
+          }
+        }
+      },
+      "translation-memory-settings-hard-filter-response": {
+        "title": "Translation Memory Hard Filter",
+        "x-stoplight": {
+          "id": "c66b8aa67a2be"
+        },
+        "type": "object",
+        "description": "Hard filter configuration for Translation Memory matching.",
+        "required": [
+          "expression"
+        ],
+        "properties": {
+          "expression": {
+            "type": "string",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value."
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memory-settings-filter-field-response"
+            }
+          }
+        }
+      },
+      "translation-memory-settings-filter-field-response": {
+        "title": "Translation Memory Filter Field",
+        "x-stoplight": {
+          "id": "e59a98ab23288"
+        },
+        "type": "object",
+        "description": "Translation Memory Filter Field definition",
+        "required": [
+          "fieldId",
+          "fieldTemplateId",
+          "fieldTemplateName",
+          "name",
+          "type"
+        ],
+        "properties": {
+          "fieldId": {
+            "type": "string",
+            "description": "The field identifier. For system fields, use system field names. For custom fields, use the custom field identifier."
+          },
+          "fieldTemplateId": {
+            "type": "string",
+            "description": "`system` or identifier of the custom field template"
+          },
+          "fieldTemplateName": {
+            "type": "string",
+            "description": "The name of the field template."
+          },
+          "name": {
+            "type": "string",
+            "description": "The field name. For system fields, identical to fieldId. For custom fields, use the custom field name."
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the field.",
+            "enum": [
+              "singleString",
+              "multipleString",
+              "singlePicklist",
+              "multiplePicklist",
+              "dateTime",
+              "integer"
+            ]
+          },
+          "allowedValues": {
+            "type": "array",
+            "x-default-field": true,
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Available values for picklist fields. Only present for singlePicklist and multiplePicklist field types.</div>",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "t5ikkyx3u1ee7"
+                  },
+                  "description": "The unique identifier of the allowed value."
+                },
+                "name": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "2t99u5ile3q7u"
+                  },
+                  "description": "The display name of the allowed value."
+                }
+              }
+            }
+          }
+        }
+      },
+      "translation-memory-settings-update-field-response": {
+        "title": "Translation Memory Update Field",
+        "x-stoplight": {
+          "id": "g3h4i5j6k7l8m"
+        },
+        "type": "object",
+        "description": "Translation Memory Field definition with values for field updates",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/translation-memory-settings-filter-field-response"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "values": {
+                "type": "array",
+                "x-default-field": true,
+                "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The actual values assigned to this field.</div>",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         ]
       },
       "translation-service-type": {

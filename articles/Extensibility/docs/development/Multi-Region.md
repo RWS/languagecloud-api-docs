@@ -11,7 +11,7 @@ To enable multi-region on your app you must provide regional instances of your a
 
 > Multi-Region is only supported on apps starting with `decriptorVersion: 1.4`
 
-<!-- theme: warning -->
+> [!WARNING]
 > Please note that the responsibility for ensuring region-specific URLs lies with the developer. The URLs should accurately reflect the physical location of the instances.
 
 Currently, the supported regions are Europe(`eu`) and Canada(`ca`). Depending on where your app is deployed you can choose either one or both of them. This will tell Trados what endpoints to invoke based on where the consumer tenant is living.
@@ -24,7 +24,7 @@ If your app does not provide the region where the consumer tenant belongs, the c
 
 ![RegionalInstall](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/RegionalInstallPopupNew.png?raw=true)
 
-<!-- theme: warning -->
+> [!WARNING]
 > Once installed globally, if the app adds support for a new region, the consumers will have to reinstall it to change the region. 
 
 The `INSTALLED` lifecycle event now includes the region information for the account where the app is installed so you can save it in the database and use it to identify to which regions calls should be made (for ex. which region/url to use for Public API). That is already implemented in the provided [Java](https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/javaAppBlueprint) and [.NET](https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/dotNetAppBlueprint) blueprints.

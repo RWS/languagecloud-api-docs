@@ -42,7 +42,7 @@ When updating the host, you also have to update `baseUrl` to match the new host.
 
 You must still support old host as all previous installs will be calling on the `baseUrl` at the installed version. In order to be able to decomission the old host, you must make sure all consumers updated their installs to latest version.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new `baseUrl`. See [Request Authentication](Request-Authentication.md). 
 
 ## Standard Endpoints

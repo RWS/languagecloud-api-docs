@@ -4,6 +4,7 @@ We recommend using the provided [Postman Collection](../docs/Language-Cloud-APIs
 
 ## Base API URL
 The base API address is **`https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/`**.
+> [!NOTE]
 > Check the [Multi-Region](../docs/Multi-region.md) page for regional API details.
 
 ## Authorization headers
@@ -25,7 +26,8 @@ A service user can be part of only one account. If you're not sure what the tena
 2. In the top right-hand corner, select your profile, and then select **Manage Account**.
 3. In the **Account Information** tab, check the value for **Trados Account ID**.
 
-> Note: There are 2 identifiers that might be confused. The identifier you need looks something like this: **2ef3c10e74fc39104e633c11**.
+> [!NOTE]
+> There are 2 identifiers that might be confused. The identifier you need looks something like this: **2ef3c10e74fc39104e633c11**.
 </br>
 
 ## Generating the Bearer Token
@@ -71,7 +73,8 @@ The previous example of an Auth0 response body that contains the `access_token`,
 
 The application is responsible for getting a fresh token once the token is about to expire, by using the same mechanism described above.
 
-> Note: while it's technically possible to get a fresh token for every single call, there is no reason to do so, and the calling application IP risks to be blocked by Auth0 as it might consider it a DoS attack.
+> [!NOTE]
+> While it's technically possible to get a fresh token for every single call, there is no reason to do so, and the calling application IP risks to be blocked by Auth0 as it might consider it a DoS attack.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Please limit the number of requests for the Bearer token to a maximum of 16 per day. It's acceptable to exceed this limit only if you need to deploy multiple versions of your application, in a single day.

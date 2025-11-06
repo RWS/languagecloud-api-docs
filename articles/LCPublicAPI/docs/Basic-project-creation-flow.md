@@ -6,6 +6,7 @@ Details about what are the rate limits for Trados Cloud Platform API can be foun
 
 Additional information regarding file and project size limits can be found [here](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit).
 
+> [!NOTE]
 > This small [Postman collection](https://raw.githubusercontent.com/RWS/language-cloud-public-api-postman/develop/basicProjectCreationFlow.json) can help you get started with the basic project creation flow. For details on Postman setup please see the main [Postman](../docs/Language-Cloud-APIs-for-Postman.md) page.
 > 
 > In the [Create Project](../api/Public-API.v1-fv.html#/operations/CreateProject) endpoint body, the `projectTemplate` value should be replaced with a valid `templateId`. From that point on all the necessary identifiers will be automatically populated throughout Postman.
@@ -28,6 +29,7 @@ Creates a new project.
 Endpoint: [`POST /projects`](../api/Public-API.v1-fv.html#/operations/CreateProject)
 
 For running this endpoint you need to supply the required project details (body tab in Postman):
+> [!NOTE]
 > `POST` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects
 ```json
 {
@@ -135,6 +137,7 @@ Endpoint: [`POST /projects/{projectId}/source-files`](../api/Public-API.v1-fv.ht
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
+> [!NOTE]
 > `POST` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/source-files
 - Add the file to the request body.
 -	Complete the details from Body tab - Properties field.
@@ -165,6 +168,7 @@ Endpoint: [`PUT /projects/{projectId}/start`](../api/Public-API.v1-fv.html#/oper
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
+> [!NOTE]
 > `PUT` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/start
 
 Responses:
@@ -183,6 +187,7 @@ Endpoint: [`GET /projects/{projectId}/tasks`](../api/Public-API.v1-fv.html#/oper
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
+> [!NOTE]
 > `GET` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/tasks?fields=taskType,status
 
 Use `?fields=taskType` if you want to observe the task name.
@@ -233,6 +238,7 @@ Endpoint: [`GET /projects/{projectId}/target-files`](../api/Public-API.v1-fv.htm
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response: 
+> [!NOTE]
 > `GET` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/target-files?fields=latestVersion
 
 Responses:
@@ -281,6 +287,7 @@ For running this endpoint you need to:
 -	Replace `{targetFileId}` from the URL with the identifier received from the List Project Target Files endpoint response
 -	Replace `{fileVersionId}` from the URL with the identifier received from the List Project Target Files endpoint response
 
+> [!NOTE]
 > `GET` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download
 
 Responses:
@@ -301,6 +308,7 @@ Endpoint: [`PUT /projects/{projectId}/complete`](../api/Public-API.v1-fv.html#/o
 
 For running this endpoint you need to:
 -	Replace `{projectId}` from the URL with the identifier received from the Create Project endpoint response
+> [!NOTE]
 > `PUT` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/complete
 
 Responses:
@@ -318,6 +326,7 @@ Retrieves a list of all the projects in the account.
 Endpoint: [`GET /projects`](../api/Public-API.v1-fv.html#/operations/ListProjects)
 
 For running this endpoint make a request to:
+> [!NOTE]
 > `GET` https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects
  
 Responses:

@@ -31,10 +31,7 @@ var projectsResponse = await projectClient.ListProjectsAsync();
 
  *\*Using this method, a unique TraceId will be generated on each request.*
 
-<!-- theme: info -->
-
-> #### Info
->
+> [!NOTE]
 > Make sure you always keep your credentials safe.
 
 
@@ -104,8 +101,10 @@ The web API sample is available for download on [GitHub](https://github.com/RWS/
 
 It contains an example of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK for ASP .Net.
 
+> [!NOTE]
 > If you want to use the provided authentication mechanism, a custom handler can be created, which must inherit from `LCCustomAuthenticationHandler`.
 
+> [!NOTE]
 > If you want to handle authentication and tracing on you own, you could implement your own `DelegatingHandler`.
 
 In our example, we've created the `LcHandler` class, which inherits from `LCCustomAuthenticationHandler`. The `LCCustomAuthenticationHandler` class already provides us with an authentication mechanism. We've overwritten the `GetServiceCredentials` and `GetTraceId` methods and provided our own implementations, as these will be called by `LCCustomAuthenticationHandler`:

@@ -54,7 +54,8 @@ Two types of translation costs can be updated using the Trados Cloud Platform AP
 
 ## Cost types available at project and language level
 
-> Note: Both language costs and project costs have identical request/response bodies, but for `languageCosts`, the `targetLanguage` field is required.
+> [!NOTE]
+> Both language costs and project costs have identical request/response bodies, but for `languageCosts`, the `targetLanguage` field is required.
 
 
 The examples below use the following translation costs:
@@ -338,7 +339,8 @@ When the `conditionalCostType` is set to `absolute`, the total will be equal to 
 
 **`runningTotal = 100`**
 
-> **Note:** Setting `conditionalCostType` to `absolute` will cancel all the previous costs for the project or the target language.
+> [!NOTE]
+> Setting `conditionalCostType` to `absolute` will cancel all the previous costs for the project or the target language.
 
 ## Cost types available ONLY at project level
 

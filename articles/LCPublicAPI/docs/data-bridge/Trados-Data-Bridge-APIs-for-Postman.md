@@ -72,5 +72,6 @@ For more options see below table
 
 ![image](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/WorkingWithExpandParameter.png?raw=true)
 
-> IMPORTANT: make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error. 
+> [!WARNING]
+> Make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error. 
 

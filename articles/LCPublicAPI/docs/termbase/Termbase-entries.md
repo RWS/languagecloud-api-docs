@@ -69,7 +69,8 @@ Request example: `POST /termbases/61b70c0775ed5f14d8190fab/entries`
 }
 ```
 
-> Note: The `termbaseFieldId` should match the field `id` from the termbase.
+> [!NOTE]
+> The `termbaseFieldId` should match the field `id` from the termbase.
 
 Response example:
 ```json

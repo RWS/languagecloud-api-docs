@@ -234,7 +234,7 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 
 ### Notes
 
-<!-- theme: info -->
+> [!NOTE]
 
 > #### Custom elements display order
 > Within a single UI extension: custom elements in your extension that have the same `location` are displayed in the same order in which they are present in your `ExtensionElement`s array.
@@ -242,7 +242,7 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 > With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.
 
 
-<!-- theme: info -->
+> [!NOTE]
 
 > #### Unexpected re-renders
 > A custom element's `onrender` event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding `eventHandler` gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of `onrender` `eventHandler`.

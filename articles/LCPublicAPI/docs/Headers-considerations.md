@@ -2,6 +2,7 @@
 
 The purpose of this page is to showcase the header types that could capture your interest.
 
+> [!NOTE]
 > Headers must be treated as [case-insensitive](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 The Trados Cloud Platform API response headers can be classified as follows:
@@ -25,6 +26,7 @@ You can read more about the `Content-Disposition` header on the [MDN Web Docs](h
 
 The `Content-Disposition` response header can be usually found on various download API endpoints like [Download Source File Version](../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion), [Download Target File Version](../api/Public-API.v1-fv.html#/operations/DownloadFileVersion), [Download Exported Quote Report](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) and others.
 
+> [!NOTE]
 > Please note that both `Content-Type` and `Content-Disposition` are  **not required** and APIs might not include them in the response. There are no guarantees that an endpoint that used to return a `Content-Type` or `Content-Disposition` header will still do so, under any circumstance. Please treat these headers as **optional** for all APIs.
 
 ### Retrieving the file name
@@ -42,6 +44,7 @@ storing the message payload.
 The parameters `filename` and `filename*` differ only in that
 `filename*` uses the encoding defined in [RFC5987](https://www.rfc-editor.org/rfc/rfc5987), allowing the use of characters not present in the ISO-8859-1 character set.
 
+> [!NOTE]
 > When both `filename` and `filename*` are present in a single header field value, you **must** pick `filename*` and ignore `filename`.
 
 If the `Content-Disposition` header is missing or you simply want to have a different file name, you need to provide a name and the file extension. The extension can be usually inferred from the required `Content-Type` header and also from the operation that is invoked.

@@ -4,7 +4,7 @@ This client library targets Java 11 and above. It provides API clients organized
 
 The generated Java clients are based on [OpenFeign](https://spring.io/projects/spring-cloud-openfeign).
 
-<!-- theme: info -->
+> [!NOTE]
 >  The Java Client library is auto-generated from the current API contracts, so any updates to the contract will reflect as changes in the SDK client. Minor version increases do not guarantee backwards compatibility.
 
 ## Installation
@@ -19,6 +19,8 @@ Include the client library in the `pom.xml`:
   <version>24.0.9</version>
 </dependency>
 ```
+
+> [!NOTE]
 > Make sure to always reference the latest available version. Check the [Maven Central Repository](https://search.maven.org/artifact/com.rws.lt.lc.public-api/lc-public-api-sdk) for more info.
 
 
