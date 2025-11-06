@@ -57,7 +57,7 @@ Understanding the grammar helps you:
 
 ANTLR4 grammar definition:
 
-```antlr
+```
 /**
  * ANTLR4 Grammar for Filter Expressions
  * 
