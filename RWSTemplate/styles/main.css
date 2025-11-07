@@ -61,8 +61,8 @@
   --header-bg-color: #fff;
   --header-ft-color: #979FB2;
   --input-text: #758099;
-  --highlight-light: #0081CC;
-  --highlight-dark: #0e5a87;
+  --highlight-light: #0081cc;
+  --highlight-dark: #0081cc;
   --accent-dim: #E6E8ED;
   --accent-super-dim: #F4F5F7;
   --font-color: #282C36;
@@ -110,7 +110,7 @@
 .tile:hover {
   background-color: #e0e0e0;
   /* Darker shade on hover */
-  color: #0081CC;
+  color: #0081cc;
   /* Change text color on hover */
 }
 
@@ -605,19 +605,19 @@ article h4 {
 .alert-info>h5 {
   color: #ffffff;
   /* border-bottom: 4px solid #1976d2; */
-  background-color: #1976d2;
+  background-color: #66c9ff;
 }
 
 .alert-warning>h5 {
   color: #ffffff;
   /* border-bottom: 4px solid #ffc700; */
-  background-color: #ffae00;
+  background-color: #ffc700;
 }
 
 .alert-danger>h5 {
   color: #ffffff;
   /* border-bottom: 4px solid #d32f2f; */
-  background-color: #d32f2f;
+  background-color: #ff592c;
 }
 
 /* CODE HIGHLIGHT */
@@ -657,7 +657,7 @@ code {
 
 a code {
   font-family: monospace, monospace;
-  color: #4A90E2;
+  color: #0081cc;
   background-color: #fafcff;
   border: solid 1px #E8E8E8;
 }

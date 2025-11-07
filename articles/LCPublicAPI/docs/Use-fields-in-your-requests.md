@@ -6,12 +6,12 @@ When you make a call using the `fields` query parameter, make sure that you:
 - Separate the fields by commas.
 - Query by `properties` and/or `subproperties`. Write `subproperties` in the following format: `propertyname.subpropertyname`.
 - Familiarize yourself with the elements that get returned:
-	- 	The fields marked as â€ś**required**â€ť are always returned.
+	- 	The fields marked as **required** are always returned.
 	- 	If fields are not customized for a given level and the requested field is non null then the default fields will be returned.
 	- 	If fields are customized for a given level and the requested field is non null, the fields you requested will be returned.
 	- 	The rules above are applied at nested level as well.
 
-Letâ€™s look at an example to understand how the `fields` parameter can be used. 
+Let's look at an example to understand how the `fields` parameter can be used. 
 We will perform a `GET` request to the [`/projects/projectId`](../api/Public-API.v1-fv.html#/operations/GetProject) endpoint and we will consider that in our example the `projectId`= 101.
 
 #### 1. Fields consist of properties and subproperties. Here are some examples:
@@ -34,7 +34,7 @@ focus: false
 
 Request: `GET/projects/101?fields=customer`
 
-Response: the project **identifier**; the customer **identifier**; the customer **name**; the customerâ€™s **key contact**; the customer **location**
+Response: the project **identifier**; the customer **identifier**; the customer **name**; the customer's **key contact**; the customer **location**
 
 <!--
 focus: false
@@ -45,7 +45,7 @@ focus: false
 
 Request: `GET/projects/101?fields=customer.keyContact,customer.name`
 
-Response: the project **identifier**; the customer **name**; the customerâ€™s **key contact**
+Response: the project **identifier**; the customer **name**; the customer's **key contact**
 
 <!--
 focus: false

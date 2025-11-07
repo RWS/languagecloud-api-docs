@@ -4,8 +4,8 @@
   --header-bg-color: #fff;
   --header-ft-color: #979FB2;
   --input-text: #758099;
-  --highlight-light: #4A90E2;
-  --highlight-dark: #3a70ad;
+  --highlight-light: #0081cc;
+  --highlight-dark: #0081cc;
   --accent-dim: #E6E8ED;
   --accent-super-dim: #F4F5F7;
   --font-color: #282C36;
@@ -1344,7 +1344,7 @@ div.embeddedvideo iframe {
 .tabGroup a[role="tab"]:hover,
 .tabGroup a[role="tab"]:focus,
 .tabGroup a[role="tab"][aria-selected="true"] {
-  border-bottom: 2px solid #0050C5;
+  border-bottom: 2px solid #0081cc;
 }
 
 .tabGroup a[role="tab"][aria-selected="true"] {
@@ -1353,11 +1353,11 @@ div.embeddedvideo iframe {
 
 .tabGroup a[role="tab"]:hover,
 .tabGroup a[role="tab"]:focus {
-  color: #0050C5;
+  color: #0081cc;
 }
 
 .tabGroup a[role="tab"]:focus {
-  outline: 1px solid #0050C5;
+  outline: 1px solid #0081cc;
   outline-offset: -1px;
 }
 

@@ -209,7 +209,7 @@ Example of a BCM fragment:
 				"type": "placeholderTag",
 				"metadata": {
 					"SDL:IsSoftBreak": "True",
-					"SpecialCharacterPlaceholder": "â€Ś",
+					"SpecialCharacterPlaceholder": "",
 					"frameworkOriginalTagId": "50",
 					"SDL:IsWordStop": "False"
 				}

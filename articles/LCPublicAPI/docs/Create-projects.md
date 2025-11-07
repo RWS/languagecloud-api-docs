@@ -24,7 +24,7 @@ Make a `GET` request to the following resource endpoints and identify the identi
 - [`/custom-field-definitions`](../api/Public-API.v1-fv.html#/operations/ListCustomFields) *optional*
 
 
-### 2. Decide which language pairs (source â€“ target) you want to use.
+### 2. Decide which language pairs (source - target) you want to use.
 
 Make a `GET` request to the [`/languages`](../api/Public-API.v1-fv.html#/operations/ListLanguages) endpoint and identify the `languageCode` parameter values.
 
@@ -45,7 +45,7 @@ Make sure that you remember the value of the project `id` parameter in the respo
 
 ### 5. Add your project files.
 
-Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property â€“ native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements. 
+Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property - native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements. 
 
 ### 5.1 Perfect Match (optional)
 At this point you can make use of the [PerfectMatch](../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).
@@ -62,7 +62,7 @@ You can create projects based on a project template already configured from the 
 
 Make a `GET` request to the [`/project-templates`](../api/Public-API.v1-fv.html#/operations/ListProjectTemplates) endpoint. Remember the project template `id` parameter in the response.
 
-### 2. Decide which language pairs (source â€“ target) you want to use.
+### 2. Decide which language pairs (source - target) you want to use.
 
 A project template may include more languages than you need. If this is the case, you can keep only the languages of interest. Make a `GET` request to the [`/languages`](../api/Public-API.v1-fv.html#/operations/ListLanguages) endpoint and identify the `languageCode` parameter values.
 
@@ -78,7 +78,7 @@ Make sure that you remember the value of the project `id` parameter in the respo
 
 ### 5. Add your project files
 
-Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property â€“ native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements.
+Make a `POST` request to the [`/projects/{projectId}/source-files`](../api/Public-API.v1-fv.html#/operations/AddSourceFile) endpoint. You can add both translatable files and reference files (by specifying the `role` property), and various file formats (by specifying the `type` property - native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the `targetLanguages` and `path` elements.
 
 ### 5.1 Perfect Match (optional)
 At this point you can make use of the [PerfectMatch](../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping) feature. You can read more about it [here](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).

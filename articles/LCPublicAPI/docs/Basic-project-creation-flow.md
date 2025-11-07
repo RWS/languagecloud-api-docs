@@ -56,7 +56,7 @@ Source and Target Language Codes can be obtained from [here](../api/Public-API.v
 
 The API should respond with:
 - HTTP Status Code: 201 Created.
-- Body â€“ your project details consisting of `projectId`, `project name`, `language direction`, `location` and other optional fields.
+- Body - your project details consisting of `projectId`, `project name`, `language direction`, `location` and other optional fields.
 
 Example:
 ```json
@@ -153,7 +153,7 @@ Properties field:
 
 Responses:
 -	HTTP Code 201 Created.
--	Body â€“  a list with the identifier, name and role of the file.
+-	Body -  a list with the identifier, name and role of the file.
 
 
 ![Add source file](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/AddSourceFilePostman.gif?raw=true)
@@ -194,7 +194,7 @@ Use `?fields=taskType` if you want to observe the task name.
 
 Responses:
 -	HTTP Code 200 Ok.
--	Body â€“  a list with task identifier and status.
+-	Body -  a list with task identifier and status.
 
 Example:
 ```json
@@ -243,7 +243,7 @@ For running this endpoint you need to:
 
 Responses:
 -	HTTP Code 200 Ok.
--	Body â€“ a list with objects that contain: 
+-	Body - a list with objects that contain: 
       - source file and target file identifiers
       - source and target languages
 
@@ -292,7 +292,7 @@ For running this endpoint you need to:
 
 Responses:
 -	HTTP Code 200 OK.
--	Body â€“  the translated file. The file can be also saved from Save Response option.
+-	Body -  the translated file. The file can be also saved from Save Response option.
 
 
 ![Download file](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/DownloadFilePostman.gif?raw=true)
@@ -331,7 +331,7 @@ For running this endpoint make a request to:
  
 Responses:
 -	HTTP Code 200 OK.
-- Body â€“ a list of projects with details consisting of project identifier, project name, language direction, location and other optional fields
+- Body - a list of projects with details consisting of project identifier, project name, language direction, location and other optional fields
 
 Example:
 ```json

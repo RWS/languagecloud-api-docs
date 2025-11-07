@@ -25,9 +25,9 @@ Here are the detailed steps:
 2. Expand the account menu on the top right-hand corner and select **Integrations**. 
 3. Select the **Applications** sub-tab.
 4. Select **New Application** and enter the following information:
-    - **Name** â€“ Enter a unique name for your custom application.
-    - (Optional) **URL** â€“ Enter your custom application URL.
-    - **Service User** â€“ Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
+    - **Name** - Enter a unique name for your custom application.
+    - (Optional) **URL** - Enter your custom application URL.
+    - **Service User** - Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
 5. Select **Add**.
 6. Back in the **Applications** sub-tab, select the check box corresponding to your application.
 7. Select **Edit**.
@@ -105,12 +105,12 @@ checksum.update(event.getBytes(UTF_8));
 long crc32Val = checksum.getValue();
 
 //build the message
-String message = transmissionTime + â€ś|â€ť + applicationId + â€ś|â€ť + webhookId + â€ś|â€ť + crc32Val;
+String message = transmissionTime + “|” + applicationId + “|” + webhookId + “|” + crc32Val;
 
 //build PublicKey
 byte[]  bytes = org.springframework.security.crypto.codec.Base64.decode(publicKeyAsString.getBytes());
 X509EncodeKeySpec ks = new X509EncodeKeySpec(bytes);
-KeyFactory kf = KeyFactory.getInstance(â€śRSAâ€ť);
+KeyFactory kf = KeyFactory.getInstance(“RSA”);
 PublicKey publicKey = kf.generatePublic(ks);
 
 //verify signature

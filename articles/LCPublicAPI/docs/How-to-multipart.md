@@ -32,8 +32,8 @@ Content-Disposition: form-data; name="properties"
 Content-Type: application/json
 
 { 
-â€â€"type":"native",
-â€â€"fileTypeSettingsId": "<FILE_TYPE_SETTINGS_ID>"
+    "type":"native",
+    "fileTypeSettingsId": "<FILE_TYPE_SETTINGS_ID>"
 }
 ----------------------------818668410602542750275539
 Content-Disposition: form-data; name="file"; filename="<FILENAME.EXTENSION>"

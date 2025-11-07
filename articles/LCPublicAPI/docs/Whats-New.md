@@ -225,7 +225,7 @@
 
 
 ## 22 November 2022
-- To enable support for the Trados Enterprise multi-source resources functionality, we're introducing an important breaking change: when creating workflows with multi-source languages from the TE UI, please use the new `languageDirection`Â scope value. As the new feature may limit previously working functionality, inconsistencies within applications or certain products may appear. For integrations that are impacted, please contact their developers to update the integrations.
+- To enable support for the Trados Enterprise multi-source resources functionality, we're introducing an important breaking change: when creating workflows with multi-source languages from the TE UI, please use the new `languageDirection` scope value. As the new feature may limit previously working functionality, inconsistencies within applications or certain products may appear. For integrations that are impacted, please contact their developers to update the integrations.
 - We've made 3 new endpoints available for [TM export](../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory)
 - We removed the old 10 MB size limitations for files, termbases and translation memories. We now support [these values](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) for files and [these values](https://docs.rws.com/791595/741139/trados-enterprise---accelerate/importing-tm-content) for importing translation memory content. 
 - Users can now retrieve task comments.
@@ -373,7 +373,7 @@ When you make a `POST` request to the [`/projects/{projectId}/target-files/{targ
 
 ## 28 January 2021
 
-* **Project** > **List Projectâ€™s Tasks** endpoint
+* **Project** > **List Project's Tasks** endpoint
 
 When you make a `GET` request to the [`/projects/{projectId}/tasks`](../api/Public-API.v1-fv.html#/operations/ListProjectTasks) endpoint, you can now retrieve the available project tasks and their details.
 
@@ -392,4 +392,4 @@ When adding source files to a project, you can specify their target languages vi
 
 
 
-<span style='color: #f5f5f5; font-size:10px;'>â‚Ť^. .^â‚Žâź†</span>
+<span style='color: #f5f5f5; font-size:10px;'>₍^. .^₎⟆</span>

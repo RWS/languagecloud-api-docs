@@ -7,7 +7,7 @@ _disableToc: false
 ---
 
 <div style="margin-bottom:15px;padding:10px;border-bottom:1px dashed #ccc;">
-  <a href="Global-Public-API.v1-fv.html" style="display:inline-block;padding: 8px 15px; background-color: #0081CC; color: white; text-decoration: none; border-radius: 5px;margin-bottom:10px;">
+  <a href="Global-Public-API.v1-fv.html" style="display:inline-block;padding: 8px 15px; background-color: #6f45d9; color: white; text-decoration: none; border-radius: 5px;margin-bottom:10px;">
     ⤢ View Documentation Fullscreen
   </a>
 </div>

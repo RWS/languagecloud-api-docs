@@ -9,12 +9,12 @@ See also: [Configuring advanced project settings](https://docs.rws.com/en-US/tra
 The TM advanced configuration options in this document apply to the following API endpoints.
 
 Project endpoints:
-- [Get Project](../../api/Public-API.v1-fv.html#/operations/GetProject) â€” Retrieve project details, including Translation Memory settings
-- [Update Project](../../api/Public-API.v1-fv.html#/operations/UpdateProject) â€” Update project configuration, including Translation Memory settings
+- [Get Project](../../api/Public-API.v1-fv.html#/operations/GetProject) - Retrieve project details, including Translation Memory settings
+- [Update Project](../../api/Public-API.v1-fv.html#/operations/UpdateProject) - Update project configuration, including Translation Memory settings
 
 Project template endpoints:
-- [Get Project Template](../../api/Public-API.v1-fv.html#/operations/GetProjectTemplate) â€” Retrieve project template details, including Translation Memory settings
-- [Update Project Template](../../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate) â€” Update project template configuration, including Translation Memory settings
+- [Get Project Template](../../api/Public-API.v1-fv.html#/operations/GetProjectTemplate) - Retrieve project template details, including Translation Memory settings
+- [Update Project Template](../../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate) - Update project template configuration, including Translation Memory settings
 
 ## Translation Memory filters
 
@@ -34,9 +34,9 @@ A filter configuration contains:
 Filter expressions are built from comparison expressions combined with logical operators.
 
 Logical operators:
-- `AND` â€” both conditions must be true
-- `OR` â€” at least one condition must be true
-- `NOT` â€” negates the following condition
+- `AND` - both conditions must be true
+- `OR` - at least one condition must be true
+- `NOT` - negates the following condition
 
 Example:
 ```
@@ -207,16 +207,16 @@ Supported operators depend on the field type:
 
 | Operator | singleString | multipleString | singlePicklist | multiplePicklist | dateTime | integer |
 |----------|:------------:|:--------------:|:--------------:|:----------------:|:--------:|:-------:|
-| `=` | âś” | âś” | âś” | âś” | âś” | âś” |
-| `<` | âś | âś | âś | âś | âś” | âś” |
-| `<=` | âś | âś | âś | âś | âś” | âś” |
-| `>` | âś | âś | âś | âś | âś” | âś” |
-| `>=` | âś | âś | âś | âś | âś” | âś” |
-| `!=` | âś” | âś | âś” | âś | âś” | âś” |
-| `CONTAINS` | âś” | âś” | âś | âś” | âś | âś |
-| `DOES NOT CONTAIN` | âś” | âś” | âś | âś” | âś | âś |
-| `MATCHES` | âś” | âś | âś | âś | âś | âś |
-| `DOES NOT MATCH` | âś” | âś | âś | âś | âś | âś |
+| `=` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| `<` | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| `<=` | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| `>` | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| `>=` | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
+| `!=` | ✔ | ✘ | ✔ | ✘ | ✔ | ✔ |
+| `CONTAINS` | ✔ | ✔ | ✘ | ✔ | ✘ | ✘ |
+| `DOES NOT CONTAIN` | ✔ | ✔ | ✘ | ✔ | ✘ | ✘ |
+| `MATCHES` | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ |
+| `DOES NOT MATCH` | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ |
 
 ### Filter field definition
 
@@ -238,12 +238,12 @@ Filter fields in API requests (PUT endpoints)
 When you update filter configuration via PUT (see [Applicable API endpoints](#applicable-api-endpoints)), you do not need to include the `fields` array. The system resolves field metadata automatically from the field names used in the expression.
 
 Supported field types:
-- `singleString` â€” single text value
-- `multipleString` â€” multiple unique text values
-- `singlePicklist` â€” single selection from predefined options
-- `multiplePicklist` â€” multiple unique selections from predefined options
-- `dateTime` â€” date and time value
-- `integer` â€” integer value
+- `singleString` - single text value
+- `multipleString` - multiple unique text values
+- `singlePicklist` - single selection from predefined options
+- `multiplePicklist` - multiple unique selections from predefined options
+- `dateTime` - date and time value
+- `integer` - integer value
 
 ## Translation Memory field updates
 
@@ -272,7 +272,7 @@ Example configurations
 
 #### Updating TM settings (PUT request)
 
-When updating a project or project template's TM settings via PUT (see [Applicable API endpoints](#applicable-api-endpoints)), provide only `fieldId` and `values` where applicable â€” the system will resolve metadata automatically.
+When updating a project or project template's TM settings via PUT (see [Applicable API endpoints](#applicable-api-endpoints)), provide only `fieldId` and `values` where applicable - the system will resolve metadata automatically.
 
 ```json
 {
