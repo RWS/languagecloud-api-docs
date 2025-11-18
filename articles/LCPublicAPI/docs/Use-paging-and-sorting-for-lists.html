@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Use paging and sorting for lists </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Use paging and sorting for lists ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="use-paging-and-sorting-for-lists">Use paging and sorting for lists</h1>
+
+<p>When the outcome of a <code>GET</code> call is a list of items (item properties and total count), you can control the number of results displayed on a page as well as sort the results.</p>
+<p>To control the number of results displayed on a page, do the following:</p>
+<ul>
+<li>To retrieve the full size of an entity, make a <code>GET</code> call to its corresponding endpoint.</li>
+</ul>
+<p>For example, make a <code>GET</code> call to the <a href="../api/Public-API.v1-fv.html#/operations/ListProjects"><code>/projects</code></a> endpoint. The result consists in a list of all the projects (and their details) as well as a project count. The project count field returns the same value even if you further apply the <code>top</code> or <code>skip</code> query parameters.</p>
+<ul>
+<li>To display only the first 10, 20, 30 (and so on) results in your list, use the <code>top</code> query parameter.</li>
+</ul>
+<p>For example, for the <a href="../api/Public-API.v1-fv.html#/operations/ListProjects"><code>/projects</code></a> endpoint, your query may look like this if you are interested in the first 10 projects: <code>/projects?top=10</code></p>
+<ul>
+<li>To get to a particular set of retrieved results in your list, use the <code>skip</code> query parameter.</li>
+</ul>
+<p>For example, for the <a href="../api/Public-API.v1-fv.html#/operations/ListProjects"><code>/projects</code></a> endpoint, if you want to skip the first 100 results, your query will look like this: <code>/projects?skip=100</code>.</p>
+<ul>
+<li>To sort your list by certain properties, use the <code>sort</code> query parameter.</li>
+</ul>
+<p>The default sorting strategy is ascending. Add unary operators for ascending (+) and descending (-) sorting. If you do not add any operator, the default ascending strategy kicks in.</p>
+<p>For example, if you want to sort results by due date (-) and name (+), your query will look like this: <code>/projects?sort=-dueBy,name</code>.</p>
+<p>Note that sorting can be performed only on first-level fields (not nested fields), for naturally comparable types like strings, numbers, and dates.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Use-paging-and-sorting-for-lists.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

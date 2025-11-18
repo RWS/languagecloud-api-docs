@@ -1,0 +1,4081 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Extensibility API",
+    "description": "The Extensibility API that must be implemented by 3rd party apps.\n\n**Important:** all relative paths in the Descriptor must begin with a slash (character \"/\"), otherwise the authentication on those calls will fail.",
+    "contact": {
+      "name": " "
+    },
+    "version": "1.4"
+  },
+  "servers": [
+    {
+      "url": "https://example.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Standard",
+      "description": "All the Standard endpoints"
+    },
+    {
+      "name": "Machine Translation Provider"
+    },
+    {
+      "name": "Automatic Task Type Provider"
+    },
+    {
+      "name": "Callback"
+    },
+    {
+      "name": "Verification Provider"
+    },
+    {
+      "name": "Verification Provider V2"
+    },
+    {
+      "name": "Preview Provider"
+    },
+    {
+      "name": "Preview Provider V2"
+    }
+  ],
+  "paths": {
+    "/descriptor": {
+      "get": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Descriptor",
+        "description": "This endpoint provides the descriptor for the app.",
+        "operationId": "descriptor",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. A TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppDescriptor"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Health check",
+        "description": "This is an example of the Health endpoint. The path of the endpoint can be set in the Descriptor.\n\nAny response code different from 200 will be treated as the app is unhealthy.",
+        "operationId": "Health",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "App is healthy."
+          }
+        }
+      }
+    },
+    "/documentation": {
+      "get": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Documentation",
+        "description": "This is an example of the Documentation endpoint. It either returns the HTML page with documentation or redirects to another documentation page. The path of the endpoint can be set in the Descriptor. ",
+        "operationId": "Documentation",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "301": {
+            "description": "Moved Permanently",
+            "content": {}
+          },
+          "302": {
+            "description": "Redirect"
+          }
+        }
+      }
+    },
+    "/configuration": {
+      "get": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Get Configuration settings",
+        "description": "Gets the configuration's settings for the account.",
+        "operationId": "GetConfiguration",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Will return the complete set of the latest configurations. Exceptions are the secrets, that should be returned as a string of \"*\" characters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationSettingsResult"
+                }
+              },
+              "example-1": {
+                "example": {
+                  "items": [
+                    {
+                      "id": "string",
+                      "value": "string"
+                    }
+                  ],
+                  "itemCount": 0
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Set Configuration settings",
+        "description": "Sets the configuration values for the account. \n\nIt should also validate the settings before saving them, similarly to the `/configuration/validation` endpoint. See `400`(bad request) response for invalid configuration settings.",
+        "operationId": "SetConfiguration",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ConfigurationValue"
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "Will return the complete set of latest configurations (even if just one configuration has been updated). Exceptions are the secrets, that should be returned as a string of \"*\".",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigurationSettingsResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected message structure or data.\n\nError codes:\n* invalidConfiguration - signals that the configuration has been validated and at least part of it is invalid. The `details` array will contain an element for each field that failed validation. If a pair of fields is invalid (like accountid/accountkey), each field should be added as a separate item in the array. For `code`, you can have the following values:\n    - invalidValue - for values that do not respect certain formats and are validated directly in code.\n    - invalidKey - for secrets that are validated against another API. The actual `value` will not be included in the error response.\n    - nullValue - the field doesn't have a value set and is not optional.\n* invalidSetup - the setup of the app is not valid. This is used for when the setup is not a valid one, and can include even hard-coded configurations, environment setup, etc. Used mainly for private apps. The UI will show only the `message` to the user.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body",
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/app-lifecycle": {
+      "post": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "App Lifecycle events",
+        "description": "Endpoint to receive lifecycle events for the registered app. (Including registration event).\n\nNote: The `INSTALLED` event must be idempotent, meaning that it should return `OK` even if the account is already successfully installed.",
+        "operationId": "Lifecycle",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppLifecycleEvent"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "Unexpected message structure or data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body",
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "x-stoplight": {
+          "id": "twu3jqmmyjbcb"
+        }
+      }
+    },
+    "/lc.mtprovider.translate": {
+      "post": {
+        "tags": [
+          "Machine Translation Provider"
+        ],
+        "summary": "Translate",
+        "description": "Translates the content (text provided in the format specified in the descriptor). This request has a read timeout of 2 minutes.",
+        "operationId": "MachineTranslationProviderTranslateBCM",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/sdl.lc.extensionpoint.machinetranslationprovider.translate.request"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/sdl.lc.extensionpoint.machinetranslationprovider.translate.response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected message structure or data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body",
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/lc.mtprovider.engines": {
+      "get": {
+        "tags": [
+          "Machine Translation Provider"
+        ],
+        "summary": "Get Translation Engines",
+        "description": "Gets the list of translation engines. This request has a read timeout of 5 seconds.",
+        "operationId": "GetMachineTranslationProviderEngines",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "model",
+            "in": "query",
+            "description": "The translation engine type. It can be NEURAL or BASELINE.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sourceLanguage",
+            "in": "query",
+            "description": "The source language code.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetLanguage",
+            "in": "query",
+            "description": "A list of target language codes.",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "exactMatch",
+            "description": "Used to enforce the response to match the exact languages of the requested ones.",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "location",
+            "description": "The folder identifier where the translation engines will be added. Can be used to filter the engines by folder."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "$ref": "#/components/schemas/TranslationEngine"
+                    },
+                    "itemCount": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected message structure or data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error codes:\n* ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/lc.mtprovider.engines/{id}": {
+      "get": {
+        "tags": [
+          "Machine Translation Provider"
+        ],
+        "summary": "Get Translation Engine",
+        "description": "Gets the translation engine for this identifier. This request has a read timeout of 5 seconds.",
+        "operationId": "GetTranslationEngine",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TranslationEngine"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/lc.automatictask.submit": {
+      "post": {
+        "tags": [
+          "Automatic Task Type Provider"
+        ],
+        "summary": "Submit Task",
+        "description": "Submits an automatic task for execution. This call should return 'Accepted' and the task itself should be executed on a different thread. Note that there is a read timeout of 5 seconds for this call.",
+        "operationId": "automatictasktypeexecutetask",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "projectId": {
+                    "type": "string",
+                    "description": "The identifier of the Trados Cloud Platform project."
+                  },
+                  "correlationId": {
+                    "type": "string",
+                    "description": "The identifier of the task that needs to be executed. Use this to get more information about the task by using the Trados Cloud Platform API."
+                  },
+                  "workflowConfiguration": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "description": "The identifier corresponding to an entry in the workflowTemplateConfigurations array from the app descriptor."
+                        },
+                        "value": {
+                          "type": "object",
+                          "description": "The value corresponding to an entry in the workflowTemplateConfigurations array from the app descriptor."
+                        }
+                      }
+                    }
+                  },
+                  "callbackUrl": {
+                    "type": "string",
+                    "description": "The url to call when the task execution is finished. \nThe method should be a POST and the body should be AutomaticTaskCallbackRequest model. The app should provide the X-LC-Tenant header."
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body",
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/external-job/v1/callback": {
+      "post": {
+        "tags": [
+          "Callback"
+        ],
+        "summary": "Submit Task Outcome",
+        "description": "This is the endpoint where the automatic task apps should return the outcome when the task execution is finished.",
+        "operationId": "automatiktasktypecallback",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "**Warning!** Body fields are **case sensitive**.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "success": {
+                    "type": "boolean",
+                    "description": "The status indicating whether the task was successfully processed or not"
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "description": "The task outcome"
+                  },
+                  "errors": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  },
+                  "comment": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "odmfw3vh60ool"
+                    },
+                    "description": "A comment about the task outcome."
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    },
+    "/configuration/validation": {
+      "post": {
+        "tags": [
+          "Standard"
+        ],
+        "summary": "Validate Configuration Settings",
+        "description": "Validates the configuration on an instance. This includes checking any API keys to 3rd party APIs. Returning success signals that the configuration values are all correct and valid.\nValidation should return groups of related validation errors. If there are values that are out of range, it should return only those fields with appropriate code. Additionally, if other API keys are invalid, those should not be returned along with other invalid fields.\nIt can be called at any time after the app installation (including also the process of installation, but after the lifetime event has been sent). Also, it can be called even if the app doesn't have any configuration settings declared.\n\nThe endpoint is available for descriptor versions 1.1 and above.",
+        "operationId": "ValidateConfigurationSettings",
+        "parameters": [
+          {
+            "name": "TR_ID",
+            "in": "header",
+            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Error codes:\n* invalidConfiguration - signals that the configuration has been validated and at least part of it is invalid. The `details` array will contain an element for each field that failed validation. If a pair of fields is invalid (like accountid/accountkey), each field should be added as a separate item in the array. For `code`, you can have the following values:\n    - invalidValue - for values that do not respect certain formats and are validated directly in code.\n    - invalidKey - for secrets that are validated against another API. The actual `value` will not be included in the error response.\n    - nullValue - the field doesn't have a value set and is not optional.\n* invalidSetup - the setup of the app is not valid. This is used for when the setup is not a valid one, and can include even hard-coded configurations, environment setup, etc. Used mainly for private apps. The UI will show only the `message` to the user.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ]
+      }
+    },
+    "/lc.preview.startpreview": {
+      "post": {
+        "summary": "Start Preview",
+        "operationId": "StartPreview",
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.MainRequest"
+              }
+            }
+          }
+        },
+        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "tags": [
+          "Preview Provider"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.refreshpreview": {
+      "put": {
+        "summary": "Refresh Preview",
+        "operationId": "RefreshPreview",
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.MainRequest"
+              }
+            }
+          }
+        },
+        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "tags": [
+          "Preview Provider"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.updatesegment": {
+      "post": {
+        "summary": "Update Segment",
+        "operationId": "UpdateSegment",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint generates a rendered HTML fragment from a BCM document fragment. The timeout for this request should be 10 seconds.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentRequest"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Preview Provider"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.endpreview": {
+      "post": {
+        "summary": "End Preview",
+        "operationId": "EndPreview",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint finishes the preview.",
+        "tags": [
+          "Preview Provider"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.startpreview.v2": {
+      "post": {
+        "summary": "Start Preview",
+        "operationId": "StartPreviewV2",
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.MainRequestV2"
+              }
+            }
+          }
+        },
+        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "tags": [
+          "Preview Provider V2"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.refreshpreview.v2": {
+      "put": {
+        "summary": "Refresh Preview",
+        "operationId": "RefreshPreviewV2",
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.MainRequestV2"
+              }
+            }
+          }
+        },
+        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "tags": [
+          "Preview Provider V2"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.updatesegment.v2": {
+      "post": {
+        "summary": "Update Segment",
+        "operationId": "UpdateSegmentV2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint generates a rendered HTML fragment from a BCM document fragment. The timeout for this request should be 10 seconds.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentRequest"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Preview Provider V2"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.preview.endpreview.v2": {
+      "post": {
+        "summary": "End Preview",
+        "operationId": "EndPreviewV2",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint finishes the preview.",
+        "tags": [
+          "Preview Provider V2"
+        ],
+        "security": [
+          {
+            "LanguageCloudJWSToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-ExtensionId"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-AppVersion"
+          }
+        ]
+      }
+    },
+    "/lc.verification.startverification/{requestId}": {
+      "post": {
+        "summary": "Start Verification",
+        "operationId": "VerificationProviderStartVerification",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerificationProvider.MainRequest"
+              }
+            }
+          }
+        },
+        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](AddOn-API.v1.json/components/schemas/VerificationProvider.MainResponse)",
+        "security": [
+          {
+            "Trados Cloud Platform JWS Token": []
+          }
+        ],
+        "tags": [
+          "Verification Provider"
+        ],
+        "parameters": []
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "requestId",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/lc.verification.verifysegment": {
+      "post": {
+        "summary": "Verify Segment",
+        "operationId": "VerificationProviderVerifySegment",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.VerifySegmentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint verifies the content of a single segment",
+        "security": [
+          {
+            "Trados Cloud Platform JWS Token": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerificationProvider.VerifySegmentRequest"
+              }
+            }
+          },
+          "description": ""
+        },
+        "tags": [
+          "Verification Provider"
+        ]
+      },
+      "parameters": []
+    },
+    "/lc.verification.getmessagesbyculture/{culture}": {
+      "get": {
+        "summary": "Get Messages By Culture",
+        "tags": [
+          "Verification Provider"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "VerificationProviderGetMessagesByCulture",
+        "description": "Gets localized resources for message types defined by the app extension",
+        "parameters": []
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string",
+            "enum": [
+              "de-DE",
+              "es-ES",
+              "fr-CA",
+              "fr-FR",
+              "it-IT",
+              "ja-JP",
+              "nl-NL",
+              "zh-CN"
+            ]
+          },
+          "name": "culture",
+          "in": "path",
+          "required": true,
+          "description": "Culture of retrieved resources"
+        }
+      ]
+    },
+    "/lc.verification.getsettingsschema": {
+      "get": {
+        "summary": "Get Settings Schema",
+        "tags": [
+          "Verification Provider"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "group": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "kc1t8wfl70ace"
+                      },
+                      "description": "group name for settings. Must be \"sdl.project.verification.qaChecker.addon\"",
+                      "enum": [
+                        "sdl.project.verfication.qaChecker.addon"
+                      ]
+                    },
+                    "systemId": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "rwwuwxs8iz7jw"
+                      },
+                      "description": "extension ID"
+                    },
+                    "schema": {
+                      "type": "object",
+                      "x-stoplight": {
+                        "id": "58sw7o5udooku"
+                      },
+                      "description": "full json schema for the settings associated with this extension"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "VerificationProviderGetSettingsSchema",
+        "description": "Returns a JSON schema for the settings associated with this app\nThe JSON schema can must only use specific pre-defined types relating to \"string\", \"number\", \"integer\", \"boolean\", \"datetime\" and \"file\" - for complex types, objects are used with internal properties.",
+        "requestBody": {
+          "content": {}
+        }
+      }
+    },
+    "/lc.verification.startverification.v2/{requestId}": {
+      "post": {
+        "summary": "Start Verification",
+        "operationId": "VerificationProviderStartVerificationV2",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerificationProvider.MainRequest"
+              }
+            }
+          }
+        },
+        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](AddOn-API.v1.json/components/schemas/VerificationProvider.MainResponse)",
+        "security": [
+          {
+            "Trados Cloud Platform JWS Token": []
+          }
+        ],
+        "tags": [
+          "Verification Provider V2"
+        ],
+        "parameters": []
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "requestId",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/lc.verification.verifysegment.v2": {
+      "post": {
+        "summary": "Verify Segment",
+        "operationId": "VerificationProviderVerifySegmentV2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.VerifySegmentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "description": "This endpoint verifies the content of a single segment",
+        "security": [
+          {
+            "Trados Cloud Platform JWS Token": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerificationProvider.VerifySegmentRequest"
+              }
+            }
+          },
+          "description": ""
+        },
+        "tags": [
+          "Verification Provider V2"
+        ]
+      },
+      "parameters": []
+    },
+    "/lc.verification.getmessagesbyculture.v2/{culture}": {
+      "get": {
+        "summary": "Get Messages By Culture",
+        "tags": [
+          "Verification Provider V2"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "VerificationProviderGetMessagesByCultureV2",
+        "description": "Gets localized resources for message types defined by the app extension",
+        "parameters": []
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string",
+            "enum": [
+              "de-DE",
+              "es-ES",
+              "fr-CA",
+              "fr-FR",
+              "it-IT",
+              "ja-JP",
+              "nl-NL",
+              "zh-CN"
+            ]
+          },
+          "name": "culture",
+          "in": "path",
+          "required": true,
+          "description": "Culture of retrieved resources"
+        }
+      ]
+    },
+    "/lc.verification.getsettingsschema.v2": {
+      "get": {
+        "summary": "Get Settings Schema",
+        "tags": [
+          "Verification Provider V2"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "group": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "kc1t8wfl70ace"
+                      },
+                      "description": "group name for settings. Must be \"sdl.project.verification.qaChecker.addon\"",
+                      "enum": [
+                        "sdl.project.verfication.qaChecker.addon"
+                      ]
+                    },
+                    "systemId": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "rwwuwxs8iz7jw"
+                      },
+                      "description": "extension ID"
+                    },
+                    "schema": {
+                      "type": "object",
+                      "x-stoplight": {
+                        "id": "58sw7o5udooku"
+                      },
+                      "description": "full json schema for the settings associated with this extension"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "VerificationProviderGetSettingsSchemaV2",
+        "description": "Returns a JSON schema for the settings associated with this app\nThe JSON schema can must only use specific pre-defined types relating to \"string\", \"number\", \"integer\", \"boolean\", \"datetime\" and \"file\" - for complex types, objects are used with internal properties.",
+        "requestBody": {
+          "content": {}
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AppDescriptor": {
+        "title": "AppDescriptor",
+        "x-stoplight": {
+          "id": "0089d4934393e"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "version",
+          "releaseNotes",
+          "descriptorVersion"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "A user friendly name, that will be used in the RWS AppStore. It must be unique - registration will fail if there is another app with the same name."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the app that will be presented in the AppStore."
+          },
+          "version": {
+            "pattern": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$",
+            "type": "string",
+            "description": "3 numbers separated by a dot, representing the semantic version.",
+            "example": "2.1.4",
+            "default": "1.0.0"
+          },
+          "scopes": {
+            "type": "array",
+            "description": "The list of required scopes. It can be any of the following:\n* TENANT - Read/write/delete all tenant data (resources). \n* TENANT_READ\t- Read-only access to all tenant data (resources).\n* ACCESS_SECURE_PROJECT_CONTENT - Access to secure project content.\t",
+            "items": {
+              "type": "string",
+              "enum": [
+                "TENANT",
+                "TENANT_READ",
+                "ACCESS_SECURE_PROJECT_CONTENT"
+              ]
+            }
+          },
+          "entitlements": {
+            "type": "array",
+            "description": "The list of required entitlements. If the account doesn't have the entitlements, the app installation won't be allowed. This is reserved for RWS apps.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "extensions": {
+            "type": "array",
+            "description": "The collection of Extensions that are supported by the app.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/MTProviderExtension"
+                },
+                {
+                  "$ref": "#/components/schemas/AutomaticTaskExtension"
+                },
+                {
+                  "$ref": "#/components/schemas/PreviewProviderExtension"
+                },
+                {
+                  "$ref": "#/components/schemas/PreviewProviderExtensionV2"
+                },
+                {
+                  "$ref": "#/components/schemas/VerificationProviderExtension"
+                }
+              ]
+            }
+          },
+          "webhooks": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "uo42j8r261dsj"
+            },
+            "items": {
+              "$ref": "#/components/schemas/WebhookDefinition",
+              "x-stoplight": {
+                "id": "93brp3iueljln"
+              }
+            }
+          },
+          "baseUrl": {
+            "type": "string",
+            "description": "The prefix for all calls to the app service.",
+            "example": "somehostname.net/service/v1"
+          },
+          "regionalBaseUrls": {
+            "$ref": "#/components/schemas/RegionalBaseUrls",
+            "x-stoplight": {
+              "id": "kk1ajh7a1arp3"
+            }
+          },
+          "standardEndpoints": {
+            "type": "object",
+            "description": "The collection of standard endpoints implemented by each app.",
+            "required": [
+              "health",
+              "documentation",
+              "appLifecycle",
+              "configurationValidation",
+              "privacyPolicy",
+              "termsAndConditions"
+            ],
+            "properties": {
+              "health": {
+                "type": "string",
+                "description": "This endpoint will be polled at regular intervals, and the app will be considered healthy if the response code is 200. Any other code will be treated as app service failure."
+              },
+              "documentation": {
+                "type": "string",
+                "description": "Optional endpoint that can provide documentation in HTML form or respond with a HTTP redirect to another documentation page, not necessarily relative to 'baseUrl'."
+              },
+              "configuration": {
+                "type": "string",
+                "description": "Optional endpoint, that can receive configuration details for the app per Account."
+              },
+              "icon": {
+                "type": "string",
+                "description": "URL for the icon to be used when listing the app. TBD: format and size."
+              },
+              "appLifecycle": {
+                "type": "string",
+                "description": "Endpoint that will receive Lifecycle events for an app (that are not related to an installed account/tenant), ex. app Installed, Registered, Unregistered."
+              },
+              "configurationValidation": {
+                "type": "string",
+                "description": "Endpoint for validating the configuration. It is required even if the `configuration` endpoint is not present."
+              },
+              "privacyPolicy": {
+                "type": "string",
+                "description": "Endpoint for the privacyPolicy. It can provide privacy policy in HTML form."
+              },
+              "termsAndConditions": {
+                "type": "string",
+                "description": "Endpoint for the termsAndConditions. It can provide terms and conditions in HTML form."
+              }
+            }
+          },
+          "configurations": {
+            "type": "array",
+            "description": "The list of configuration values for the app.",
+            "items": {
+              "$ref": "#/components/schemas/ConfigurationDefinition"
+            }
+          },
+          "releaseNotes": {
+            "type": "string",
+            "description": "Describes the changes in the new version. Might be used by an administrator to help decide on possible actions."
+          },
+          "minimumVersion": {
+            "type": "string",
+            "description": "Minimum version of the app that is supported. Older versions might be forcebly disabled if not upgraded."
+          },
+          "vendor": {
+            "type": "object",
+            "required": [
+              "name",
+              "url",
+              "email"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Vendor name."
+              },
+              "url": {
+                "type": "string",
+                "description": "Vendor presentation website url."
+              },
+              "email": {
+                "type": "string",
+                "description": "Vendor email."
+              }
+            }
+          },
+          "descriptorVersion": {
+            "type": "string",
+            "description": "The version of the descriptor. The expected capabilities are based on that version. Use only the value provided in the validation. Do not update the descriptorVersion if not all new features from the current app descriptor are implemented. With the introduction of Apps, descriptorVersion should be `1.4`.",
+            "enum": [
+              "1.4"
+            ]
+          }
+        }
+      },
+      "ConfigurationValue": {
+        "title": "ConfigurationValue",
+        "type": "object",
+        "x-examples": {
+          "example-1": {
+            "id": "thirdPartyToken",
+            "value": "7dk320dsl3420jaf0u23pmer0=="
+          },
+          "example-2": {
+            "id": "retryCount",
+            "value": 3
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The configuration property ID as defined in the descriptor."
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "integer",
+              "boolean"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "AppLifecycleEvent": {
+        "title": "AppLifecycleEvent",
+        "x-stoplight": {
+          "id": "b623b3b85688e"
+        },
+        "type": "object",
+        "description": "Lifecycle event data for the app.\n\nThe 'data' payload can vary depending on the id of the lifecycle event. For `REGISTERED` event there is the `RegisteredEvent` data that contains the `clientCredentials`. This is in contrast to v1.3 of the descriptor, where the credentials were sent received on install.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifies the type of lifecycle event. Could be extended in the future with more events.",
+            "enum": [
+              "REGISTERED",
+              "UNREGISTERED",
+              "INSTALLLED",
+              "UNINSTALLED",
+              "UPDATED"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "description": "Timestamp of when the event happened in ISO-8601 format with timezone in UTC. ",
+            "format": "date-time"
+          },
+          "data": {
+            "description": "The data related to the specific event. Can be null if there is no extra data.",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RegisteredEvent"
+              },
+              {
+                "$ref": "#/components/schemas/UpdatedEvent",
+                "x-stoplight": {
+                  "id": "oiz0xiltgshgm"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "timestamp"
+        ]
+      },
+      "RegisteredEvent": {
+        "title": "RegisteredEvent",
+        "x-stoplight": {
+          "id": "8e353564bd405"
+        },
+        "type": "object",
+        "properties": {
+          "clientCredentials": {
+            "type": "object",
+            "required": [
+              "clientId",
+              "clientSecret"
+            ],
+            "properties": {
+              "clientId": {
+                "type": "string"
+              },
+              "clientSecret": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "clientCredentials"
+        ]
+      },
+      "UpdatedEvent": {
+        "title": "UpdatedEvent",
+        "x-stoplight": {
+          "id": "doncfjujsw5a8"
+        },
+        "type": "object",
+        "properties": {
+          "clientCredentials": {
+            "type": "object",
+            "properties": {
+              "clientId": {
+                "type": "string"
+              },
+              "clientSecret": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "clientId",
+              "clientSecret"
+            ]
+          }
+        }
+      },
+      "sdl.lc.extensionpoint.machinetranslationprovider.translate.request": {
+        "title": "TranslateRequest",
+        "type": "object",
+        "description": "The type of `contents` is based on the `format` specified in the descriptor, `html` or `bcm`.\n\nThe `projectId`, `sourceFileId` and `targetFileId` are optional.",
+        "properties": {
+          "engineId": {
+            "type": "string",
+            "description": "The translation engine identifier provided by the app."
+          },
+          "projectId": {
+            "type": "string",
+            "description": "The identifier of the project that uses the app extension."
+          },
+          "sourceFileId": {
+            "type": "string",
+            "description": "The identifier of the associated source file. "
+          },
+          "targetFileId": {
+            "type": "string",
+            "description": "The identifier of the associated target file."
+          },
+          "contents": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/HTMLContents"
+              },
+              {
+                "$ref": "#/components/schemas/BCM"
+              }
+            ]
+          }
+        },
+        "required": [
+          "engineId",
+          "contents"
+        ]
+      },
+      "sdl.lc.extensionpoint.machinetranslationprovider.languages.response": {
+        "title": "LanguagesResponse",
+        "type": "object",
+        "properties": {
+          "languages": {
+            "type": "array",
+            "description": "The list of available langues.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "sdl.lc.extensionpoint.machinetranslationprovider.translate.response": {
+        "title": "TranslateResponse",
+        "type": "object",
+        "description": "The type of `translations` is based on the `format` specified in the descriptor, `html` or `bcm`.",
+        "properties": {
+          "translations": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/HTMLContents"
+              },
+              {
+                "$ref": "#/components/schemas/BCM"
+              }
+            ]
+          }
+        }
+      },
+      "ConfigurationSettingsResult": {
+        "title": "ConfigurationSettingsResult",
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConfigurationValue"
+            }
+          },
+          "itemCount": {
+            "type": "integer",
+            "description": "The total number of config values available."
+          }
+        }
+      },
+      "ErrorResponse": {
+        "title": "ErrorResponse",
+        "type": "object",
+        "description": "The errorCode and code can be set to any value. There are a set of standard values that can be handled by App Management. See details for errorCode and code for the standard values.",
+        "properties": {
+          "errorCode": {
+            "type": "string",
+            "description": "Pre-defined errorCodes:\nINVALID_VALUES - they are used when the values are set but the values are not as expected (for example: out of range, invalid types)"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message, human-readable."
+          },
+          "details": {
+            "type": "array",
+            "description": "Optional error details.",
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            }
+          }
+        }
+      },
+      "TranslationEngine": {
+        "title": "TranslationEngine",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "An identifier that uniquely identifies this engine in the app."
+          },
+          "model": {
+            "type": "string",
+            "description": "The type of translation engine. It can be NEURAL or BASELINE."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name that will be displayed for the 'Type' column in the LC UI."
+          },
+          "engineSourceLanguage": {
+            "type": "string",
+            "description": "The source language code that was matched in the engine."
+          },
+          "engineTargetLanguage": {
+            "type": "string",
+            "description": "The target language code that was matched in the engine."
+          },
+          "matchingSourceLanguage": {
+            "type": "string",
+            "description": "The source language requested by Trados Cloud Platform."
+          },
+          "matchingTargetLanguages": {
+            "type": "array",
+            "description": "The target languages requested by the Trados Cloud Platform that matched the engine's target language.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "model",
+          "engineSourceLanguage",
+          "engineTargetLanguage",
+          "matchingSourceLanguage",
+          "matchingTargetLanguages"
+        ]
+      },
+      "MTProviderExtension": {
+        "title": "MTProviderExtension",
+        "type": "object",
+        "description": "Extension that provides machine translation.",
+        "required": [
+          "extensionPointId",
+          "id",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ],
+        "properties": {
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point identifier corresponding to this extensionType: lc.mtprovider",
+            "enum": [
+              "lc.mtprovider"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The MT extension description"
+          },
+          "extensionPointVersion": {
+            "type": "string",
+            "description": "The version of the extension point that is implemented in the Extension.\r\n\r\nCurrently supported version is \"1\"."
+          },
+          "configuration": {
+            "type": "object",
+            "required": [
+              "endpoints",
+              "format"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The required endpoints for the MT extension",
+                "required": [
+                  "lc.mtprovider.translate",
+                  "lc.mtprovider.engines"
+                ],
+                "properties": {
+                  "lc.mtprovider.translate": {
+                    "type": "string",
+                    "description": "The endpoint used to receive and translate content from the Trados Cloud Platform. It must begin with a slash \"/\""
+                  },
+                  "lc.mtprovider.engines": {
+                    "type": "string",
+                    "description": "The endpoint used to retrieve the available translation engines (the supported language pairs). It must begin with a slash \"/\" character."
+                  }
+                }
+              },
+              "format": {
+                "type": "string",
+                "description": "The content's format supported by the app on the translate endpoint.",
+                "enum": [
+                  "html",
+                  "bcm"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "PreviewProviderExtension": {
+        "title": "PreviewProviderExtension",
+        "type": "object",
+        "description": "Extension that provides for preview generation",
+        "required": [
+          "extensionPointId",
+          "id",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ],
+        "properties": {
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point id corresponding to this extensionType: lc.previewprovider",
+            "enum": [
+              "lc.previewprovider"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The PreviewProvider extension description"
+          },
+          "extensionPointVersion": {
+            "type": "string",
+            "description": "The version of the extension point that is implemented in the Extension.\r\n\r\nCurrently supported version is \"1\".",
+            "enum": [
+              "1.0"
+            ]
+          },
+          "configuration": {
+            "type": "object",
+            "required": [
+              "endpoints",
+              "requiredInputFiles",
+              "outputType",
+              "supportedFileTypes"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The required endpoints for the PreviewProvider extension",
+                "required": [
+                  "lc.preview.startpreview",
+                  "lc.preview.endpreview",
+                  "lc.preview.refreshpreview",
+                  "lc.preview.updatesegment"
+                ],
+                "properties": {
+                  "lc.preview.startpreview": {
+                    "type": "string",
+                    "description": "The endpoint used initiate the preview generation - must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.endpreview": {
+                    "type": "string",
+                    "description": "The endpoint used to end the preview request. Any cleanup can be done via this call. Must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.refreshpreview": {
+                    "type": "string",
+                    "description": "The endpoint used to refresh the preview. Must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.updatesegment": {
+                    "type": "string",
+                    "description": "The endpoint used to update a segment. Must start with a slash \"/\"",
+                    "readOnly": true
+                  }
+                },
+                "readOnly": true
+              },
+              "requiredInputFiles": {
+                "type": "object",
+                "required": [
+                  "previewPackageTemplate",
+                  "bilingualDocument",
+                  "nativeFile",
+                  "nativeAnnotatedFile"
+                ],
+                "properties": {
+                  "previewPackageTemplate": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing the retrieval of a preview package template containing the files required to generate the preview",
+                    "readOnly": true
+                  },
+                  "bilingualDocument": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension for retrieving a translated BCM document",
+                    "readOnly": true
+                  },
+                  "nativeFile": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeSourceFile or nativeTargetFile depending on the generation scope",
+                    "readOnly": true
+                  },
+                  "nativeAnnotatedFile": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeAnnotatedSourceFile or nativeAnnotatedTargetFile depending on the generation scope",
+                    "readOnly": true
+                  }
+                },
+                "readOnly": true
+              },
+              "outputType": {
+                "type": "string",
+                "description": "Must define one of the following values: previewPackage, previewHtmlFile or previewUrl.",
+                "readOnly": true
+              },
+              "supportedFileTypes": {
+                "type": "array",
+                "description": "An array listing one or more FileTypeDefinitionIds definining FileTypes to which this preview extension may be assigned.",
+                "items": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "readOnly": true
+              }
+            }
+          }
+        }
+      },
+      "PreviewProviderExtensionV2": {
+        "title": "PreviewProviderExtensionV2",
+        "type": "object",
+        "description": "Extension that provides for preview generation",
+        "required": [
+          "extensionPointId",
+          "id",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ],
+        "properties": {
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point id corresponding to this extensionType: lc.previewprovider",
+            "enum": [
+              "lc.previewprovider"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The PreviewProvider extension description"
+          },
+          "extensionPointVersion": {
+            "type": "string",
+            "description": "The version of the extension point that is implemented in the Extension.\r\n\r\nCurrently supported version is \"1\" or \"2\".",
+            "enum": [
+              "2.0"
+            ]
+          },
+          "configuration": {
+            "type": "object",
+            "required": [
+              "endpoints",
+              "requiredInputFiles",
+              "outputType",
+              "supportedFileTypes"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The required endpoints for the PreviewProvider extension",
+                "required": [
+                  "lc.preview.startpreview.v2",
+                  "lc.preview.endpreview.v2",
+                  "lc.preview.refreshpreview.v2",
+                  "lc.preview.updatesegment.v2"
+                ],
+                "properties": {
+                  "lc.preview.startpreview.v2": {
+                    "type": "string",
+                    "description": "The endpoint used initiate the preview generation - must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.endpreview.v2": {
+                    "type": "string",
+                    "description": "The endpoint used to end the preview request. Any cleanup can be done via this call. Must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.refreshpreview.v2": {
+                    "type": "string",
+                    "description": "The endpoint used to refresh the preview. Must start with a slash \"/\"",
+                    "readOnly": true
+                  },
+                  "lc.preview.updatesegment.v2": {
+                    "type": "string",
+                    "description": "The endpoint used to update a segment. Must start with a slash \"/\"",
+                    "readOnly": true
+                  }
+                },
+                "readOnly": true
+              },
+              "requiredInputFiles": {
+                "type": "object",
+                "required": [
+                  "previewPackageTemplate",
+                  "bilingualDocument",
+                  "nativeSourceFile",
+                  "nativeTargetFile",
+                  "nativeAnnotatedTargetFile"
+                ],
+                "properties": {
+                  "previewPackageTemplate": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing the retrieval of a preview package template containing the files required to generate the preview",
+                    "readOnly": true
+                  },
+                  "bilingualDocument": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension for retrieving a translated BCM document",
+                    "readOnly": true
+                  },
+                  "nativeFile": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeSourceFile or nativeTargetFile depending on the generation scope",
+                    "readOnly": true
+                  },
+                  "nativeAnnotatedFile": {
+                    "type": "boolean",
+                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeAnnotatedSourceFile or nativeAnnotatedTargetFile depending on the generation scope",
+                    "readOnly": true
+                  }
+                },
+                "readOnly": true
+              },
+              "outputType": {
+                "type": "string",
+                "description": "Must be of type previewUrl.",
+                "readOnly": true
+              },
+              "supportedFileTypes": {
+                "type": "array",
+                "description": "An array listing one or more FileTypeDefinitionIds definining FileTypes to which this preview extension may be assigned.",
+                "items": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "readOnly": true
+              }
+            }
+          }
+        }
+      },
+      "AutomaticTaskExtension": {
+        "title": "AutomaticTaskExtension",
+        "type": "object",
+        "description": "Extension that executes an automatic task.",
+        "required": [
+          "extensionPointId",
+          "id",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ],
+        "properties": {
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point id corresponding to this extensionType: lc.automatictask",
+            "enum": [
+              "lc.automatictask"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a friendly and unique name. It might be shown to the end user, and might be usefull to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The automatic task extension description."
+          },
+          "extensionPointVersion": {
+            "description": "The version of the extension point that is implemented in the Extension.\r\n\r\nCurrently supported version is \"1\".",
+            "type": "string"
+          },
+          "configuration": {
+            "type": "object",
+            "description": "The task configuration.",
+            "required": [
+              "endpoints",
+              "supportedInputFileType",
+              "scope",
+              "outputFileType"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The endpoints that accept a task for execution.",
+                "required": [
+                  "lc.automatictask.submit"
+                ],
+                "properties": {
+                  "lc.automatictask.submit": {
+                    "type": "string",
+                    "description": "The path of the endpoint that accepts a task for execution. Must begin with a slash \"/\""
+                  }
+                }
+              },
+              "supportedInputFileType": {
+                "type": "string",
+                "description": "Describes what are the input files for the given task. All tasks can have input files, regardless of scope.\n\nAcceptable values:\n- nativeSource: processes source files in their native uploaded form (e.g: FileTypeDetection, Engineering, FileFormatConversion)\n\n- bcmSource: processes source files in their converted \"bcm\" form (e.g: DocumentContentAnalysis, CopySourceToTarget)\n\n- bcmTarget: processes target files in their \"bcm\" form (e.g.: Translation, Linguistic Review, MachineTranslation, TranslationMemoryMatching, TranslationMemoryUpdate, TargetFileGeneration)\n\n- nativeTarget: processes target files in their native \"generated\" form (e.g: DTP, FinalCheck)\n\n- sdlxliffTarget: processes target files in their \"sdlxliff\" form. Specifically for Import tasks. Not recommended for automated task types at this time (early 2021)\n\n- none: doesn't touch file content either to read or to update it\n",
+                "enum": [
+                  "nativeSource",
+                  "bcmSource",
+                  "bcmTarget",
+                  "nativeTarget",
+                  "sdlxliffTarget",
+                  "none"
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "description": "Describes the applicability of a task within a project\n\nAcceptable values:\n- file: the task will be applicable for every file in the project. It will process either source or target files based on the relation with supportedInputFileType and outputFileType\n\n- targetLanguage: the task will be applicable for every target language of the project\nbatch: the task is applicable only once for a batch execution within a project\n\n- task: the task is applicable to other tasks. Specifically tailored for Error tasks. Not recommended for automated task types at this time (early 2021)\n\n- vendorOrder: the task is part of the vendor negotiation process. Not recommended for automated task types at this time (early 2021)",
+                "enum": [
+                  "file",
+                  "targetLanguage",
+                  "batch",
+                  "vendorOrder",
+                  "task"
+                ]
+              },
+              "outputFileType": {
+                "type": "string",
+                "description": "Describes what are the output files for the given task.\n\nAcceptable values:\n- nativeSource: processes source files in their native uploaded form (e.g: FileTypeDetection, Engineering, FileFormatConversion)\n\n- bcmSource: processes source files in their converted \"bcm\" form (e.g: DocumentContentAnalysis, CopySourceToTarget)\n\n- bcmTarget: processes target files in their \"bcm\" form (e.g.: Translation, Linguistic Review, MachineTranslation, TranslationMemoryMatching, TranslationMemoryUpdate, TargetFileGeneration)\n\n- nativeTarget: processes target files in their native \"generated\" form (e.g: DTP, FinalCheck)\n\n- sdlxliffTarget: processes target files in their \"sdlxliff\" form. Specifically for Import tasks. Not recommended for automated task types at this time (early 2021)\n\n- none: doesn't touch file content either to read or to update it\n\ne.g.: FileFormatConversion would have bcmSource \ne.g: CopySourceToTarget would have bcmTarget\ne.g: TargetFileGeneration would have nativeTarget",
+                "enum": [
+                  "nativeSource",
+                  "bcmSource",
+                  "bcmTarget",
+                  "nativeTarget",
+                  "sdlxliffTarget",
+                  "none"
+                ]
+              },
+              "outcomes": {
+                "minItems": 1,
+                "type": "array",
+                "description": "The possible outcomes this automatic task has. It must contain at least one outcome.",
+                "items": {
+                  "type": "object",
+                  "description": "The outcome of the task",
+                  "properties": {
+                    "outcome": {
+                      "type": "string",
+                      "description": "A custom outcome value."
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "The outcome description"
+                    },
+                    "isDefault": {
+                      "type": "boolean",
+                      "description": "If TRUE, this outcome will be used when no speciffic outcome is provided. At least one outcome must be default. "
+                    }
+                  }
+                }
+              },
+              "workflowTemplateConfigurations": {
+                "type": "array",
+                "description": "Definitions of the configurations that the app needs at runtime in order to execute a task.\nThe task will be configured when you create a workflow template, workflow or project. The configuration values will be passed to the app when a task is submitted for execution.\nFor example, an extension that uploads a file to an FTP can have the location as a configuration",
+                "items": {
+                  "$ref": "#/components/schemas/AutomaticTaskConfigurationDefinition"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ConfigurationDefinition": {
+        "title": "ConfigurationDefinition",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short, user friendly name for the configuration setting."
+          },
+          "id": {
+            "pattern": "^[A-Za-z0-9_]+",
+            "type": "string",
+            "description": "An alphanumeric identifier, including underscores. This will be used when setting or getting the configuration settings."
+          },
+          "description": {
+            "type": "string",
+            "description": "A user-friendly description of the configuration settings, describing what the user should set in the textbox."
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Is this an optional configuration",
+            "default": false
+          },
+          "dataType": {
+            "type": "string",
+            "description": "Specifies the data type for the value, to be used for input type generation. ",
+            "enum": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "datetime",
+              "secret"
+            ]
+          },
+          "options": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "oxz2z9ca0nq2i"
+            },
+            "description": "A list of available values to choose from. They will be displayed as a dropdown list.",
+            "items": {
+              "x-stoplight": {
+                "id": "p6xpgzbo4a7l9"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "id",
+          "dataType"
+        ]
+      },
+      "AutomaticTaskConfigurationDefinition": {
+        "title": "ConfigurationDefinition",
+        "type": "object",
+        "required": [
+          "name",
+          "id",
+          "dataType"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short, user friendly name for the configuration setting."
+          },
+          "id": {
+            "pattern": "^[A-Za-z0-9_]+",
+            "type": "string",
+            "description": "An alphanumeric ID, including underscores. This will be used when setting or getting configuration settings."
+          },
+          "description": {
+            "type": "string",
+            "description": "A user-friendly description of the configuration settings, describing what the user should set in the textbox."
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Is this an optional configuration",
+            "default": false
+          },
+          "dataType": {
+            "type": "string",
+            "description": "Specifies the data type for the value, to be used for input type generation. ",
+            "enum": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "datetime",
+              "secret"
+            ]
+          },
+          "options": {
+            "type": "array",
+            "description": "A list of available values to choose from. They will be displayed as a dropdown list.",
+            "items": {
+              "x-stoplight": {
+                "id": "5erw2wrdvvxsd"
+              },
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ErrorDetail": {
+        "title": "ErrorDetail",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Input field/object name."
+          },
+          "code": {
+            "type": "string",
+            "description": "INVALID_VALUE - when the value is outside the accepted values.\nINVALID_TYPE - if the type of the property does not comply with the type specified in the descriptor."
+          },
+          "value": {
+            "type": "string",
+            "description": "Rejected input value."
+          }
+        }
+      },
+      "AutomaticTaskCallbackRequest": {
+        "title": "AutomaticTaskCallbackRequest",
+        "type": "object",
+        "properties": {
+          "outcome": {
+            "type": "string"
+          },
+          "errors": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          }
+        },
+        "description": "The request must contain either an outcome or a list of errors"
+      },
+      "BCM": {
+        "title": "BCM",
+        "type": "object",
+        "description": "An object representing a file in BCM format"
+      },
+      "HTMLContents": {
+        "title": "HTMLContents",
+        "type": "array",
+        "description": "The input text to translate as html. Provide an array of strings to translate multiple phrases.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "PreviewProvider.MainRequest": {
+        "title": "PreviewProvider.MainRequest",
+        "x-stoplight": {
+          "id": "1ses68b45dz9s"
+        },
+        "type": "object",
+        "description": "Request for StartPreview or RefreshPreview",
+        "properties": {
+          "previewSessionId": {
+            "type": "string",
+            "description": "Unique identifier for the given Preview Session."
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "source",
+              "target"
+            ],
+            "description": "It indicates whether the source or the target is being generated."
+          },
+          "fileInformation": {
+            "$ref": "#/components/schemas/PreviewProvider.FileInformation"
+          },
+          "inputFiles": {
+            "type": "object",
+            "properties": {
+              "nativeFileUrl": {
+                "type": "string",
+                "description": "It defines the one time download URL for the input native source file or for the native target file, depending on the generation scope."
+              },
+              "bilingualDocumentUrl": {
+                "type": "string",
+                "description": "It defines the onetime download URL for the input BCM document."
+              },
+              "previewPackageTemplateUrl": {
+                "type": "string",
+                "description": "It defines the onetime download URL for the input previewPackageTemplate."
+              },
+              "nativeAnnotatedFileUrl": {
+                "type": "string",
+                "description": "It defines the one time download URL for the input native annotated sourceFile or for the native annotated target file, depending on the generation scope."
+              }
+            }
+          },
+          "previewResultFileUrl": {
+            "type": "string",
+            "description": "Defines the one time upload URL to upload either a generated previewPackage or a previewHtmlFile."
+          },
+          "callbackUrl": {
+            "type": "string",
+            "description": "This is the URL detailing endpoint to call when the asynchronous job has completed."
+          }
+        },
+        "required": [
+          "previewSessionId",
+          "inputFiles",
+          "callbackUrl"
+        ]
+      },
+      "PreviewProvider.MainRequestV2": {
+        "title": "PreviewProvider.MainRequestV2",
+        "type": "object",
+        "description": "Request for StartPreview or RefreshPreview",
+        "properties": {
+          "previewSessionId": {
+            "type": "string",
+            "description": "Unique identifier for the given Preview Session."
+          },
+          "projectId": {
+            "type": "string",
+            "description": "Trados Enterprise Project ID"
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "source",
+              "target"
+            ],
+            "description": "It indicates whether the source or the target is being generated."
+          },
+          "fileInformation": {
+            "$ref": "#/components/schemas/PreviewProvider.FileInformation"
+          },
+          "inputFiles": {
+            "$ref": "#/components/schemas/PreviewProvider.InputFilesV2"
+          },
+          "previewResultFileUrl": {
+            "type": "string",
+            "description": "Defines the one time upload URL to upload either a generated previewPackage or a previewHtmlFile."
+          },
+          "callbackUrl": {
+            "type": "string",
+            "description": "This is the URL detailing endpoint to call when the asynchronous job has completed."
+          }
+        },
+        "required": [
+          "previewSessionId",
+          "inputFiles",
+          "callbackUrl"
+        ]
+      },
+      "PreviewProvider.FileInformation": {
+        "title": "PreviewProvider.FileInformation",
+        "x-stoplight": {
+          "id": "1j64cy5rhse5v"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the file."
+          },
+          "sourceLanguage": {
+            "type": "string",
+            "description": "The source language of the file."
+          },
+          "targetLanguage": {
+            "type": "string",
+            "description": "The target language of the file."
+          }
+        }
+      },
+      "PreviewProvider.FileDetails": {
+        "title": "PreviewProvider.FileDetails",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the file."
+          },
+          "version": {
+            "type": "integer",
+            "description": "The version of the file."
+          },
+          "url": {
+            "type": "string",
+            "description": "The endpoint for downloading or uploading the file"
+          }
+        }
+      },
+      "PreviewProvider.InputFilesV2": {
+        "title": "PreviewProvider.InputFilesV2",
+        "type": "object",
+        "properties": {
+          "bilingualDocument": {
+            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
+          },
+          "previewPackageTemplate": {
+            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
+          },
+          "nativeSourceFile": {
+            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
+          },
+          "nativeTargetFile": {
+            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
+          },
+          "nativeAnnotatedTargetFile": {
+            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
+          }
+        }
+      },
+      "PreviewProvider.MainResponse": {
+        "title": "PreviewProvider.MainResponse",
+        "x-stoplight": {
+          "id": "61d7pmnmxxc3f"
+        },
+        "type": "object",
+        "description": "Response for StartPreview and RefreshPreview",
+        "properties": {
+          "previewSessionId": {
+            "type": "string",
+            "description": "Unique ID referencing the session for this preview"
+          },
+          "previewResult": {
+            "type": "string",
+            "description": "resource ID returned by calling the one time upload url to store the previewPackage or previewHtmlFile or the URL pointing to a generated Preview"
+          },
+          "errors": {
+            "type": "array",
+            "description": "Errors which occurred during the operation",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PreviewProvider.FragmentToRender": {
+        "title": "PreviewProvider.FragmentToRender",
+        "x-stoplight": {
+          "id": "8j8v4sxg1flul"
+        },
+        "type": "object",
+        "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html",
+        "properties": {
+          "segmentId": {
+            "type": "string"
+          },
+          "fragment": {
+            "type": "object",
+            "description": "This object represents a BCM fragment. The documentation for the BCM fragment can be found here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html"
+          }
+        }
+      },
+      "PreviewProvider.RenderedTranslation": {
+        "title": "PreviewProvider.RenderedTranslation",
+        "x-stoplight": {
+          "id": "gwck0br93jn1y"
+        },
+        "type": "object",
+        "properties": {
+          "renderedContent": {
+            "type": "string"
+          },
+          "segmentId": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "string"
+          }
+        }
+      },
+      "PreviewProvider.UpdateSegmentRequest": {
+        "title": "PreviewProvider.UpdateSegmentRequest",
+        "x-stoplight": {
+          "id": "8lww2qzteh44k"
+        },
+        "type": "object",
+        "properties": {
+          "previewSessionId": {
+            "type": "string",
+            "description": "Unique identifier referencing the session associated with this request."
+          },
+          "scope": {
+            "type": "string",
+            "enum": [
+              "source",
+              "target"
+            ],
+            "description": "Indicates if the content generated is the source or the target content."
+          },
+          "fileInformation": {
+            "$ref": "#/components/schemas/PreviewProvider.FileInformation"
+          },
+          "segments": {
+            "type": "array",
+            "description": "The Segment Fragments to render.",
+            "items": {
+              "$ref": "#/components/schemas/PreviewProvider.FragmentToRender"
+            }
+          }
+        },
+        "required": [
+          "previewSessionId",
+          "scope",
+          "fileInformation",
+          "segments"
+        ]
+      },
+      "PreviewProvider.UpdateSegmentResponse": {
+        "title": "PreviewProvider.UpdateSegmentResponse",
+        "x-stoplight": {
+          "id": "3x2xs0b3zzolq"
+        },
+        "type": "object",
+        "properties": {
+          "previewSessionId": {
+            "type": "string",
+            "description": "Unique ID for this preview session"
+          },
+          "renderedTranslations": {
+            "type": "array",
+            "description": "Rendered HTML fragment",
+            "items": {
+              "$ref": "#/components/schemas/PreviewProvider.RenderedTranslation"
+            }
+          }
+        },
+        "required": [
+          "previewSessionId",
+          "renderedTranslations"
+        ]
+      },
+      "VerificationProviderExtension": {
+        "title": "VerificationProviderExtension",
+        "type": "object",
+        "description": "Extension that provides for verification message generation",
+        "x-stoplight": {
+          "id": "9swy94c2yc6u1"
+        },
+        "examples": [
+          {
+            "extensionPointId": "lc.verificationprovider",
+            "id": "string",
+            "name": "string",
+            "description": "string",
+            "extensionPointVersion": "1.0",
+            "configuration": {
+              "endpoints": {
+                "lc.verification.startverification": "string",
+                "lc.verification.verifysegment": "string",
+                "lc.verification.getmessagesbyculture": "string",
+                "lc.verification.getsettingsschema": "string"
+              },
+              "validationInputType": "string"
+            }
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point id corresponding to this extensionType: lc.verificationprovider",
+            "enum": [
+              "lc.verificationprovider"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The VerificationProvider extension description"
+          },
+          "extensionPointVersion": {
+            "type": "string",
+            "description": "The version of the extension point that is implemented in the Extension",
+            "enum": [
+              "1.0"
+            ]
+          },
+          "configuration": {
+            "type": "object",
+            "required": [
+              "endpoints",
+              "validationInputType"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The required endpoints for the VerificationProvider extension",
+                "required": [
+                  "lc.verification.startverification"
+                ],
+                "properties": {
+                  "lc.verification.startverification": {
+                    "type": "string",
+                    "description": "The endpoint used to start the verification process. Must start with a slash \"/\"",
+                    "x-stoplight": {
+                      "id": "r1njwi093d1qd"
+                    },
+                    "readOnly": true
+                  },
+                  "lc.verification.verifysegment": {
+                    "type": "string",
+                    "description": "verifies an individual segment",
+                    "x-stoplight": {
+                      "id": "h4e4zzme66f3y"
+                    }
+                  },
+                  "lc.verification.getmessagesbyculture": {
+                    "type": "string",
+                    "description": "gets the localized resources for message types",
+                    "x-stoplight": {
+                      "id": "a2ymt9fc9pqw7"
+                    }
+                  },
+                  "lc.verification.getsettingsschema": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "yky262mpfn26a"
+                    },
+                    "description": "Gets the JSON schema which defines the settings this extension uses"
+                  }
+                },
+                "readOnly": true
+              },
+              "validationInputType": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "uvti2xbg7ogyo"
+                },
+                "enum": [
+                  "BilingualDocument",
+                  "NativeSource",
+                  "NativeTarget",
+                  "NativeAnnotatedTarget"
+                ],
+                "description": "An enum specifying the type of input for the validation",
+                "readOnly": true
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "extensionPointId",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ]
+      },
+      "VerificationProviderExtensionV2": {
+        "title": "VerificationProviderExtensionV2",
+        "type": "object",
+        "description": "Extension that provides for verification message generation",
+        "examples": [
+          {
+            "extensionPointId": "lc.verificationprovider",
+            "id": "string",
+            "name": "string",
+            "description": "string",
+            "extensionPointVersion": "2.0",
+            "configuration": {
+              "endpoints": {
+                "lc.verification.startverification.v2": "string",
+                "lc.verification.verifysegment.v2": "string",
+                "lc.verification.getmessagesbyculture.v2": "string",
+                "lc.verification.getsettingsschema.v2": "string"
+              },
+              "validationInputFiles": "string"
+            }
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique extension ID provided by the app developer"
+          },
+          "extensionPointId": {
+            "type": "string",
+            "description": "The extension point id corresponding to this extensionType: lc.verificationprovider",
+            "enum": [
+              "lc.verificationprovider"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
+          },
+          "description": {
+            "type": "string",
+            "description": "The VerificationProvider extension description"
+          },
+          "extensionPointVersion": {
+            "type": "string",
+            "description": "The version of the extension point that is implemented in the Extension",
+            "enum": [
+              "2.0"
+            ]
+          },
+          "configuration": {
+            "type": "object",
+            "required": [
+              "endpoints",
+              "validationInputType",
+              "validationInputFiles",
+              "validatorType",
+              "supportedFileTypes"
+            ],
+            "properties": {
+              "endpoints": {
+                "type": "object",
+                "description": "The required endpoints for the VerificationProvider extension",
+                "required": [
+                  "lc.verification.startverification"
+                ],
+                "properties": {
+                  "lc.verification.startverification.v2": {
+                    "type": "string",
+                    "description": "The endpoint used to start the verification process. Must start with a slash \"/\"",
+                    "x-stoplight": {
+                      "id": "r1njwi093d1qd"
+                    },
+                    "readOnly": true
+                  },
+                  "lc.verification.verifysegment.v2": {
+                    "type": "string",
+                    "description": "verifies an individual segment",
+                    "x-stoplight": {
+                      "id": "h4e4zzme66f3y"
+                    }
+                  },
+                  "lc.verification.getmessagesbyculture.v2": {
+                    "type": "string",
+                    "description": "gets the localized resources for message types",
+                    "x-stoplight": {
+                      "id": "a2ymt9fc9pqw7"
+                    }
+                  },
+                  "lc.verification.getsettingsschema.v2": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "yky262mpfn26a"
+                    },
+                    "description": "Gets the JSON schema which defines the settings this extension uses"
+                  }
+                },
+                "readOnly": true
+              },
+              "validationInputFiles": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "BilingualDocument",
+                    "NativeSource",
+                    "NativeTarget",
+                    "NativeAnnotatedTarget"
+                  ]
+                },
+                "description": "An array specifying the type of input files used for the validation - NativeSource and NativeTarget are mutually exclusive",
+                "readOnly": true
+              },
+              "validatorType": {
+                "type": "string",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "BilingualDocumentValidator",
+                    "NativeSourceValidator",
+                    "NativeTargetValidator",
+                    "NativeAnnotatedTargetValidator"
+                  ]
+                },
+                "description": "A field specifying the validator type. Can be BilingualDocumentValidator, NativeSourceValidator, NativeTargetValidator or NativeAnnotatedTargetValidator",
+                "readOnly": true
+              },
+              "supportedFileTypes": {
+                "type": "array",
+                "description": "An array listing one or more FileTypeDefinitionIds definining FileTypes to which this verification extension may be assigned.",
+                "items": {
+                  "type": "string",
+                  "readOnly": true
+                },
+                "readOnly": true
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "extensionPointId",
+          "name",
+          "description",
+          "extensionPointVersion",
+          "configuration"
+        ]
+      },
+      "VerificationProvider.MainRequest": {
+        "title": "VerificationProvider.MainRequest",
+        "type": "object",
+        "description": "Request for StartVerification",
+        "x-stoplight": {
+          "id": "3xv7lx88zfcii"
+        },
+        "required": [
+          "inputResourceDetails",
+          "callbackUrl",
+          "sourceLanguage",
+          "targetLanguage",
+          "publishMessageUrl"
+        ],
+        "properties": {
+          "inputResourceDetails": {
+            "type": "object",
+            "description": "input resource details used by the verifiers",
+            "properties": {
+              "nativeFileUrl": {
+                "type": "string",
+                "description": "download URL for the input native source file or for the native target file. The app defines in the descriptor if the native file is a source or target one"
+              },
+              "bilingualDocumentUrl": {
+                "type": "string",
+                "description": "download URL for the document"
+              },
+              "bilingualDocumentVersion": {
+                "type": "integer",
+                "description": "version of the document"
+              },
+              "nativeAnnotatedFileUrl": {
+                "type": "string",
+                "description": "download URL for the input native annotated target file. Annotated source files are currently not supported"
+              },
+              "languageResourceTemplateId": {
+                "type": "string",
+                "description": "ID for languageResourceTemplate to be used during validation"
+              },
+              "verificationResourcePackageUrl": {
+                "type": "string",
+                "description": "download URL for verificationResourcePackage"
+              },
+              "translationProfileId": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "9y15yckqibcdd"
+                },
+                "description": "ID used to retrieve resources from the Translation Service via the Trados Cloud Platform API"
+              }
+            }
+          },
+          "callbackUrl": {
+            "type": "string",
+            "description": "This is the URL detailing endpoint to call when the asynchronous job has completed."
+          },
+          "sourceLanguage": {
+            "type": "string",
+            "description": "source language code"
+          },
+          "targetLanguage": {
+            "type": "string",
+            "description": "target language code"
+          },
+          "publishMessageUrl": {
+            "type": "string",
+            "description": "upload URL used to publish the verification message results to the platform"
+          },
+          "verifierSettings": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "b4wfb86uhv9cp"
+            },
+            "description": "JSON settings object containing verifier specific settings"
+          },
+          "sessionId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "5go507wf6as3d"
+            },
+            "description": "ID of session this request is associated with"
+          }
+        }
+      },
+      "VerificationProvider.VerifySegmentRequest": {
+        "type": "object",
+        "title": "VerificationProvider.VerifySegmentRequest",
+        "description": "Request for VerifySegment",
+        "x-stoplight": {
+          "id": "y2j7q6qm0vsxd"
+        },
+        "properties": {
+          "fragment": {
+            "type": "object",
+            "description": "Bilingual Document Fragment containing segment to validate",
+            "x-stoplight": {
+              "id": "ptq0plwalyzmv"
+            }
+          },
+          "languageResourceTemplateId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "language resource template ID",
+            "x-stoplight": {
+              "id": "8wvk4lw7vryug"
+            }
+          },
+          "translationProfileId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pyy1x36lngpbo"
+            },
+            "description": "TranslationProfileId used to request resources from TranslationService"
+          },
+          "verifierSettings": {
+            "type": "object",
+            "description": "json object containing verifier specific user settings",
+            "x-stoplight": {
+              "id": "whvz7d1gh8dtu"
+            }
+          },
+          "sourceLanguage": {
+            "type": "string",
+            "description": "source language"
+          },
+          "targetLanguage": {
+            "type": "string",
+            "description": "target language"
+          },
+          "segmentLocation": {
+            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData",
+            "x-stoplight": {
+              "id": "ym54gmzwwl9i3"
+            }
+          }
+        },
+        "required": [
+          "fragment",
+          "sourceLanguage",
+          "targetLanguage"
+        ]
+      },
+      "VerificationProvider.MainResponse": {
+        "title": "VerificationProvider.MainResponse",
+        "x-stoplight": {
+          "id": "gznatp8uzouui"
+        },
+        "type": "object",
+        "description": "Response for StartVerification",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "description": "Errors which occurred during the operation",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          },
+          "messageCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "bru0jvpba772h"
+            },
+            "description": "Number of actual messages published on the PublishMessage endpoint"
+          },
+          "verificationSessionId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "dzi461yipp30i"
+            },
+            "description": "id of session"
+          },
+          "verificationResult": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vbjqhgfwu68hx"
+            },
+            "description": "Result of operation",
+            "enum": [
+              "Success",
+              "Fail"
+            ]
+          }
+        }
+      },
+      "VerificationProvider.VerifySegmentResponse": {
+        "title": "VerificationProvider.VerifySegmentResponse",
+        "x-stoplight": {
+          "id": "j45f404aa2crf"
+        },
+        "type": "object",
+        "properties": {
+          "verificationMessages": {
+            "type": "array",
+            "description": "verification messages associated with the segment",
+            "items": {
+              "$ref": "#/components/schemas/VerificationProvider.VerificationMessage"
+            }
+          }
+        }
+      },
+      "VerificationProvider.SegmentIdentifierData": {
+        "title": "VerificationProvider.SegmentIdentifierData",
+        "x-stoplight": {
+          "id": "yjgx014qzhpqh"
+        },
+        "type": "object",
+        "properties": {
+          "fileId": {
+            "type": "string",
+            "description": "fileId of file in which segment is located"
+          },
+          "paragraphUnitId": {
+            "type": "string",
+            "description": "paragraphUnitId of paragraphUnit in which segment is located"
+          },
+          "segmentNumber": {
+            "type": "string",
+            "description": "segment number of segment containing issues"
+          }
+        }
+      },
+      "VerificationProvider.VerificationMessage": {
+        "title": "VerificationProvider.VerificationMessage",
+        "x-stoplight": {
+          "id": "ys9ei1vpb8ip5"
+        },
+        "type": "object",
+        "properties": {
+          "messageType": {
+            "type": "string",
+            "description": "messageType - each verifier can define its own list of messageTypes which releate to validation errors it generates"
+          },
+          "verifier": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "68631lv6uxvk1"
+            }
+          },
+          "level": {
+            "type": "string",
+            "description": "level of the error",
+            "enum": [
+              "Error",
+              "Warning",
+              "Note"
+            ]
+          },
+          "segmentId": {
+            "type": "string",
+            "description": "segmentId"
+          },
+          "tagId": {
+            "type": "string",
+            "description": "tagId"
+          },
+          "isSource": {
+            "type": "boolean",
+            "description": "true if error is present in source"
+          },
+          "messageArguments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "segmentLocation": {
+            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData",
+            "x-stoplight": {
+              "id": "cwqgrj79rnyyy"
+            }
+          },
+          "messageLocation": {
+            "$ref": "#/components/schemas/VerificationProvider.MessageLocation"
+          }
+        },
+        "required": [
+          "level"
+        ]
+      },
+      "VerificationProvider.MessageLocation": {
+        "title": "VerificationProvider.MessageLocation",
+        "x-stoplight": {
+          "id": "0ysk90t3z6qyf"
+        },
+        "type": "object",
+        "properties": {
+          "fromLocation": {
+            "type": "string"
+          },
+          "toLocation": {
+            "type": "string"
+          }
+        }
+      },
+      "VerificationProvider.MessageTypeLocalizationData": {
+        "title": "VerificationProvider.MessageTypeLocalizationData",
+        "x-stoplight": {
+          "id": "mayazpa7flukc"
+        },
+        "type": "object",
+        "properties": {
+          "messageType": {
+            "type": "string"
+          },
+          "friendlyName": {
+            "type": "string"
+          },
+          "errorMessage": {
+            "type": "string"
+          },
+          "detailedErrorMessage": {
+            "type": "string"
+          },
+          "suggestion": {
+            "type": "string"
+          }
+        }
+      },
+      "VerificationProvider.MessageResourceResponse": {
+        "title": "VerificationProvider.MessageResourceResponse",
+        "x-stoplight": {
+          "id": "fy375u9vl0du3"
+        },
+        "type": "object",
+        "properties": {
+          "culture": {
+            "type": "string"
+          },
+          "messageTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VerificationProvider.MessageTypeLocalizationData"
+            }
+          }
+        }
+      },
+      "VerificationProvider.UserSettings": {
+        "title": "VerificationProvider.UserSettings",
+        "x-stoplight": {
+          "id": "azw8rs1fc8s1j"
+        },
+        "type": "object",
+        "properties": {
+          "userSettings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VerificationProvider.UserSetting"
+            }
+          }
+        }
+      },
+      "VerificationProvider.UserSetting": {
+        "title": "VerificationProvider.UserSetting",
+        "x-stoplight": {
+          "id": "c8u0son4uzfoz"
+        },
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short, user friendly name for the configuration setting."
+          },
+          "id": {
+            "type": "string",
+            "description": "An alphanumeric identifier, including underscores. This will be used when setting or getting the configuration settings.",
+            "pattern": "^[A-Za-z0-9_]+"
+          },
+          "description": {
+            "type": "string",
+            "description": "A user-friendly description of the configuration settings, describing what the user should set in the textbox."
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Is this an optional configuration",
+            "default": false
+          },
+          "defaultValue": {
+            "type": "string",
+            "description": "default value for setting"
+          },
+          "dataType": {
+            "type": "string",
+            "enum": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "datetime",
+              "file"
+            ],
+            "description": "Specifies the data type for the value, to be used for input type generation."
+          },
+          "options": {
+            "type": "array",
+            "description": "A list of available values to choose from. They will be displayed as a dropdown list.",
+            "items": {}
+          }
+        },
+        "required": [
+          "name",
+          "id"
+        ]
+      },
+      "VerificationProvider.ValidationSetting": {
+        "title": "VerificationProvider.ValidationSetting",
+        "x-stoplight": {
+          "id": "fhojfr4to2rrt"
+        },
+        "type": "object",
+        "properties": {
+          "name1": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ph9iqzrb1sysr"
+            }
+          },
+          "value1": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "u9a0jzllznuiy"
+            }
+          },
+          "namex": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "uy2mzp6ea1y5a"
+            }
+          },
+          "valuex": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "t018cshax2lyp"
+            }
+          }
+        }
+      },
+      "VerificationProvider.ValidationSettings": {
+        "title": "VerificationProvider.ValidationSettings",
+        "x-stoplight": {
+          "id": "mxex23ksn4lc5"
+        },
+        "type": "object",
+        "properties": {
+          "group": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "cpi40cxebnzpz"
+            }
+          },
+          "settings": {
+            "$ref": "#/components/schemas/VerificationProvider.ValidationSetting",
+            "x-stoplight": {
+              "id": "xdagzshuozcsq"
+            }
+          },
+          "systemId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "xsusow40six06"
+            }
+          }
+        }
+      },
+      "VerificationProvider.ValidationSettingSchema": {
+        "title": "VerificationProvider.ValidationSettingSchema",
+        "x-stoplight": {
+          "id": "3ffzxl12zjcsg"
+        },
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "q4uuc6bb2qv25"
+            }
+          },
+          "verificationResourcePackage": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "56kdy6r6w790p"
+            },
+            "properties": {
+              "customsettingtype": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "w40qs5wcrelnn"
+                },
+                "enum": [
+                  "file",
+                  "datetime"
+                ]
+              },
+              "customsettingvalue": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "p3xwhc14w6tfn"
+                }
+              }
+            }
+          },
+          "lengthcheckcharacterlimit": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "erepyg8hxdbru"
+            }
+          }
+        }
+      },
+      "WebhookDefinition": {
+        "title": "WebhookDefinition",
+        "x-stoplight": {
+          "id": "ub9s0chbz7cjw"
+        },
+        "type": "object",
+        "required": [
+          "url",
+          "eventTypes"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6t9a1hi14tyh2"
+            }
+          },
+          "eventTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "9k8tfae1ixf3e"
+            },
+            "items": {
+              "$ref": "#/components/schemas/WebhookEventTypeDefinition",
+              "x-stoplight": {
+                "id": "0yu6smuij46hl"
+              }
+            }
+          }
+        }
+      },
+      "WebhookEventTypeDefinition": {
+        "title": "WebhookEventTypeDefinition",
+        "x-stoplight": {
+          "id": "5uf8vewvffqhc"
+        },
+        "type": "object",
+        "required": [
+          "eventType"
+        ],
+        "properties": {
+          "eventType": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "2tjal9svz3phb"
+            }
+          }
+        }
+      },
+      "RegionalBaseUrls": {
+        "title": "Regional Base URLs",
+        "x-stoplight": {
+          "id": "750k5bd32yqr8"
+        },
+        "type": "object",
+        "description": "The base URLs based on region.",
+        "properties": {
+          "eu": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "sxsx61aedkbgg"
+            },
+            "description": "The URL for the `eu` region."
+          },
+          "ca": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "g97d5qxwdladv"
+            },
+            "description": "The URL for the `ca` region."
+          }
+        }
+      }
+    },
+    "parameters": {
+      "TR_ID": {
+        "name": "TR_ID",
+        "in": "header",
+        "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "X-LC-ExtensionPointVersion": {
+        "name": "X-LC-ExtensionPointVersion",
+        "in": "header",
+        "description": "The extension point version",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "X-LC-ExtensionId": {
+        "name": "X-LC-ExtensionId",
+        "in": "header",
+        "description": "The extension identifier",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "X-LC-AppVersion": {
+        "name": "X-LC-AppVersion",
+        "in": "header",
+        "description": "The app version",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "securitySchemes": {
+      "LanguageCloudJWSToken": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>File formats </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="File formats ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="file-formats">File formats</h1>
+
+<p>A file used in the Trados Cloud Platform API can have one of the three supported formats: native, SDLXLIFF or <a href="../../BCM/BCM.NET_client_API.html">BCM</a>:</p>
+<ul>
+<li><p>Native represents the format of the file that is attached to a project by the user. The project's associated File Type Configuration specifies if the native file extensions can be attached to that project.</p>
+</li>
+<li><p>To download files for translation or review in offline mode, the *.sdlxliff format can be used. SDLXLIFF files have XML format.</p>
+</li>
+<li><p>BCM (Bilingual Content Model) documents are files used for handling content internally. BCM files have JSON content and are stored in .json format.</p>
+</li>
+</ul>
+<h2 id="file-formats-in-a-workflow">File formats in a workflow</h2>
+<p>In a workflow, each task has a supported input file type that describes which input file types are allowed for that task. A new file version can be added only if the format of this new version respects the input file type supported by the task. You can check what the supported input file types are for tasks on the <a href="https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly">Rules for sequencing tasks correctly</a> page.</p>
+<p>A few input file types and examples of tasks that support them are listed below:</p>
+<ul>
+<li>nativeSource: the task handles source file versions in their uploaded native format (e.g.: <em>FileTypeDetection</em>, <em>Engineering</em>, <em>FileFormatConversion</em>)</li>
+<li>bcmSource: the task can process source files in their BCM format (e.g.: <em>DocumentContentAnalysis</em>, <em>CopySourceToTarget</em>)</li>
+<li>bcmTarget: the task accepts target files in their BCM format (e.g.: <em>Translation</em>, <em>Linguistic Review</em>, <em>MachineTranslation</em>, <em>TranslationMemoryMatching</em>, <em>TranslationMemoryUpdate</em>, <em>TargetFileGeneration</em>)</li>
+<li>nativeTarget: the task handles target files in their native &quot;generated&quot; form (e.g.: <em>DTP</em>, <em>FinalCheck</em>)</li>
+<li>sdlxliffTarget: the task processes target files in their SDLXLIFF form. Specifically for Import tasks.</li>
+<li>none: the task does not read or modify the content of a file.</li>
+</ul>
+<p>Using the Trados Cloud Platform API, the source and target files in different formats can be viewed, downloaded and added (via import operations), based on the task and its status in the project's workflow.</p>
+<h3 id="handling-source-files">Handling Source Files</h3>
+<h4 id="upload-source-files">Upload Source Files</h4>
+<p>Source files can be added to a project using the <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile">Add Source File</a> endpoint or the <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFiles">Attach Source Files</a> endpoint (for multiple files). If the file's extension is supported by the File Type Configuration, the project will follow the workflow and a new version of the source file in BCM format will be automatically created in the <em>File Format Conversion</em> task.</p>
+<h4 id="upload-source-file-versions">Upload Source File Versions</h4>
+<p>New source file versions can be added in native or BCM format using the <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFileVersion">Add Source File Version</a> endpoint. You can add source file versions:</p>
+<ul>
+<li>in the <em>Engineering</em> task</li>
+<li>in custom tasks created by users having the task type set to <em>Engineering</em></li>
+<li>in extension tasks that handle source files.</li>
+</ul>
+<p>If a project having attached a native source file with an unsupported extension is started, an error task will be generated in the <em>File Type Detection</em> task and the workflow is interrupted.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For adding a source file version using an extension task, the configuration of the task type must declare the <code>scope</code>'s value as &quot;file&quot;.</p>
+</div>
+<h4 id="download-source-file-versions">Download Source File Versions</h4>
+<p>Any of the source file versions (in native or BCM format) can be downloaded using the <a href="../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion">Download Source File Version</a> endpoint. The <em>Engineering</em> task, for instance, is an example of a task where download can be performed.</p>
+<h3 id="handling-target-files">Handling Target Files</h3>
+<p>The <em>Copy source to target</em> task converts the native file to a new target file version in BCM format.</p>
+<h4 id="upload-target-file-versions">Upload Target File Versions</h4>
+<p>Adding a new version for a target file in native or BCM format can be executed with the <a href="../api/Public-API.v1-fv.html#/operations/AddTargetFileVersion">Add Target File Version</a> endpoint.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For adding a target file version using an extension task, the configuration of the task type must declare the <code>scope</code>'s value as &quot;file&quot;.</p>
+</div>
+<h4 id="download-target-file-versions">Download Target File Versions</h4>
+<p>The BCM and native target file versions can be downloaded by using <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion">Download Target File Version</a> endpoint, while the project is, for example, in the <em>Translation</em> task.</p>
+<h4 id="export-target-file-versions">Export Target File Versions</h4>
+<p>The BCM target file versions can be exported in native or SDLXLIFF format by calling the <a href="../api/Public-API.v1-fv.html#/operations/ExportTargetFileVersion">Export Target File Version</a> endpoint. This operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format based on the value of the <code>format</code> query parameter used. The endpoint starts an export operation which can be monitored using the <a href="../api/Public-API.v1-fv.html#/operations/PollTargetFileVersionExport">polling endpoint</a>. After the export is done, the files can be downloaded using the <a href="../api/Public-API.v1-fv.html#/operations/DownloadExportedTargetFileVersion">Download Exported Target File Version</a> endpoint.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The export endpoint is dedicated to file versions of BCM format and cannot be used on files in native or SDLXLIFF format. The export operation can only be executed on tasks where the supported output file is a bilingual target file. You can consult the output file types for tasks on the <a href="https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly">Rules for sequencing tasks correctly</a> page from the official RWS Documentation Center.</p>
+<p>In order to download file versions of BCM or native type, please use the <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion">Download Target File Version</a> endpoint.</p>
+</div>
+<h4 id="import-target-file-versions">Import Target File Versions</h4>
+<p>Target file versions downloaded in SDLXLIFF format can be processed and afterwards replaced by using <a href="../api/Public-API.v1-fv.html#/operations/ImportTargetFileVersion">Import Target File Version</a> endpoint. The import operation triggers internally the update of the BCM file associated with the imported SDLXLIFF file. This endpoint should mostly be used for offline work.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/File-formats.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

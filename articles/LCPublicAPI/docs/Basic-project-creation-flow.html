@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Basic project creation flow </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Basic project creation flow ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="basic-project-creation-flow">Basic project creation flow</h1>
+
+<p>Please read carefully about <a href="Authentication.html">authentication and prerequisites</a> , and take into consideration that some steps might be done by Trados engineering.</p>
+<p>Details about what are the rate limits for Trados Cloud Platform API can be found on <a href="API-rate-limits.html">API rate limits</a> page.</p>
+<p>Additional information regarding file and project size limits can be found <a href="https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit">here</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>This small <a href="https://raw.githubusercontent.com/RWS/language-cloud-public-api-postman/develop/basicProjectCreationFlow.json">Postman collection</a> can help you get started with the basic project creation flow. For details on Postman setup please see the main <a href="Language-Cloud-APIs-for-Postman.html">Postman</a> page.</p>
+<p>In the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">Create Project</a> endpoint body, the <code>projectTemplate</code> value should be replaced with a valid <code>templateId</code>. From that point on all the necessary identifiers will be automatically populated throughout Postman.</p>
+<p>Check the <a href="Multi-region.html">Multi-Region</a> page for regional API details.</p>
+</div>
+<p>Steps to create a basic translation project:</p>
+<ol>
+<li>Create Project</li>
+<li>Add project source file</li>
+<li>Start Project</li>
+<li>List Project's Tasks</li>
+<li>List Project Target Files</li>
+<li>Download File</li>
+<li>Complete Project</li>
+<li>List Projects</li>
+</ol>
+<h3 id="1-create-project">1. Create Project</h3>
+<p>Creates a new project.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/CreateProject"><code>POST /projects</code></a></p>
+<p>For running this endpoint you need to supply the required project details (body tab in Postman):</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>POST</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects</p>
+</div>
+<pre><code class="lang-json">{
+	&quot;name&quot;: &quot;Name of the Project&quot;,
+	&quot;description&quot;: &quot;Test Project&quot;,
+	&quot;dueBy&quot;: &quot;2021-09-04T08:14:05.858Z&quot;,
+	&quot;projectTemplate&quot;: {
+		&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot; // Provided by RWS
+	},
+	&quot;languageDirections&quot;: [
+		{
+			&quot;sourceLanguage&quot;: {
+				&quot;languageCode&quot;: &quot;en-US&quot;
+			},
+			&quot;targetLanguage&quot;: {
+				&quot;languageCode&quot;: &quot;fr-FR&quot;
+			}
+		}
+	]
+}
+</code></pre>
+<p>Source and Target Language Codes can be obtained from <a href="../api/Public-API.v1-fv.html#/operations/ListLanguages">here</a>.</p>
+<p>The API should respond with:</p>
+<ul>
+<li>HTTP Status Code: 201 Created.</li>
+<li>Body - your project details consisting of <code>projectId</code>, <code>project name</code>, <code>language direction</code>, <code>location</code> and other optional fields.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;, // The project identifier.
+    &quot;name&quot;: &quot;Name of the Project&quot;,
+    &quot;languageDirections&quot;: [
+        {
+            &quot;sourceLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;en-US&quot;,
+                &quot;englishName&quot;: &quot;English (United States)&quot;
+            },
+            &quot;targetLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;fr-FR&quot;,
+                &quot;englishName&quot;: &quot;French (France)&quot;
+            }
+        }
+    ],
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+        &quot;name&quot;: &quot;Project Location&quot;
+    }
+}
+</code></pre>
+<br>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateSimpleProjectPostman.gif?raw=true" alt="Create simple project"></p>
+<br>
+<h4 id="scenario">Scenario:</h4>
+<p>If your company has multiple divisions, you can imagine a hierarchy like this:</p>
+<p><strong>YOUR COMPANY</strong></p>
+<ul>
+<li><strong>Marketing Division</strong></li>
+<li><strong>Management Division</strong></li>
+<li><strong>HR Division</strong></li>
+</ul>
+<p>If you want to create projects for different divisions, this can be done by using the <code>location</code> parameter, which will be added in the body. When location is not set, the system will try to create the resource in the higher folder in the hierarchy, the Root folder. It might not have access to that folder and the request will fail with forbidden error.</p>
+<pre><code class="lang-json">{
+	&quot;name&quot;: &quot;Name of the Project&quot;,
+	&quot;description&quot;: &quot;Test Project&quot;,
+	&quot;dueBy&quot;: &quot;2021-09-04T08:14:05.858Z&quot;,
+	&quot;projectTemplate&quot;: {
+		&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot; // Provided by RWS
+	},
+	&quot;languageDirections&quot;: [
+		{
+			&quot;sourceLanguage&quot;: {
+				&quot;languageCode&quot;: &quot;en-US&quot;
+			},
+			&quot;targetLanguage&quot;: {
+				&quot;languageCode&quot;: &quot;fr-FR&quot;
+			}
+		}
+	],
+	&quot;location&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot; // Provided by RWS
+}
+</code></pre>
+<p>Using this request your project will be created in the specified Division and it will be visible only there.</p>
+<p>Detailed information about location and folders can be found on the <a href="How-to-use-location-and-folders.html">How to use location and folders</a> page.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateProjectWithLocationPostman.gif?raw=true" alt="Create project with location"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">here</a>.</p>
+<h3 id="2-add-source-file">2. Add Source File</h3>
+<p>Adds a source file to the project.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile"><code>POST /projects/{projectId}/source-files</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response:</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>POST</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/source-files</p>
+</div>
+<ul>
+<li>Add the file to the request body.</li>
+<li>Complete the details from Body tab - Properties field.</li>
+</ul>
+<pre><code class="lang-json">Properties field:
+{
+	&quot;language&quot;: &quot;en-US&quot;,
+	&quot;type&quot;: &quot;native&quot;,
+	&quot;role&quot;: &quot;translatable&quot;,
+	&quot;name&quot;: &quot;nameOfTheFile.extension&quot;
+}
+</code></pre>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 201 Created.</li>
+<li>Body -  a list with the identifier, name and role of the file.</li>
+</ul>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/AddSourceFilePostman.gif?raw=true" alt="Add source file"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile">here</a>.</p>
+<h3 id="3-start-project">3. Start Project</h3>
+<p>Starts a project.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/StartProject"><code>PUT /projects/{projectId}/start</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response:</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>PUT</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/start</p>
+</div>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 202 Accepted</li>
+</ul>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/StartProjectPostman.gif?raw=true" alt="Start project"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/StartProject">here</a>.</p>
+<h3 id="4-list-projects-tasks">4. List Project's Tasks</h3>
+<p>List the tasks of a specific project. If all the tasks have the status <code>completed</code>, all the files are translated.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/ListProjectTasks"><code>GET /projects/{projectId}/tasks</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response:</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>GET</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/tasks?fields=taskType,status</p>
+</div>
+<p>Use <code>?fields=taskType</code> if you want to observe the task name.</p>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 200 Ok.</li>
+<li>Body -  a list with task identifier and status.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-json">{
+	&quot;items&quot;: [
+		{
+			&quot;id&quot;: &quot;613f621fe5ed2804ba31870e&quot;,
+			&quot;status&quot;: &quot;completed&quot;,
+			&quot;taskType&quot;: {
+				&quot;id&quot;: &quot;607932f25c7cc701241f0f60&quot;,
+				&quot;key&quot;: &quot;scan&quot;,
+				&quot;name&quot;: &quot;File Type Detection&quot;
+			}
+		},
+		{
+			&quot;id&quot;: &quot;613f623040d9943308ef7c3b&quot;,
+			&quot;status&quot;: &quot;completed&quot;,
+			&quot;taskType&quot;: {
+				&quot;id&quot;: &quot;607932f3ce8af15851b70205&quot;,
+				&quot;key&quot;: &quot;convert&quot;,
+				&quot;name&quot;: &quot;File Format Conversion&quot;
+			}
+		},
+                ...
+	],
+	&quot;itemCount&quot;: 11
+}
+</code></pre>
+<br>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectTasks.gif?raw=true" alt="List project's task"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/ListProjectTasks">here</a>.</p>
+<h3 id="5-list-project-target-files">5. List Project Target Files</h3>
+<p>Retrieves the target <code>fileId</code> for a project and the latest version for the translated file.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/ListTargetFiles"><code>GET /projects/{projectId}/target-files</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response:</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>GET</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/target-files?fields=latestVersion</p>
+</div>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 200 Ok.</li>
+<li>Body - a list with objects that contain:
+<ul>
+<li>source file and target file identifiers</li>
+<li>source and target languages</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-json">{
+	&quot;items&quot;: [
+		{
+			&quot;id&quot;: &quot;613f623ae5ed2804ba318a40&quot;, // This is the target file identifier.
+			&quot;latestVersion&quot;: {
+				&quot;id&quot;: &quot;613f628540d9943308ef8497&quot;, // This is the file version identifier.
+				&quot;type&quot;: &quot;native&quot;
+			}
+		},
+		{
+			&quot;id&quot;: &quot;613f623ae5ed2804ba318a43&quot;,
+			&quot;latestVersion&quot;: {
+				&quot;id&quot;: &quot;613f628a40d9943308ef84cd&quot;,
+				&quot;type&quot;: &quot;native&quot;
+			}
+		}
+	],
+	&quot;itemCount&quot;: 2
+}
+</code></pre>
+<br>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectTargetFilesPostman.gif?raw=true" alt="List project target files"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/ListTargetFiles">here</a>.</p>
+<h3 id="6-download-file">6. Download File</h3>
+<p>Downloads the translated file.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion"><code>GET /projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response</li>
+<li>Replace <code>{targetFileId}</code> from the URL with the identifier received from the List Project Target Files endpoint response</li>
+<li>Replace <code>{fileVersionId}</code> from the URL with the identifier received from the List Project Target Files endpoint response</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>GET</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download</p>
+</div>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 200 OK.</li>
+<li>Body -  the translated file. The file can be also saved from Save Response option.</li>
+</ul>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/DownloadFilePostman.gif?raw=true" alt="Download file"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion">here</a>.</p>
+<h3 id="7-complete-project">7. Complete Project</h3>
+<p>Marks a project as <code>completed</code>.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/CompleteProject"><code>PUT /projects/{projectId}/complete</code></a></p>
+<p>For running this endpoint you need to:</p>
+<ul>
+<li>Replace <code>{projectId}</code> from the URL with the identifier received from the Create Project endpoint response</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>PUT</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects/{projectId}/complete</p>
+</div>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 204 No Content.</li>
+</ul>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CompleteProjectPostman.gif?raw=true" alt="Complete project"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/CompleteProject">here</a>.</p>
+<h3 id="8-list-projects">8. List Projects</h3>
+<p>Retrieves a list of all the projects in the account.</p>
+<p>Endpoint: <a href="../api/Public-API.v1-fv.html#/operations/ListProjects"><code>GET /projects</code></a></p>
+<p>For running this endpoint make a request to:</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>GET</code> https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/projects</p>
+</div>
+<p>Responses:</p>
+<ul>
+<li>HTTP Code 200 OK.</li>
+<li>Body - a list of projects with details consisting of project identifier, project name, language direction, location and other optional fields</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-json">{
+	&quot;items&quot;: [
+		{
+			&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+			&quot;name&quot;: &quot;Translation Project 1&quot;,
+			&quot;languageDirections&quot;: [
+				{
+					&quot;sourceLanguage&quot;: {
+						&quot;languageCode&quot;: &quot;en-US&quot;,
+						&quot;englishName&quot;: &quot;English (United States)&quot;
+					},
+					&quot;targetLanguage&quot;: {
+						&quot;languageCode&quot;: &quot;fr-FR&quot;,
+						&quot;englishName&quot;: &quot;French (France)&quot;
+					}
+				}
+			],
+			&quot;location&quot;: {
+				&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+				&quot;name&quot;: &quot;Project Location&quot;
+			}
+		},
+		{
+			&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+			&quot;name&quot;: &quot;Translation Project 2&quot;,
+			&quot;languageDirections&quot;: [
+				{
+					&quot;sourceLanguage&quot;: {
+						&quot;languageCode&quot;: &quot;en-US&quot;,
+						&quot;englishName&quot;: &quot;English (United States)&quot;
+					},
+					&quot;targetLanguage&quot;: {
+						&quot;languageCode&quot;: &quot;fr-FR&quot;,
+						&quot;englishName&quot;: &quot;French (France)&quot;
+					}
+				}
+			],
+			&quot;location&quot;: {
+				&quot;id&quot;: &quot;xxxxxxxxxxxxxxxxxxxxxxxx&quot;,
+				&quot;name&quot;: &quot;Project Location&quot;
+			}
+		}
+	],
+	&quot;itemCount&quot;: 2
+}
+</code></pre>
+<br>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListProjectsPostman.gif?raw=true" alt="List projects"></p>
+<p>More details about this endpoint can be found <a href="../api/Public-API.v1-fv.html#/operations/ListProjects">here</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Basic-project-creation-flow.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

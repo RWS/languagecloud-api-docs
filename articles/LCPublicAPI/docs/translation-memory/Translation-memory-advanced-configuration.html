@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Translation Memory advanced configuration </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Translation Memory advanced configuration ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="translation-memory-advanced-configuration">Translation Memory advanced configuration</h1>
+
+<p>The Trados Cloud Platform API provides advanced settings for Translation Memory (TM) operations, including powerful filter expressions and field update options. These features give you fine-grained control over which translation units match and how Translation Memory fields are updated.</p>
+<p>See also: <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/configuring-advanced-project-settings-1177196">Configuring advanced project settings</a> and <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/configuring-advanced-project-template-settings-1189020">Configuring advanced project template settings</a>.</p>
+<h2 id="applicable-api-endpoints">Applicable API endpoints</h2>
+<p>The TM advanced configuration options in this document apply to the following API endpoints.</p>
+<p>Project endpoints:</p>
+<ul>
+<li><a href="../../api/Public-API.v1-fv.html#/operations/GetProject">Get Project</a> - Retrieve project details, including Translation Memory settings</li>
+<li><a href="../../api/Public-API.v1-fv.html#/operations/UpdateProject">Update Project</a> - Update project configuration, including Translation Memory settings</li>
+</ul>
+<p>Project template endpoints:</p>
+<ul>
+<li><a href="../../api/Public-API.v1-fv.html#/operations/GetProjectTemplate">Get Project Template</a> - Retrieve project template details, including Translation Memory settings</li>
+<li><a href="../../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate">Update Project Template</a> - Update project template configuration, including Translation Memory settings</li>
+</ul>
+<h2 id="translation-memory-filters">Translation Memory filters</h2>
+<p>Translation Memory filters let you apply complex criteria during TM operations. Filters can reference system and custom fields, and support multiple data types and operators.</p>
+<h3 id="hard-filter-configuration">Hard filter configuration</h3>
+<p>Hard filters enforce strict criteria that Translation Units (TUs) must meet to be considered matches. See the <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/hard-filters-1162005">official documentation</a>.</p>
+<p>A filter configuration contains:</p>
+<ul>
+<li><code>expression</code>: A logical expression describing the criteria</li>
+<li><code>fields</code>: An array of field definitions referenced by the expression</li>
+</ul>
+<h4 id="filter-expression-syntax">Filter expression syntax</h4>
+<p>Filter expressions are built from comparison expressions combined with logical operators.</p>
+<p>Logical operators:</p>
+<ul>
+<li><code>AND</code> - both conditions must be true</li>
+<li><code>OR</code> - at least one condition must be true</li>
+<li><code>NOT</code> - negates the following condition</li>
+</ul>
+<p>Example:</p>
+<pre><code>(NOT &quot;TU confirmation level&quot; = &quot;Not Translated&quot; OR &quot;Last modified on&quot; &gt; 2024-02-29T10:00:00.000Z) AND &quot;Source segment length&quot; &gt;= 10
+</code></pre>
+<p>This expression selects TUs that are either not marked as &quot;Not Translated&quot; or that were modified after 2024-02-29T10:00:00Z, and that have a source segment length of at least 10 characters.</p>
+<h4 id="filter-expression-grammar">Filter expression grammar</h4>
+<p>Filter expressions are parsed with ANTLR4 (ANother Tool for Language Recognition). The grammar below specifies the formal syntax and operator precedence.</p>
+<p>Understanding the grammar helps you:</p>
+<ul>
+<li>Construct complex expressions correctly</li>
+<li>Reason about operator precedence</li>
+<li>Validate expressions before sending them to the API</li>
+<li>Build tooling to generate or validate expressions</li>
+</ul>
+<p>ANTLR4 grammar definition:</p>
+<pre><code>/**
+ * ANTLR4 Grammar for Filter Expressions
+ * 
+ * This grammar defines the syntax for filtering translation units in the Trados Cloud Platform API.
+ * 
+ * Supported operators: =, !=, &lt;, &lt;=, &gt;, &gt;=, CONTAINS, DOES NOT CONTAIN, MATCHES, DOES NOT MATCH
+ * 
+ * Field names must be quoted strings.
+ * Values can be quoted strings or unquoted numeric values.
+ */
+grammar FilterExpression;
+
+// Root rule - top level expression that can contain logical operators
+expression
+    : orExpression EOF
+    ;
+
+// OR has lowest precedence - allows chaining: expr OR expr OR expr
+orExpression
+    : andExpression (OR andExpression)*
+    ;
+
+// AND has higher precedence than OR - allows chaining: expr AND expr AND expr
+andExpression
+    : notExpression (AND notExpression)*
+    ;
+
+// NOT has highest precedence among logical operators - optional negation
+notExpression
+    : NOT? primaryExpression
+    ;
+
+// Primary expressions include comparisons and parenthesized expressions
+primaryExpression
+    : comparison
+    | LPAREN orExpression RPAREN
+    ;
+
+// Comparison expressions: MUST have all three components: field operator value
+// This enforces the Field-Operator-Value triplet structure
+comparison
+    : field operator value
+    ;
+
+// Field names - must be quoted strings
+field
+    : QUOTED_STRING
+    ;
+
+// Operators - only the specific operators defined in the specification
+operator
+    : COMPARISON_OPERATOR
+    ;
+
+// Values can be quoted strings or unquoted numeric values
+value
+    : QUOTED_STRING
+    | NUMERIC_VALUE
+    ;
+
+// Lexer rules
+
+// Keywords and logical operators
+AND     : 'AND' ;
+OR      : 'OR' ;
+NOT     : 'NOT' ;
+
+// Parentheses
+LPAREN  : '(' ;
+RPAREN  : ')' ;
+
+// Field names - quoted strings that represent field names
+QUOTED_STRING
+    : '&quot;' (~[&quot;\\\r\n] | '\\\\' | '\\&quot;')* '&quot;'
+    ;
+
+// Numeric field values (integers only)  
+NUMERIC_VALUE
+    : '-'? [0-9]+
+    ;
+
+// Comparison operators - all supported operators
+COMPARISON_OPERATOR
+    : 'DOES NOT CONTAIN'
+    | 'DOES NOT MATCH'
+    | 'CONTAINS'
+    | 'MATCHES'
+    | '&lt;='
+    | '&gt;='
+    | '!='
+    | '&lt;'
+    | '&gt;'
+    | '='
+    ;
+
+// Catch invalid identifiers to prevent ANTLR from accepting them
+INVALID_IDENTIFIER
+    : [a-zA-Z][a-zA-Z0-9_]*                                   // Invalid words like ORR, NOTT
+    ;
+
+// Whitespace (ignored) - MUST come before catch-all rule
+WS  : [ \t\r\n]+ -&gt; skip ;
+
+// Catch-all rule for any invalid character (including Unicode)
+// This MUST be the last lexer rule to catch anything not matched above
+INVALID_CHARACTER
+    : .                                                       // Any single character not matched by rules above
+    ;
+</code></pre>
+<h3 id="system-fields">System fields</h3>
+<p>The following system fields are available for filter expressions:</p>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Field type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Last modified on</code></td>
+<td><code>dateTime</code></td>
+<td>When the TU was last modified</td>
+</tr>
+<tr>
+<td><code>Last modified by</code></td>
+<td><code>singleString</code></td>
+<td>User who last modified the TU</td>
+</tr>
+<tr>
+<td><code>Last used on</code></td>
+<td><code>dateTime</code></td>
+<td>When the TU was last used</td>
+</tr>
+<tr>
+<td><code>Last used by</code></td>
+<td><code>singleString</code></td>
+<td>User who last used the TU</td>
+</tr>
+<tr>
+<td><code>Usage count</code></td>
+<td><code>integer</code></td>
+<td>Number of times the TU has been used</td>
+</tr>
+<tr>
+<td><code>Created on</code></td>
+<td><code>dateTime</code></td>
+<td>When the TU was created</td>
+</tr>
+<tr>
+<td><code>Created by</code></td>
+<td><code>singleString</code></td>
+<td>User who created the TU</td>
+</tr>
+<tr>
+<td><code>TU confirmation level</code></td>
+<td><code>singlePicklist</code></td>
+<td>Confirmation status of the TU</td>
+</tr>
+<tr>
+<td><code>Source segment</code></td>
+<td><code>singleString</code></td>
+<td>Source text content</td>
+</tr>
+<tr>
+<td><code>Target segment</code></td>
+<td><code>singleString</code></td>
+<td>Target text content</td>
+</tr>
+<tr>
+<td><code>Source segment length</code></td>
+<td><code>integer</code></td>
+<td>Length of source text</td>
+</tr>
+<tr>
+<td><code>Target segment length</code></td>
+<td><code>integer</code></td>
+<td>Length of target text</td>
+</tr>
+<tr>
+<td><code>Number of tags in source segment</code></td>
+<td><code>integer</code></td>
+<td>Count of tags in source</td>
+</tr>
+<tr>
+<td><code>Number of tags in target segment</code></td>
+<td><code>integer</code></td>
+<td>Count of tags in target</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tu-confirmation-level-values">TU confirmation level values</h3>
+<p>See the <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/translation-statuses-650851">official documentation</a> for background information on translation statuses. The Trados Cloud Platform API accepts the following exact values for <code>TU confirmation level</code>:</p>
+<ul>
+<li><code>Not Translated</code></li>
+<li><code>Draft</code></li>
+<li><code>Translated</code></li>
+<li><code>Translation Rejected</code></li>
+<li><code>Translation Approved</code></li>
+<li><code>Sign-off Rejected</code></li>
+<li><code>Signed Off</code></li>
+</ul>
+<h3 id="filter-operators">Filter operators</h3>
+<p>Supported operators depend on the field type:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th style="text-align: center;">singleString</th>
+<th style="text-align: center;">multipleString</th>
+<th style="text-align: center;">singlePicklist</th>
+<th style="text-align: center;">multiplePicklist</th>
+<th style="text-align: center;">dateTime</th>
+<th style="text-align: center;">integer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><code>CONTAINS</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+</tr>
+<tr>
+<td><code>DOES NOT CONTAIN</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+</tr>
+<tr>
+<td><code>MATCHES</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+</tr>
+<tr>
+<td><code>DOES NOT MATCH</code></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+<td style="text-align: center;">✘</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filter-field-definition">Filter field definition</h3>
+<p>Filter fields are represented differently in responses and requests.</p>
+<p>Filter fields in API responses (GET endpoints)</p>
+<p>When you retrieve TM settings using the GET endpoints (see <a href="#applicable-api-endpoints">Applicable API endpoints</a>), the response includes full metadata for each referenced field:</p>
+<ul>
+<li><code>fieldId</code>: Field identifier (system field name or custom field ID)</li>
+<li><code>fieldTemplateId</code>: <code>system</code> for system fields, or the custom field template ID</li>
+<li><code>fieldTemplateName</code>: Field template name</li>
+<li><code>name</code>: Field name (for system fields this equals <code>fieldId</code>)</li>
+<li><code>type</code>: Data type</li>
+<li><code>allowedValues</code> (optional): Present for <code>singlePicklist</code> and <code>multiplePicklist</code> fields</li>
+</ul>
+<p>Filter fields in API requests (PUT endpoints)</p>
+<p>When you update filter configuration via PUT (see <a href="#applicable-api-endpoints">Applicable API endpoints</a>), you do not need to include the <code>fields</code> array. The system resolves field metadata automatically from the field names used in the expression.</p>
+<p>Supported field types:</p>
+<ul>
+<li><code>singleString</code> - single text value</li>
+<li><code>multipleString</code> - multiple unique text values</li>
+<li><code>singlePicklist</code> - single selection from predefined options</li>
+<li><code>multiplePicklist</code> - multiple unique selections from predefined options</li>
+<li><code>dateTime</code> - date and time value</li>
+<li><code>integer</code> - integer value</li>
+</ul>
+<h2 id="translation-memory-field-updates">Translation Memory field updates</h2>
+<p>See the <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/fields-and-field-templates-706941">official documentation</a> for details on fields and field templates.</p>
+<p>Note: Custom field definitions and values appear in GET responses under <code>settings.translationMemorySettings.updateTranslationMemoryFields</code>. The response includes both field metadata and configured values.</p>
+<h3 id="field-update-configuration">Field update configuration</h3>
+<p>Field update payloads and responses differ by endpoint.</p>
+<p>Field updates in API requests (PUT endpoints)</p>
+<p>When updating TM settings via PUT (see <a href="#applicable-api-endpoints">Applicable API endpoints</a>), use a simple structure:</p>
+<ul>
+<li><code>fieldId</code>: Field identifier (system field name or custom field ID)</li>
+<li><code>values</code>: Array of values to apply (format depends on field type)</li>
+</ul>
+<p>Field updates in API responses (GET endpoints)</p>
+<p>When you retrieve TM settings via GET, the response includes full field metadata (see Filter field definition), plus:</p>
+<ul>
+<li><code>values</code>: Array of currently assigned values. Types <code>singleString</code>, <code>singlePicklist</code>, <code>integer</code>, and <code>dateTime</code> contain exactly one value; <code>multipleString</code> and <code>multiplePicklist</code> may contain multiple values.</li>
+</ul>
+<p>Example configurations</p>
+<h4 id="updating-tm-settings-put-request">Updating TM settings (PUT request)</h4>
+<p>When updating a project or project template's TM settings via PUT (see <a href="#applicable-api-endpoints">Applicable API endpoints</a>), provide only <code>fieldId</code> and <code>values</code> where applicable - the system will resolve metadata automatically.</p>
+<pre><code class="lang-json">{
+  &quot;settings&quot;: {
+    &quot;translationMemorySettings&quot;: {
+      &quot;filters&quot;: {
+        &quot;hardFilter&quot;: {
+          &quot;expression&quot;: &quot;(\&quot;Created by\&quot; CONTAINS \&quot;API Integration\&quot; OR \&quot;TU confirmation level\&quot; != \&quot;Not Translated\&quot;) AND NOT (\&quot;Text\&quot; MATCHES \&quot;exampleText\&quot; AND \&quot;Usage count\&quot; &gt;= 10)&quot;
+        }
+      },
+      &quot;updateTranslationMemoryFields&quot;: [
+        {
+          &quot;fieldId&quot;: &quot;1e5b54da-9048-45f7-a5d8-c3878ac4c5b7&quot;,
+          &quot;values&quot;: [
+            &quot;11&quot;
+          ]
+        },
+        {
+          &quot;fieldId&quot;: &quot;25c0dce2-11d0-44c0-837e-1f5030e2204d&quot;,
+          &quot;values&quot;: [
+            &quot;multiText1&quot;,
+            &quot; multiText2 &quot;
+          ]
+        },
+        {
+          &quot;fieldId&quot;: &quot;55eb47bb-20bc-43e0-b1e1-9b373e5ca157&quot;,
+          &quot;values&quot;: [
+            &quot;1List&quot;
+          ]
+        },
+        {
+          &quot;fieldId&quot;: &quot;bf6e413d-e617-4fcd-be13-e389af7ce7d4&quot;,
+          &quot;values&quot;: [
+            &quot;1Multi List&quot;,
+            &quot;2Multi List&quot;
+          ]
+        },
+        {
+          &quot;fieldId&quot;: &quot;3e71fc28-a128-4c69-befd-eee38ce998e4&quot;,
+          &quot;values&quot;: [
+            &quot;singleText1&quot;
+          ]
+        },
+        {
+          &quot;fieldId&quot;: &quot;6c6d9004-3a9e-4bde-97b4-62a6d2ec1a7f&quot;,
+          &quot;values&quot;: [
+            &quot;2025-10-29T12:00:00.000Z&quot;
+          ]
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In PUT requests you only specify <code>fieldId</code> and <code>values</code>; metadata is resolved automatically.</p>
+</div>
+<h4 id="retrieving-tm-settings-get-response">Retrieving TM settings (GET response)</h4>
+<p>When you retrieve project or project template settings via GET and include the query parameter <code>fields=settings.translationMemorySettings.filters.hardFilter.fields,settings.translationMemorySettings.updateTranslationMemoryFields</code>, the response will include full field metadata.</p>
+<p>For details about the <code>fields</code> query parameter, see <a href="../Use-fields-in-your-requests.html">Use fields in your requests</a>.</p>
+<p>Example response:</p>
+<pre><code class="lang-json">{
+  &quot;id&quot;: &quot;6895b4bf6b83b41210883f09&quot;,
+  &quot;settings&quot;: {
+    &quot;translationMemorySettings&quot;: {
+      &quot;filters&quot;: {
+        &quot;hardFilter&quot;: {
+          &quot;expression&quot;: &quot;(\&quot;Created by\&quot; CONTAINS \&quot;API Integration\&quot; OR \&quot;TU confirmation level\&quot; != \&quot;Not Translated\&quot;) AND NOT (\&quot;Text\&quot; MATCHES \&quot;exampleText\&quot; AND \&quot;Usage count\&quot; &gt;= 10)&quot;,
+          &quot;fields&quot;: [
+            {
+              &quot;fieldId&quot;: &quot;Created by&quot;,
+              &quot;fieldTemplateId&quot;: &quot;system&quot;,
+              &quot;name&quot;: &quot;Created by&quot;,
+              &quot;type&quot;: &quot;singleString&quot;
+            },
+            {
+              &quot;fieldId&quot;: &quot;TU confirmation level&quot;,
+              &quot;fieldTemplateId&quot;: &quot;system&quot;,
+              &quot;name&quot;: &quot;TU confirmation level&quot;,
+              &quot;type&quot;: &quot;singlePicklist&quot;,
+              &quot;allowedValues&quot;: [
+                {
+                  &quot;id&quot;: &quot;translated&quot;,
+                  &quot;name&quot;: &quot;Translated&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;approvedTranslation&quot;,
+                  &quot;name&quot;: &quot;Translation Approved&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;approvedSignOff&quot;,
+                  &quot;name&quot;: &quot;Signed Off&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;draft&quot;,
+                  &quot;name&quot;: &quot;Draft&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;rejectedTranslation&quot;,
+                  &quot;name&quot;: &quot;Translation Rejected&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;rejectedSignOff&quot;,
+                  &quot;name&quot;: &quot;Sign-off Rejected&quot;
+                },
+                {
+                  &quot;id&quot;: &quot;notTranslated&quot;,
+                  &quot;name&quot;: &quot;Not Translated&quot;
+                }
+              ]
+            },
+            {
+              &quot;fieldId&quot;: &quot;3e71fc28-a128-4c69-befd-eee38ce998e4&quot;,
+              &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+              &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+              &quot;name&quot;: &quot;Text&quot;,
+              &quot;type&quot;: &quot;singleString&quot;
+            },
+            {
+              &quot;fieldId&quot;: &quot;Usage count&quot;,
+              &quot;fieldTemplateId&quot;: &quot;system&quot;,
+              &quot;name&quot;: &quot;Usage count&quot;,
+              &quot;type&quot;: &quot;integer&quot;
+            }
+          ]
+        }
+      },
+      &quot;updateTranslationMemoryFields&quot;: [
+        {
+          &quot;fieldId&quot;: &quot;1e5b54da-9048-45f7-a5d8-c3878ac4c5b7&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;Number&quot;,
+          &quot;values&quot;: [
+            &quot;11&quot;
+          ],
+          &quot;type&quot;: &quot;integer&quot;
+        },
+        {
+          &quot;fieldId&quot;: &quot;25c0dce2-11d0-44c0-837e-1f5030e2204d&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;MultiText&quot;,
+          &quot;values&quot;: [
+            &quot;multiText1&quot;,
+            &quot; multiText2 &quot;
+          ],
+          &quot;type&quot;: &quot;multipleString&quot;
+        },
+        {
+          &quot;fieldId&quot;: &quot;55eb47bb-20bc-43e0-b1e1-9b373e5ca157&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;List&quot;,
+          &quot;values&quot;: [
+            &quot;1List&quot;
+          ],
+          &quot;allowedValues&quot;: [
+            {
+              &quot;id&quot;: &quot;ab074228-0f8c-4ef3-8039-ad4d6442cade&quot;,
+              &quot;name&quot;: &quot;1List&quot;
+            },
+            {
+              &quot;id&quot;: &quot;29f4b861-5d58-4921-b47c-19146f6d7431&quot;,
+              &quot;name&quot;: &quot;2List&quot;
+            },
+            {
+              &quot;id&quot;: &quot;0f2d0324-0f11-46db-bb66-ad9cad21f176&quot;,
+              &quot;name&quot;: &quot;3List&quot;
+            }
+          ],
+          &quot;type&quot;: &quot;singlePicklist&quot;
+        },
+        {
+          &quot;fieldId&quot;: &quot;bf6e413d-e617-4fcd-be13-e389af7ce7d4&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;MultiList&quot;,
+          &quot;values&quot;: [
+            &quot;1Multi List&quot;,
+            &quot;2Multi List&quot;
+          ],
+          &quot;allowedValues&quot;: [
+            {
+              &quot;id&quot;: &quot;907a34ca-b072-4687-8af1-8ab41ac881c8&quot;,
+              &quot;name&quot;: &quot;1Multi List&quot;
+            },
+            {
+              &quot;id&quot;: &quot;304e1ee1-3a71-4c7c-b123-e5811a812dfd&quot;,
+              &quot;name&quot;: &quot;2Multi List&quot;
+            },
+            {
+              &quot;id&quot;: &quot;8225e4b7-a954-4503-88de-fe9f7ced77cb&quot;,
+              &quot;name&quot;: &quot;3Multi List&quot;
+            }
+          ],
+          &quot;type&quot;: &quot;multiplePicklist&quot;
+        },
+        {
+          &quot;fieldId&quot;: &quot;3e71fc28-a128-4c69-befd-eee38ce998e4&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;Text&quot;,
+          &quot;values&quot;: [
+            &quot;singleText1&quot;
+          ],
+          &quot;type&quot;: &quot;singleString&quot;
+        },
+        {
+          &quot;fieldId&quot;: &quot;6c6d9004-3a9e-4bde-97b4-62a6d2ec1a7f&quot;,
+          &quot;fieldTemplateId&quot;: &quot;976cc1d2-c422-461d-a2d6-71bb52a4eba8&quot;,
+          &quot;fieldTemplateName&quot;: &quot;Custom Field Template with Field Definitions&quot;,
+          &quot;name&quot;: &quot;DateTime&quot;,
+          &quot;values&quot;: [
+            &quot;2025-10-29T12:00:00.000Z&quot;
+          ],
+          &quot;type&quot;: &quot;dateTime&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In GET responses, the <code>fields</code> array is automatically populated by the system based on the field names used in the filter expression, including both system fields and custom fields. The response provides complete field metadata including <code>fieldTemplateId</code>, <code>fieldTemplateName</code>, <code>name</code>, <code>type</code>, and <code>allowedValues</code> (for picklist fields).</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/translation-memory/Translation-memory-advanced-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

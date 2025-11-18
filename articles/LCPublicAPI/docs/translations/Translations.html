@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Translation API </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Translation API ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="translation-api">Translation API</h1>
+
+<p>The Translation API provides endpoints for performing translation operations using translation engines. These endpoints allow you to lookup translations, perform concordance searches, and manage translation units within your translation memories.</p>
+<h2 id="overview">Overview</h2>
+<p>The Translation API enables you to:</p>
+<ul>
+<li><strong>Lookup translations</strong> for text or BCM fragments using translation memories and machine translation</li>
+<li><strong>Perform concordance searches</strong> to find similar segments within translation memories</li>
+<li><strong>Add new translation units</strong> to translation memories</li>
+<li><strong>Update existing translation units</strong> in translation memories</li>
+</ul>
+<p>All translation operations require a translation engine that defines which translation memories, machine translation engines, and termbases to use for the translation process.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The BCM fragment format is used for input and output as JSON string, meaning that you will need to serialize and deserialize the BCM fragments when sending requests or processing responses. For .NET you can use the <code>Sdl.Core.Bcm.API</code> <a href="https://www.nuget.org/packages/Sdl.Core.Bcm.API">nuget package</a>.</p>
+</div>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="translation-lookup">Translation Lookup</h3>
+<p><a href="../../api/Public-API.v1-fv.html#/operations/TranslationsLookup"><code>POST /translations/lookup</code></a></p>
+<p>Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a <a href="https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html">BCM fragment</a> or <a href="https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html">term</a>.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Get translation suggestions for a source segment</li>
+<li>Retrieve matches from translation memories</li>
+<li>Get machine translation proposals</li>
+<li>Access termbase entries for specific terms</li>
+</ul>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>Supports both plain text and BCM fragment input</li>
+<li>Returns translations from multiple resource types (TM, MT, TB)</li>
+<li>Configurable match thresholds and penalties</li>
+</ul>
+<p><strong>Request body example:</strong></p>
+<pre><code class="lang-json">{
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;Hello world&quot;,
+    &quot;contentType&quot;: &quot;text&quot;
+  },
+  &quot;languageDirection&quot;: {
+    &quot;sourceLanguage&quot;: { 
+        &quot;languageCode&quot;: &quot;en-US&quot; 
+    },
+    &quot;targetLanguage&quot;: { 
+        &quot;languageCode&quot;: &quot;fr-FR&quot; 
+    }
+  },
+  &quot;definition&quot;: {
+    &quot;translationEngineId&quot;: &quot;your-translation-engine-id&quot;
+  },
+  &quot;settings&quot;: {
+    &quot;translationMemory&quot;: {
+      &quot;minimumMatchValue&quot;: 70,
+      &quot;penalties&quot;: {
+        &quot;standardPenalties&quot;: {
+          &quot;missingFormatting&quot;: 1,
+          &quot;differentFormatting&quot;: 1
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <code>translationProposal</code> field in the response can be either a BCM fragment or a term. You can rely on the <code>responseType</code> field to determine the content type and deserialize it accordingly.</p>
+</div>
+<h3 id="concordance-search">Concordance Search</h3>
+<p><a href="../../api/Public-API.v1-fv.html#/operations/TranslationsConcordanceSearch"><code>POST /translations/concordance</code></a></p>
+<p>Performs a concordance search for a given text within the translation memories linked to the specified translation engine. This helps you find segments that contain specific words or phrases.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Research how certain phrases have been translated previously</li>
+<li>Quality assurance and consistency checking</li>
+<li>Translation memory analysis</li>
+</ul>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>Search within source or target segments</li>
+<li>Support for exact and fuzzy matching</li>
+<li>Configurable search parameters and penalties</li>
+<li>Returns matching segments with context</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Translation Memory penalty defined in the Translation Engine will be automatically included in the translation score.</p>
+</div>
+<p><strong>Request body example:</strong></p>
+<pre><code class="lang-json">{
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;user interface&quot;
+  },
+  &quot;languageDirection&quot;: {
+    &quot;sourceLanguage&quot;: { 
+        &quot;languageCode&quot;: &quot;en-US&quot; 
+    },
+    &quot;targetLanguage&quot;: { 
+        &quot;languageCode&quot;: &quot;fr-FR&quot; 
+    }
+  },
+  &quot;definition&quot;: {
+      &quot;translationEngineId&quot;: &quot;your-translation-engine-id&quot;
+  },
+  &quot;targetOnly&quot;: false,
+  &quot;settings&quot;: {
+    &quot;translationMemory&quot;: {
+      &quot;minimumMatchValue&quot;: 80
+    }
+  }
+}
+</code></pre>
+<h3 id="translation-unit-management">Translation Unit Management</h3>
+<h4 id="update-translation-unit">Update Translation Unit</h4>
+<p><a href="../../api/Public-API.v1-fv.html#/operations/TranslationsUpdate"><code>PUT /translations/translation-unit</code></a></p>
+<p>Updates an existing translation unit in the translation memories. The system identifies matching translation units based on the <code>originalTranslationHash</code> provided in the BCM fragment.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>After each update the <code>targetContent.translationOrigin.originalTranslationHash</code> is updated. The new values are returned in the response on the <code>translationHash</code> field.
+Subsequent updates can be performed by updating the <code>targetContent.translationOrigin.originalTranslationHash</code> in the BCM fragment with the new <code>translationHash</code>, otherwise the system will add a new translation unit instead of updating the existing one.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Changing any fields in the <code>sourceContent</code> of a BCM fragment will result in a new translation unit being added instead of updating the existing one.</p>
+</div>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Correct existing translations</li>
+<li>Update translation metadata</li>
+<li>Modify translation unit fields</li>
+<li>Maintain translation memory quality</li>
+</ul>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>Smart matching of existing translation units</li>
+<li>Preserve or update translation metadata</li>
+<li>Configurable update behavior</li>
+<li>Support for custom fields</li>
+</ul>
+<p><strong>Request body example for both add and update:</strong></p>
+<pre><code class="lang-json">{
+  &quot;input&quot;: {
+    &quot;content&quot;: &quot;BCM fragment&quot;
+  },
+  &quot;definition&quot;: {
+    &quot;translationEngineId&quot;: &quot;your-translation-engine-id&quot;
+  },
+  &quot;settings&quot;: {
+    &quot;fields&quot;: [
+      {
+        &quot;name&quot;: &quot;field-name&quot;,
+        &quot;values&quot;: [ &quot;field-value&quot; ]
+      }
+    ]
+  }
+}
+</code></pre>
+<h4 id="add-translation-unit">Add Translation Unit</h4>
+<p><a href="../../api/Public-API.v1-fv.html#/operations/TranslationsAdd"><code>POST /translations/translation-unit</code></a></p>
+<p>Adds a new translation unit to the translation memories.</p>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Add new translations units whose existence in the translation memory is unknown</li>
+<li>If, however, the translation unit with the same source already exists, it will be updated based on the <code>ifTargetSegmentsDiffer</code> field</li>
+<li>Populate translation memories with approved content</li>
+</ul>
+<p><strong>Key features:</strong></p>
+<ul>
+<li>Automatic duplicate handling</li>
+<li>Field template support for metadata</li>
+<li>Configurable behavior for existing translations</li>
+<li>BCM fragment support for rich content</li>
+</ul>
+<h2 id="bcm-fragments">BCM Fragments</h2>
+<p>Many Translation API endpoints work with BCM (Binary Content Model) fragments. BCM is RWS's content model that preserves formatting, tags, and metadata within translation content.</p>
+<p><strong>BCM advantages:</strong></p>
+<ul>
+<li>Preserves inline formatting and tags</li>
+<li>Maintains content structure during translation</li>
+<li>Supports complex document elements</li>
+<li>Enables accurate translation memory matching</li>
+</ul>
+<p>For more information about BCM fragments, see the <a href="https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html">BCM documentation</a>.</p>
+<p>Example of a BCM fragment:</p>
+<pre><code class="lang-json">{
+	&quot;sourceLanguageCode&quot;: &quot;en-US&quot;,
+	&quot;targetLanguageCode&quot;: &quot;fr-FR&quot;,
+	&quot;sourceContent&quot;: {
+		&quot;id&quot;: &quot;166fbfdd-8e0a-46aa-97bf-7b2b62014e5f&quot;,
+		&quot;segmentNumber&quot;: &quot;1&quot;,
+		&quot;confirmationLevel&quot;: &quot;Translated&quot;,
+		&quot;type&quot;: &quot;segment&quot;,
+		&quot;children&quot;: [
+			{
+				&quot;id&quot;: &quot;c0cff9db-46e4-493d-b578-25e78d578ea7&quot;,
+				&quot;placeholderTagDefinitionId&quot;: 1,
+				&quot;tagNumber&quot;: &quot;50&quot;,
+				&quot;type&quot;: &quot;placeholderTag&quot;,
+				&quot;metadata&quot;: {
+					&quot;SDL:IsSoftBreak&quot;: &quot;True&quot;,
+					&quot;SpecialCharacterPlaceholder&quot;: &quot;&quot;,
+					&quot;frameworkOriginalTagId&quot;: &quot;50&quot;,
+					&quot;SDL:IsWordStop&quot;: &quot;False&quot;
+				}
+			},
+			{
+				&quot;id&quot;: &quot;4b5cbfc4-53b1-462c-86a4-dbc061b5f266&quot;,
+				&quot;text&quot;: &quot;This is a sample text&quot;,
+				&quot;type&quot;: &quot;text&quot;
+			}
+		]
+	},
+	&quot;targetContent&quot;: {
+		&quot;id&quot;: &quot;166fbfdd-8e0a-46aa-97bf-7b2b62014e5f&quot;,
+		&quot;segmentNumber&quot;: &quot;1&quot;,
+		&quot;confirmationLevel&quot;: &quot;Translated&quot;,
+		&quot;translationOrigin&quot;: {
+			&quot;originType&quot;: &quot;tm&quot;,
+			&quot;originSystem&quot;: &quot;Example TM&quot;,
+			&quot;matchPercent&quot;: 92,
+			&quot;textContextMatchLevel&quot;: &quot;None&quot;,
+			&quot;originalTranslationHash&quot;: &quot;-377851791&quot;,
+			&quot;createdBy&quot;: &quot;some-user-id&quot;,
+			&quot;createdOn&quot;: &quot;2023-09-25T14:24:04.000Z&quot;,
+			&quot;modifiedBy&quot;: &quot;some-user-id&quot;,
+			&quot;modifiedOn&quot;: &quot;2025-02-12T09:25:57.000Z&quot;,
+			&quot;metadata&quot;: {
+				&quot;used_on&quot;: &quot;04/01/2025 13:56:28&quot;,
+				&quot;used_by&quot;: &quot;some-user-id&quot;,
+				&quot;use_count&quot;: &quot;8&quot;
+			}
+		},
+		&quot;type&quot;: &quot;segment&quot;,
+		&quot;metadata&quot;: {
+			&quot;Contexts&quot;: [
+				{
+					&quot;Context1&quot;: 0,
+					&quot;Context2&quot;: 0,
+					&quot;Segment1&quot;: null,
+					&quot;Segment2&quot;: null,
+					&quot;LeftSource&quot;: 0,
+					&quot;LeftTarget&quot;: 0
+				}
+			]
+		},
+		&quot;children&quot;: [
+			{
+				&quot;id&quot;: &quot;6143602c-5548-43d0-a2fc-1a5a7f2aeb35&quot;,
+				&quot;text&quot;: &quot;Ceci est un exemple de texte&quot;,
+				&quot;type&quot;: &quot;text&quot;
+			}
+		]
+	}
+}
+</code></pre>
+<h2 id="translation-memory-penalties">Translation Memory Penalties</h2>
+<p>The Translation API supports various penalty types to fine-tune translation matching:</p>
+<h3 id="standard-penalties">Standard Penalties</h3>
+<ul>
+<li><strong>Missing Formatting</strong>: Penalty for matches missing formatting tags</li>
+<li><strong>Different Formatting</strong>: Penalty for matches with different formatting</li>
+<li><strong>Multiple Translations</strong>: Penalty for segments with multiple translation options</li>
+</ul>
+<h3 id="translation-unit-status-penalties">Translation Unit Status Penalties</h3>
+<ul>
+<li><strong>Translated</strong>: Penalty for translated but not reviewed segments</li>
+<li><strong>Approved Translation</strong>: Penalty for approved translations</li>
+<li><strong>Rejected Translation</strong>: Penalty for rejected translations</li>
+</ul>
+<p>Learn more about <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/trados-tm-penalties-1159224">Translation Memory penalties</a> and <a href="https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/editing-project-tm-and-verification-settings-800732">Translation Unit status penalties</a>.</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li>Set appropriate minimum match values to reduce processing time</li>
+<li>Use reasonable penalty values to balance quality and performance</li>
+</ul>
+<h3 id="quality-management">Quality Management</h3>
+<ul>
+<li>Configure penalties based on your quality requirements</li>
+<li>Regularly update translation units to maintain accuracy</li>
+</ul>
+<h3 id="translation-memory-maintenance">Translation Memory Maintenance</h3>
+<ul>
+<li>Add high-quality translations to build reliable TMs</li>
+<li>Update outdated translations to keep content current</li>
+<li>Use appropriate field templates for metadata management</li>
+</ul>
+<h2 id="related-apis">Related APIs</h2>
+<ul>
+<li><strong><a href="../translation-memory/Translation-memory-import-export.html">Translation Memory API</a></strong>: Bulk import/export of translation memories</li>
+<li><strong><a href="../../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">Translation Engine API</a></strong>: Manage translation engine configurations</li>
+<li><strong><a href="../termbase/Termbase.html">Termbase API</a></strong>: Manage terminology resources</li>
+</ul>
+<h2 id="examples-and-use-cases">Examples and Use Cases</h2>
+<h3 id="building-a-translation-workflow">Building a Translation Workflow</h3>
+<ol>
+<li><strong>Setup</strong>: Configure translation engine with TMs, MT, and termbases</li>
+<li><strong>Lookup</strong>: Use <code>/translations/lookup</code> for translation suggestions</li>
+<li><strong>Research</strong>: Use <code>/translations/concordance</code> for plain text research</li>
+<li><strong>Quality</strong>: Add/update translation units with the updated BCM fragments retrieved from the previous requests to improve TM quality</li>
+<li><strong>Maintenance</strong>: Regular TM updates and quality checks</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/translations/Translations.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

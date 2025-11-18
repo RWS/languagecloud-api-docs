@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Java Blueprint </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Java Blueprint ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="java-blueprint">Java Blueprint</h1>
+
+<p>Our Java blueprint is a Spring Boot web application built on Java 11, it can be run out of the box and it can even be registered in Trados immediately, although it will not provide any functional extensions.</p>
+<h2 id="getting-the-blueprint">Getting the blueprint</h2>
+<p>The blueprint is available in our GitHub repository: <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/javaAppBlueprint">https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/javaAppBlueprint</a></p>
+<h2 id="project-structure">Project structure</h2>
+<p>To explain the code structure for the blueprint we can have an overview look at the Project tree:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/blueprints/JavaBPStructure.PNG?raw=true" alt="Java Project Structure"></p>
+<p>For a developer, the following areas may be of interest:</p>
+<ul>
+<li><strong>web</strong>: this includes the controllers for standard endpoints and also placeholders for Extensions.</li>
+<li><strong>persistence</strong>: it contains complete functionality for account management backed by MongoDB.</li>
+<li><strong>exception</strong>: it's used for returning errors to Trados.</li>
+<li><strong>transfer</strong>: it has the pre-built classes for all the models from the contract.</li>
+<li><strong>service</strong>: this is where the main functionality can be concentrated. You can use it as a thin business layer.</li>
+<li><strong>resources/application.yml</strong> is where all your configurations go.</li>
+<li><strong>resources/descriptor.json</strong> is the file that describes the app functionality according to the contract.</li>
+<li><strong>docker/Dockerfile</strong>: it is used for debugging in Docker containers.</li>
+</ul>
+<h2 id="first-steps">First steps</h2>
+<p>First, let's make the blueprint yours by renaming the files and the configuration settings. A quick tip would be to search by these keywords: <code>blueprint</code>, <code>rws</code>. Some of the renaming actions you may want to consider:</p>
+<ul>
+<li>Rename the main package <code>com.rws.lt.lc.blueprint</code></li>
+<li>Update the <code>pom.xml</code>
+<pre><code class="lang-xml">&lt;groupId&gt;com.rws.lt.lc.app.blueprint&lt;/groupId&gt;
+&lt;artifactId&gt;lc-blueprint-app&lt;/artifactId&gt;
+&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt;
+&lt;name&gt;LC Blueprint App Service&lt;/name&gt;
+</code></pre>
+</li>
+<li>Rename the main class <code>BlueprintApplication</code></li>
+<li>Update the following places from <code>application.yml</code>
+<pre><code class="lang-yml">application:
+  name: lc.app.blueprint
+...
+spring:
+  application:
+    name: lc-blueprint-app
+  data:
+    mongodb:
+      ...
+      database: lc-blueprint-app
+</code></pre>
+</li>
+<li>Update <code>Dockerfile</code> if you plan to use it</li>
+</ul>
+<p>Run it and ensure there are no problems before you continue with your customization.</p>
+<p>Go through all the files and take note of placeholders - methods without implementation, or <em>TODOs</em>. The blueprint is a placeholder with as much plumbing in place as possible, but it still needs filling with your details.</p>
+<p>Depending on the extensions you are building, you might want to add one or more 'Service' classes that will have your business code.</p>
+<p>Some files are placed there as examples, and if you don't need them, you can remove them. For example, there is the <code>AutomaticTaskController.java</code> for the <code>lc.automatictask</code> extension or <code>TranslateController.java</code> and <code>TranslationEnginesController.java</code> for the <code>lc.mtprovider</code> extension. Most apps will implement only one extension type, so you might want to keep one and remove the other.</p>
+<h3 id="applicationyml">application.yml</h3>
+<p>This is the default configuration for Spring Boot. The blueprint provides a rather simple file with various sections. The ones of interest are:</p>
+<pre><code class="lang-yml">...
+# TODO: replace with a real URL
+baseUrl: &quot;replace-me&quot;
+...
+spring:
+  ...
+  data:
+    mongodb:
+      authentication-database: admin
+      database: lc-blueprint-app
+      uri: mongodb://localhost:27017
+      ssl-enabled: false
+      auto-index-creation: false
+...
+# Logging
+logging:
+  level:
+    com.rws: INFO
+...
+# TODO: replace with a real doc URL
+documentation.url: &quot;replace-me&quot;
+
+integration:
+  public-api:
+    basePublicApiV1Url: https://languagecloud.sdl.com/lc-api/public-api/v1
+    retrievePublicKeyByIdUrl: ${integration.public-api.basePublicApiV1Url}/.well-known/jwks.json/{kid}
+</code></pre>
+<p>The <code>baseUrl</code> above is used to populate the property with the same name from the descriptor.</p>
+<p>The <code>spring.data.mongodb</code> provides the connection string for MongoDB and also the database name. The database will be created automatically and doesn't need to be provisioned upfront. If you decide to go with another database, you can remove it.</p>
+<p>The <code>logging</code> section sets the minimum log level for Lombok.</p>
+<p>The <code>documentation.url</code> specifies the address where to redirect for a full documentation set. You need to specify a valid URL here. Alternatively, you can return a full HTML page in the <code>getDocumentation()</code> action in the <code>DocumentationController</code> instead of using redirection.</p>
+<p>The <code>integration.public-api</code> section provides the settings required by the app to authorize the requests from Trados.</p>
+<h3 id="descriptorjson">descriptor.json</h3>
+<p>This file will be returned from the <code>/descriptor</code> endpoint as described in the API Contract. It is used to describe the functionality of the app, inform Trados of all the paths to the endpoints, provide names and descriptions, and also instruct which configuration settings are required from the user during the installation.</p>
+<h3 id="database">Database</h3>
+<p>The blueprint is using MongoDB as its database engine. This is not a requirement, and it can be substituted for any database. There is the <code>AccountSettingsRepository</code> interface that extends the <code>CrudRepository</code> from Spring. The interface methods can be replaced or implemented in a concrete class.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/blueprints/JavaBPPersistence.PNG?raw=true" alt="JavaPersistence"></p>
+<p>POJO classes in the <code>domain</code> package might need adjustments as these are tailored for MongoDB.</p>
+<p>The next step would be to replace the <code>MongoConfiguration.java</code>class with a configuration class for your database.</p>
+<h3 id="authentication-and-authorization">Authentication and Authorization</h3>
+<p>Most endpoints in the app need to be secured. The API Contract specifies which endpoints are secured and which are not. For example, the <code>/descriptor</code> endpoint should not be secured, as this is not sensitive information, but it is valuable for manually invoking the endpoint and checking that the correct descriptor is returned.</p>
+<p>By default, all the endpoints in the blueprint are secured except for the ones annotated with <code>@GenericAuthorization</code>. These endpoints are: <code>/descriptor</code>, <code>/health</code> and <code>/documentation</code>.
+All the infrastructure code is already in place, and no other configuration is required.</p>
+<p>When implementing extension endpoints, since all extension endpoints need to be secured, you must <strong>NOT</strong> annotate the action methods with <code>@GenericAuthorization</code>. You can check <code>AutomaticTaskController.java</code>, <code>TranslateController.java</code>, or <code>TranslationEnginesController.java</code> as references.</p>
+<h3 id="context">Context</h3>
+<p>Since the apps can be used on multiple accounts it's important to understand for which account the current call is being executed, to get either Service User credentials or configuration settings.</p>
+<p>To get the current account, you can use the <code>getActiveAccountId()</code> method (from the <code>RequestLocalContext.java</code>) that retrieves the value from the context object which is a <code>ThreadLocal</code> map. This can be done anywhere in the code as long as you are in an HTTP context:</p>
+<pre><code class="lang-java">String tenantId = RequestLocalContext.getActiveAccountId();
+</code></pre>
+<p>The blueprint provides access to Configuration data and Account Information out of the box. If you need more data to be stored, you can extend the Repository.</p>
+<p>Access to account data is available by injecting the <code>AccountSettingsRepository</code> interface and using one of the available methods, for example:</p>
+<pre><code class="lang-java">AccountSettings entity = accountSettingsRepository.findAccountSettings(tenantId);
+</code></pre>
+<p>This will provide access to the <code>configurations</code> as well as to the <code>clientCredentials</code>. The <code>clientCredentials</code> type provides the <code>clientId</code> and <code>clientSecret</code> that are used for making calls to the Trados Cloud Platform API.</p>
+<h3 id="logs">Logs</h3>
+<p>The blueprint is configured to use the Lombok logging approach out of the box. It will write only INFO level logs by default. This can be changed in the <code>logback.xml</code> by changing from <code>INFO</code> to <code>WARN</code>:</p>
+<pre><code class="lang-xml">&lt;root level=&quot;INFO&quot;&gt;
+    &lt;appender-ref ref=&quot;CONSOLE&quot; /&gt;
+&lt;/root&gt;
+</code></pre>
+<p>You can enable the <code>LOGGER</code> anywhere in the code by annotating the classes with the <code>@Slf4j</code> <a href="https://projectlombok.org/api/lombok/extern/slf4j/Slf4j.html">annotation</a> from Lombok. Example of logging:</p>
+<pre><code class="lang-java">LOGGER.info(&quot;getDescriptor &gt;&gt;&quot;);
+</code></pre>
+<p>Among other useful details, the logs will include by default the <strong>tenantId</strong> and the <strong>traceId</strong> which can be helpful when debugging.</p>
+<p>Note that you can also set the <code>logging.level.com.rws</code> environment variable to your desired minimum logging level. This works great when you need to change the logging level in a Docker container, as you just send the environment settings when you start the container.</p>
+<h3 id="health-checks">Health checks</h3>
+<p>Trados will make sure that the app is up and running by making requests to the <code>/health</code> endpoint. The blueprint provides a default implementation that relies on the Spring <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/actuate/health/HealthEndpoint.html">HealthEndpoint</a>. Additional changes can be implemented.</p>
+<h3 id="error-reporting">Error reporting</h3>
+<p>When you need to return an error to Trados, it's enough to raise an Exception of type AppException. The various constructor overloads allow for customization of the response. The plumbing in the blueprint will take care to transform the exception into an error payload according to the contract.</p>
+<p>Make sure to follow the contract specifications to send error codes that Trados can interpret. You are not limited to these, and you can send any codes, but that would mean that special cases will not be addressed.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/blueprints/Java-Blueprint.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

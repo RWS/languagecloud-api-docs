@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>OData Query Guide for Data Bridge APIs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="OData Query Guide for Data Bridge APIs ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="odata-query-guide-for-data-bridge-apis">OData Query Guide for Data Bridge APIs</h1>
+
+<p>The Trados Data Bridge API supports OData v4 query capabilities that allow you to filter, select, expand, and sort data efficiently.</p>
+<p>For comprehensive OData query syntax reference and additional examples, see the <a href="https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview">Microsoft OData Query Options Overview</a></p>
+<h2 id="query-parameters-overview">Query Parameters Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$filter</code></td>
+<td>Filter results based on conditions</td>
+<td><code>$filter=revenue gt 1000</code></td>
+</tr>
+<tr>
+<td><code>$select</code></td>
+<td>Choose specific fields to return</td>
+<td><code>$select=projectId,projectStatus,revenue</code></td>
+</tr>
+<tr>
+<td><code>$expand</code></td>
+<td>Include related entity data</td>
+<td><code>$expand=project,customer</code></td>
+</tr>
+<tr>
+<td><code>$orderby</code></td>
+<td>Sort results</td>
+<td><code>$orderby=projectCreationDate desc</code></td>
+</tr>
+<tr>
+<td><code>$top</code></td>
+<td>Limit number of results</td>
+<td><code>$top=50</code></td>
+</tr>
+<tr>
+<td><code>$skip</code></td>
+<td>Skip a number of results</td>
+<td><code>$skip=100</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="filtering-with-filter">Filtering with $filter</h2>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eq</code></td>
+<td>Equal to</td>
+<td><code>$filter=projectStatus eq 'completed'</code></td>
+</tr>
+<tr>
+<td><code>ne</code></td>
+<td>Not equal to</td>
+<td><code>$filter=revenue ne 0</code></td>
+</tr>
+<tr>
+<td><code>gt</code></td>
+<td>Greater than</td>
+<td><code>$filter=wordCount gt 1000</code></td>
+</tr>
+<tr>
+<td><code>ge</code></td>
+<td>Greater than or equal</td>
+<td><code>$filter=revenue ge 500</code></td>
+</tr>
+<tr>
+<td><code>lt</code></td>
+<td>Less than</td>
+<td><code>$filter=actualDuration lt 24</code></td>
+</tr>
+<tr>
+<td><code>le</code></td>
+<td>Less than or equal</td>
+<td><code>$filter=wordCount le 5000</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical-operators">Logical Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Logical AND</td>
+<td><code>$filter=revenue gt 1000 and projectStatus eq 'completed'</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Logical OR</td>
+<td><code>$filter=projectStatus eq 'completed' or projectStatus eq 'in_progress'</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Logical NOT</td>
+<td><code>$filter=not (projectStatus eq 'in_progress')</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-functions">String Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contains</code></td>
+<td>Contains substring</td>
+<td><code>$filter=contains(projectName,'Marketing')</code></td>
+</tr>
+<tr>
+<td><code>startswith</code></td>
+<td>Starts with substring</td>
+<td><code>$filter=startswith(customerName,'ABC')</code></td>
+</tr>
+<tr>
+<td><code>endswith</code></td>
+<td>Ends with substring</td>
+<td><code>$filter=endswith(fileName,'.docx')</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="date-functions">Date Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>year</code></td>
+<td>Extract year</td>
+<td><code>$filter=year(projectCreationDate) eq 2024</code></td>
+</tr>
+<tr>
+<td><code>month</code></td>
+<td>Extract month</td>
+<td><code>$filter=month(approveDate) eq 3</code></td>
+</tr>
+<tr>
+<td><code>day</code></td>
+<td>Extract day</td>
+<td><code>$filter=day(completionDate) eq 15</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="pagination">Pagination</h2>
+<h3 id="result-limits">Result Limits</h3>
+<p>The Data API has the following result limits:</p>
+<ul>
+<li><strong>Default page size</strong>: 500 records</li>
+<li><strong>Maximum page size</strong>: 5,000 records</li>
+<li>Use <code>$top</code> parameter to specify the number of records to return (up to 5,000)</li>
+<li>Use <code>$skip</code> parameter to implement pagination for large result sets</li>
+</ul>
+<h3 id="basic-pagination">Basic Pagination</h3>
+<pre><code>$top=50&amp;$skip=100
+</code></pre>
+<h3 id="pagination-with-filters">Pagination with Filters</h3>
+<pre><code>$filter=revenue gt 1000&amp;$top=25&amp;$skip=0&amp;$orderby=revenue desc
+</code></pre>
+<h3 id="maximum-results-example">Maximum Results Example</h3>
+<pre><code>$top=5000&amp;$skip=0
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="use-specific-filters">Use Specific Filters</h3>
+<ul>
+<li>Always filter data to reduce response size</li>
+<li>Use date ranges for time-based queries</li>
+<li>Filter by status or other categorical fields</li>
+</ul>
+<h3 id="select-only-required-fields">Select Only Required Fields</h3>
+<ul>
+<li>Use <code>$select</code> to minimize response payload</li>
+<li>Only expand related entities when necessary</li>
+</ul>
+<h3 id="implement-pagination">Implement Pagination</h3>
+<ul>
+<li>Use <code>$top</code> and <code>$skip</code> for large result sets</li>
+<li>Default page size: 500 records (when no <code>$top</code> is specified)</li>
+<li>Maximum page size: 5,000 records</li>
+<li>Typical page sizes: 25, 50, 100, 500, or 1000 records</li>
+</ul>
+<h3 id="optimize-performance">Optimize Performance</h3>
+<ul>
+<li>Combine filters to reduce server processing</li>
+<li>Use indexes fields (like IDs and dates) in filters</li>
+<li>Avoid complex string operations on large datasets</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/data-bridge/OData-Query-Guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

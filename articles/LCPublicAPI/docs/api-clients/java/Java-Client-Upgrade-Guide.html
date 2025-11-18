@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Cloud Platform SDK - Migration Guide v25.x.x </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Cloud Platform SDK - Migration Guide v25.x.x ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-cloud-platform-sdk---migration-guide-v25xx">Trados Cloud Platform SDK - Migration Guide v25.x.x</h1>
+
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The Trados Cloud Platform API SDK has transitioned from a &quot;fat JAR&quot; to a &quot;light JAR&quot; architecture, delivering faster downloads, improved dependency management, and better build performance. For most users, migration requires only a version update in your build configuration.</p>
+<p><strong>What Changed:</strong></p>
+<ol>
+<li><strong>Modernized Dependencies:</strong> JUnit 4 → 5, Apache HttpClient 4 → 5, Commons Lang 2→3</li>
+<li><strong>OpenAPI Generator:</strong> Version 6.5.0 → 7.14.0 with enhanced nullability annotations</li>
+<li><strong>Enhanced Features:</strong> New <code>LCContext.executeInScope()</code> methods for improved tenant/trace context management</li>
+<li><strong>Updated Tooling:</strong> Latest versions of Jackson, Feign, and other core libraries</li>
+</ol>
+<h2 id="step-by-step-migration-guide">Step-by-Step Migration Guide</h2>
+<h3 id="for-standard-api-usage-most-users">For Standard API Usage (Most Users):</h3>
+<p>If you're using the generated SDK classes like <code>ProjectApi</code>, <code>SourceFileApi</code>, etc., migration is straightforward:</p>
+<ol>
+<li>Update SDK version to 25.x.x in your build configuration.</li>
+<li>Run your build command to verify everything works.</li>
+<li>Review and update your code for compatibility with the new OpenAPI Generator output (see the section <a href="#openapi-generator--generated-code-changes">OpenAPI Generator &amp; Generated Code Changes</a> below for details).</li>
+<li>Your API calls should work as before, but review and resolve any compilation issues related to the above changes.</li>
+</ol>
+<pre><code class="lang-java">// Your existing code continues to work
+ProjectApi projectApi = languageCloudClientProvider.getProjectClient();
+Project project = projectApi.createProject(projectCreateRequest, queryParams);
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Most Common Issue</strong>: Build fails after version update<br>
+<strong>Solution</strong>: Run <code>mvn dependency:tree</code> to check for dependency conflicts</p>
+<p><strong>Issue</strong>: <code>ClassNotFoundException: feign.Client</code><br>
+<strong>Solution</strong>: Verify Feign dependencies: <code>mvn dependency:tree | grep feign</code></p>
+<p><strong>Issue</strong>: <code>NoClassDefFoundError</code> for HTTP client classes<br>
+<strong>Solution</strong>: Update imports from <code>org.apache.http</code> to <code>org.apache.hc.core5.http</code></p>
+<p><strong>Issue</strong>: Commons Lang methods not found<br>
+<strong>Solution</strong>: Update imports from <code>org.apache.commons.lang</code> to <code>org.apache.commons.lang3</code></p>
+<h2 id="success-validation">Success Validation</h2>
+<p><strong>For Standard Users:</strong></p>
+<ol>
+<li>Clean build: <code>mvn clean install</code> succeeds</li>
+<li>API functionality works as before</li>
+<li>Faster builds and smaller downloads</li>
+</ol>
+<p><strong>For Advanced Users:</strong></p>
+<ul>
+<li>Run <code>mvn dependency:tree</code> - no conflicts shown</li>
+<li>Test application startup and core functionality</li>
+</ul>
+<h3 id="advanced-scenarios">Advanced Scenarios</h3>
+<details>
+<summary>Click here if you use direct dependency imports or custom configurations</summary>
+<h4 id="direct-dependency-usage">Direct Dependency Usage:</h4>
+<ul>
+<li>Update HttpClient imports: <code>org.apache.http</code> → <code>org.apache.hc.core5.http</code></li>
+<li>Update Commons Lang imports: <code>org.apache.commons.lang</code> → <code>org.apache.commons.lang3</code></li>
+<li>Use dependency exclusions if you encounter version conflicts</li>
+</ul>
+<h4 id="custom-classpath-management">Custom Classpath Management:</h4>
+<ol>
+<li>Review current JAR collection and identify SDK dependencies</li>
+<li>Ensure all transitive dependencies are included in classpath</li>
+<li>Test application startup and core functionality</li>
+<li>Consider migrating to Maven/Gradle for simplified dependency management</li>
+</ol>
+<h4 id="test-framework-updates">Test Framework Updates:</h4>
+<ul>
+<li><strong>JUnit Migration</strong>: JUnit 4 → JUnit 5 (Jupiter)
+<ul>
+<li>Update test annotations: <code>@Test</code> imports change from <code>org.junit.Test</code> → <code>org.junit.jupiter.api.Test</code></li>
+<li>Replace <code>@Before/@After</code> with <code>@BeforeEach/@AfterEach</code></li>
+<li>Update assertion imports: <code>org.junit.Assert</code> → <code>org.junit.jupiter.api.Assertions</code></li>
+</ul>
+</li>
+<li><strong>Mockito Updates</strong>: Version 3.x → 5.x
+<ul>
+<li>Update imports if using <code>mockito-junit-jupiter</code> directly</li>
+<li>Verify mock behavior with newer Mockito features</li>
+</ul>
+</li>
+</ul>
+<h4 id="openapi-generator--generated-code-changes">OpenAPI Generator &amp; Generated Code Changes:</h4>
+<ul>
+<li><strong>OpenAPI Generator</strong>: Version 6.5.0 → 7.14.0 (major version upgrade)</li>
+<li><strong>Generated Code Improvements</strong>: Enhanced code generation with:
+<ul>
+<li><strong>New Nullability Annotations</strong>: <code>@javax.annotation.Nullable</code> and <code>@javax.annotation.Nonnull</code> annotations for better null safety</li>
+<li><strong>Bean Validation Support</strong>: Enhanced validation annotations for API parameters</li>
+<li><strong>Improved Code Quality</strong>: Updated Mustache templates producing cleaner, more maintainable generated code</li>
+<li><strong>Better Method Naming</strong>: Collection helper methods use improved naming conventions for better readability</li>
+<li><strong>Enhanced Enum Handling</strong>: Improved enum comparison and naming with configurable case sensitivity support</li>
+<li><strong>Modernized Templates</strong>: Generated classes follow current Java best practices</li>
+</ul>
+</li>
+</ul>
+<h4 id="benefits">Benefits:</h4>
+<ul>
+<li>Generated classes are easier to use and understand</li>
+<li>Better IDE support with improved nullability annotations</li>
+<li>More consistent naming conventions across generated code</li>
+<li>Enhanced type safety and validation</li>
+</ul>
+</details>
+<h2 id="validation--success-criteria">Validation &amp; Success Criteria</h2>
+<p><strong>For Standard Users:</strong></p>
+<ol>
+<li><strong>Clean Build</strong>: Your project builds successfully</li>
+<li><strong>API Functionality</strong>: SDK operations work as before - no code changes needed</li>
+<li><strong>Performance</strong>: Faster builds and smaller downloads</li>
+</ol>
+<p><strong>Advanced Validation:</strong></p>
+<ul>
+<li><strong>Dependency Check</strong>: <code>mvn dependency:tree</code> shows no conflicts</li>
+<li><strong>Custom Configurations</strong>: Test application startup and functionality</li>
+</ul>
+<h2 id="reference-key-dependencies">Reference: Key Dependencies</h2>
+<h3 id="high-impact-dependencies-most-likely-to-affect-you">High-Impact Dependencies (Most Likely to Affect You)</h3>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Previous</th>
+<th>New</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feign (HTTP Client)</td>
+<td>10.11</td>
+<td>13.6</td>
+<td>Core SDK communication</td>
+</tr>
+<tr>
+<td>Jackson (JSON)</td>
+<td>2.10.3</td>
+<td>2.19.1</td>
+<td>API serialization</td>
+</tr>
+<tr>
+<td>Apache HttpClient</td>
+<td>4.5.8</td>
+<td>5.5</td>
+<td>HTTP transport</td>
+</tr>
+<tr>
+<td>JUnit (Tests)</td>
+<td>4.13</td>
+<td>5.13.2</td>
+<td>Test framework modernization</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>View Complete Dependency List</summary>
+<p><strong>All Updated Dependencies:</strong></p>
+<table>
+<thead>
+<tr>
+<th>GroupId</th>
+<th>ArtifactId</th>
+<th>Previous Version</th>
+<th>New Version</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>io.github.openfeign</td>
+<td>feign-core</td>
+<td>10.11</td>
+<td>13.6</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>io.github.openfeign</td>
+<td>feign-jackson</td>
+<td>10.11</td>
+<td>13.6</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>io.github.openfeign</td>
+<td>feign-slf4j</td>
+<td>10.11</td>
+<td>13.6</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>io.github.openfeign</td>
+<td>feign-form</td>
+<td>3.8.0</td>
+<td>13.6</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>io.github.openfeign</td>
+<td>feign-okhttp</td>
+<td>10.11</td>
+<td>13.6</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-core</td>
+<td>2.10.3</td>
+<td>2.19.1</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-annotations</td>
+<td>2.10.3</td>
+<td>2.19.1</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-databind</td>
+<td>2.10.3</td>
+<td>2.19.1</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>org.apache.httpcomponents.client5</td>
+<td>httpclient5</td>
+<td>4.5.8*</td>
+<td>5.5</td>
+<td><strong>Medium</strong></td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.datatype</td>
+<td>jackson-datatype-jsr310</td>
+<td>2.10.3</td>
+<td>2.19.1</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.datatype</td>
+<td>jackson-datatype-joda</td>
+<td>2.0.4</td>
+<td>2.19.1</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>org.openapitools</td>
+<td>jackson-databind-nullable</td>
+<td>0.2.1</td>
+<td>0.2.6</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td>commons-lang3</td>
+<td>2.6*</td>
+<td>3.18.0</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>com.github.spotbugs</td>
+<td>spotbugs-annotations</td>
+<td>3.0.2*</td>
+<td>4.9.3</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>javax.annotation</td>
+<td>javax.annotation-api</td>
+<td>1.0*</td>
+<td>1.3.2</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>org.projectlombok</td>
+<td>lombok</td>
+<td>RELEASE</td>
+<td>1.18.38</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td>slf4j-simple</td>
+<td>-</td>
+<td>2.0.13</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>*Different groupId or artifactId in previous version</p>
+<h3 id="test-dependencies">Test Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>GroupId</th>
+<th>ArtifactId</th>
+<th>Previous Version</th>
+<th>New Version</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>org.junit.jupiter</td>
+<td>junit-jupiter-engine</td>
+<td>4.13*</td>
+<td>5.13.2</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>org.mockito</td>
+<td>mockito-junit-jupiter</td>
+<td>3.12.1*</td>
+<td>5.18.0</td>
+<td><strong>High</strong></td>
+</tr>
+</tbody>
+</table>
+<p>*Different groupId or artifactId in previous version</p>
+<h3 id="most-important-changes">Most Important Changes</h3>
+<p><strong>Critical</strong>: Maven Shade Plugin removed (enables fat→light JAR transition)<br>
+<strong>Modernization</strong>: All dependencies updated to current versions<br>
+<strong>Code Quality</strong>: OpenAPI Generator 6.5.0 → 7.14.0 with better nullability support</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/api-clients/java/Java-Client-Upgrade-Guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

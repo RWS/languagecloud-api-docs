@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Cloud Platform SDK Samples for .NET </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Cloud Platform SDK Samples for .NET ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-cloud-platform-sdk-samples-for-net">Trados Cloud Platform SDK Samples for .NET</h1>
+
+<br>
+<h2 id="console-application-sample">Console Application Sample</h2>
+<p>The console application sample is available for download on <a href="https://github.com/RWS/language-cloud-public-api-samples/tree/main/.Net/PublicApi.Sample.Console">GitHub</a>.</p>
+<p>It contains 3 examples of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK. You can either use the supplied provider, or handle the client instantiation on you own:</p>
+<h3 id="instantiating-a-client-using-credentials">Instantiating a client using credentials</h3>
+<p>You can instantiate a client using the supplied <code>LanguageCloudClientProvider</code> class. This method requires you provide a <code>ServiceCredentials</code> object, which contains your <code>clientID</code>, <code>clientSecret</code> and the <code>tenant</code>. <em>See the <a href="../../Authentication.html">Authentication</a> page for more details.</em></p>
+<pre><code class="lang-csharp">using Rws.LanguageCloud.Sdk;
+
+...
+
+// define credentials
+ServiceCredentials credentials = new ServiceCredentials(&quot;client-id&quot;, &quot;client-secret&quot;, &quot;tenant&quot;);
+
+// instantiate the provider
+var clientProvider = new LanguageCloudClientProvider(&quot;eu&quot;);
+
+// Instantiate the client
+var projectClient = clientProvider.GetProjectClient(credentials);
+
+// use the client
+var projectsResponse = await projectClient.ListProjectsAsync();
+</code></pre>
+<p><em>*Using this method, a unique TraceId will be generated on each request.</em></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure you always keep your credentials safe.</p>
+</div>
+<h3 id="instantiating-a-client-using-context-scoping">Instantiating a client using context scoping</h3>
+<p>This method allows you to make an API call with 2 different users, using the same client instance.</p>
+<p>We provide an <code>ApiClientContext</code> which exposes some scoping options. You can use this to scope your API calls in different contexts. The sample contains an example with 2 different users:</p>
+<pre><code class="lang-csharp">using Rws.LanguageCloud.Sdk;
+using Sdl.ApiClientSdk.Core;
+...
+
+// define credentials for your first user
+ServiceCredentials credentials_1 = new ServiceCredentials(&quot;client-id-1&quot;, &quot;client-secret-1&quot;, &quot;tenant-1&quot;);
+
+// define credentials for your second user
+ServiceCredentials credentials_2 = new ServiceCredentials(&quot;client-id-2&quot;, &quot;client-secret-2&quot;, &quot;tenant-2&quot;);
+
+// instantiate the provider
+var clientProvider = new LanguageCloudClientProvider(&quot;eu&quot;);
+
+// instantiate the client without credentials
+var client = clientProvider.GetProjectClient();
+
+// create a context scope and use the client. You can also provide your own traceId
+using (ApiClientContext.BeginScope(new LCContext(credentials_1, &quot;trace-id-1&quot;)))
+{
+    // the client will use the credentials_1 and &quot;trace-id-1&quot; defined in the scope
+    var projectsResponse = await projectClient.ListProjectsAsync();
+}
+
+// create a context scope and use the client. You can also provide your own traceId
+using (ApiClientContext.BeginScope(new LCContext(credentials_2, &quot;trace-id-2&quot;)))
+{
+    // the client will use the credentials_2 and &quot;trace-id-2&quot; defined in the scope
+    var projectsResponse = await projectClient.ListProjectsAsync();
+}
+</code></pre>
+<h3 id="instantiating-a-client-using-a-custom-handler">Instantiating a client using a custom handler</h3>
+<p>If you would like to control the authentication process, you should use the method which does not perform any authentication implicitly. You can provide your own authentication implementation via a custom handler:</p>
+<pre><code class="lang-csharp">// define credentials
+ServiceCredentials credentials = new ServiceCredentials(&quot;client-id&quot;, &quot;client-secret&quot;, &quot;tenant&quot;);
+
+// get an authentication handler
+ServiceAuthenticationHandler handler = new ServiceAuthenticationHandler(credentials);
+
+// instantiate the provider
+var clientProvider = new LanguageCloudClientProvider(&quot;eu&quot;);
+
+// get a client with the custom handler
+var client = clientProvider.GetProjectClientNoAuth(handler);
+
+// use the client
+var projectsResponse = await projectClient.ListProjectsAsync();
+
+</code></pre>
+<p><br><br></p>
+<h2 id="web-api-dependency-injection-sample">Web API Dependency Injection Sample</h2>
+<p>The web API sample is available for download on <a href="https://github.com/RWS/language-cloud-public-api-samples/tree/main/.Net/PublicApi.WebApiSample">GitHub</a>.</p>
+<p>It contains an example of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK for ASP .Net.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you want to use the provided authentication mechanism, a custom handler can be created, which must inherit from <code>LCCustomAuthenticationHandler</code>.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you want to handle authentication and tracing on you own, you could implement your own <code>DelegatingHandler</code>.</p>
+</div>
+<p>In our example, we've created the <code>LcHandler</code> class, which inherits from <code>LCCustomAuthenticationHandler</code>. The <code>LCCustomAuthenticationHandler</code> class already provides us with an authentication mechanism. We've overwritten the <code>GetServiceCredentials</code> and <code>GetTraceId</code> methods and provided our own implementations, as these will be called by <code>LCCustomAuthenticationHandler</code>:</p>
+<pre><code class="lang-csharp">// Provide you own implementation. A possible example can be:
+protected override ServiceCredentials GetServiceCredentials()
+{
+    int accountId = int.Parse(context.HttpContext.User.Claims.Single(x =&gt; x.Type.Equals(&quot;aid&quot;)).Value);
+    ServiceCredentials credentials = repository.GetServiceCredentialsById(accountId);
+
+    return credentials;
+}
+
+...
+	
+// Provide you own implementation. A possible example can be:
+protected override string GetTraceId()
+{
+    return DateTimeOffset.UtcNow.ToString();
+}
+</code></pre>
+<p>We'll need a bit of custom magic to make sure dependency injection works correctly for multi-region. We'll create a custom Factory to provide our clients. An example implementation would be a factory class to provide a per region factory. We'll make sure to have all instances initialized only once, to avoid problems:</p>
+<pre><code class="lang-csharp">
+    class RegionClientContainerFactory
+    {
+        LanguageCloudClientProvider _languageCloudClientProvider;
+        IServiceProvider _serviceProvider;
+
+        private IAccountClient _accountClient;
+
+
+        public RegionClientContainerFactory(string region, IServiceProvider serviceProvider)
+        {
+            _languageCloudClientProvider = new LanguageCloudClientProvider(region);
+            _serviceProvider = serviceProvider;
+        }
+
+        public IAccountClient AccountClient {
+            get
+            {
+                // get custom authentication handler
+                LcHandler handler = _serviceProvider.GetRequiredService&lt;LcHandler&gt;();
+
+                // ensure account client is instantiated only once
+                return _accountClient ??= _languageCloudClientProvider.GetAccountClient(handler);
+            }
+        }
+    }
+
+    class LanguageCloudClientFactory
+    {
+        private object _lock = new object();
+        private IServiceProvider _serviceProvider;
+
+        ConcurrentDictionary&lt;string, RegionClientContainerFactory&gt; _regionClientContainerFactories = new ConcurrentDictionary&lt;string, RegionClientContainerFactory&gt;();
+
+        LanguageCloudClientFactory(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
+
+        public RegionClientContainerFactory Region(string region)
+        {
+            if (!_regionClientContainerFactories.TryGetValue(region, out RegionClientContainerFactory regionClientContainerFactory))
+            {
+                lock (_lock)
+                {
+                    if (!_regionClientContainerFactories.TryGetValue(region, out regionClientContainerFactory))
+                    {
+                        regionClientContainerFactory = new RegionClientContainerFactory(region, _serviceProvider);
+                        _regionClientContainerFactories.TryAdd(region, regionClientContainerFactory);
+                    }
+                }
+            }
+
+            return regionClientContainerFactory;
+        }
+    }
+
+</code></pre>
+<p>We register our handler <code>LcHandler</code> as a transient service and a Factory class with factory, in the <code>Startup</code> class:</p>
+<pre><code class="lang-csharp">// handlers must always be transient
+services.AddTransient&lt;LcHandler&gt;();
+
+// register a client
+services.AddSingleton(provider =&gt; new LanguageCloudClientFactory(provider.GetService&lt;LcHandler&gt;());
+</code></pre>
+<p>We can then use the registered client in the controller (or any other class resolved through Dependency Injection):</p>
+<pre><code class="lang-csharp">public class LanguageCloudApiSampleController : ControllerBase 
+{
+    LanguageCloudClientFactory _factory;
+
+    // inject the client via constructor
+    public LanguageCloudApiSampleController(LanguageCloudClientFactory clientFactory)
+    {
+        this._factory = clientFactory;
+    }
+
+    ...
+      
+    // make an API call using a client and the user identity from HttpContext
+    var accountClient = _factory.Region(&quot;eu&quot;).AccountClient;
+    var accounts = await accountClient.ListMyAccountsAsync();
+
+    ...
+}
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/api-clients/net/Net-Samples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

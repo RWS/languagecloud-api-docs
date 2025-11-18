@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>App Descriptor </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="App Descriptor ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="app-descriptor">App Descriptor</h1>
+
+<p>A descriptor defines what the app does. The very first interaction between Trados and an app is requesting the descriptor.</p>
+<p>The app developer must accurately fill in all the details within the descriptor, specifying the app's functionalities, and then register the app by submitting a URL linking to the descriptor</p>
+<h2 id="basic-information">Basic Information</h2>
+<p>The descriptor model defines attributes that provide basic information like <code>name</code>, <code>description</code>, <code>releaseNotes</code>. The <a href="../../App-API.v1.json/paths/%7E1descriptor/get">model</a> provides documentation for all the fields.</p>
+<h2 id="version">Version</h2>
+<p>The <code>version</code> field is used by Trados to detect newer versions of the app's descriptor. You should increase the version every time you make a change in the descriptor, otherwise, your changes won't reach the registered instance from Trados.</p>
+<p>The version is periodically checked by Trados by performing GET descriptor requests.</p>
+<h2 id="base-url">Base URL</h2>
+<p><code>baseUrl</code> defines the base for any endpoint defined in the descriptor. All calls from Trados will be made by concatenating <code>baseUrl</code> and the path defined for an endpoint in the descriptor.</p>
+<p>For example, if we have in the descriptor:</p>
+<pre><code class="lang-json">{
+  &quot;baseUrl&quot;: &quot;https://foo.com&quot;,
+  &quot;standardEndpoints&quot;: {
+    &quot;health&quot;: &quot;/health&quot;
+  }
+}
+</code></pre>
+<p>Trados will make scheduled GET requests to <code>https://foo.com/health</code> to check the health.</p>
+<h3 id="changing-base-url">Changing Base URL</h3>
+<p>For various reasons you might want to change the host of your App and that can be done from Trados management UI.</p>
+<p>When updating the host, you also have to update <code>baseUrl</code> to match the new host.</p>
+<p>You must still support old host as all previous installs will be calling on the <code>baseUrl</code> at the installed version. In order to be able to decomission the old host, you must make sure all consumers updated their installs to latest version.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new <code>baseUrl</code>. See <a href="Request-Authentication.html">Request Authentication</a>.</p>
+</div>
+<h2 id="standard-endpoints">Standard Endpoints</h2>
+<p>An app must implement a set of standard endpoints that are defined in the descriptor schema under <code>standardEndpoints</code>. Not all endpoints are required, as you can see in the descriptor schema.</p>
+<p>All endpoint paths need to start with the leading character <code>/</code> and are relative to <code>baseUrl</code>.</p>
+<p>Standard endpoints are defined under the <code>Standard</code> tag. The actual path should be replaced with the one you defined in the descriptor. The expected Request and Responses are defined and should be used as reference.</p>
+<h3 id="lifecycle-endpoint">Lifecycle Endpoint</h3>
+<p>Additionally, in the <code>standardEnpoints</code> section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an <code>INSTALLED</code> event along with some data for that account. The app should react and save the received data.</p>
+<ul>
+<li><code>appLifecycle</code> - is used for all types of events: <code>REGISTERED</code>, <code>UNREGISTERED</code>, <code>INSTALLED</code>, and <code>UNINSTALLED</code>. See the contract <a href="../../App-API.v1.json/paths/%7E1app-lifecycle/post">here</a>.</li>
+</ul>
+<blockquote>
+<p>If your app is built from our blueprints, you shouldn't have to change anything, as these endpoints work out of the box.</p>
+</blockquote>
+<h2 id="extensions">Extensions</h2>
+<p>The list of provided extensions is described under <code>extensions</code>. An app can provide none, one, or more extensions.</p>
+<p>Any extension will have the generic set of properties:</p>
+<ul>
+<li><code>extensionPointId</code> that specifies what extension point it extends. Can be only a value specified in the descriptor contract (ex: <code>lc.mtprovider</code>).</li>
+<li><code>extensionPointVersion</code> defines the version of the extension point it extends. The allowed value is defined in the descriptor contract (ex: <code>1.0</code>).</li>
+<li><code>name</code> is defined by the developer, to provide a friendly name for the extension. This is useful when the app provides multiple extensions.</li>
+<li><code>description</code> will have a summary describing the extension.</li>
+<li><code>configuration</code> defines the extension and the structure depends on the type of the extension that is implemented.</li>
+</ul>
+<pre><code class="lang-json">{
+  ...
+  &quot;extensions&quot;: [
+    {
+      &quot;extensionPointId&quot;: &quot;&lt;extension-point-id&gt;&quot;,
+      &quot;extensionPointVersion&quot;: &quot;1.0&quot;,
+      &quot;id&quot;: &quot;myAwesomeExtension&quot;,
+      &quot;name&quot;: &quot;My Awesome Extension&quot;,
+      &quot;description&quot;: &quot;An awesome extension that makes magic&quot;,
+      &quot;configuration&quot;: { ... }
+    }
+  ]
+  ...
+}
+</code></pre>
+<p>Read more on how to define the extensions for your app in our development guides:</p>
+<ol>
+<li>Automatic Task <a href="Automatic-Task-App-development-guide.html">guide</a>.</li>
+<li>Machine Translation <a href="MT-App-development-guide.html">guide</a>.</li>
+<li>Preview <a href="./Dynamic-Preview-guide.md">guide</a>.</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<p>An app can request configuration details at installation time (and it can be edited later).</p>
+<blockquote>
+<p>On an update, new configuration settings can be added, and the user will be requested to enter the newer configuration values.</p>
+</blockquote>
+<p>Configurations are app scoped. If you need to assign configuration values for individual extensions within the app, use clear and explicit naming conventions so users understand what information to input into each field. Additionally, tooltips can be provided by setting the description attribute.</p>
+<p>Configuration settings can be <code>string</code>, <code>number</code>, <code>integer</code>, <code>boolean</code>, <code>datetime</code> or <code>secret</code>. Additionally, the <code>string</code> dataType supports an array of options that will be displayed in a picklist form(for ex: <code>&quot;options&quot;: [ &quot;option1&quot;, &quot;option2&quot; ]</code>).</p>
+<ul>
+<li>for <code>boolean</code> a checkbox will be rendered.</li>
+<li><code>datetime</code> will render a date time pick control.</li>
+<li><code>secret</code> is used for passwords and secrets, the characters being hidden.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;configuration&quot;: [
+    {
+      &quot;name&quot;: &quot;Third party token&quot;,
+      &quot;id&quot;: &quot;thirdPartyToken&quot;,
+      &quot;description&quot;: &quot;The token used to authenticate to third party API&quot;,
+      &quot;dataType&quot;: &quot;string&quot;
+    }
+  ]
+  ...
+}
+</code></pre>
+<blockquote>
+<p>Note that in the example the <code>optional</code> and <code>defaultValue</code> properties have not been specified, so these will be set to their default values, as specified in the contract ( false for <code>optional</code> and undefined for <code>defaultValue</code>).</p>
+</blockquote>
+<p>Moreover, you have the option to define a list of choices using the <code>options</code> field. When this field is filled, the values will be presented in a dropdown menu. It's important to note that the only acceptable <code>dataType</code> in this scenario is <code>string</code>.</p>
+<h2 id="scopes">Scopes</h2>
+<p>Scopes within the app define the extent of access requested to the tenant's data. Depending on the actions carried out by the app, it may require read-only privileges, read/write permissions, or even access to secure projects. The permissible values for scopes are listed under the <code>scopes</code> section.</p>
+<p>The scopes advised in the descriptor will be presented to the consumers during installation. They can then decide whether to proceed with the installation and grant access to the app.</p>
+<p>Once access is granted, the app will be able to perform authorized requests to the Trados Cloud Platform API.</p>
+<blockquote>
+<p>If the app doesn't make requests to Trados Cloud Platform API, no scopes should be specified.</p>
+</blockquote>
+<h2 id="webhooks">Webhooks</h2>
+<p>Webhooks can be registered automatically when declared in the descriptor. See <a href="Webhooks.html">Webhooks</a> page for more details.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/App-Descriptor.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

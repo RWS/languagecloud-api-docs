@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Registering the App </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Registering the App ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="registering-the-app">Registering the App</h1>
+
+<p>Registration is the first step in integrating your app into the Trados platform.</p>
+<p>To register a new app, you need to:</p>
+<ol>
+<li>After you log in, navigate to the <strong>RWS AppStore</strong> from the user icon menu.</li>
+</ol>
+<!--
+focus: false
+-->
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/AccessRWSAppStore-app.gif?raw=true" alt="AccessRWSAppStore"></p>
+<ol start="2">
+<li>Go to <strong>My Apps</strong> tab, select <strong>New App</strong> and provide the following details:
+<ul>
+<li>the <em>Development Name</em> and <em>Development Description</em>, which will only be visible to the developer tenant (do not confuse them with the name and the description of the app descriptor)</li>
+<li>the <em>App Descriptor URL</em> is the app's <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> address. This must be a secure URL.</li>
+</ul>
+</li>
+<li>After filling in these fields, finish the registration by clicking the <strong>Register</strong> button.</li>
+</ol>
+<!--
+focus: false
+-->
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/RegisterApp.gif?raw=true" alt="Register"></p>
+<p>Common issues that may occur during registration include:</p>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Fix suggestion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invalid Descriptor URL</td>
+<td>Make sure the provided URL is formed correctly and it points to your descriptor endpoint.</td>
+</tr>
+<tr>
+<td>Incorrect <code>BaseUrl</code></td>
+<td>If you are using one of our blueprints, check the blueprint guides (<a href="../development/blueprints/Dot-Net-Blueprint.html#appsettingsjson">.NET</a> or <a href="../development/blueprints/Java-Blueprint.html#applicationyml">Java</a>) on how to set up the <code>BaseUrl</code> field.</td>
+</tr>
+<tr>
+<td>Already registered</td>
+<td>This would normally occur if you already registered your app. If so, you can <a href="Retiring.html">unregister</a> the old version and perform the registration once again.</td>
+</tr>
+<tr>
+<td>Descriptor does not comply with the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">contract</a></td>
+<td>Make sure the required fields are returned and the allowed values correspond to the ones from the contract.</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/appManagement/Registering.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Add-on to App Migration </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Add-on to App Migration ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="add-on-to-app-migration">Add-on to App Migration</h1>
+
+<p>If you previously have developed an add-on, you have to migrate it to the app concept. Add-ons have in the descriptor the property <code>descriptorVersion</code> with value <code>1.3</code> or less. Apps start with <code>descriptorVersion</code> <code>1.4</code>.</p>
+<h2 id="changes">Changes</h2>
+<p>The most important changes:</p>
+<ul>
+<li>Lifecycle events have been renamed for consistency, and the payload have been changed. But the blueprint code covers these and following it should get you started really fast.</li>
+<li>Auth0 <code>clientId</code> and <code>clientSecret</code> have been moved from install (tenant) scope to app scope. Where before you had a separate set of Auth0 credentials for each install, now you get one set when your app is registered in Trados. That means that you can get the token from Auth0 once (for the period of its validity), and make Trados Cloud Platform API requests for any tenant that has the app installed, by providing the tenant in the X-LC-TenantId header.</li>
+<li>We've introduced a new Lifecycle event <code>UPDATED</code> which will be used to update the app on various changes. Currently it can update the <code>clientId</code> and <code>clientSecret</code>. That is useful if credentials need to be cycled.</li>
+</ul>
+<p>The Migration Blueprints cover how to update the add-on to support all these new features.</p>
+<p>Management changes:</p>
+<ul>
+<li>Publishing doesn't require you to install the current app version.</li>
+<li>The current available app version will be published when you publish.</li>
+<li>When registering, you'll have an extra field where you select people from your account that should receive emails regarding managing your app.</li>
+</ul>
+<h2 id="upgrade-process">Upgrade Process</h2>
+<p>The process of migration should look like:</p>
+<ul>
+<li>Depending on if your add-on is Java or .NET, go to the appropriate blueprint page: <a href="blueprints/Java-Migration-Blueprint.html">Java Migration Blueprint</a> or <a href="blueprints/Dot-Net-Migration-Blueprint.html">.NET Migration Blueprint</a>. This page will contain details on what changes must be done.</li>
+<li>Perform the changes in your code and deploy it to a test instance</li>
+<li>Test the changes by having an add-on installed on your account before the app deploy. After the deploy update your install to the new version and confirm it's functioning as previously.</li>
+<li>Deploy your &quot;Production&quot; instance</li>
+<li>If it was published to App Store, publish the new version</li>
+</ul>
+<p>Because you might have installs with the old version, you'll have to maintain the code to handle requests for version 1.3 and 1.4 - for example the endpoint paths that were specified in the old descriptor should be still valid.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/Add-On-To-App-Migration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

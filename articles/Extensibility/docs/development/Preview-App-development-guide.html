@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Preview Provider </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Preview Provider ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="preview-provider">Preview Provider</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Preview apps offer the possibility to use external preview providers within the Trados Enterprise platform.</p>
+<p>The type of preview generated is known as &quot;Dynamic Preview&quot; as it can dynamically adjust depending on choices the user might make in the browser, for instance, selecting different preview sections or views from the rendered preview. The extension acts as a webserver which implements custom endpoints to serve the content to the browser. This content can be anything which the browser is able to parse and display accordingly. For more details on Dynamic Preview Concepts, please see the second section towards the end of this document.</p>
+<p>To build a new preview app we recommend to start by using the provided <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints">app blueprints</a>.</p>
+<h2 id="preview-app-extension">Preview App Extension</h2>
+<p>A preview app needs to define at least one preview extension within its <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>.
+For example:</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;extensions&quot;: [
+   {
+  &quot;extensionPointId&quot;: &quot;lc.previewprovider&quot;,
+  &quot;id&quot;: &quot;string&quot;,
+  &quot;name&quot;: &quot;string&quot;,
+  &quot;description&quot;: &quot;string&quot;,
+  &quot;extensionPointVersion&quot;: &quot;string&quot;,
+  &quot;configuration&quot;: {
+    &quot;endpoints&quot;: {
+      &quot;lc.preview.startpreview&quot;: &quot;string&quot;,
+      &quot;lc.preview.refreshpreview&quot;: &quot;string&quot;,
+      &quot;lc.preview.updatesegment&quot;: &quot;string&quot;,
+      &quot;lc.preview.endpreview&quot;: &quot;string&quot;
+    },
+    &quot;supportedFileTypes&quot;: &quot;html&quot;,
+    &quot;requiredInputFiles&quot;: {
+      &quot;bilingualDocument&quot;: false,
+      &quot;previewPackageTemplate&quot;: false,
+      &quot;nativeSourceFile&quot;: false,
+      &quot;nativeTargetFile&quot;: false,
+      &quot;nativeAnnotatedTargetFile&quot;: true
+    },
+    &quot;outputType&quot;: &quot;previewUrl&quot;
+  }
+}
+  ]
+  ...
+}
+</code></pre>
+<ul>
+<li><code>id</code> - unique extension identifier provided by the app Developer.</li>
+<li><code>name</code> - provide a friendly and unique name. It might be shown to the end user, and may be useful to help the user distinguish between multiple extensions.</li>
+<li><code>extensionPointVersion</code> - the version of the extension point that is implemented in the Extension.</li>
+<li><code>extensionPointId</code> - the extension point identifier corresponding to this extensionType: <strong>lc.previewprovider</strong>.</li>
+<li><code>description</code> - the preview extension description</li>
+<li><code>configuration</code> - the extension configuration.
+<ul>
+<li><p><code>endpoints</code> - the required endpoints for the preview extension.</p>
+<ul>
+<li><code>lc.previewprovider.startpreview</code> - the endpoint used to start the preview generation.</li>
+<li><code>lc.previewprovider.refreshpreview</code> - the endpoint used to refresh the existing preview session.</li>
+<li><code>lc.previewprovider.updatesegment</code> - the endpoint used to update a segment based on a BCM document fragment.</li>
+<li><code>lc.previewprovider.endpreview</code> - the endpoint used to clean up any state associated with a given preview session.</li>
+</ul>
+<p>For the V2 API, they are:</p>
+<ul>
+<li><code>lc.previewprovider.startpreview.v2</code></li>
+<li><code>lc.previewprovider.refreshpreview.v2</code></li>
+<li><code>lc.previewprovider.updatesegment.v2</code></li>
+<li><code>lc.previewprovider.endpreview.v2</code></li>
+</ul>
+</li>
+<li><p><code>supportedFileTypes</code> - A list of FileTypeDefinitionIds which this app may be associated with</p>
+</li>
+<li><p><code>requiredInputFiles</code> - provides details about which types of input files this extension will require for generating a preview.</p>
+<ul>
+<li><code>bilingualDocument</code> - request an endpoint for downloading a BCM document.</li>
+<li><code>previewPackageTemplate</code> - request an endpoint for downloading a preview Package Template.</li>
+<li><code>nativeSourceFile</code> - request an endpoint for downloading a native source file.</li>
+<li><code>nativeTargetFile</code> - request an endpoint for downloading a native target file.</li>
+<li><code>nativeAnnotatedTargetFile</code> - request an endpoint for downloading a native annotated target file.</li>
+</ul>
+</li>
+<li><p><code>outputType</code> - Indicates which type of output is generated by the extension. Dynamic previews only support a URL endpoint result and thus this should be set to <strong>previewUrl</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="preview-app-endpoints">Preview App Endpoints</h3>
+<h4 id="startpreview">StartPreview</h4>
+<p>The <em>startPreview</em> endpoint initiates a background preview generation session
+and returns after creating the background worker which generates the actual preview. The result is sent via calling the URL set in the <code>callbackUrl</code> field. An important field is the <code>previewSessionId</code> which indicates the session this preview is associated with.</p>
+<p>If the app needs to store any state, it should associate it with this identifier. The very first call for a given session should always be <em>startPreview</em>. If other endpoints are called before this, they should return an error.</p>
+<p>The preview content is served by the app via one or more endpoints the app implements. The content can be any format, as long as the browser hosting the preview can parse and display that content. This includes, HTML, PDF, streamed video etc.
+The resulting resource identifier returned from this call should be set in the <code>previewResult</code> field of the callback response. This will be a URL pointing to the initial endpoint implementation on the extension which the Browser hosting the preview will use to retrieve the preview content. As mentioned, the preview extension can implement additional endpoints which can then be called from the hosted portion in the Browser via AJAX calls or similar.</p>
+<p>There are currently 2 versions of the Preview API supported by Extensions:</p>
+<h2 id="apis">APIs</h2>
+<h3 id="api-v1">API V1</h3>
+<p>Examples:</p>
+<pre><code class="lang-html">POST /v1/start-preview
+</code></pre>
+<ul>
+<li>The request is as follows:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;fileInformation&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;sourceLanguage&quot;: &quot;string&quot;,
+    &quot;targetLanguage&quot;: &quot;string&quot;
+  },
+  &quot;inputFiles&quot;: {
+    &quot;bilingualDocumentUrl&quot;: &quot;string&quot;,
+    &quot;previewPackageTemplateUrl&quot;: &quot;string&quot;,
+    &quot;nativeFileUrl&quot;: &quot;string&quot;,
+    &quot;nativeAnnotatedFileUrl&quot;: &quot;string&quot;
+  },
+  &quot;previewResultFileUrl&quot;: &quot;string&quot;,
+  &quot;callbackUrl&quot;: &quot;string&quot;,
+  &quot;scope&quot;: &quot;source&quot;
+}
+</code></pre>
+<ul>
+<li>The response after setting up the background worker, would look like this:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;errorCode&quot;: &quot;string&quot;,
+  &quot;message&quot;: &quot;string&quot;,
+  &quot;details&quot;: [
+    {
+      &quot;name&quot;: &quot;string&quot;,
+      &quot;code&quot;: &quot;string&quot;,
+      &quot;value&quot;: &quot;string&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>The final result, which is sent on the callback, is shown below:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;previewResult&quot;: &quot;string&quot;,
+  &quot;errors&quot;: [
+    {
+      &quot;errorCode&quot;: &quot;string&quot;,
+      &quot;message&quot;: &quot;string&quot;,
+      &quot;details&quot;: [
+        {
+          &quot;name&quot;: &quot;string&quot;,
+          &quot;code&quot;: &quot;string&quot;,
+          &quot;value&quot;: &quot;string&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Endpoint usage:</p>
+<p>This endpoint is used to initiate a preview session on the app. When this endpoint is called, the app should generate the initial preview and associate it (internally, if any state is kept) - with the <code>previewSessionId</code>.</p>
+<p>This should be the first endpoint called for any given session - if another endpoint is called for a given session ID before this one, an error should be returned.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.startpreview/post">documentation</a> for further details.</p>
+<h4 id="refreshpreview">RefreshPreview</h4>
+<p>The <em>refreshPreview</em> endpoint refreshes an existing preview. The mechanism for this in entirely up to the Extension implementation in that it might keep state from the initial preview generation from <em>startPreview</em> in order to speed up the refresh.</p>
+<p>The request and responses (REST and Callback) are identical to the <em>startPreview</em> endpoint.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v1/refresh-preview
+</code></pre>
+<p>Endpoint usage:
+This endpoint is called when a preview refresh is requested by the user. Any state the app holds from the initial preview generation may be used to speed up the refresh.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.refreshpreview/put">documentation</a> for further details.</p>
+<h4 id="updatesegment">UpdateSegment</h4>
+<p>The <em>updateSegment</em> endpoint accepts a list of BCM document fragments along with their associated segment IDs. The Extension will generate and return an HTML rendered fragment for each BCM document fragment sent in this manner.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v1/update-segment
+</code></pre>
+<ul>
+<li>The request is as follows:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;segments&quot;: [
+    {
+      &quot;segmentId&quot;: &quot;string&quot;,
+      &quot;fragment&quot;: {}
+    }
+  ],
+  &quot;fileInformation&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;sourceLanguage&quot;: &quot;string&quot;,
+    &quot;targetLanguage&quot;: &quot;string&quot;
+  },
+  &quot;scope&quot;: &quot;source&quot;
+}
+</code></pre>
+<ul>
+<li><p><code>previewSessionId</code> - unique ID of current preview session.</p>
+</li>
+<li><p><code>segments</code> - an array of segments with the following details:</p>
+<ul>
+<li><code>segmentId</code> - ID of segment being rendered.</li>
+<li><code>fragment</code> - BCM document JSON fragment.</li>
+</ul>
+</li>
+<li><p><code>fileInformation</code> - provides information relating to the file for which the rendered HTML is being generated.</p>
+</li>
+<li><p><code>scope</code> - indicates whether the generation is happening for source or target content.</p>
+</li>
+<li><p>The response would look like this:</p>
+</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;renderedTranslations&quot;: [
+    {
+      &quot;html&quot;: &quot;string&quot;,
+      &quot;segmentId&quot;: &quot;string&quot;,
+      &quot;errorCode&quot;: &quot;string&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li><code>previewSessionId</code> - unique ID of current preview session.</li>
+<li><code>renderedTranslations</code> - an array of rendered translations with the following details:
+<ul>
+<li><code>html</code> - rendered HTML content for this segment.</li>
+<li><code>segmentId</code> - ID of this segment.</li>
+<li><code>errorCode</code> - Error code for this segment (App/Extension specific).</li>
+</ul>
+</li>
+</ul>
+<p>Endpoint usage:
+This endpoint is called when the user is updating one or more segments in the Editor. For each segment, the extension will render an equivalent HTML fragment based on the input BCM document fragment.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.updatesegment/post">documentation</a> for further details.</p>
+<h4 id="endpreview">EndPreview</h4>
+<p>The <em>endPreview</em> endpoint is called when a given preview session associated with the previewSessionId is finished. This is called so that the app may perform any required cleanup.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v1/end-preview
+</code></pre>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;
+}
+</code></pre>
+<p>Endpoint usage:
+Called to indicate a preview session has terminated. Any required cleanup should be performed by the app.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.endpreview/post">documentation</a> for further details.</p>
+<h3 id="api-v2">API V2</h3>
+<p>Examples:</p>
+<pre><code class="lang-html">POST /v2/start-preview
+</code></pre>
+<ul>
+<li>The request is as follows:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;projectId&quot;: &quot;string&quot;,
+  &quot;scope&quot;: &quot;target&quot;,
+  &quot;fileInformation&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;sourceLanguage&quot;: &quot;string&quot;,
+    &quot;targetLanguage&quot;: &quot;string&quot;
+  },
+  &quot;inputFiles&quot;: {
+    &quot;bilingualDocument&quot;: {&quot;id&quot;: &quot;string&quot;, &quot;version&quot;: &quot;int&quot;, &quot;url&quot;: &quot;string&quot;},
+    &quot;previewPackageTemplate&quot;: {&quot;id&quot;: &quot;string&quot;, &quot;version&quot;: &quot;int&quot;, &quot;url&quot;: &quot;string&quot;},
+    &quot;nativeSourceFile&quot;: {&quot;id&quot;: &quot;string&quot;, &quot;version&quot;: &quot;int&quot;, &quot;url&quot;: &quot;string&quot;},
+    &quot;nativeTargetFile&quot;: {&quot;id&quot;: &quot;string&quot;, &quot;version&quot;: &quot;int&quot;, &quot;url&quot;: &quot;string&quot;},
+    &quot;nativeAnnotatedTargetFile&quot;: {&quot;id&quot;: &quot;string&quot;, &quot;version&quot;: &quot;int&quot;, &quot;url&quot;: &quot;string&quot;}
+  },
+  &quot;callbackUrl&quot;: &quot;string&quot;,
+}
+</code></pre>
+<ul>
+<li>The response after setting up the background worker, would look like this:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;errorCode&quot;: &quot;string&quot;,
+  &quot;message&quot;: &quot;string&quot;,
+  &quot;details&quot;: [
+    {
+      &quot;name&quot;: &quot;string&quot;,
+      &quot;code&quot;: &quot;string&quot;,
+      &quot;value&quot;: &quot;string&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>The final result, which is sent on the callback, is shown below:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;previewResult&quot;: &quot;string&quot;,
+  &quot;errors&quot;: [
+    {
+      &quot;errorCode&quot;: &quot;string&quot;,
+      &quot;message&quot;: &quot;string&quot;,
+      &quot;details&quot;: [
+        {
+          &quot;name&quot;: &quot;string&quot;,
+          &quot;code&quot;: &quot;string&quot;,
+          &quot;value&quot;: &quot;string&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Endpoint usage:</p>
+<p>This endpoint is used to initiate a preview session on the app. When this endpoint is called, the app should generate the initial preview and associate it (internally, if any state is kept) - with the <code>previewSessionId</code>.</p>
+<p>This should be the first endpoint called for any given session - if another endpoint is called for a given session ID before this one, an error should be returned.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.startpreview.v2/post">documentation</a> for further details.</p>
+<h4 id="refreshpreview-1">RefreshPreview</h4>
+<p>The <em>refreshPreview</em> endpoint refreshes an existing preview. The mechanism for this in entirely up to the Extension implementation in that it might keep state from the initial preview generation from <em>startPreview</em> in order to speed up the refresh.</p>
+<p>The request and responses (REST and Callback) are identical to the <em>startPreview</em> endpoint.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v2/refresh-preview
+</code></pre>
+<p>Endpoint usage:
+This endpoint is called when a preview refresh is requested by the user. Any state the app holds from the initial preview generation may be used to speed up the refresh.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.refreshpreview.v2/put">documentation</a> for further details.</p>
+<h4 id="updatesegment-1">UpdateSegment</h4>
+<p>The <em>updateSegment</em> endpoint accepts a list of BCM document fragments along with their associated segment IDs. The Extension will generate and return an HTML rendered fragment for each BCM document fragment sent in this manner.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v2/update-segment
+</code></pre>
+<ul>
+<li>The request is as follows:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;segments&quot;: [
+    {
+      &quot;segmentId&quot;: &quot;string&quot;,
+      &quot;fragment&quot;: {}
+    }
+  ],
+  &quot;fileInformation&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;sourceLanguage&quot;: &quot;string&quot;,
+    &quot;targetLanguage&quot;: &quot;string&quot;
+  },
+  &quot;scope&quot;: &quot;source&quot;
+}
+</code></pre>
+<ul>
+<li><p><code>previewSessionId</code> - unique ID of current preview session.</p>
+</li>
+<li><p><code>segments</code> - an array of segments with the following details:</p>
+<ul>
+<li><code>segmentId</code> - ID of segment being rendered.</li>
+<li><code>fragment</code> - BCM document JSON fragment.</li>
+</ul>
+</li>
+<li><p><code>fileInformation</code> - provides information relating to the file for which the rendered HTML is being generated.</p>
+</li>
+<li><p><code>scope</code> - indicates whether the generation is happening for source or target content.</p>
+</li>
+<li><p>The response would look like this:</p>
+</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;,
+  &quot;renderedTranslations&quot;: [
+    {
+      &quot;html&quot;: &quot;string&quot;,
+      &quot;segmentId&quot;: &quot;string&quot;,
+      &quot;errorCode&quot;: &quot;string&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li><code>previewSessionId</code> - unique ID of current preview session.</li>
+<li><code>renderedTranslations</code> - an array of rendered translations with the following details:
+<ul>
+<li><code>html</code> - rendered HTML content for this segment.</li>
+<li><code>segmentId</code> - ID of this segment.</li>
+<li><code>errorCode</code> - Error code for this segment (App/Extension specific).</li>
+</ul>
+</li>
+</ul>
+<p>Endpoint usage:
+This endpoint is called when the user is updating one or more segments in the Editor. For each segment, the extension will render an equivalent HTML fragment based on the input BCM document fragment.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.updatesegment.v2/post">documentation</a> for further details.</p>
+<h4 id="endpreview-1">EndPreview</h4>
+<p>The <em>endPreview</em> endpoint is called when a given preview session associated with the previewSessionId is finished. This is called so that the app may perform any required cleanup.</p>
+<p>Example:</p>
+<pre><code class="lang-html">POST /v2/end-preview
+</code></pre>
+<pre><code class="lang-json">{
+  &quot;previewSessionId&quot;: &quot;string&quot;
+}
+</code></pre>
+<p>Endpoint usage:
+Called to indicate a preview session has terminated. Any required cleanup should be performed by the app.</p>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.preview.endpreview.v2/post">documentation</a> for further details.</p>
+<h2 id="session-management-and-tenant-separation">Session Management and Tenant Separation</h2>
+<p>It is up to the app to manage any session state internally and have an expiry mechanism for this.
+Also, any data which is tenant specific needs to be kept separate from any other data and the app also needs to manage tenant separation concerns internally.
+<br>
+<br>
+<br></p>
+<h1 id="dynamic-preview-concepts">Dynamic Preview Concepts</h1>
+<p>Dynamic Preview concepts are explained a little more in this section. The Preview Container/Viewer (which hosts its content in an iframe) can dynamically update parts of the preview when the user selects different &quot;pages&quot; inside it via a selection mechanism, such as a drop-down or something similar. The app implements an endpoint which will initially serve the starting content and also any additional &quot;dynamic&quot; content requested via an AJAX call or similar. In general, the content generated dynamically will be a different rendering or view of the same BCM document content. For example, applying different XSLTs to an XML could provide such dynamic content (if the native file is XML based). It might also be different sections of the previewed document, or indeed, streamed video snippets, depending on which segments etc are selected in the previewed document.</p>
+<p>Please refer also to this document before continuing:
+<a href="Preview-App-development-guide.html">Preview Provider</a>.</p>
+<p>The app acts as a web server for this dynamic content. Some of the concepts around this are defined here:</p>
+<ul>
+<li>Custom Preview Endpoint(s) - this is a custom endpoint on the app which supports TLS and which is used to serve the Initial Preview Content and the subsequent Dynamic Preview Content.  Depending on the implementation, the app might specify one or more of these.</li>
+<li>Initial Preview Content - this is the HTML/Javascript content which is first served from the custom preview endpoint. It consists of some basic HTML and Javascript content which initializes the preview and loads an initial dynamic page. The URL for this initial call is set as the value for the &quot;src&quot; attribute on the iframe and is in the following format:</li>
+</ul>
+<pre><code class="lang-json">https://my.extension/custom-endpoint?sessionId={sessionId}&amp;tenant={tenantId}&amp;accessToken={hard-to-guess-access-token}&amp;page={pageId}
+</code></pre>
+<p>An example of such a URL is:</p>
+<pre><code class="lang-json">https://0ba1-212-17-60-65.ngrok.io/api/dynamic/v1/preview/endpoint?sessionId=1234567892&amp;tenantId=12345&amp;accessToken=a6f56954-7f55-440a-9919-160a2c4af91c&amp;page=initial
+</code></pre>
+<p>The returned HTML/Javascript will be embedded in an iframe and there should be some Javascript mechanism to extract the access token from the current URL of the iframe and next pass it as a header in subsequent dynamic calls made from the iframe during dynamic content selection.</p>
+<ul>
+<li>Dynamic Preview Content - this is the dynamic content which is loaded based on a page selection. This can be loaded initially as part of the initialization routine of the Initial Preview Content after it checks for the hash fragment, and then also, when a user selects a given page using the page selection mechanism (via drop-down or similar). Loading the dynamic content involves making a dynamic call to the app on one of the Custom Preview Endpoints and must pass in the hash fragment as a header to the call. Mechanisms for initiating the call and updating the content might involve AJAX/JQuery or similar.</li>
+<li>TLS (Transport Layer Security) - the app should enable the TLS protocol on all custom endpoints. A valid certificate will be needed for this.</li>
+<li>Authorization/Access token - this is a hard-to-guess value which the app must generate and return as a response to the initial StartPreview request. It should be set as a hash fragment value on the returned URL. The app should provide for a TTL on this access token so that it will expire after a pre-determined time. The app should manage the TTL and any requirements around expiry of this.</li>
+<li>Preview Session - This is a session related to a given preview. Each session has a unique ID associated with it called &quot;Preview Session ID&quot; and it is sent to the app during various requests, including StartPreview. The app should use this to keep track of content related to a specific session when storing it locally.</li>
+<li>App storage - this could be a database or local disk-based storage etc. It is used by the app to store preview related content for specific sessions, such as files used to generate the preview, generated preview content, and any other specific data the app needs to store to work.</li>
+<li>Input Files - these files represent the initial data used to generate the preview. They might be a PreviewPackageTemplate, Native Source or Target files or Annotated Native Source or Target files. These files are described in more detail here:
+<ul>
+<li>PreviewPackageTemplate - this file is a zip package containing different content which is used in the generation of preview content. Examples include XML, HTML, images, CSS, XSLT, Javascript etc. The content of this file is specific to the native file format used to generate the preview.</li>
+<li>Native File - this represents the native format which is being translated or previewed. Examples would be Word documents, Excel documents, XML documents, text documents etc. These files can be source or target, where the source represents the language which is being translated into other languages and the target represents the translated file (for example, source might be Japanese, and target might be French.) - This is a one-to-many relationship type, meaning that there is only one source language but possibly many more target languages.</li>
+<li>Annotated Native File - This is a native source or target file which has been annotated with special characters which encode a segment identifier in the annotation. The annotations also indicate where the segment boundaries are. These are used for segment navigation between the Editor and the Preview and for updating of segments inside the preview when content has changed in the Editor.</li>
+</ul>
+</li>
+<li>Output Preview Content - The generated content is stored by the app locally and a URL is created allowing access to the stored content via a Custom Preview Endpoint on the app. In essence, the app acts like a web server.</li>
+<li>CORS (Cross Origin Resource Sharing) - Please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a> .</li>
+<li>iframe - Please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe</a>.</li>
+</ul>
+<h2 id="creating-a-preview-provider-app">Creating a Preview Provider App</h2>
+<p>The following steps should be considered when creating a Dynamic Preview App:</p>
+<ul>
+<li>Add one or more custom endpoints in the PreviewController class</li>
+<li>Ensure the TLS security protocol is enabled on the app endpoints. A certificate from a trusted CA is required for this.</li>
+<li>Implement the endpoint functionality in the PreviewService class.</li>
+<li>Implement a mechanism for generating and storing hard-to-guess tokens with TTL support. When any of the custom endpoints are called, the TTL associated with that session's access token should be refreshed. When RefreshPreview is called, a new custom URL and access token with a new TTL should be generated.</li>
+<li>Implement the code to generate the preview from the initial files downloaded from the Trados Cloud Platform API.</li>
+<li>In the StartPreview implementation in the PreviewService class, ensure the background job is set up to call the preview generation implementation.</li>
+<li>Store the resulting initial files and the generated preview content from the above preview implementation locally or in a database.</li>
+<li>The response from the background job (StartPreview/RefreshPreview) should generate a URL as detailed in the previous section which points to the custom endpoint and includes the hard-to-guess access token as a hash fragment. This response should return the Initial Preview Content.</li>
+<li>Subsequent Dynamic Preview Content requests should respond with the relevant dynamic content after authorizing the access token sent in a header in the request. The header name can be decided by the app developer as it will be present in the Initial Preview Content HTML/Javascript and will be sent by the dynamic request (AJAX/JQuery etc) from there.</li>
+<li>If the access token has expired, the app should respond with a 401.</li>
+<li>Any calls to RefreshPreview should generate a new access token.</li>
+<li>Any calls to EndPreview should clean up all local data related to the given Preview Session ID.</li>
+<li>Implement a TTL on the local data. If EndPreview has not been called before the TTL expires, clean up all local data related to the given Preview Session ID.</li>
+<li>Implement UpdateSegment endpoint.</li>
+<li>Ensure UpdateSegment updates ALL dynamic pages generated by the app so that when a particular page is selected, it will have the updated content inside the segment.</li>
+<li>Implement a background job which cleans up sessions after a set interval.</li>
+<li>The TTLs associated with the access tokens and session cleanup should be configurable.</li>
+</ul>
+<h2 id="javascript-api-details">Javascript API details</h2>
+<p>The Online Editor Container communicates with the Preview Viewer iframe using the Javascript postMessage mechanism. The API is detailed here in this Javascript file:</p>
+<pre><code class="lang-js">&quot;use strict&quot;;
+
+/* Communication Protocol between the RWS Online Editor and the preview loaded into it.
+ *
+ * Based on passing global events back and forth (events on the window object).
+ * Used for:
+ *
+ *      - navigation from one segment to the other (either happening on the editor and
+ *        getting propagated to the preview, or happening on the preview - by clicking
+ *        a segment - and getting propagated to the editor)
+ *
+ *      - segment updates: when the translation for a segment changes, the segment
+ *        update flow will yield some piece of string (usually html content) that
+ *        will be sent to the preview currently being loaded in the editor
+ *
+ *      - showing messages (could not navigate to the segment currently selected
+ *        in editor / cannot update the translation for certain segment)
+ */
+
+    // IE compatibility
+    Element.prototype.remove = function () {
+        this.parentElement.removeChild(this);
+}
+
+if (!window.sdlPreviewScriptIncludeGuard) {
+    //state
+    var selectedSegmentId = &quot;&quot;;
+    var segmentIdToSigCache = {};
+    var initialized = false;
+
+    // events ----------------------------------------------------------------------
+
+    var PREVIEW_SEGMENT_SELECTED = &quot;Preview:segmentSelected&quot;;
+    var PREVIEW_SHOW_MESSAGE = &quot;Preview:showMessage&quot;;
+    var UE_SEGMENT_SELECTED = &quot;UE:segmentSelected&quot;;
+    var UE_UPDATE_SEGMENT = &quot;UE:updateSegment&quot;;
+}
+
+    // communication ---------------------------------------------------------------
+
+    function onSegmentSelectedInEditor(segmentId) {
+        setActiveSegment(segmentId);
+}
+
+    function onUpdateSegmentWithTranslation(payload) {
+    var segmentId = payload.segmentId;
+    var segmentSnippet = payload.snippet;
+    updateSegmentWithTranslation(segmentId, segmentSnippet);
+}
+
+    function onSegmentSelectedInPreview(segmentId) {
+    if (window.chrome &amp;&amp; window.chrome.webview) {
+        window.chrome.webview.postMessage({
+            &quot;type&quot;: &quot;selectSegment&quot;,
+            &quot;segmentId&quot;: segmentId
+        });
+    } else {
+        emitEvent(PREVIEW_SEGMENT_SELECTED, segmentId);
+    }
+}
+
+    function notifyPreviewControlToApplyInitialSelection() {
+    if (window.chrome &amp;&amp; window.chrome.webview) {
+        window.chrome.webview.postMessage({
+            &quot;type&quot;: &quot;applyInitialSelection&quot;
+        });
+    }
+}
+
+    function notifyNavigationFailure(segmentId) {
+    if (window.chrome &amp;&amp; window.chrome.webview) {
+        window.chrome.webview.postMessage({
+            &quot;type&quot;: &quot;cannotNavigateToSegment&quot;,
+            &quot;segmentId&quot;: segmentId
+        });
+    }
+    else
+    emitEvent(PREVIEW_SHOW_MESSAGE, &quot;CannotNavigateToSegment&quot;);
+}
+
+    function notifyPreviewUpdateFailure() {
+        emitEvent(PREVIEW_SHOW_MESSAGE, &quot;PreviewCannotUpdate&quot;);
+}
+
+    function emitEvent(eventName, parameter) {
+        window.parent.postMessage({
+            &quot;eventName&quot;: eventName,
+            &quot;payload&quot;: parameter
+        }, '*');
+}
+
+    // for scroll sync on side-by-side preview
+    if (window.chrome &amp;&amp; window.chrome.webview) {
+        window.onscroll = () =&gt; window.chrome.webview.postMessage({
+            &quot;type&quot;: &quot;windowScrolled&quot;,
+            &quot;x&quot;: window.scrollX,
+            &quot;y&quot;: window.scrollY
+        });
+}
+
+    // segment update --------------------------------------------------------------
+
+    function updateSegmentWithTranslation(segmentId, segmentSnippet) {
+    var sigs = segmentIdToSigCache[segmentId];
+    if (!sigs || !sigs.length || sigs.length &gt; 1) {
+        notifyPreviewUpdateFailure();
+    return;
+    };
+
+    var sigToReplace = sigs[0];
+    var segmentSnippetDom = new DOMParser().parseFromString(segmentSnippet, &quot;text/html&quot;);
+    updateImagesInSnippet(segmentSnippetDom, sigToReplace);
+    updateFieldsInSnippet(segmentSnippetDom, sigToReplace);
+    sigToReplace.innerHTML = &quot;&quot;;
+
+    var updatedSegment = segmentSnippetDom.getElementsByTagName(&quot;segment&quot;)[0];
+
+    while (updatedSegment.hasChildNodes()) {
+        sigToReplace.appendChild(updatedSegment.firstChild);
+    }
+}
+
+    function updateImagesInSnippet(segmentSnippetDom, sigToReplace) {
+    var snippetImgs = segmentSnippetDom.getElementsByTagName(&quot;img&quot;);
+    var sigImgs = sigToReplace.getElementsByTagName(&quot;img&quot;);
+
+    if (snippetImgs.length &gt; sigImgs.length) {
+        notifyPreviewUpdateFailure();
+    return;
+    }
+
+    if (snippetImgs.length &gt; 0 &amp;&amp; snippetImgs[0].dataset.preserveallimages) {
+        // object and it might have multiple images
+        for (let i = sigImgs.length - 1; i &gt;= 0; i--) {
+        snippetImgs[0].parentElement.insertBefore(sigImgs[i], snippetImgs[0].nextSibling);
+        }
+    snippetImgs[0].remove();
+    } else {
+        for (let i = 0; i &lt; snippetImgs.length; i++) {
+            var currentImg = snippetImgs[i];
+    cloneAttributes(currentImg, sigImgs[i]);
+        }
+    }
+}
+
+    function updateFieldsInSnippet(segmentSnippetDom, sigToReplace) {
+
+    var snippetSpans = segmentSnippetDom.getElementsByTagName(&quot;span&quot;);
+
+    for (var i = 0; i &lt; snippetSpans.length; i++) {
+        var currentSpan = snippetSpans[i];
+    if (currentSpan.dataset.field) {
+            var fieldType = currentSpan.dataset.field;
+    var fieldInDom = sigToReplace.getElementsByTagName(fieldType);
+
+    if (fieldInDom.length !== 1) {
+        notifyPreviewUpdateFailure();
+    return;
+            }
+
+    currentSpan.parentElement.insertBefore(fieldInDom[0], currentSpan);
+    currentSpan.remove();
+        }
+    }
+}
+
+    function cloneAttributes(element, sourceNode) {
+    var attr;
+    var attributes = Array.prototype.slice.call(sourceNode.attributes);
+    while ((attr = attributes.pop())) {
+        element.setAttribute(attr.nodeName, attr.nodeValue);
+    }
+}
+
+    // navigation ------------------------------------------------------------------
+
+    function setActiveSegment(segmentId) {
+        clearSegmentHighlight(selectedSegmentId);
+    selectedSegmentId = segmentId;
+
+    highlightSegment(segmentId, &quot;selected&quot;);
+    scrollSegmentIntoView(segmentId);
+}
+
+    function highlightSegment(segmentId, className) {
+    var elements = segmentIdToSigCache[segmentId];
+    if (!elements) {
+        if (initialized) notifyNavigationFailure(segmentId);
+    return;
+    }
+
+    for (var i = 0; i &lt; elements.length; i++) {
+        var sig = elements[i];
+    sig.setAttribute(&quot;class&quot;, className);
+    }
+}
+
+    function clearSegmentHighlight(segmentId) {
+    if (!segmentId) return;
+
+    var elements = segmentIdToSigCache[segmentId];
+    if (!elements) return;
+
+    for (var i = 0; i &lt; elements.length; i++) {
+        var sig = elements[i];
+    sig.setAttribute(&quot;class&quot;, &quot;&quot;);
+    }
+}
+
+    function scrollSegmentIntoView(segmentId) {
+    var elements = segmentIdToSigCache[segmentId];
+    if (!elements) return;
+
+    scrollIntoViewIfNeeded(elements[0]);
+}
+
+    function scrollIntoViewIfNeeded(element) {
+    if (!element) return;
+
+    var bottomLimit = Math.min(
+    document.documentElement.clientHeight,
+    document.body.clientHeight
+    );
+    var rect = element.getBoundingClientRect();
+
+    var overTop = rect.top &lt; 0;
+    var overBottom = rect.top + rect.height &gt; bottomLimit;
+
+    if (overTop || overBottom) {
+        element.scrollIntoView({ block: &quot;center&quot;, inline: &quot;center&quot; });
+    }
+}
+
+    //Finds y value of given object
+    function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+        curtop += obj.offsetTop;
+        } while ((obj = obj.offsetParent));
+    return [curtop];
+    }
+
+    return [curtop];
+}
+
+    // others ----------------------------------------------------------------------
+
+    function onLoad() {
+        var sigs = document.getElementsByTagName(&quot;sig&quot;);
+        segmentIdToSigCache = {};
+
+    for (var i = 0; i &lt; sigs.length; ++i) {
+        var current = sigs[i];
+    var id = current.getAttribute(&quot;data-segment-id&quot;);
+
+    if (id) {
+        current.onclick = onSigClick;
+    current.onmouseover = onSigMouseOver;
+    current.onmouseout = onSigMouseOut;
+
+    if (segmentIdToSigCache[id]) {
+        segmentIdToSigCache[id].push(current);
+            } else {
+        segmentIdToSigCache[id] = [current];
+            }
+        }
+    }
+
+    if (selectedSegmentId) setActiveSegment(selectedSegmentId);
+
+    notifyPreviewControlToApplyInitialSelection();
+
+    initialized = true;
+}
+    function onSigClick() {
+    var id = this.getAttribute(&quot;data-segment-id&quot;);
+    setActiveSegment(id);
+    onSegmentSelectedInPreview(id);
+}
+
+    function onSigMouseOver() {
+    var id = this.getAttribute(&quot;data-segment-id&quot;);
+    if (id !== selectedSegmentId) highlightSegment(id, &quot;highlighted&quot;);
+}
+
+    function onSigMouseOut() {
+    var id = this.getAttribute(&quot;data-segment-id&quot;);
+    if (id !== selectedSegmentId) clearSegmentHighlight(id);
+}
+
+
+    // entry point
+    window.addEventListener(&quot;message&quot;, function (event) {
+	switch(event.data.eventName) {
+	  case UE_SEGMENT_SELECTED:
+    onSegmentSelectedInEditor(event.data.payload);
+    break;
+    case UE_UPDATE_SEGMENT:
+    onUpdateSegmentWithTranslation(event.data.payload);
+    break;
+    default:
+    console.log(&quot;No handler for event: &quot;, event.data.eventName);
+	}
+});
+    document.addEventListener(&quot;DOMContentLoaded&quot;, onLoad);
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/Preview-App-development-guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

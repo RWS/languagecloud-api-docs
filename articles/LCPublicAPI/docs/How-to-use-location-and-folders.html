@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>How to use location and folders </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="How to use location and folders ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-use-location-and-folders">How to use location and folders</h1>
+
+<p>The Trados Cloud Platform API supports <a href="https://docs.rws.com/791595/984983/trados-enterprise/how-do-folder-structure-and-inheritance-help-you-get-organized-">folder-based</a> access management to all resources. The users have access to resources based on the permissions associated with the group (role) they belong to. For information about creating a user you can check the <a href="Service-credentials.html">Service credentials</a> page.</p>
+<h3 id="concepts-we-use">Concepts we use</h3>
+<p>Detailed information about specific concepts used in inheritance context can be found on the <a href="https://docs.rws.com/791595/984976/trados-enterprise/concepts-we-use">
+Concepts we use</a> page from the official Trados Cloud Platform Documentation Center.</p>
+<h3 id="setting-a-location-for-a-user">Setting a location for a user</h3>
+<p>The folders structure in Trados Cloud Platform API is hierarchical. For more information on how to organize folders and set up a location for a user, visit the <a href="https://docs.rws.com/791595/707420/trados-enterprise/customers">Customers</a> page.</p>
+<h2 id="user-rights-in-folders">User rights in folders</h2>
+<p>Depending on how the account was provisioned, configured and on the groups which the user belongs to, the rights for a user can be more restrictive or permissive.</p>
+<p>Users can learn where they were created, the exact folder, and what groups they belong to, by executing a <a href="../api/Public-API.v1-fv.html#/operations/GetMyUser">Get My User</a> call with the <code>fields</code> query parameters set to <em>&quot;location.name,location.path,groups&quot;</em>.</p>
+<p>For example, let's assume that an account has the following hierarchy of folders (with associated unique identifiers simplified for readability):</p>
+<ul>
+<li><strong>Root</strong> (60b...fb0)
+<ul>
+<li><strong>Customers</strong> (fea...a0b)
+<ul>
+<li><strong>Customer1</strong> (ed7...623)
+<ul>
+<li><strong>Customer3</strong> (4f0...206)</li>
+<li><strong>Customer4</strong> (e73...4a8)</li>
+</ul>
+</li>
+<li><strong>Customer2</strong> (48b...5d0)
+<ul>
+<li><strong>Customer5</strong> (bbc...c21)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Vendors</strong> (a16...29f)
+<ul>
+<li><strong>Vendor1</strong> (b02...281)</li>
+<li><strong>Vendor2</strong> (d46...839)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>If a user is created in Customer5 and is assigned to the &quot;Project Managers Customer5&quot; group, performing the above request will receive the following response:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;62b...d56&quot;,
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;bbc...c21&quot;,
+        &quot;name&quot;: &quot;Customer5&quot;,
+        &quot;path&quot;: [
+           {
+                &quot;id&quot;: &quot;48b...5d0&quot;,
+                &quot;location&quot;: &quot;fea...a0b&quot;,
+                &quot;name&quot;: &quot;Customer2&quot;,
+                &quot;hasParent&quot;: true
+            },
+            {
+                &quot;id&quot;: &quot;fea...a0b&quot;,
+                &quot;location&quot;: &quot;60b...fb0&quot;,
+                &quot;name&quot;: &quot;Customers&quot;,
+                &quot;hasParent&quot;: true
+            },
+            {
+                &quot;id&quot;: &quot;60b...fb0&quot;,
+                &quot;name&quot;: &quot;Root&quot;,
+                &quot;hasParent&quot;: false
+            }
+        ]
+    },
+    &quot;groups&quot;: [
+        {
+            &quot;id&quot;: &quot;60b...2be&quot;,
+            &quot;name&quot;: &quot;Project Managers Customer5&quot;
+        }
+    ]
+}
+</code></pre>
+<p>In the above example <code>location.id</code> describes the exact folder where the resource is situated.
+The array under <code>location.path</code> presents a bottom-up hierarchical arrangement of all the parent folders leading up to <code>Root</code>, where the array ends, this being signaled by the <code>&quot;hasParent&quot;: false</code> field.</p>
+<h3 id="creating-resources-in-folders">Creating resources in folders</h3>
+<p>The users' access to resources depends on the folder where they were created and on the groups they belong to. Detailed information about what actions can be executed with specific roles can be checked <a href="https://docs.rws.com/en-US/trados-enterprise-%26-accelerate-791595/account-structure%2C-folders%2C-inheritance-796862">here</a>.</p>
+<p>When creating a resource, it is strongly recommended to send in the request the <code>location</code> field. When <code>location</code> is not set, the system will try to create the resource in the higher folder in the hierarchy, the Root folder. It might not have access to that folder and the request will fail with forbidden error.</p>
+<p>For example:</p>
+<ul>
+<li><p>If Customer2 tries to create a project with location values set to &quot;48b...5d0&quot;:<br>
+<strong>Where will the project be created?</strong></p>
+<ul>
+<li>in Customer2 folder</li>
+</ul>
+</li>
+<li><p>If Customer2 tries to create a project with no value set for location:<br>
+<strong>Where will the project be created?</strong></p>
+<ul>
+<li>In Root folder, if the user has access in Root</li>
+<li>If the user does not have access in Root, the request will fail with forbidden error</li>
+</ul>
+</li>
+<li><p>If Customer4 tries to create a project with location value set to &quot;e73...4a8&quot;:<br>
+<strong>Where will the project be created?</strong></p>
+<ul>
+<li>in Customer4 folder</li>
+</ul>
+</li>
+<li><p>If Customer4 tries to create a project with no value set for location:<br>
+<strong>Where will the project be created?</strong></p>
+<ul>
+<li>In Root folder, if the user has access in Root</li>
+<li>If the user does not have access in Root, the request will fail with forbidden error</li>
+</ul>
+</li>
+</ul>
+<p>More examples of accessing resources based on their location are listed on the <a href="https://docs.rws.com/791595/797020/trados-enterprise/inheritance-within-the-account">Inheritance within the account</a> page.</p>
+<h3 id="retrieve-resources-using-location-strategy">Retrieve resources using location strategy</h3>
+<p>List endpoints can have a 'location' query parameter that is used to filter items by location. <code>Location</code> is the value of the folder id. Some endpoints accept an array rather than a single location. Additionally, this parameter can be used together with 'locationStrategy' which can have the following values:</p>
+<ul>
+<li><em>location</em>: all resources located strictly in the folders from the folder parameter (default value for <code>locationStrategy</code>) are returned</li>
+<li><em>lineage</em>: resources located in the folder specified by the folder parameter, as well as any of its subfolders, are returned</li>
+<li><em>bloodline</em>: resources located in the folder specified by the folder parameter, as well as any of its ancestor folders, are returned</li>
+<li><em>genealogy</em>: resources located in the folder specified by the folder parameter together with its subfolders and its ancestor folders</li>
+</ul>
+<p>The <code>location</code> field can be an array of folder identifiers containing multiple identifiers separated by commas. In this case, the <code>locationStrategy</code> applies for all of them and the result will contain all resources that fulfill the strategy, but, if a resource is duplicated in response for two, or more location identifiers, it will be returned only once.</p>
+<p>For example, let's see how <code>location</code> and <code>locationStrategy</code> query parameters work on an account that has the hierarchy defined in the earlier example:</p>
+<ul>
+<li><strong>Root</strong> (60b...fb0) - <strong>Project1</strong>
+<ul>
+<li><strong>Customers</strong> (fea...a0b) - <strong>Project2</strong>
+<ul>
+<li><strong>Customer1</strong> (ed7...623)
+<ul>
+<li><strong>Customer3</strong> (4f0...206) - <strong>Project3</strong></li>
+<li><strong>Customer4</strong> (e73...4a8)</li>
+</ul>
+</li>
+<li><strong>Customer2</strong> (48b...5d0)
+<ul>
+<li><strong>Customer5</strong> (bbc...c21) - <strong>Project4</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Vendors</strong> (a16...29f)
+<ul>
+<li><strong>Vendor1</strong> (b02...281)</li>
+<li><strong>Vendor2</strong> (d46...839)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>If the list project endpoint is used with:</p>
+<ul>
+<li><p><code>location</code> = &quot;fea...a0b&quot; (Customers folder identifier)
+<br>
+Project2 is listed because the default value for <code>locationStrategy</code> is &quot;location&quot;.</p>
+</li>
+<li><p><code>locationStrategy</code> = &quot;lineage&quot;
+<br>
+All projects are listed because sending the <code>locationStrategy</code> without <code>location</code> does not filter anything.</p>
+</li>
+<li><p><code>location</code> =  &quot;fea...a0b&quot; (Customers folder identifier) AND <code>locationStrategy</code> = &quot;location&quot;
+<br>
+Project2 is listed because it is similar with the first case.</p>
+</li>
+<li><p><code>location</code> =  &quot;fea...a0b&quot; (Customers folder identifier) AND <code>locationStrategy</code> = &quot;lineage&quot;
+<br>
+Project2, Project3 and Project4 are returned.</p>
+</li>
+<li><p><code>location</code> =  &quot;4f0...206&quot; (Customer3 folder identifier) AND <code>locationStrategy</code> = &quot;bloodline&quot;
+<br>
+Project1, Project2 and Project3 are returned.</p>
+</li>
+<li><p><code>location</code> =  &quot;fea...a0b&quot; (Customers folder identifier) AND <code>locationStrategy</code> = &quot;genealogy&quot;
+<br>
+Project1, Project2, Project3 and Project4 are returned.</p>
+</li>
+<li><p><code>location</code> = &quot;fea...a0b,fea...0a0&quot; (Customers and Customer3 folder identifiers) AND <code>locationStrategy</code> = &quot;lineage&quot;
+<br>
+Project2, Project3 (only once) and Project4 are returned.</p>
+</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/How-to-use-location-and-folders.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

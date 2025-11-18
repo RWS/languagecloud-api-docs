@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Testing </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Testing ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="testing">Testing</h1>
+
+<p>This guide explains the ways we can test the app from our local environment. This will help with solving the potential bugs or issues before deploying the app.</p>
+<p>Prerequisites:</p>
+<ol>
+<li>Ngrok</li>
+<li>MongoDB</li>
+</ol>
+<h2 id="ngrok">Ngrok</h2>
+<p>Ngrok exposes local servers to the public internet over secure tunnels. The app endpoints need to be public for Trados to find them.</p>
+<p>You can find a quick guide on how to install and set up Ngrok <a href="https://ngrok.com/download">here</a>.</p>
+<h3 id="usage">Usage</h3>
+<ol>
+<li><p>Find the <strong>port</strong> on which the app runs in the configuration files:</p>
+<ul>
+<li><p><code>launchSettings.json</code> for the .NET blueprint</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;Rws.LC.AppBlueprint&quot;: {
+    ...
+    &quot;applicationUrl&quot;: &quot;http://localhost:5000&quot;
+  }
+}
+</code></pre>
+</li>
+<li><p><code>application.yml</code> for the Java blueprint</p>
+<pre><code class="lang-yml">...
+server:
+  port: 5000
+...
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Open a Command-line tool (for example <code>cmd</code>, <code>PowerShell</code>), navigate to your Ngrok location, and run this command for your port:</p>
+<pre><code>ngrok http 5000
+</code></pre>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/testingTools/RunNgrok.gif?raw=true" alt="RunNgrok"></p>
+</li>
+</ol>
+<h3 id="configuration">Configuration</h3>
+<ol>
+<li><p>After having started a new session, you can find the exposed URLs in the Command-line.</p>
+</li>
+<li><p>Copy the URL that uses <strong>https</strong>. For example:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/testingTools/ngrokCmd2.png?raw=true" alt="NgrokRunning"></p>
+</li>
+<li><p>Locate the <code>baseUrl</code> setting in the configuration files and replace it with the copied URL:</p>
+<ul>
+<li><code>appsettings.json</code> for the .NET blueprint</li>
+<li><code>application.yml</code> for the Java blueprint</li>
+</ul>
+</li>
+</ol>
+<h3 id="testing-1">Testing</h3>
+<ol>
+<li><p>Although you could access the descriptor URL from a browser, we recommend using a testing client like <a href="https://www.postman.com/">Postman</a> to perform the <code>GET</code> request to your descriptor URL, namely <code>https://&lt;ngrokURL&gt;/&lt;descriptorPath&gt;</code>. For example:</p>
+<pre><code>GET https://47b6-78-96-152-25.ngrok.io/v1/descriptor
+</code></pre>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/testingTools/GetDescriptor.gif?raw=true" alt="GETdescriptor"></p>
+</li>
+<li><p>If you have problems accessing the URL, you can try running Ngrok using one of these alternative commands:</p>
+<pre><code>ngrok http 5000 -host-header=&quot;localhost:5000&quot;
+</code></pre>
+<ul>
+<li></li>
+</ul>
+<pre><code>ngrok http https://localhost:5000 -host-header=&quot;localhost:5000&quot;
+</code></pre>
+</li>
+<li><p>Make sure the descriptor response contains the correct value for the <code>baseUrl</code> field.</p>
+</li>
+<li><p><a href="../../appManagement/Registering.html">Register</a> the app in Trados using the URL provided by Ngrok.</p>
+</li>
+</ol>
+<blockquote>
+<p>You can restart the app application anytime while running a Ngrok session, without having to start a new session.</p>
+</blockquote>
+<h2 id="mongodb">MongoDB</h2>
+<p>We recommend using MongoDB as it is free and fairly easy to use. For testing purposes, the <a href="https://www.mongodb.com/try/download/community">community version</a> should be enough.</p>
+<p>The installation package should also include the <strong>MongoDB Compass Community</strong> application which is the user interface for your database. Here we can see the collections with the documents inserted by the app at runtime.</p>
+<p>For example:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/testingTools/MongoCompass.gif?raw=true" alt="MongoCompass"></p>
+<p>You can edit the Mongo settings in the configuration files of the blueprints:</p>
+<ul>
+<li><p><code>appsettings.json</code> for the .NET blueprint</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;MongoDb&quot;: {
+    &quot;Connection&quot;: &quot;mongodb://localhost:27017&quot;,
+    &quot;Name&quot;: &quot;lc-local-appblueprint&quot;
+  }
+}
+</code></pre>
+</li>
+<li><p><code>application.yml</code> for the Java blueprint</p>
+<pre><code class="lang-yml">...
+spring:
+  ...
+  data:
+    mongodb:
+      authentication-database: admin
+      database: lc-blueprint-app
+      uri: mongodb://localhost:27017
+      ssl-enabled: false
+      auto-index-creation: false
+...
+</code></pre>
+</li>
+</ul>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>If you decide to use a different database, you should also modify your code accordingly.</p>
+</div>
+<p>If you plan to package your app into a Docker container, here is a dedicated article for <a href="Testing-with-Docker.html">Testing with Docker</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/blueprints/Testing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

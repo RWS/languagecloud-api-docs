@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>How to report an issue </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="How to report an issue ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="how-to-report-an-issue">How to report an issue</h1>
+
+<p>When reporting an issue it is important to include as much information as you can.</p>
+<h2 id="use-this-template">Use this template</h2>
+<p>Here below is a template that we recommend using when raising a new ticket:</p>
+<pre><code>- Endpoint: 
+- X-LC-Tenant: 
+- X-LC-TraceId: 
+- Request URL:
+- Request body: 
+- Response status code:
+- Response body: 
+- Expected result: 
+- Actual result: 
+- Description: 
+</code></pre>
+<p>You don't have to fill in all the fields, but the more details you provide, the easier it will be to investigate and get to a solution faster. Besides these details you can also add anything that you consider helpful for the investigation.</p>
+<h2 id="obtaining-the-details">Obtaining the details</h2>
+<ul>
+<li>Endpoint - identify the endpoint where the issue was observed from the <a href="https://languagecloud.sdl.com/lc/api-docs/9033e3227d21f-rws-language-cloud-api">Trados Cloud Platform API</a> and paste the link to it.</li>
+<li>X-LC-Tenant - is the tenant identifier as sent in the request headers. This is required on all endpoints.</li>
+<li>X-LC-TraceId - is a unique identifier for the request and it can be found in the response headers. It is very useful when investigating the issue, thus it <strong>should always be provided</strong>, if possible.</li>
+<li>Request URL - the URL in the request as sent from your application (including the domain, endpoint path and any query parameters). If that is not available, at least include the query parameters used to perform the request. Some of the most relevant ones are: <code>fields</code>, <code>top</code>, <code>skip</code>, <code>location</code>, <code>locationStrategy</code> and others, depending on the case.</li>
+<li>Request body - the <code>json</code> content sent.</li>
+<li>Response status code - the HTTP status code returned.</li>
+<li>Response body - the response received. Error responses are also relevant.</li>
+<li>Expected result - what was the expected outcome.</li>
+<li>Actual result - what was the actual outcome.</li>
+<li>Description - a short description about what you are trying to achieve and possible answers to questions like &quot;How did you end up in the current situation?&quot; or &quot;Did you find a workaround?&quot;</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>You can simply copy the format from above and fill in the details. For example:</p>
+<ul>
+<li>Endpoint: <a href="https://eu.cloud.trados.com/lc/api-docs/025707d21ecc0-create-project">https://eu.cloud.trados.com/lc/api-docs/025707d21ecc0-create-project</a></li>
+<li>X-LC-Tenant: &lt;YOUR_TENANT_ID&gt;</li>
+<li>X-LC-TraceId: 90d9147c-6afd-4d19-b0ac-99cac9ece970</li>
+<li>Request URL: <a href="https://api.eu.cloud.trados.com/public-api/v1/projects?fields=dueBy,status,customer.name">https://api.eu.cloud.trados.com/public-api/v1/projects?fields=dueBy,status,customer.name</a></li>
+<li>Request body:
+<pre><code class="lang-json">{
+  &quot;name&quot;: &quot;Invalid projectTemplate&quot;,
+  &quot;description&quot;: &quot;How to report an issue&quot;,
+  &quot;projectTemplate&quot;: {
+    &quot;id&quot;: &quot;invalid_project_template_id&quot;
+  }
+}
+</code></pre>
+</li>
+<li>Response status code: 404</li>
+<li>Response body:
+<pre><code class="lang-json">{
+    &quot;errorCode&quot;: &quot;notFound&quot;,
+    &quot;message&quot;: &quot;Invalid input on create project.&quot;,
+    &quot;details&quot;: [
+        {
+            &quot;name&quot;: &quot;project.template.id&quot;,
+            &quot;code&quot;: &quot;notFound&quot;,
+            &quot;value&quot;: &quot;invalid_project_template_id&quot;
+        }
+    ]
+}
+</code></pre>
+</li>
+<li>Expected result: The project is created.</li>
+<li>Actual result: The project is not created due to <code>projectTemplate.id</code> not being found.</li>
+<li>Description: When attempting to create a new project I get the error mentioned above.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Check the <a href="Multi-region.html">Multi-Region</a> page for regional API details.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/How-to-report-an-issue.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

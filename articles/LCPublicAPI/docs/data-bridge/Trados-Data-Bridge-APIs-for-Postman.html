@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Data Bridge APIs for Postman </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Data Bridge APIs for Postman ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-data-bridge-apis-for-postman">Trados Data Bridge APIs for Postman</h1>
+
+<p>We provide a <a href="https://www.postman.com/">Postman</a> collection for quick and easy usage of our RESTful APIs.</p>
+<h2 id="installation">Installation</h2>
+<p>You can download the Postman collection from <a href="https://github.com/sdl/language-cloud-public-api-postman/blob/develop/postmanDataCollection.json?raw=true">here</a>.</p>
+<p>You have 3 setup options:</p>
+<ul>
+<li>Copy the collection URL from above and import it into Postman using <code>Import &gt; Link</code>.</li>
+<li>Copy the entire file content and import it into Postman using <code>Import &gt; Raw Text</code>.</li>
+<li>Save it as a <code>JSON</code> file on your computer and import it into Postman using <code>Import &gt; File</code>.</li>
+</ul>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/SetLCAccountToken.png?raw=true" alt="image"></p>
+<br>
+<h2 id="configuration">Configuration</h2>
+<p>The imported collection is already set up for you to get started as fast as possible.</p>
+<p>We make use of collection level variables and an inherited authentication mechanism.</p>
+<p>For example, authentication is already set up to use the Bearer Token scheme and will use the token value provided by <code>{{lc-access-token}}</code> variable. This token is populated with the correct value, each time you <code>Obtain a client credentials access token</code>, via the Tests tab.</p>
+<p>One thing you need to do before proceeding is to fill in the <code>{{lc_tenant}}</code> variable with your own tenant ID. Prepend the ID with LC- so the final value looks like this <code>LC-00000000000000000</code>.</p>
+<p>Don't forget to save the collection!</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/SetLCTenant.png?raw=true" alt="image"></p>
+<br>
+<h2 id="authentication">Authentication</h2>
+<p>To start working with the Trados Data Bridge API, you first need to authenticate.</p>
+<p>You can find the authentication call under the <code>Authentication (Start Here)</code> folder. Fill in your <code>client_id</code> and <code>client_secret</code> and perform the request.</p>
+<p>If the authentication is successful, the token will be extracted automatically from the response and saved to the <code>{{lc-access-token}}</code> variable.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/AuthorizationWithClientCredentials.png?raw=true" alt="image"></p>
+<br>
+<h2 id="usage">Usage</h2>
+<p>After you have authenticated successfully, you can start interacting with the RWS Language Cloud Data API.</p>
+<p>For example, we can get information about a project by using the <strong>List Task Status Project Dimension</strong> request from the <strong>Task Status</strong> folder.</p>
+<p>Simply fill in your value <code>projectId eq 'stringValue'</code> from your $filter parameter section and click SEND. Optionally, you can specify additional OData querys like<br>
+<code>projectTemplateName eq 'stringValue' and projectShortId eq numericValue</code>.<br>
+For more options see below table
+| Operators| Description| Example |
+|----------|------------|---------|
+| Comparison operators| Use the <code>eq, ne, gt, ge, lt, le</code> operators to compare a property and a value.  |<code>$filter=revenue eq 100000</code>|
+| Logical operators|Use <code>and, or</code> to create more complex expressions.|<code>$filter=revenue lt 100000 and revenue gt 2000</code>|
+| Grouping operators|Use parentheses: <code>()</code>, to specify the precedence to evaluate a complex expression.|<code>$filter=(projectShortId lt 16867 and projectShortId gt 16800) and projectStatus eq 'completed'</code>|
+| Expand operator|The <code>expand</code> system query option specifies the related resources to be included. Each expandItem is evaluated relative to the entity containing the navigation or stream property being expanded.|<code>$expand=project</code>|</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/WorkingWithFilterParameter.png?raw=true" alt="image"></p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/WorkingWithExpandParameter.png?raw=true" alt="image"></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/data-bridge/Trados-Data-Bridge-APIs-for-Postman.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Custom fields </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Custom fields ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="custom-fields">Custom fields</h1>
+
+<p>Custom Fields allow associating custom data with a project. Custom Fields can be defined in the UI, and then listed and accessed using the List and Get endpoints. The Custom Field values are retrieved through the Project endpoints.</p>
+<h2 id="custom-field-definitions">Custom Field Definitions</h2>
+<p>To list the available Custom Field Definitions make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListCustomFields"><code>/custom-field-definitions</code></a> endpoint. The response contains: the Custom Fields total count, and by default, the <code>id</code> and the <code>name</code> for each Custom Field. By specifying the <code>fields</code> query parameter, the other properties of these entities can be retrieved.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ListCustomFieldsPostman.gif?raw=true" alt="List custom fields"></p>
+<p>To get a particular Custom Field Definition make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/GetCustomField"><code>/custom-field-definitions/{customFieldDefinitionId}</code></a> endpoint, and specify the <code>customFieldDefinitionId</code> path parameter.
+The default fields for custom field are <code>id</code> and <code>name</code>, but the other fields can be seen by specifying them into <code>fields</code> query param. For example: <code>id,key,description,type,defaultValue</code></p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetCustomFieldPostman.gif?raw=true" alt="Get custom field"></p>
+<p>A default value can be specified on the Custom Field Definition, which will be applied to a project if no other value is specified when creating the project.</p>
+<h2 id="custom-fields-in-projects">Custom fields in Projects</h2>
+<p>At project level, Custom Fields can be set either when creating a project or when updating one. Moreover, custom fields are exposed when users search for a project or list all projects.</p>
+<p><strong>Creating projects with Custom Fields</strong></p>
+<p>To create or update a project with Custom Fields, follow the instructions for creating/updating projects, but also populate the <code>customFields</code> property in the request payload.</p>
+<p>The <code>key</code> property is mandatory and must be specified for each Custom Field. Its value, however, is optional and the Custom Field Definition might contain a default value that will be applied if not otherwise specified. If the value doesn't correspond to the type of Custom Field selected, a validation message with a Bad Request status will be returned in the response. The value type can be checked in the Custom Field Definition in the <code>type</code> field, for ex: <code>DATE</code>, <code>STRING</code>, <code>PICKLIST</code>.</p>
+<p>When creating a project using a template, Custom Fields that are marked with <code>isMandatory: true</code> must be included in the create request and values set, if a default value is not specified.</p>
+<p>The following is an example for creating a project body with valid Custom Fields:</p>
+<p><em><strong>Request</strong></em>:</p>
+<pre><code class="lang-json">...
+{
+    &quot;name&quot;: &quot;API project with valid custom fields&quot;,
+    &quot;projectTemplate&quot;: {
+        &quot;id&quot;: &quot;60c1f06d1d8ff66537d674c3&quot;
+    },
+    &quot;languageDirections&quot;: [
+        {
+            &quot;sourceLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;en-gb&quot;
+            },
+            &quot;targetLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;fr-be&quot;
+            }
+        }
+    ],
+    &quot;location&quot;: &quot;d1d6bd4e2ec14ab99e2ec41682553ac0&quot;,
+    &quot;customFields&quot;: [
+        {
+            &quot;key&quot;: &quot;Custom_Field_Boolean_ps0xw&quot;,
+            &quot;value&quot;: true
+        },
+		{
+            &quot;key&quot;: &quot;Custom_Field_Long_Text_qq4olq&quot;,
+            &quot;value&quot;: &quot;Test custom field&quot;
+        }
+    ]
+}
+...
+</code></pre>
+<p><em><strong>Response</strong></em>:</p>
+<pre><code class="lang-json">...
+{
+    &quot;id&quot;: &quot;60fa9b729011f339266a2e3b&quot;,
+    &quot;name&quot;: &quot;API project with valid custom fields&quot;,
+    &quot;languageDirections&quot;: [
+        {
+            &quot;sourceLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;en-GB&quot;,
+                &quot;englishName&quot;: &quot;English (United Kingdom)&quot;
+            },
+            &quot;targetLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;fr-BE&quot;,
+                &quot;englishName&quot;: &quot;French (Belgium)&quot;
+            }
+        }
+    ],
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;d1d6bd4e2ec14ab99e2ec41682553ac0&quot;,
+        &quot;name&quot;: &quot;RWS&quot;
+    },
+    &quot;customFields&quot;: [
+        {
+            &quot;id&quot;: &quot;60c3539b06e09d00019c0a2d&quot;
+        },
+        {
+            &quot;id&quot;: &quot;60c353ec06e09d00019c0a2f&quot;
+        }
+    ]
+}
+...
+</code></pre>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateProjectWithCustomFieldsPostman.gif?raw=true" alt="Create project with custom fields"></p>
+<p>An example for creating a project with an invalid value set for a custom field:</p>
+<p><em><strong>Request</strong></em>:</p>
+<pre><code class="lang-json">...
+{
+    &quot;name&quot;: &quot;API project with invalid custom fields&quot;,
+    &quot;projectTemplate&quot;: {
+        &quot;id&quot;: &quot;60c1f06d1d8ff66537d674c3&quot;
+    },
+    &quot;languageDirections&quot;: [
+        {
+            &quot;sourceLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;en-gb&quot;
+            },
+            &quot;targetLanguage&quot;: {
+                &quot;languageCode&quot;: &quot;fr-be&quot;
+            }
+        }
+    ],
+    &quot;location&quot;: &quot;d1d6bd4e2ec14ab99e2ec41682553ac0&quot;,
+    &quot;customFields&quot;: [
+        {
+            &quot;key&quot;: &quot;Custom_Field_Boolean_ps0xw&quot;,
+            &quot;value&quot;: &quot;Test custom field&quot; //invalid value
+        }
+    ]
+}
+...
+</code></pre>
+<p><em><strong>Response</strong></em>:
+This will have an HTTP code 400 Bad Request</p>
+<pre><code class="lang-json">...
+{
+    &quot;message&quot;: &quot;Invalid input on create project.&quot;,
+    &quot;errorCode&quot;: &quot;invalidInput&quot;,
+    &quot;details&quot;: [
+        {
+            &quot;name&quot;: &quot;project.customFields[0]&quot;,
+            &quot;code&quot;: &quot;invalidInput&quot;,
+            &quot;value&quot;: &quot;Test custom field&quot;
+        }
+    ]
+}
+...
+</code></pre>
+<p><strong>Updating projects with Custom Fields</strong></p>
+<p>To update the Custom Fields of a project make a <code>PUT</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject"><code>/projects/{projectId}</code></a> endpoint. Specify new values for the Custom Fields that need updating.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/UpdateProjectWithCustomFieldsPostman.gif?raw=true" alt="Update project with custom fields"></p>
+<p><strong>Getting Custom Fields for projects</strong></p>
+<p>To get the Custom Fields for a project, make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/GetProject"><code>/projects/{projectId}</code></a> endpoint and request the desired fields in the <code>fields</code> query parameters: <code>customFields.id,customFields.key,customFields.value</code>. Similarly, this can be done when making a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListProjects"><code>/projects</code></a> endpoint.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetProjectWithCustomFieldsPostman.gif?raw=true" alt="Get project with custom fields"></p>
+<h2 id="custom-fields-in-project-templates">Custom Fields in Project Templates</h2>
+<p>Custom Fields can be defined in Project Templates. <code>isMandatory</code> on a Custom Field indicates that it must be populated when a project is created with that template.</p>
+<p>To get the Custom Fields for a project template, make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/GetProjectTemplate"><code>/project-templates/{projectTemplateId}</code></a> endpoint or a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListProjectTemplates"><code>/project-templates</code></a> endpoint and specify the desired fields in the <code>fields</code> query parameters: <code>customFields.id,customFields.key,customFields.value</code>.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/GetProjectTemplateWithCustomFieldsPostman.gif?raw=true" alt="Get project template with custom fields"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Custom-Fields.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

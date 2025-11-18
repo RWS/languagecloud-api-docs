@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Translation Memory import and export </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Translation Memory import and export ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="translation-memory-import-and-export">Translation Memory import and export</h1>
+
+<h2 id="concepts">Concepts</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Translation Unit</td>
+<td>A pair made of source and target segments</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td>The <code>fields</code> contain metadata about the translation unit.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="importing-a-translation-memory">Importing a translation memory</h2>
+<p>The translation memory that you want to import must have one of the following formats: <code>tmx</code>, <code>sdltm</code>, <code>zip</code>, <code>tmx.gz</code> or <code>sdlxliff</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before the import action, make sure you have already created a translation memory using the <a href="../../api/Public-API.v1-fv.html#/operations/CreateTranslationMemory">Create Translation Memory</a> endpoint.</p>
+</div>
+<p>To import a translation memory, perform a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory">Import Translation Memory</a> endpoint and provide these details: <code>translationMemoryId</code>, the translation memory file and a couple of properties.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Pay special attention to the order of <code>properties</code> and <code>file</code>. It must be exactly as described in the contract (properties first).</p>
+</div>
+<p>If you are not sure what properties to include, here's a short description for each of them:</p>
+<ol>
+<li><code>sourceLanguageCode</code> and <code>targetLanguageCode</code> - These fields represent the language direction of your import. Make sure to provide both of them as they are required fields.</li>
+<li><code>importAsPlainText</code> - When true, the translation units will be imported as plain text, excluding any text markup.</li>
+<li><code>exportInvalidTranslationUnits</code> - When true, all the translation units that failed to import are saved in a <code>tmx</code> file.</li>
+<li><code>triggerRecomputeStatistics</code> - When true, will recompute the fuzzy index statistics once the import is done.</li>
+<li><code>targetSegmentsDifferOption</code> - Option to specify how to handle translation units in the Translation Memory, if the target segments differ.
+<ul>
+<li><code>addNew</code> - Add a new translation unit and leave the original translation unit with the same source untouched.</li>
+<li><code>overwrite</code> - Overwrite all the existing translation units where the source segment matches with the new content.</li>
+<li><code>leaveUnchanged</code> - Do not change the existing translation units with the same source segment and ignore the new translation unit.</li>
+<li><code>keepMostRecent</code> - Delete all the existing translation units with matching source segments and retain only the most recent translation unit</li>
+</ul>
+</li>
+<li><code>unknownFieldsOption</code> - Option to specify how to handle translation units and unknown fields in the Translation Memory.
+<ul>
+<li><code>addToTranslationMemory</code> - The translation unit is processed and the unknown user-defined fields are automatically added to the setup.</li>
+<li><code>skipTranslationUnit</code> - The translation units containing unknown user-defined fields are skipped.</li>
+<li><code>ignore</code> - The translation unit is processed and the unknown user-defined fields are ignored (not added to the setup).</li>
+<li><code>failTranslationUnitImport</code> - If any translation unit contains an unknown user-defined field an error is thrown.</li>
+</ul>
+</li>
+<li><code>onlyImportSegmentsWithConfirmationLevels</code> - Only segments with the specified confirmation levels will be imported.
+<ul>
+<li><code>translated</code> - The segment has been fully translated, but not yet reviewed.</li>
+<li><code>approvedTranslation</code> - The translation has been reviewed and approved, but not signed-off.</li>
+<li><code>approvedSignOff</code> - The translation has been approved and signed-off.</li>
+<li><code>draft</code> - The target segment may have been changed, but it's not yet considered fully translated.</li>
+<li><code>rejectedTranslation</code> - The translation has been reviewed and rejected.</li>
+<li><code>rejectedSignOff</code> - The translation was rejected in the sign-off process.</li>
+</ul>
+</li>
+</ol>
+<p>Note that only the <code>sourceLanguageCode</code> and <code>targetLanguageCode</code> fields are <strong>required</strong>, the others already have default values, so you don't have to set them.</p>
+<p>If the import is successful, you will get back the import <code>id</code> and the <code>status</code>(normally <code>queued</code>).</p>
+<p>For more details about translation memory imports you can also check out the <a href="https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content">Importing TM content</a> page.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ImportTM.gif?raw=true" alt="Import TM"></p>
+<h2 id="polling-a-translation-memory-import">Polling a translation memory import</h2>
+<p>Some imports may take longer, depending on the size of the Translation Memory.</p>
+<p>To check if the import finished, you can perform a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/PollTMImport">Poll Translation Memory Import</a> endpoint and supply the <code>importId</code> and the <code>translationMemoryId</code>. The import is complete when the status is <code>done</code>.</p>
+<h2 id="exporting-a-translation-memory">Exporting a translation memory</h2>
+<p>To export a translation memory, perform a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory">Export Translation Memory</a> endpoint and provide the <code>translationMemoryId</code> and a valid <code>languageDirection</code> of your translation memory.</p>
+<p>If the export is successful, you will get back an <code>exportId</code> and the export <code>status</code>. If the export did not succeed, the response will contain an error message.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ExportTM.gif?raw=true" alt="Export TM"></p>
+<h2 id="polling-a-translation-memory-export">Polling a translation memory export</h2>
+<p>Some exports may take longer, depending on the size of the Translation Memory.</p>
+<p>To check if the export finished, you can perform a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/PollTranslationMemoryExport">Poll Translation Memory Export</a> endpoint and supply the <code>exportId</code>. The export is complete when the status is <code>done</code>.</p>
+<h2 id="downloading-a-translation-memory-export">Downloading a translation memory export</h2>
+<p>If an export is completed successfully (the status received at the polling is <code>done</code>), it can be downloaded by performing a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/DownloadExportedTranslationMemory">Download Exported Translation Memory</a> endpoint. Just supply as <code>path</code> parameter the <code>exportId</code> and the response will contain the exported translation memory file in <code>tmx.gz</code> format.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/translation-memory/Translation-memory-import-export.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

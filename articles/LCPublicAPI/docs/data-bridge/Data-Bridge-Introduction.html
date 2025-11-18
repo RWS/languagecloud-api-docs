@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Data Bridge </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Data Bridge ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-data-bridge">Trados Data Bridge</h1>
+
+<p>Trados Data Bridge - technically known as the Data API - gives you secure, read-only access to your Trados Cloud data. It’s designed for reporting, analytics, and business intelligence applications, allowing external tools to connect directly without manual exports or custom connectors.</p>
+<h2 id="overview">Overview</h2>
+<p>The Data API provides structured, near real-time access to analytical data about your translation projects, tasks, costs, leverage, and evaluation metrics.
+Use Data Bridge to:
+Power dashboards in your existing analytics environment
+Combine localization metrics with data from financial systems, CRMs, or web analytics
+Uncover trends and measure the business impact of your localization strategy
+By connecting directly to Trados data, teams can stop relying on static reports or siloed dashboards and instead build a single, holistic view of performance across the enterprise.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Read-only access to analytical data</strong> to safely explore data without risking changes</li>
+<li><strong>OData v4 query capabilities</strong> for flexible data filtering and sorting</li>
+<li><strong>Multiple data sets</strong> including projects, tasks, costs, leverage, and evaluation metrics</li>
+<li><strong>Fast integration</strong> no custom connectors required, works with most BI and analytics platforms out of the box</li>
+</ul>
+<h2 id="data-sets-available">Data Sets Available</h2>
+<p>See the consolidated overview of all datasets: <a href="Data-Sets.html">Data Sets</a>.</p>
+<h2 id="base-api-url">Base API URL</h2>
+<p>Trados Cloud Platform operates in multiple regions, and it's essential to know in which region your Trados is located to use the Data API.</p>
+<p>To see the host on different regions, check the API base URL in the contract.</p>
+<h2 id="authentication--authorization">Authentication &amp; Authorization</h2>
+<p>To start working with the Trados Data Bridge API, you first need to authenticate.
+The Data Bridge API uses the same authentication mechanism as the Public API.</p>
+<p>Follow the instructions under the <a href="../Service-users-and-custom-applications.html">Service users and custom applications</a> and the <a href="../Service-credentials.html">Service Credentials</a> pages to create a service user and an application, and then authenticate, following the <a href="../Authentication.html">Authentication</a> page, by using the application's <code>client_id</code> and <code>client_secret</code>.</p>
+<p>Before running requests, set <code>{{lc_tenant}}</code> to your account ID (for example, <code>LC-00000000000000000</code>).</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/SetLCTenant.png?raw=true" alt="image"></p>
+<br>
+<h2 id="rate-limits-and-daily-quotas">Rate Limits and Daily Quotas</h2>
+<p>Data Bridge API is governed by the same rate limits as Public API <a href="../API-rate-limits.html">API rate limits</a></p>
+<p>In addition, Data Bridge enforces a daily data transfer quota:</p>
+<ul>
+<li>Quota is measured by data volume retrieved (not request count)</li>
+<li>Europe region: quota resets at midnight UTC</li>
+<li>Canada region: quota resets at midnight EST</li>
+<li>Requests that exceed the quota return HTTP 429 (Too Many Requests) until the reset time</li>
+</ul>
+<h2 id="postman-collection">Postman Collection</h2>
+<p>Use the provided <a href="Trados-Data-Bridge-APIs-for-Postman.html">Postman</a> collection to quickly explore and test the Trados Data Bridge API endpoints.</p>
+<h2 id="data-availability">Data Availability</h2>
+<p>Data availability varies by data set:</p>
+<ul>
+<li>Most data becomes available after the <strong>Analysis workflow task</strong> completes</li>
+<li>Revenue data requires <strong>Quote Generation task</strong> completion</li>
+<li>Some metrics are updated in real-time as workflow tasks complete</li>
+</ul>
+<h2 id="advanced-query-options">Advanced Query Options</h2>
+<p>For comprehensive OData query syntax reference and additional examples, see the <a href="OData-Query-Guide.html">OData Query Guide</a> and <a href="https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview">Microsoft OData Query Options Overview</a>.</p>
+<h2 id="api-reference">API Reference</h2>
+<p>For detailed endpoint documentation, parameters, and response schemas, see the <a href="../../api/Data-Bridge-API.v1-fv.html">Trados Data Bridge API Reference</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/data-bridge/Data-Bridge-Introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

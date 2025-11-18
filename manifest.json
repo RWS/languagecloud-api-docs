@@ -51,6 +51,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "Requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "Requirements.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/bcm/Sdl.Core.Bcm.BcmModel.Alignment.AlignmentData.yml",
       "output": {
@@ -1744,6 +1754,1052 @@
         },
         ".json": {
           "relative_path": "articles/BCM/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/Extensibility/api/Extensibility-API.v1-fv.html",
+      "output": {
+        "resource": {
+          "relative_path": "articles/Extensibility/api/Extensibility-API.v1-fv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/Extensibility/api/Extensibility-API.v1.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/Extensibility/api/Extensibility-API.v1.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/api/Extensibility-API.v1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/api/Extensibility-API.v1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/Whats-New.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/Whats-New.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Approvals.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Approvals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Foreword.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Foreword.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Installing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Installing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Publishing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Publishing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Registering.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Registering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Retiring.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Retiring.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Sharing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Sharing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Updating.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Updating.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/appManagement/Validating.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/appManagement/Validating.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/consumer/Automatic-Task-App-consumer-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/consumer/Automatic-Task-App-consumer-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/consumer/Dynamic-Preview-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/consumer/Dynamic-Preview-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/consumer/MT-App-consumer-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/consumer/MT-App-consumer-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Add-On-To-App-Migration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Add-On-To-App-Migration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/App-Descriptor.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/App-Descriptor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/App-Versioning.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/App-Versioning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Authentication-Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Authentication-Overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Automatic-Task-App-development-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Automatic-Task-App-development-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Concepts.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Concepts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Deployment-Strategy.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Deployment-Strategy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Lifecycle.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Lifecycle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/MT-App-development-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/MT-App-development-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Multi-Region.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Multi-Region.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Preview-App-development-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Preview-App-development-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Request-Authentication.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Request-Authentication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Technical-Requirements-And-Best-Practices.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Technical-Requirements-And-Best-Practices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Trados-Cloud-API.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Trados-Cloud-API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/UI-App-custom-elements-locations.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/UI-App-custom-elements-locations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/UI-App-development-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/UI-App-development-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Verification-App-development-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Verification-App-development-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Webhooks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Webhooks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Dot-Net-Blueprint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Dot-Net-Blueprint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Dot-Net-Migration-Blueprint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Dot-Net-Migration-Blueprint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Getting-Started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Getting-Started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Java-Blueprint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Java-Blueprint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Java-Migration-Blueprint.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Java-Migration-Blueprint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Testing-with-Docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Testing-with-Docker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/blueprints/Testing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/blueprints/Testing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/samples/Dot-Net-Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/samples/Dot-Net-Samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/samples/Java-Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/samples/Java-Samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/Extensibility/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/Extensibility/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1-fv.html",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1-fv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1-fv.html",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1-fv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/api/Global-Public-API.v1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Public-API.v1-fv.html",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Public-API.v1-fv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Public-API.v1.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Public-API.v1.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/api/Public-API.v1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/api/Public-API.v1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Webhooks.v1-fv.html",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Webhooks.v1-fv.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/api/Webhooks.v1.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/api/Webhooks.v1.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/api/Webhooks.v1.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/api/Webhooks.v1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/API-rate-limits.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/API-rate-limits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Authentication.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Authentication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Basic-project-creation-flow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Basic-project-creation-flow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Create-projects.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Create-projects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Custom-Fields.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Custom-Fields.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Developing-Language-Cloud-Add-Ons.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Developing-Language-Cloud-Add-Ons.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Export-quote-report.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Export-quote-report.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/File-formats.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/File-formats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Headers-considerations.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Headers-considerations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/How-to-multipart.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/How-to-multipart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/How-to-report-an-issue.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/How-to-report-an-issue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/How-to-use-location-and-folders.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/How-to-use-location-and-folders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Interact-with-tasks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Interact-with-tasks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Known-Issues.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Known-Issues.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Language-Cloud-APIs-for-Postman.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Language-Cloud-APIs-for-Postman.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Language-codes.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Language-codes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Multi-region.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Multi-region.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Public-API-Management-Process.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Public-API-Management-Process.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Service-credentials.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Service-credentials.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Service-users-and-custom-applications.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Service-users-and-custom-applications.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Track-projects.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Track-projects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Update-project-quote.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Update-project-quote.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Updating-data-with-PUT.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Updating-data-with-PUT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Use-fields-in-your-requests.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Use-fields-in-your-requests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Use-paging-and-sorting-for-lists.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Use-paging-and-sorting-for-lists.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Whats-New.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Whats-New.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/Whats-deprecated.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/Whats-deprecated.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Client-Upgrade-Guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Client-Upgrade-Guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Client.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Client.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/api-clients/java/Java-Samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/api-clients/net/NET-Client.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/api-clients/net/NET-Client.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/api-clients/net/Net-Samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/api-clients/net/Net-Samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/data-bridge/Data-Bridge-Introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/data-bridge/Data-Bridge-Introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/data-bridge/Data-Sets.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/data-bridge/Data-Sets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/data-bridge/OData-Query-Guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/data-bridge/OData-Query-Guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/data-bridge/Trados-Data-Bridge-APIs-for-Postman.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/data-bridge/Trados-Data-Bridge-APIs-for-Postman.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-entries.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-entries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-import-export.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-import-export.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-templates.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/termbase/Termbase-templates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/termbase/Termbase.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/termbase/Termbase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/translation-memory/Translation-memory-advanced-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/translation-memory/Translation-memory-advanced-configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/translation-memory/Translation-memory-import-export.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/translation-memory/Translation-memory-import-export.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/translations/Translations.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/translations/Translations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/webhooks/Batched-webhooks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/webhooks/Batched-webhooks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/webhooks/Webhooks-payload.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/webhooks/Webhooks-payload.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/LCPublicAPI/docs/webhooks/Webhooks-setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/docs/webhooks/Webhooks-setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/LCPublicAPI/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/LCPublicAPI/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/LCPublicAPI/toc.json"
         }
       },
       "version": ""

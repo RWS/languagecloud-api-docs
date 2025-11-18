@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Dynamic Preview </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Dynamic Preview ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dynamic-preview">Dynamic Preview</h1>
+
+<p>Dynamic Preview apps offer the ability to render previews dynamically based on selections the user makes in the preview page.</p>
+<h2 id="installing-the-app">Installing the App</h2>
+<p>To benefit from the app's functionality first you have to install it on your account. You can install an app by following these steps:</p>
+<ol>
+<li><p>Navigate to <strong>RWS AppStore</strong> where you can find all the public apps.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/DynamicPreview-AppStore-app.gif?raw=true" alt="AccessRWSAppStore"></p>
+</li>
+<li><p>Select the desired app.</p>
+</li>
+<li><p>Read the app's documentation by accessing the documentation link.</p>
+</li>
+<li><p>Click the <strong>Install</strong> button.</p>
+</li>
+<li><p>When finished, select <strong>Complete</strong>.</p>
+</li>
+</ol>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/InstallDynamicPreviewApp.gif?raw=true" alt="RWSAppStore"></p>
+<h2 id="setting-up-the-preview">Setting up the Preview</h2>
+<ol>
+<li>Under your Trados Enterprise account, set up a new FileType.</li>
+<li>Select a file type which is supported by your app. In this case, we chose the XML 2: Any XML FileType</li>
+<li>Follow the steps shown below to add the Dynamic Preview Type to your FileType Preview Settings.</li>
+</ol>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/DynamicPreview-SetUp.gif?raw=true" alt="DynamicPreviewSetup"></p>
+<ol start="4">
+<li>Create a project and add your file which you will be previewing to it.</li>
+<li>Open the Online Editor and select the Preview Type as shown below:</li>
+</ol>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/DynamicPreview-SelectPreviewType.gif?raw=true" alt="PreviewTypeSetup"></p>
+<ol start="6">
+<li>In the rendered preview, change the dynamic page which is loaded as shown in the example below. Note: The mechanism for changing the content dynamically will depend on the app implementation and preview rendering.</li>
+</ol>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/DynamicPreview-ChangePreviewPage.gif?raw=true" alt="DynamicPreviewSetup"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/consumer/Dynamic-Preview-guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

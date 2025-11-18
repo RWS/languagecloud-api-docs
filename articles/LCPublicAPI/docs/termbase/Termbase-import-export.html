@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Termbase import and export </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Termbase import and export ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="termbase-import-and-export">Termbase import and export</h1>
+
+<br>
+<h2 id="importing-a-termbase">Importing a termbase</h2>
+<p>The following termbase formats are supported: <code>tbx</code> and <code>xml</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Before importing a termbase, make sure you already created one using the <a href="../../api/Public-API.v1-fv.html#/operations/CreateTermbase">Create Termbase</a> endpoint.</p>
+</div>
+<p>To import a <code>tbx</code> or an <code>xml</code> termbase, perform a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ImportTermbase">Import Termbase</a> endpoint and provide the <code>termbaseId</code> and the termbase file. Optionally, you can specify two import settings via query parameters:</p>
+<ol>
+<li><code>duplicateEntriesStrategy</code> - It determines how the duplicate entries will be handled and it can have one of the following values:</li>
+</ol>
+<ul>
+<li><p><code>ignore</code> The content of the current entry with the same identifier will be kept and the new entry will be ignored.</p>
+</li>
+<li><p><code>merge</code> The content of the current entry with the same identifier will be merged into the imported entry. If the identifier is not provided, the content will be merged by text.</p>
+</li>
+<li><p><code>override</code> The content of the current entry with the same identifier will be replaced by the imported entry.</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <code>duplicateEntriesStrategy</code> is not sent, the default behavior will be <code>override</code>.</p>
+</div>
+<ol start="2">
+<li><code>strictImport</code> - It specifies if the entries are imported only into the exact language that matches your imported file and it can have one of the following values:</li>
+</ol>
+<ul>
+<li><p><code>true</code>  The import will only occur if the language in your import file matches exactly a language in your termbase.</p>
+</li>
+<li><p><code>false</code> The import will occur even if there are non-matching languages, by trying to match them to a relevant main language or language variant, if available.</p>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <code>strictImport</code> is not sent, the default behavior will be <code>true</code>.</p>
+</div>
+<p>If the import is successful, you will get back an <code>importId</code> and the import <code>status</code>.</p>
+<p><img src="https://raw.githubusercontent.com/RWS/language-cloud-public-api-doc-resources/main/PublicAPI/ImportTermbasePostman.gif?raw=true" alt="Import Termbase"></p>
+<br>
+<h2 id="polling-a-termbase-import">Polling a termbase import</h2>
+<p>Some imports may take longer, depending on the size of the termbase.</p>
+<p>To check if the import finished, you can perform a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/PollTermbaseImport">Poll Termbase Import</a> endpoint and supply the <code>importId</code> and the <code>termbaseId</code>. The import is complete when the status is <code>done</code>.</p>
+<br>
+<h2 id="exporting-a-termbase">Exporting a termbase</h2>
+<p>The following termbase formats are supported: <code>tbx</code> and <code>xml</code>.</p>
+<p>To export a <code>tbx</code> or an <code>xml</code> termbase, perform a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ExportTermbase">Export Termbase</a> endpoint and provide the <code>termbaseId</code>.
+Optionally, you can specify in body, one of the two allowed formats. If none is specified, the default format will be <code>tbx</code>. Also, in the body, it can be specified if the download should be compressed (zipped) or not. By default, this property is set to <code>false</code>.</p>
+<p>If the export is successful, you will get back an <code>exportId</code>, the export <code>status</code> and the <code>downloadUrl</code> for this. If the export did not succeed, the response will contain an <code>errorMessage</code>.</p>
+<p><img src="https://raw.githubusercontent.com/RWS/language-cloud-public-api-doc-resources/main/PublicAPI/ExportTermbasePostman.gif?raw=true" alt="Export Termbase"></p>
+<br>
+<h2 id="polling-a-termbase-export">Polling a termbase export</h2>
+<p>Some exports may take longer, depending on the size of the termbase.</p>
+<p>To check if the export finished, you can perform a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/PollExportTermbase">Poll Termbase Export</a> endpoint and supply the <code>exportId</code> and the <code>termbaseId</code>. The export is complete when the status is <code>done</code>.</p>
+<br>
+<h2 id="downloading-a-termbase-export">Downloading a termbase export</h2>
+<p>If an export is completed (the status received at the polling is <code>done</code>), it can be downloaded by performing a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/DownloadExportedTermbase">Download Exported Termbase</a> endpoint. Supply as path parameters the <code>exportId</code> and the <code>termbaseId</code> and the response will contain the exported termbase file.
+<br></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/termbase/Termbase-import-export.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

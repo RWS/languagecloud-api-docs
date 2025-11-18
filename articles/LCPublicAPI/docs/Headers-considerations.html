@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Headers considerations </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Headers considerations ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="headers-considerations">Headers considerations</h1>
+
+<p>The purpose of this page is to showcase the header types that could capture your interest.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Headers must be treated as <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">case-insensitive</a>.</p>
+</div>
+<p>The Trados Cloud Platform API response headers can be classified as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Header type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td><code>Content-Type</code></td>
+</tr>
+<tr>
+<td>Custom</td>
+<td><code>X-LC-TraceId</code></td>
+</tr>
+<tr>
+<td>Endpoint specific</td>
+<td><code>Content-Disposition</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="content-type-header">Content-Type header</h2>
+<p>The <code>application/octet-stream</code> content type  is used to indicate that a body contains arbitrary binary data. The recommended action for a consumer that receives an
+<code>application/octet-stream</code> entity is to simply offer to put the data
+in a file, read more in the <a href="https://www.rfc-editor.org/rfc/rfc2046#section-4.5.1">RFC2046</a> space.</p>
+<h2 id="content-disposition-header">Content-Disposition header</h2>
+<p>For operations expected to return content that can be handled as a file, the <code>Content-Disposition</code> header can be sent in the response headers to provide more information about the response payload. The Trados Cloud Platform API will provide this header in certain situations, and its primary goal is to supply a file name for the content being downloaded or exported.
+You can read more about the <code>Content-Disposition</code> header on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">MDN Web Docs</a> website or in the <a href="https://www.rfc-editor.org/rfc/rfc6266">RFC6266</a> space.</p>
+<p>The <code>Content-Disposition</code> response header can be usually found on various download API endpoints like <a href="../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion">Download Source File Version</a>, <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion">Download Target File Version</a>, <a href="../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport">Download Exported Quote Report</a> and others.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please note that both <code>Content-Type</code> and <code>Content-Disposition</code> are  <strong>not required</strong> and APIs might not include them in the response. There are no guarantees that an endpoint that used to return a <code>Content-Type</code> or <code>Content-Disposition</code> header will still do so, under any circumstance. Please treat these headers as <strong>optional</strong> for all APIs.</p>
+</div>
+<h3 id="retrieving-the-file-name">Retrieving the file name</h3>
+<p>Here's an example of how the <code>Content-Type</code> and the <code>Content-Disposition</code> headers look like:</p>
+<pre><code>Content-Type: application/octet-stream
+Content-Disposition: attachment; filename=&quot;Public API Download.pdf&quot;; filename*=UTF-8''Public%20API%20Download.pdf
+</code></pre>
+<p>The parameters <code>filename</code> and <code>filename*</code>, to be matched case-
+insensitively, provide information on how to construct a filename for
+storing the message payload.</p>
+<p>The parameters <code>filename</code> and <code>filename*</code> differ only in that
+<code>filename*</code> uses the encoding defined in <a href="https://www.rfc-editor.org/rfc/rfc5987">RFC5987</a>, allowing the use of characters not present in the ISO-8859-1 character set.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When both <code>filename</code> and <code>filename*</code> are present in a single header field value, you <strong>must</strong> pick <code>filename*</code> and ignore <code>filename</code>.</p>
+</div>
+<p>If the <code>Content-Disposition</code> header is missing or you simply want to have a different file name, you need to provide a name and the file extension. The extension can be usually inferred from the required <code>Content-Type</code> header and also from the operation that is invoked.</p>
+<h2 id="deprecation-and-sunset-headers">Deprecation and sunset headers</h2>
+<p>These types of headers are used in our endpoint retirement process and are covered broadly in the <a href="Public-API-Management-Process.html#endpoint-retirement-process">Public API Management Process</a> page.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Headers-considerations.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

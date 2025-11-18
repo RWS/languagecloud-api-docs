@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>What&#39;s Deprecated </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="What&#39;s Deprecated ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="whats-deprecated">What's Deprecated</h1>
+
+<br>
+<h2 id="1-july-2024">1 July 2024</h2>
+<p>We have removed the old fields in the folder/resource structure and are no longer available. Use the <a href="../api/Public-API.v1-fv.html#/schemas/folder-v2">path</a> field going forward.</p>
+<h2 id="13-december-2023">13 December 2023</h2>
+<ul>
+<li>The <code>Export Quote</code> endpoint has been removed.</li>
+<li>In the Get Project Template model we deprecated:
+<ul>
+<li><code>forceOnline</code> field from root level and we added <code>forceOnline</code> to the settings → general</li>
+<li><code>quoteTemplate</code> field from root level and we added <code>quoteTemplate</code> to the settings → general
+They will only be available for use until July 2024.</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-august-2023">17 August 2023</h2>
+<p>We updated the folder/resource locations to the new format, which now includes the <a href="../api/Public-API.v1-fv.html#/schemas/folder-v2">path</a>. The old fields are marked as deprecated and their decommissioning is scheduled at a minimum of six months from now.</p>
+<h2 id="12-august-2022">12 August 2022</h2>
+<p>In the <code>Quote</code> code, we deprecated the <code>Export Quote</code> endpoint. It will only be available for use until December 2022.</p>
+<h2 id="7-june-2022">7 June 2022</h2>
+<p>In the <code>LanguageDirectionRequest</code> model we deprecated:</p>
+<ul>
+<li>the <code>sourceLanguageCode</code> field and introduced <code>sourceLanguage</code> as an object containing the <code>languageCode</code> field;</li>
+<li>the <code>targetLanguageCode</code> field and introduced <code>targetLanguage</code> as an object containing the <code>languageCode</code> field.</li>
+</ul>
+<p>They will no longer be available to use starting with November 2022.</p>
+<h2 id="8-september-2021">8 September 2021</h2>
+<p>We removed deprecated fields from the ErrorResponse model.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Whats-deprecated.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

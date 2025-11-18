@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>API rate limits </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="API rate limits ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="api-rate-limits">API rate limits</h1>
+
+<p>Trados Cloud Platform API enforces rate limits to prevent overuse and spikes of requests that could degrade the platform performance.</p>
+<p>The default limits are chosen as to cover the needs of most integrators, but there might be cases when these limits are insufficient. In this case you should contact support for help in increasing your account limits.</p>
+<h2 id="default-trados-cloud-platform-api-rate-limits">Default Trados Cloud Platform API Rate Limits</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please remember our current limits and that they are subject to change without notice. You must always rely on response headers and never hardcode any limit values.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Daily limits are calculated in a fixed time window, that is reset nightly at 00:00 UTC.</p>
+</div>
+<p>Each tenant is entitled to:</p>
+<ol>
+<li>Up to 10 API requests per second.</li>
+<li>Up to 200 API requests per minute.</li>
+<li>Up to 200 000 API requests per day.</li>
+</ol>
+<h4 id="projects-rate-limits">Projects Rate Limits</h4>
+<p>For <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">Create Project Operation</a>:</p>
+<p>each tenant is entitled to:</p>
+<ol>
+<li>Up to 2 API requests per second.</li>
+<li>Up to 10 API requests per minute.</li>
+<li>Up to 500 API requests per day.</li>
+</ol>
+<h4 id="export-quote-rate-limits">Export Quote Rate Limits</h4>
+<p>For <a href="../api/Public-API.v1-fv.html#/operations/ExportQuoteReport">Export Quote Report</a>:</p>
+<p>each tenant is entitled to:</p>
+<ol>
+<li>Up to 2 API requests per second.</li>
+<li>Up to 10 API requests per minute.</li>
+<li>Up to 1000 API requests per day.</li>
+</ol>
+<h4 id="import--export-translation-memory-limits">Import / Export Translation Memory limits:</h4>
+<ol>
+<li>Up to 2 API requests per second.</li>
+<li>Up to 10 API requests per minute.</li>
+<li>Up to 2000 API requests per day.</li>
+</ol>
+<h4 id="project-files-rate-limits">Project Files Rate Limits</h4>
+<p>For each of the API operations listed below:</p>
+<ul>
+<li><a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile">Add Source File</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/DownloadSourceFileVersion">Download Source File Version</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/DownloadExportedTargetFileVersion">Download Exported Target File Version</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion">Download Target File Version</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/AddSourceFileVersion">Add Source File Version</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/AddTargetFileVersion">Add Target File Version</a></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ImportTargetFileVersion">Import Target File Version</a></li>
+</ul>
+<p>each tenant is entitled to:</p>
+<ol>
+<li>Up to 5 API requests per second.</li>
+<li>Up to 200 API requests per minute.</li>
+<li>Up to 5000 API requests per day.</li>
+</ol>
+<h4 id="rate-limit-verification-endpoint">Rate Limit verification endpoint</h4>
+<p>Individual rate limits can be consulted below:</p>
+<ul>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListRateLimits">List Rate Limits</a></li>
+</ul>
+<h2 id="rejection-response">Rejection response</h2>
+<p>In case a request is blocked or rejected the following details are sent to the Client:</p>
+<p>Error Response Status Code: <strong>TOO_MANY_REQUESTS</strong> (429, &quot;Too Many Requests&quot;). Example of a response message:</p>
+<pre><code class="lang-json">{
+    &quot;errorCode&quot;: &quot;TOO_MANY_REQUESTS_EXCEPTION&quot;,
+    &quot;message&quot;: &quot;Quota exceeded. Please check X-RateLimit-Reset response header&quot;,
+    &quot;details&quot;: []
+}
+</code></pre>
+<p>Response headers can provide more details:</p>
+<ul>
+<li><code>X-RateLimit-Limit</code>: the limit that was exceeded. For example, the value &quot;2&quot; represents the available quota. It does not provide the type of limit that has been exceeded, for those details  the <code>X-RateLimit-Reset</code> and <code>X-RateLimit-Policy</code> should be used (for deciding when to retry the call).</li>
+<li><code>X-RateLimit-Reset</code>: the exact moment in time when the Client can resume activity. This is datetime in RFC-1123 format, for example: &quot;Tue, 3 Jun 2008 11:05:30 GMT&quot;.</li>
+<li><code>X-RateLimit-Remaining</code>: the value is always  &quot;0&quot;. This is reserved for future enhancements.</li>
+<li><code>X-RateLimit-Policy</code>: the name of the Rate Limit policy that was violated, made up by the operation and the time interval. Please see also the <a href="../api/Public-API.v1-fv.html#/operations/ListRateLimits">List Rate Limits</a>.</li>
+</ul>
+<h2 id="implementation-recommendations">Implementation recommendations</h2>
+<p>Unless it's a time-critical scenario, don't make requests in parallel. It is better to keep all the requests in sequence.</p>
+<p>It's important to handle responses with the HTTP Status 429. There are multiple approaches to handle it and a simple strategy would be:</p>
+<ol>
+<li>Expect the HTTP code (429)</li>
+<li>Block all the requests, and wait until <code>X-RateLimit-Reset</code></li>
+<li>Try again.</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/API-rate-limits.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

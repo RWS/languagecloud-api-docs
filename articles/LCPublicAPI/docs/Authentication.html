@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Authentication </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Authentication ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="authentication">Authentication</h1>
+
+<p>We recommend using the provided <a href="Language-Cloud-APIs-for-Postman.html">Postman Collection</a> to get started.</p>
+<h2 id="base-api-url">Base API URL</h2>
+<p>The base API address is <strong><code>https://api.{REGION_CODE}.cloud.trados.com/public-api/v1/</code></strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Check the <a href="Multi-region.html">Multi-Region</a> page for regional API details.</p>
+</div>
+<h2 id="authorization-headers">Authorization headers</h2>
+<p>When making any call to the Trados Cloud Platform API, make sure you provide the following <code>Header</code> information:</p>
+<ul>
+<li><code>Authorization</code> = access token</li>
+<li><code>X-LC-Tenant</code> = tenant ID</li>
+</ul>
+<p>Also note that the <code>Authorization</code> header should use the Bearer schema, for example:</p>
+<pre><code>Authorization: Bearer {{token}}
+</code></pre>
+<br>
+<h2 id="how-do-i-find-the-tenant-id">How do I find the tenant ID?</h2>
+<p>A service user can be part of only one account. If you're not sure what the tenant ID is for a service user, you can:</p>
+<ol>
+<li>Log in to the Trados UI, and make sure to select the same account where the service user was created.</li>
+<li>In the top right-hand corner, select your profile, and then select <strong>Manage Account</strong>.</li>
+<li>In the <strong>Account Information</strong> tab, check the value for <strong>Trados Account ID</strong>.</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>There are 2 identifiers that might be confused. The identifier you need looks something like this: <strong>2ef3c10e74fc39104e633c11</strong>.
+<br></p>
+</div>
+<h2 id="generating-the-bearer-token">Generating the Bearer Token</h2>
+<p>For generating the token, Trados Cloud Platform API uses the Auth0 authorization server (<code>https://sdl-prod.eu.auth0.com/oauth/token</code>) and the <a href="https://auth0.com/docs/flows/client-credentials-flow">client credentials flow</a>.</p>
+<p>The request to Auth0 can be done using JSON or URL Form Encoded. There is no difference between them, so you can choose whichever best suits you in terms of code. Here are some example payloads for both approaches:</p>
+<p><code>POST</code> to <code>https://sdl-prod.eu.auth0.com/oauth/token</code> with <code>Content-Type: application/json</code>:</p>
+<pre><code>{
+    &quot;client_id&quot;: &quot;{{the client ID for the application}}&quot;,
+    &quot;client_secret&quot;: &quot;{{the Client Secret for the application}}&quot;,
+    &quot;grant_type&quot;: &quot;client_credentials&quot;,
+    &quot;audience&quot;:&quot;https://api.sdl.com&quot;
+}
+</code></pre>
+<p>Alternatively, you can <code>POST</code> to <code>https://sdl-prod.eu.auth0.com/oauth/token</code> with <code>Content-Type: application/x-www-form-urlencoded</code>:</p>
+<pre><code class="lang-json">client_id={{the Client ID for the application}}&amp;client_secret={{the Client Secret for the application}}&amp;grant_type=client_credentials&amp;audience=https://api.sdl.com
+</code></pre>
+<p>The response will be a JSON that contains the token, for example:</p>
+<pre><code class="lang-json">{
+  &quot;access_token&quot;: &quot;eyJhbGciO....4NXz8TXatw&quot;,
+  &quot;expires_in&quot;: 86400,
+  &quot;token_type&quot;: &quot;Bearer&quot;
+}
+</code></pre>
+<p>The token is provided in the <code>access_token</code> property. This is then used to make authenticated calls to the Trados Cloud Platform API by using the Authorization header, and the X-LC-Tenant header:</p>
+<pre><code class="lang-json">Authorization: Bearer {{access_token}}
+X-LC-Tenant: {{tenantId}}
+</code></pre>
+<br>
+<h2 id="token-management">Token management</h2>
+<p>The previous example of an Auth0 response body that contains the <code>access_token</code>, also contains an expiry value <code>&quot;expires_in&quot;: 86400</code>. That property informs the service of how long the token is valid for. An application should use this value to cache the token for that duration minus a few minutes (to avoid clock drift issues).</p>
+<p>The application is responsible for getting a fresh token once the token is about to expire, by using the same mechanism described above.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>While it's technically possible to get a fresh token for every single call, there is no reason to do so, and the calling application IP risks to be blocked by Auth0 as it might consider it a DoS attack.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Please limit the number of requests for the Bearer token to a maximum of 16 per day. It's acceptable to exceed this limit only if you need to deploy multiple versions of your application, in a single day.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Authentication.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

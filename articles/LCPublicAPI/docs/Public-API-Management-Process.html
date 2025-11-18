@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Cloud Platform API Management Process </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Cloud Platform API Management Process ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-cloud-platform-api-management-process">Trados Cloud Platform API Management Process</h1>
+
+<br>
+<h2 id="overview">Overview</h2>
+<p>By using continuous delivery, our team regularly updates the Trados Cloud Platform API with new functionality, bug fixes and performance improvements.</p>
+<p>Find below the defined process (lifecycle policy) we use that enables us to maintain a set of stable APIs.</p>
+<p>Every release is announced on the <a href="Whats-New.html">What's new</a> page in our API Docs.</p>
+<h2 id="what-is-a-breaking-change">What is a breaking change?</h2>
+<ul>
+<li>Changing the type of a field</li>
+<li>Modifying a field name</li>
+<li>Marking an existing field as required with no default value</li>
+<li>Introducing a new validation</li>
+<li>Enforcing validations</li>
+<li>Removing or renaming enum values</li>
+<li>Removing fields from response</li>
+</ul>
+<h2 id="what-isnt-a-breaking-change">What isn't a breaking change?</h2>
+<ul>
+<li>Adding new endpoints</li>
+<li>Adding optional request fields</li>
+<li>Adding new fields in responses</li>
+<li>Adding new field as required with default value</li>
+<li>Changing of error messages description</li>
+<li>Adding enum values</li>
+</ul>
+<h2 id="endpoint-retirement-process">Endpoint retirement process</h2>
+<p>Retirement of an endpoint will happen in two phases: deprecation and sunset.</p>
+<p>Deprecation will be marked accordingly with IETF's <a href="https://datatracker.ietf.org/doc/draft-dalal-deprecation-header/">deprecation http-response-header-field</a> with:</p>
+<ul>
+<li>a date in the future: representing the date, when the endpoint will be marked as deprecated</li>
+<li>a date in the past: representing the date, when the endpoint was marked as deprecated</li>
+<li>true: simply signal to the clients, that the endpoint is deprecated</li>
+</ul>
+<p>The deprecation period is six months.</p>
+<p>Sunset marks the point in time where the endpoint will not return the expected response. The endpoint will still be functional until sunset.</p>
+<p>Together with the deprecation header, a new sunset-header will be introduced to mark the date of the sunset.</p>
+<h2 id="how-will-we-communicate-an-eventual-breaking-change-or-endpoint-retirement">How will we communicate an eventual breaking change or endpoint retirement?</h2>
+<p>An eventual breaking change or an endpoint retirement will be announced:</p>
+<ul>
+<li>on the <a href="Whats-New.html">What's new</a> page in our API Docs</li>
+<li>on the <a href="Whats-deprecated.html">What's deprecated</a> page in our API Docs</li>
+<li>on the developers <a href="https://developers.rws.com/languagecloud-api-docs/index.html">GitHub</a> page</li>
+<li>on a new blog post in the <a href="https://community.rws.com/developers-more/developers/language-developers/b/language-developers-blog">Language Developers Blog</a> and <a href="https://community.rws.com/product-groups/trados-portfolio/trados-live/b/blog">Trados Blog</a></li>
+</ul>
+<p>Any breaking change will be announced six months in advance.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We may introduce breaking changes for critical bugs or security vulnerabilities.</p>
+</div>
+<h2 id="what-is-our-process-for-testing-changes-before-releasing-them-to-the-trados-cloud-platform-api">What is our process for testing changes before releasing them to the Trados Cloud Platform API?</h2>
+<p>All changes undergo comprehensive testing and validation, following our deployment chronology in both non-customer and customer facing environments.</p>
+<p>As part of development, unit and contract tests are built as appropriate and undergo in-depth code review before being merged into master.</p>
+<p>As part of testing, once the changes are merged, they are tested according to our testing strategy, where testing scope and test coverage are identified. A test plan for the changes is created and  quality assurance engineers decide upon manual and automation testing percentage to ensure the feature is implemented according to the specifications. On top of this we make sure regressions are not introduced by running the automated tests we have in place, as part of the release pipeline. Before new code is deployed to an environment (either customer or non-customer facing), all smoke tests must pass.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Public-API-Management-Process.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

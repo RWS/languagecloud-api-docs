@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Termbase templates </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Termbase templates ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="termbase-templates">Termbase templates</h1>
+
+<br>
+<h2 id="creating-a-termbase-template">Creating a termbase template</h2>
+<p>A termbase template can be created by making a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/CreateTermbaseTemplate"><code>/termbase-templates</code></a> endpoint.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If the <code>location</code> is not specified, the template will be created in the root folder.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When <code>dataType</code> is <code>picklist</code>, the <code>pickListValues</code> array must be filled in or the <code>allowCustomValues</code> must be set to true.</p>
+</div>
+<p>Postman example:</p>
+<p><img src="https://raw.githubusercontent.com/RWS/language-cloud-public-api-doc-resources/main/PublicAPI/CreateTermbaseTemplate.gif?raw=true" alt="Create Termbase Template"></p>
+<p>Request example: <code>POST /termbase-templates</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;Simple Termbase template&quot;,
+    &quot;description&quot;: &quot;A simple termbase template.&quot;,
+    &quot;location&quot;: &quot;5ebcd778b3d9411141eeff7a&quot;,
+    &quot;copyright&quot;: &quot;RWS&quot;,
+    &quot;languages&quot;: [{
+            &quot;languageCode&quot;: &quot;en-US&quot;
+        }
+    ],
+    &quot;fields&quot;: [{
+            &quot;name&quot;: &quot;Entry level field&quot;,
+            &quot;description&quot;: &quot;A simple entry level field description.&quot;,
+            &quot;level&quot;: &quot;entry&quot;,
+            &quot;dataType&quot;: &quot;text&quot;,
+            &quot;allowMultiple&quot;: true,
+            &quot;isMandatory&quot;: false
+        }, {
+            &quot;name&quot;: &quot;Language level field&quot;,
+            &quot;description&quot;: &quot;A simple language level field description.&quot;,
+            &quot;level&quot;: &quot;language&quot;,
+            &quot;dataType&quot;: &quot;boolean&quot;,
+            &quot;allowMultiple&quot;: false,
+            &quot;isMandatory&quot;: true
+        }, {
+            &quot;name&quot;: &quot;Term level field&quot;,
+            &quot;description&quot;: &quot;A simple term level field description.&quot;,
+            &quot;level&quot;: &quot;term&quot;,
+            &quot;dataType&quot;: &quot;picklist&quot;,
+            &quot;pickListValues&quot;: [
+                &quot;Option 1&quot;,
+                &quot;Option 2&quot;,
+                &quot;Option 3&quot;
+            ],
+            &quot;allowCustomValues&quot;: false,
+            &quot;allowMultiple&quot;: false,
+            &quot;isMandatory&quot;: false
+        }
+    ]
+}
+
+</code></pre>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;6156bbc7a638696c7686db7f&quot;,
+    &quot;name&quot;: &quot;Simple Termbase template&quot;,
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;5ebcd778b3d9411141eeff7a&quot;,
+        &quot;name&quot;: &quot;RWS&quot;
+    },
+    &quot;type&quot;: &quot;userDefined&quot;
+}
+</code></pre>
+<br>
+<h2 id="updating-a-termbase-template">Updating a termbase template</h2>
+<p>A termbase template can be updated by making a <code>PUT</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/UpdateTermbaseTemplate"><code>/termbase-templates/{termbaseTemplateId}</code></a> endpoint. Postman example:</p>
+<p><img src="https://raw.githubusercontent.com/RWS/language-cloud-public-api-doc-resources/main/PublicAPI/UpdateTermbaseTemplate.gif?raw=true" alt="Update Termbase Template"></p>
+<p>Request example: <code>PUT /termbase-templates/6156bbc7a638696c7686db7f</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;[UPDATED] Simple Termbase template&quot;,
+    &quot;description&quot;: &quot;A simple termbase template.&quot;,
+    &quot;copyright&quot;: &quot;RWS&quot;,
+    &quot;languages&quot;: [{
+            &quot;languageCode&quot;: &quot;en-US&quot;
+        }
+    ],
+    &quot;fields&quot;: [{
+            &quot;name&quot;: &quot;[UPDATED] Entry level field&quot;,
+            &quot;description&quot;: &quot;A simple entry level field description.&quot;,
+            &quot;level&quot;: &quot;entry&quot;,
+            &quot;dataType&quot;: &quot;double&quot;,
+            &quot;allowMultiple&quot;: true,
+            &quot;isMandatory&quot;: false
+        }
+    ]
+}
+</code></pre>
+<br>
+<h2 id="retrieving-a-termbase-template">Retrieving a termbase template</h2>
+<p>A termbase template can be retrieved by making a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/GetTermbaseTemplate"><code>/termbase-templates/{termbaseTemplateId}</code></a> endpoint.</p>
+<p>Request example: <code>GET /termbase-templates/6156bbc7a638696c7686db7f?fields=name,location,description,languages,fields</code></p>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;615ae37ac736b8373d19a717&quot;,
+    &quot;name&quot;: &quot;[UPDATED] Simple Termbase template&quot;,
+    &quot;description&quot;: &quot;A simple termbase template.&quot;,
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;5ebcd778b3d9411141eeff7a&quot;,
+        &quot;name&quot;: &quot;RWS&quot;
+    },
+    &quot;type&quot;: &quot;userDefined&quot;,
+    &quot;languages&quot;: [{
+            &quot;languageCode&quot;: &quot;en-US&quot;,
+            &quot;englishName&quot;: &quot;English (United States)&quot;
+        }
+    ],
+    &quot;fields&quot;: [{
+            &quot;id&quot;: &quot;615af63ca638696c7687d7fa&quot;,
+            &quot;name&quot;: &quot;[UPDATED] Entry level field&quot;,
+            &quot;type&quot;: &quot;userDefined&quot;,
+            &quot;level&quot;: &quot;entry&quot;,
+            &quot;dataType&quot;: &quot;double&quot;
+        }
+    ]
+}
+
+</code></pre>
+<br>
+<h2 id="retrieving-termbase-templates">Retrieving termbase templates</h2>
+<p>You can retrieve the list of termbase templates by making a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ListTermbaseTemplates"><code>/termbase-templates</code></a> endpoint.</p>
+<p>Request example: <code>GET /termbase-templates?fields=name,description</code></p>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;items&quot;: [{
+            &quot;id&quot;: &quot;541823689b976a6a9de11dfe&quot;,
+            &quot;name&quot;: &quot;Basic&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;type&quot;: &quot;system&quot;
+        }, {
+            &quot;id&quot;: &quot;541823689b976a6a9de11dff&quot;,
+            &quot;name&quot;: &quot;Advanced&quot;,
+            &quot;description&quot;: &quot;description&quot;,
+            &quot;type&quot;: &quot;system&quot;
+        }, {
+            &quot;id&quot;: &quot;615ae37ac736b8373d19a717&quot;,
+            &quot;name&quot;: &quot;[UPDATED] Simple Termbase template&quot;,
+            &quot;description&quot;: &quot;A simple termbase template.&quot;,
+            &quot;type&quot;: &quot;userDefined&quot;
+        }
+    ],
+    &quot;itemCount&quot;: 3
+}
+</code></pre>
+<br>
+<h2 id="deleting-termbase-templates">Deleting termbase templates</h2>
+<p>A termbase template can be deleted by making a <code>DELETE</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/DeleteTermbaseTemplate"><code>/termbase-templates/{termbaseTemplateId}</code></a> endpoint.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can only delete the <code>userDefined</code> termbases.</p>
+</div>
+<p>Request example: <code>DELETE /termbase-templates/6156bbc7a638696c7686db7f</code></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/termbase/Termbase-templates.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

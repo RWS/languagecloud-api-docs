@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Batched Webhooks </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Batched Webhooks ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="batched-webhooks">Batched Webhooks</h1>
+
+<p>Webhooks can be batched to reduce the number of HTTP requests. Batched webhooks are sent as a single HTTP request to the configured webhook URL.<br>
+The request body follows the <a href="../../api/Webhooks.v1-fv.html#/schemas/webhook-batch">Webhook Batch</a> structure and contains a set of <a href="../../api/Webhooks.v1-fv.html#/schemas/webhook">Trados Cloud Platform events</a>.</p>
+<h2 id="considerations-for-consuming-batched-webhooks">Considerations for Consuming Batched Webhooks</h2>
+<ul>
+<li>Create the webhook endpoint to handle batched webhooks. The endpoint must be capable of processing multiple events in a single request.</li>
+<li>The same <a href="Webhooks-setup.html#webhook-authenticity">webhook authenticity</a> rules apply to both batched and single webhooks.</li>
+<li>The same <strong>success/failure</strong> rules for webhook notifications apply, as described in <a href="Webhooks-setup.html#return-notification-responses">notification responses</a>.
+<ul>
+<li><strong>Note:</strong> A notification delivery is considered successful if the application responds with a 2xx status code within 20 seconds (compared to 3 seconds for individual webhooks).</li>
+</ul>
+</li>
+<li>The <strong>retry policies</strong> and <strong>circuit breaker</strong> mechanisms for webhook notifications are the same as those described in <a href="Webhooks-setup.html#return-notification-responses">notification responses</a>.</li>
+<li>The same <strong>headers</strong> are included in batched webhooks as in single webhooks, as outlined in the <a href="Webhooks-setup.html#reference">reference</a>.</li>
+</ul>
+<h2 id="example-request-for-a-batched-webhook">Example Request for a Batched Webhook</h2>
+<pre><code class="lang-json">{
+  &quot;itemCount&quot;: 42,
+  &quot;items&quot;: [
+    {
+      &quot;eventId&quot;: &quot;EVENT_ID&quot;,
+      &quot;eventType&quot;: &quot;PROJECT.CREATED&quot;,
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;timestamp&quot;: &quot;TIMESTAMP&quot;,
+      &quot;accountId&quot;: &quot;ACCOUNT_ID&quot;,
+      &quot;data&quot;: { ... }
+    },
+    {
+      &quot;eventId&quot;: &quot;EVENT_ID&quot;,
+      &quot;eventType&quot;: &quot;PROJECT.TASK.CREATED&quot;,
+      &quot;version&quot;: &quot;1.0&quot;,
+      &quot;timestamp&quot;: &quot;TIMESTAMP&quot;,
+      &quot;accountId&quot;: &quot;ACCOUNT_ID&quot;,
+      &quot;data&quot;: { ... }
+    },
+	  ...
+  ]
+}
+</code></pre>
+<h2 id="batch-size-and-frequency">Batch Size and Frequency</h2>
+<p>Batched webhooks are sent when either the maximum batch size is reached or a predefined time interval elapses.<br>
+The current configuration for the Trados Cloud Platform is:</p>
+<ul>
+<li>The maximum batch size is 100 events.</li>
+<li>The maximum time interval is 1 second.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>These values are subject to change without prior notice to enhance system efficiency and ensure platform stability.</p>
+</div>
+<h2 id="key-considerations-for-efficient-batching">Key Considerations for Efficient Batching</h2>
+<ul>
+<li>Ensure that a single URL is set for receiving batched webhooks in the Trados Cloud Platform.</li>
+<li>Create a single webhook under <a href="Webhooks-setup.html#subscribe-to-webhook-events">Webhooks Setup</a> that subscribes to multiple event types.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/webhooks/Batched-webhooks.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

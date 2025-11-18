@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>User Interface App Development Guide </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="User Interface App Development Guide ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="user-interface-app-development-guide">User Interface App Development Guide</h1>
+
+<p>UI extensions offer the possibility to add custom user interface elements and functionality. Custom <a href="UI-App-custom-elements-locations.html">buttons and panels can be added to specific places</a> within the user interface.</p>
+<!-- theme: danger -->
+<blockquote>
+<h4 id="this-feature-is-currently-in-beta">This feature is currently in BETA.</h4>
+<p>Please note that in a future phase, we will introduce significant changes as we move towards the official release:</p>
+<ul>
+<li>The current implementation utilizes the authorization token of the logged-in Trados user for the Trados Cloud Platform API and the app's own API calls. In a future update, a different authorization token will be introduced for these operation.</li>
+<li>As a result, access to the Trados Cloud Platform API functionality of a UI extension app will be governed not only by the Trados user's permissions but also by the app's <a href="App-Descriptor.html#scopes">scopes</a>.</li>
+<li>A UI extension's JavaScript file will be loaded in an isolated context, independent from Trados.</li>
+<li>The communication model between App UI and Backend will change in the final version and will have to be redesigned.</li>
+</ul>
+</blockquote>
+<p>A UI extension is defined in the app <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> in the <code>extensions</code> array.</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;extensions&quot;: [
+    {
+      &quot;extensionPointId&quot;: &quot;lc.ui&quot;,
+      &quot;id&quot;: &quot;SAMPLE_UI_EXTENSION_ID&quot;,
+      &quot;name&quot;: &quot;SAMPLE_UI_EXTENSION_NAME&quot;,
+      &quot;description&quot;: &quot;SAMPLE_UI_EXTENSION_DESCRIPTION&quot;,
+      &quot;extensionPointVersion&quot;: &quot;1.0&quot;,
+      &quot;configuration&quot;: {
+        &quot;scriptPath&quot;: &quot;/PATH/TO/JAVASCRIPT/FILE.JS&quot;,
+        &quot;endpoints&quot;: {}
+      }
+    }
+  ]
+  ...
+}
+</code></pre>
+<p>The <code>extensionPointId</code> is always <strong>&quot;lc.ui&quot;</strong>.</p>
+<p>The <code>configuration</code>'s <code>scriptPath</code> is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the <code>basePath</code> in the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>. This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p><strong>Node.js</strong></p>
+<p>If you don't already have Node.js installed, you can download the most recent LTS (Long-Term Support) version of Node.js from <a href="https://nodejs.org/en/download">nodejs.org</a>.</p>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/@trados/trados-ui-extensibility">@trados/trados-ui-extensibility</a> v0.1.4
+<ul>
+<li><a href="https://github.com/RWS/trados-ui-extensibility">GitHub repository</a></li>
+<li><a href="https://github.com/RWS/trados-ui-extensibility/wiki">GitHub wiki</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="development-dependencies">Development dependencies</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/ts-loader">ts-loader</a></li>
+<li><a href="https://npmjs.com/package/webpack">webpack</a></li>
+<li><a href="https://www.npmjs.com/package/webpack-cli">webpack-cli</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<blockquote>
+<p>Make sure you are familiar with Trados app development and testing presented in the <a href="blueprints/Getting-Started.html">Getting Started with Blueprints</a> and <a href="blueprints/Testing.html">Testing</a> articles.</p>
+</blockquote>
+<ol>
+<li><p>Download the <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp">.NET sample app which contains a UI extension</a>.</p>
+<ul>
+<li>The sample can be run out of the box with the same requirements as for the blueprint, a local Mongo database. For different setups please see the <a href="blueprints/Dot-Net-Blueprint.html">blueprint</a> and <a href="blueprints/Testing.html">testing</a> articles as you'll need to adjust your configuration.</li>
+</ul>
+</li>
+<li><p>Open the sample app solution in your IDE of choice.</p>
+</li>
+<li><p>Follow the steps presented in the <a href="blueprints/Getting-Started.html">Getting Started with Blueprints</a> and <a href="blueprints/Testing.html">Testing</a> articles to get your app running, then <a href="../appManagement/Registering.html">register</a> and <a href="../appManagement/Installing.html">install</a> it.</p>
+</li>
+<li><p>Open Trados in a browser and go to the Projects section. Notice some custom elements were added by the sample app's UI extension.</p>
+</li>
+<li><p>To alter the UI extension, make your changes in the <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp/Rws.LC.UISampleApp/Resources/frontend">Rws.LC.UISampleApp/Resources/frontend</a> folder, then open a terminal from the <code>Rws.LC.UISampleApp/Resources/frontend</code> location.</p>
+</li>
+<li><p>Install the dependencies for your UI extension by running this command:</p>
+<pre><code>npm install
+</code></pre>
+</li>
+<li><p>Build the UI extension to output the Javascript file that will be loaded by Trados for your UI extension:</p>
+<pre><code>npm run build
+</code></pre>
+<p>You can also build the UI extension using development mode:</p>
+<pre><code>npm run build-dev
+</code></pre>
+<ul>
+<li><p>The <code>build</code> (or <code>build-dev</code>) command will create a <code>my-ui-extension-script.js</code> file in <code>Rws.LC.UISampleApp/Resources/frontend/dist/</code>. This is the path you need to use in the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> for your extension's configuration <code>scriptPath</code>, for example <code>Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js</code>.</p>
+</li>
+<li><p>You can change the <code>my-ui-extension-script.js</code> file name by editing</p>
+<ul>
+<li>the <code>module.exports</code>' <code>output.filename</code> property in <code>Rws.LC.UISampleApp/Resources/frontend/webpack.config.js</code> and</li>
+<li>the extension's configuration <code>scriptPath</code> field.</li>
+</ul>
+<blockquote>
+<p>If your app is already registered, after changing the extension's configuration <code>scriptPath</code> field you need to <a href="../appManagement/Updating.html">update</a> your app to a new version.</p>
+</blockquote>
+</li>
+<li><p>Once you have built your new JavaScript file, refresh the Trados browser tab to see your changes.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="sample-app-ui-code-overview">Sample app UI code overview</h2>
+<p>Open the <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp/">sample app which contains a UI extension</a> in your IDE. Open the <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/samples/dotnet/UISampleApp/Rws.LC.UISampleApp/Resources/frontend/index.ts">index.ts</a> file.</p>
+<pre><code class="lang-typescript">import {
+    trados,
+    ExtensionElement,
+    ExtensibilityEventDetail
+} from &quot;@trados/trados-ui-extensibility&quot;;
+</code></pre>
+<p>The <a href="https://github.com/RWS/trados-ui-extensibility/wiki/Variable.trados"><code>trados</code></a> import is the main import in your UI extension and allows you to use the available extensibility functionality. The <a href="https://github.com/RWS/trados-ui-extensibility/wiki/Type.ExtensionElement"><code>ExtensionElement</code></a> and <a href="https://github.com/RWS/trados-ui-extensibility/wiki/Type.ExtensibilityEventDetail"><code>ExtensibilityEventDetail</code></a> imports are TypeScript types.</p>
+<p>Your UI extension adds custom elements to the Trados UI. Define them in an array of type <a href="https://github.com/RWS/trados-ui-extensibility/wiki/Type.ExtensionElement"><code>ExtensionElement</code></a>.</p>
+<pre><code class="lang-typescript">const elements: ExtensionElement[] = [
+  {
+    elementId: &quot;myCustomButton&quot;,
+    location: &quot;project-details-toolbar&quot;,
+    text: &quot;My Custom Button&quot;,
+    type: &quot;button&quot;,
+    actions: [
+      {
+        eventType: &quot;onclick&quot;,
+        eventHandler: (detail: ExtensibilityEventDetail) =&gt; {
+          console.log(&quot;My custom button was clicked&quot;, detail.project);
+        },
+        payload: [&quot;project&quot;]
+      }
+    ]
+  }
+];
+</code></pre>
+<p>Each custom element has an <code>elementId</code>, a <code>type</code>, and a <code>location</code>. Each element in your extension must have a unique <code>elementId</code>. The <code>type</code> and <code>location</code> properties can only have values described in <a href="UI-App-custom-elements-locations.html">Custom elements and locations</a>. Other properties depend on the custom element's <code>type</code>. For example, the <code>menu</code> property is only available for the <code>button</code> element type and indicates the button has a dropdown menu.</p>
+<p>Custom elements can have an <code>actions</code> property, which is an array of objects describing the behavior of the custom element in the case of specific events. The supported values for an <code>action</code>'s <code>eventType</code> are:</p>
+<ul>
+<li><code>onrender</code> for all element types and</li>
+<li><code>onclick</code> which is specific to <code>button</code> elements.</li>
+</ul>
+<p>An <code>action</code>'s <code>payload</code> property indicates the data portions available in the Trados UI that will be send inside the event detail to be consumed by the event handler function.</p>
+<p>In the code snippet above, the <code>onclick</code> event is handled by the <code>eventHandler</code> function which has a single argument called <code>detail</code>. Since this <code>action</code>'s <code>payload</code> is an array containing the <code>project</code> data selector key, the <code>eventHandler</code>'s <code>detail</code> argument will also contain a <code>project</code> field representing the current project object in the Trados UI.</p>
+<p>After you have defined the custom elements your UI extension will add to the Trados UI in the <code>elements</code> array, you must enable communication between your UI extension and Trados UI by calling the <code>trados.onReady</code> function.</p>
+<pre><code class="lang-typescript">trados.onReady(elements, () =&gt; {
+  console.log(&quot;Communication with Trados UI enabled&quot;);
+});
+</code></pre>
+<p>The <code>onReady</code> function inside the <code>trados</code> object has two arguments: the <code>elements</code> array describing all custom elements your UI extension adds to the Trados UI, and a callback function that is called once your UI extension's script is loaded in the browser and communication with Trados UI is available.</p>
+<h3 id="calling-your-own-apps-api">Calling your own app's API</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>callAppApiButton</code>. The <code>actions</code> field has the <code>callAppApiButtonClicked</code> eventHandler. Go to this function's implementation in <code>handlers/buttonsHandlers.ts</code> and notice the <code>trados.callAppApi</code> function being called:</p>
+<pre><code class="lang-typescript">trados.callAppApi({
+  url: `api/greeting/`,
+  method: &quot;GET&quot;
+})
+</code></pre>
+<p>The object passed as argument has the <code>url</code> property set to <code>api/greeting</code> which is the route of the endpoint implemented in <code>GreetingController.cs</code> in the <code>Controllers</code> folder. The second property is the <code>method</code> set to <code>GET</code>. The argument object has two mandatory properties, <code>url</code> and <code>method</code>, and can have other properties depending on your use case, such as <code>params</code>, <code>formData</code>, <code>body</code>, <code>headers</code>.</p>
+<p>The <code>callAppApi</code> function returns a <code>Promise</code>, so you can use <code>then</code>/<code>catch</code> to handle the API call's response.</p>
+<h3 id="calling-the-trados-cloud-platform-api">Calling the Trados Cloud Platform API</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>callPublicApiButton</code>. The <code>actions</code> field is an array of two items, one handling the <code>onrender</code> event and the other handling the <code>onclick</code> event. Go to the <code>callPublicApiButtonClicked</code> function's implementation in <code>handlers/buttonsHandlers.ts</code> and notice the <code>tradosProjectTemplateApi</code> function being called:</p>
+<pre><code class="lang-typescript">tradosProjectTemplateApi()
+  .getProjectTemplate({
+    projectTemplateId: projectTemplateId,
+    ...trados.getRegistrationResult()
+  })
+</code></pre>
+<p>Each Trados Cloud Platform API needs to be imported separately from <code>@trados/trados-ui-extensibility</code> and is represented by a function. In this example, the <code>tradosProjectTemplateApi</code> function is imported and called to initialize the API. The next function call, <code>getProjectTemplate</code>, is the call to a specific endpoint from the <code>tradosProjectTemplateApi</code>.</p>
+<p>The <code>projectTemplateId</code> is the mandatory field needed for the <code>getProjectTemplate</code> API endpoint call. Notice the <code>...trados.getRegistrationResult()</code> passed inside the argument. This extends the argument object with additional mandatory fields like the account identifier and authorization token.</p>
+<p>For each Trados Cloud Platform API, all endpoint functions function return a <code>Promise</code>, so you can use <code>then</code>/<code>catch</code> to handle the API call's response.</p>
+<h3 id="using-data-available-in-the-trados-ui">Using data available in the Trados UI</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>myGetUiDataButton</code>. The <code>actions</code> field has the <code>myGetUiDataButtonClicked</code> eventHandler. Go to this function's implementation in <code>handlers/buttonsHandlers.ts</code> and notice the <code>trados.getLocalData</code> function being called:</p>
+<pre><code class="lang-typescript">trados.getLocalData(trados.contexts.projects, trados.dataSelectors.selectedProjects)
+</code></pre>
+<p>The <code>getLocalData</code> function provides access to portions of data currently available in the Trados UI.</p>
+<p>The first argument is the <code>trados.contexts.projects</code>. This indicates in which main section of the application the needed data resides.</p>
+<p>The second argument is the data portion selector, in this example <code>trados.dataSelectors.selectedProjects</code>. This will provide the array of <code>Project</code> objects selected by the user in the Projects list view.</p>
+<p>The <code>getLocalData</code> function returns a <code>Promise</code>, so you can use <code>then</code>/<code>catch</code> to handle the success or failure of the data retrieval.</p>
+<h3 id="changing-a-custom-element">Changing a custom element</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>myDropdownButton</code>. Notice that it has a <code>menu</code> property which is an array describing the dropdown menu options of the button. Besides the <code>icon</code> and <code>text</code> properties, each menu option has a <code>value</code> set to an arbitrary string.
+Scroll down to the button's <code>actions</code> property and notice the <code>onclick</code> <code>eventHandler</code> function. It contains a <code>switch</code> statement parsing the <code>value</code> received from the <code>onclick</code> event's detail object. When a user clicks a dropdown menu option, its <code>value</code> is passed to the <code>eventHandler</code>. Every dropdown menu option in <code>myDropdownButton</code> updates properties of another custom element in the UI extension, <code>myTargetButton</code>. Notice the <code>trados.updateELement</code> function being called:</p>
+<pre><code class="lang-typescript">trados.updateElement(&quot;myTargetButton&quot;, { disabled: true })
+</code></pre>
+<p>The first argument is the <code>id</code> property of the custom element that will be updated.</p>
+<p>The second argument is an object containing the properties to update and their new values.</p>
+<p>The <code>id</code>, <code>type</code> and <code>location</code> of a custom element can not be changed. Properties that can be changed depend on the custom element's type:</p>
+<ul>
+<li>custom elements with type <code>button</code> can have these properties changed: <code>disabled</code>, <code>hidden</code>, <code>icon</code>, <code>text</code>, <code>menuItems</code>. For each object in <code>menuItems</code> you can also change <code>disabled</code>, <code>hidden</code>, <code>icon</code>, <code>text</code>. When setting the <code>icon</code> property of a button or dropdown menu option, use string values from <a href="https://fontawesome.com/icons">Font Awesome</a>.</li>
+<li>custom elements with type <code>panel</code>, <code>sidebarBox</code>, <code>tab</code> can only have their <code>text</code> property changes. To change the content, see <strong>Adding content to a panel, sidebarBox or tab</strong>.</li>
+</ul>
+<p>The <code>updateElement</code> function returns a <code>Promise</code>, so you can use <code>then</code>/<code>catch</code> to handle the success or failure of the update.</p>
+<h3 id="navigating-inside-trados-ui">Navigating inside Trados UI</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>myNavigateButton</code>. The <code>actions</code> field has the <code>myNavigateButtonClicked</code> eventHandler. Go to this function's implementation in <code>handlers/buttonsHandlers.ts</code> and notice the <code>trados.navigate</code> function being called:</p>
+<pre><code class="lang-typescript">trados.navigate(projectTemplatePath, trados.navigationTypes.route)
+</code></pre>
+<p>The first argument is the path to which the application will navigate. Note this is not a URL, but only the portion after <code>/lc/{myAccount}/</code> in the Trados URL. In the example, it's <code>resources/project-templates/${projectTemplateId}</code>.</p>
+<p>The second argument is optional and indicates the type of routing navigation will use, either <code>route</code> or <code>load</code>. The default is <code>route</code> and will cause Trados UI to navigate to the desired path without a page load. The <code>load</code> navigation type will cause the Trados UI to reload to the new path.</p>
+<h3 id="adding-content-to-a-panel-sidebarbox-or-tab">Adding content to a panel, sidebarBox or tab</h3>
+<p>In the sample app code, open the index.ts file and find the element with id <code>myCustomPanel</code>. The <code>actions</code> field has the <code>myCustomPanelRendered</code> eventHandler. Go to this function's implementation in <code>handlers/panelsHandlers.ts</code> and notice this code line:</p>
+<pre><code class="lang-typescript">const panelContentWrapper = document.getElementById(detail.domElementId);
+</code></pre>
+<p>The <code>onrender</code> event's handler is passed the <code>detail</code> argument which contains the <code>domElementId</code> property. This is the DOM element to which you can add HTML content using JavaScript.</p>
+<p>Note that adding <code>script</code> tags is not allowed and scripts from sources that are not white-listed in Trados are blocked. Adding <code>script</code> tags that are served from the same source as your app is also not allowed. Only the script file set in your app's descriptor will be loaded by Trados.</p>
+<h3 id="notes">Notes</h3>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<blockquote>
+<h4 id="custom-elements-display-order">Custom elements display order</h4>
+<p>Within a single UI extension: custom elements in your extension that have the same <code>location</code> are displayed in the same order in which they are present in your <code>ExtensionElement</code>s array.</p>
+<p>With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.</p>
+</blockquote>
+<div class="NOTE">
+<h5>Note</h5>
+</div>
+<blockquote>
+<h4 id="unexpected-re-renders">Unexpected re-renders</h4>
+<p>A custom element's <code>onrender</code> event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding <code>eventHandler</code> gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of <code>onrender</code> <code>eventHandler</code>.</p>
+</blockquote>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/UI-App-development-guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

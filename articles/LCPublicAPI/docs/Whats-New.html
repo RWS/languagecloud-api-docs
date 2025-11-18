@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>What&#39;s new </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="What&#39;s new ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="whats-new">What's new</h1>
+
+<br> 
+<h2 id="29-october-2025">29 October 2025</h2>
+<ul>
+<li>We've added support for advanced settings for Translation Memory operations, including powerful filter expressions and field update options. See <a href="translation-memory/Translation-memory-advanced-configuration.html">Translation Memory Advanced Configuration</a> for more details.</li>
+<li>We've introduced a new endpoint to <a href="../api/Public-API.v1-fv.html#/operations/RescheduleProjectTasks">reschedule workflow task deadlines</a>, allowing you to adjust task due dates programmatically in Trados Cloud.</li>
+<li>The <a href="../api/Public-API.v1-fv.html#/schemas/analysis-statistics">analysisStatistics</a> model now includes information about locked segments.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="30-september-2025">30 September 2025</h2>
+<ul>
+<li>We introduced <a href="data-bridge/Data-Bridge-Introduction.html">Trados Data Bridge</a> APIs providing secure, read-only access to Trados Cloud data. The API allows you to query project, task, cost, and quality metric data using the OData v4 protocol, and connect directly to business intelligence tools such as Power BI.</li>
+<li>As part of our multi-region support, we have added the global <a href="../api/Global-Public-API.v1-fv.html#/operations/ListMyAccounts">List My Accounts</a> endpoint.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="10-september-2025">10 September 2025</h2>
+<ul>
+<li>With this release we deliver <a href="../api/Public-API.v1-fv.html#/operations/TranslationsLookup">Lookup</a>, <a href="../api/Public-API.v1-fv.html#/operations/TranslationsConcordanceSearch">Concordance</a>, <a href="../api/Public-API.v1-fv.html#/operations/TranslationsAdd">Add</a> and <a href="../api/Public-API.v1-fv.html#/operations/TranslationsUpdate">Update</a> translation units to a translation memory. See <a href="translations/Translations.html">this</a> page for more details.</li>
+<li>You can now <a href="../api/Public-API.v1-fv.html#/operations/GetTranslationEngine">obtain</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">update</a> the resources sequence information for a Translation Engine.</li>
+<li>A new project event <code>PROJECT.STARTED</code> has been added. See <a href="webhooks/Webhooks-payload.html">this</a> page for more details.</li>
+</ul>
+<h2 id="18-august-2025">18 August 2025</h2>
+<ul>
+<li>The new, modernized Trados Cloud Platform SDK for Java is now available. See the upgrade guide <a href="api-clients/java/Java-Client-Upgrade-Guide.html">here</a>.</li>
+</ul>
+<h2 id="12-august-2025">12 August 2025</h2>
+<ul>
+<li>You can now get word count and cost estimation analysis of files without the need to create a project. The functionality is accessible via the <a href="../api/Public-API.v1-fv.html#/operations/RequestFileAnalysis">Request File Analysis</a> and <a href="../api/Public-API.v1-fv.html#/operations/PollFileAnalysis">Poll File Analysis</a> endpoints.</li>
+<li>As previously announced, the <code>languageProcessingRuleId</code> parameter is now mandatory for <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">Update Translation Engine</a> endpoint.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="15-july-2025">15 July 2025</h2>
+<ul>
+<li>You can now add the <code>systemStatus</code> property on termbase entries. See <a href="../api/Public-API.v1-fv.html#/operations/UpdateTermbaseEntry">Update Termbase Entry</a>.</li>
+<li>We've improved the documentation around zip files on <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile">Add Source File</a> and <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFiles">Attach Source File</a> endpoints.</li>
+<li>As a reminder, we want to let our users know that the field <code>languageProcessingRuleId</code> under <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">Update Translation Engine</a> endpoint will be mandatory.</li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ImportTermbase">Import Termbase</a> and <a href="../api/Public-API.v1-fv.html#/operations/PollTermbaseImport">Poll Termbase Import</a> endpoints will return <code>pending</code> instead of <code>queued</code> for the status. This change is scheduled to take effect no sooner than six months from now.</li>
+</ul>
+<h2 id="8-may-2025">8 May 2025</h2>
+<ul>
+<li><p>You can now download the target files associated with a project in a ZIP format. This functionality is accessible through three endpoints: <a href="../api/Public-API.v1-fv.html#/operations/ExportProjectFiles">Export</a>, <a href="../api/Public-API.v1-fv.html#/operations/ExportProjectFilesStatus">Poll</a>, and <a href="../api/Public-API.v1-fv.html#/operations/DownloadFile">Download</a>.</p>
+</li>
+<li><p>With this release we deliver the <a href="../api/Public-API.v1-fv.html#/operations/CreatePricingModel">Create</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdatePricingModel">Update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeletePricingModel">Delete</a> pricing model endpoints. Together with these, several changes were required to correct the pricing model response:</p>
+<ul>
+<li><code>name</code> : changed from required to default.</li>
+<li><code>additionalCosts.volumeUnitType</code> changed from required to non required.</li>
+<li><code>additionalCosts.conditionalCostType</code> changed from required to non required.</li>
+<li><code>additionalCosts.costOperator</code> changed from required to non required.</li>
+<li><code>additionalCosts.costVariable</code> changed from required to non required.</li>
+<li><code>additionalCosts.operand</code> changed from required to non required.</li>
+<li><code>perTargetLanguage</code> and <code>perFile</code> cost types have been removed from <code>languageCosts</code> to clean up the structure.</li>
+</ul>
+</li>
+<li><p>We have expanded the cost types by introducing two new values: <strong>adhoc</strong> and <strong>adhoc volume</strong>.</p>
+</li>
+<li><p>Import and Export TM endpoints are now subject to API limits. For more details, please refer to <a href="API-rate-limits.html">this page</a>.</p>
+</li>
+<li><p>We updated the <a href="api-clients/java/Java-Samples.html">Java Client samples</a> to reflect the usage of the latest version.</p>
+</li>
+<li><p>We fixed various bugs.</p>
+</li>
+</ul>
+<h2 id="1-april-2025">1 April 2025</h2>
+<ul>
+<li>As part of the Connected AI feature, we have added the following updates and new endpoints:
+<ul>
+<li>We have introduced a new endpoint for listing <a href="../api/Public-API.v1-fv.html#/operations/ListLlmConfigurations">Large Language Models</a> (LLMs).</li>
+<li>We have added the functionality to <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">update your translation engines</a> with the new LLM resource type.</li>
+</ul>
+</li>
+<li>We have added the source word count to the <a href="../api/Public-API.v1-fv.html#/operations/ListSourceFiles">List Source Files</a> endpoint.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="10-march-2025">10 March 2025</h2>
+<ul>
+<li>We've introduced the concept of <a href="webhooks/Batched-webhooks.html">Batched Webhooks</a>.</li>
+<li>We've updated the models for <a href="../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory">Import Translation Memory</a>, <a href="../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory">Export Translation Memory</a> and <a href="../api/Public-API.v1-fv.html#/operations/GetTMImportHistory">Get Translation Memory Import History</a>.
+<ul>
+<li>As part of this, the existing <code>status</code> field is now marked as deprecated in the response model of <a href="../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory">Import Translation Memory</a> and <a href="../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory">Export Translation Memory</a>.</li>
+<li>Additionally, the fields <code>importAsPlainText</code> and <code>triggerRecomputeStatistics</code> are marked as deprecated in the request model of <a href="../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory">Import Translation Memory</a> and in the response model of <a href="../api/Public-API.v1-fv.html#/operations/GetTMImportHistory">Get Translation Memory Import History</a>, alongside the <code>traceId</code> field.</li>
+<li>Their decommissioning is scheduled at a minimum of six months from now.</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-december-2024">10 December 2024</h2>
+<ul>
+<li>You can now associate existing users with a service user to notify them of actions via email, using Trados UI. More details <a href="Service-credentials.html#step-2-trados-cloud-platform-administrators-add-additional-notification-options-for-service-users">here</a>.</li>
+<li>We have officially rebranded from RWS Language Cloud API to Trados Cloud Platform API. All references to our previous brand name will now reflect our new identity, Trados.</li>
+<li>Provided <a href="Language-Cloud-APIs-for-Postman.html">Postman Environments</a> for multi-region.</li>
+</ul>
+<h2 id="18-november-2024">18 November 2024</h2>
+<ul>
+<li>As part of our multi-region support, we have added global endpoints to facilitate the discovery of available regions and hosts. For more details, see the <a href="Multi-region.html">Multi-region</a>  page.</li>
+<li>We have updated the documentation on how to use the new SDK with multi-region features.</li>
+<li>Additionally, we made various minor contract corrections.</li>
+<li>As a reminder, we want to let our users know that the field <code>languageProcessingRuleId</code> under <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">Update Translation Engine</a> endpoint will become mandatory.</li>
+</ul>
+<h2 id="6-november-2024">6 November 2024</h2>
+<ul>
+<li><p>We are planning to transition the hosting of our API from <strong>lc-api.sdl.com</strong> to <strong>api.eu.cloud.trados.com</strong> on November 9th:</p>
+<ul>
+<li><p><strong>lc-api.sdl.com</strong> for API and integrations will remain active.</p>
+</li>
+<li><p>Existing integrations will continue to work as before. We do recommend planning to change the URL when possible.</p>
+</li>
+<li><p>For new integrations, we recommend using the new URL to avoid additional work in the future.</p>
+</li>
+</ul>
+</li>
+<li><p>You now have the ability to add notes to customer quotes.</p>
+</li>
+<li><p>We have updated the deprecated types for the <code>language</code> and <code>targetLanguages</code> fields in the <a href="../api/Public-API.v1-fv.html#/schemas/source-file-request">Add Source File Request</a> model, which now reference <a href="../api/Public-API.v1-fv.html#/schemas/language-request">Language Request</a> model. In the updated API contract, these fields have been changed from simple strings to structured objects containing a <code>languageCode</code> property, enhancing clarity and consistency in language handling.</p>
+</li>
+<li><p>We fixed various bugs.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>We will provide backwards compatibility until May 2025. However, starting with this release, SDKs will be updated to use the new types. Please ensure your integration is updated to use the new <a href="../api/Public-API.v1-fv.html#/schemas/language-request">Language Request</a> model.</p>
+</div>
+</li>
+</ul>
+<h2 id="11-september-2024">11 September 2024</h2>
+<ul>
+<li>With this release we deliver the <a href="https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information">PerfectMatch</a> functionality. You can apply PerfectMatch either at the start of a project or midway through the translation process. These capabilities are accessible via the <a href="../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping">PerfectMatch Mapping</a> menu.</li>
+<li>We've improved filtering for projects lists. See the <a href="../api/Public-API.v1-fv.html#/operations/ListProjects">List Projects</a> endpoint.</li>
+<li>A recent update has been made to the <a href="webhooks/Webhooks-setup.html">Webhooks Setup</a>  page, informing the customers that the order of webhook event deliveries cannot be guaranteed. Please take this into consideration using the <code>timestamp</code> field to determine the event generation time.</li>
+<li>You can now set due dates for tasks during project creation.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="28-august-2024">28 August 2024</h2>
+<ul>
+<li>We have introduced a new option which allows users to switch to a different pricing model at the Customer Quote Review task using the dedicated endpoint <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectPricingModel">Update Project Pricing Model</a>.</li>
+<li>You now have the ability to view the locking color options for MTQE segments by utilizing the <a href="../api/Public-API.v1-fv.html#/operations/GetProjectTemplate">Get Project Template</a> endpoint.</li>
+<li>The parameter <code>termbaseStructure.fields.type</code> in the <a href="../api/Public-API.v1-fv.html#/operations/GetTermbase">Get Termbase</a> endpoint is no longer marked as mandatory.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="1-july-2024">1 July 2024</h2>
+<ul>
+<li>We updated the folder/resource locations to the new format, which now includes the <a href="../api/Public-API.v1-fv.html#/schemas/folder">path</a>.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="9-may-2024">9 May 2024</h2>
+<ul>
+<li>You can configure the number of days after which projects are given the Completed or Archived status automatically using the <code>completionConfiguration</code> option under the following endpoints: <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">Create</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject">Update</a> Project, <a href="../api/Public-API.v1-fv.html#/operations/CreateProjectTemplate">Create</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate">Update</a> Project Template.</li>
+<li>The field <code>languageProcessingRuleId</code> under <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">Update Translation Engine</a> endpoint will become mandatory. The enforcement is scheduled at a minimum of six months from now.</li>
+<li>As a reminder, we want to let our users know that we updated the folder/resource locations to the new format, which now includes the <a href="../api/Public-API.v1-fv.html#/schemas/folder-v2">path</a>. The old fields are marked as deprecated and their decommissioning is planned for near future. Please ensure you update the implementation if you are using fields that are marked as deprecated.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="8-april-2024">8 April 2024</h2>
+<ul>
+<li>We extended the information available on the webhooks setup page, <a href="webhooks/Webhooks-setup.html#circuit-breaker">Circuit Breaker</a>  section.</li>
+<li>We removed the <code>languageId</code> allowed values for the <a href="../api/Public-API.v1-fv.html#/operations/ExportQuoteReport">Export Quote Report</a> endpoint.</li>
+<li>As a reminder, we want to let our users know that we updated the folder/resource locations to the new format, which now includes the <a href="../api/Public-API.v1-fv.html#/schemas/folder-v2">path</a>. The old fields are marked as deprecated and their decommissioning is planned for near future. Please ensure you update the implementation if you are using fields that are marked as deprecated.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="27-february-2024">27 February 2024</h2>
+<ul>
+<li>With this release we deliver the <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate">Update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeleteProjectTemplate">Delete Project Template</a> endpoints. Subsequent iterations with new implementations will follow, ensuring continuous enhancement for project template update.</li>
+<li>We published a new page about <a href="How-to-multipart.html">multipart considerations</a></li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="13-december-2023">13 December 2023</h2>
+<ul>
+<li>With this release we deliver the <a href="../api/Public-API.v1-fv.html#/operations/CreateProjectTemplate">Create Project Template</a> endpoint. Subsequent iterations with new implementations will follow, ensuring continuous enhancement for project template creation.</li>
+<li>We enhanced the response model for the <a href="../api/Public-API.v1-fv.html#/operations/GetProjectTemplate">Get Project Template</a> endpoint, which now includes settings for verification and batch tasks. The existing <code>forceOnline</code> and <code>quoteTemplate</code> fields from root level are now marked as deprecated, as they have been moved to the <code>settings</code> section. Their decommissioning is scheduled at a minimum of six months from now.</li>
+<li>Webhooks will stop trying to send on urls that cause timeouts, retrying later. Read more <a href="webhooks/Webhooks-setup.html#circuit-breaker">here</a>.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="16-november-2023">16 November 2023</h2>
+<ul>
+<li>We introduced the <code>applicableOutcomes</code> field under the <a href="../api/Public-API.v1-fv.html#/operations/GetTask">get task</a> endpoint to be used when completing the tasks.</li>
+<li>You can now change the folder visibility when updating a customer.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="17-october-2023">17 October 2023</h2>
+<ul>
+<li>This release delivers more integrations for the customer resource type. You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateCustomer">create</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateCustomer">update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeleteCustomer">delete</a> customers.</li>
+<li>We enhanced the response model for <a href="../api/Public-API.v1-fv.html#/operations/ListPricingModels">pricing</a> endpoints.</li>
+<li>As previously announced, we made the <code>dueBy</code>, the <code>location</code> and the <code>languageDirections</code> fields mandatory for <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">creating a project</a>.</li>
+<li>We added <code>deliveredBy</code> as a new field for the <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject">update project</a> capabilities.</li>
+<li>We extended the information available on the <a href="webhooks/Webhooks-setup.html">webhooks setup</a> page.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="06-september-2023">06 September 2023</h2>
+<ul>
+<li>With this release we deliver the <a href="../api/Public-API.v1-fv.html#/operations/CreateScheduleTemplate">create</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetScheduleTemplate">read</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateScheduleTemplate">update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeleteScheduleTemplate">delete</a> endpoints of the new schedule template resource. You will find the endpoints under the <a href="../api/Public-API.v1-fv.html#/operations/ListScheduleTemplates">schedule templates</a> menu. You can also retrieve the schedule template attached to a <a href="../api/Public-API.v1-fv.html#/operations/GetProject">project</a> or to a <a href="../api/Public-API.v1-fv.html#/operations/GetProjectTemplate">project template</a> using the relevant fields.</li>
+<li>Additionally, the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">create project</a> now supports the schedule template resource, either individually or from the project template.</li>
+<li>We added the <code>apiInternalId</code>  to <a href="../api/Public-API.v1-fv.html#/schemas/task-type">task type</a> and <a href="../api/Public-API.v1-fv.html#/schemas/workflow-task-template">workflow task template</a> to easily identify custom tasks.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="17-august-2023">17 August 2023</h2>
+<ul>
+<li>We updated the folder/resource locations to the new format, which now includes the <a href="../api/Public-API.v1-fv.html#/schemas/folder-v2">path</a>. The old fields are marked as deprecated and their decommissioning is scheduled at a minimum of six months from now. Please ensure you update the implementation if you are using fields that are marked as deprecated.</li>
+<li>Enhanced <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectConfiguration">project configuration</a> now includes new choices for updating translation memory settings.</li>
+<li>We fixed various bugs.</li>
+<li>As a reminder, we want to let our users know that validations related to the following fields used at project creation: <code>dueBy</code>, <code>location</code> and <code>languageDirections</code> will become <strong>required</strong> in near future.</li>
+</ul>
+<h2 id="02-august-2023">02 August 2023</h2>
+<ul>
+<li>With this release we provide a new endpoint to allow integrators to update only one <a href="../api/Public-API.v1-fv.html#/operations/UpdateCustomField">custom field</a> of a project</li>
+<li>We extended the information available on the <a href="webhooks/Webhooks-payload.html">webhooks</a> page</li>
+<li>You can now update a translation engine as a stand alone resource or one that is linked to a live project.  Read this <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine">page</a> for more details.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="15-june-2023">15 June 2023</h2>
+<ul>
+<li>We extended the information provided for both <a href="../api/Public-API.v1-fv.html#/operations/ListSourceFileVersions">source</a> and <a href="../api/Public-API.v1-fv.html#/operations/ListTargetFileVersions">target</a> files in a task with the <code>name</code>, the <code>version</code> and <code>originatingTaskId</code> details</li>
+<li>We made available a new <a href="../api/Public-API.v1-fv.html#/operations/ListRateLimits">rate-limits</a> endpoint and a new header which includes the relevant policy name, namely, the <code>X-RateLimit-Policy</code> header. Read the <a href="API-rate-limits.html">API-rate-limits</a> page for more details.</li>
+<li>We improved descriptions for the <code>default</code> and <code>required</code> fields <a href="Use-fields-in-your-requests.html">here</a>.</li>
+<li>We updated the JAVA samples to reflect changes in the SDK.</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="19-may-2023">19 May 2023</h2>
+<ul>
+<li>We replaced the <code>friendlyId</code> on all Project Group endpoints with <code>shortId</code> and we've exposed it on all Project endpoints too.</li>
+<li>As a security enhancement, we will restrict some characters in naming projects and project files. The unsupported characters are: <code>&lt;</code>, <code>&gt;</code>, <code>:</code>, <code>&quot;</code>, <code>/</code>, <code>\</code>, <code>|</code>, <code>?</code>, <code>*</code>.</li>
+<li>In 6 months we will introduce the following breaking change: on the <a href="../api/Public-API.v1-fv.html#/operations/ExportQuoteReport">Export Quote Report</a> endpoint, if the quote is not generated using a Quote Template, the response will be an empty object.</li>
+<li>We will enforce validations related to the following fields at project creation: <code>dueBy</code>, <code>location</code> and <code>languageDirections</code>. These fields will become <strong>required</strong> in 3 months.</li>
+<li>As a reminder, we want to let our users know that for security issues or bugs we may introduce breaking changes at any time.</li>
+</ul>
+<h2 id="20-april-2023">20 April 2023</h2>
+<ul>
+<li>With this release we enforce validations listed in the documentation for the Create and Update Project endpoints. This impacts the SDKs, so please update your integration accordingly.</li>
+<li>We extended the <a href="webhooks/Webhooks-setup.html">webhooks</a> functionality to support error tasks</li>
+<li>We introduced the <code>customFields</code> field for project webhooks, and the <code>dueBy</code> field for task webhooks</li>
+<li>We added the <code>name</code> of the <code>customFields</code> under the response for the Get Project endpoint</li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="21-march-2023">21 March 2023</h2>
+<ul>
+<li>We extended the list of <a href="webhooks/Webhooks-setup.html">webhooks</a> available for tasks, projects, project files, project templates and enabled the first webhook for project group</li>
+<li>We fixed several bugs.</li>
+</ul>
+<h2 id="03-march-2023">03 March 2023</h2>
+<ul>
+<li>We introduced fields displaying the project status history and the <code>completedAt</code> date for a task.</li>
+<li>We exposed the project creator as a sorting option on list projects.</li>
+<li>We fixed several bugs</li>
+<li>We want to remind our users we will enforce validations listed in the documentation for the Create and Update Project endpoints.</li>
+</ul>
+<h2 id="15-february-2023">15 February 2023</h2>
+<ul>
+<li>We enabled support for the Trados Enterprise Quote Template functionality</li>
+<li>We introduced the <code>projectManagers</code> field to enable the selection of individuals or of users groups at <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">project creation</a>.</li>
+<li>We removed unnecessary outcome values for the <a href="../api/Public-API.v1-fv.html#/schemas/task-complete-request">Task Completed Request</a> model on the <a href="../api/Public-API.v1-fv.html#/operations/CompleteTask">Complete Task</a> operation. This impacts the SDKs, so update your integration accordingly.</li>
+<li>You can now specify the <code>projectCreator</code> as an assignee type for a task when <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject">updating a project</a>.</li>
+<li>We will enforce validations related to the following fields at project creation: <code>dueBy</code>, <code>location</code> and <code>languageDirections</code>. These fields will become <strong>required</strong> in 6 months.</li>
+</ul>
+<h2 id="11-january-2023">11 January 2023</h2>
+<ul>
+<li>You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateProjectGroup">create</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetProjectGroup">read</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectGroup">update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeleteProjectGroup">delete</a> Project Groups</li>
+<li>We've improved filtering for projects lists, namely by status and by creation date</li>
+<li>We've introduced fields displaying more details for error tasks</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="22-november-2022">22 November 2022</h2>
+<ul>
+<li>To enable support for the Trados Enterprise multi-source resources functionality, we're introducing an important breaking change: when creating workflows with multi-source languages from the TE UI, please use the new <code>languageDirection</code> scope value. As the new feature may limit previously working functionality, inconsistencies within applications or certain products may appear. For integrations that are impacted, please contact their developers to update the integrations.</li>
+<li>We've made 3 new endpoints available for <a href="../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory">TM export</a></li>
+<li>We removed the old 10 MB size limitations for files, termbases and translation memories. We now support <a href="https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit">these values</a> for files and <a href="https://docs.rws.com/791595/741139/trados-enterprise---accelerate/importing-tm-content">these values</a> for importing translation memory content.</li>
+<li>Users can now retrieve task comments.</li>
+<li>We've added the <a href="../api/Public-API.v1-fv.html#/operations/GetTMImportHistory">TM Import history</a> endpoint.</li>
+<li>We are postponing the breaking change in the <code>LanguageDirectionRequest</code> model, previously announced for November, and consequently the model can be used until the end of 2022.</li>
+<li>4 new endpoints are subject to <a href="https://languagecloud.sdl.com/lc/api-docs/d2266fabaa1bf-api-rate-limits#project-files-rate-limits">API limits</a></li>
+<li>We fixed various bugs.</li>
+</ul>
+<h2 id="28-october-2022">28 October 2022</h2>
+<ul>
+<li>You can <a href="translation-memory/Translation-memory-import-export.html">import translation memories</a> using the <a href="../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory">import</a> and <a href="../api/Public-API.v1-fv.html#/operations/PollTMImport">poll</a> endpoints. Note that the maximum size for an imported translation memory is 10 MB.</li>
+<li>We added traceability fields for terminology entries:  createdAt, createdBy, lastModifiedAt, lastModifiedBy</li>
+<li>We added recommendations for <a href="Headers-considerations.html">HTTP headers</a></li>
+<li>We updated the recommendations for <a href="Authentication.html">Authentication</a>  and the <a href="API-rate-limits.html">API rate limits</a> with token values and other details</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="15-september-2022">15 September 2022</h2>
+<ul>
+<li>We introduced a new <a href="Export-quote-report.html">Export Quote Report</a> mechanism and deprecated the older endpoint</li>
+<li>We updated the constrains for the 'name' and 'description' fields for the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject">Create Project</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject">Update Project</a> endpoints that will be enforced starting December 2022</li>
+<li>We introduced a new page for the currently <a href="Known-Issues.html">Known issues</a></li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="22-august-2022">22 August 2022</h2>
+<ul>
+<li>You can now read <a href="../api/Public-API.v1-fv.html#/operations/ListLanguageProcessingRules">language processing rules</a> and <a href="../api/Public-API.v1-fv.html#/operations/ListFieldTemplates">translation memory field templates</a></li>
+<li>You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateTranslationMemory">create</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetTranslationMemory">read</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemory">update</a>, <a href="../api/Public-API.v1-fv.html#/operations/DeleteTranslationMemory">delete</a> and <a href="../api/Public-API.v1-fv.html#/operations/CopyTranslationMemory">copy</a> translation memories</li>
+</ul>
+<h2 id="12-august-2022">12 August 2022</h2>
+<ul>
+<li>Retiring of the Export Quote endpoint will happen in 6 months. You can read more about it <a href="Public-API-Management-Process.html#endpoint-retirement-process">here</a>.</li>
+<li>We now support the Export Quote Report functionality with 3 new endpoints: <a href="../api/Public-API.v1-fv.html#/operations/PollQuoteReportExport">Poll Quote Export Report</a>, <a href="../api/Public-API.v1-fv.html#/operations/ExportQuoteReport">Export Quote</a> and <a href="../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport">Download Exported Quote</a>.</li>
+<li>You can now upload <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFileVersion">source</a> and <a href="../api/Public-API.v1-fv.html#/operations/AddTargetFileVersion">target</a> file versions</li>
+<li>We published a new page about <a href="File-formats.html">File formats</a></li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="28-july-2022">28 July 2022</h2>
+<ul>
+<li>We published a new page about <a href="How-to-use-location-and-folders.html">How to use location and folders</a></li>
+<li>We published a new page about <a href="How-to-report-an-issue.html">How to report an API issue</a></li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="19-july-2022">19 July 2022</h2>
+<ul>
+<li>You can now update <a href="../api/Public-API.v1-fv.html#/operations/UpdateSourceFile">source</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateTargetFile">target</a> file names</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="28-june-2022">28 June 2022</h2>
+<ul>
+<li>You can now <a href="../api/Public-API.v1-fv.html#/operations/GetProjectConfiguration">read</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateProjectConfiguration">update</a> translation memory settings for a project's configuration</li>
+<li>We updated the user guide page for <a href="Use-fields-in-your-requests.html">using fields</a> with new animated gifs</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="07-june-2022">07 June 2022</h2>
+<ul>
+<li>We have increased the API limits, you can find the new limits on <a href="API-rate-limits.html">this page</a>.</li>
+<li>Deprecation of the language direction code will happen in 6 months. You can read more about it <a href="Whats-deprecated.html">here</a>.</li>
+<li>Enforce validations related to the length of the <em>name</em> and <em>description</em> fields and the accepted input values for the Create and Update Project endpoints will be delivered in 6 months.</li>
+</ul>
+<h2 id="24-may-2022">24 May 2022</h2>
+<ul>
+<li>To address potentially infected files, we've updated our API contracts to support In-Product Antivirus scanning</li>
+</ul>
+<h2 id="04-may-2022">04 May 2022</h2>
+<ul>
+<li>You can now upload a .zip archive using <a href="../api/Public-API.v1-fv.html#/operations/UploadZipFile">this</a> endpoint and then <a href="../api/Public-API.v1-fv.html#/operations/PollUploadZipFile">poll</a> for the extracted files. After extraction, you can upload multiple source files to a project using a <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFiles">single call</a>. The maximum size for an imported .zip file is 10 MB.</li>
+<li>Our Java SDK client is now available in <strong>public beta</strong>. <a href="api-clients/java/Java-Client.html">Here</a> are more details on how to start integrating it into your solution</li>
+<li>We published the API limits <a href="API-rate-limits.html">here</a></li>
+<li>We updated the Custom fields <a href="Custom-Fields.html">page</a> with useful gifs</li>
+<li>We fixed various bugs</li>
+</ul>
+<p><strong>We update the .NET and Java client versions with each API release.</strong></p>
+<h2 id="11-march-2022">11 March 2022</h2>
+<ul>
+<li>You can now export a termbase and a termbase template in Trados Enterprise using the Trados Cloud Platform API</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="22-february-2022">22 February 2022</h2>
+<ul>
+<li>You can now convert an xdt file into a termbase structure using <a href="../api/Public-API.v1-fv.html#/operations/ConvertTermbaseTemplate">this</a> dedicated endpoint</li>
+<li>When updating a termbase entry you will have to provide either the name or the identifier for the <code>termbaseFieldValues</code></li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="2-february-2022">2 February 2022</h2>
+<ul>
+<li>You can now import a termbase in Trados Enterprise using the Trados Cloud Platform API. The supported extensions are <code>xml</code> and <code>tbx</code>. The maximum size for an imported termbase is 10 MB.</li>
+<li>Our .NET SDK client is now available in <strong>public beta</strong>. <a href="api-clients/net/NET-Client.html">Here</a> are more details on how to start integrating it into your solution.</li>
+<li>We updated the <a href="Basic-project-creation-flow.html">basic project creation</a> page with useful gifs and added a small Postman collection to help you get started quickly</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="15-december-2021">15 December 2021</h2>
+<ul>
+<li>You can now create, read, update and delete terminology termbases, termbase templates and termbase entries</li>
+<li>We fixed various bugs</li>
+</ul>
+<h2 id="18-november-2021">18 November 2021</h2>
+<ul>
+<li>You can now update the configurations of future tasks using the <code>projectPlan</code> field, in the <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject"><code>update project</code></a> endpoint</li>
+<li>Fixed various bugs</li>
+</ul>
+<h2 id="20-october-2021">20 October 2021</h2>
+<ul>
+<li>Basic project creation flow added</li>
+<li>Fixed various bugs</li>
+</ul>
+<h2 id="04-october-2021">04 October 2021</h2>
+<ul>
+<li>Added multiple date formats</li>
+<li>Added pagination for <a href="../api/Public-API.v1-fv.html#/operations/ListFileProcessingConfigurations"><code>List File Processing Configurations</code></a> endpoint</li>
+<li>Fixed various bugs</li>
+</ul>
+<h2 id="08-september-2021">08 September 2021</h2>
+<ul>
+<li>Added support for downloading quote files</li>
+<li>Enum values updated to follow camelCase convention</li>
+<li>Updated documentation for projectTemplate in create project request</li>
+<li>Renamed customProperty to customFields in error responses</li>
+<li>Improved documentation for <a href="Interact-with-tasks.html">Reclaim Task</a></li>
+<li>Updated documentation for <a href="Export-quote-report.html">Quotes</a></li>
+</ul>
+<h2 id="26-august-2021">26 August 2021</h2>
+<ul>
+<li>Added support to restrict file downloads</li>
+<li>When creating/updating projects using a project template which has mandatory custom fields, you must supply those custom fields</li>
+<li>Fixed various bugs</li>
+</ul>
+<p><strong>We will remove deprecated fields from the <a href="../api/Public-API.v1-fv.html#/schemas/error-response"><code>ErrorResponse</code></a> model in an upcoming release. Please ensure you are not using fields marked as deprecated!</strong></p>
+<h2 id="29-july-2021">29 July 2021</h2>
+<ul>
+<li>Added endpoints for custom field definitions.</li>
+<li>Added support for custom fields on projects and project templates.</li>
+<li>The <code>translationEngine</code>, <code>fileProcessingConfiguration</code>, <code>workflow</code> fields are now required on the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject"><code>/projects</code></a> endpoint.</li>
+<li>The <code>isSkipped</code> field is now marked as required on the <a href="../api/Public-API.v1-fv.html#/operations/UpdateWorkflow"><code>/workflow/updateworkflow</code></a> endpoint.</li>
+<li>Added new assignee type <code>projectCreator</code> when retrieving workflows.</li>
+<li>Improved contract documentation on TQA endpoints.</li>
+<li>Fixed various bugs.</li>
+</ul>
+<h2 id="08-june-2021">08 June 2021</h2>
+<ul>
+<li>For endpoints that return multiple items, the <code>top</code> query parameter has a default value of <code>100</code> and a maximum value of <code>100</code>; <code>skip</code> has a default value of <code>0</code>.</li>
+<li>The <code>Authorization</code> and <code>X-LC-Tenant</code> headers are now required for all endpoints.</li>
+<li>Improved the returned error structure.</li>
+<li>Fixed various issues with incorrect contract.</li>
+<li>Added new conditional cost fields (<code>costOrder</code>,  <code>conditionalCostType</code>, <code>conditionalCostOperator</code>, <code>conditionalCostVariable</code>, <code>conditionalCostThreshold</code>) when working with project quotes.</li>
+<li>Added currency types for quote model.</li>
+</ul>
+<h2 id="17-may-2021">17 May 2021</h2>
+<p>A Postman Collection is now available for integrators. Check out <a href="Language-Cloud-APIs-for-Postman.html">this</a> page for details.</p>
+<h2 id="10-february-2021">10 February 2021</h2>
+<ul>
+<li><strong>Target File</strong> &gt; <strong>Download File Version</strong> endpoint</li>
+</ul>
+<p>When you make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/DownloadFileVersion"><code>/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/download</code></a> endpoint, you can now perform a direct download of the native file as well as of the <code>BCM</code> file version.</p>
+<ul>
+<li><strong>Target File</strong> &gt; <strong>Export Target File Version</strong> endpoint</li>
+</ul>
+<p>When you make a <code>POST</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ExportTargetFileVersion"><code>/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/exports</code></a> endpoint, you now have a query parameter where you can specify whether the file version export should be a native file or an <code>sdlxliff</code> file. The default value is <code>native</code>.</p>
+<h2 id="28-january-2021">28 January 2021</h2>
+<ul>
+<li><strong>Project</strong> &gt; <strong>List Project's Tasks</strong> endpoint</li>
+</ul>
+<p>When you make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListProjectTasks"><code>/projects/{projectId}/tasks</code></a> endpoint, you can now retrieve the available project tasks and their details.</p>
+<ul>
+<li><strong>Retrieving tasks</strong></li>
+</ul>
+<p>Retrieving tasks provides the following new additional details:</p>
+<ul>
+<li>the Vendor Order Quote information</li>
+<li>the translation status for each task: the type of matches, the number of segments, the number of words/characters.</li>
+</ul>
+<ul>
+<li><strong>Specifying target languages for source files</strong></li>
+</ul>
+<p>When adding source files to a project, you can specify their target languages via the <code>targetLanguages</code> and <code>path</code> elements.</p>
+<p><span style='color: #f5f5f5; font-size:10px;'>₍^. .^₎⟆</span></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Whats-New.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>.NET Client </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content=".NET Client ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="net-client">.NET Client</h1>
+
+<p>.NET Client is a collection of API clients structured in accordance with the API documentation, meaning each section will have its own client.</p>
+<p>It is built on .NET Standard 2.0. For compatibility information, see the <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#net-implementation-support">Microsoft implementation support page</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The .NET Client library is auto-generated from the current API contracts, so any updates to the contract will reflect as changes in the SDK client. Minor version increases do not guarantee backwards compatibility.</p>
+</div>
+<h2 id="installation">Installation</h2>
+<p>You can add the .NET Client library to your project from <a href="https://www.nuget.org/packages/Rws.LanguageCloud.Sdk">Rws.LanguageCloud.Sdk NuGet</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>We will take the project creation flow as an example to show how the API clients can be used.</p>
+<h4 id="1-add-the-using-statement">1. Add the <code>using</code> statement:</h4>
+<pre><code class="lang-csharp">using Rws.LanguageCloud.Sdk;
+</code></pre>
+<h4 id="2-get-a-new-project-client">2. Get a new Project client:</h4>
+<p>First step is to get an instance of <code>LanguageCloudClientProvider</code>. The constructor has 2 optional parameters <code>region</code> and <code>baseUrl</code>. When using the constructor with no parameters, the provider will be instantiated for the <code>eu</code> region. Any clients created by this instance will be calling on the EU region. If you need to specify a different region, instantiate it with the <code>region</code> specified. Region is specified by it's code, ex: <code>eu</code>, <code>ca</code>, etc,</p>
+<p>The second optional parameter <code>baseUrl</code> is used if you want to test the client with a mock server.</p>
+<p>You can request a new API client from the <code>LanguageCloudClientProvider</code> instance. There are 3 methods exposed for each client:</p>
+<ul>
+<li>
+<pre><code class="lang-csharp">GetProjectClient (ServiceCredentials credentials, params DelegatingHandler[] handlers)
+</code></pre>
+</li>
+</ul>
+<p>This method accepts a <code>ServiceCredentials</code> object which will be used to perform authentication using an implicit authentication handler. Custom handlers are also accepted.</p>
+<ul>
+<li>
+<pre><code class="lang-csharp">GetProjectClientNoAuth (params DelegatingHandler[] handlers) 
+</code></pre>
+</li>
+</ul>
+<p>This method accepts custom handlers and does not perform any authentication implicitly. You must handle authentication in a custom handler when using this method.</p>
+<ul>
+<li>
+<pre><code class="lang-csharp">GetProjectClient (params DelegatingHandler[] handlers)`
+</code></pre>
+</li>
+</ul>
+<p>This method accepts custom handlers and can be used to authenticate using scoping/context.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>On each call to GetProjectClient or GetProjectClientNoAuth a new instance is created. That means a new HttpClient for each one. You should avoid having more than one instance - and should share that using Dependency Injection or other mechanisms.</p>
+</div>
+<p>In this example we will use the credentials options to get a new Project Client and we won't supply any additional handlers:</p>
+<pre><code class="lang-csharp">
+ // define credentials
+ServiceCredentials credentials = new ServiceCredentials(&quot;YOUR_CLIENT_ID&quot;, &quot;YOUR_CLIENT_SECRET&quot;, &quot;YOUR_TENANT_ID&quot;);
+
+// instantiate the provider
+var clientProvider = new LanguageCloudClientProvider(&quot;eu&quot;);
+
+// instantiate the client
+var projectClient = clientProvider.GetProjectClient(credentials);
+</code></pre>
+<p>Since each client exposes its available operations according to the API documentation, you can find the GetProject operation in the Project client.</p>
+<h4 id="3-create-a-new-project">3. Create a new project:</h4>
+<pre><code class="lang-csharp">var projectCreateRequest = new ProjectCreateRequest
+{
+    Name = &quot;YOUR_PROJECT_NAME&quot;,
+    DueBy = DateTime.Now.AddDays(7),
+    ProjectTemplate = new ObjectIdRequest
+    {
+        Id = &quot;YOUR_PROJECT_TEMPLATE_ID&quot;
+    }
+};
+
+var projectCreateResponse = await projectClient.CreateProjectAsync(projectCreateRequest);
+</code></pre>
+<h4 id="4-attach-a-source-file-to-the-project-via-the-sourcefiles-client">4. Attach a source file to the project via the SourceFiles client:</h4>
+<p>Projects that do not contain source files cannot be started.</p>
+<p>First, <code>GET</code> the SourceFiles client:</p>
+<pre><code class="lang-csharp"> // define credentials
+ServiceCredentials credentials = new ServiceCredentials(&quot;YOUR_CLIENT_ID&quot;, &quot;YOUR_CLIENT_SECRET&quot;, &quot;YOUR_TENANT_ID&quot;);
+
+// instantiate the provider
+var clientProvider = new LanguageCloudClientProvider(&quot;eu&quot;);
+
+// instantiate the client
+var sourceFileClient = clientProvider.GetSourceFileClient(credentials);
+</code></pre>
+<p>Then, attach a source file to the project:</p>
+<pre><code class="lang-csharp">using (FileStream SourceStream = File.Open(&quot;YOUR_TEXT_SOURCE_FILE&quot;, FileMode.Open))
+{
+    FileParameter file = new FileParameter(SourceStream, &quot;YOUR_TEXT_SOURCE_FILE&quot;, &quot;text/plain&quot;);
+
+    SourceFileRequest properties = new SourceFileRequest
+    {      
+        Name = &quot;YOUR_TEXT_SOURCE_FILE&quot;,
+        Role = SourceFileRequestRole.Translatable,
+        Type = SourceFileRequestType.Native,
+        Language = &quot;en-US&quot;,
+    };
+
+    await sourceFileClient.AddSourceFileAsync(&quot;YOUR_PROJECT_ID&quot;, properties ,file);
+}
+</code></pre>
+<h4 id="5-start-the-project">5. Start the project:</h4>
+<pre><code class="lang-csharp">await projectClient.StartProjectAsync(&quot;YOUR_PROJECT_ID&quot;);
+</code></pre>
+<h4 id="6-get-the-project-details-using-the-project-client">6. <code>GET</code> the project details using the Project client:</h4>
+<pre><code class="lang-csharp">var myProject = await projectClient.GetProjectAsync(&quot;YOUR_PROJECT_ID&quot;);
+</code></pre>
+<h4 id="7-optional-supply-the-fields-parameter-and-retrieve-specific-data-about-the-project">7. (Optional) Supply the <code>fields</code> parameter and retrieve specific data about the project:</h4>
+<pre><code class="lang-csharp">var myProject = await projectClient.GetProjectAsync(&quot;YOUR_PROJECT_ID&quot;, &quot;status,quote.totalAmount&quot;);
+</code></pre>
+<h2 id="error-handling">Error handling</h2>
+<p>The SDK may throw the following exceptions:</p>
+<table>
+<thead>
+<tr>
+<th>Exception Type</th>
+<th>Exception description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ModelDeserializationException</strong></td>
+<td>Response could not be deserialized</td>
+</tr>
+<tr>
+<td><strong>ApiUnauthorizedException</strong></td>
+<td>The user could not be identified</td>
+</tr>
+<tr>
+<td><strong>ApiPermissionException</strong></td>
+<td>The user does not have permission to access this resource</td>
+</tr>
+<tr>
+<td><strong>ApiForbiddenException</strong></td>
+<td>The user does not have access to the resource</td>
+</tr>
+<tr>
+<td><strong>ApiErrorException</strong></td>
+<td>Something went wrong when performing the action</td>
+</tr>
+<tr>
+<td><strong>ApiConnectionException</strong></td>
+<td>Something went wrong when connecting to the server</td>
+</tr>
+<tr>
+<td><strong><a href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskcanceledexception?view=netstandard-2.0">TaskCanceledException</a></strong></td>
+<td>A timeout occurred. This exception is provided by Microsoft in System.Threading.Tasks namespace.</td>
+</tr>
+</tbody>
+</table>
+<p>All these exceptions inherit from <code>ApiClientException</code> and provide an <code>ApiErrorResponse</code> object which contains details about the error that occurred.
+You may use this object in combination with the ErrorCode class to perform exception handling:</p>
+<pre><code class="lang-csharp">try
+{
+    // your API Client interaction code
+}
+catch (ApiForbiddenException e)
+{
+    // handle exception...
+}
+catch (ApiUnauthorizedException e)
+{
+    // handle exception...
+}
+// we can limit what specific API Errors we want to handle:
+catch (ApiErrorException e) where (e.ApiError.ErrorCode == ErrorCodes.MaxSize)
+{
+    // One of the fields in your call, has value higher then allowed
+    // We get the summary message:
+    string summary = e.ApiError.Message;
+
+    // Next we can get the list of fields that failed validation:
+    foreach (var detail in e.ApiError.Details)
+    {
+        // TODO
+    }
+}
+</code></pre>
+<p>Additionally, the <code>ApiErrorResponse.Details</code> object contains specific error data that may be useful.</p>
+<h3 id="error-codes">Error Codes</h3>
+<p>The <code>ErrorCodes</code> static class provides a series of constant strings suitable to be used for error code validation. Please check the Rest API documentation for specific codes any endpoint may return and what that value means in the specific context.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/api-clients/net/NET-Client.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

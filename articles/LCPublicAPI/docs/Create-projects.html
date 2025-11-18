@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Create projects </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Create projects ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-projects">Create projects</h1>
+
+<p>To create a project, you need to specify the following resources:</p>
+<ul>
+<li>A translation engine: determines which translation memories, MT engines and termbases should be used in the project</li>
+<li>A file processing configuration: determines which translatable file types this project should support, and the specific configuration of those file types</li>
+<li>A pricing model: the set of rules based on which the project quote is calculated</li>
+<li>A workflow: the sequence of steps the project goes through from inception to completion and the assignees for each step</li>
+</ul>
+<p>Instead of specifying every resource separately, you can also specify a project template, which brings together all the elements needed during project creation: a translation engine, a file processing configuration, a pricing model, and a workflow.</p>
+<p>You must define your project resources before you start creating your project. This API version does not allow any <code>POST</code> requests to create project resources. Your project resources must be created from the Trados UI beforehand.</p>
+<h2 id="create-projects-from-scratch">Create projects from scratch</h2>
+<p>You can create projects from scratch, which means that you must add all the project resources (all their identifiers) above to your project, one by one.</p>
+<p>You cannot specify custom fields and project settings directly via the Trados Cloud Platform API. These can only be configured within a project template from the Trados UI. Therefore, if you want to include custom fields and project settings in your project, you must create projects from a project template which is already configured in the Trados UI.</p>
+<h3 id="1-decide-which-project-resources-you-want-to-use">1. Decide which project resources you want to use.</h3>
+<p>Make a <code>GET</code> request to the following resource endpoints and identify the identifiers of the resources you want to include in your project:</p>
+<ul>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListTranslationEngines"><code>/translation-engine</code></a> <em>required</em></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListFileProcessingConfigurations"><code>/file-processing-configuration</code></a> <em>required</em></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListWorkflows"><code>/workflow</code></a> <em>required</em></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListPricingModels"><code>/pricing-model</code></a> <em>optional</em></li>
+<li><a href="../api/Public-API.v1-fv.html#/operations/ListCustomFields"><code>/custom-field-definitions</code></a> <em>optional</em></li>
+</ul>
+<h3 id="2-decide-which-language-pairs-source---target-you-want-to-use">2. Decide which language pairs (source - target) you want to use.</h3>
+<p>Make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListLanguages"><code>/languages</code></a> endpoint and identify the <code>languageCode</code> parameter values.</p>
+<h3 id="3-decide-where-you-want-to-save-your-project">3. Decide where you want to save your project.</h3>
+<p>When you create your project, you must save it in a location (or customer folder). You will need the <code>locationId</code> of that customer folder. To retrieve the <code>locationId</code> of a given customer folder, make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/GetCustomer"><code>/customers/{customerId}</code></a> endpoint and check the <code>locationId</code> value in the response. If you do not specify a location, the project will be created in the Root folder.</p>
+<h3 id="4-create-your-project">4. Create your project.</h3>
+<p>Make a <code>POST</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject"><code>/projects</code></a> endpoint. You must provide identifiers for all the <strong>required</strong> resources: translation engine, file processing configuration and workflow.</p>
+<p>Each resource object has a <code>strategy</code> parameter you must specify in the request body. The strategy parameter has 2 available values: <code>copy</code> and <code>use</code>. Trados recommends that you choose the <code>copy</code> value, which means that you include a copy (clone) of your resource in the project. If you choose the <code>use</code> value, then the actual resource is included in your project.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Issues may arise when <code>strategy=use</code> because you have no control over how the resource is updated from the other places where it is being used.</p>
+</div>
+<p>Make sure that you remember the value of the project <code>id</code> parameter in the response. You will need it for tracking your project, interacting with tasks, and completing projects.</p>
+<h3 id="5-add-your-project-files">5. Add your project files.</h3>
+<p>Make a <code>POST</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile"><code>/projects/{projectId}/source-files</code></a> endpoint. You can add both translatable files and reference files (by specifying the <code>role</code> property), and various file formats (by specifying the <code>type</code> property - native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the <code>targetLanguages</code> and <code>path</code> elements.</p>
+<h3 id="51-perfect-match-optional">5.1 Perfect Match (optional)</h3>
+<p>At this point you can make use of the <a href="../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping">PerfectMatch</a> feature. You can read more about it <a href="https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information">here</a>.</p>
+<h3 id="6-start-your-project">6. Start your project.</h3>
+<p>Make a <code>PUT</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/StartProject"><code>/projects/{projectId}/start</code></a> endpoint.</p>
+<h2 id="create-projects-based-on-a-template">Create projects based on a template</h2>
+<p>You can create projects based on a project template already configured from the Trados UI, which means that you must only add a project template (its identifier) to your project. All the resources in your project template are automatically included in your project.</p>
+<h3 id="1-decide-which-project-template-you-want-to-use">1. Decide which project template you want to use.</h3>
+<p>Make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListProjectTemplates"><code>/project-templates</code></a> endpoint. Remember the project template <code>id</code> parameter in the response.</p>
+<h3 id="2-decide-which-language-pairs-source---target-you-want-to-use-1">2. Decide which language pairs (source - target) you want to use.</h3>
+<p>A project template may include more languages than you need. If this is the case, you can keep only the languages of interest. Make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/ListLanguages"><code>/languages</code></a> endpoint and identify the <code>languageCode</code> parameter values.</p>
+<h3 id="3-decide-where-you-want-to-save-your-project-1">3. Decide where you want to save your project.</h3>
+<p>A project template is saved in a location or a customer folder. Most of the times, when you create your project, you want to save it in the same location (customer folder) as the project template it is based on. You will need the <code>locationId</code> of that customer folder. To retrieve the <code>locationId</code> of a given customer folder, make a <code>GET</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/GetCustomer"><code>/customers/{customerId}</code></a> endpoint and check the <code>locationId</code> value in the response.</p>
+<h3 id="4-create-your-project-1">4. Create your project.</h3>
+<p>Make a <code>POST</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/CreateProject"><code>/projects</code></a> endpoint. Provide the project template <code>id</code> and the location <code>id</code>.</p>
+<p>Make sure that you remember the value of the project <code>id</code> parameter in the response. You will need it for tracking your project, interacting with tasks, and completing projects.</p>
+<h3 id="5-add-your-project-files-1">5. Add your project files</h3>
+<p>Make a <code>POST</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/AddSourceFile"><code>/projects/{projectId}/source-files</code></a> endpoint. You can add both translatable files and reference files (by specifying the <code>role</code> property), and various file formats (by specifying the <code>type</code> property - native/bcm/sdxliff). You must provide the language of your source file, and, optionally, the values of the <code>targetLanguages</code> and <code>path</code> elements.</p>
+<h3 id="51-perfect-match-optional-1">5.1 Perfect Match (optional)</h3>
+<p>At this point you can make use of the <a href="../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping">PerfectMatch</a> feature. You can read more about it <a href="https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information">here</a>.</p>
+<h3 id="6-start-your-project-1">6. Start your project.</h3>
+<p>Make a <code>PUT</code> request to the <a href="../api/Public-API.v1-fv.html#/operations/StartProject"><code>/projects/{projectId}/start</code></a> endpoint.</p>
+<h2 id="restrict-file-downloads-for-a-project">Restrict file downloads for a project</h2>
+<p>To restrict file downloads for certain roles, you may create a project as usual and choose to:</p>
+<h4 id="use-a-project-template-that-has-the-restriction-enabled">Use a project template that has the restriction enabled</h4>
+<p>or</p>
+<h4 id="create-a-project-from-scratch">Create a project from scratch</h4>
+<p>Create the project as usual, but specify an additional boolean field named <code>forceOnline</code> in the project creation request:</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;Restricted Project Name&quot;,
+    &quot;description&quot;: &quot;Restricted Project Description&quot;,
+    ...,
+    &quot;forceOnline&quot;: true
+}
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Create-projects.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

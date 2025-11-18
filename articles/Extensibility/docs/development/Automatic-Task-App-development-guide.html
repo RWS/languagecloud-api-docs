@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Automatic Task </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Automatic Task ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="automatic-task">Automatic Task</h1>
+
+<p>Automatic Task extensions offer the possibility to add custom functionality within a project's workflow.</p>
+<p>Examples of automatic tasks:</p>
+<ul>
+<li>send notifications about the project</li>
+<li>update project details</li>
+<li>copy the project files to a shared location</li>
+</ul>
+<p>Most of the Automatic Task extensions will need to perform certain requests to <a href="https://languagecloud.sdl.com/lc/api-docs/72b66de24898e-rws-language-cloud-api">Trados Cloud Platform API</a> in order to achieve the desired result. The Trados Cloud Platform API SDKs (for <a href="https://languagecloud.sdl.com/lc/api-docs/java-client">Java</a> and <a href="https://languagecloud.sdl.com/lc/api-docs/net-client">.NET</a>) are publicly available.</p>
+<p>In order to build a new Automatic Task extension we recommend to start by using the provided <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints">app blueprints</a>.</p>
+<h2 id="automatic-task-extension">Automatic Task Extension</h2>
+<p>For an app to offer Automatic Task functionality, it must define at least one Automatic Task extension within its <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>.
+For example:</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;extensions&quot;: [
+    {
+      &quot;extensionPointId&quot;: &quot;lc.automatictask&quot;,
+      &quot;id&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_ID&quot;,
+      &quot;name&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_NAME&quot;,
+      &quot;description&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_DESCRIPTION&quot;,
+      &quot;extensionPointVersion&quot;: &quot;1&quot;,
+      &quot;configuration&quot;: {
+        &quot;endpoints&quot;: {
+          &quot;lc.automatictask.submit&quot;: &quot;/v1/submit&quot;
+        },
+        &quot;supportedInputFileType&quot;: &quot;nativeSource&quot;,
+        &quot;outputFileType&quot;: &quot;nativeSource&quot;,
+        &quot;scope&quot;: &quot;file&quot;,
+        &quot;outcomes&quot;: [
+          {
+            &quot;default&quot;: true,
+            &quot;description&quot;: &quot;Done.&quot;,
+            &quot;outcome&quot;: &quot;done&quot;
+          }
+        ],
+        &quot;workflowTemplateConfigurations&quot;: [
+          {
+            &quot;name&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_CONFIG_NAME&quot;,
+            &quot;id&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_CONFIG_ID&quot;,
+            &quot;description&quot;: &quot;SAMPLE_AUTOMATICTASK_EXTENSION_CONFIG_DESCRIPTION&quot;,
+            &quot;optional&quot;: false,
+            &quot;defaultValue&quot;: &quot;SAMPLE_DEFAULT_VALUE&quot;,
+            &quot;dataType&quot;: &quot;string&quot;
+          }
+        ]
+      }
+    }
+  ]
+  ...
+}
+</code></pre>
+<ul>
+<li><p><code>extensionPointId</code> - the identifier of the extension point corresponding to this extensionType: <strong>lc.automatictask</strong></p>
+</li>
+<li><p><code>id</code> - unique extension identifier provided by the app developer</p>
+</li>
+<li><p><code>name</code> - provide a friendly and unique name. It might be shown to the end user, and it may be useful in helping the user distinguish between multiple extensions</p>
+</li>
+<li><p><code>description</code> - the description of the automatic task extension</p>
+</li>
+<li><p><code>extensionPointVersion</code> - the version of the extension point that is implemented in the Extension</p>
+</li>
+<li><p><code>configuration</code> - the task configuration</p>
+<ul>
+<li><p><code>endpoints</code></p>
+<ul>
+<li><code>lc.automatictask.submit</code> - the path of the endpoint that accepts a task for execution</li>
+</ul>
+</li>
+<li><p><code>supportedInputFileType</code> - the input file type supported by the task. All tasks can have input files, regardless of their scope.</p>
+<p>Acceptable values:</p>
+<ul>
+<li><p><code>nativeSource</code>: processes source files in their native upload form (for example: FileTypeDetection, Engineering, FileFormatConversion)</p>
+</li>
+<li><p><code>bcmSource</code>: processes source files in their converted &quot;bcm&quot; form (for example: DocumentContentAnalysis, CopySourceToTarget)</p>
+</li>
+<li><p><code>bcmTarget</code>: processes target files in their &quot;bcm&quot; form (for example: Translation, Linguistic Review, MachineTranslation, TranslationMemoryMatching, TranslationMemoryUpdate, TargetFileGeneration)</p>
+</li>
+<li><p><code>nativeTarget</code>: processes target files in their native &quot;generated&quot; form (for example: DTP, FinalCheck)</p>
+</li>
+<li><p><code>sdlxliffTarget</code>: processes target files in their &quot;sdlxliff&quot; form, specifically for Import tasks. It is not recommended for automated task types at this time (early 2022).</p>
+</li>
+<li><p><code>none</code>: does not process the file content, neither to read nor to update it</p>
+</li>
+</ul>
+</li>
+<li><p><code>outputFileType</code> - describes what the output files are for the given task.</p>
+<p>Acceptable values:</p>
+<ul>
+<li>idem with <code>supportedInputFileType</code></li>
+</ul>
+<blockquote>
+<p>The <code>supportedInputFileType</code> and <code>outputFileType</code> parameters affect the extension task order in the workflow template, as follows:</p>
+<ul>
+<li>an extension task can only follow another task with the same <code>outputFileType</code> as its <code>supportedInputFileType</code> (except for the extension tasks with <code>supportedInputFileType: nativeSource</code> which can be placed first in the workflow).</li>
+<li>a normal task can only follow an external task with the same <code>outputFileType</code> as its <code>supportedInputFileType</code>.</li>
+</ul>
+</blockquote>
+</li>
+<li><p><code>scope</code> - describes the applicability of a task within a project</p>
+<p>Acceptable values:</p>
+<ul>
+<li><p><code>file</code>: the task will be applicable for every file in the project. It will process either the source or the target files, based on the relation with supportedInputFileType and outputFileType</p>
+</li>
+<li><p><code>targetLanguage</code>: the task will be applicable for every target language of the project</p>
+</li>
+<li><p><code>batch</code>: the task is applicable only once for a batch execution within a project</p>
+</li>
+<li><p><code>task</code>: the task is applicable to other tasks. Specifically tailored for Error tasks. Not recommended for automated task types at this time (early 2022).</p>
+</li>
+<li><p><code>vendorOrder</code>: the task is part of the vendor negotiation process. Not recommended for automated task types at this time (early 2022).</p>
+</li>
+</ul>
+</li>
+<li><p><code>outcomes</code> - the possible outcomes of this automatic task:</p>
+<ul>
+<li><p><code>outcome</code> - a custom outcome value</p>
+</li>
+<li><p><code>description</code> - the outcome description</p>
+</li>
+<li><p><code>default</code> - if <code>TRUE</code>, this outcome will be used when no specific outcome is provided. At least one outcome must be set as default.</p>
+</li>
+</ul>
+</li>
+<li><p><code>workflowTemplateConfigurations</code> - definitions of the configurations that the app needs at runtime in order to execute a task. The task will be configured when you create a workflow template, a workflow or a project. The configuration values will be passed to the app when a task is submitted for execution. For example, an extension that uploads a file to an FTP can have the location as a configuration.</p>
+<ul>
+<li><p><code>name</code> - short, user-friendly name for the configuration settings</p>
+</li>
+<li><p><code>id</code> - an alphanumeric identifier, including underscores</p>
+</li>
+<li><p><code>description</code> - a user-friendly description of the configuration settings, describing what the user should set in the textbox</p>
+</li>
+<li><p><code>optional</code> - if the configuration setting is optional</p>
+</li>
+<li><p><code>defaultValue</code> - the default value of the setting</p>
+</li>
+<li><p><code>dataType</code> - specifies the data type for the value, to be used for input type generation</p>
+</li>
+<li><p><code>options</code> - a list of setting options</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You can define as many automatic extensions as you need. They could have the same extension point (submit endpoint) or different ones, depending on your app design.</p>
+<h3 id="extension-usage">Extension Usage</h3>
+<p>You can integrate your extension task within a <strong>Workflow Template</strong> as shown below:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/DevAppTaskWFT.gif?raw=true" alt="AutomaticTask"></p>
+<p>The <code>workflowTemplateConfigurations</code> can be configured as follows:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/DevAppTaskConfiguration.gif?raw=true" alt="AutomaticTaskConfigs"></p>
+<p>Based on the created <strong>Workflow Template</strong> you can create a new <strong>Workflow</strong>.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/DevAppTaskWF.gif?raw=true" alt="AutomaticTaskWF"></p>
+<p>The last step is to start a <strong>Project</strong> using the <strong>Workflow</strong> created in the previous step.</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/DevCreateATAppProject.gif?raw=true" alt="CreateATProject"></p>
+<p>Find more details on how to use an Automatic Task app in the <a href="../consumer/Automatic-Task-App-consumer-guide.html">consumer guide</a>.</p>
+<h3 id="scopes">Scopes</h3>
+<p>Depending on the actions performed by the app you may need to request access to the account's resources, otherwise the requests to the Trados Cloud Platform API will fail due to insufficient permissions.</p>
+<p>To request access from the consumers, you need to specify one or more scopes within the app's descriptor, as shown below:</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;scopes&quot; : [
+    &quot;TENANT&quot;,
+    &quot;TENANT_READ&quot;,
+    &quot;ACCESS_SECURE_PROJECT_CONTENT&quot;
+  ]
+  ...
+}
+</code></pre>
+<p>The allowed values are:</p>
+<ul>
+<li><code>TENANT</code> - Read/write/delete all tenant data (resources).</li>
+<li><code>TENANT_READ</code> - Read-only access to all tenant data (resources).</li>
+<li><code>ACCESS_SECURE_PROJECT_CONTENT</code> - Access to secure project content.</li>
+</ul>
+<p>They will be presented to the consumers at installation time in order for them to decide if they want to proceed with the installation and allow access to the app.</p>
+<h3 id="submit-endpoint">Submit Endpoint</h3>
+<p>The <code>lc.automatictask.submit</code> endpoint is used to receive and process the tasks from Trados. This endpoint should only schedule the task and return <code>200</code>. The scheduled task would be picked up by a background process that will send the result to the received callbackUrl.</p>
+<p>Example:</p>
+<pre><code class="lang-json">POST /v1/submit
+X-LC-Tenant: LC-TENANT_ID
+
+{
+  &quot;projectId&quot;: &quot;SAMPLE_PROJECT_ID&quot;,
+  &quot;correlationId&quot;: &quot;SAMPLE_TASK_ID&quot;,
+  &quot;callbackUrl&quot;: &quot;http://theCallback/callThisBack&quot;,
+  &quot;workflowConfiguration&quot;: [
+    {
+      &quot;id&quot;: &quot;SAMPLE_CONFIG_ID&quot;,
+      &quot;value&quot;: &quot;SAMPLE_CONFIG_VALUE&quot;
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li><p>The <code>correlationId</code> is the task identifier from Trados. You can also find it in the project details page under the <em>Task History</em> tab.</p>
+</li>
+<li><p>The <code>callbackUrl</code> is a Trados endpoint where the app will send the outcome after the task is processed.</p>
+</li>
+<li><p>The <code>X-LC-Tenant</code> header has to be kept in order to perform the callback request. Find more details in the dedicated section below.</p>
+</li>
+</ul>
+<p>The blueprints contain placeholders from where you can start implementing the endpoint's functionality:</p>
+<ul>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppBlueprint/Rws.LC.AppBlueprint/Controllers/AutomaticTaskController.cs#L36">.NET blueprint</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/java/com/rws/lt/lc/blueprint/web/AutomaticTaskController.java#L16">Java blueprint</a></li>
+</ul>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.automatictask.submit/post">documentation</a> for further details.</p>
+<h3 id="callback-endpoint">Callback Endpoint</h3>
+<p>This is a Trados endpoint used to receive the task outcome from the Automatic Task apps. Each automatic task will have its own callback URL.</p>
+<p>Example:</p>
+<pre><code class="lang-json">POST /external-job/v1/callback?token=CALLBACK_TOKEN
+X-LC-Tenant: LC-TENANT_ID
+
+{
+  &quot;success&quot;: true,
+  &quot;outcome&quot;: &quot;Done&quot;,
+  &quot;errors&quot;: null
+}
+</code></pre>
+<ul>
+<li><p>The request needs to include the <code>X-LC-Tenant</code> header.</p>
+</li>
+<li><p>The <code>token</code> should be already present in the received <code>callbackUrl</code> on the submit endpoint.</p>
+</li>
+</ul>
+<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1external-job%7E1v1%7E1callback/post">documentation</a> for further details.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/Automatic-Task-App-development-guide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

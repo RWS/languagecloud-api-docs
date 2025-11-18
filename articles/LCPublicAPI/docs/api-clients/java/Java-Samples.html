@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Cloud Platform SDK Samples for Java </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Cloud Platform SDK Samples for Java ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-cloud-platform-sdk-samples-for-java">Trados Cloud Platform SDK Samples for Java</h1>
+
+<h2 id="console-application-sample">Console Application Sample</h2>
+<p>The console application sample is available for download on <a href="https://github.com/RWS/language-cloud-public-api-samples/tree/main/Java/PublicApi.Sample.Console.Java">GitHub</a>.</p>
+<p>The sample contains three examples of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK. You can either use the supplied provider or handle the authentication yourself:</p>
+<h4 id="1-instantiating-a-client-using-service-credentials">1. Instantiating a client using service credentials</h4>
+<p>You can instantiate a client using the provided <code>LanguageCloudClientProvider.builder()</code> pattern.</p>
+<p>This method requires you to provide a <code>ServiceCredentials</code> object containing your <code>clientID</code>, <code>clientSecret</code>, and <code>tenant</code>. <em>See the <a href="../../Authentication.html">Authentication</a> page for more details.</em></p>
+<pre><code class="lang-java">import com.rws.lt.lc.publicapi.sdk.api.GroupApi;
+import com.rws.lt.lc.publicapi.sdk.auth.ServiceCredentials;
+import com.rws.lt.lc.publicapi.sdk.client.LanguageCloudClientProvider;
+import com.rws.lt.lc.publicapi.sdk.model.Group;
+import com.rws.lt.lc.publicapi.sdk.model.ListGroupsResponse;
+
+import java.util.stream.Collectors;
+...
+
+//instantiate the credentials
+ServiceCredentials serviceCredentials = new ServiceCredentials(&quot;YOUR_CLIENT_ID&quot;, &quot;YOUR_CLIENT_SECRET&quot;, &quot;YOUR_TENANT_ID&quot;);
+
+// instantiate the LanguageCloudClientProvider
+LanguageCloudClientProvider languageCloudClientProvider = LanguageCloudClientProvider
+    .builder()
+    .withRegion(&quot;eu&quot;) // optional (default is &quot;eu&quot;)
+    .withServiceCredentials(serviceCredentials)
+    .build();
+
+// instantiate the client
+GroupApi groupApi = languageCloudClientProvider.getGroupClient();
+
+// use the client
+ListGroupsResponse groupsResponse = groupApi.listGroups(new GroupApi.ListGroupsQueryParams());
+System.out.println(&quot;Groups:&quot;);
+System.out.println(
+    groupsResponse.getItems().stream()
+    .map(Group::getName)
+    .collect(Collectors.joining(&quot;\n&quot;)));
+</code></pre>
+<p><em>*Using this method, a unique TraceID will be generated for each request.</em></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Make sure you always keep your credentials safe.</p>
+</div>
+<h4 id="2-instantiating-a-client-using-context-scoping">2. Instantiating a client using context scoping</h4>
+<p>This method allows you to make API calls with multiple different service credentials using the same client instance.</p>
+<p>We provide an <code>LCContext</code> which exposes scoping options. You can use this to scope your API calls in different contexts. The sample contains an example with two different service credentials:</p>
+<pre><code class="lang-java">import com.rws.lt.lc.publicapi.sdk.api.UserApi;
+import com.rws.lt.lc.publicapi.sdk.auth.ServiceCredentials;
+import com.rws.lt.lc.publicapi.sdk.client.LanguageCloudClientProvider;
+import com.rws.lt.lc.publicapi.sdk.context.ContextKeys;
+import com.rws.lt.lc.publicapi.sdk.context.LCContext;
+import com.rws.lt.lc.publicapi.sdk.model.ListUsersResponse;
+import com.rws.lt.lc.publicapi.sdk.model.User;
+
+import java.util.stream.Collectors;
+...
+
+// define credentials for your first user
+ServiceCredentials credentials_1 = new ServiceCredentials(&quot;YOUR_CLIENT_ID_1&quot;, &quot;YOUR_CLIENT_SECRET_1&quot;, &quot;YOUR_TENANT_ID_1&quot;);
+
+// define credentials for your second user
+ServiceCredentials credentials_2 = new ServiceCredentials(&quot;YOUR_CLIENT_ID_2&quot;, &quot;YOUR_CLIENT_SECRET_2&quot;, &quot;YOUR_TENANT_ID_2&quot;);
+
+// instantiate the LanguageCloudClientProvider
+LanguageCloudClientProvider languageCloudClientProvider_contextAuth = LanguageCloudClientProvider
+    .builder()
+    .withRegion(&quot;eu&quot;) // optional (default is &quot;eu&quot;)
+    .build();
+
+// instantiate the client without credentials
+UserApi userApi = languageCloudClientProvider_contextAuth.getUserClient();
+
+
+Runnable listUsersExecutable = () -&gt; {
+    ListUsersResponse usersResponse = userApi.listUsers(new UserApi.ListUsersQueryParams());
+    System.out.println(LCContext.getFromLCContext(ContextKeys.TRACE_ID_KEY) + &quot; &gt;&gt; Users for tenant &quot; + LCContext.getFromLCContext(ContextKeys.TENANT_ID_KEY) + &quot; are:&quot;);
+    System.out.println(usersResponse.getItems().stream().map(User::getId).collect(Collectors.joining(&quot;\n&quot;)));
+};
+
+// create a context scope and execute inside with tenant 1
+LCContext.executeInScope(listUsersExecutable, serviceCredentials1, &quot;trace-id-1&quot;);
+
+System.out.println(&quot;--------------------------------------------------&quot;);
+// create a context scope and execute inside with tenant 2
+LCContext.executeInScope(listUsersExecutable, serviceCredentials2, &quot;trace-id-2&quot;);
+</code></pre>
+<h4 id="3-instantiating-a-client-with-app-service-credentials">3. Instantiating a client with App service credentials</h4>
+<p>This method allows you to make an API call from an App for different tenants using the same client instance. See more at <a href="https://eu.cloud.trados.com/lc/extensibility-docs/937a747af31a0-concepts#apps">Extensibility Docs</a>.</p>
+<p>We provide an <code>LCContext</code> which exposes scoping options. You can use this to scope your API calls in different contexts. The sample contains an example with an App installed in multiple tenants:</p>
+<pre><code class="lang-java">import com.rws.lt.lc.publicapi.sdk.api.UserApi;
+import com.rws.lt.lc.publicapi.sdk.auth.ServiceCredentials;
+import com.rws.lt.lc.publicapi.sdk.client.LanguageCloudClientProvider;
+import com.rws.lt.lc.publicapi.sdk.context.ContextKeys;
+import com.rws.lt.lc.publicapi.sdk.context.LCContext;
+import com.rws.lt.lc.publicapi.sdk.model.ListUsersResponse;
+import com.rws.lt.lc.publicapi.sdk.model.User;
+
+import java.util.stream.Collectors;
+...
+
+//instantiate the credentials
+ServiceCredentials serviceCredentials = new ServiceCredentials(&quot;YOUR_CLIENT_ID_1&quot;, &quot;YOUR_CLIENT_SECRET_1&quot;);
+
+// instantiate the LanguageCloudClientProvider
+LanguageCloudClientProvider languageCloudClientProvider_contextAuth = LanguageCloudClientProvider
+        .builder()
+        .withRegion(&quot;eu&quot;) // optional (default is &quot;eu&quot;)
+        .withServiceCredentials(serviceCredentials)
+        .build();
+
+// instantiate the client without credentials
+UserApi userApi = languageCloudClientProvider_contextAuth.getUserClient();
+
+
+Runnable listUsersExecutable = () -&gt; {
+    ListUsersResponse usersResponse = userApi.listUsers(new UserApi.ListUsersQueryParams());
+    System.out.println(LCContext.getFromLCContext(ContextKeys.TRACE_ID_KEY) + &quot; &gt;&gt; Users for tenant &quot; + LCContext.getFromLCContext(ContextKeys.TENANT_ID_KEY) + &quot; are:&quot;);
+    System.out.println(usersResponse.getItems().stream().map(User::getId).collect(Collectors.joining(&quot;\n&quot;)));
+};
+
+// create a context scope and execute inside with tenant 1
+LCContext.executeInScope(listUsersExecutable, TENANT_VALUE_1, &quot;trace-id-1&quot;);
+
+System.out.println(&quot;--------------------------------------------------&quot;);
+// create a context scope and execute inside with tenant 2
+LCContext.executeInScope(listUsersExecutable, TENANT_VALUE_2, &quot;trace-id-2&quot;);
+    
+</code></pre>
+<h4 id="4-instantiating-a-client-using-custom-authentication">4. Instantiating a client using custom authentication</h4>
+<p>If you want complete control over client authentication, you can provide a <code>CustomServiceAuthenticationHandler</code>:</p>
+<pre><code class="lang-java">import com.rws.lt.lc.publicapi.sdk.api.ProjectApi;
+import com.rws.lt.lc.publicapi.sdk.auth.AuthenticationService;
+import com.rws.lt.lc.publicapi.sdk.auth.CustomServiceAuthenticationHandler;
+import com.rws.lt.lc.publicapi.sdk.auth.ServiceCredentials;
+import com.rws.lt.lc.publicapi.sdk.client.LanguageCloudClientProvider;
+import com.rws.lt.lc.publicapi.sdk.model.ListProjectsResponse;
+
+import java.util.List;
+import java.util.UUID;
+...
+
+AuthenticationService authenticationService = AuthenticationService.getInstance();
+
+CustomServiceAuthenticationHandler customServiceAuthenticationHandler = new CustomServiceAuthenticationHandler(authenticationService) {
+    @Override
+    public ServiceCredentials getServiceCredentials() {
+        return new ServiceCredentials(CLIENT_ID, CLIENT_SECRET);
+    }
+
+    @Override
+    public String getTraceId() {
+        return UUID.randomUUID().toString();
+    }
+
+    @Override
+    public String getTenantId() {
+        return TENANT_VALUE;
+    }
+};
+
+LanguageCloudClientProvider languageCloudCustomClientProvider = LanguageCloudClientProvider
+    .builder()
+    .withRegion(&quot;eu&quot;) // optional (default is &quot;eu&quot;)
+    .withRequestInterceptors(List.of(customServiceAuthenticationHandler))
+    .build();
+
+// instantiate the client
+ProjectApi projectApi = languageCloudCustomClientProvider.getProjectClient();
+
+// use the client
+ListProjectsResponse projectsResponse = projectApi.listProjects(new ProjectApi.ListProjectsQueryParams());
+System.out.println(&quot;Projects:&quot;);
+System.out.println(projectsResponse.getItems());
+</code></pre>
+<p><br><br></p>
+<h2 id="web-api-sample">Web API Sample</h2>
+<p>The web API sample is available for download on <a href="https://github.com/RWS/language-cloud-public-api-samples/tree/main/Java/PublicApi.Sample.Web.Java">GitHub</a>.</p>
+<p>The sample contains two examples of how to instantiate and work with an API client provided by the Trados Cloud Platform SDK for Java:</p>
+<ul>
+<li><em>If you want to use the provided authentication mechanism, create a custom handler that inherits from <code>CustomServiceAuthenticationHandler</code>.</em></li>
+</ul>
+<p>In our example, we created the <code>CustomAuthenticationHandler</code> class, which inherits from <code>CustomServiceAuthenticationHandler</code>. The <code>CustomServiceAuthenticationHandler</code> class already provides an authentication mechanism.</p>
+<p>We have overridden the <code>getServiceCredentials</code>, <code>getTraceId</code>, and <code>getTenantId</code> methods and provided our implementations, as these will be called by <code>CustomAuthenticationHandler</code>:</p>
+<pre><code class="lang-java">// Provide your implementation. A possible example can be:
+@Override
+public ServiceCredentials getServiceCredentials() {
+    return repository.getServiceCredentialsById(getCurrentUser().getUserId());
+}
+
+// serviceCredentials may or may not be bound to a tenant
+@Override
+public String getTenantId() {
+  return repository.getServiceCredentialsById(getCurrentUser().getUserId()).getTenantId();
+  // or
+  // return repository.getTenantForUserId(getCurrentUser().getUserId());
+}
+
+@Override
+public String getTraceId() {
+    return UUID.randomUUID().toString();
+}
+
+private User getCurrentUser() {
+  Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+  return (User) authentication.getPrincipal();
+}
+</code></pre>
+<p>We registered an instance of <code>LanguageCloudClientProvider</code> as a bean in the <code>ConfigClass</code> class and created beans for all exposed API clients:</p>
+<pre><code class="lang-java">// the LanguageCloudClientProvider instance
+@Bean
+public LanguageCloudClientProvider getPublicApiClient(CustomAuthenticationHandler customAuthenticationHandler) {
+    return LanguageCloudClientProvider.builder()
+            .withRegion(&quot;eu&quot;) // optional (default is &quot;eu&quot;)
+            .withRequestInterceptors(List.of(customAuthenticationHandler)).build();
+}
+
+//the AccountApi bean 
+@Bean
+public AccountApi getAccountApi(LanguageCloudClientProvider languageCloudClientProvider) {
+    return languageCloudClientProvider.getAccountClient();
+}
+</code></pre>
+<p>We can then use the registered client in the controller (or any other class resolved through Dependency Injection):</p>
+<pre><code class="lang-java">@RestController
+public class AccountController extends ResponseEntityExceptionHandler {
+
+    @Autowired
+    private AccountApi accountApi;
+
+    @GetMapping(&quot;/getAccounts/{userId}&quot;)
+    public List&lt;Account&gt; listAccounts(@PathVariable(&quot;userId&quot;) int userId) {
+        User user = new User(userId);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(user, null);
+        SecurityContext sc = SecurityContextHolder.getContext();
+        sc.setAuthentication(authentication);
+
+        ListMyAccountsResponse listMyAccountsResponse = accountApi.listMyAccounts();
+
+        return listMyAccountsResponse.getItems();
+    }
+}
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/api-clients/java/Java-Samples.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

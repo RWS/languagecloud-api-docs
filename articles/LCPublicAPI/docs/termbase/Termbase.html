@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Termbases </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Termbases ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="termbases">Termbases</h1>
+
+<br>
+<h2 id="creating-a-termbase">Creating a termbase</h2>
+<p>A termbase can be created by making a <code>POST</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/CreateTermbase"><code>/termbases</code></a> endpoint.</p>
+<p>You can create a termbase based on an existing termbase template by providing the <code>termbaseTemplateId</code>. This will create the termbase using the structure described by the template. For details about termbase templates, see <a href="Termbase-templates.html"><code>Termbase Template</code></a>. Postman example:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateTermbaseWithTemplateId.gif?raw=true" alt="Create Termbase With TemplateId"></p>
+<p>Request example: <code>POST /termbases</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;Simple Termbase&quot;,
+    &quot;description&quot;: &quot;A simple termbase&quot;,
+    &quot;copyright&quot;: &quot;RWS&quot;,
+    &quot;location&quot; : &quot;60b0a03152a974047fd46fb0&quot;
+    &quot;termbaseTemplateId&quot;: &quot;your-termbase-template-id&quot;
+}
+</code></pre>
+<p>If, however, you wish to provide your own custom termbase structure, you can do so by supplying it via the <code>termbaseStructure</code> object in the request body. Postman example:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/CreateTermbaseWithStructure.gif?raw=true" alt="Create Termbase With Structure"></p>
+<p>Request example: <code>POST /termbases</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;Simple Termbase&quot;,
+    &quot;description&quot;: &quot;A simple termbase&quot;,
+    &quot;copyright&quot;: &quot;RWS&quot;,
+    &quot;location&quot; : &quot;60b0a03152a974047fd46fb0&quot;
+    &quot;termbaseStructure&quot;: {
+        &quot;languages&quot;: [
+            {
+                &quot;languageCode&quot;: &quot;en-US&quot;
+            }
+        ],
+        &quot;fields&quot;: [
+            {
+                &quot;name&quot;: &quot;Entry level field&quot;,
+                &quot;description&quot;: &quot;A simple entry level field description.&quot;,
+                &quot;level&quot;: &quot;entry&quot;,
+                &quot;allowCustomValues&quot;: true,
+                &quot;allowMultiple&quot;: true,
+                &quot;isMandatory&quot;: false
+                &quot;dataType&quot;: &quot;picklist&quot;,
+                &quot;pickListValues&quot;: [
+                    &quot;picklist-value-1&quot;,
+                    &quot;picklist-value-2&quot;,
+                    &quot;picklist-value-3&quot;
+                ]
+            }
+        ]
+    }
+}
+</code></pre>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;6171694efb696c53e5ad726e&quot;,
+    &quot;name&quot;: &quot;Simple Termbase&quot;,
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;60b0a03152a974047fd46fb0&quot;,
+        &quot;name&quot;: &quot;RWS&quot;
+    }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If both the <code>termbaseTemplateId</code> and the <code>termbaseStructure</code> are added in the request, the <code>termbaseStructure</code> takes precedence. In other words, the <code>termbaseTemplateId</code> is ignored.</p>
+</div>
+<h2 id="updating-a-termbase">Updating a termbase</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can update the fields for a termbase only if the termbase you want to update was not created using a termbase template or if it does not already have fields defined.</p>
+</div>
+<p>A termbase can be updated by making a <code>PUT</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/UpdateTermbase"><code>/termbases/{termbaseId}</code></a> endpoint and providing the <code>termbaseTemplateId</code>.</p>
+<p>Request example: <code>PUT /termbases/616d0efa7a11677d6085b0be</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;[UPDATED] Simple Termbase&quot;,
+    &quot;description&quot;: &quot;A simple termbase&quot;,
+    &quot;copyright&quot;: &quot;[UPDATED] RWS&quot;,
+    &quot;termbaseTemplateId&quot; : &quot;your-termbase-template-id&quot; 
+}
+</code></pre>
+<p>If, however, you wish to provide your own custom termbase structure, you can do so by supplying it via the <code>termbaseStructure</code> object in the request body. Postman example:</p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/UpdateTermbaseWithStructure.gif?raw=true" alt="Update Termbase With Structure"></p>
+<p>Request example: <code>PUT /termbases/616d0efa7a11677d6085b0be</code></p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;[UPDATED] Simple Termbase&quot;,
+    &quot;description&quot;: &quot;A simple termbase&quot;,
+    &quot;copyright&quot;: &quot;[UPDATED] RWS&quot;,
+    &quot;termbaseStructure&quot;: {
+        &quot;languages&quot;: [
+            {
+                &quot;languageCode&quot;: &quot;en-US&quot;
+            }
+        ],
+        &quot;fields&quot;: [
+            {
+                &quot;id&quot;: &quot;616d0efa7a12676d603b71ad&quot;,
+                &quot;name&quot;: &quot;[UPDATED] Entry level field&quot;,
+                &quot;description&quot;: &quot;A simple entry level field description.&quot;,
+                &quot;level&quot;: &quot;entry&quot;,
+                &quot;dataType&quot;: &quot;text&quot;,
+                &quot;allowMultiple&quot;: true,
+                &quot;isMandatory&quot;: false
+            }
+        ]
+    }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If both the <code>termbaseTemplateId</code> and the <code>termbaseStructure</code> are added in the request, the <code>termbaseStructure</code> takes precedence. In other words, the <code>termbaseTemplateId</code> is ignored.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you perform an update using a termbase field without an <code>id</code>, the field will be added to the termbase.</p>
+</div>
+<h2 id="retrieving-a-termbase">Retrieving a termbase</h2>
+<p>A termbase can be retrieved by making a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/GetTermbase"><code>/termbases/{termbaseId}</code></a> endpoint.</p>
+<p>Request example: <code>GET /termbases/616d0efa7a11677d6085b0be</code></p>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;id&quot;: &quot;616d28597a11677d60862233&quot;,
+    &quot;name&quot;: &quot;[UPDATED] Simple Termbase&quot;,
+    &quot;copyright&quot;: &quot;[UPDATED] RWS&quot;,
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;60b0a03152a974047fd46fb0&quot;,
+        &quot;name&quot;: &quot;RWS&quot;
+    }
+}
+</code></pre>
+<br>
+<h2 id="retrieving-the-list-of-termbases">Retrieving the list of termbases</h2>
+<p>You can retrieve the list of termbases by making a <code>GET</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/ListTermbase"><code>/termbases</code></a> endpoint.</p>
+<p>Request example: <code>GET /termbases</code></p>
+<p>Response example:</p>
+<pre><code class="lang-json">{
+    &quot;items&quot;: [
+        {
+            &quot;id&quot;: &quot;616d28597a11677d60862233&quot;,
+            &quot;name&quot;: &quot;[UPDATED] Simple Termbase&quot;,
+            &quot;location&quot;: {
+                &quot;id&quot;: &quot;60b0a03152a974047fd46fb0&quot;,
+                &quot;name&quot;: &quot;RWS&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;616d0efa7a11677d6085b0be&quot;,
+            &quot;name&quot;: &quot;New Termbase&quot;,
+            &quot;location&quot;: {
+                &quot;id&quot;: &quot;60b0a03152a974047fd46fb0&quot;,
+                &quot;name&quot;: &quot;RWS&quot;
+            }
+        }
+    ],
+    &quot;itemCount&quot;: 2
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some properties are not available for this endpoint: <code>numberOfEntries</code>, <code>status</code>, <code>createdAt</code> and <code>lastModifiedAt</code>.</p>
+</div>
+<h2 id="deleting-termbases">Deleting termbases</h2>
+<p>A termbase can be deleted by making a <code>DELETE</code> request to the <a href="../../api/Public-API.v1-fv.html#/operations/DeleteTermbase"><code>/termbases/{termbaseId}</code></a> endpoint.</p>
+<p>Request example: <code>DELETE /termbases/616d0efa7a11677d6085b0be</code></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/termbase/Termbase.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

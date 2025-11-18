@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Webhooks Setup </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Webhooks Setup ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="webhooks-setup">Webhooks Setup</h1>
+
+<p>A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>When integrating with our webhook service, please be aware that we cannot guarantee the order of webhook event deliveries. This means that notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. Instead, make use of the <code>timestamp</code> field to determine the event generation time.</p>
+</div>
+<h2 id="subscribe-to-webhook-events">Subscribe to Webhook events</h2>
+<p>You subscribe to Webhook events from the Trados UI by creating a Trados Cloud Platform custom application.</p>
+<p>Several prerequisites must be met so that you can configure the right webhooks for the right customer, namely:</p>
+<ol>
+<li>Create a Service User in the correct customer folder.</li>
+<li>Create an application based on the Service User created above. This means that the application is saved in the same customer folder as the Service User.</li>
+<li>Use the application to configure the webhooks for your customer.</li>
+</ol>
+<p>Here are the detailed steps:</p>
+<ol>
+<li>Log in to the Trados UI as a human Administrator user.</li>
+<li>Expand the account menu on the top right-hand corner and select <strong>Integrations</strong>.</li>
+<li>Select the <strong>Applications</strong> sub-tab.</li>
+<li>Select <strong>New Application</strong> and enter the following information:
+<ul>
+<li><strong>Name</strong> - Enter a unique name for your custom application.</li>
+<li>(Optional) <strong>URL</strong> - Enter your custom application URL.</li>
+<li><strong>Service User</strong> - Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the <a href="../Service-credentials.html">Authenticate</a> topic.</li>
+</ul>
+</li>
+<li>Select <strong>Add</strong>.</li>
+<li>Back in the <strong>Applications</strong> sub-tab, select the check box corresponding to your application.</li>
+<li>Select <strong>Edit</strong>.</li>
+<li>On the <strong>Overall Information</strong> page change any of the following, if necessary: name, URL, description.</li>
+<li>On the <strong>API Access</strong> page you can find your <strong>Client ID</strong> and <strong>Client Secret</strong>.</li>
+<li>On the <strong>Webhooks</strong> page:
+<ul>
+<li>Enter a default callback URL for your application Webhooks (all Webhooks defined in Trados Cloud Platform).</li>
+<li>Enter a value for <strong>Webhook URL</strong> (this is your Webhook endpoint URL which you expose and which Trados Cloud Platform calls), select one or more event types, and hit Enter. You can create a separate webhook for every event you are interested in or combine notifications for multiple event types to one webhook. If you delete your application, all its associated webhooks are also deleted.</li>
+</ul>
+</li>
+<li>Select <strong>Save</strong>.</li>
+</ol>
+<p>A webhook is triggered for all the projects located in the same folder as the selected service user.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Similar to other resource types, webhooks are governed by inheritance, the propagation rule giving users visibility and work access with resources in the <a href="https://docs.rws.com/791595/797020/trados-enterprise---accelerate/inheritance-within-the-account">account hierarchy</a>. <br>
+Please be aware that the webhooks will be delivered only for the users having the READ permission on the resource triggering the webhook.</p>
+</div>
+<p>For example, given there is a folder structure:</p>
+<ul>
+<li>Root
+<ul>
+<li>Customer1
+<ul>
+<li>Customer2</li>
+<li>Customer3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Let's say that:</p>
+<ul>
+<li>the <code>Group1</code> has the location <code>Customer1</code></li>
+<li>the <code>Group2</code> has the location <code>Customer2</code></li>
+<li>the <code>Group3</code> has the location <code>Customer3</code></li>
+</ul>
+<p>Let's presume that:</p>
+<ul>
+<li>the service user <code>S1</code>, with the webhook <code>WB1</code>, is in the group <code>Group1</code></li>
+<li>the service user <code>S2</code>, with the webhook <code>WB2</code>, is in the group <code>Group2</code></li>
+<li>the service user <code>S3</code>, with the webhook <code>WB3</code>, is in the group <code>Group3</code></li>
+</ul>
+<p>The followings are true:</p>
+<ol>
+<li><p>if you create a project in <code>Customer1</code>:</p>
+<ul>
+<li>the webhook event is sent to <code>WB1</code>;</li>
+</ul>
+</li>
+<li><p>if you create a project in <code>Customer2</code>:</p>
+<ul>
+<li>the webhook event is sent to <code>WB1</code> url and <code>WB2</code> url;</li>
+</ul>
+</li>
+<li><p>if you create a project in <code>Customer3</code>:</p>
+<ul>
+<li>the webhook event is sent to <code>WB1</code> url and <code>WB3</code> url.</li>
+</ul>
+</li>
+</ol>
+<p>Remember that each time events occur, Trados Cloud Platform will call your server on a <code>POST</code> request, on the URL you configured in the Trados Cloud Platform application, and the request body will emulate the <a href="../../api/Webhooks.v1-fv.html#/schemas/webhook">Webhook</a>  object format.</p>
+<h2 id="validate-the-webhook-notifications">Validate the Webhook notifications</h2>
+<p>In terms of security, you must ensure that Trados Cloud Platform is the system which sent the event. For this, webhook requests must be verified in terms of authenticity, integrity, and confidentiality.</p>
+<h3 id="webhook-authenticity">Webhook authenticity</h3>
+<p>The webhook <code>POST</code> request sent by Trados Cloud Platform will include a digital signature which concatenates the following information: <code>transmissionTime|applicationId|webhookId|crc32 </code>. For more information on request headers, check the <em>Reference</em> section at the end. The <a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">crc32</a> component is a checksum for the HTTP request body.</p>
+<p>The signature is decrypted using your Public Key. You can get the Public Key as follows:</p>
+<ol>
+<li>Log in to the Trados UI as a human Administrator user.</li>
+<li>Expand the account menu on the top right-hand corner and select <strong>Integrations</strong>.</li>
+<li>Select the <strong>Applications</strong> sub-tab.</li>
+<li>Open your application and go to the <strong>Webhooks</strong> tab. Copy the value from the <strong>Secret Key</strong> field. This is the Public Key which validates and decrypts the signature sent by the header.</li>
+</ol>
+<p>The validation process mimics the generation sequence, where the recipient system use its Public Key to verify the received signature using the same concatenation: <code>transmissionTime|applicationId|webhookId|crc32 </code>.</p>
+<p><strong>Here is a Java sample:</strong></p>
+<pre><code>//retrieve transmissionTime, applicationId, webhookId, signatureAlg &amp; signature from request headers*
+
+// event = request message body
+//generate crc32 from the request body
+
+CRC32 checkSum = new CRC32();
+checksum.update(event.getBytes(UTF_8));
+long crc32Val = checksum.getValue();
+
+//build the message
+String message = transmissionTime + “|” + applicationId + “|” + webhookId + “|” + crc32Val;
+
+//build PublicKey
+byte[]  bytes = org.springframework.security.crypto.codec.Base64.decode(publicKeyAsString.getBytes());
+X509EncodeKeySpec ks = new X509EncodeKeySpec(bytes);
+KeyFactory kf = KeyFactory.getInstance(“RSA”);
+PublicKey publicKey = kf.generatePublic(ks);
+
+//verify signature
+
+Signature publicSignature = Signature.getInstance(signatureAlg);
+publicSignature.initVerify(publicKey);
+publicSignature.update(message.getBytes(UTF_8));
+byte[] signatureBytes = Base64.getDecoder().decode(signature);
+
+publicSignature.verify(signatureBytes);
+</code></pre>
+<p>A valid message implies that the message was sent by Trados Cloud Platform.</p>
+<h3 id="webhook-integrity">Webhook integrity</h3>
+<p>The fact that the signature is created based on payload content ensures that the message is not altered (<a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">CRC32</a>).</p>
+<h3 id="webhook-confidentiality">Webhook confidentiality</h3>
+<p>To ensure that the message cannot be read by 3rd-parties, Trados Cloud Platform Webhooks only accept the HTTPS communication protocol specified in the webhook URLs you provide.</p>
+<h2 id="return-notification-responses">Return notification responses</h2>
+<h3 id="success-notifications">Success notifications</h3>
+<p>A notification delivery is considered successful when applications respond with a 2xx status code within 3 seconds.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It is recommended that applications perform little processing when receiving events and, for instance, that they make use of a queuing mechanism to perform further processing asynchronously after having acknowledged the event notification request.</p>
+</div>
+<p>Trados Cloud Platform does not inspect the HTTP response body.</p>
+<h3 id="failure-notifications">Failure notifications</h3>
+<p>Notifications will fail in the following scenarios:</p>
+<ul>
+<li>Response time: the response status code is <code>2xx</code>, but the response is received after 3 seconds</li>
+<li>Response status code:
+<ul>
+<li><code>3xx</code>: Trados Cloud Platform does not follow redirects</li>
+<li><code>4xx</code></li>
+<li><code>5xx</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="retry-policies">Retry policies</h3>
+<p>Trados Cloud Platform will try its best to redeliver the notification. Retries will include specific headers with information about the retry:</p>
+<ul>
+<li><code>X-LC-Retry-Num</code>: header indicating the retry number (1, 2 or 3)</li>
+<li><code>X-LC-Retry-Reason</code>: header indicating why the retry is sent</li>
+</ul>
+<p>Trados Cloud Platform will try to delivery the notification up to 8 times using an exponential back-off strategy (namely, it will delay the next delivery attempt exponentially with the number of retries already made).</p>
+<table>
+<thead>
+<tr>
+<th>Retry No.</th>
+<th>Interval (relative to last retry)/ Minutes</th>
+<th>Interval (relative to original attempt)/ Minutes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>30</td>
+<td>45</td>
+</tr>
+<tr>
+<td>4</td>
+<td>120 (2h)</td>
+<td>165</td>
+</tr>
+<tr>
+<td>5</td>
+<td>360 (6h)</td>
+<td>525</td>
+</tr>
+<tr>
+<td>6</td>
+<td>600 (10h)</td>
+<td>1125</td>
+</tr>
+<tr>
+<td>7</td>
+<td>960 (16h)</td>
+<td>2085</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1440 (24h)</td>
+<td>3525</td>
+</tr>
+</tbody>
+</table>
+<h3 id="circuit-breaker">Circuit Breaker</h3>
+<p>To protect the platform and ensure problems from one tenant do not affect other tenants, we have a circuit breaker that will stop sending webhook on URLs that do not respond within the allowed time (mentioned in <strong>Failure</strong> notifications section). The actual HTTP response code is not relevant since the connection is closed before the response is received.</p>
+<p>The circuit breaker is triggered when 3 calls to a URL fail within a short time window. The circuit breaker is opened for an hour only for that URL, not for the tenant. During that hour, any webhooks sent to that URL are scheduled for the next retry.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Frequent timeouts may compromise the performance of our delivery system. <br>
+We may need to remove your webhook from our database without advance notice if it is negatively impacting the platform. <br>
+This action is reserved for cases of major incidents and is necessary to prevent potential issues that can arise from  repeated delivery attempts.</p>
+</div>
+<h2 id="reference">Reference</h2>
+<p><strong>The request headers</strong> are:</p>
+<ul>
+<li><p><code>X-LC-Signature</code>: Contains the message digital signature (see section on <em>Webhook authenticity</em> above).</p>
+</li>
+<li><p><code>X-LC-Signature-Algo</code>: Contains the algorithm used for signing the message. Possible values: &quot;<em>SHA256withRSA</em>&quot;.</p>
+</li>
+<li><p><code>X-LC-Retry-Num</code>: Contains the retry attempt counter. Initial value is 0, which will be increased with each attempt at redelivering the webhook message.</p>
+</li>
+<li><p><code>X-LC-Retry-Reason</code>: Contains a textual description of the previous error, which resulted in the current attempt to redeliver the webhook message.</p>
+</li>
+<li><p><code>X-LC-Transmission-Time</code>: Contains the date/time when the webhook message was delivered, in ISO 8601 date time format.</p>
+</li>
+<li><p><code>X-LC-Application</code>: Unique identifier of the Trados Cloud Platform application, which is the recipient of the webhook message. Every webhook has an application associated in Trados Cloud Platform, which can be found in the Trados UI, in the account dropdown menu from the top right corner, under the <strong>Applications</strong> tab, in <strong>Integrations</strong>. The configured webhooks for an application are listed on the <strong>Webhooks</strong> tab of the respective application.</p>
+</li>
+<li><p><code>X-LC-Webhook</code>: Unique identifier of the webhook defined for the LC application which is the recipient of the webhook message. It can be ignored because it is not exposed in the Trados UI.</p>
+</li>
+<li><p><code>X-LC-Region</code>: Region of the account of the user, which is the recipient of the webhook message.</p>
+</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/webhooks/Webhooks-setup.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

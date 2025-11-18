@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Webhooks payload </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Webhooks payload ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="webhooks-payload">Webhooks payload</h1>
+
+<p><strong>The request body</strong> has the same standard JSON format for all <a href="../../api/Webhooks.v1-fv.html#/schemas/webhook">Trados Cloud Platform events</a>.</p>
+<p>An example of request for a <code>PROJECT_CREATED</code> event:</p>
+<pre><code class="lang-json">{
+  &quot;eventId&quot;: &quot;EVENT_ID&quot;,
+  &quot;eventType&quot;: &quot;PROJECT.CREATED&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;TIMESTAMP&quot;,
+  &quot;accountId&quot;: &quot;ACCOUNT_ID&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;DATA_ID&quot;,
+    &quot;name&quot;: &quot;PROJECT_NAME&quot;,
+    &quot;description&quot;: &quot;PROJECT_DESCRIPTION&quot;,
+    &quot;customFields&quot;: [
+      {
+        &quot;id&quot;: &quot;CUSTOM_FIELD_ID1&quot;,
+        &quot;key&quot;: &quot;CUSTOM_FIELD_KEY1&quot;,
+        &quot;value&quot;: &quot;CUSTOM_FIELD_VALUE1&quot;
+      },
+      {
+        &quot;id&quot;: &quot;CUSTOM_FIELD_ID2&quot;,
+        &quot;key&quot;: &quot;CUSTOM_FIELD_KEY2&quot;,
+        &quot;value&quot;: &quot;CUSTOM_FIELD_VALUE2&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Depending on the event type, the <code>data</code> field will contain a different object, representing the Data Payload Object as mentioned in the next example. This will include different details relevant to that event type, please check the table below.</p>
+</div>
+<p>This is the envelope that is common to all events, and only the &lt; Data Payload Object part &gt; is specific and depending on the event type.</p>
+<pre><code class="lang-json">{
+  &quot;eventId&quot;: &quot;EVENT_ID&quot;,
+  &quot;eventType&quot;: &quot;PROJECT.CREATED&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;timestamp&quot;: &quot;TIMESTAMP&quot;,
+  &quot;accountId&quot;: &quot;ACCOUNT_ID&quot;,
+  &quot;data&quot;: {
+    &lt; Data Payload Object part &gt;
+  }
+}
+</code></pre>
+<br>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Data payload object model</th>
+<th>Trigger operations in Trados Cloud Platform API</th>
+<th>Trigger operations in Trados UI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PROJECT.TASK.ACCEPTED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/task-event"><code>task-event</code></a></td>
+<td>Accept task <br> Accept error task</td>
+<td>Accept task <br> Accept error task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TASK.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/task-event"><code>task-event</code></a></td>
+<td>Generate task</td>
+<td>Generate task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TASK.COMPLETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/task-event"><code>task-event</code></a></td>
+<td>Complete task</td>
+<td>Complete task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TASK.UPDATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/task-event"><code>task-event</code></a></td>
+<td>Generate task <br> Accept task <br> Reject task <br> Release task <br> Assign task <br> Reassign task <br> Complete task</td>
+<td>Generate task <br>Accept task <br> Reject task <br> Release task <br> Assign task <br> Reassign task <br> Complete task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TASK.DELETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/task-event"><code>task-event</code></a></td>
+<td>Delete project and its tasks</td>
+<td>Delete project and its tasks</td>
+</tr>
+<tr>
+<td><code>PROJECT.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-event"><code>project-event</code></a></td>
+<td>Create project</td>
+<td>Create project</td>
+</tr>
+<tr>
+<td><code>PROJECT.STARTED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-event"><code>project-event</code></a></td>
+<td>Start project</td>
+<td>Start project</td>
+</tr>
+<tr>
+<td><code>PROJECT.UPDATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-event"><code>project-event</code></a></td>
+<td>Start project (This event will also be emitted in addition to <code>PROJECT.STARTED</code>)<br>Update project by changing any field <br>Complete project <br> Cancel source file  <br> Complete target file</td>
+<td>Start project (This event will also be emitted in addition to <code>PROJECT.STARTED</code>)<br> Update project by changing the <code>Project Information</code>, <code>Configuration</code> or <code>Custom Fields</code> fields in the <code>Settings</code> tab <br> Complete project <br> Set project back in progress <br> Cancel project <br> Complete target file</td>
+</tr>
+<tr>
+<td><code>PROJECT.DELETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-event"><code>project-event</code></a></td>
+<td>Delete project</td>
+<td>Delete project</td>
+</tr>
+<tr>
+<td><code>PROJECT.TEMPLATE.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-template-event"><code>project-template-event</code></a></td>
+<td></td>
+<td>Create project template</td>
+</tr>
+<tr>
+<td><code>PROJECT.TEMPLATE.UPDATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-template-event"><code>project-template-event</code></a></td>
+<td></td>
+<td>Create project template <br> Update project template</td>
+</tr>
+<tr>
+<td><code>PROJECT.TEMPLATE.DELETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-template-event"><code>project-template-event</code></a></td>
+<td></td>
+<td>Delete project template</td>
+</tr>
+<tr>
+<td><code>PROJECT.SOURCE.FILE.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/source-file-event"><code>source-file-event</code></a></td>
+<td>Add source file to project <br> Attach source files to project</td>
+<td>Add reference file to project <br> Add translatable file to project</td>
+</tr>
+<tr>
+<td><code>PROJECT.SOURCE.FILE.UPDATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/source-file-event"><code>source-file-event</code></a></td>
+<td>Update source file by changing the <code>name</code> field <br> Add source file version <br> The project reaches the <code>File Type Detection</code> task <br> The project reaches the <code>File Format Conversion</code> task</td>
+<td>Update source file by changing the <code>fileType</code> or <code>fileRole</code> fields <br> Add source file version via <code>Replace file</code> action <br> Delete source file version <br> Cancel source file <br> The project reaches the <code>File Type Detection</code> task <br> The project reaches the <code>File Format Conversion</code> task</td>
+</tr>
+<tr>
+<td><code>PROJECT.SOURCE.FILE.DELETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/source-file-event"><code>source-file-event</code></a></td>
+<td>Delete project and its tasks</td>
+<td>Delete project and its tasks</td>
+</tr>
+<tr>
+<td><code>PROJECT.TARGET.FILE.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/target-file-event"><code>target-file-event</code></a></td>
+<td>The project reaches the <code>File Format Conversion</code> task</td>
+<td>The project reaches the <code>File Format Conversion</code> task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TARGET.FILE.UPDATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/target-file-event"><code>target-file-event</code></a></td>
+<td>Update source file by changing the <code>name</code> field <br> Add target file version <br> Import target file version <br> The project reaches the <code>File Format Conversion</code> task <br> The project reaches the <code>Copy Source to Target</code> task <br> The project reaches the <code>Machine Translation</code> task <br> The project reaches the <code>Bilingual Engineering</code> task <br> The project reaches the <code>Translation</code> task <br> The project reaches the <code>Linguistic Review</code> task <br> The project reaches the <code>Customer Review</code> task <br> The project reaches the <code>Implement Customer Review</code> task <br> The project reaches the <code>Target File Generation</code> task</td>
+<td>Add target file version via <code>Upload SDLXLIFF</code> action <br> Replace target file <br> Delete target file version <br> Cancel target file <br> The project reaches the <code>File Format Conversion</code> task <br> The project reaches the <code>Copy Source to Target</code> task <br> The project reaches the <code>Machine Translation</code> task <br> The project reaches the <code>Bilingual Engineering</code> task <br> The project reaches the <code>Translation</code> task <br> The project reaches the <code>Linguistic Review</code> task <br> The project reaches the <code>Customer Review</code> task <br> The project reaches the <code>Implement Customer Review</code> task <br> The project reaches the <code>Target File Generation</code> task</td>
+</tr>
+<tr>
+<td><code>PROJECT.TARGET.FILE.DELETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/target-file-event"><code>target-file-event</code></a></td>
+<td>Delete project and its tasks</td>
+<td>Delete project and its tasks</td>
+</tr>
+<tr>
+<td><code>PROJECT.GROUP.PROJECT.MEMBERSHIP.CHANGE</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/project-group-event"><code>project-group-event</code></a></td>
+<td>Add project to project group <br> Remove project from project group</td>
+<td>Add project to project group <br> Remove project from project group</td>
+</tr>
+<tr>
+<td><code>PROJECT.ERROR.TASK.CREATED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/error-task-event"><code>error-task-event</code></a></td>
+<td>Generate error task</td>
+<td>Generate error task</td>
+</tr>
+<tr>
+<td><code>PROJECT.ERROR.TASK.COMPLETED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/error-task-event"><code>error-task-event</code></a></td>
+<td>Complete error task</td>
+<td>Complete error task</td>
+</tr>
+<tr>
+<td><code>PROJECT.ERROR.TASK.ACCEPTED</code></td>
+<td><a href="../../api/Webhooks.v1-fv.html#/schemas/error-task-event"><code>error-task-event</code></a></td>
+<td>Accept error task</td>
+<td>Accept error task</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/webhooks/Webhooks-payload.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

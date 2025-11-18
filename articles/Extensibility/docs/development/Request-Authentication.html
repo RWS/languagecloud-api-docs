@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Request Authentication </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Request Authentication ">
+    
+    
+      <link rel="shortcut icon" href="../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="request-authentication">Request Authentication</h1>
+
+<p>Requests made from Trados to the app are authenticated, except for some public endpoints on the app. Getting the current account identity is explained in this article in the <a href="#trados-claims"><strong>Trados Claims</strong> section</a>.</p>
+<h2 id="endpoints">Endpoints</h2>
+<p>All but a few of the endpoints are required to check for valid Authentication. The API documentation specifies for each endpoint if authentication is required.</p>
+<p>Trados might send the Authorization header even on the endpoints that do not need authentication, but the app is not required to validate them. If the header is sent, the app should either ignore it or validate it. But if the token is not valid, then this should result in a 401/403 result.</p>
+<blockquote>
+<p>Note: the provided blueprints (both Java and .NET Core) have authentication implemented and working out of the box. You can skip the rest of this document unless you're interested in the technical details.</p>
+</blockquote>
+<h2 id="authorization-header">Authorization header</h2>
+<p>The HTTPS requests are all authenticated using the <code>x-lc-signature</code> header using a JWS token. For example:</p>
+<pre><code>x-lc-signature: &lt;JWS Token&gt;
+</code></pre>
+<h2 id="json-web-signature-token">JSON Web Signature token</h2>
+<p>Trados follows the JWS RFCs <a href="https://datatracker.ietf.org/doc/html/rfc7797">[RFC 7797]</a> and <a href="https://datatracker.ietf.org/doc/html/rfc7515">[RFC 7515]</a> for defining the structure of the JSON Web Signature token that contains the signature that validates the authenticity of the request.</p>
+<p>If you're already familiar with JWT tokens, you can treat the JWS as a JWT, with the main difference being the token-body component, which is not part of the token (in our Trados implementation) - it is replaced with the hash signature of the request body. All claims are sent in the JWS header.</p>
+<h3 id="jws-validation">JWS validation</h3>
+<p>The JWS token consists of 3 parts: <code>&lt;JWS header&gt;.&lt;JWS body&gt;.&lt;JWS signature&gt;</code> The 3 parts are Base64url encoded and separated with a dot: '.'. The JWS token that is received in the <code>x-lc-signature</code> header has only the header and signature components, with the body missing (<code>&lt;JWS header&gt;..&lt;JWS signature&gt;</code>).</p>
+<p><code>&lt;JWS body&gt;</code> is omitted from the received JWS, following the RFC 7515 - Detached content approach. It should be calculated, when received, on the app side:</p>
+<pre><code>&lt;JWS body&gt; = Base64url(SHA256(HTTP Payload)) 
+</code></pre>
+<p>If the request does not contain a body (ex. in the case of GET requests), then it's calculated as an empty string <code>''</code>. In that case <code>&lt;JWS body&gt;</code> can be replaced with the constant: <code>47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU</code> which is equivalent to <code>Base64url(SHA256(''))</code>.</p>
+<p>Once the <code>&lt;JWS body&gt;</code> is calculated, the JWS token should be considered in its entirety as <code>&lt;JWS header&gt;.&lt;JWS body&gt;.&lt;JWS signature&gt;</code>.</p>
+<p>The <code>&lt;JWS signature&gt;</code> on the received JWS token needs to be validated. The validation is done using the public keys that are available at <code>https://lc-api.sdl.com/public-api/v1/.well-known/jwks.json</code> (this endpoint is public and does not require authentication).</p>
+<p>Since the JWS body is the hash of the HTTP request payload, the JWS token will have all the claims defined in the header segment <code>&lt;JWS header&gt;</code>.</p>
+<p>JWS <code>kid</code> claim is used to identify the public key that the JWS was signed with.</p>
+<p>Signing will be done using the SHA256withRSA algorithm which is standard for JWS (<code>&quot;alg&quot;:&quot;RS256&quot;</code>). But since algorithms change, you should not hard code the algorithms, but always rely on the <code>alg</code> claim to identify the signing algorithm.</p>
+<p>Once the signature was validated, you should also validate the other claims:</p>
+<ul>
+<li><code>iss</code> - the issuer of the token. Must be <code>https://languagecloud.rws.com/</code>. It is required.</li>
+<li><code>aud</code> - the audience should match <code>baseUrl</code> from the descriptor. This ensures that the token was generated for that particular app. It is required.</li>
+<li><code>exp</code> - expiry time of the token, expired tokens should not be accepted. It is required.</li>
+<li><code>iat</code> - issued at time. Tokens issued in the future should not be allowed. It is optional and should be validated only if present.</li>
+</ul>
+<p>Clock skew should be taken into consideration when validating time claims. A few seconds (up to 60) should be added to validation limits. For example for <code>iat</code> claim, it should be checked that it's not issued before <code>now() - clockSkew</code>, otherwise with under 1-second clock differences there might be cases where <code>iat</code> can be in the future because the receiving server clock is 1 second behind the Trados server, and the token will not validate.</p>
+<h4 id="validating-multiple-audiences">Validating multiple audiences</h4>
+<p>There will always be a single <code>aud</code> claim in the JWS. But in the rare case when an App changes <code>baseUrl</code>, the received <code>aud</code> will be either the old or new <code>baseUrl</code>. All operations for accounts that did not yet update to the version with the new <code>baseUrl</code> will send <code>aud</code> claim with the old <code>baseUrl</code>.</p>
+<p>The provided blueprints and samples by default handle a single <code>baseUrl</code>, and will fail with authentication issues in such a scenario.</p>
+<p>In .NET, validating <code>aud</code> against multiple audiences is fairly simple. In <code>appsettings.json</code> add a key for <code>previousBaseUrl</code> set it to the value of previous <code>baseUrl</code>. In <code>Startup.cs</code> find <code>services.AddAuthentication</code> and update it to looks similar to:</p>
+<pre><code class="lang-csharp">services.AddAuthentication(JwsDefaults.AuthenticationScheme)
+    .AddJws(options =&gt;
+    {
+        options.JwksUri = Configuration[&quot;Authorization:JwksUri&quot;];
+        options.TokenValidationParameters.ValidIssuer = Configuration[&quot;Authorization:Issuer&quot;];
+        options.TokenValidationParameters.ValidAudiences = new[] {
+            Configuration[&quot;baseUrl&quot;],
+            Configuration[&quot;previousBaseUrl&quot;]
+        };
+    });
+</code></pre>
+<p>In Java, this can be accomplished by adding multiple values, separated by commas, to the <code>authentication.audience</code> parameter in the <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/resources/application.yml#L61">application.yml</a> file. For example:</p>
+<pre><code class="lang-yaml">authentication:
+  ...
+  audience: https://my.base.url,https://my.previous.base.url
+</code></pre>
+<h3 id="trados-claims">Trados Claims</h3>
+<p>Trados can send any number of custom claims (in the JWS header segment), to provide additional information as to the current identity.</p>
+<p><code>aid</code> is used for identifying the current Account(known as Tenant). This should be used for any operations that perform account-related operations. For example: saving the configuration to a database should always be tied to an account.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/Request-Authentication.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

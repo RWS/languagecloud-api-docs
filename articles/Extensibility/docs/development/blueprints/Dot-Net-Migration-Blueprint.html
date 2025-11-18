@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>.NET Migration Blueprint </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content=".NET Migration Blueprint ">
+    
+    
+      <link rel="shortcut icon" href="../../../../../favicon.ico">
+      <link rel="stylesheet" href="../../../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../../../toc.html">
+      <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="net-migration-blueprint">.NET Migration Blueprint</h1>
+
+<p>This blueprint should be used exclusively to upgrade your existing .NET add-on to an app while maintaining the compatibility with the old add-on installs.</p>
+<p>The migration blueprint can be found <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/dotNetAppMigrationBlueprint">here</a>.</p>
+<p>There are a couple of main points to consider when doing the upgrade:</p>
+<h2 id="descriptor-changes">Descriptor Changes</h2>
+<h3 id="descriptor-version">Descriptor Version</h3>
+<p>First and foremost you'll need to change the <code>descriptorVersion</code> field to <code>1.4</code> in the descriptor JSON. This is the version that tells Trados Enterprise that your add-on has became an app and needs to be handled accordingly.</p>
+<blockquote>
+<p>In addition to <code>descriptorVersion</code>, the <code>version</code> field also needs to be updated to signal Trados Enterprise that there's a new descriptor available, as per usual.</p>
+</blockquote>
+<h3 id="app-lifecycle-endpoint">App Lifecycle Endpoint</h3>
+<p>The old <code>addonLifecycle</code> standard endpoint needs to be replaced with the <code>appLifecycle</code> <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/descriptor.json#L56">endpoint</a> but at the same time  the old <a href="https://github.com/RWS/language-cloud-extensibility/blob/app_updates/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Controllers/StandardController.cs#L128-L129">route</a> must be kept along the new route for backwards compatibility.</p>
+<h2 id="new-lifecycle-events">New Lifecycle Events</h2>
+<p>Some lifecycle events have been renamed while others have been added.</p>
+<h3 id="installed">INSTALLED</h3>
+<p>The <code>ACTIVATED</code> event is now called <code>INSTALLED</code>. To ensure backwards compatibility with the old form, the migration blueprint knows to handle <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Controllers/StandardController.cs#L155-L156">both</a>.</p>
+<h3 id="uninstalled">UNINSTALLED</h3>
+<p>Similarly to the <code>ACTIVATED</code> event, the <code>DEACTIVATED</code> event is now called <code>UNINSTALLED</code>. Once again, the migration blueprint supports <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Controllers/StandardController.cs#L161-L162">both</a>.</p>
+<h3 id="updated">UPDATED</h3>
+<p>To explain the purpose of the <code>UPDATED</code> event we have to reflect on the <code>REGISTERED</code> changes.</p>
+<p>Previously, Trados Enterprise was providing different pairs of credentials for each tenant that was installing the add-on. An app is now provided with a single pair of credentials just once, at registration.</p>
+<p>Since, your app has already been registered as an add-on, the <code>REGISTERED</code> event will no longer be sent so Trados Enterprise will provide the credentials in the same manner but via the new <code>UPDATED</code> event.</p>
+<p>The <code>UPDATED</code> event is sent by Trados Enterprise when the <code>descriptorVersion: 1.4</code> is detected. When this event is invoked, the app(former add-on) needs to save the received pair of credentials(clientId/clientSecret) per registration and discard the old credentials saved per tenant installs.</p>
+<h2 id="trados-cloud-platform-api-authentication">Trados Cloud Platform API Authentication</h2>
+<p>If your add-on was integrating with Trados Cloud Platform API, the credentials used to authenticate came from the tenant installation(<code>Accounts</code> collection).</p>
+<p>With the new approach the credentials should now be retrieved from the app registration(<code>AppRegistration</code> collection). To access the registration credentials you can call the <code>Rws.LC.AppBlueprint.Interfaces.GetRegistrationInfo</code> <a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Interfaces/IAppRegistrationRepository.cs#L19">method</a>.</p>
+<p>For eg:</p>
+<pre><code class="lang-csharp">AppRegistrationEntity appRegistration = await _appRegistrationRepository.GetRegistrationInfo().ConfigureAwait(false);
+ClientCredentialsEntity clientCredentials = appRegistration.ClientCredentials;
+</code></pre>
+<p>For more details see the <a href="../Language-Cloud-API.md#Credentials">Trados Cloud Platform API guide</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>To help you quickly implement the migration changes we gathered below a list of files that you need to look into:</p>
+<ul>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/descriptor.json">descriptor.json</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Controllers/StandardController.cs">StandardController.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Services/AccountService.cs">AccountService.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Interfaces/IAccountService.cs">IAccountService.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Models/RegisteredUpdatedEvent.cs">RegisteredUpdatedEvent.cs</a> (formerly RegisteredEvent.cs)</li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/DAL/Repository.cs">Repository.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Interfaces/IRepository.cs">IRepository.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/DAL/AppRegistrationRepository.cs">AppRegistrationRepository.cs</a></li>
+<li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppMigrationBlueprint/Rws.LC.AppBlueprint/Enums/AppLifecycleEventEnum.cs">AppLifecycleEventEnum.cs</a></li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/Extensibility/docs/development/blueprints/Dot-Net-Migration-Blueprint.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

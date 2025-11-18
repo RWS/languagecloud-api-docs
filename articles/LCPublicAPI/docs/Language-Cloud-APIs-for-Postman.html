@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Trados Cloud Platform APIs for Postman </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Trados Cloud Platform APIs for Postman ">
+    
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="../../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>        
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="https://developers.rws.com/">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+        <div class="container body-content">
+
+          <div id="search-results">
+            <div class="search-list">Search Results for <span></span></div>
+            <div class="sr-items">
+              <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+            </div>
+            <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+          </div>
+        </div>
+
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="trados-cloud-platform-apis-for-postman">Trados Cloud Platform APIs for Postman</h1>
+
+<p>We provide a <a href="https://www.postman.com/">Postman</a> collection for quick and easy usage of our RESTful APIs.</p>
+<h2 id="installation">Installation</h2>
+<p>You can download the Postman collection from <a href="https://github.com/sdl/language-cloud-public-api-postman/blob/develop/postmanCollection.json?raw=true">here</a>.</p>
+<p>If you make use of multi-region, we also provide the <a href="https://raw.githubusercontent.com/RWS/language-cloud-public-api-postman/refs/heads/develop/Trados%20EU.postman_environment.json?raw=true">EU</a> and <a href="https://raw.githubusercontent.com/RWS/language-cloud-public-api-postman/refs/heads/develop/Trados%20CA.postman_environment.json?raw=true">CA</a> Postman Environments.</p>
+<p>There are 3 setup options:</p>
+<ul>
+<li>Copy the collection URL from above and import it into Postman using <code>Import &gt; Link</code>.</li>
+<li>Copy the entire file content and import it into Postman using <code>Import &gt; Raw Text</code>.</li>
+<li>Save it as a <code>JSON</code> file on your computer and import it into Postman using <code>Import &gt; File</code>.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/10993097/131468994-3bb3da76-9edc-4cc0-bd4f-9559996c8f89.png" alt="image"></p>
+<br>
+<h2 id="configuration">Configuration</h2>
+<p>The imported collection is already set up for you to get started as fast as possible.</p>
+<p>We make use of collection level variables and an inherited authentication mechanism.</p>
+<p>For example, authentication is already set up to use the Bearer Token scheme and will use the token value provided by <code>{{lc-access-token}}</code> variable. This token is populated with the correct value, each time you <code>Obtain a client credentials access token</code>, via the Tests tab.</p>
+<p>One thing you need to do before proceeding is to fill in the <code>{{lc_tenant}}</code> variable with your own tenant ID. Prepend the ID with LC- so the final value looks like this <code>LC-00000000000000000</code>.</p>
+<p>Don't forget to save the collection!</p>
+<p><img src="https://user-images.githubusercontent.com/10993097/131469431-b17ea40f-c20a-49d6-b9ba-9b8b7e9756da.png" alt="image"></p>
+<br>
+<h2 id="multi-region-environments">Multi-region environments</h2>
+<p>If you have imported the regional Postman Environments, please note that any environment-level variables (e.g., <code>baseUrl</code>) will overwrite collection variables. This means that when you have an environment selected in Postman, the value of <code>baseUrl</code> will be the one defined in the environment, not the value defined at the collection level.</p>
+<h2 id="authentication">Authentication</h2>
+<p>To start working with the Trados Cloud Platform API, you first need to authenticate.</p>
+<p>You can find the authentication call under the <code>Authentication (Start Here)</code> folder. Fill in your <code>client_id</code> and <code>client_secret</code> and perform the request.</p>
+<p>If the authentication is successful, the token will be extracted automatically from the response and saved to the <code>{{lc-access-token}}</code> variable.</p>
+<p><img src="https://user-images.githubusercontent.com/10993097/131470005-6a191b23-5996-4f11-87e0-53eefb049735.png" alt="image"></p>
+<br>
+<h2 id="usage">Usage</h2>
+<p>After you have authenticated successfully, you can start interacting with the Trados Cloud Platform API.</p>
+<p>For example, we can get information about a project by using the <strong>GetProject</strong> request from the <strong>Project</strong> folder.</p>
+<p>Simply fill in your <code>projectId</code> and click SEND. Optionally, you can supply values to the <code>fields</code> parameter to receive only data that is of interest.</p>
+<p><img src="https://user-images.githubusercontent.com/10993097/118110695-68b04100-b3eb-11eb-8356-5bd6e21185c8.png" alt="image"></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error.</p>
+</div>
+<p><img src="https://user-images.githubusercontent.com/10993097/119813507-09295980-bef2-11eb-970e-42119cf4ffd8.png" alt="image"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RWS/languagecloud-api-docs/blob/main/articles/LCPublicAPI/docs/Language-Cloud-APIs-for-Postman.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
