@@ -1,5 +1,5 @@
 ﻿# File formats
-A file used in the Trados Cloud Platform API can have one of the three supported formats: native, SDLXLIFF or [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html):
+A file used in the Trados Cloud Platform API can have one of the three supported formats: native, SDLXLIFF or [BCM](../../BCM/BCM.NET_client_API.html):
 
 - Native represents the format of the file that is attached to a project by the user. The project's associated File Type Configuration specifies if the native file extensions can be attached to that project.
 
