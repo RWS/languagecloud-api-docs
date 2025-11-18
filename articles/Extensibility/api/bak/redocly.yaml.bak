@@ -1,0 +1,6 @@
+﻿theme:
+  sidebar:
+    width: "260px"
+  openapi:
+    showObjectSchemaExamples: true       
+expandResponses: 200,201,202

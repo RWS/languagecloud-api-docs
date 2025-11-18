@@ -1,0 +1,166 @@
+- name: Introduction
+  href: docs/Introduction.md
+
+- name: Public API Management Process
+  href: docs/Public-API-Management-Process.md
+
+- name: What's new
+  href: docs/Whats-New.md
+
+- name: What's deprecated
+  href: docs/Whats-deprecated.md
+
+- name: How to report an issue
+  href: docs/How-to-report-an-issue.md
+
+- name: Known issues
+  href: docs/Known-Issues.md
+
+- name: Getting started
+  items:
+    - name: Multi-region
+      href: docs/Multi-region.md
+
+    - name: API rate limits
+      href: docs/API-rate-limits.md
+
+    - name: Use fields in your requests
+      href: docs/Use-fields-in-your-requests.md
+
+    - name: Use paging and sorting for lists
+      href: docs/Use-paging-and-sorting-for-lists.md
+
+    - name: Updating data with PUT
+      href: docs/Updating-data-with-PUT.md
+
+    - name: Language codes
+      href: docs/Language-codes.md
+
+    - name: How to use location and folders
+      href: docs/How-to-use-location-and-folders.md
+
+    - name: File formats
+      href: docs/File-formats.md
+
+    - name: Headers considerations
+      href: docs/Headers-considerations.md
+
+    - name: Multipart considerations
+      href: docs/How-to-multipart.md
+
+- name: Authentication
+  items:
+    - name: Service users and custom applications
+      href: docs/Service-users-and-custom-applications.md
+
+    - name: Service credentials
+      href: docs/Service-credentials.md
+
+    - name: Authentication
+      href: docs/Authentication.md
+
+- name: Projects
+  items:
+    - name: Basic project creation flow
+      href: docs/Basic-project-creation-flow.md
+
+    - name: Create projects
+      href: docs/Create-projects.md
+
+    - name: Track projects
+      href: docs/Track-projects.md
+
+    - name: Interact with tasks
+      href: docs/Interact-with-tasks.md
+
+- name: Termbases
+  items:
+    - name: Termbases
+      href: docs/termbase/Termbase.md
+
+    - name: Termbase templates
+      href: docs/termbase/Termbase-templates.md
+
+    - name: Termbase entries
+      href: docs/termbase/Termbase-entries.md
+
+    - name: Termbase import and export
+      href: docs/termbase/Termbase-import-export.md
+
+- name: Translation Memories
+  items:
+    - name: Translation Memory import and export
+      href: docs/translation-memory/Translation-memory-import-export.md
+
+    - name: Translation Memory Advanced Configuration
+      href: docs/translation-memory/Translation-memory-advanced-configuration.md
+
+- name: Translations
+  items:
+    - name: Translations
+      href: docs/translations/Translations.md
+
+- name: Custom fields
+  href: docs/Custom-Fields.md
+
+- name: Export quote report
+  href: docs/Export-quote-report.md
+
+- name: Webhooks
+  items:
+    - name: Webhooks Setup
+      href: docs/webhooks/Webhooks-setup.md
+
+    - name: Webhooks Payload
+      href: docs/webhooks/Webhooks-payload.md
+
+    - name: Batched Webhooks
+      href: docs/webhooks/Batched-webhooks.md
+
+- name: Trados Cloud Platform APIs for Postman
+  href: docs/Language-Cloud-APIs-for-Postman.md
+
+- name: Data Bridge
+  items:
+    - name: Data Bridge Introduction
+      href: docs/data-bridge/Data-Bridge-Introduction.md
+
+    - name: OData Query Guide
+      href: docs/data-bridge/OData-Query-Guide.md
+
+    - name: Data Sets
+      href: docs/data-bridge/Data-Sets.md
+
+    - name: Trados Data Bridge APIs for Postman
+      href: docs/data-bridge/Trados-Data-Bridge-APIs-for-Postman.md
+
+- name: API Clients
+  items:
+    - name: .NET Client
+      href: docs/api-clients/net/NET-Client.md
+
+    - name: .NET Samples
+      href: docs/api-clients/net/Net-Samples.md
+
+    - name: Java Client
+      href: docs/api-clients/java/Java-Client.md
+
+    - name: Java Samples
+      href: docs/api-clients/java/Java-Samples.md
+
+    - name: Java Client Upgrade Guide
+      href: docs/api-clients/java/Java-Client-Upgrade-Guide.md
+
+- name: APIs
+  items:
+    - name: Public API
+      href: api/Public-API.v1.md
+
+    - name: Global Public API
+      href: api/Global-Public-API.v1.md
+
+    - name: Data Bridge API
+      href: api/Data-Bridge-API.v1.md
+
+    - name: Webhooks
+      href: api/Webhooks.v1.md

@@ -44,12 +44,12 @@ items:
   - Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.SaveAsJson(System.String)
   - Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.SaveAsJson(System.IO.Stream)
   - Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.Dispose
+  - System.Object.GetType
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-  - System.Object.GetType
 - uid: Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.#ctor(System.String,System.Boolean)
   commentId: M:Sdl.Core.Bcm.BcmModel.PartialSerialization.InMemory.InMemoryBcmSerializer.#ctor(System.String,System.Boolean)
   id: '#ctor(System.String,System.Boolean)'
@@ -606,6 +606,30 @@ references:
     href: Sdl.Core.Bcm.BcmModel.PartialSerialization.AbstractPartialBcmSerializer.html#Sdl_Core_Bcm_BcmModel_PartialSerialization_AbstractPartialBcmSerializer_Dispose
   - name: (
   - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -775,30 +799,6 @@ references:
     name: GetHashCode
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
   - name: (
   - name: )
 - uid: System

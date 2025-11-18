@@ -1,10 +1,10 @@
 - name: Trados Cloud
   href: index.md
 - name: API
-  href: https://languagecloud.sdl.com/lc/api-docs
+  href: articles/LCPublicAPI/
 - name: Extensibility
-  href: https://languagecloud.sdl.com/lc/extensibility-docs
+  href: articles/Extensibility/
 - name: BCM
-  href: articles/bcm/BCM.NET_client_API.md
+  href: articles/BCM/BCM.NET_client_API.md
 - name: Developer License
   href: developer_license.md

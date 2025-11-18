@@ -1,0 +1,104 @@
+- name: What's New
+  href: docs/Whats-New.md
+
+- name: Development
+  items:
+    - name: Add-On To App Migration
+      href: docs/development/Add-On-To-App-Migration.md
+    - name: Concepts
+      href: docs/development/Concepts.md
+    - name: Technical Requirements And Best Practices
+      href: docs/development/Technical-Requirements-And-Best-Practices.md
+    - name: Lifecycle
+      href: docs/development/Lifecycle.md
+    - name: Multi-Region
+      href: docs/development/Multi-Region.md
+    - name: App Descriptor
+      href: docs/development/App-Descriptor.md
+    - name: App Versioning
+      href: docs/development/App-Versioning.md
+    - name: Authentication
+      items:
+        - name: Authentication Overview
+          href: docs/development/Authentication-Overview.md
+        - name: Request Authentication
+          href: docs/development/Request-Authentication.md
+        - name: Trados Cloud Platform API
+          href: docs/development/Trados-Cloud-API.md
+    - name: Webhooks
+      href: docs/development/Webhooks.md
+    - name: Deployment Strategy
+      href: docs/development/Deployment-Strategy.md
+    - name: Extensions
+      items:
+        - name: Automatic Task
+          href: docs/development/Automatic-Task-App-development-guide.md
+        - name: Machine Translation
+          href: docs/development/MT-App-development-guide.md
+        - name: Preview Provider
+          href: docs/development/Preview-App-development-guide.md
+        - name: Verification Provider
+          href: docs/development/Verification-App-development-guide.md
+        - name: User Interface (BETA)
+          items:
+            - name: User Interface App Development Guide
+              href: docs/development/UI-App-development-guide.md
+            - name: Custom Elements and Locations
+              href: docs/development/UI-App-custom-elements-locations.md
+    - name: Blueprints
+      items:
+        - name: Getting started
+          href: docs/development/blueprints/Getting-Started.md
+        - name: .NET Blueprint
+          href: docs/development/blueprints/Dot-Net-Blueprint.md
+        - name: .NET Migration Blueprint
+          href: docs/development/blueprints/Dot-Net-Migration-Blueprint.md
+        - name: Java Blueprint
+          href: docs/development/blueprints/Java-Blueprint.md
+        - name: Java Migration Blueprint
+          href: docs/development/blueprints/Java-Migration-Blueprint.md
+        - name: Testing
+          href: docs/development/blueprints/Testing.md
+        - name: Testing with Docker
+          href: docs/development/blueprints/Testing-with-Docker.md
+    - name: Samples
+      items:
+        - name: Java
+          href: docs/development/samples/Java-Samples.md
+        - name: .NET
+          href: docs/development/samples/Dot-Net-Samples.md
+
+- name: App Management
+  items:
+    - name: Foreword
+      href: docs/appManagement/Foreword.md
+    - name: Registering
+      href: docs/appManagement/Registering.md
+    - name: Installing
+      href: docs/appManagement/Installing.md
+    - name: Validating
+      href: docs/appManagement/Validating.md
+    - name: Sharing
+      href: docs/appManagement/Sharing.md
+    - name: Approvals
+      href: docs/appManagement/Approvals.md
+    - name: Publishing
+      href: docs/appManagement/Publishing.md
+    - name: Updating
+      href: docs/appManagement/Updating.md
+    - name: Retiring
+      href: docs/appManagement/Retiring.md
+
+- name: Machine Translation
+  href: docs/consumer/MT-App-consumer-guide.md
+
+- name: Automatic Task
+  href: docs/consumer/Automatic-Task-App-consumer-guide.md
+
+- name: Dynamic Preview
+  href: docs/consumer/Dynamic-Preview-guide.md
+
+- name: APIs
+  items:
+     - name: Extensibility API
+       href: api/Extensibility-API.v1.md

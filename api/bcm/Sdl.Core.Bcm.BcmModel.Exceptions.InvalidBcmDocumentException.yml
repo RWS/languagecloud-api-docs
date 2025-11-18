@@ -27,23 +27,23 @@ items:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:
   - System.Exception.GetBaseException
-  - System.Exception.ToString
   - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.ToString
   - System.Exception.GetType
+  - System.Exception.TargetSite
   - System.Exception.Message
   - System.Exception.Data
   - System.Exception.InnerException
-  - System.Exception.TargetSite
-  - System.Exception.StackTrace
   - System.Exception.HelpLink
   - System.Exception.Source
   - System.Exception.HResult
+  - System.Exception.StackTrace
   - System.Exception.SerializeObjectState
+  - System.Object.MemberwiseClone
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
-  - System.Object.MemberwiseClone
 - uid: Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.#ctor(System.String)
   commentId: M:Sdl.Core.Bcm.BcmModel.Exceptions.InvalidBcmDocumentException.#ctor(System.String)
   id: '#ctor(System.String)'
@@ -201,28 +201,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
   - name: (
   - name: )
-- uid: System.Exception.ToString
-  commentId: M:System.Exception.ToString
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
-  name: ToString()
-  nameWithType: Exception.ToString()
-  fullName: System.Exception.ToString()
-  spec.csharp:
-  - uid: System.Exception.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Exception.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
-  - name: (
-  - name: )
 - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   parent: System.Exception
@@ -265,6 +243,28 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.streamingcontext
   - name: )
+- uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  name: ToString()
+  nameWithType: Exception.ToString()
+  fullName: System.Exception.ToString()
+  spec.csharp:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
 - uid: System.Exception.GetType
   commentId: M:System.Exception.GetType
   parent: System.Exception
@@ -287,6 +287,14 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
   - name: (
   - name: )
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
 - uid: System.Exception.Message
   commentId: P:System.Exception.Message
   parent: System.Exception
@@ -311,22 +319,6 @@ references:
   name: InnerException
   nameWithType: Exception.InnerException
   fullName: System.Exception.InnerException
-- uid: System.Exception.TargetSite
-  commentId: P:System.Exception.TargetSite
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
-  name: TargetSite
-  nameWithType: Exception.TargetSite
-  fullName: System.Exception.TargetSite
-- uid: System.Exception.StackTrace
-  commentId: P:System.Exception.StackTrace
-  parent: System.Exception
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
-  name: StackTrace
-  nameWithType: Exception.StackTrace
-  fullName: System.Exception.StackTrace
 - uid: System.Exception.HelpLink
   commentId: P:System.Exception.HelpLink
   parent: System.Exception
@@ -351,6 +343,14 @@ references:
   name: HResult
   nameWithType: Exception.HResult
   fullName: System.Exception.HResult
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
 - uid: System.Exception.SerializeObjectState
   commentId: E:System.Exception.SerializeObjectState
   parent: System.Exception
@@ -359,6 +359,30 @@ references:
   name: SerializeObjectState
   nameWithType: Exception.SerializeObjectState
   fullName: System.Exception.SerializeObjectState
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -504,30 +528,6 @@ references:
     name: GetHashCode
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System
