@@ -72,10 +72,12 @@ Response example:
     }
 }
 ```
-> Note: If both the `termbaseTemplateId` and the `termbaseStructure` are added in the request, the `termbaseStructure` takes precedence. In other words, the `termbaseTemplateId` is ignored.
+> [!NOTE]
+> If both the `termbaseTemplateId` and the `termbaseStructure` are added in the request, the `termbaseStructure` takes precedence. In other words, the `termbaseTemplateId` is ignored.
 
 
 ## Updating a termbase
+> [!NOTE]
 > You can update the fields for a termbase only if the termbase you want to update was not created using a termbase template or if it does not already have fields defined.
 
 A termbase can be updated by making a `PUT` request to the [`/termbases/{termbaseId}`](../../api/Public-API.v1-fv.html#/operations/UpdateTermbase) endpoint and providing the `termbaseTemplateId`.
@@ -121,9 +123,11 @@ Request example: `PUT /termbases/616d0efa7a11677d6085b0be`
     }
 }
 ```
-> Note: If both the `termbaseTemplateId` and the `termbaseStructure` are added in the request, the `termbaseStructure` takes precedence. In other words, the `termbaseTemplateId` is ignored.
+> [!NOTE]
+> If both the `termbaseTemplateId` and the `termbaseStructure` are added in the request, the `termbaseStructure` takes precedence. In other words, the `termbaseTemplateId` is ignored.
 
-> Note: If you perform an update using a termbase field without an `id`, the field will be added to the termbase.
+> [!NOTE]
+> If you perform an update using a termbase field without an `id`, the field will be added to the termbase.
 
 ## Retrieving a termbase
 
@@ -175,8 +179,8 @@ Response example:
     "itemCount": 2
 }
 ```
-
-> Note: Some properties are not available for this endpoint: `numberOfEntries`, `status`, `createdAt` and `lastModifiedAt`.
+> [!NOTE]
+> Some properties are not available for this endpoint: `numberOfEntries`, `status`, `createdAt` and `lastModifiedAt`.
 
 ## Deleting termbases
 

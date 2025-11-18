@@ -12,7 +12,7 @@ To create an integration with any of the products listed above, you'll need to u
 Click [here](articles/LCPublicAPI/docs/Introduction.md) to find out more.
 
 ## Extending <Var:ProductName> products
-<Var:ProductName> products can be extended in a number of ways. For example, you may want to create an add-on to support a machine translation engine or you may want to create a custom workflow task. RWS provides an extensibility framework for the <Var:ProductName> suite of products. To get more information on what's required and how you can do this, visit the [<Var:ProductName> extensibility documentation](articles/Extensibility/) pages. 
+<Var:ProductName> products can be extended in a number of ways. For example, you may want to create an add-on to support a machine translation engine or you may want to create a custom workflow task. RWS provides an extensibility framework for the <Var:ProductName> suite of products. To get more information on what's required and how you can do this, visit the [<Var:ProductName> extensibility documentation](articles/Extensibility/) pages.
 Click [here](articles/Extensibility/docs/Whats-New.md) to find out more.
 
 ## Interacting with files

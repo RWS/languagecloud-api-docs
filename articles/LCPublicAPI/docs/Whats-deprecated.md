@@ -7,8 +7,8 @@ We have removed the old fields in the folder/resource structure and are no longe
 ## 13 December 2023
 - The `Export Quote` endpoint has been removed. 
 - In the Get Project Template model we deprecated:
-  - `forceOnline` field from root level and we added `forceOnline` to the settings â†’ general
-  - `quoteTemplate` field from root level and we added `quoteTemplate` to the settings â†’ general
+  - `forceOnline` field from root level and we added `forceOnline` to the settings → general
+  - `quoteTemplate` field from root level and we added `quoteTemplate` to the settings → general
   They will only be available for use until July 2024.
 
 ## 17 August 2023

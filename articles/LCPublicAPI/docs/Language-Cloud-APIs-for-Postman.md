@@ -63,7 +63,8 @@ Simply fill in your `projectId` and click SEND. Optionally, you can supply value
 
 ![image](https://user-images.githubusercontent.com/10993097/118110695-68b04100-b3eb-11eb-8356-5bd6e21185c8.png)
 
-> IMPORTANT: make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error. 
+> [!WARNING]
+> Make sure you are not sending any query parameters with default Postman values. If you are sending any parameters, make sure you are sending valid data or else you will get an API Error. 
 
 
 ![image](https://user-images.githubusercontent.com/10993097/119813507-09295980-bef2-11eb-970e-42119cf4ffd8.png)

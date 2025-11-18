@@ -6,6 +6,7 @@ stoplight-id: eg4ja9nrs9wtk
 
 A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.
 
+> [!NOTE]
 > When integrating with our webhook service, please be aware that we cannot guarantee the order of webhook event deliveries. This means that notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. Instead, make use of the `timestamp` field to determine the event generation time.
  
 ## Subscribe to Webhook events
@@ -24,9 +25,9 @@ Here are the detailed steps:
 2. Expand the account menu on the top right-hand corner and select **Integrations**. 
 3. Select the **Applications** sub-tab.
 4. Select **New Application** and enter the following information:
-    - **Name** â€“ Enter a unique name for your custom application.
-    - (Optional) **URL** â€“ Enter your custom application URL.
-    - **Service User** â€“ Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
+    - **Name** - Enter a unique name for your custom application.
+    - (Optional) **URL** - Enter your custom application URL.
+    - **Service User** - Select a service user from the dropdown list. To understand how service users are added in Trados Cloud Platform, check step 1 in the [Authenticate](../../docs/Service-credentials.md) topic.
 5. Select **Add**.
 6. Back in the **Applications** sub-tab, select the check box corresponding to your application.
 7. Select **Edit**.
@@ -39,6 +40,7 @@ Here are the detailed steps:
 
 A webhook is triggered for all the projects located in the same folder as the selected service user. 
 
+> [!NOTE]
 > Similar to other resource types, webhooks are governed by inheritance, the propagation rule giving users visibility and work access with resources in the [account hierarchy](https://docs.rws.com/791595/797020/trados-enterprise---accelerate/inheritance-within-the-account). <br>
 > Please be aware that the webhooks will be delivered only for the users having the READ permission on the resource triggering the webhook.
 
@@ -103,12 +105,12 @@ checksum.update(event.getBytes(UTF_8));
 long crc32Val = checksum.getValue();
 
 //build the message
-String message = transmissionTime + â€ś|â€ť + applicationId + â€ś|â€ť + webhookId + â€ś|â€ť + crc32Val;
+String message = transmissionTime + “|” + applicationId + “|” + webhookId + “|” + crc32Val;
 
 //build PublicKey
 byte[]  bytes = org.springframework.security.crypto.codec.Base64.decode(publicKeyAsString.getBytes());
 X509EncodeKeySpec ks = new X509EncodeKeySpec(bytes);
-KeyFactory kf = KeyFactory.getInstance(â€śRSAâ€ť);
+KeyFactory kf = KeyFactory.getInstance(“RSA”);
 PublicKey publicKey = kf.generatePublic(ks);
 
 //verify signature
@@ -137,6 +139,7 @@ To ensure that the message cannot be read by 3rd-parties, Trados Cloud Platform 
 
 A notification delivery is considered successful when applications respond with a 2xx status code within 3 seconds.
 
+> [!NOTE]
 > It is recommended that applications perform little processing when receiving events and, for instance, that they make use of a queuing mechanism to perform further processing asynchronously after having acknowledged the event notification request.
 
 Trados Cloud Platform does not inspect the HTTP response body.
@@ -175,6 +178,7 @@ To protect the platform and ensure problems from one tenant do not affect other 
 
 The circuit breaker is triggered when 3 calls to a URL fail within a short time window. The circuit breaker is opened for an hour only for that URL, not for the tenant. During that hour, any webhooks sent to that URL are scheduled for the next retry.
 
+> [!NOTE]
 > Frequent timeouts may compromise the performance of our delivery system. <br>
 > We may need to remove your webhook from our database without advance notice if it is negatively impacting the platform. <br>
 > This action is reserved for cases of major incidents and is necessary to prevent potential issues that can arise from  repeated delivery attempts.

@@ -46,10 +46,7 @@ System.out.println(
 
 *\*Using this method, a unique TraceID will be generated for each request.*
 
-  <!-- theme: info -->
-
-> #### Info
->
+> [!NOTE]
 > Make sure you always keep your credentials safe.
 
 

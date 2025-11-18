@@ -645,6 +645,7 @@
               "PROJECT.TASK.DELETED",
               "PROJECT.CREATED",
               "PROJECT.UPDATED",
+              "PROJECT.STARTED",
               "PROJECT.DELETED",
               "PROJECT.TEMPLATE.CREATED",
               "PROJECT.TEMPLATE.UPDATED",

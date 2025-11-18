@@ -2,6 +2,18 @@
 
 </br> 
 
+## 29 October 2025
+
+- We've added support for advanced settings for Translation Memory operations, including powerful filter expressions and field update options. See [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md) for more details.
+- We've introduced a new endpoint to [reschedule workflow task deadlines](../api/Public-API.v1-fv.html#/operations/RescheduleProjectTasks), allowing you to adjust task due dates programmatically in Trados Cloud.
+- The [analysisStatistics](../api/Public-API.v1-fv.html#/schemas/analysis-statistics) model now includes information about locked segments.
+- We fixed various bugs.
+
+## 30 September 2025
+ - We introduced [Trados Data Bridge](../docs/data-bridge/Data-Bridge-Introduction.md) APIs providing secure, read-only access to Trados Cloud data. The API allows you to query project, task, cost, and quality metric data using the OData v4 protocol, and connect directly to business intelligence tools such as Power BI. 
+ - As part of our multi-region support, we have added the global [List My Accounts](../api/Global-Public-API.v1-fv.html#/operations/ListMyAccounts) endpoint. 
+ - We fixed various bugs.
+
 ## 10 September 2025
 - With this release we deliver [Lookup](../api/Public-API.v1-fv.html#/operations/TranslationsLookup), [Concordance](../api/Public-API.v1-fv.html#/operations/TranslationsConcordanceSearch), [Add](../api/Public-API.v1-fv.html#/operations/TranslationsAdd) and [Update](../api/Public-API.v1-fv.html#/operations/TranslationsUpdate) translation units to a translation memory. See [this](./translations/Translations.md) page for more details.
 - You can now [obtain](../api/Public-API.v1-fv.html#/operations/GetTranslationEngine) and [update](../api/Public-API.v1-fv.html#/operations/UpdateTranslationEngine) the resources sequence information for a Translation Engine.
@@ -79,11 +91,12 @@
 
 - You now have the ability to add notes to customer quotes.
 
- - We have updated the deprecated types for the `language` and `targetLanguages` fields in the [Add Source File Request](../api/Public-API.v1-fv.html#/schemas/source-file-request) model, which now reference [Language Request](../api/Public-API.v1-fv.html#/schemas/language-request) model. In the updated API contract, these fields have been changed from simple strings to structured objects containing a `languageCode` property, enhancing clarity and consistency in language handling.
- 
+- We have updated the deprecated types for the `language` and `targetLanguages` fields in the [Add Source File Request](../api/Public-API.v1-fv.html#/schemas/source-file-request) model, which now reference [Language Request](../api/Public-API.v1-fv.html#/schemas/language-request) model. In the updated API contract, these fields have been changed from simple strings to structured objects containing a `languageCode` property, enhancing clarity and consistency in language handling.
+- We fixed various bugs.
+  > [!NOTE]
   > We will provide backwards compatibility until May 2025. However, starting with this release, SDKs will be updated to use the new types. Please ensure your integration is updated to use the new [Language Request](../api/Public-API.v1-fv.html#/schemas/language-request) model.
 
-- We fixed various bugs.
+
 ## 11 September 2024
 
 - With this release we deliver the [PerfectMatch](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information) functionality. You can apply PerfectMatch either at the start of a project or midway through the translation process. These capabilities are accessible via the [PerfectMatch Mapping](../api/Public-API.v1-fv.html#/operations/CreatePerfectMatchMapping) menu.
@@ -180,13 +193,13 @@
 
 ## 20 April 2023
 - With this release we enforce validations listed in the documentation for the Create and Update Project endpoints. This impacts the SDKs, so please update your integration accordingly.
-- We extended the [webhooks](../docs/Webhooks.md) functionality to support error tasks
+- We extended the [webhooks](../docs/webhooks/Webhooks-setup.md) functionality to support error tasks
 - We introduced the `customFields` field for project webhooks, and the `dueBy` field for task webhooks
 - We added the `name` of the `customFields` under the response for the Get Project endpoint
 - We fixed various bugs.
 
 ## 21 March 2023
-- We extended the list of [webhooks](../docs/Webhooks.md) available for tasks, projects, project files, project templates and enabled the first webhook for project group
+- We extended the list of [webhooks](../docs/webhooks/Webhooks-setup.md) available for tasks, projects, project files, project templates and enabled the first webhook for project group
 - We fixed several bugs.
 
 ## 03 March 2023
@@ -212,7 +225,7 @@
 
 
 ## 22 November 2022
-- To enable support for the Trados Enterprise multi-source resources functionality, we're introducing an important breaking change: when creating workflows with multi-source languages from the TE UI, please use the new `languageDirection`Â scope value. As the new feature may limit previously working functionality, inconsistencies within applications or certain products may appear. For integrations that are impacted, please contact their developers to update the integrations.
+- To enable support for the Trados Enterprise multi-source resources functionality, we're introducing an important breaking change: when creating workflows with multi-source languages from the TE UI, please use the new `languageDirection` scope value. As the new feature may limit previously working functionality, inconsistencies within applications or certain products may appear. For integrations that are impacted, please contact their developers to update the integrations.
 - We've made 3 new endpoints available for [TM export](../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory)
 - We removed the old 10 MB size limitations for files, termbases and translation memories. We now support [these values](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) for files and [these values](https://docs.rws.com/791595/741139/trados-enterprise---accelerate/importing-tm-content) for importing translation memory content. 
 - Users can now retrieve task comments.
@@ -360,7 +373,7 @@ When you make a `POST` request to the [`/projects/{projectId}/target-files/{targ
 
 ## 28 January 2021
 
-* **Project** > **List Projectâ€™s Tasks** endpoint
+* **Project** > **List Project's Tasks** endpoint
 
 When you make a `GET` request to the [`/projects/{projectId}/tasks`](../api/Public-API.v1-fv.html#/operations/ListProjectTasks) endpoint, you can now retrieve the available project tasks and their details.
 
@@ -379,5 +392,4 @@ When adding source files to a project, you can specify their target languages vi
 
 
 
-<span style='color: #f5f5f5; font-size:10px;'>â‚Ť^. .^â‚Žâź†</span>
-
+<span style='color: #f5f5f5; font-size:10px;'>₍^. .^₎⟆</span>

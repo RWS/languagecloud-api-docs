@@ -47,7 +47,8 @@ The current configuration for the Trados Cloud Platform is:
 * The maximum batch size is 100 events.
 * The maximum time interval is 1 second.
 
-> **Note:** These values are subject to change without prior notice to enhance system efficiency and ensure platform stability.  
+> [!NOTE]
+> These values are subject to change without prior notice to enhance system efficiency and ensure platform stability.  
 
 ## Key Considerations for Efficient Batching  
 

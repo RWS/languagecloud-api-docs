@@ -12,11 +12,12 @@ Concept | Explanation |
 
 The translation memory that you want to import must have one of the following formats: `tmx`, `sdltm`, `zip`, `tmx.gz` or `sdlxliff`.
 
+> [!NOTE]
 > Before the import action, make sure you have already created a translation memory using the [Create Translation Memory](../../api/Public-API.v1-fv.html#/operations/CreateTranslationMemory) endpoint.
 
 To import a translation memory, perform a `POST` request to the [Import Translation Memory](../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory) endpoint and provide these details: `translationMemoryId`, the translation memory file and a couple of properties.
 
-<!-- theme: warning -->
+> [!WARNING]
 > Pay special attention to the order of `properties` and `file`. It must be exactly as described in the contract (properties first).
 
 If you are not sure what properties to include, here's a short description for each of them:

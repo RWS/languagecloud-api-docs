@@ -5,7 +5,8 @@
 
 The following termbase formats are supported: `tbx` and `xml`. 
 
-> Before importing a termbase, make sure you already created one using the [Create Termbase](../../api/Public-API.v1-fv.html#/operations/CreateTermbase) endpoint. Only empty termbases support importing content.
+> [!NOTE]
+> Before importing a termbase, make sure you already created one using the [Create Termbase](../../api/Public-API.v1-fv.html#/operations/CreateTermbase) endpoint.
 
 To import a `tbx` or an `xml` termbase, perform a `POST` request to the [Import Termbase](../../api/Public-API.v1-fv.html#/operations/ImportTermbase) endpoint and provide the `termbaseId` and the termbase file. Optionally, you can specify two import settings via query parameters:
 
@@ -17,6 +18,7 @@ To import a `tbx` or an `xml` termbase, perform a `POST` request to the [Import 
 
   - `override` The content of the current entry with the same identifier will be replaced by the imported entry.
 
+> [!NOTE]
 >   If `duplicateEntriesStrategy` is not sent, the default behavior will be `override`.
 
 
@@ -26,6 +28,7 @@ To import a `tbx` or an `xml` termbase, perform a `POST` request to the [Import 
 
   - `false` The import will occur even if there are non-matching languages, by trying to match them to a relevant main language or language variant, if available.
 
+> [!NOTE]
 >   If `strictImport` is not sent, the default behavior will be `true`.
 
 If the import is successful, you will get back an `importId` and the import `status`. 
