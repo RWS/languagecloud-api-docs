@@ -18,6 +18,7 @@ We suggest using a distinctive **development name** and **description** to diffe
 
 ![RegisterPreview](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/RegisterPreview.gif?raw=true)
 
+> [!NOTE]
 > Make sure you use a **descriptor URL** different from the one you need for the live instance. You cannot register two apps with the same descriptor URL.
 
 ## The Live Instance

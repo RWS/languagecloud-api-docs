@@ -77,6 +77,7 @@ You can find a quick guide on how to install and set up Ngrok [here](https://ngr
 
 4. [Register](../../appManagement/Registering.md) the app in Trados using the URL provided by Ngrok. 
 
+> [!NOTE]
 > You can restart the app application anytime while running a Ngrok session, without having to start a new session.
 
 ## MongoDB

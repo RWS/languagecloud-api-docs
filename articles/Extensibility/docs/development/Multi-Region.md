@@ -7,14 +7,18 @@ tags: [Development]
 
 To fulfill the requirements of our customers, Trados Enterprise allows multi-region deployments of your app.
 
-To enable multi-region on your app you must provide regional instances of your app and include their `regionalBaseUrls` in your [descriptor](../../App-API.v1.json/paths/~1descriptor/get).
+To enable multi-region on your app you must provide regional instances of your app and include their `regionalBaseUrls` in your [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 
+> [!NOTE]
 > Multi-Region is only supported on apps starting with `decriptorVersion: 1.4`
 
 > [!WARNING]
 > Please note that the responsibility for ensuring region-specific URLs lies with the developer. The URLs should accurately reflect the physical location of the instances.
 
 Currently, the supported regions are Europe(`eu`) and Canada(`ca`). Depending on where your app is deployed you can choose either one or both of them. This will tell Trados what endpoints to invoke based on where the consumer tenant is living.
+
+> [!WARNING]
+> All instances, in all regions should provide the exact same descriptor.
 
 ## Installing an App with Multi-Region support
 
@@ -31,7 +35,10 @@ The `INSTALLED` lifecycle event now includes the region information for the acco
 
 ## Base URL vs Multi-Region Base URLs
 
-The `baseUrl` property from [descriptor](../../App-API.v1.json/paths/~1descriptor/get) remains mandatory even if you add the `regionalBaseUrls` property(which is optional).
+The `baseUrl` property from [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) remains mandatory even if you add the `regionalBaseUrls` property(which is optional).
+
+> [!WARNING]
+> The `baseUrl` in your app should stay fixed and not change based on region. When an App is registered, `baseUrl` from that initial descriptor is used for setting audience for all future authentication requests, independent of regions (it is possible to change it later, see [Changing Base URL](App-Descriptor.md#changing-base-url). 
 
 Your "multi-region descriptor" should look something like this:
 ```json
@@ -45,12 +52,15 @@ Your "multi-region descriptor" should look something like this:
   //..
 }
 ```
+
+> [!NOTE]
 > It is also acceptable to have the same URL in `baseUrl` as for one of regions in your `regionalBaseUrls` property.
 
 The `baseUrl` is treated as a global region URL and is still used in the following scenarios even if `regionalBaseUrls` is also defined:
 
 1. Health checks - the `/health` endpoint that is periodically invoked to check the health status of your app
 2. Version checks - the `/descriptor` endpoint that is periodically invoked to check for new versions(by the `version` property). 
+    > [!NOTE]
     > It is the developer's responsibility to keep the version of the regional instances in sync.
 3. `UPDATED` lifecycle event - explained below in the [Special Case](#special-case) section.
 

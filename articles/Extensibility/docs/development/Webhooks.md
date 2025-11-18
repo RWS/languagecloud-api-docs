@@ -11,13 +11,16 @@ Apps can specify a list of webhooks that will be registered automatically when t
 
 Not all accounts have webhooks enabled. Installing of the app requiring webhooks will be disabled (grayed out in UI) on accounts that don't have webhooks enabled.
 
+> [!WARNING]
+> Webhooks require one of the following [scopes](./Trados-Cloud-API.md#scopes) to be delivered: `TENANT` or `TENANT_READ`.
+
 ## Setup
 
 The required list of webhooks must be specified in the descriptor in the `webhooks` property. 
 
 `webhooks` is an array of URLs and corresponding event types. You can specify a single URL for all webhook event types, or one URL for each event type, or any combination. This is done for maximum flexibility so you can decide if you want to ingest all webhooks through a single endpoint or have multiple endpoints maybe by event type or category, etc.
 
-`url` can be an absolute URL or a path relative to `basePath`.
+`url` can be an absolute URL or a path relative to `basePath`. 
 
 Example of a `webhooks` property in the app descriptor:
 ```json
@@ -26,7 +29,14 @@ Example of a `webhooks` property in the app descriptor:
   "webhooks": [
     {
       "url": "/webhooks-endpoint",
-      "events": ["PROJECT.TASK.ACCEPTED", "PROJECT.TASK.CREATED"]
+      "evenTypes": [ 
+        { 
+          "eventType": "PROJECT.TASK.ACCEPTED" 
+        }, 
+        { 
+          "eventType": "PROJECT.TASK.CREATED" 
+        } 
+      ]
     }
   ]
   ...
@@ -42,6 +52,7 @@ The webhook payload description can be found in our [Trados Cloud Platform API d
 
 Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsability of the app developer to handle the events from the batch accordingly to their `accountId` from the event body.
 
+> [!NOTE]
 > **Note:** For *Webhook Authenticity*, ignore the described behavior in the above link and only consider the following chapter about *Signature Validation*.
 
 

@@ -12,7 +12,7 @@ To build a new MT app we recommend starting by using the provided [app blueprint
 
 ## Machine Translation Extension
 
-An MT app needs to define at least one MT extension within its [descriptor](../../App-API.v1.json/paths/~1descriptor/get).
+An MT app needs to define at least one MT extension within its [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 For example: 
 
 ```json
@@ -111,7 +111,7 @@ The blueprints contain placeholders from where you can start implementing the en
 - [.NET blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppBlueprint/Rws.LC.AppBlueprint/Controllers/TranslationController.cs#L52)
 - [Java blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/java/com/rws/lt/lc/blueprint/web/TranslationEnginesController.java#L21)
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.mtprovider.engines/get) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/GetMachineTranslationProviderEngines) for further details.
 
 ### Translate Endpoint
 
@@ -167,4 +167,4 @@ The blueprints contain placeholders from where you can start implementing the en
 - [.NET blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppBlueprint/Rws.LC.AppBlueprint/Controllers/TranslationController.cs#L35)
 - [Java blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/java/com/rws/lt/lc/blueprint/web/TranslateController.java#L22)
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.mtprovider.translate/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/MachineTranslationProviderTranslateBCM) for further details.

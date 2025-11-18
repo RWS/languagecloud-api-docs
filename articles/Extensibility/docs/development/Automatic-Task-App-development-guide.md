@@ -19,7 +19,7 @@ In order to build a new Automatic Task extension we recommend to start by using 
 
 ## Automatic Task Extension
 
-For an app to offer Automatic Task functionality, it must define at least one Automatic Task extension within its [descriptor](../../App-API.v1.json/paths/~1descriptor/get).
+For an app to offer Automatic Task functionality, it must define at least one Automatic Task extension within its [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor).
 For example: 
 
 ```json
@@ -216,7 +216,7 @@ The blueprints contain placeholders from where you can start implementing the en
 - [.NET blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppBlueprint/Rws.LC.AppBlueprint/Controllers/AutomaticTaskController.cs#L36)
 - [Java blueprint](https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/java/com/rws/lt/lc/blueprint/web/AutomaticTaskController.java#L16)
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1lc.automatictask.submit/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/automatictasktypeexecutetask) for further details.
 
 ### Callback Endpoint
 
@@ -239,4 +239,4 @@ X-LC-Tenant: LC-TENANT_ID
 
 -   The `token` should be already present in the received `callbackUrl` on the submit endpoint.
 
-Please refer to the endpoint's [documentation](../../App-API.v1.json/paths/~1external-job~1v1~1callback/post) for further details.
+Please refer to the endpoint's [documentation](../../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback) for further details.

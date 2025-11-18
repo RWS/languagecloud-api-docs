@@ -1,8 +1,8 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Extensibility API",
-    "description": "The Extensibility API that must be implemented by 3rd party apps.\n\n**Important:** all relative paths in the Descriptor must begin with a slash (character \"/\"), otherwise the authentication on those calls will fail.",
+    "title": "App API",
+    "description": "App API that must be implemented by 3rd party apps.\n\n**Important:** all relative paths in the Descriptor must begin with a slash (character \"/\"), otherwise the authentication on those calls will fail.",
     "contact": {
       "name": " "
     },
@@ -47,7 +47,7 @@
           "Standard"
         ],
         "summary": "Descriptor",
-        "description": "This endpoint provides the descriptor for the app.",
+        "description": "This endpoint provides the descriptor for the app. ",
         "operationId": "descriptor",
         "parameters": [
           {
@@ -381,6 +381,16 @@
           },
           "401": {
             "description": "Signature validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "This should be returned when the payload is too large and the app can't process it. For instance, for the `html` format, the contents list will be halved upon retrying the request.",
             "content": {
               "application/json": {
                 "schema": {
@@ -861,7 +871,7 @@
             }
           }
         },
-        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](#/schemas/PreviewProvider.MainResponse)",
         "tags": [
           "Preview Provider"
         ],
@@ -921,7 +931,7 @@
             }
           }
         },
-        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
+        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](#/schemas/PreviewProvider.MainResponse)",
         "tags": [
           "Preview Provider"
         ],
@@ -1061,244 +1071,6 @@
         ]
       }
     },
-    "/lc.preview.startpreview.v2": {
-      "post": {
-        "summary": "Start Preview",
-        "operationId": "StartPreviewV2",
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreviewProvider.MainRequestV2"
-              }
-            }
-          }
-        },
-        "description": "This endpoint initiates the preview generation. It initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds. The Response will be sent on the callbackUrl and not from this request.\n [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
-        "tags": [
-          "Preview Provider V2"
-        ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionId"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-AppVersion"
-          }
-        ]
-      }
-    },
-    "/lc.preview.refreshpreview.v2": {
-      "put": {
-        "summary": "Refresh Preview",
-        "operationId": "RefreshPreviewV2",
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreviewProvider.MainRequestV2"
-              }
-            }
-          }
-        },
-        "description": "This endpoint refreshes the preview. This initiates an asynchronous background job to generate the preview. The timeout for this request which initiates the background job should be 10 seconds - the background job might run longer than this. The Response will be sent on the callbackUrl and not from this request. [Callback Response](App-API.v1.json/components/schemas/PreviewProvider.MainResponse)",
-        "tags": [
-          "Preview Provider V2"
-        ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionId"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-AppVersion"
-          }
-        ]
-      }
-    },
-    "/lc.preview.updatesegment.v2": {
-      "post": {
-        "summary": "Update Segment",
-        "operationId": "UpdateSegmentV2",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "description": "This endpoint generates a rendered HTML fragment from a BCM document fragment. The timeout for this request should be 10 seconds.",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PreviewProvider.UpdateSegmentRequest"
-              }
-            }
-          }
-        },
-        "tags": [
-          "Preview Provider V2"
-        ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionId"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-AppVersion"
-          }
-        ]
-      }
-    },
-    "/lc.preview.endpreview.v2": {
-      "post": {
-        "summary": "End Preview",
-        "operationId": "EndPreviewV2",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "description": "This endpoint finishes the preview.",
-        "tags": [
-          "Preview Provider V2"
-        ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-ExtensionId"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-AppVersion"
-          }
-        ]
-      }
-    },
     "/lc.verification.startverification/{requestId}": {
       "post": {
         "summary": "Start Verification",
@@ -1337,7 +1109,7 @@
             }
           }
         },
-        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](AddOn-API.v1.json/components/schemas/VerificationProvider.MainResponse)",
+        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](#/schemas/VerificationProvider.MainResponse)",
         "security": [
           {
             "Trados Cloud Platform JWS Token": []
@@ -1560,268 +1332,6 @@
           "content": {}
         }
       }
-    },
-    "/lc.verification.startverification.v2/{requestId}": {
-      "post": {
-        "summary": "Start Verification",
-        "operationId": "VerificationProviderStartVerificationV2",
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerificationProvider.MainRequest"
-              }
-            }
-          }
-        },
-        "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](AddOn-API.v1.json/components/schemas/VerificationProvider.MainResponse)",
-        "security": [
-          {
-            "Trados Cloud Platform JWS Token": []
-          }
-        ],
-        "tags": [
-          "Verification Provider V2"
-        ],
-        "parameters": []
-      },
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "requestId",
-          "in": "path",
-          "required": true
-        }
-      ]
-    },
-    "/lc.verification.verifysegment.v2": {
-      "post": {
-        "summary": "Verify Segment",
-        "operationId": "VerificationProviderVerifySegmentV2",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VerificationProvider.VerifySegmentResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "description": "This endpoint verifies the content of a single segment",
-        "security": [
-          {
-            "Trados Cloud Platform JWS Token": []
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VerificationProvider.VerifySegmentRequest"
-              }
-            }
-          },
-          "description": ""
-        },
-        "tags": [
-          "Verification Provider V2"
-        ]
-      },
-      "parameters": []
-    },
-    "/lc.verification.getmessagesbyculture.v2/{culture}": {
-      "get": {
-        "summary": "Get Messages By Culture",
-        "tags": [
-          "Verification Provider V2"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VerificationProvider.MessageResourceResponse"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "VerificationProviderGetMessagesByCultureV2",
-        "description": "Gets localized resources for message types defined by the app extension",
-        "parameters": []
-      },
-      "parameters": [
-        {
-          "schema": {
-            "type": "string",
-            "enum": [
-              "de-DE",
-              "es-ES",
-              "fr-CA",
-              "fr-FR",
-              "it-IT",
-              "ja-JP",
-              "nl-NL",
-              "zh-CN"
-            ]
-          },
-          "name": "culture",
-          "in": "path",
-          "required": true,
-          "description": "Culture of retrieved resources"
-        }
-      ]
-    },
-    "/lc.verification.getsettingsschema.v2": {
-      "get": {
-        "summary": "Get Settings Schema",
-        "tags": [
-          "Verification Provider V2"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "group": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "kc1t8wfl70ace"
-                      },
-                      "description": "group name for settings. Must be \"sdl.project.verification.qaChecker.addon\"",
-                      "enum": [
-                        "sdl.project.verfication.qaChecker.addon"
-                      ]
-                    },
-                    "systemId": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "rwwuwxs8iz7jw"
-                      },
-                      "description": "extension ID"
-                    },
-                    "schema": {
-                      "type": "object",
-                      "x-stoplight": {
-                        "id": "58sw7o5udooku"
-                      },
-                      "description": "full json schema for the settings associated with this extension"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/ErrorResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "VerificationProviderGetSettingsSchemaV2",
-        "description": "Returns a JSON schema for the settings associated with this app\nThe JSON schema can must only use specific pre-defined types relating to \"string\", \"number\", \"integer\", \"boolean\", \"datetime\" and \"file\" - for complex types, objects are used with internal properties.",
-        "requestBody": {
-          "content": {}
-        }
-      }
     }
   },
   "components": {
@@ -1887,9 +1397,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/PreviewProviderExtension"
-                },
-                {
-                  "$ref": "#/components/schemas/PreviewProviderExtensionV2"
                 },
                 {
                   "$ref": "#/components/schemas/VerificationProviderExtension"
@@ -2078,6 +1585,9 @@
                 "x-stoplight": {
                   "id": "oiz0xiltgshgm"
                 }
+              },
+              {
+                "$ref": "#/components/schemas/InstalledEvent"
               }
             ]
           }
@@ -2135,6 +1645,19 @@
               "clientId",
               "clientSecret"
             ]
+          }
+        }
+      },
+      "InstalledEvent": {
+        "title": "InstalledEvent",
+        "x-stoplight": {
+          "id": "doncfjujsw5a9"
+        },
+        "type": "object",
+        "properties": {
+          "region": {
+            "description": "Tenant region.",
+            "type": "string"
           }
         }
       },
@@ -2356,6 +1879,15 @@
                   "html",
                   "bcm"
                 ]
+              },
+              "segmentBatchSize": {
+                "type": "integer",
+                "x-stoplight": {
+                  "id": "ntd72gzs0cw8x"
+                },
+                "description": "The maximum number of segments supported by the app on the `lc.mtprovider.translate` endpoint. Applicable only for the `html` format.",
+                "default": 200,
+                "minimum": 1
               }
             }
           }
@@ -2477,138 +2009,6 @@
               "outputType": {
                 "type": "string",
                 "description": "Must define one of the following values: previewPackage, previewHtmlFile or previewUrl.",
-                "readOnly": true
-              },
-              "supportedFileTypes": {
-                "type": "array",
-                "description": "An array listing one or more FileTypeDefinitionIds definining FileTypes to which this preview extension may be assigned.",
-                "items": {
-                  "type": "string",
-                  "readOnly": true
-                },
-                "readOnly": true
-              }
-            }
-          }
-        }
-      },
-      "PreviewProviderExtensionV2": {
-        "title": "PreviewProviderExtensionV2",
-        "type": "object",
-        "description": "Extension that provides for preview generation",
-        "required": [
-          "extensionPointId",
-          "id",
-          "name",
-          "description",
-          "extensionPointVersion",
-          "configuration"
-        ],
-        "properties": {
-          "extensionPointId": {
-            "type": "string",
-            "description": "The extension point id corresponding to this extensionType: lc.previewprovider",
-            "enum": [
-              "lc.previewprovider"
-            ]
-          },
-          "id": {
-            "type": "string",
-            "description": "Unique extension ID provided by the app developer"
-          },
-          "name": {
-            "type": "string",
-            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
-          },
-          "description": {
-            "type": "string",
-            "description": "The PreviewProvider extension description"
-          },
-          "extensionPointVersion": {
-            "type": "string",
-            "description": "The version of the extension point that is implemented in the Extension.\r\n\r\nCurrently supported version is \"1\" or \"2\".",
-            "enum": [
-              "2.0"
-            ]
-          },
-          "configuration": {
-            "type": "object",
-            "required": [
-              "endpoints",
-              "requiredInputFiles",
-              "outputType",
-              "supportedFileTypes"
-            ],
-            "properties": {
-              "endpoints": {
-                "type": "object",
-                "description": "The required endpoints for the PreviewProvider extension",
-                "required": [
-                  "lc.preview.startpreview.v2",
-                  "lc.preview.endpreview.v2",
-                  "lc.preview.refreshpreview.v2",
-                  "lc.preview.updatesegment.v2"
-                ],
-                "properties": {
-                  "lc.preview.startpreview.v2": {
-                    "type": "string",
-                    "description": "The endpoint used initiate the preview generation - must start with a slash \"/\"",
-                    "readOnly": true
-                  },
-                  "lc.preview.endpreview.v2": {
-                    "type": "string",
-                    "description": "The endpoint used to end the preview request. Any cleanup can be done via this call. Must start with a slash \"/\"",
-                    "readOnly": true
-                  },
-                  "lc.preview.refreshpreview.v2": {
-                    "type": "string",
-                    "description": "The endpoint used to refresh the preview. Must start with a slash \"/\"",
-                    "readOnly": true
-                  },
-                  "lc.preview.updatesegment.v2": {
-                    "type": "string",
-                    "description": "The endpoint used to update a segment. Must start with a slash \"/\"",
-                    "readOnly": true
-                  }
-                },
-                "readOnly": true
-              },
-              "requiredInputFiles": {
-                "type": "object",
-                "required": [
-                  "previewPackageTemplate",
-                  "bilingualDocument",
-                  "nativeSourceFile",
-                  "nativeTargetFile",
-                  "nativeAnnotatedTargetFile"
-                ],
-                "properties": {
-                  "previewPackageTemplate": {
-                    "type": "boolean",
-                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing the retrieval of a preview package template containing the files required to generate the preview",
-                    "readOnly": true
-                  },
-                  "bilingualDocument": {
-                    "type": "boolean",
-                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension for retrieving a translated BCM document",
-                    "readOnly": true
-                  },
-                  "nativeFile": {
-                    "type": "boolean",
-                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeSourceFile or nativeTargetFile depending on the generation scope",
-                    "readOnly": true
-                  },
-                  "nativeAnnotatedFile": {
-                    "type": "boolean",
-                    "description": "If true, a OneTimeDownloadUrl will be provided to the extension allowing for the retrieval of the nativeAnnotatedSourceFile or nativeAnnotatedTargetFile depending on the generation scope",
-                    "readOnly": true
-                  }
-                },
-                "readOnly": true
-              },
-              "outputType": {
-                "type": "string",
-                "description": "Must be of type previewUrl.",
                 "readOnly": true
               },
               "supportedFileTypes": {
@@ -2960,48 +2360,6 @@
           "callbackUrl"
         ]
       },
-      "PreviewProvider.MainRequestV2": {
-        "title": "PreviewProvider.MainRequestV2",
-        "type": "object",
-        "description": "Request for StartPreview or RefreshPreview",
-        "properties": {
-          "previewSessionId": {
-            "type": "string",
-            "description": "Unique identifier for the given Preview Session."
-          },
-          "projectId": {
-            "type": "string",
-            "description": "Trados Enterprise Project ID"
-          },
-          "scope": {
-            "type": "string",
-            "enum": [
-              "source",
-              "target"
-            ],
-            "description": "It indicates whether the source or the target is being generated."
-          },
-          "fileInformation": {
-            "$ref": "#/components/schemas/PreviewProvider.FileInformation"
-          },
-          "inputFiles": {
-            "$ref": "#/components/schemas/PreviewProvider.InputFilesV2"
-          },
-          "previewResultFileUrl": {
-            "type": "string",
-            "description": "Defines the one time upload URL to upload either a generated previewPackage or a previewHtmlFile."
-          },
-          "callbackUrl": {
-            "type": "string",
-            "description": "This is the URL detailing endpoint to call when the asynchronous job has completed."
-          }
-        },
-        "required": [
-          "previewSessionId",
-          "inputFiles",
-          "callbackUrl"
-        ]
-      },
       "PreviewProvider.FileInformation": {
         "title": "PreviewProvider.FileInformation",
         "x-stoplight": {
@@ -3041,27 +2399,6 @@
           }
         }
       },
-      "PreviewProvider.InputFilesV2": {
-        "title": "PreviewProvider.InputFilesV2",
-        "type": "object",
-        "properties": {
-          "bilingualDocument": {
-            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
-          },
-          "previewPackageTemplate": {
-            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
-          },
-          "nativeSourceFile": {
-            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
-          },
-          "nativeTargetFile": {
-            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
-          },
-          "nativeAnnotatedTargetFile": {
-            "$ref": "#/components/schemas/PreviewProvider.FileDetails"
-          }
-        }
-      },
       "PreviewProvider.MainResponse": {
         "title": "PreviewProvider.MainResponse",
         "x-stoplight": {
@@ -3093,14 +2430,14 @@
           "id": "8j8v4sxg1flul"
         },
         "type": "object",
-        "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html",
+        "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html",
         "properties": {
           "segmentId": {
             "type": "string"
           },
           "fragment": {
             "type": "object",
-            "description": "This object represents a BCM fragment. The documentation for the BCM fragment can be found here: https://developers.rws.com/languagecloud-api-docs/api/BCM/Sdl.Core.Bcm.BcmModel.Fragment.html"
+            "description": "This object represents a BCM fragment. The documentation for the BCM fragment can be found here: https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html"
           }
         }
       },
@@ -3293,153 +2630,6 @@
                   "NativeAnnotatedTarget"
                 ],
                 "description": "An enum specifying the type of input for the validation",
-                "readOnly": true
-              }
-            }
-          }
-        },
-        "required": [
-          "id",
-          "extensionPointId",
-          "name",
-          "description",
-          "extensionPointVersion",
-          "configuration"
-        ]
-      },
-      "VerificationProviderExtensionV2": {
-        "title": "VerificationProviderExtensionV2",
-        "type": "object",
-        "description": "Extension that provides for verification message generation",
-        "examples": [
-          {
-            "extensionPointId": "lc.verificationprovider",
-            "id": "string",
-            "name": "string",
-            "description": "string",
-            "extensionPointVersion": "2.0",
-            "configuration": {
-              "endpoints": {
-                "lc.verification.startverification.v2": "string",
-                "lc.verification.verifysegment.v2": "string",
-                "lc.verification.getmessagesbyculture.v2": "string",
-                "lc.verification.getsettingsschema.v2": "string"
-              },
-              "validationInputFiles": "string"
-            }
-          }
-        ],
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "Unique extension ID provided by the app developer"
-          },
-          "extensionPointId": {
-            "type": "string",
-            "description": "The extension point id corresponding to this extensionType: lc.verificationprovider",
-            "enum": [
-              "lc.verificationprovider"
-            ]
-          },
-          "name": {
-            "type": "string",
-            "description": "Provide a user friendly and unique name. It might be shown to the end user, and it may be useful to help the user distinguish between multiple extensions."
-          },
-          "description": {
-            "type": "string",
-            "description": "The VerificationProvider extension description"
-          },
-          "extensionPointVersion": {
-            "type": "string",
-            "description": "The version of the extension point that is implemented in the Extension",
-            "enum": [
-              "2.0"
-            ]
-          },
-          "configuration": {
-            "type": "object",
-            "required": [
-              "endpoints",
-              "validationInputType",
-              "validationInputFiles",
-              "validatorType",
-              "supportedFileTypes"
-            ],
-            "properties": {
-              "endpoints": {
-                "type": "object",
-                "description": "The required endpoints for the VerificationProvider extension",
-                "required": [
-                  "lc.verification.startverification"
-                ],
-                "properties": {
-                  "lc.verification.startverification.v2": {
-                    "type": "string",
-                    "description": "The endpoint used to start the verification process. Must start with a slash \"/\"",
-                    "x-stoplight": {
-                      "id": "r1njwi093d1qd"
-                    },
-                    "readOnly": true
-                  },
-                  "lc.verification.verifysegment.v2": {
-                    "type": "string",
-                    "description": "verifies an individual segment",
-                    "x-stoplight": {
-                      "id": "h4e4zzme66f3y"
-                    }
-                  },
-                  "lc.verification.getmessagesbyculture.v2": {
-                    "type": "string",
-                    "description": "gets the localized resources for message types",
-                    "x-stoplight": {
-                      "id": "a2ymt9fc9pqw7"
-                    }
-                  },
-                  "lc.verification.getsettingsschema.v2": {
-                    "type": "string",
-                    "x-stoplight": {
-                      "id": "yky262mpfn26a"
-                    },
-                    "description": "Gets the JSON schema which defines the settings this extension uses"
-                  }
-                },
-                "readOnly": true
-              },
-              "validationInputFiles": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "enum": [
-                    "BilingualDocument",
-                    "NativeSource",
-                    "NativeTarget",
-                    "NativeAnnotatedTarget"
-                  ]
-                },
-                "description": "An array specifying the type of input files used for the validation - NativeSource and NativeTarget are mutually exclusive",
-                "readOnly": true
-              },
-              "validatorType": {
-                "type": "string",
-                "items": {
-                  "type": "string",
-                  "enum": [
-                    "BilingualDocumentValidator",
-                    "NativeSourceValidator",
-                    "NativeTargetValidator",
-                    "NativeAnnotatedTargetValidator"
-                  ]
-                },
-                "description": "A field specifying the validator type. Can be BilingualDocumentValidator, NativeSourceValidator, NativeTargetValidator or NativeAnnotatedTargetValidator",
-                "readOnly": true
-              },
-              "supportedFileTypes": {
-                "type": "array",
-                "description": "An array listing one or more FileTypeDefinitionIds definining FileTypes to which this verification extension may be assigned.",
-                "items": {
-                  "type": "string",
-                  "readOnly": true
-                },
                 "readOnly": true
               }
             }

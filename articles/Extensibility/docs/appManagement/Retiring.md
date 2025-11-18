@@ -27,6 +27,7 @@ focus: false
 
 After the app becomes private, the only active instances left should be the developer's one and the shared ones (if the app had been previously shared). You can either uninstall them manually or unregister the app directly. The second option will automatically uninstall the instances left, before removing the app.
 
+> [!NOTE]
 > An app can only be deleted when there are no other installed instances.
 
 To unregister the app, you need to:

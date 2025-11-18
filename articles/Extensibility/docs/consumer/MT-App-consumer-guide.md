@@ -26,6 +26,7 @@ To benefit from the app's functionality first you have to install it on your acc
 
 Some apps also support validation of the configured settings. The first validation is automatically performed at installation time. If the provided settings are invalid, you will be prompted with an error message letting you know that the settings are incorrect.
 
+> [!NOTE]
 > The configuration settings can be modified at any time by clicking the **Edit App Configuration** button.
 
 ## Using the Machine Translation App
@@ -62,10 +63,12 @@ To create a **Project** with the new resources you can either have them in a **P
 
 ![MTProject](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/consumer/ConsumerCreateMTAppProject.gif?raw=true)
 
+> [!NOTE]
 > The project language pair also has to match the ones from the engine and the workflow.
 
 Once the project reaches the **Translation** step, you can open it in **Online Editor** and check the translated segments from the MT app. You also have the possibility to search for Lookups in order to receive alternative translations.
 
 ![OEtranslations](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/MTAppOELookup.gif?raw=true)
 
+> [!NOTE]
 > The translations illustrated above are just some demonstrative mock-ups.

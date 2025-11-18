@@ -8,7 +8,7 @@ Communication to Trados Cloud Platform API is also authenticated and the process
 
 ## Credentials
 
-When an app is registered, credentials (`clientId` and `clientSecret`) are sent to the app with the `REGISTERED` lifecycle event on the [App Lifecycle endpoint](../../App-API.v1.json/paths/~1app-lifecycle/post).
+When an app is registered, credentials (`clientId` and `clientSecret`) are sent to the app with the `REGISTERED` lifecycle event on the [App Lifecycle endpoint](../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle).
 
 An example payload:
 
@@ -27,7 +27,7 @@ An example payload:
 
 Here `clientId` and `clientSecret` represent the credentials for the Trados Cloud Platform API and can be used for getting a token for communicating with the Trados Cloud Platform API, as described by the [Trados Cloud Platform API documentation](https://languagecloud.sdl.com/lc/api-docs/ZG9jOjExMDcyMQ-authentication).
 
-When an app is installed on an account, a service user will be created in Trados and an event will be sent on the [App Lifecycle endpoint](../../App-API.v1.json/paths/~1app-lifecycle/post) with event `id` being `INSTALLED`.
+When an app is installed on an account, a service user will be created in Trados and an event will be sent on the [App Lifecycle endpoint](../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle) with event `id` being `INSTALLED`.
 
 Account ID should always be used from the request authentication header token. This is built in in the provided blueprints.
 

@@ -35,6 +35,7 @@ To benefit from the app's functionality, you first have to install it on your ac
 
 Some apps also support validation of the configured settings. The first validation is automatically performed at installation time. If the provided settings are invalid, you will be prompted with an error message letting you know that the settings are incorrect.
 
+> [!NOTE]
 > The configuration settings can be modified at any time by clicking the **Edit App Configuration** button.
 
 ## Using the Automatic Task App
@@ -59,6 +60,7 @@ To use the app's automatic task(s) within your projects, first, you will need a 
 5. Click **Save configurations** and complete your template.
 6. When finished, click **Save & Activate**.
 
+> [!NOTE]
 > The above illustrations are based on a template draft. You may need to create the new template from scratch.
 
 ### Creating a New Workflow
@@ -82,4 +84,5 @@ After creating the project, you can track the progress in the **Task History** t
 
 ![AutomaticTaskProjectHistory](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/consumer/ConsumerATTaskHistory-app.png?raw=true)
 
+> [!NOTE]
 > The app task illustrated above is just a mockup task that does not have a real purpose.

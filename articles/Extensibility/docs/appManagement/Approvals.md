@@ -15,6 +15,7 @@ focus: false
 -->
 ![Comment](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/Comment.gif?raw=true)
 
+> [!NOTE]
 > This is not a live chat, and you should refresh to check for replies. However, you don't need to keep an eye on it always, as we have email notifications in place for both roles: the developer and the support team member.
 
 The comments panel is also used to track the **approval requests**. These requests can only be triggered by the app's developer in one of the following scenarios:
@@ -37,6 +38,7 @@ The **Approval Process** ends with one of the following:
 1. The request is **approved** or **rejected** by the RWS Support team.
 2. The request is **canceled** by the developer.
 
+> [!NOTE]
 > During the Approval Process you can still use your app as usual.
 
 ## App Suspended

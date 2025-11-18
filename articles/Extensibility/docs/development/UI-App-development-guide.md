@@ -7,8 +7,7 @@ tags: [Development]
 
 UI extensions offer the possibility to add custom user interface elements and functionality. Custom [buttons and panels can be added to specific places](UI-App-custom-elements-locations.md) within the user interface.
 
-<!-- theme: danger -->
-
+> [!CAUTION]
 > #### This feature is currently in BETA.
 > Please note that in a future phase, we will introduce significant changes as we move towards the official release:
 > * The current implementation utilizes the authorization token of the logged-in Trados user for the Trados Cloud Platform API and the app's own API calls. In a future update, a different authorization token will be introduced for these operation.
@@ -16,7 +15,7 @@ UI extensions offer the possibility to add custom user interface elements and fu
 > * A UI extension's JavaScript file will be loaded in an isolated context, independent from Trados.
 > * The communication model between App UI and Backend will change in the final version and will have to be redesigned.
 
-A UI extension is defined in the app [descriptor](../../App-API.v1.json/paths/\~1descriptor/get) in the `extensions` array.
+A UI extension is defined in the app [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) in the `extensions` array.
 
 ```json
 {
@@ -40,7 +39,7 @@ A UI extension is defined in the app [descriptor](../../App-API.v1.json/paths/\~
 
 The `extensionPointId` is always **"lc.ui"**.
 
-The `configuration`'s `scriptPath` is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the `basePath` in the [descriptor](../../App-API.v1.json/paths/\~1descriptor/get). This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.
+The `configuration`'s `scriptPath` is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the `basePath` in the [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor). This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.
 
 ## Prerequisites
 
@@ -50,7 +49,7 @@ If you don't already have Node.js installed, you can download the most recent LT
 
 ### Dependencies
 
-- [@trados/trados-ui-extensibility](https://www.npmjs.com/package/@trados/trados-ui-extensibility) v0.1.4
+- [@trados/trados-ui-extensibility](https://www.npmjs.com/package/@trados/trados-ui-extensibility) v0.1.5
   - [GitHub repository](https://github.com/RWS/trados-ui-extensibility)
   - [GitHub wiki](https://github.com/RWS/trados-ui-extensibility/wiki)
 
@@ -62,6 +61,7 @@ If you don't already have Node.js installed, you can download the most recent LT
 
 ## Getting started
 
+> [!NOTE]
 > Make sure you are familiar with Trados app development and testing presented in the [Getting Started with Blueprints](blueprints/Getting-Started.md) and [Testing](blueprints/Testing.md) articles.
 
 1. Download the [.NET sample app which contains a UI extension](https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp).
@@ -85,11 +85,12 @@ If you don't already have Node.js installed, you can download the most recent LT
     npm run build-dev
     ```
       
-    - The `build` (or `build-dev`) command will create a `my-ui-extension-script.js` file in `Rws.LC.UISampleApp/Resources/frontend/dist/`. This is the path you need to use in the [descriptor](../../App-API.v1.json/paths/\~1descriptor/get) for your extension's configuration `scriptPath`, for example `Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js`.
+    - The `build` (or `build-dev`) command will create a `my-ui-extension-script.js` file in `Rws.LC.UISampleApp/Resources/frontend/dist/`. This is the path you need to use in the [descriptor](../../api/Extensibility-API.v1-fv.html#/operations/descriptor) for your extension's configuration `scriptPath`, for example `Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js`.
 
     - You can change the `my-ui-extension-script.js` file name by editing
       - the `module.exports`' `output.filename` property in `Rws.LC.UISampleApp/Resources/frontend/webpack.config.js` and
       - the extension's configuration `scriptPath` field.
+      > [!NOTE]
       > If your app is already registered, after changing the extension's configuration `scriptPath` field you need to [update](../appManagement/Updating.md) your app to a new version.
 
     - Once you have built your new JavaScript file, refresh the Trados browser tab to see your changes.
@@ -235,7 +236,6 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 ### Notes
 
 > [!NOTE]
-
 > #### Custom elements display order
 > Within a single UI extension: custom elements in your extension that have the same `location` are displayed in the same order in which they are present in your `ExtensionElement`s array.
 > 
@@ -243,6 +243,5 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 
 
 > [!NOTE]
-
 > #### Unexpected re-renders
 > A custom element's `onrender` event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding `eventHandler` gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of `onrender` `eventHandler`.
