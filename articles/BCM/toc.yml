@@ -2,7 +2,7 @@
   href: BCM.NET_client_API.md
 - name: API Documentation
   items:
-  - name: Code Samples
-    href: Samples.md
-  - name: API Reference
-    href: ../../api/bcm/toc.yml
+    - name: Code Samples
+      href: Samples.md
+    - name: API Reference
+      href: ../../api/bcm/toc.yml
