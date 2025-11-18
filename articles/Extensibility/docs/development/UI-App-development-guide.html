@@ -82,8 +82,8 @@
 <h1 id="user-interface-app-development-guide">User Interface App Development Guide</h1>
 
 <p>UI extensions offer the possibility to add custom user interface elements and functionality. Custom <a href="UI-App-custom-elements-locations.html">buttons and panels can be added to specific places</a> within the user interface.</p>
-<!-- theme: danger -->
-<blockquote>
+<div class="CAUTION">
+<h5>Caution</h5>
 <h4 id="this-feature-is-currently-in-beta">This feature is currently in BETA.</h4>
 <p>Please note that in a future phase, we will introduce significant changes as we move towards the official release:</p>
 <ul>
@@ -92,8 +92,8 @@
 <li>A UI extension's JavaScript file will be loaded in an isolated context, independent from Trados.</li>
 <li>The communication model between App UI and Backend will change in the final version and will have to be redesigned.</li>
 </ul>
-</blockquote>
-<p>A UI extension is defined in the app <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> in the <code>extensions</code> array.</p>
+</div>
+<p>A UI extension is defined in the app <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a> in the <code>extensions</code> array.</p>
 <pre><code class="lang-json">{
   ...
   &quot;extensions&quot;: [
@@ -113,13 +113,13 @@
 }
 </code></pre>
 <p>The <code>extensionPointId</code> is always <strong>&quot;lc.ui&quot;</strong>.</p>
-<p>The <code>configuration</code>'s <code>scriptPath</code> is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the <code>basePath</code> in the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>. This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.</p>
+<p>The <code>configuration</code>'s <code>scriptPath</code> is the path of the JavaScript file which will be loaded in the Trados user interface. The path is relative to the <code>basePath</code> in the <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a>. This JavaScript file contains the code describing the custom elements that will be added to the user interface and their functionality.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p><strong>Node.js</strong></p>
 <p>If you don't already have Node.js installed, you can download the most recent LTS (Long-Term Support) version of Node.js from <a href="https://nodejs.org/en/download">nodejs.org</a>.</p>
 <h3 id="dependencies">Dependencies</h3>
 <ul>
-<li><a href="https://www.npmjs.com/package/@trados/trados-ui-extensibility">@trados/trados-ui-extensibility</a> v0.1.4
+<li><a href="https://www.npmjs.com/package/@trados/trados-ui-extensibility">@trados/trados-ui-extensibility</a> v0.1.5
 <ul>
 <li><a href="https://github.com/RWS/trados-ui-extensibility">GitHub repository</a></li>
 <li><a href="https://github.com/RWS/trados-ui-extensibility/wiki">GitHub wiki</a></li>
@@ -133,9 +133,10 @@
 <li><a href="https://www.npmjs.com/package/webpack-cli">webpack-cli</a></li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>Make sure you are familiar with Trados app development and testing presented in the <a href="blueprints/Getting-Started.html">Getting Started with Blueprints</a> and <a href="blueprints/Testing.html">Testing</a> articles.</p>
-</blockquote>
+</div>
 <ol>
 <li><p>Download the <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/samples/dotnet/UISampleApp">.NET sample app which contains a UI extension</a>.</p>
 <ul>
@@ -161,16 +162,17 @@
 <pre><code>npm run build-dev
 </code></pre>
 <ul>
-<li><p>The <code>build</code> (or <code>build-dev</code>) command will create a <code>my-ui-extension-script.js</code> file in <code>Rws.LC.UISampleApp/Resources/frontend/dist/</code>. This is the path you need to use in the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> for your extension's configuration <code>scriptPath</code>, for example <code>Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js</code>.</p>
+<li><p>The <code>build</code> (or <code>build-dev</code>) command will create a <code>my-ui-extension-script.js</code> file in <code>Rws.LC.UISampleApp/Resources/frontend/dist/</code>. This is the path you need to use in the <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a> for your extension's configuration <code>scriptPath</code>, for example <code>Rws.LC.UISampleApp/Resources/frontend/dist/my-ui-extension-script.js</code>.</p>
 </li>
 <li><p>You can change the <code>my-ui-extension-script.js</code> file name by editing</p>
 <ul>
 <li>the <code>module.exports</code>' <code>output.filename</code> property in <code>Rws.LC.UISampleApp/Resources/frontend/webpack.config.js</code> and</li>
 <li>the extension's configuration <code>scriptPath</code> field.</li>
 </ul>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>If your app is already registered, after changing the extension's configuration <code>scriptPath</code> field you need to <a href="../appManagement/Updating.html">update</a> your app to a new version.</p>
-</blockquote>
+</div>
 </li>
 <li><p>Once you have built your new JavaScript file, refresh the Trados browser tab to see your changes.</p>
 </li>
@@ -275,19 +277,15 @@ Scroll down to the button's <code>actions</code> property and notice the <code>o
 <h3 id="notes">Notes</h3>
 <div class="NOTE">
 <h5>Note</h5>
-</div>
-<blockquote>
 <h4 id="custom-elements-display-order">Custom elements display order</h4>
 <p>Within a single UI extension: custom elements in your extension that have the same <code>location</code> are displayed in the same order in which they are present in your <code>ExtensionElement</code>s array.</p>
 <p>With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.</p>
-</blockquote>
+</div>
 <div class="NOTE">
 <h5>Note</h5>
-</div>
-<blockquote>
 <h4 id="unexpected-re-renders">Unexpected re-renders</h4>
 <p>A custom element's <code>onrender</code> event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding <code>eventHandler</code> gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of <code>onrender</code> <code>eventHandler</code>.</p>
-</blockquote>
+</div>
 
 </article>
           </div>

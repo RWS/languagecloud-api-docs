@@ -2050,6 +2050,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Tehnical-Requirements-And-Best-Practices.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Tehnical-Requirements-And-Best-Practices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/Extensibility/docs/development/Trados-Cloud-API.md",
       "output": {
         ".html": {

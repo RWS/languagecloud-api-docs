@@ -82,15 +82,20 @@
 <h1 id="multi-region">Multi-Region</h1>
 
 <p>To fulfill the requirements of our customers, Trados Enterprise allows multi-region deployments of your app.</p>
-<p>To enable multi-region on your app you must provide regional instances of your app and include their <code>regionalBaseUrls</code> in your <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>.</p>
-<blockquote>
+<p>To enable multi-region on your app you must provide regional instances of your app and include their <code>regionalBaseUrls</code> in your <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
 <p>Multi-Region is only supported on apps starting with <code>decriptorVersion: 1.4</code></p>
-</blockquote>
+</div>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Please note that the responsibility for ensuring region-specific URLs lies with the developer. The URLs should accurately reflect the physical location of the instances.</p>
 </div>
 <p>Currently, the supported regions are Europe(<code>eu</code>) and Canada(<code>ca</code>). Depending on where your app is deployed you can choose either one or both of them. This will tell Trados what endpoints to invoke based on where the consumer tenant is living.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>All instances, in all regions should provide the exact same descriptor.</p>
+</div>
 <h2 id="installing-an-app-with-multi-region-support">Installing an App with Multi-Region support</h2>
 <p>When a consumer installs an app, if <code>regionalBaseUrls</code> is present and same region as consumer's is available, that region will be used.</p>
 <p>If your app does not provide the region where the consumer tenant belongs, the consumer will be notified before installing the app that the global region (<code>baseUrl</code>) will be used instead.</p>
@@ -101,7 +106,11 @@
 </div>
 <p>The <code>INSTALLED</code> lifecycle event now includes the region information for the account where the app is installed so you can save it in the database and use it to identify to which regions calls should be made (for ex. which region/url to use for Public API). That is already implemented in the provided <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/javaAppBlueprint">Java</a> and <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints/dotNetAppBlueprint">.NET</a> blueprints.</p>
 <h2 id="base-url-vs-multi-region-base-urls">Base URL vs Multi-Region Base URLs</h2>
-<p>The <code>baseUrl</code> property from <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> remains mandatory even if you add the <code>regionalBaseUrls</code> property(which is optional).</p>
+<p>The <code>baseUrl</code> property from <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a> remains mandatory even if you add the <code>regionalBaseUrls</code> property(which is optional).</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>The <code>baseUrl</code> in your app should stay fixed and not change based on region. When an App is registered, <code>baseUrl</code> from that initial descriptor is used for setting audience for all future authentication requests, independent of regions (it is possible to change it later, see <a href="App-Descriptor.html#changing-base-url">Changing Base URL</a>.</p>
+</div>
 <p>Your &quot;multi-region descriptor&quot; should look something like this:</p>
 <pre><code class="lang-json">{
   // baseUrl - also treated as global path  
@@ -113,16 +122,18 @@
   //..
 }
 </code></pre>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>It is also acceptable to have the same URL in <code>baseUrl</code> as for one of regions in your <code>regionalBaseUrls</code> property.</p>
-</blockquote>
+</div>
 <p>The <code>baseUrl</code> is treated as a global region URL and is still used in the following scenarios even if <code>regionalBaseUrls</code> is also defined:</p>
 <ol>
 <li>Health checks - the <code>/health</code> endpoint that is periodically invoked to check the health status of your app</li>
 <li>Version checks - the <code>/descriptor</code> endpoint that is periodically invoked to check for new versions(by the <code>version</code> property).
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>It is the developer's responsibility to keep the version of the regional instances in sync.</p>
-</blockquote>
+</div>
 </li>
 <li><code>UPDATED</code> lifecycle event - explained below in the <a href="#special-case">Special Case</a> section.</li>
 </ol>

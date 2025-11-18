@@ -81,6 +81,22 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="whats-new">What's New</h1>
 
+<h2 id="july-2025">July 2025</h2>
+<ul>
+<li>We've expanded support for custom tabs to additional <a href="development/UI-App-custom-elements-locations.html">locations</a>. You can now use them in the following views:
+<ul>
+<li>tasks list</li>
+<li>orders list</li>
+<li>projects list</li>
+<li>reports list</li>
+</ul>
+</li>
+</ul>
+<h2 id="april-2025">April 2025</h2>
+<ul>
+<li>To facilitate the management of large translation requests, batching support has been added for MT provider apps. This update includes the introduction of a new parameter, <code>extensions.configuration.segmentBatchSize</code>, which can be added to your <a href="../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a>, along with a new error response featuring status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/413">413</a> on the translation <a href="../api/Extensibility-API.v1-fv.html#/operations/MachineTranslationProviderTranslateBCM">endpoint</a>.</li>
+<li>A new option has been introduced on the app registration <a href="appManagement/Registering.html">page</a>, allowing users to designate their app for development purposes by selecting a checkbox.</li>
+</ul>
 <h2 id="december-2024">December 2024</h2>
 <ul>
 <li>We have officially rebranded from RWS Language Cloud API to Trados Cloud Platform API. All references to our previous brand name will now reflect our new identity, Trados.</li>
@@ -96,7 +112,7 @@
 <li>With this release we deliver a new extension point designed to allow developers to extend and customize the UI elements of our platform. This extension point is being released as BETA. For more details see this <a href="development/UI-App-development-guide.html">page</a>.</li>
 <li>We unified the Preview documentation pages into a single comprehensive <a href="development/Preview-App-development-guide.html">page</a>. We have introduced a new version, known as V2, of our Preview APIs.</li>
 <li>We extended the information available under Verification Provider <a href="development/Verification-App-development-guide.html">page</a>. We have introduced a new version, known as V2, of our Verification  APIs.</li>
-<li>You can now add comments to <a href="../App-API.v1.json/paths/%7E1external-job%7E1v1%7E1callback/post">Submit Task Outcome</a> for the automatic task extensions.</li>
+<li>You can now add comments to <a href="../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback">Submit Task Outcome</a> for the automatic task extensions.</li>
 </ul>
 <h2 id="june-2024">June 2024</h2>
 <ul>
@@ -111,13 +127,13 @@
 </ul>
 <h2 id="august-2023">August 2023</h2>
 <ul>
-<li>With this release we introduced a folder identifier where the translation engines will be added. This can be used to filter the <a href="../App-API.v1.json/paths/%7E1lc.mtprovider.engines/get">engines</a> by folder.</li>
-<li>We also added recommendations on <a href="../docs/development/Tehnical-Requirements-And-Best-Practices.md">best practices</a> for a secure application development.</li>
+<li>With this release we introduced a folder identifier where the translation engines will be added. This can be used to filter the <a href="../api/Extensibility-API.v1-fv.html#/operations/GetMachineTranslationProviderEngines">engines</a> by folder.</li>
+<li>We also added recommendations on <a href="development/Tehnical-Requirements-And-Best-Practices.html">best practices</a> for a secure application development.</li>
 <li>We made additional smaller improvements and corrections to our documentation.</li>
 </ul>
 <h2 id="april-2023">April 2023</h2>
 <ul>
-<li>We added details for the <code>engineId</code>, <code>projectId</code>, <code>sourceFileId</code> and <code>targetFileId</code> parameters of the <a href="../App-API.v1.json/paths/%7E1lc.mtprovider.translate/post">Translate</a> endpoint.</li>
+<li>We added details for the <code>engineId</code>, <code>projectId</code>, <code>sourceFileId</code> and <code>targetFileId</code> parameters of the <a href="../api/Extensibility-API.v1-fv.html#/operations/MachineTranslationProviderTranslateBCM">Translate</a> endpoint.</li>
 <li>We updated the <a href="appManagement/Registering.html">Registering the app</a> page.</li>
 </ul>
 <h2 id="february-2023">February 2023</h2>
@@ -125,7 +141,7 @@
 <li>We introduced requirements that become mandatory for all future apps, namely: acceptance of Terms &amp; Conditions and the Privacy Policy, along with the provisioning of the app's release notes, documentation link and the developer's contact details, starting with descriptor version <code>1.3</code>.</li>
 <li>We published newer blueprints for both Java and .NET.</li>
 <li>We made available headers for developers to implement custom functionality based on the current version of the installed apps: <code>appVersion</code>, <code>extensionPointVersion</code> and <code>extensionId</code>.</li>
-<li>Added <code>projectId</code>, <code>sourceFileId</code> and <code>targetFileId</code> on the <a href="../App-API.v1.json/paths/%7E1lc.mtprovider.translate/post">translate</a> request.</li>
+<li>Added <code>projectId</code>, <code>sourceFileId</code> and <code>targetFileId</code> on the <a href="../api/Extensibility-API.v1-fv.html#/operations/MachineTranslationProviderTranslateBCM">translate</a> request.</li>
 </ul>
 <h2 id="january-2023">January 2023</h2>
 <ul>
@@ -134,7 +150,7 @@
 <h2 id="december-2022">December 2022</h2>
 <ul>
 <li>We made available app samples for both .NET and Java in GitHub, to allow integrators to get familiar with our framework extension possibilities.</li>
-<li>We published a new page with <a href="./development/Tehnical-Requirements-And-Best-Practices.md">Technical Requirements And Best Practices</a>.</li>
+<li>We published a new page with <a href="development/Tehnical-Requirements-And-Best-Practices.html">Technical Requirements And Best Practices</a>.</li>
 </ul>
 
 </article>

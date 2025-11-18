@@ -85,9 +85,10 @@
 <h2 id="endpoints">Endpoints</h2>
 <p>All but a few of the endpoints are required to check for valid Authentication. The API documentation specifies for each endpoint if authentication is required.</p>
 <p>Trados might send the Authorization header even on the endpoints that do not need authentication, but the app is not required to validate them. If the header is sent, the app should either ignore it or validate it. But if the token is not valid, then this should result in a 401/403 result.</p>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>Note: the provided blueprints (both Java and .NET Core) have authentication implemented and working out of the box. You can skip the rest of this document unless you're interested in the technical details.</p>
-</blockquote>
+</div>
 <h2 id="authorization-header">Authorization header</h2>
 <p>The HTTPS requests are all authenticated using the <code>x-lc-signature</code> header using a JWS token. For example:</p>
 <pre><code>x-lc-signature: &lt;JWS Token&gt;

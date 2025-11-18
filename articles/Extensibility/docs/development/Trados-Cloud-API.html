@@ -83,7 +83,7 @@
 
 <p>Communication to Trados Cloud Platform API is also authenticated and the process is described in the <a href="https://languagecloud.sdl.com/lc/api-docs">Trados Cloud Platform API documentation</a>.</p>
 <h2 id="credentials">Credentials</h2>
-<p>When an app is registered, credentials (<code>clientId</code> and <code>clientSecret</code>) are sent to the app with the <code>REGISTERED</code> lifecycle event on the <a href="../../App-API.v1.json/paths/%7E1app-lifecycle/post">App Lifecycle endpoint</a>.</p>
+<p>When an app is registered, credentials (<code>clientId</code> and <code>clientSecret</code>) are sent to the app with the <code>REGISTERED</code> lifecycle event on the <a href="../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle">App Lifecycle endpoint</a>.</p>
 <p>An example payload:</p>
 <pre><code class="lang-json">{
   &quot;id&quot;: &quot;REGISTERED&quot;,
@@ -97,7 +97,7 @@
 }
 </code></pre>
 <p>Here <code>clientId</code> and <code>clientSecret</code> represent the credentials for the Trados Cloud Platform API and can be used for getting a token for communicating with the Trados Cloud Platform API, as described by the <a href="https://languagecloud.sdl.com/lc/api-docs/ZG9jOjExMDcyMQ-authentication">Trados Cloud Platform API documentation</a>.</p>
-<p>When an app is installed on an account, a service user will be created in Trados and an event will be sent on the <a href="../../App-API.v1.json/paths/%7E1app-lifecycle/post">App Lifecycle endpoint</a> with event <code>id</code> being <code>INSTALLED</code>.</p>
+<p>When an app is installed on an account, a service user will be created in Trados and an event will be sent on the <a href="../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle">App Lifecycle endpoint</a> with event <code>id</code> being <code>INSTALLED</code>.</p>
 <p>Account ID should always be used from the request authentication header token. This is built in in the provided blueprints.</p>
 <h2 id="scopes">Scopes</h2>
 <p>Access to the Trados Cloud Platform API is not allowed implicitly from the app. In order for the Trados Cloud Platform API credentials to have the permissions to read or edit data in Trados, the desired scopes must be listed in the app's <code>scopes</code> property in the descriptor.</p>

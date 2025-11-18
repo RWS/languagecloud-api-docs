@@ -91,7 +91,7 @@
 <p>Most of the Automatic Task extensions will need to perform certain requests to <a href="https://languagecloud.sdl.com/lc/api-docs/72b66de24898e-rws-language-cloud-api">Trados Cloud Platform API</a> in order to achieve the desired result. The Trados Cloud Platform API SDKs (for <a href="https://languagecloud.sdl.com/lc/api-docs/java-client">Java</a> and <a href="https://languagecloud.sdl.com/lc/api-docs/net-client">.NET</a>) are publicly available.</p>
 <p>In order to build a new Automatic Task extension we recommend to start by using the provided <a href="https://github.com/RWS/language-cloud-extensibility/tree/main/blueprints">app blueprints</a>.</p>
 <h2 id="automatic-task-extension">Automatic Task Extension</h2>
-<p>For an app to offer Automatic Task functionality, it must define at least one Automatic Task extension within its <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>.
+<p>For an app to offer Automatic Task functionality, it must define at least one Automatic Task extension within its <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a>.
 For example:</p>
 <pre><code class="lang-json">{
   ...
@@ -288,7 +288,7 @@ X-LC-Tenant: LC-TENANT_ID
 <li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/dotNetAppBlueprint/Rws.LC.AppBlueprint/Controllers/AutomaticTaskController.cs#L36">.NET blueprint</a></li>
 <li><a href="https://github.com/RWS/language-cloud-extensibility/blob/main/blueprints/javaAppBlueprint/src/main/java/com/rws/lt/lc/blueprint/web/AutomaticTaskController.java#L16">Java blueprint</a></li>
 </ul>
-<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1lc.automatictask.submit/post">documentation</a> for further details.</p>
+<p>Please refer to the endpoint's <a href="../../api/Extensibility-API.v1-fv.html#/operations/automatictasktypeexecutetask">documentation</a> for further details.</p>
 <h3 id="callback-endpoint">Callback Endpoint</h3>
 <p>This is a Trados endpoint used to receive the task outcome from the Automatic Task apps. Each automatic task will have its own callback URL.</p>
 <p>Example:</p>
@@ -307,7 +307,7 @@ X-LC-Tenant: LC-TENANT_ID
 <li><p>The <code>token</code> should be already present in the received <code>callbackUrl</code> on the submit endpoint.</p>
 </li>
 </ul>
-<p>Please refer to the endpoint's <a href="../../App-API.v1.json/paths/%7E1external-job%7E1v1%7E1callback/post">documentation</a> for further details.</p>
+<p>Please refer to the endpoint's <a href="../../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback">documentation</a> for further details.</p>
 
 </article>
           </div>

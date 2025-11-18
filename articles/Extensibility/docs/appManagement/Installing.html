@@ -85,7 +85,7 @@
 <p>To install the app you need to:</p>
 <ol>
 <li>Find your app in the <strong>My Apps</strong> tab and select the <strong>Install</strong> button.</li>
-<li>When prompted with a form containing placeholders for the account settings details, remember that these are the configuration settings exposed through the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a>. All mandatory fields will be marked with '*'.</li>
+<li>When prompted with a form containing placeholders for the account settings details, remember that these are the configuration settings exposed through the <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a>. All mandatory fields will be marked with '*'.</li>
 <li>Pay attention if the app advertises any <a href="../development/Authentication-Overview.html">scopes</a>, you will be notified by the installation form.</li>
 </ol>
 <!--
@@ -94,15 +94,16 @@ focus: false
 <p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/ScopesInstallv2.png?raw=true" alt="ScopesInstallForm"></p>
 <ol start="4">
 <li>Fill in the fields and select <strong>Complete</strong>.</li>
-<li>If the app supports validation of settings, it will be automatically performed at installation time via the <a href="../../App-API.v1.json/paths/%7E1configuration%7E1validation/post">validation endpoint</a>.</li>
+<li>If the app supports validation of settings, it will be automatically performed at installation time via the <a href="../../api/Extensibility-API.v1-fv.html#/operations/ValidateConfigurationSettings">validation endpoint</a>.</li>
 </ol>
 <!--
 focus: false
 -->
 <p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/InstallApp.gif?raw=true" alt="Install"></p>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>The configuration settings can be modified anytime by clicking the <strong>Edit App Configuration</strong> button.</p>
-</blockquote>
+</div>
 
 </article>
           </div>

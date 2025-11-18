@@ -84,7 +84,7 @@
 <p>A descriptor defines what the app does. The very first interaction between Trados and an app is requesting the descriptor.</p>
 <p>The app developer must accurately fill in all the details within the descriptor, specifying the app's functionalities, and then register the app by submitting a URL linking to the descriptor</p>
 <h2 id="basic-information">Basic Information</h2>
-<p>The descriptor model defines attributes that provide basic information like <code>name</code>, <code>description</code>, <code>releaseNotes</code>. The <a href="../../App-API.v1.json/paths/%7E1descriptor/get">model</a> provides documentation for all the fields.</p>
+<p>The descriptor model defines attributes that provide basic information like <code>name</code>, <code>description</code>, <code>releaseNotes</code>. The <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">model</a> provides documentation for all the fields.</p>
 <h2 id="version">Version</h2>
 <p>The <code>version</code> field is used by Trados to detect newer versions of the app's descriptor. You should increase the version every time you make a change in the descriptor, otherwise, your changes won't reach the registered instance from Trados.</p>
 <p>The version is periodically checked by Trados by performing GET descriptor requests.</p>
@@ -114,11 +114,12 @@
 <h3 id="lifecycle-endpoint">Lifecycle Endpoint</h3>
 <p>Additionally, in the <code>standardEnpoints</code> section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an <code>INSTALLED</code> event along with some data for that account. The app should react and save the received data.</p>
 <ul>
-<li><code>appLifecycle</code> - is used for all types of events: <code>REGISTERED</code>, <code>UNREGISTERED</code>, <code>INSTALLED</code>, and <code>UNINSTALLED</code>. See the contract <a href="../../App-API.v1.json/paths/%7E1app-lifecycle/post">here</a>.</li>
+<li><code>appLifecycle</code> - is used for all types of events: <code>REGISTERED</code>, <code>UNREGISTERED</code>, <code>INSTALLED</code>, and <code>UNINSTALLED</code>. See the contract <a href="../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle">here</a>.</li>
 </ul>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>If your app is built from our blueprints, you shouldn't have to change anything, as these endpoints work out of the box.</p>
-</blockquote>
+</div>
 <h2 id="extensions">Extensions</h2>
 <p>The list of provided extensions is described under <code>extensions</code>. An app can provide none, one, or more extensions.</p>
 <p>Any extension will have the generic set of properties:</p>
@@ -148,13 +149,14 @@
 <ol>
 <li>Automatic Task <a href="Automatic-Task-App-development-guide.html">guide</a>.</li>
 <li>Machine Translation <a href="MT-App-development-guide.html">guide</a>.</li>
-<li>Preview <a href="./Dynamic-Preview-guide.md">guide</a>.</li>
+<li>Preview <a href="Preview-App-development-guide.html">guide</a>.</li>
 </ol>
 <h2 id="configuration">Configuration</h2>
 <p>An app can request configuration details at installation time (and it can be edited later).</p>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>On an update, new configuration settings can be added, and the user will be requested to enter the newer configuration values.</p>
-</blockquote>
+</div>
 <p>Configurations are app scoped. If you need to assign configuration values for individual extensions within the app, use clear and explicit naming conventions so users understand what information to input into each field. Additionally, tooltips can be provided by setting the description attribute.</p>
 <p>Configuration settings can be <code>string</code>, <code>number</code>, <code>integer</code>, <code>boolean</code>, <code>datetime</code> or <code>secret</code>. Additionally, the <code>string</code> dataType supports an array of options that will be displayed in a picklist form(for ex: <code>&quot;options&quot;: [ &quot;option1&quot;, &quot;option2&quot; ]</code>).</p>
 <ul>
@@ -176,17 +178,19 @@
   ...
 }
 </code></pre>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>Note that in the example the <code>optional</code> and <code>defaultValue</code> properties have not been specified, so these will be set to their default values, as specified in the contract ( false for <code>optional</code> and undefined for <code>defaultValue</code>).</p>
-</blockquote>
+</div>
 <p>Moreover, you have the option to define a list of choices using the <code>options</code> field. When this field is filled, the values will be presented in a dropdown menu. It's important to note that the only acceptable <code>dataType</code> in this scenario is <code>string</code>.</p>
 <h2 id="scopes">Scopes</h2>
 <p>Scopes within the app define the extent of access requested to the tenant's data. Depending on the actions carried out by the app, it may require read-only privileges, read/write permissions, or even access to secure projects. The permissible values for scopes are listed under the <code>scopes</code> section.</p>
 <p>The scopes advised in the descriptor will be presented to the consumers during installation. They can then decide whether to proceed with the installation and grant access to the app.</p>
 <p>Once access is granted, the app will be able to perform authorized requests to the Trados Cloud Platform API.</p>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p>If the app doesn't make requests to Trados Cloud Platform API, no scopes should be specified.</p>
-</blockquote>
+</div>
 <h2 id="webhooks">Webhooks</h2>
 <p>Webhooks can be registered automatically when declared in the descriptor. See <a href="Webhooks.html">Webhooks</a> page for more details.</p>
 

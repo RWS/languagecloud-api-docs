@@ -84,6 +84,10 @@
 <p>Apps can specify a list of webhooks that will be registered automatically when the app is installed on an account. That allows the app to  specify a list of webhooks and consume them, allowing for asynchronous scenarios where the app can wait for events instead of polling constantly to check for a particular event or state improving performance both for the app and for Trados.</p>
 <h2 id="constraints">Constraints</h2>
 <p>Not all accounts have webhooks enabled. Installing of the app requiring webhooks will be disabled (grayed out in UI) on accounts that don't have webhooks enabled.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Webhooks require one of the following <a href="Trados-Cloud-API.html#scopes">scopes</a> to be delivered: <code>TENANT</code> or <code>TENANT_READ</code>.</p>
+</div>
 <h2 id="setup">Setup</h2>
 <p>The required list of webhooks must be specified in the descriptor in the <code>webhooks</code> property.</p>
 <p><code>webhooks</code> is an array of URLs and corresponding event types. You can specify a single URL for all webhook event types, or one URL for each event type, or any combination. This is done for maximum flexibility so you can decide if you want to ingest all webhooks through a single endpoint or have multiple endpoints maybe by event type or category, etc.</p>
@@ -94,7 +98,14 @@
   &quot;webhooks&quot;: [
     {
       &quot;url&quot;: &quot;/webhooks-endpoint&quot;,
-      &quot;events&quot;: [&quot;PROJECT.TASK.ACCEPTED&quot;, &quot;PROJECT.TASK.CREATED&quot;]
+      &quot;evenTypes&quot;: [ 
+        { 
+          &quot;eventType&quot;: &quot;PROJECT.TASK.ACCEPTED&quot; 
+        }, 
+        { 
+          &quot;eventType&quot;: &quot;PROJECT.TASK.CREATED&quot; 
+        } 
+      ]
     }
   ]
   ...
@@ -105,9 +116,10 @@
 <p>Webhooks for apps are sent in a batched format.</p>
 <p>The webhook payload description can be found in our <a href="https://eu.cloud.trados.com/lc/api-docs/batched-webhooks">Trados Cloud Platform API documentation</a>.</p>
 <p>Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsability of the app developer to handle the events from the batch accordingly to their <code>accountId</code> from the event body.</p>
-<blockquote>
+<div class="NOTE">
+<h5>Note</h5>
 <p><strong>Note:</strong> For <em>Webhook Authenticity</em>, ignore the described behavior in the above link and only consider the following chapter about <em>Signature Validation</em>.</p>
-</blockquote>
+</div>
 <h2 id="signature-validation">Signature Validation</h2>
 <p>Unlike webhooks created in the UI through the Applications, webhooks that are declared in the descriptor are received using app signature. The endpoint that receives the webhook should treat these as signed with JWS, just as any other endpoint in the app. See <a href="Request-Authentication.html">Request Authentication</a> page for more details.</p>
 

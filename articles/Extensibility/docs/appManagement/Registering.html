@@ -94,7 +94,8 @@ focus: false
 <li>Go to <strong>My Apps</strong> tab, select <strong>New App</strong> and provide the following details:
 <ul>
 <li>the <em>Development Name</em> and <em>Development Description</em>, which will only be visible to the developer tenant (do not confuse them with the name and the description of the app descriptor)</li>
-<li>the <em>App Descriptor URL</em> is the app's <a href="../../App-API.v1.json/paths/%7E1descriptor/get">descriptor</a> address. This must be a secure URL.</li>
+<li>the <em>App Descriptor URL</em> is the app's <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">descriptor</a> address. This must be a secure URL.</li>
+<li>the <em>Development App</em> checkbox represents whether your app is intended for development and testing purposes. Development apps cannot be published.</li>
 </ul>
 </li>
 <li>After filling in these fields, finish the registration by clicking the <strong>Register</strong> button.</li>
@@ -102,7 +103,7 @@ focus: false
 <!--
 focus: false
 -->
-<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/RegisterApp.gif?raw=true" alt="Register"></p>
+<p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/RegisterAppDevCheckbox.gif?raw=true" alt="Register"></p>
 <p>Common issues that may occur during registration include:</p>
 <table>
 <thead>
@@ -125,7 +126,7 @@ focus: false
 <td>This would normally occur if you already registered your app. If so, you can <a href="Retiring.html">unregister</a> the old version and perform the registration once again.</td>
 </tr>
 <tr>
-<td>Descriptor does not comply with the <a href="../../App-API.v1.json/paths/%7E1descriptor/get">contract</a></td>
+<td>Descriptor does not comply with the <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">contract</a></td>
 <td>Make sure the required fields are returned and the allowed values correspond to the ones from the contract.</td>
 </tr>
 </tbody>
