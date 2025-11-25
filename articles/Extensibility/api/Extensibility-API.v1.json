@@ -591,7 +591,7 @@
           "Automatic Task Type Provider"
         ],
         "summary": "Submit Task",
-        "description": "Submits an automatic task for execution. This call should return 'Accepted' and the task itself should be executed on a different thread. Note that there is a read timeout of 5 seconds for this call.",
+        "description": "Submits an automatic task for execution. This call should return 'Accepted' and the task itself should be executed on a different thread. Note that there is a read timeout of 5 seconds for this call. <b>Note: The processing time cannot exceed 4h from the moment the task is submitted, otherwise the task will be marked as unresponsive.</b>",
         "operationId": "automatictasktypeexecutetask",
         "parameters": [
           {
@@ -701,7 +701,7 @@
           "Callback"
         ],
         "summary": "Submit Task Outcome",
-        "description": "This is the endpoint where the automatic task apps should return the outcome when the task execution is finished.",
+        "description": "This is the endpoint where the automatic task apps should return the outcome when the task execution is finished. <b>Note: If the callback is not returned within 4h of the task submission, the task will be marked as unresponsive!</b>",
         "operationId": "automatiktasktypecallback",
         "parameters": [
           {
