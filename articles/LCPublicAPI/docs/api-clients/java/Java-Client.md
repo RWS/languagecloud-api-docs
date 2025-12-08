@@ -50,6 +50,21 @@ LanguageCloudClientProvider languageCloudClientProvider = LanguageCloudClientPro
 // instantiate the client
 ProjectApi projectApi = languageCloudClientProvider.getProjectClient();
 ```
+### Token management
+
+The `LanguageCloudClientProvider` handles token management automatically. Here are the key points:
+
+- **Automatic token handling**: You do not need to fetch or manage auth tokens directly. The `LanguageCloudClientProvider` obtains a valid token based on the provided service credentials automatically.
+- **Token caching**: Tokens are cached until expiration minus 1 minute, ensuring that tokens do not expire mid-call even if the API call takes longer. After that, the token is cleaned up from the cache, and a new one is generated automatically.
+- **Singleton cache pattern**: The token cache is implemented with a singleton pattern, so it does not make a difference if a single `LanguageCloudClientProvider` is instantiated or multiple ones—there is always a single cache per application.
+- **No need to recreate instances**: You do not need to destroy and recreate `LanguageCloudClientProvider` or any of the underlying API clients (e.g., `ProjectApi` via `languageCloudClientProvider.getProjectClient()`). One instance per application is sufficient.
+
+> [!NOTE]
+> The [16 requests per day limit](../../../docs/Authentication.md#token-management) mentioned in the Authentication documentation refers to Auth0 token requests, not API calls. Since the Java Client SDK caches tokens automatically, your application typically only makes one Auth0 token request per day (unless the application is restarted).
+
+> [!WARNING]
+> While the SDK handles token management, you still need to handle [API rate limits](../../../docs/API-rate-limits.md) and implement proper handling for HTTP 429 (Too Many Requests) responses. See the [Implementation recommendations](../../../docs/API-rate-limits.md#implementation-recommendations) for guidance.
+
 
 #### 1. Create a new project:
 

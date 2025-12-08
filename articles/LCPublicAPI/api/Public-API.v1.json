@@ -50,6 +50,10 @@
       "description": "Group"
     },
     {
+      "name": "Integration",
+      "description": "Integration"
+    },
+    {
       "name": "Language",
       "description": "Language"
     },
@@ -249,6 +253,397 @@
           }
         },
         "operationId": "ListMyAccounts"
+      }
+    },
+    "/applications": {
+      "post": {
+        "summary": "Create Application",
+        "tags": [
+          "Integration"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/application"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* \"invalid\": Invalid input in the query parameter mentioned in the “name” field on the error response.\r\n* \"maxSize\": The maximum size was exceeded for the value mentioned in the \"name\" field\r\n* \"empty\": Empty mandatory value mentioned in the \"name\" field on the error response.\r\n",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateApplication",
+        "x-stoplight": {
+          "id": "irpluy6gzpvwk"
+        },
+        "description": "Creates a new integration application.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/application-create-request"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
+      },
+      "get": {
+        "summary": "List Applications",
+        "tags": [
+          "Integration"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-applications-response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "ListApplications",
+        "x-stoplight": {
+          "id": "glrd92hxso1l1"
+        },
+        "description": "Retrieves a list of applications the authenticated user has access to.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          }
+        ]
+      }
+    },
+    "/applications/{applicationId}": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/applicationId"
+        }
+      ],
+      "put": {
+        "summary": "Update Application",
+        "tags": [
+          "Integration"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the resource could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "UpdateApplication",
+        "x-stoplight": {
+          "id": "f9xn1splrosgo"
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "description": "Updates an integration application.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/application-update-request"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Get Application",
+        "tags": [
+          "Integration"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/application"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the resource could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "GetApplication",
+        "x-stoplight": {
+          "id": "utd9uvkrvyixm"
+        },
+        "description": "Retrieves an integration application by identifier.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete Application",
+        "tags": [
+          "Integration"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": The resource could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "DeleteApplication",
+        "x-stoplight": {
+          "id": "xj7c9cejwon9b"
+        },
+        "description": "Deletes an integration application.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
       }
     },
     "/connected-ai/llm-configurations": {
@@ -1455,7 +1850,7 @@
     "/files": {
       "post": {
         "summary": "Upload Zip File",
-        "description": "Uploads an archive containing source files in `.zip` format, which will be extracted and used during project creation.\n\nStatus of the upload operation can be tracked using the [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoint.\n\nOnce this Upload Zip File operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](#/operations/AddSourceFiles) endpoint. Alternatively, they can be used to [Request File Analysis](#/operations/RequestFileAnalysis) details like word counts and estimated costs.\n\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Uploads an archive containing source files in `.zip` format, which will be extracted and used during project creation.\n\nStatus of the upload operation can be tracked using the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint.\n\nOnce this Upload Zip File operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint. Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\n\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "operationId": "UploadZipFile",
         "requestBody": {
           "content": {
@@ -1476,7 +1871,7 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
         "parameters": [
           {
@@ -1714,7 +2109,7 @@
             }
           }
         },
-        "description": "This endpoint allows you to request the word count and an estimated cost for your files. \r\n\r\nUse the [Upload Zip File](#/operations/UploadZipFile) / [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoints to upload your files and get the `fileIds`. Send these `fileIds` together with the `languageProcessingRuleId` and `sourceLanguage` to receive the word count.\r\n\r\nOptionally, send the `quotingOptions` object to receive the `estimatedCosts`.\r\n\r\nUse the [Poll File Analysis](#/operations/PollFileAnalysis) endpoint to monitor the operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "description": "This endpoint allows you to request the word count and an estimated cost for your files. \r\n\r\nUse the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) / [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoints to upload your files and get the `fileIds`. Send these `fileIds` together with the `languageProcessingRuleId` and `sourceLanguage` to receive the word count.\r\n\r\nOptionally, send the `quotingOptions` object to receive the `estimatedCosts`.\r\n\r\nUse the [Poll File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis~1{operationId}/get) endpoint to monitor the operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
         "tags": [
           "File"
         ]
@@ -1827,7 +2222,7 @@
             "$ref": "#/components/parameters/fields"
           }
         ],
-        "description": "Monitor the [File Analysis](#/operations/RequestFileAnalysis) operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
+        "description": "Monitor the [File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) operation and receive the analysis results.\r\n\r\n> File analysis results will be available for 24 hours after generation.",
         "tags": [
           "File"
         ]
@@ -1918,7 +2313,7 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
         ],
-        "description": "Monitors the unzipping operation for a previously uploaded archive and retrieves details about the extracted files.\r\n\r\nOnce the [Upload Zip File](#/operations/UploadZipFile) operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](#/operations/AddSourceFiles) endpoint.\r\n Alternatively, they can be used to [Request File Analysis](#/operations/RequestFileAnalysis) details like word counts and estimated costs.\r\n",
+        "description": "Monitors the unzipping operation for a previously uploaded archive and retrieves details about the extracted files.\r\n\r\nOnce the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) operation has finished extracting the files, they can be added to the desired project using the [Attach Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files~1attach-files/post) endpoint.\r\n Alternatively, they can be used to [Request File Analysis](../reference/Public-API.v1.json/paths/~1files~1analysis/post) details like word counts and estimated costs.\r\n",
         "tags": [
           "File"
         ]
@@ -2792,7 +3187,7 @@
         "x-stoplight": {
           "id": "thyh9npsnqozm"
         },
-        "description": "For more details on the PerfectMatch feature please consult the [official documentation](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).\r\n\r\nAfter creating a mapping, target files from the `matchingProjects` are automatically matched to the source files in the new project. This is a long-running background operation, and its `status` can be tracked by polling  the [Get PerfectMatch Mapping](#/operations/GetPerfectMatchMapping) endpoint.",
+        "description": "For more details on the PerfectMatch feature please consult the [official documentation](https://docs.rws.com/791595/1155478/trados-enterprise---accelerate/perfectmatch-general-information).\r\n\r\nAfter creating a mapping, target files from the `matchingProjects` are automatically matched to the source files in the new project. This is a long-running background operation, and its `status` can be tracked by polling  the [Get PerfectMatch Mapping](../reference/Public-API.v1.json/paths/~1perfect-match-mappings~1{mappingId}/get) endpoint.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3329,7 +3724,7 @@
             }
           }
         },
-        "description": "Updates a PerfectMatch file mapping with an existing target file from a PerfectMatch candidate. Only valid candidates can be used to request an update.\r\n\r\nUse the [Candidates](#/operations/GetPerfectMatchCandidates) endpoint to retrieve a list of valid `fileId` and `projectId` to provide as matching data. "
+        "description": "Updates a PerfectMatch file mapping with an existing target file from a PerfectMatch candidate. Only valid candidates can be used to request an update.\r\n\r\nUse the [Candidates](../reference/Public-API.v1.json/paths/~1perfect-match-mappings~1{mappingId}~1batch-mappings~1{batchMappingId}~1file-mappings~1{fileMappingId}~1target-languages~1{targetLanguage}~1candidates/get) endpoint to retrieve a list of valid `fileId` and `projectId` to provide as matching data. "
       }
     },
     "/perfect-match-mappings/{mappingId}/batch-mappings/{batchMappingId}/file-mappings/{fileMappingId}/file": {
@@ -4698,7 +5093,7 @@
           "Project"
         ],
         "summary": "Get Project",
-        "description": "Retrieves a project by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
+        "description": "Retrieves a project by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md).",
         "parameters": [
           {
             "$ref": "#/components/parameters/fields"
@@ -4871,7 +5266,7 @@
           "Project"
         ],
         "summary": "Update Project",
-        "description": "Updates the project in terms of: name, description, due date, quote, and project resources. Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386). \n\nProject rescheduling (updating dueBy) is permitted only if: \n* there is no Customer Quote Approval task in the associated flow \n* at least one Customer Quote Approval was closed(in case multiple project batches) \n\nUpdate `projectPlan.taskConfigurations` are now permitted before project is started. Elements are now pre-populated at project creation time.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
+        "description": "Updates the project in terms of: name, description, due date, quote, and project resources. Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386). \n\nProject rescheduling (updating dueBy) is permitted only if: \n* there is no Customer Quote Approval task in the associated flow \n* at least one Customer Quote Approval was closed(in case multiple project batches) \n\nUpdate `projectPlan.taskConfigurations` are now permitted before project is started. Elements are now pre-populated at project creation time.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -5581,7 +5976,7 @@
         ],
         "summary": "Export Project Files",
         "operationId": "ExportProjectFiles",
-        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](#/operations/ExportProjectFilesStatus)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.",
+        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](../api/Public-API.v1-fv.html#/operations/ExportProjectFilesStatus)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -5693,7 +6088,7 @@
         ],
         "summary": "Poll Project Files Export",
         "operationId": "ExportProjectFilesStatus",
-        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](#/operations/DownloadFile).",
+        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](../api/Public-API.v1-fv.html#/operations/DownloadFile).\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.",
         "responses": {
           "200": {
             "description": "OK",
@@ -5804,7 +6199,7 @@
           "Project"
         ],
         "summary": "Download Exported Project Files",
-        "description": "Downloads the generated `zip` file containing the files according to initial export operation parameters. \n\nThe final ZIP file will be named using the project name. \n\n When the export operation is performed with `downloadFlat=true` and one target language specified, the resulting ZIP file name will be a combination of the project name and the target language code, as defined by the [Export Project Files](#/operations/ExportProjectFiles) endpoint.",
+        "description": "Downloads the generated `zip` file containing the files according to initial export operation parameters. \n\nThe final ZIP file will be named using the project name. \n\n When the export operation is performed with `downloadFlat=true` and one target language specified, the resulting ZIP file name will be a combination of the project name and the target language code, as defined by the [Export Project Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1files~1exports/post) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6059,7 +6454,7 @@
           "Source File"
         ],
         "summary": "Add Source File",
-        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n\n> Note: Zip files will be added as reference files. If you want to upload zip files, please use the [Upload Zip File](#/operations/UploadZipFile) endpoint.",
+        "description": "Adds a source file to the project. Files can be uploaded before starting a project or after the project has started. When adding a `translatable` file after the project started, a new start project request should be performed.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n\n> Note: Zip files will be added as reference files. If you want to upload zip files, please use the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6091,7 +6486,7 @@
             }
           },
           "required": true,
-          "description": "For details on how to send multipart/form-data with `properties` see this [article](../docs/How-to-multipart.html)."
+          "description": "For details on how to send multipart/form-data with `properties` see this [article](../docs/How-to-multipart.md)."
         },
         "responses": {
           "201": {
@@ -6274,7 +6669,7 @@
           "Source File"
         ],
         "summary": "Attach Source Files",
-        "description": "This endpoint can only be used after files have been uploaded via the [Upload Zip File](#/operations/UploadZipFile) endpoint. It allows you to add multiple source files to a project. \n\n Each file must be individually attached by setting the `fileUrl` to the `associatedFiles.id` returned by the [Poll Upload Zip File](#/operations/PollUploadZipFile) endpoint, once the `unzipStatus` is `extracted`. \n\nIf a file is attached after the project has already been started, a new start project request must be made.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
+        "description": "This endpoint can only be used after files have been uploaded via the [Upload Zip File](../reference/Public-API.v1.json/paths/~1files/post) endpoint. It allows you to add multiple source files to a project. \n\n Each file must be individually attached by setting the `fileUrl` to the `associatedFiles.id` returned by the [Poll Upload Zip File](../reference/Public-API.v1.json/paths/~1files~1{fileId}/get) endpoint, once the `unzipStatus` is `extracted`. \n\nIf a file is attached after the project has already been started, a new start project request must be made.\n\n> Note: The maximum character size of the sum between the `name` and the `path` fields must not exceed 255. Otherwise the request cannot be validated.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6833,9 +7228,9 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
-        "description": "Adds a new version of the source file in [BCM](../../BCM/BCM.NET_client_API.html) or native format. More information about file formats can be found on the [File formats](../docs/File-formats.html) page.\n\nThe version is added on the task represented by `taskId`. To successfully  execute the add operation the task should already be assigned and accepted by a user. If the task is automatic, it's possible to add a source file version only when the status of task is `inProgress`.\n\nThe file versions added need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a source file version using an extension task, the configuration of the task must declare the `scope`'s value as \"file\".\n\nIf the file type of the new added file is different than the supported source file type, the new `fileTypeSettingsId` must be specified in the body or an update of file type should be performed after the add operation, using the [Update Source File Properties](#/operations/UpdateSourceProperties).\n\nThe value of `fileTypeSettingsId` is one of the identifiers listed by the [List File Type Settings](#/operations/ListFileTypeSettings) endpoint.\n\nThe [List File Type Settings](#/operations/ListFileTypeSettings) endpoint must be called with the File Processing Configuration identifier of your project.\n\nThe File Processing Configuration of your project can be retrieved from [Get Project](#/operations/GetProject) endpoint.\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation. \n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when adding files.\n",
+        "description": "Adds a new version of the source file in [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) or native format. More information about file formats can be found on the [File formats](../docs/File-formats.md) page.\n\nThe version is added on the task represented by `taskId`. To successfully  execute the add operation the task should already be assigned and accepted by a user. If the task is automatic, it's possible to add a source file version only when the status of task is `inProgress`.\n\nThe file versions added need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a source file version using an extension task, the configuration of the task must declare the `scope`'s value as \"file\".\n\nIf the file type of the new added file is different than the supported source file type, the new `fileTypeSettingsId` must be specified in the body or an update of file type should be performed after the add operation, using the [Update Source File Properties](../reference/Public-API.v1.json/paths/~1tasks~1{taskId}~1source-files~1{sourceFileId}/put).\n\nThe value of `fileTypeSettingsId` is one of the identifiers listed by the [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get) endpoint.\n\nThe [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get) endpoint must be called with the File Processing Configuration identifier of your project.\n\nThe File Processing Configuration of your project can be retrieved from [Get Project](../reference/Public-API.v1.json/paths/~1projects~1{projectId}/get) endpoint.\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation. \n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when adding files.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -7147,7 +7542,7 @@
             }
           }
         },
-        "description": "Updates the properties of the source file.\n\n\nThe value of `fileTypeSettingsId` should be one of the identifiers listed by the [List File Type Settings](#/operations/ListFileTypeSettings)  endpoint called with an identifier of a File Processing Configuration that exists on the project. The list of File Processing Configurations from a project can be retrieved by using the [List File Processing Configurations](#/operations/ListFileProcessingConfigurations) endpoint.",
+        "description": "Updates the properties of the source file.\n\n\nThe value of `fileTypeSettingsId` should be one of the identifiers listed by the [List File Type Settings](../reference/Public-API.v1.json/paths/~1file-processing-configurations~1{fileProcessingConfigurationId}~1file-type-settings/get)  endpoint called with an identifier of a File Processing Configuration that exists on the project. The list of File Processing Configurations from a project can be retrieved by using the [List File Processing Configurations](../reference/Public-API.v1.json/paths/~1file-processing-configurations/get) endpoint.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -7824,7 +8219,7 @@
           "Target File"
         ],
         "summary": "Export Target File Version",
-        "description": "Generates an asynchronous export operation. Use the [Get Target File Version Export](#/operations/PollTargetFileVersionExport) endpoint to poll until the export is completed. Used only for [BCM](../../BCM/BCM.NET_client_API.html) file versions.\n\nThis operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format, based on the value of the `format` query parameter used.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Generates an asynchronous export operation. Use the [Get Target File Version Export](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1{fileVersionId}~1exports~1{exportId}/get) endpoint to poll until the export is completed. Used only for [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file versions.\n\nThis operation triggers a conversion of the BCM target file version in a native or SDLXLIFF format, based on the value of the `format` query parameter used.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8138,7 +8533,7 @@
           "Target File"
         ],
         "summary": "Download Target File Version",
-        "description": "Downloads the file version (native or BCM). \n\nIf the `fileVersionId` path parameter represents a native file version, the native file will be downloaded. If the `fileVersionId` is an identifier of a version in [BCM format](../../BCM/BCM.NET_client_API.html), the BCM file will be downloaded.",
+        "description": "Downloads the file version (native or BCM). \n\nIf the `fileVersionId` path parameter represents a native file version, the native file will be downloaded. If the `fileVersionId` is an identifier of a version in [BCM format](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html), the BCM file will be downloaded.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8261,7 +8656,7 @@
           "Target File"
         ],
         "summary": "Import Target File Version",
-        "description": "Generates an asynchronous import operation. Use [Poll Target File Version Import endpoint](#/operations/PollTargetFileVersionImport) to poll until the import is completed. Only `sdlxliff` files can be imported.\n\nImport should be used when a file is downloaded as an `sdlxliff`, processed and then, replaced. \nThe import operation triggers internally the update of the [BCM](../../BCM/BCM.NET_client_API.html) file associated with the imported file. It should mostly be used for offline work.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Generates an asynchronous import operation. Use [Poll Target File Version Import endpoint](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1imports~1{importId}/get) to poll until the import is completed. Only `sdlxliff` files can be imported.\n\nImport should be used when a file is downloaded as an `sdlxliff`, processed and then, replaced. \nThe import operation triggers internally the update of the [BCM](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html) file associated with the imported file. It should mostly be used for offline work.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8289,7 +8684,7 @@
             }
           },
           "required": true,
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
         "responses": {
           "200": {
@@ -8598,9 +8993,9 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
-        "description": "Adds a new  version of the target file. Only the `native` and `bcm` file formats are accepted. For the `sdlxliff` files, you should use the [Import Target File endpoint](#/operations/ImportTargetFileVersion). More information about file formats can be found on the [File formats](../docs/File-formats.html) page. Additional details on BCM files can be found [here](../../BCM/BCM.NET_client_API.html).\n\nThe version is added on the task represented by `taskId`. To be able to execute the add operation the task should be assigned and accepted by user. If the task is automatic, it is possible to add a target file version only if the status is `inProgress`.\n\nThe added file versions need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as \"file\".\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
+        "description": "Adds a new  version of the target file. Only the `native` and `bcm` file formats are accepted. For the `sdlxliff` files, you should use the [Import Target File endpoint](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files~1{targetFileId}~1versions~1imports/post). More information about file formats can be found on the [File formats](../docs/File-formats.md) page. Additional details on BCM files can be found [here](https://developers.rws.com/languagecloud-api-docs/articles/BCM.NET_client_API.html).\n\nThe version is added on the task represented by `taskId`. To be able to execute the add operation the task should be assigned and accepted by user. If the task is automatic, it is possible to add a target file version only if the status is `inProgress`.\n\nThe added file versions need to respect the output file type declared by the task type of the enclosing task. On the [Rules for sequencing tasks correctly](https://docs.rws.com/791595/885137/trados-enterprise/rules-for-sequencing-tasks-correctly) page from the official RWS Documentation Center, you can find out what output file type is supported by each task.\n\nFor adding a target file version using an extension task, the configuration of the task type must declare the `scope`'s value as \"file\".\n\nThe multipart parameters in the body should respect and strictly follow the order specified in our documentation.\n\nConsider the [file and project size limit](https://docs.rws.com/791595/815967/trados-enterprise---accelerate/file-and-project-size-limit) when uploading files.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8689,7 +9084,7 @@
             }
           }
         },
-        "description": "Cancels a project file.",
+        "description": "Cancels a project file.\n\nThe `fileId` path parameter can be either a source file identifier or a target file identifier. Use the [List Source Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1source-files/get) endpoint to obtain source file identifiers, or the [List Target Files](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1target-files/get) endpoint to obtain target file identifiers.",
         "tags": [
           "Project"
         ],
@@ -8808,7 +9203,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](#/operations/PollQuoteReportExport) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.",
+        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](../api/Public-API.v1-fv.html#/operations/PollQuoteReportExport) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -8916,7 +9311,7 @@
             }
           }
         },
-        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](#/operations/DownloadQuoteReport) once the status is \"completed\". The recommended polling interval is 20 seconds. If polling does not return a success status in 20 minutes, it should be abandoned and a new export should be retried.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.",
+        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) once the status is \"completed\". The recommended polling interval is 20 seconds.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9028,7 +9423,7 @@
             }
           }
         },
-        "description": "Downloads a quote report generated by the [asynchronous export operation](#/operations/ExportQuoteReport). \n\nIf the `exportId` query parameter is not provided, the last generated export quote will be downloaded.",
+        "description": "Downloads a quote report generated by the [asynchronous export operation](../reference/Public-API.v1.json/paths/~1projects~1{projectId}~1quote-report~1export/post). \n\nIf the `exportId` query parameter is not provided, the last generated export quote will be downloaded.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9735,7 +10130,7 @@
           "Project Group"
         ],
         "summary": "Add Projects To Group",
-        "description": "Adds projects to the project group.\n\nThe projects are not added instantly. To check the status use the [Get Project Group](#/operations/GetProjectGroup) endpoint.",
+        "description": "Adds projects to the project group.\n\nThe projects are not added instantly. To check the status use the [Get Project Group](../reference/Public-API.v1.json/paths/~1project-groups~1{projectGroupId}/get) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9856,7 +10251,7 @@
           "Project Group"
         ],
         "summary": "Remove Projects From Group",
-        "description": "Removes projects from the project group.\n\nThe projects are not removed instantly. To check the status use the [Get Project Group](#/operations/GetProjectGroup) endpoint.",
+        "description": "Removes projects from the project group.\n\nThe projects are not removed instantly. To check the status use the [Get Project Group](../reference/Public-API.v1.json/paths/~1project-groups~1{projectGroupId}/get) endpoint.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -9979,7 +10374,7 @@
           "Project Template"
         ],
         "summary": "Get Project Template",
-        "description": "Retrieves a project template by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
+        "description": "Retrieves a project template by identifier.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -10078,7 +10473,7 @@
       "put": {
         "summary": "Update Project Template",
         "operationId": "UpdateProjectTemplate",
-        "description": "Updates a project template by id.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.html).",
+        "description": "Updates a project template by id.\n\nFor detailed information about Translation Memory advanced configuration including filters and field updates, see [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -12325,7 +12720,7 @@
             }
           }
         },
-        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project](#/operations/GetProject) endpoint.\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put) works.",
+        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project](https://sdl-language-tech.stoplight.io/docs/lcpublicapi/fd9ee0beb37ca-get-project) endpoint.\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating](https://languagecloud.sdl.com/lc/api-docs/updating-data-with-put) works.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -13167,7 +13562,7 @@
               }
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
         "tags": [
           "Termbase Template"
@@ -14295,7 +14690,7 @@
             "$ref": "#/components/parameters/fields"
           }
         ],
-        "description": "Creates a new termbase entry. For more information about how to use `fieldValueLinks` see [`Create termbase entry`](../docs/termbase/Termbase-entries.html#creating-a-termbase-entry).",
+        "description": "Creates a new termbase entry. For more information about how to use `fieldValueLinks` see [`Create termbase entry`](../docs/termbase/Termbase-entries.md#creating-a-termbase-entry).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -14914,7 +15309,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous export operation.<br>\nUse the [Poll Export Termbase](#/operations/PollExportTermbase) endpoint to poll until the export status is `done`.",
+        "description": "Generates an asynchronous export operation.<br>\nUse the [Poll Export Termbase](../reference/Public-API.v1.json/paths/~1termbases~1{termbaseId}~1exports~1{exportId}/get) endpoint to poll until the export status is `done`.",
         "tags": [
           "Termbase Export"
         ]
@@ -15543,7 +15938,7 @@
               "examples": {}
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
         "description": "Generates an asynchronous import operation.<br>\nUse the Poll Import Termbase endpoint to poll until the import status is `done`.<br>",
         "tags": [
@@ -16095,7 +16490,7 @@
             }
           }
         },
-        "description": "Updates a Translation Memory. We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.html).",
+        "description": "Updates a Translation Memory. We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.md).",
         "requestBody": {
           "content": {
             "application/json": {
@@ -16974,9 +17369,9 @@
               "examples": {}
             }
           },
-          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.html)."
+          "description": "For details on multipart requests please see [this article](../docs/How-to-multipart.md)."
         },
-        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](#/operations/PollTMImport).",
+        "description": "Generates an asynchronous import operation. \n<br>\n<br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content).\n<br>\nNote: The order of the multipart form parameter must be implemented as such: properties first, file second.\n<br>\nUse the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br>\nTo track the progress of the import please refer to [Poll Translation Memory Import](../reference/Public-API.v1.json/paths/~1translation-memory~1imports~1{importId}/get).",
         "tags": [
           "Translation Memory Import"
         ]
@@ -17182,7 +17577,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous export operation.\nUse the [Poll Translation Memory Export](#/operations/PollTranslationMemoryExport) endpoint to poll until the export status is `done`.",
+        "description": "Generates an asynchronous export operation.\nUse the [Poll Translation Memory Export](../reference/Public-API.v1.json/paths/~1translation-memory~1exports~1{exportId}/get) endpoint to poll until the export status is `done`.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -17493,7 +17888,7 @@
         "tags": [
           "Translation"
         ],
-        "description": "Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
+        "description": "Translates a phrase in plain text or a BCM fragment containing a single segment. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -17605,7 +18000,7 @@
         "x-stoplight": {
           "id": "w7q4r8d7hum33"
         },
-        "description": "Performs a concordance search for a given text within the TM linked to the specified translation engine. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
+        "description": "Performs a concordance search for a given text within the TM linked to the specified translation engine. The translated content will be returned as a BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html) or [term](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Skeleton.Term.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -17717,7 +18112,7 @@
         "x-stoplight": {
           "id": "pyjdd2h02zm8z"
         },
-        "description": "Updates a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
+        "description": "Updates a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -17822,7 +18217,7 @@
           }
         },
         "operationId": "TranslationsAdd",
-        "description": "Adds a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.html) page.",
+        "description": "Adds a translation unit. The system identifies matching translation units in the TM based on the provided BCM [fragment](https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html). \n\n For detailed concepts and examples see the [Translation API](../docs/translations/Translations.md) page.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -18009,6 +18404,114 @@
           }
         },
         "operationId": "ListUsers"
+      },
+      "post": {
+        "summary": "Create User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/user"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \r\n* “invalid”: Invalid input in “name” field on the error response.\r\n* “maxSize“: The maximum size was exceeded for the value mentioned in the \"name\" field.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes: \r\n* \"forbidden\": the authenticated user is not allowed to read the resource.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error responses:\r\n* “duplicate”: duplicate value for the field mentioned in the error details.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateUser",
+        "x-stoplight": {
+          "id": "ispfndwuo3pse"
+        },
+        "description": "Creates a new user in an account.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user-create-request"
+              }
+            }
+          }
+        }
       }
     },
     "/users/{userId}": {
@@ -18107,7 +18610,174 @@
         {
           "$ref": "#/components/parameters/userId"
         }
-      ]
+      ],
+      "put": {
+        "summary": "Update User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/user"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes: \r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\r\n* \"forbidden\": the authenticated user is not allowed to update the user.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\r\n* \"notFound\": the user could not be found by identifier.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "UpdateUser",
+        "x-stoplight": {
+          "id": "pe5i7ilrm4h3p"
+        },
+        "description": "Updates a user within the account.\r\n\r\nPlease follow the update rules detailed on the [Updating data with PUT](../docs/Updating-data-with-PUT.md) page.\r\n\r\nWhen performing an update, fields that are related to a different type of user will be ignored.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user-update-request"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input in userId field.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "DeleteUser",
+        "x-stoplight": {
+          "id": "ac5fqii7z6x2x"
+        },
+        "description": "Deletes a user.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
+      }
     },
     "/.well-known/jwks.json": {
       "get": {
@@ -18735,6 +19405,15 @@
           "id"
         ]
       },
+      "account-membership-type": {
+        "title": "Account Membership Type",
+        "type": "string",
+        "enum": [
+          "member",
+          "collaborator"
+        ],
+        "description": "Type of membership of this account user."
+      },
       "add-projects-to-group-request": {
         "title": "Add Projects To Group Request",
         "type": "object",
@@ -18808,170 +19487,6 @@
         "required": [
           "id"
         ]
-      },
-      "project-cost": {
-        "title": "Project Cost",
-        "x-stoplight": {
-          "id": "34d171ee75017"
-        },
-        "type": "object",
-        "required": [
-          "name",
-          "type",
-          "index",
-          "costPerUnit",
-          "unitCount"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the additional cost. "
-          },
-          "type": {
-            "$ref": "#/components/schemas/project-cost-type",
-            "description": "The type of the additional cost."
-          },
-          "index": {
-            "type": "number",
-            "description": "The number of the additional cost."
-          },
-          "costPerUnit": {
-            "type": "number",
-            "description": "The cost of a unit."
-          },
-          "unitCount": {
-            "type": "number",
-            "description": "The number of units for which a cost is applied."
-          },
-          "volumeUnitType": {
-            "$ref": "#/components/schemas/volume-unit-type",
-            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
-          },
-          "conditionalCostType": {
-            "$ref": "#/components/schemas/conditional-cost-type",
-            "description": "Only for the Conditional type."
-          },
-          "costOperator": {
-            "$ref": "#/components/schemas/conditional-cost-operator",
-            "description": "Only for the Conditional type.",
-            "x-stoplight": {
-              "id": "dw5wpcfk70z9c"
-            }
-          },
-          "costVariable": {
-            "$ref": "#/components/schemas/conditional-cost-variable",
-            "description": "Only for the Conditional type.",
-            "x-stoplight": {
-              "id": "np7a8b8w5ra70"
-            }
-          },
-          "operand": {
-            "type": "number",
-            "description": "Operand of the Conditional type cost."
-          },
-          "serviceTypes": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "gkyey7knc4j3v"
-            },
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
-            "items": {
-              "x-stoplight": {
-                "id": "3e6kwmu58ut0p"
-              },
-              "type": "string"
-            }
-          },
-          "customUnitName": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "rovgmbrayoltf"
-            },
-            "description": "The name of the custom unit."
-          }
-        }
-      },
-      "language-cost": {
-        "title": "Language Cost",
-        "x-stoplight": {
-          "id": "28d3xstakbk6t"
-        },
-        "type": "object",
-        "required": [
-          "name",
-          "type",
-          "index",
-          "costPerUnit",
-          "unitCount"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the additional cost. "
-          },
-          "type": {
-            "$ref": "#/components/schemas/language-cost-type",
-            "description": "The type of the additional cost."
-          },
-          "index": {
-            "type": "number",
-            "description": "The number of the additional cost."
-          },
-          "costPerUnit": {
-            "type": "number",
-            "description": "The cost of a unit."
-          },
-          "unitCount": {
-            "type": "number",
-            "description": "The number of units for which a cost is applied."
-          },
-          "volumeUnitType": {
-            "$ref": "#/components/schemas/volume-unit-type",
-            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
-          },
-          "conditionalCostType": {
-            "$ref": "#/components/schemas/conditional-cost-type",
-            "description": "Only for the Conditional type."
-          },
-          "costOperator": {
-            "$ref": "#/components/schemas/conditional-cost-operator",
-            "description": "Only for the Conditional type.",
-            "x-stoplight": {
-              "id": "ak744d5hs26tb"
-            }
-          },
-          "costVariable": {
-            "$ref": "#/components/schemas/conditional-cost-variable",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Only for the Conditional type.",
-            "x-stoplight": {
-              "id": "la3r0xwre29qy"
-            }
-          },
-          "operand": {
-            "type": "number",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Operand of the Conditional type cost."
-          },
-          "serviceTypes": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "gkyey7knc4j3v"
-            },
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
-            "items": {
-              "x-stoplight": {
-                "id": "3e6kwmu58ut0p"
-              },
-              "type": "string"
-            }
-          },
-          "customUnitName": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "6o3o1f3p0863z"
-            },
-            "description": "The name of the custom unit."
-          }
-        }
       },
       "analysis-statistics": {
         "title": "Analysis Statistics",
@@ -19197,6 +19712,95 @@
             "nullable": true,
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> ",
             "x-default-field": true
+          }
+        }
+      },
+      "application-create-request": {
+        "title": "Application Create Request",
+        "x-stoplight": {
+          "id": "qhxb5m4sok0si"
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "bgy7y1rl401q2"
+            },
+            "description": "The application name.",
+            "maxLength": 70,
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "uxrbkrp2mbh34"
+            },
+            "description": "The application description.",
+            "maxLength": 1000
+          },
+          "enableApiAccess": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "84ukz6ih4v0af"
+            },
+            "default": true,
+            "description": "Enables oAuth 2.0 API access and provides the application's client credentials."
+          },
+          "serviceUserId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "f8zkfoyjyahuf"
+            },
+            "description": "The Service User identifier. Required when `enableApiAccess` is `true`."
+          }
+        }
+      },
+      "application-update-request": {
+        "title": "Application Update Request",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "bgy7y1rl401q2"
+            },
+            "description": "The application name.",
+            "minLength": 1,
+            "maxLength": 70
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "uxrbkrp2mbh34"
+            },
+            "description": "The application description.",
+            "maxLength": 1000
+          },
+          "enableApiAccess": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "mlgrme3srlaui"
+            },
+            "default": true
+          },
+          "serviceUserId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "f8zkfoyjyahuf"
+            },
+            "description": "The Service user identifier. The Service User will be used to provide authorization for this application."
+          },
+          "regenerateSecret": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "fj2o239iimngr"
+            },
+            "default": false,
+            "description": "Regenerate the client secret."
           }
         }
       },
@@ -20371,6 +20975,9 @@
         "title": "Group",
         "type": "object",
         "description": "Group of Users.",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -20393,11 +21000,21 @@
             "items": {
               "$ref": "#/components/schemas/user"
             }
+          },
+          "groupType": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pdvziy8cofxh5"
+            },
+            "enum": [
+              "default",
+              "custom",
+              "vendor",
+              "customer"
+            ],
+            "description": "- default : groups in the Root folder (location) provisioned by the system, automatically. Examples: Administrator, Project Manager, Engineer, Terminologist.\r\n- customer : groups provisioned by the system, automatically, for each customer location you add. Examples: Customer Requester, Customer Reviewer.\r\n- vendor : group provisioned by the system, automatically, for each vendor location you add. Examples: Vendor Project Manager.\r\n- custom : groups you can create in a location of your choice. Examples: Project Manager, Translator."
           }
-        },
-        "required": [
-          "id"
-        ]
+        }
       },
       "group-request": {
         "title": "Group Request",
@@ -20493,6 +21110,88 @@
         "required": [
           "languageCode"
         ]
+      },
+      "language-cost": {
+        "title": "Language Cost",
+        "x-stoplight": {
+          "id": "28d3xstakbk6t"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "index",
+          "costPerUnit",
+          "unitCount"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the additional cost. "
+          },
+          "type": {
+            "$ref": "#/components/schemas/language-cost-type",
+            "description": "The type of the additional cost."
+          },
+          "index": {
+            "type": "number",
+            "description": "The number of the additional cost."
+          },
+          "costPerUnit": {
+            "type": "number",
+            "description": "The cost of a unit."
+          },
+          "unitCount": {
+            "type": "number",
+            "description": "The number of units for which a cost is applied."
+          },
+          "volumeUnitType": {
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
+          },
+          "conditionalCostType": {
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
+          },
+          "costOperator": {
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "ak744d5hs26tb"
+            }
+          },
+          "costVariable": {
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "la3r0xwre29qy"
+            }
+          },
+          "operand": {
+            "type": "number",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div>Operand of the Conditional type cost."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "gkyey7knc4j3v"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
+            "items": {
+              "x-stoplight": {
+                "id": "3e6kwmu58ut0p"
+              },
+              "type": "string"
+            }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6o3o1f3p0863z"
+            },
+            "description": "The name of the custom unit."
+          }
+        }
       },
       "language-cost-request": {
         "title": "Language Cost Request",
@@ -20964,6 +21663,38 @@
               "id": "s7x3mcw5kgyr4"
             },
             "description": "Only for LLM"
+          }
+        }
+      },
+      "list-applications-response": {
+        "title": "List Applications Response",
+        "x-stoplight": {
+          "id": "kgs8afa2v7f89"
+        },
+        "type": "object",
+        "description": "A response for the List Applications endpoint.",
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "properties": {
+          "itemCount": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "dq8hc1h0xzvs6"
+            }
+          },
+          "items": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "btv9fxcgw9pv1"
+            },
+            "items": {
+              "$ref": "#/components/schemas/application",
+              "x-stoplight": {
+                "id": "wbkd1twqqtcqg"
+              }
+            }
           }
         }
       },
@@ -23104,6 +23835,88 @@
               "id": "84cmud84h1lf6"
             },
             "description": "The PerfectMatch mapping to be associated with the project."
+          }
+        }
+      },
+      "project-cost": {
+        "title": "Project Cost",
+        "x-stoplight": {
+          "id": "34d171ee75017"
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "type",
+          "index",
+          "costPerUnit",
+          "unitCount"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the additional cost. "
+          },
+          "type": {
+            "$ref": "#/components/schemas/project-cost-type",
+            "description": "The type of the additional cost."
+          },
+          "index": {
+            "type": "number",
+            "description": "The number of the additional cost."
+          },
+          "costPerUnit": {
+            "type": "number",
+            "description": "The cost of a unit."
+          },
+          "unitCount": {
+            "type": "number",
+            "description": "The number of units for which a cost is applied."
+          },
+          "volumeUnitType": {
+            "$ref": "#/components/schemas/volume-unit-type",
+            "description": "The unit type of the 'volume' cost, used as reference for the unit cost."
+          },
+          "conditionalCostType": {
+            "$ref": "#/components/schemas/conditional-cost-type",
+            "description": "Only for the Conditional type."
+          },
+          "costOperator": {
+            "$ref": "#/components/schemas/conditional-cost-operator",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "dw5wpcfk70z9c"
+            }
+          },
+          "costVariable": {
+            "$ref": "#/components/schemas/conditional-cost-variable",
+            "description": "Only for the Conditional type.",
+            "x-stoplight": {
+              "id": "np7a8b8w5ra70"
+            }
+          },
+          "operand": {
+            "type": "number",
+            "description": "Operand of the Conditional type cost."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "gkyey7knc4j3v"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div> Array of Service Type identifiers where this additional cost is applied. ",
+            "items": {
+              "x-stoplight": {
+                "id": "3e6kwmu58ut0p"
+              },
+              "type": "string"
+            }
+          },
+          "customUnitName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rovgmbrayoltf"
+            },
+            "description": "The name of the custom unit."
           }
         }
       },
@@ -27383,7 +28196,7 @@
             "x-stoplight": {
               "id": "tavwkrljagcmc"
             },
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"> Unique identifier of custom task types. Null for default task types."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"> Unique identifier of custom task types set in the workflow. If no custom id is set, it will return the default identifier for the custom task type."
           },
           "description": {
             "type": "string"
@@ -31011,15 +31824,32 @@
         "title": "User",
         "type": "object",
         "description": "User in the account.",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "string",
             "description": "User account identifier."
           },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "q6s9xj3xbon4k"
+            },
+            "description": "Description of this account user. For Service account users only."
+          },
           "email": {
             "type": "string",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's email address. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
             "x-default-field": true
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ie6lbdd67taaz"
+            },
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's name. Retrieved only for Service users (not RWS ID users) that the authenticated entity is authorized to read.</div> "
           },
           "firstName": {
             "type": "string",
@@ -31042,6 +31872,13 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Retrieved if the authenticated entity does not have access to read the User.</div> ",
             "x-default-field": true
           },
+          "account": {
+            "$ref": "#/components/schemas/account",
+            "x-stoplight": {
+              "id": "ssafm4yhc1ukc"
+            },
+            "description": "The account the user is part of."
+          },
           "location": {
             "$ref": "#/components/schemas/folder-v2"
           },
@@ -31050,11 +31887,33 @@
             "items": {
               "$ref": "#/components/schemas/group"
             }
+          },
+          "userType": {
+            "$ref": "#/components/schemas/user-type",
+            "x-stoplight": {
+              "id": "64l4tihoe1yh9"
+            }
+          },
+          "status": {
+            "$ref": "#/components/schemas/user-status",
+            "x-stoplight": {
+              "id": "3qbyvnakw7zbt"
+            }
+          },
+          "invitationLink": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "e8ger14ol8hdd"
+            },
+            "description": "The user's invitation link. Retrieved only for RWS ID (formerly SDL ID) users—not service users. It is available only if the user has not yet accepted the invitation (status is `inactive`)."
+          },
+          "membership": {
+            "$ref": "#/components/schemas/account-membership-type",
+            "x-stoplight": {
+              "id": "rc4aelhf9y7sc"
+            }
           }
-        },
-        "required": [
-          "id"
-        ]
+        }
       },
       "user-request": {
         "title": "User Request",
@@ -31100,6 +31959,210 @@
         "required": [
           "id"
         ]
+      },
+      "user-create-request": {
+        "title": "User Create Request",
+        "x-stoplight": {
+          "id": "zj3b0doia6ghv"
+        },
+        "type": "object",
+        "description": "If you need to create a Service User, send only the `serviceUserDetails` object and omit the `userDetails`object, vice-versa for a normal user. ",
+        "properties": {
+          "groups": {
+            "type": "array",
+            "minItems": 1,
+            "x-stoplight": {
+              "id": "gshvzyvunxf3w"
+            },
+            "description": "The identifiers for the user groups. At least one valid group must be provided.",
+            "items": {
+              "x-stoplight": {
+                "id": "clp2f00ulox3r"
+              },
+              "type": "object",
+              "$ref": "#/components/schemas/object-id"
+            }
+          },
+          "location": {
+            "x-stoplight": {
+              "id": "5xm3lbo297i9i"
+            },
+            "type": "string",
+            "description": "The identifier of the parent folder for the account user. If it isn't mentioned, it will be created in the Root folder."
+          },
+          "serviceUserDetails": {
+            "$ref": "#/components/schemas/service-user-details",
+            "x-stoplight": {
+              "id": "0e76umgrb9pce"
+            }
+          },
+          "userDetails": {
+            "$ref": "#/components/schemas/user-details",
+            "x-stoplight": {
+              "id": "mbwjhisfya315"
+            }
+          }
+        },
+        "required": [
+          "groups"
+        ]
+      },
+      "service-user-details": {
+        "title": "Service User Details",
+        "type": "object",
+        "description": "The account details. Provide these to create a Service User.",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ygr9y3n409i2f"
+            },
+            "description": "The Service User name.",
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "fw832rlu0cud2"
+            },
+            "description": "The Service User description.",
+            "maxLength": 200
+          }
+        }
+      },
+      "user-details": {
+        "title": "User Details",
+        "type": "object",
+        "description": "The account details. Provide these to invite a user.",
+        "required": [
+          "membership",
+          "email",
+          "firstName",
+          "lastName"
+        ],
+        "properties": {
+          "membership": {
+            "$ref": "#/components/schemas/account-membership-type",
+            "x-stoplight": {
+              "id": "gdhzaa0rfouzh"
+            }
+          },
+          "email": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "sx4ccvzavuwie"
+            },
+            "format": "email",
+            "description": "The user email."
+          },
+          "firstName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "x4twktxsnfbzo"
+            },
+            "description": "The First Name of the account user.",
+            "maxLength": 50
+          },
+          "lastName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "syutqsyphrou8"
+            },
+            "description": "The Last Name of the account user.",
+            "maxLength": 50
+          },
+          "invitationMessage": {
+            "type": "string",
+            "description": "A personalized message that will be included in the invitation.",
+            "maxLength": 1000
+          },
+          "sendInvitationEmail": {
+            "type": "boolean",
+            "default": true,
+            "description": "If enabled, the user will receive an email at the specified address containing the invitation details."
+          },
+          "inviteInCustomerPortal": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable this if the invited user is meant to be a Customer Reviewer or Customer Requester. When enabled, the user will always be redirected to the Customer Portal."
+          }
+        }
+      },
+      "user-update-request": {
+        "title": "User Update Request",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "l9tkoiqnkwmtj"
+            },
+            "description": "The account user name. For Service users only.",
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7pnsam33z37hf"
+            },
+            "description": "Description of this account user. For Service account users only.",
+            "maxLength": 200
+          },
+          "firstName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "d7c847kaukk9e"
+            },
+            "description": "The First Name of this account user. For RWSID account users only.",
+            "maxLength": 50
+          },
+          "lastName": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3dhda5zhu5wyi"
+            },
+            "description": "The Last Name of this account user. For RWSID account users only.",
+            "maxLength": 50
+          },
+          "groups": {
+            "type": "array",
+            "minItems": 1,
+            "x-stoplight": {
+              "id": "gshvzyvunxf3w"
+            },
+            "description": "The identifiers for the user groups. \r\n\r\nWhen updating a user, observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386) to prevent accidentally removing a user from groups. If provided it must contain at least one valid group id.",
+            "items": {
+              "x-stoplight": {
+                "id": "clp2f00ulox3r"
+              },
+              "type": "object",
+              "$ref": "#/components/schemas/object-id"
+            }
+          }
+        }
+      },
+      "user-type": {
+        "title": "User Type",
+        "type": "string",
+        "enum": [
+          "user",
+          "serviceUser"
+        ],
+        "description": "The type of the account user."
+      },
+      "user-status": {
+        "title": "User Status",
+        "type": "string",
+        "enum": [
+          "inactive",
+          "active",
+          "deleted",
+          "provisioned"
+        ],
+        "description": "Status of this account user."
       },
       "vendor-order": {
         "title": "Vendor Order",
@@ -32109,6 +33172,77 @@
             ]
           }
         }
+      },
+      "application": {
+        "title": "Application",
+        "x-stoplight": {
+          "id": "nbgnpvca77n3g"
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "0cs3dm9xaw3hw"
+            },
+            "description": "The application identifier."
+          },
+          "name": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The application name.</div> ",
+            "x-default-field": true
+          },
+          "description": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "h5culd7q91b0i"
+            },
+            "description": "The application description."
+          },
+          "enableApiAccess": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "o6511ct26m08q"
+            },
+            "description": "Is oAuth 2.0 API access enabled."
+          },
+          "serviceUser": {
+            "$ref": "#/components/schemas/user",
+            "x-stoplight": {
+              "id": "grtccw5o2juqa"
+            },
+            "description": "The Service User associated with this application."
+          },
+          "apiAccess": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "l8uenguxfzqly"
+            },
+            "description": "API Access details.",
+            "required": [
+              "clientId"
+            ],
+            "properties": {
+              "clientId": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "8pqasr46ezn15"
+                },
+                "description": "The client identifier."
+              },
+              "clientSecret": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "scia7h6wxjsp4"
+                },
+                "description": "The client secret."
+              }
+            }
+          }
+        }
       }
     },
     "parameters": {
@@ -32465,6 +33599,15 @@
           }
         },
         "description": "Can provide a list of humanReadableId from entries to filter by."
+      },
+      "applicationId": {
+        "name": "applicationId",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The application identifier."
       }
     },
     "headers": {
