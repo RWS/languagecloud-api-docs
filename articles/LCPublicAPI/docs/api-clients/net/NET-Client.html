@@ -185,6 +185,21 @@ var sourceFileClient = clientProvider.GetSourceFileClient(credentials);
 <h4 id="7-optional-supply-the-fields-parameter-and-retrieve-specific-data-about-the-project">7. (Optional) Supply the <code>fields</code> parameter and retrieve specific data about the project:</h4>
 <pre><code class="lang-csharp">var myProject = await projectClient.GetProjectAsync(&quot;YOUR_PROJECT_ID&quot;, &quot;status,quote.totalAmount&quot;);
 </code></pre>
+<h3 id="token-management">Token management</h3>
+<p>When using <code>GetProjectClient</code> with <code>ServiceCredentials</code>, the client handles token management automatically:</p>
+<ul>
+<li><strong>Automatic token handling</strong>: You do not need to fetch or manage auth tokens directly. The implicit authentication handler obtains a valid token based on the provided service credentials automatically.</li>
+<li><strong>Token caching</strong>: Tokens are cached until expiration, ensuring efficient reuse without unnecessary Auth0 requests.</li>
+<li><strong>Single instance pattern</strong>: To avoid creating multiple <code>HttpClient</code> instances (and thus multiple token caches), reuse the same client instance via Dependency Injection or similar mechanisms.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <a href="../../Authentication.html#token-management">16 requests per day limit</a> mentioned in the Authentication documentation refers to Auth0 token requests, not API calls. Since the .NET Client SDK caches tokens automatically, your application typically only makes one Auth0 token request per day (unless the application is restarted or multiple instances are running). See <a href="../../Authentication.html#token-caching-behavior">Token caching behavior</a> for more details.</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>While the SDK handles token management, you still need to handle <a href="../../API-rate-limits.html">API rate limits</a> and implement proper handling for HTTP 429 (Too Many Requests) responses. See the <a href="../../API-rate-limits.html#implementation-recommendations">Implementation recommendations</a> for guidance.</p>
+</div>
 <h2 id="error-handling">Error handling</h2>
 <p>The SDK may throw the following exceptions:</p>
 <table>

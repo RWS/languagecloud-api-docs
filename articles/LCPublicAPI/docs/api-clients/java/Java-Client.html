@@ -121,6 +121,22 @@ LanguageCloudClientProvider languageCloudClientProvider = LanguageCloudClientPro
 // instantiate the client
 ProjectApi projectApi = languageCloudClientProvider.getProjectClient();
 </code></pre>
+<h3 id="token-management">Token management</h3>
+<p>The <code>LanguageCloudClientProvider</code> handles token management automatically. Here are the key points:</p>
+<ul>
+<li><strong>Automatic token handling</strong>: You do not need to fetch or manage auth tokens directly. The <code>LanguageCloudClientProvider</code> obtains a valid token based on the provided service credentials automatically.</li>
+<li><strong>Token caching</strong>: Tokens are cached until expiration minus 1 minute, ensuring that tokens do not expire mid-call even if the API call takes longer. After that, the token is cleaned up from the cache, and a new one is generated automatically.</li>
+<li><strong>Singleton cache pattern</strong>: The token cache is implemented with a singleton pattern, so it does not make a difference if a single <code>LanguageCloudClientProvider</code> is instantiated or multiple ones—there is always a single cache per application.</li>
+<li><strong>No need to recreate instances</strong>: You do not need to destroy and recreate <code>LanguageCloudClientProvider</code> or any of the underlying API clients (e.g., <code>ProjectApi</code> via <code>languageCloudClientProvider.getProjectClient()</code>). One instance per application is sufficient.</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <a href="../../Authentication.html#token-management">16 requests per day limit</a> mentioned in the Authentication documentation refers to Auth0 token requests, not API calls. Since the Java Client SDK caches tokens automatically, your application typically only makes one Auth0 token request per day (unless the application is restarted).</p>
+</div>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>While the SDK handles token management, you still need to handle <a href="../../API-rate-limits.html">API rate limits</a> and implement proper handling for HTTP 429 (Too Many Requests) responses. See the <a href="../../API-rate-limits.html#implementation-recommendations">Implementation recommendations</a> for guidance.</p>
+</div>
 <h4 id="1-create-a-new-project">1. Create a new project:</h4>
 <pre><code class="lang-java">ProjectCreateRequest projectCreateRequest = new ProjectCreateRequest();
 projectCreateRequest.setName(&quot;YOUR_PROJECT_NAME&quot;);
