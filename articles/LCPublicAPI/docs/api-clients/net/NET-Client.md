@@ -128,6 +128,20 @@ var myProject = await projectClient.GetProjectAsync("YOUR_PROJECT_ID");
 var myProject = await projectClient.GetProjectAsync("YOUR_PROJECT_ID", "status,quote.totalAmount");
 ```
 
+### Token management
+
+When using `GetProjectClient` with `ServiceCredentials`, the client handles token management automatically:
+
+- **Automatic token handling**: You do not need to fetch or manage auth tokens directly. The implicit authentication handler obtains a valid token based on the provided service credentials automatically.
+- **Token caching**: Tokens are cached until expiration, ensuring efficient reuse without unnecessary Auth0 requests.
+- **Single instance pattern**: To avoid creating multiple `HttpClient` instances (and thus multiple token caches), reuse the same client instance via Dependency Injection or similar mechanisms.
+
+> [!NOTE]
+> The [16 requests per day limit](../../../docs/Authentication.md#token-management) mentioned in the Authentication documentation refers to Auth0 token requests, not API calls. Since the .NET Client SDK caches tokens automatically, your application typically only makes one Auth0 token request per day (unless the application is restarted or multiple instances are running). See [Token caching behavior](../../../docs/Authentication.md#token-caching-behavior) for more details.
+
+> [!WARNING]
+> While the SDK handles token management, you still need to handle [API rate limits](../../../docs/API-rate-limits.md) and implement proper handling for HTTP 429 (Too Many Requests) responses. See the [Implementation recommendations](../../../docs/API-rate-limits.md#implementation-recommendations) for guidance.
+
 
 ## Error handling
 The SDK may throw the following exceptions: 

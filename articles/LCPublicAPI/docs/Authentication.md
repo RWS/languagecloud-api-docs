@@ -78,3 +78,13 @@ The application is responsible for getting a fresh token once the token is about
 
 > [!WARNING]
 > Please limit the number of requests for the Bearer token to a maximum of 16 per day. It's acceptable to exceed this limit only if you need to deploy multiple versions of your application, in a single day.
+
+### Token caching behavior
+
+Since Auth0 returns tokens with a 24-hour expiry, a well-implemented integration should typically only make a single Auth0 token request per day. However, additional token requests may occur in the following scenarios:
+
+- **Multiple application instances**: Each instance holds its own cache, so multiple instances of the same application will each request their own token.
+- **Application restarts**: Stopping or restarting the application will destroy the cache and the bearer token, resulting in a new call to Auth0 upon restart.
+
+> [!NOTE]
+> The 16 requests per day limit refers specifically to Auth0 token requests, not to API calls. You can make many more API calls (up to the [rate limits](../docs/API-rate-limits.md)) using a single cached token.

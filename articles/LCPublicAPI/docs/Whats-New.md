@@ -2,6 +2,18 @@
 
 </br> 
 
+## 8 December 2025
+- With this release we deliver full management capabilities for both users and applications. The new user endpoints enable [Create](../api/Public-API.v1-fv.html#/operations/CreateUser), [Update](../api/Public-API.v1-fv.html#/operations/UpdateUser), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteUser) operations, while application management now supports all CRUD operations: [Get](../api/Public-API.v1-fv.html#/operations/GetApplication), [List](../api/Public-API.v1-fv.html#/operations/ListApplications), [Create](../api/Public-API.v1-fv.html#/operations/CreateApplication), [Update](../api/Public-API.v1-fv.html#/operations/UpdateApplication), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteApplication).
+- As announced in November 2024, the `language` and `targetLanguages` fields in [Add Source File Request](../api/Public-API.v1-fv.html#/schemas/source-file-request) now use the [Language Request](../api/Public-API.v1-fv.html#/schemas/language-request) model.
+- The [Get Task](../api/Public-API.v1-fv.html#/operations/GetTask) endpoint now includes `apiInternalId` in the task type details response.
+- Added a new section on [token management](../docs/Authentication.md#token-management).
+- In early 2026, we will discontinue publishing API documentation at [Trados Cloud Platform API Documentation](https://eu.cloud.trados.com/lc/api-docs).
+  - Our API documentation is currently available in two locations:
+    - [Trados Cloud Platform API Documentation](https://eu.cloud.trados.com/lc/api-docs)  - Will be discontinued in early 2026
+    - [Trados Cloud Platform API](https://developers.rws.com/languagecloud-api-docs/articles/LCPublicAPI/docs/Introduction.html) - This will remain as the official documentation site.
+  - We will communicate the exact discontinuation date once finalized.
+- We fixed various bugs.
+
 ## 29 October 2025
 
 - We've added support for advanced settings for Translation Memory operations, including powerful filter expressions and field update options. See [Translation Memory Advanced Configuration](../docs/translation-memory/Translation-memory-advanced-configuration.md) for more details.
