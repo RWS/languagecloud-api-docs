@@ -6,8 +6,21 @@ stoplight-id: eg4ja9nrs9wtk
 
 A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.
 
-> [!NOTE]
-> When integrating with our webhook service, please be aware that we cannot guarantee the order of webhook event deliveries. This means that notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. Instead, make use of the `timestamp` field to determine the event generation time.
+## Event Ordering
+
+When integrating with our webhook service, please be aware that **we cannot guarantee the order of webhook event deliveries**. Notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. This is due to the following reasons:
+
+- Webhooks are sent in parallel for performance reasons
+- If your endpoint is temporarily unavailable, messages will be retried later (see [Retry policies](#retry-policies))
+- Network conditions and other factors can affect delivery timing
+
+**Recommended approach:** Each webhook payload includes a `timestamp` field representing the actual moment when the event occurred (not when the webhook was sent). Use this timestamp to:
+
+1. Determine the correct chronological order of events
+2. Implement idempotent processing by tracking the last processed timestamp per entity
+3. Ignore webhooks for an entity if they have an older timestamp than the last successfully processed event for that entity
+
+This pattern ensures your integration handles events correctly regardless of delivery order.
  
 ## Subscribe to Webhook events
 
