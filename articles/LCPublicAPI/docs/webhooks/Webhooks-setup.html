@@ -82,10 +82,20 @@
 <h1 id="webhooks-setup">Webhooks Setup</h1>
 
 <p>A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p>When integrating with our webhook service, please be aware that we cannot guarantee the order of webhook event deliveries. This means that notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. Instead, make use of the <code>timestamp</code> field to determine the event generation time.</p>
-</div>
+<h2 id="event-ordering">Event Ordering</h2>
+<p>When integrating with our webhook service, please be aware that <strong>we cannot guarantee the order of webhook event deliveries</strong>. Notifications may arrive out of sequence, and consumers should not rely on receiving messages in a specific order. This is due to the following reasons:</p>
+<ul>
+<li>Webhooks are sent in parallel for performance reasons</li>
+<li>If your endpoint is temporarily unavailable, messages will be retried later (see <a href="#retry-policies">Retry policies</a>)</li>
+<li>Network conditions and other factors can affect delivery timing</li>
+</ul>
+<p><strong>Recommended approach:</strong> Each webhook payload includes a <code>timestamp</code> field representing the actual moment when the event occurred (not when the webhook was sent). Use this timestamp to:</p>
+<ol>
+<li>Determine the correct chronological order of events</li>
+<li>Implement idempotent processing by tracking the last processed timestamp per entity</li>
+<li>Ignore webhooks for an entity if they have an older timestamp than the last successfully processed event for that entity</li>
+</ol>
+<p>This pattern ensures your integration handles events correctly regardless of delivery order.</p>
 <h2 id="subscribe-to-webhook-events">Subscribe to Webhook events</h2>
 <p>You subscribe to Webhook events from the Trados UI by creating a Trados Cloud Platform custom application.</p>
 <p>Several prerequisites must be met so that you can configure the right webhooks for the right customer, namely:</p>
