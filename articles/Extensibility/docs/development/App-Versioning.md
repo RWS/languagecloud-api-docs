@@ -5,7 +5,7 @@ stoplight-id: 8qooshkz6t5ps
 
 # App Versioning
 
-This article explains how the app versions work and how to use multiple versions of your app.
+This article explains how the app versions work and how to use multiple versions of your app. 
 
 ## Versions in Trados
 
