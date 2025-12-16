@@ -49,7 +49,7 @@ If you don't already have Node.js installed, you can download the most recent LT
 
 ### Dependencies
 
-- [@trados/trados-ui-extensibility](https://www.npmjs.com/package/@trados/trados-ui-extensibility) v0.1.5
+- [@trados/trados-ui-extensibility](https://www.npmjs.com/package/@trados/trados-ui-extensibility) v0.1.6
   - [GitHub repository](https://github.com/RWS/trados-ui-extensibility)
   - [GitHub wiki](https://github.com/RWS/trados-ui-extensibility/wiki)
 
