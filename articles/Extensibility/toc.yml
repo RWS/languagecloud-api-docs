@@ -67,6 +67,8 @@
           href: docs/development/samples/Java-Samples.md
         - name: .NET
           href: docs/development/samples/Dot-Net-Samples.md
+    - name: Integrate With Trados Cloud Platform API
+      href: docs/development/Integrate-With-Trados-Cloud-Platform-API.md
 
 - name: App Management
   items:
