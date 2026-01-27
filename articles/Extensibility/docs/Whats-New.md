@@ -1,5 +1,11 @@
 # What's New
 
+## January 2026
+
+- We've documented automatic tasks expiration time. See [Submit](../api/Extensibility-API.v1-fv.html#/operations/automatictasktypeexecutetask) and [Callback](../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback) endpoints
+- We've added a new documentation [page](../docs/development/Integrate-With-Trados-Cloud-Platform-API.md) on how to use the Public API SDK in your apps
+- We've added new locations(Customers and Vendors) for [UI custom elements](../docs/development/UI-App-custom-elements-locations.md)
+
 ## July 2025
 
 - We've expanded support for custom tabs to additional [locations](../docs/development/UI-App-custom-elements-locations.md). You can now use them in the following views:
