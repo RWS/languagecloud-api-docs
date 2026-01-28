@@ -600,7 +600,7 @@
                   },
                   "callbackUrl": {
                     "type": "string",
-                    "description": "The url to call when the task execution is finished. \nThe method should be a POST and the body should be AutomaticTaskCallbackRequest model. The app should provide the X-LC-Tenant header."
+                    "description": "The URL to call when the task execution is finished. \nThe method should be a POST and the body should be AutomaticTaskCallbackRequest model. The app should provide the X-LC-Tenant header."
                   }
                 }
               }
