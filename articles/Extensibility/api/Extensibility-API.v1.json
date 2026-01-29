@@ -140,12 +140,10 @@
         "operationId": "GetConfiguration",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ],
         "responses": {
@@ -180,12 +178,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        }
       },
       "post": {
         "tags": [
@@ -196,12 +189,10 @@
         "operationId": "SetConfiguration",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ],
         "requestBody": {
@@ -249,12 +240,7 @@
             }
           }
         },
-        "x-codegen-request-body-name": "body",
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        "x-codegen-request-body-name": "body"
       }
     },
     "/app-lifecycle": {
@@ -267,12 +253,10 @@
         "operationId": "Lifecycle",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ],
         "requestBody": {
@@ -311,11 +295,6 @@
           }
         },
         "x-codegen-request-body-name": "body",
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
         "x-stoplight": {
           "id": "twu3jqmmyjbcb"
         }
@@ -331,12 +310,10 @@
         "operationId": "MachineTranslationProviderTranslateBCM",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           },
           {
             "$ref": "#/components/parameters/X-LC-AppVersion"
@@ -400,12 +377,7 @@
             }
           }
         },
-        "x-codegen-request-body-name": "body",
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        "x-codegen-request-body-name": "body"
       }
     },
     "/lc.mtprovider.engines": {
@@ -418,12 +390,10 @@
         "operationId": "GetMachineTranslationProviderEngines",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           },
           {
             "name": "model",
@@ -522,12 +492,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        }
       }
     },
     "/lc.mtprovider.engines/{id}": {
@@ -548,12 +513,10 @@
             }
           },
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ],
         "responses": {
@@ -577,12 +540,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        }
       }
     },
     "/lc.automatictask.submit": {
@@ -591,16 +549,14 @@
           "Automatic Task Type Provider"
         ],
         "summary": "Submit Task",
-        "description": "Submits an automatic task for execution. This call should return 'Accepted' and the task itself should be executed on a different thread. Note that there is a read timeout of 5 seconds for this call.",
+        "description": "Submits an automatic task for execution. This call should return 'Accepted' and the task itself should be executed on a different thread. Note that there is a read timeout of 5 seconds for this call. <p>Note: The processing time cannot exceed <b>4h</b> from the moment the task is submitted, otherwise the task will be marked as unresponsive.</p>",
         "operationId": "automatictasktypeexecutetask",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           },
           {
             "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
@@ -644,7 +600,7 @@
                   },
                   "callbackUrl": {
                     "type": "string",
-                    "description": "The url to call when the task execution is finished. \nThe method should be a POST and the body should be AutomaticTaskCallbackRequest model. The app should provide the X-LC-Tenant header."
+                    "description": "The URL to call when the task execution is finished. \nThe method should be a POST and the body should be AutomaticTaskCallbackRequest model. The app should provide the X-LC-Tenant header."
                   }
                 }
               }
@@ -687,12 +643,7 @@
             }
           }
         },
-        "x-codegen-request-body-name": "body",
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        "x-codegen-request-body-name": "body"
       }
     },
     "/external-job/v1/callback": {
@@ -701,16 +652,11 @@
           "Callback"
         ],
         "summary": "Submit Task Outcome",
-        "description": "This is the endpoint where the automatic task apps should return the outcome when the task execution is finished.",
+        "description": "This is the endpoint where the automatic task apps should return the outcome when the task execution is finished. <p>Note: If the callback is not returned within <b>4h</b> of the task submission, the task will be marked as unresponsive!</p>",
         "operationId": "automatiktasktypecallback",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
           },
           {
             "name": "token",
@@ -803,12 +749,10 @@
         "operationId": "ValidateConfigurationSettings",
         "parameters": [
           {
-            "name": "TR_ID",
-            "in": "header",
-            "description": "A trace id, to help track problems. If it's not received, an auto-generated value will be used for logging. TR_ID header should also be set on the response.",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ],
         "responses": {
@@ -825,12 +769,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ]
+        }
       }
     },
     "/lc.preview.startpreview": {
@@ -875,11 +814,6 @@
         "tags": [
           "Preview Provider"
         ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
@@ -889,6 +823,12 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-AppVersion"
+          },
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ]
       }
@@ -935,11 +875,6 @@
         "tags": [
           "Preview Provider"
         ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
@@ -949,6 +884,12 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-AppVersion"
+          },
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ]
       }
@@ -1002,11 +943,6 @@
         "tags": [
           "Preview Provider"
         ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
@@ -1016,6 +952,12 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-AppVersion"
+          },
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ]
       }
@@ -1053,11 +995,6 @@
         "tags": [
           "Preview Provider"
         ],
-        "security": [
-          {
-            "LanguageCloudJWSToken": []
-          }
-        ],
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-ExtensionPointVersion"
@@ -1067,6 +1004,12 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-AppVersion"
+          },
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
           }
         ]
       }
@@ -1110,15 +1053,17 @@
           }
         },
         "description": "This endpoint initiates the background job for verification. The background job will push messages back to the Verification Service via a publish message URL and then send an asynchronous response once the job has completed.\nThe response for the callback is given here:\n[CallbackResponse](#/schemas/VerificationProvider.MainResponse)",
-        "security": [
-          {
-            "Trados Cloud Platform JWS Token": []
-          }
-        ],
         "tags": [
           "Verification Provider"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
+          }
+        ]
       },
       "parameters": [
         {
@@ -1168,11 +1113,6 @@
           }
         },
         "description": "This endpoint verifies the content of a single segment",
-        "security": [
-          {
-            "Trados Cloud Platform JWS Token": []
-          }
-        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -1187,7 +1127,14 @@
           "Verification Provider"
         ]
       },
-      "parameters": []
+      "parameters": [
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
+          }
+      ]
     },
     "/lc.verification.getmessagesbyculture/{culture}": {
       "get": {
@@ -1236,7 +1183,14 @@
         },
         "operationId": "VerificationProviderGetMessagesByCulture",
         "description": "Gets localized resources for message types defined by the app extension",
-        "parameters": []
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
+          }
+        ]
       },
       "parameters": [
         {
@@ -1330,7 +1284,15 @@
         "description": "Returns a JSON schema for the settings associated with this app\nThe JSON schema can must only use specific pre-defined types relating to \"string\", \"number\", \"integer\", \"boolean\", \"datetime\" and \"file\" - for complex types, objects are used with internal properties.",
         "requestBody": {
           "content": {}
-        }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/TR_ID"
+          },
+          {
+            "$ref": "#/components/parameters/x-lc-signature"
+          }
+        ]
       }
     }
   },
@@ -3258,14 +3220,17 @@
         "schema": {
           "type": "string"
         }
+      },
+      "x-lc-signature": {
+        "name": "x-lc-signature",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "JWS token containing the signature and additional claims."
       }
     },
-    "securitySchemes": {
-      "LanguageCloudJWSToken": {
-        "type": "http",
-        "scheme": "bearer",
-        "description": ""
-      }
-    }
+    "securitySchemes": {}
   }
 }

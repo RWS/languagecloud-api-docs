@@ -1990,6 +1990,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/Extensibility/docs/development/Integrate-With-Trados-Cloud-Platform-API.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Extensibility/docs/development/Integrate-With-Trados-Cloud-Platform-API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/Extensibility/docs/development/Lifecycle.md",
       "output": {
         ".html": {
