@@ -128,7 +128,9 @@ foreach ($cf in $contractFiles) {
         $url = $m.Groups[2].Value
 
         # Skip absolute URLs (http, https, mailto)
-        if ($url -match '^(https?:|mailto:|#)') { continue }
+        if ($url -match '^(https?:|mailto:)') { continue }
+        # Skip fragments that are NOT operations or schemas
+        if ($url -match '^#' -and $url -notmatch '^#/(operations|schemas)/') { continue }
 
         $newUrl = $null
 
@@ -177,7 +179,8 @@ foreach ($cf in $contractFiles) {
                 }
 
                 if ($isLocalContract) {
-                    $newUrl = "#/operations/$opId"
+                    $jsonName = [System.IO.Path]::GetFileNameWithoutExtension($refFile)
+                    $newUrl = "$jsonName-fv.html#/operations/$opId"
                 } else {
                     # compute relative path from current file to referenced file's folder
                     $refDir = Split-Path -Path $resolved -Parent
@@ -201,7 +204,8 @@ foreach ($cf in $contractFiles) {
             elseif ($rest -like 'components/schemas/*') {
                 $schema = $rest -replace '^components/schemas/',''
                 if ($isLocalContract) {
-                    $newUrl = "#/schemas/$schema"
+                    $jsonName = [System.IO.Path]::GetFileNameWithoutExtension($refFile)
+                    $newUrl = "$jsonName-fv.html#/schemas/$schema"
                 } else {
                     $refDir = Split-Path -Path $resolved -Parent
                     $refHtmlFile = [System.IO.Path]::Combine($refDir, ([System.IO.Path]::GetFileNameWithoutExtension($refFile) + '-fv.html'))
@@ -221,6 +225,15 @@ foreach ($cf in $contractFiles) {
                 # Not handled pointer type
                 continue
             }
+        }
+
+        # Case 3: Upgrade existing local fragments to full-view filenames
+        elseif ($url -match '^#/(operations|schemas)/(.+)$') {
+             $type = $Matches[1]
+             $id = $Matches[2]
+             $jsonName = [System.IO.Path]::GetFileNameWithoutExtension($cf)
+             $newUrl = "$jsonName-fv.html#/$type/$id"
+             $report += [pscustomobject]@{ File = $cf; Old = $url; New = $newUrl; Reason = 'fragment -> full-view' }
         }
 
         if ($newUrl) {
