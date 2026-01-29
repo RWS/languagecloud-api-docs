@@ -6,7 +6,7 @@ tags: [Development]
 # Custom Elements and Locations
 
 The platform supports the addition of various UI elements, including **buttons** (generic, link, and dropdown) and **panels** (generic, sidebar, and tab).
-These elements can be incorporated into specific sections of the user interface in the **Inbox, Orders, Projects and Reports** areas.
+These elements can be incorporated into specific sections of the user interface in the **Customers, Inbox, Orders, Projects, Reports, and Vendors** areas.
 
 <table>
   <thead>
@@ -20,6 +20,17 @@ These elements can be incorporated into specific sections of the user interface 
     </tr>
 	</thead>
   <tbody>
+    <tr>
+      <td>Customers</td>
+      <td>Customers list</td>
+      <td>
+        customers-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/customers-list-tabpanel.png?raw=true" alt="customers-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
+      <td></td>
+    </tr>
     <tr>
       <td rowspan="13">Inbox</td>
       <td>Tasks list</td>
@@ -272,6 +283,17 @@ These elements can be incorporated into specific sections of the user interface 
       <td>
         reports-list-tabpanel
         <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/reports-list-tabpanel.png?raw=true" alt="reports-list-tabpanel location">
+      </td>
+      <td>tab</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Vendors</td>
+      <td>Vendors list</td>
+      <td>
+        vendors-list-tabpanel
+        <img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/guides/developer/ui/vendors-list-tabpanel.png?raw=true" alt="vendors-list-tabpanel location">
       </td>
       <td>tab</td>
       <td></td>
