@@ -2,11 +2,6 @@
 
 ## January 2026
 
-- In early 2026, we will discontinue publishing extensibility documentation at [Trados Cloud Platform Extensibility Documentation](https://eu.cloud.trados.com/lc/extensibility-docs/16d216d6237ee-what-s-new).
-    - Our extensibility documentation is currently available in two locations:
-        - [Trados Cloud Platform Extensibility Documentation](https://eu.cloud.trados.com/lc/extensibility-docs/16d216d6237ee-what-s-new) - Will be discontinued in early 2026
-        - [Trados Cloud Platform Extensibility](https://developers.rws.com/languagecloud-api-docs/articles/Extensibility/docs/Whats-New.html) - This will remain as the official documentation site.
-    - We will communicate the exact discontinuation date once finalized.
 - We've documented automatic tasks expiration time. See [Submit](../api/Extensibility-API.v1-fv.html#/operations/automatictasktypeexecutetask) and [Callback](../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback) endpoints.
 - We've added a new documentation [page](../docs/development/Integrate-With-Trados-Cloud-Platform-API.md) on how to use the Public API SDK in your apps.
 - We've expanded support for [UI custom elements](../docs/development/UI-App-custom-elements-locations.md) to additional locations: Customers and Vendors.
