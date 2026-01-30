@@ -18,7 +18,7 @@ _disableToc: false
 <link rel="stylesheet" href="https://unpkg.com/@stoplight/elements/styles.min.css" />
 <elements-api 
   apiDescriptionUrl="Public-API.v1.json" 
-  router="hash" 
+  router="memory" 
   layout="stacked"
   hideTryIt="true"
   hideTryItPanel="true"
