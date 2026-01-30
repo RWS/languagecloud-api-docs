@@ -688,10 +688,8 @@
           "type": {
             "type": "string",
             "enum": [
-              "nativeSource",
-              "bcmSource",
-              "nativeTarget",
-              "bcmTarget"
+              "native",
+              "bcm"
             ],
             "description": "The file type."
           }
