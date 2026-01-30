@@ -20,4 +20,6 @@ _disableToc: false
   apiDescriptionUrl="Extensibility-API.v1.json" 
   router="memory" 
   layout="stacked"
+  hideTryIt="true"
+  hideTryItPanel="true"
 ></elements-api>
