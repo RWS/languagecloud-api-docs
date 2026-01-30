@@ -103,4 +103,4 @@
 - name: APIs
   items:
      - name: Extensibility API
-       href: api/Extensibility-API.v1-fv.html
+       href: api/Extensibility-API.v1.md
