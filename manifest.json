@@ -22,6 +22,36 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "RWSTemplate/ManagedReference.common.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/ManagedReference.common.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/ManagedReference.extension.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/ManagedReference.extension.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/ManagedReference.html.primary.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/ManagedReference.html.primary.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "RWSTemplate/Plugins/TradosStudioDocsPlugin.deps.json",
       "output": {
         "resource": {
@@ -32,10 +62,180 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "RWSTemplate/RestApi.common.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/RestApi.common.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/RestApi.extension.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/RestApi.extension.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/RestApi.html.primary.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/RestApi.html.primary.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/UniversalReference.common.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/UniversalReference.common.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/UniversalReference.extension.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/UniversalReference.extension.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/UniversalReference.html.primary.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/UniversalReference.html.primary.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/common.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/common.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/conceptual.extension.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/conceptual.extension.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/conceptual.html.primary.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/conceptual.html.primary.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "RWSTemplate/search-stopwords.json",
       "output": {
         "resource": {
           "relative_path": "RWSTemplate/search-stopwords.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/styles/custom-scripts.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/styles/custom-scripts.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/styles/docfx.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/styles/docfx.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/styles/docfx.vendor.min.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/styles/docfx.vendor.min.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/styles/main.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/styles/main.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/styles/search-worker.min.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/styles/search-worker.min.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/toc.extension.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/toc.extension.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/toc.html.primary.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/toc.html.primary.js"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "RWSTemplate/toc.json.js",
+      "output": {
+        "resource": {
+          "relative_path": "RWSTemplate/toc.json.js"
         }
       },
       "version": ""
