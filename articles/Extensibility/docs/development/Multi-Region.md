@@ -1,8 +1,3 @@
----
-stoplight-id: 4x29bwcvq2f84
-tags: [Development]
----
-
 # Multi-Region
 
 To fulfill the requirements of our customers, Trados Enterprise allows multi-region deployments of your app.

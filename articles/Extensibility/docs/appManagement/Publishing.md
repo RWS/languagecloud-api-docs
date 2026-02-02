@@ -1,7 +1,3 @@
----
-stoplight-id: 220f6cf2449fe
----
-
 # Publishing the App
 
 The publish operation makes your app publicly available in the **RWS AppStore**, allowing other tenants to install and use it.

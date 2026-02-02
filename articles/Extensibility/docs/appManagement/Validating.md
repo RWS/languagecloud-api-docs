@@ -1,7 +1,3 @@
----
-stoplight-id: aacd1775aae19
----
-
 # Validating Account Settings
 
 As we have already seen, most apps require some configuration settings in order to serve their purpose. For example, the machine translation apps such as Google and DeepL may need some credentials to communicate with the 3rd party MT provider.

@@ -1,8 +1,5 @@
 {
   "openapi": "3.1.0",
-  "x-stoplight": {
-    "id": "usvezyelg8nd5"
-  },
   "info": {
     "title": "Trados Cloud Platform Global API",
     "description": "The Trados Cloud Platform API providing global functionality.",
@@ -51,9 +48,6 @@
           }
         },
         "operationId": "ListRegions",
-        "x-stoplight": {
-          "id": "jxhiuihkb6v96"
-        },
         "description": "Lists all the regions including domains names (hosts) for various services.",
         "tags": [
           "Region"
@@ -168,9 +162,6 @@
           }
         },
         "operationId": "ListMyAccounts",
-        "x-stoplight": {
-          "id": "vo1eh8g1njsy0"
-        },
         "description": "Retrieves the accounts from all regions where the authenticated user is part of . \r\n\r\n> For service users only the account where the user is defined is returned.",
         "parameters": [
           {
@@ -188,9 +179,6 @@
     "schemas": {
       "list-regions-response": {
         "title": "List Regions Response",
-        "x-stoplight": {
-          "id": "pmh357jix5qkq"
-        },
         "type": "object",
         "required": [
           "items",
@@ -199,30 +187,18 @@
         "properties": {
           "items": {
             "type": "array",
-            "x-stoplight": {
-              "id": "mmi10qbgs3tud"
-            },
             "items": {
-              "$ref": "#/components/schemas/region-details",
-              "x-stoplight": {
-                "id": "jo3ll1nh6n1pp"
-              }
+              "$ref": "#/components/schemas/region-details"
             }
           },
           "itemCount": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "nnxz2wzsd43cm"
-            }
+            "type": "number"
           }
         },
         "description": "Provides information about available regions and host addresses."
       },
       "region-details": {
         "title": "Region Details",
-        "x-stoplight": {
-          "id": "spfb4bhcmhija"
-        },
         "type": "object",
         "required": [
           "regionCode",
@@ -233,40 +209,25 @@
         "properties": {
           "regionCode": {
             "type": "string",
-            "x-stoplight": {
-              "id": "wkqh30rzsshmd"
-            },
             "description": "Region code that uniquely identifies the region. Possible values are `ca` and `eu`."
           },
           "name": {
             "type": "string",
-            "x-stoplight": {
-              "id": "rhjbrnh017f1m"
-            },
             "description": "Region name.",
             "example": "EU"
           },
           "location": {
             "type": "string",
-            "x-stoplight": {
-              "id": "asmilrimrxssy"
-            },
             "description": "User friendly geographical location of the region.",
             "example": "EU (Frankfurt, DE)"
           },
           "hosts": {
-            "$ref": "#/components/schemas/region-hosts",
-            "x-stoplight": {
-              "id": "t5ym78qgxg7ir"
-            }
+            "$ref": "#/components/schemas/region-hosts"
           }
         }
       },
       "region-hosts": {
         "title": "Region Hosts",
-        "x-stoplight": {
-          "id": "elvhb8u6i4vl3"
-        },
         "type": "object",
         "required": [
           "apiHost"
@@ -274,9 +235,6 @@
         "properties": {
           "apiHost": {
             "type": "string",
-            "x-stoplight": {
-              "id": "s7isz42nnk89u"
-            },
             "description": "Trados Cloud Platform API host. It contains the host and is should be suffixed with the path of the Public API and version."
           }
         }
@@ -366,9 +324,6 @@
       },
       "well-known-jwks-response": {
         "title": "Well Known Keys Response",
-        "x-stoplight": {
-          "id": "sf68ge9zrow9r"
-        },
         "type": "object",
         "properties": {
           "keys": {
@@ -418,9 +373,6 @@
           },
           "regionCode": {
             "type": "string",
-            "x-stoplight": {
-              "id": "tp3uu68nb4946"
-            },
             "description": "Region code that uniquely identifies the region."
           }
         },

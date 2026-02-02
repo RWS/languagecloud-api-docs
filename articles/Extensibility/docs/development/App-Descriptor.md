@@ -1,7 +1,3 @@
----
-stoplight-id: 1j4h4ccwlvxkq
----
-
 # App Descriptor
 
 A descriptor defines what the app does. The very first interaction between Trados and an app is requesting the descriptor.

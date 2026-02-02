@@ -1,8 +1,3 @@
----
-stoplight-id: ttmhuovvyy6rs
----
-
-
 # Retiring the App
 
 Before retiring an app, you must first go through the following steps:

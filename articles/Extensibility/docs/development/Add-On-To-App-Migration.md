@@ -1,7 +1,3 @@
----
-stoplight-id: fhf8qgiqk5ml3
----
-
 # Add-on to App Migration
 
 If you previously have developed an add-on, you have to migrate it to the app concept. Add-ons have in the descriptor the property `descriptorVersion` with value `1.3` or less. Apps start with `descriptorVersion` `1.4`.

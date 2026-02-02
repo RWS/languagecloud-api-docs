@@ -1,8 +1,5 @@
 {
   "openapi": "3.1.0",
-  "x-stoplight": {
-    "id": "99245a6f1a8b3"
-  },
   "info": {
     "title": "Trados Data Bridge API",
     "version": "1.0",
@@ -95,21 +92,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "ewt80yfhs7pra"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "fg5kkmeofdwma"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/fact-fts",
-                        "x-stoplight": {
-                          "id": "ljku7ow2vvpny"
-                        }
+                        "$ref": "#/components/schemas/fact-fts"
                       }
                     }
                   }
@@ -126,9 +114,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "0i2egklq27ujm"
         }
       },
       "parameters": []
@@ -151,21 +136,12 @@
                   "properties": {
                     "itemCount": {
                       "type": "number",
-                      "x-stoplight": {
-                        "id": "czzt762fllpa5"
-                      },
                       "default": 0
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "29by18tjd7l2t"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-project",
-                        "x-stoplight": {
-                          "id": "htnoecnhmp89l"
-                        }
+                        "$ref": "#/components/schemas/dim-project"
                       }
                     }
                   }
@@ -207,10 +183,7 @@
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
           }
-        ],
-        "x-stoplight": {
-          "id": "n10x3jiu55ecw"
-        }
+        ]
       }
     },
     "/fts/customers": {
@@ -255,21 +228,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "06xcxd48n6b8x"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "wc9bivpffu606"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "duob2eyyblqzg"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -286,9 +250,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "yr0wamil3dx3a"
         }
       }
     },
@@ -334,21 +295,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "6a4yj3lm2bnv0"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "mvhrtilalxlr4"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "d8g9frsr879tv"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -365,9 +317,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "tllsox5iz99ct"
         }
       }
     },
@@ -413,21 +362,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "cg998acog1fkf"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "xeqd5ah8n8duy"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-source-file",
-                        "x-stoplight": {
-                          "id": "w1i4fe4xchzwv"
-                        }
+                        "$ref": "#/components/schemas/dim-source-file"
                       }
                     }
                   }
@@ -444,9 +384,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "l3nqn7380gmvh"
         }
       }
     },
@@ -492,21 +429,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "0elgejiyuov0f"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "wo7tp3uil6a0y"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "k5am7el4cgaf8"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -523,9 +451,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "k049s6w993rzg"
         }
       }
     },
@@ -570,21 +495,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "q3d312skt1oeq"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "4u2yqd0zmmt0b"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "gli0mvzsa5hwl"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -602,9 +518,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "hfgystwoeq6qj"
         }
       }
     },
@@ -650,21 +563,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "qrcmdoe4yk8gb"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "zbdgyxs5r01be"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-translator",
-                        "x-stoplight": {
-                          "id": "igusjpclelbjv"
-                        }
+                        "$ref": "#/components/schemas/dim-translator"
                       }
                     }
                   }
@@ -681,9 +585,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "3v735ipp8n13m"
         }
       }
     },
@@ -729,21 +630,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "dlrxj1jkttiht"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "8rs5of8mwuwch"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "1a9l4d7apr7z1"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -760,9 +652,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "kutxxxe8tmp72"
         }
       }
     },
@@ -808,21 +697,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "pqr2i33pek3yf"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "p6mc5kkl0nt8q"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-reviewer",
-                        "x-stoplight": {
-                          "id": "d3f0pnl42am03"
-                        }
+                        "$ref": "#/components/schemas/dim-reviewer"
                       }
                     }
                   }
@@ -839,9 +719,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "2hpywe98wzok6"
         }
       }
     },
@@ -887,21 +764,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "of9yowi1zvwnv"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "acji8ccoyrzrw"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "tldh4y2eeyarx"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -918,9 +786,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "redilqpktx4td"
         }
       }
     },
@@ -966,21 +831,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "9341z7kfd1du4"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "1k6nwdpy0rzy9"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer-reviewer",
-                        "x-stoplight": {
-                          "id": "uq22vt2xqmuyq"
-                        }
+                        "$ref": "#/components/schemas/dim-customer-reviewer"
                       }
                     }
                   }
@@ -997,9 +853,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "hqwyasr8weirm"
         }
       }
     },
@@ -1045,21 +898,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "h71yaxhpgn840"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "ot0jxidlb7ggc"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "a2yyfw10lh07u"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -1076,9 +920,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "snrplnvrpt3zj"
         }
       }
     },
@@ -1127,21 +968,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "1poawq2phcwua"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "ka5z4c83mq2e2"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/fact-task-status",
-                        "x-stoplight": {
-                          "id": "1hzf6oj5i1dab"
-                        }
+                        "$ref": "#/components/schemas/fact-task-status"
                       }
                     }
                   }
@@ -1158,9 +990,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "x5fhvnpoon0ly"
         }
       }
     },
@@ -1169,9 +998,6 @@
         "summary": "List Task Status Customer Dimension",
         "operationId": "ListTaskStatusCustomerDimension",
         "description": "Retrieves the customer dimension present in the Task Status dataset.\r\n\r\n",
-        "x-stoplight": {
-          "id": "d5nv1zhbzrmmr"
-        },
         "tags": [
           "Task Status Data Set"
         ],
@@ -1209,21 +1035,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "20zd4iij11igm"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "x9mryupljw2br"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "hxh89ueglo3v3"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -1251,9 +1068,6 @@
         "tags": [
           "Task Status Data Set"
         ],
-        "x-stoplight": {
-          "id": "yo6fvs55m0yf4"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -1288,21 +1102,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "nj9lcuawo1ydx"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "9sn9ilrp5praf"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "xeb313ksba378"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -1330,9 +1135,6 @@
         "tags": [
           "Task Status Data Set"
         ],
-        "x-stoplight": {
-          "id": "w4b26wdtcu6sw"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -1367,16 +1169,10 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "rq1lyazra03mz"
-                      }
+                      "type": "integer"
                     },
                     "items": {
-                      "$ref": "#/components/schemas/dim-project",
-                      "x-stoplight": {
-                        "id": "q7bd6eb0dtbux"
-                      }
+                      "$ref": "#/components/schemas/dim-project"
                     }
                   }
                 }
@@ -1403,9 +1199,6 @@
         "tags": [
           "Task Status Data Set"
         ],
-        "x-stoplight": {
-          "id": "qq8yjoje5asm2"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -1440,21 +1233,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "knrt6klvcrc9y"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "o5j1un1tx5b77"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-source-file",
-                        "x-stoplight": {
-                          "id": "qq4mtyc0num6u"
-                        }
+                        "$ref": "#/components/schemas/dim-source-file"
                       }
                     }
                   }
@@ -1482,9 +1266,6 @@
         "tags": [
           "Task Status Data Set"
         ],
-        "x-stoplight": {
-          "id": "rh7h8v3k0uw9h"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -1519,21 +1300,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "5ft444xymql36"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "jzi7fgztw3n0z"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-owner",
-                        "x-stoplight": {
-                          "id": "z5f0xluufu2iv"
-                        }
+                        "$ref": "#/components/schemas/dim-owner"
                       }
                     }
                   }
@@ -1561,9 +1333,6 @@
         "tags": [
           "Task Status Data Set"
         ],
-        "x-stoplight": {
-          "id": "fw5aujk7hbvwh"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -1598,21 +1367,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "mmjawamcw7809"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "gm6q0zfgeyzo5"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-task-types",
-                        "x-stoplight": {
-                          "id": "r6szcce7ygpne"
-                        }
+                        "$ref": "#/components/schemas/dim-task-types"
                       }
                     }
                   }
@@ -1696,9 +1456,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "7a5yhhbbzmsg9"
         }
       }
     },
@@ -1747,21 +1504,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "l8c655gip23fm"
-                      }
+                      "type": "integer"
                     },
                     "items": {
-                      "x-stoplight": {
-                        "id": "jytr6dwhwclo8"
-                      },
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/fact-vendor-costs",
-                        "x-stoplight": {
-                          "id": "mr7e6ne184dpj"
-                        }
+                        "$ref": "#/components/schemas/fact-vendor-costs"
                       }
                     }
                   }
@@ -1778,9 +1526,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "o1tfv8jok498q"
         }
       }
     },
@@ -1826,16 +1571,10 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "45fx3i5pmzcif"
-                      }
+                      "type": "integer"
                     },
                     "items": {
-                      "$ref": "#/components/schemas/dim-project",
-                      "x-stoplight": {
-                        "id": "em2q7kgwaagej"
-                      }
+                      "$ref": "#/components/schemas/dim-project"
                     }
                   }
                 }
@@ -1851,9 +1590,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "zdq0rvoxl6gba"
         }
       }
     },
@@ -1899,21 +1635,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "jecfbgtzikws5"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "3vfqogcf6mtk9"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "lg1ek9x3jsicf"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -1930,9 +1657,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "jhqck3dcecbxp"
         }
       }
     },
@@ -1941,9 +1665,6 @@
         "summary": "List Vendor Costs Language Pair Dimension",
         "operationId": "ListVendorCostsLanguagePairDimension",
         "description": "Retrieves the language pair dimension present in the vendor costs dataset.\r\n\r\n",
-        "x-stoplight": {
-          "id": "rtg5h3anu94k9"
-        },
         "tags": [
           "Vendor Costs Data Set"
         ],
@@ -1981,21 +1702,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "cldc3o6vi5319"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "9jev5ffz9xhms"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "gp19ltehox0b2"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -2052,21 +1764,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "n8r4ec3uo4wl3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "7v10e9x5bgq2m"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-currency",
-                        "x-stoplight": {
-                          "id": "1r1fj0molmqj8"
-                        }
+                        "$ref": "#/components/schemas/dim-currency"
                       }
                     }
                   }
@@ -2088,9 +1791,6 @@
           "403": {
             "$ref": "#/components/responses/error-model-403"
           }
-        },
-        "x-stoplight": {
-          "id": "bw8a55jxogzea"
         }
       }
     },
@@ -2099,9 +1799,6 @@
         "summary": "List Vendor Costs Order Template Dimension",
         "operationId": "ListVendorCostsOrderTemplateDimension",
         "description": "Retrieves the vendor order template dimension present in the vendor costs dataset.\r\n",
-        "x-stoplight": {
-          "id": "x3ls0cng8e2m5"
-        },
         "tags": [
           "Vendor Costs Data Set"
         ],
@@ -2139,21 +1836,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "1h7h5lewreovk"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "au02sx56m3d5q"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-vendor-order-template",
-                        "x-stoplight": {
-                          "id": "l8l8wh9oopkgu"
-                        }
+                        "$ref": "#/components/schemas/dim-vendor-order-template"
                       }
                     }
                   }
@@ -2178,9 +1866,6 @@
         "summary": "List Vendor Costs Service Type Dimension",
         "operationId": "ListVendorCostsServiceTypeDimension",
         "description": "Retrieves the service types dimension present in the vendor costs dataset.\r\n",
-        "x-stoplight": {
-          "id": "c7ph3gwztp4fq"
-        },
         "tags": [
           "Vendor Costs Data Set"
         ],
@@ -2218,21 +1903,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "x32t5yf9lwk3o"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "omnll03q8q45q"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-service-types",
-                        "x-stoplight": {
-                          "id": "k564z9p5y5wgr"
-                        }
+                        "$ref": "#/components/schemas/dim-service-types"
                       }
                     }
                   }
@@ -2256,9 +1932,6 @@
       "get": {
         "summary": "List Translation Quality Evaluation Metrics",
         "operationId": "ListTranslationQualityEvaluationMetrics",
-        "x-stoplight": {
-          "id": "8g0jhj8szruix"
-        },
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
@@ -2300,21 +1973,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "mes1hd6gp4a7w"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "of2pd1r03iti0"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/fact-tqe",
-                        "x-stoplight": {
-                          "id": "kr584szhus68t"
-                        }
+                        "$ref": "#/components/schemas/fact-tqe"
                       }
                     }
                   }
@@ -2342,9 +2006,6 @@
         ],
         "operationId": "ListTQEProjectDimension",
         "description": "Retrieves the project dimension present in the Translation Quality Evaluation(TQE) dataset.",
-        "x-stoplight": {
-          "id": "q2ip1fe9aisqt"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2379,21 +2040,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "q4ro2lh13mu29"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "sger5idzekmtt"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-project",
-                        "x-stoplight": {
-                          "id": "ls56v8ek5z4x0"
-                        }
+                        "$ref": "#/components/schemas/dim-project"
                       }
                     }
                   }
@@ -2421,9 +2073,6 @@
           "Translation Quality Evaluation Data Set"
         ],
         "description": "Retrieves the customer dimension present in the Translation Quality Evaluation(TQE) dataset.",
-        "x-stoplight": {
-          "id": "2qltuek7dypkd"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2458,21 +2107,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "uzkvcxculd9v6"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "3lczer4ck0hzs"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "vg99igj6z2bvc"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -2500,9 +2140,6 @@
         ],
         "operationId": "ListTQELanguagePairDimension",
         "description": "Retrieves the language pair dimension present in the Translation Quality Evaluation(TQE) dataset.",
-        "x-stoplight": {
-          "id": "87un8zeddsx3t"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2537,21 +2174,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "ceozg8sizadgm"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "u3de31tud14bg"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "ipbzdefdatjcx"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -2579,9 +2207,6 @@
         ],
         "operationId": "ListTQESourceFileDimension",
         "description": "Retrieves the source file dimension present in the Translation Quality Evaluation(TQE) dataset.",
-        "x-stoplight": {
-          "id": "memcg6h8lmklr"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2616,21 +2241,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "q8tsfpvjyvc3h"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "nvvkr510e1q7b"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-source-file",
-                        "x-stoplight": {
-                          "id": "86zvqpfb3yrmw"
-                        }
+                        "$ref": "#/components/schemas/dim-source-file"
                       }
                     }
                   }
@@ -2658,9 +2274,6 @@
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
-        "x-stoplight": {
-          "id": "63r6bqv1wdrqv"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2695,21 +2308,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "pjqc2xl1txq2r"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "pv2u2cjiiqlf0"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-linguist",
-                        "x-stoplight": {
-                          "id": "5lz0hb1lck5gj"
-                        }
+                        "$ref": "#/components/schemas/dim-linguist"
                       }
                     }
                   }
@@ -2737,9 +2341,6 @@
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
-        "x-stoplight": {
-          "id": "9bcx0xskaps6x"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2774,22 +2375,13 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "iyizsd7u3qhnh"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "oylf62xdrjpwv"
-                      },
                       "description": "Final Translation Origin dimension\r\n\r\n",
                       "items": {
-                        "$ref": "#/components/schemas/dim-translation-origin",
-                        "x-stoplight": {
-                          "id": "69iinhzm9tsrp"
-                        }
+                        "$ref": "#/components/schemas/dim-translation-origin"
                       }
                     }
                   }
@@ -2817,9 +2409,6 @@
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
-        "x-stoplight": {
-          "id": "d25g35t239m3d"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -2854,22 +2443,13 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "u0vspzqlap3y0"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "473116hq46tp5"
-                      },
                       "description": "Original Translation Origin dimension\r\n\r\n",
                       "items": {
-                        "$ref": "#/components/schemas/dim-translation-origin",
-                        "x-stoplight": {
-                          "id": "3vyyqttbs6ubb"
-                        }
+                        "$ref": "#/components/schemas/dim-translation-origin"
                       }
                     }
                   }
@@ -2894,9 +2474,6 @@
         "summary": "List TQE Evaluation Category Dimension",
         "operationId": "ListTQEEvaluationCategoryDimension",
         "description": "Retrieves the Translation Quality Evaluation Category dimension present in the Translation Quality Evaluation(TQE) dataset.",
-        "x-stoplight": {
-          "id": "v1wwcy5qjjrrq"
-        },
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
@@ -2934,21 +2511,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "k7yeqbt6jj3vr"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "16o13w5cge8c4"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-tqe-category",
-                        "x-stoplight": {
-                          "id": "a5it6tcrsdrnp"
-                        }
+                        "$ref": "#/components/schemas/dim-tqe-category"
                       }
                     }
                   }
@@ -2976,9 +2544,6 @@
         "tags": [
           "Translation Quality Evaluation Data Set"
         ],
-        "x-stoplight": {
-          "id": "euhgjsl66bseu"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3013,21 +2578,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "whru8s6o3yem6"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "dzie4ucoy7ef5"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-task-types",
-                        "x-stoplight": {
-                          "id": "rgyb8tfphudkw"
-                        }
+                        "$ref": "#/components/schemas/dim-task-types"
                       }
                     }
                   }
@@ -3062,21 +2618,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "eqamuvresax6d"
-                      }
+                      "type": "string"
                     },
                     "items": {
-                      "x-stoplight": {
-                        "id": "qs6mpwcvnrgwj"
-                      },
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/fact-language-revenue-details",
-                        "x-stoplight": {
-                          "id": "d06apvbcejhbt"
-                        }
+                        "$ref": "#/components/schemas/fact-language-revenue-details"
                       }
                     }
                   }
@@ -3120,9 +2667,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsMetrics",
-        "x-stoplight": {
-          "id": "wsp4t9mxcznzq"
-        },
         "description": "Retrieves the revenue details metrics present in the language revenue details dataset.",
         "parameters": [
           {
@@ -3172,21 +2716,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "ni14siafobgfw"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "w2ust3jfym8r3"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-project",
-                        "x-stoplight": {
-                          "id": "ldunkekewke44"
-                        }
+                        "$ref": "#/components/schemas/dim-project"
                       }
                     }
                   }
@@ -3250,9 +2785,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsProjectDimension",
-        "x-stoplight": {
-          "id": "tg7ng44t3also"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3296,21 +2828,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "u549qr6lkusro"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "puseim18xi4ur"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "3mrwgbjqaqtgz"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -3351,9 +2874,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsCustomerDimension",
-        "x-stoplight": {
-          "id": "he1svruzn3xsa"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3398,21 +2918,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "iv29my38xb32i"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "n52iypx1gsycm"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "4u9nyeddl36fk"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -3449,9 +2960,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsLanguagePairDimension",
-        "x-stoplight": {
-          "id": "c8gn0ia2xr7zu"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3490,21 +2998,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "0otlyp021krsy"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "rri61298kj3nw"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-revenue-type",
-                        "x-stoplight": {
-                          "id": "ow1buzt9r8q5j"
-                        }
+                        "$ref": "#/components/schemas/dim-revenue-type"
                       }
                     }
                   }
@@ -3544,9 +3043,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsRevenueTypeDimension",
-        "x-stoplight": {
-          "id": "wbas6g4idlhwr"
-        },
         "description": "Retrieves the revenue types present in the language revenue details dataset.",
         "parameters": [
           {
@@ -3591,21 +3087,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "chvpq6pyjme3s"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "fcnb8rhvsc3ew"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "y9lecghp0i1e5"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -3647,9 +3134,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsQuoteDateDimension",
-        "x-stoplight": {
-          "id": "r7tf64dos46sw"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3693,21 +3177,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "1iypfsp1f02p2"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "wwg1vh5r8ay7s"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "szenap43rry9c"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -3749,9 +3224,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsProjectCreationDateDimension",
-        "x-stoplight": {
-          "id": "x6dib4rrfndin"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3795,21 +3267,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "tl9llpj7yk2d6"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "uqrcqo0eq6lbe"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-currency",
-                        "x-stoplight": {
-                          "id": "pjt30zexotw05"
-                        }
+                        "$ref": "#/components/schemas/dim-currency"
                       }
                     }
                   }
@@ -3843,9 +3306,6 @@
           }
         },
         "operationId": "ListLanguageRevenueDetailsCurrencyDimension",
-        "x-stoplight": {
-          "id": "f60nixd20thnl"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3889,21 +3349,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "ad39q24bvwvjn"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "ophltdj39qa3s"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "qkl4n7ozag38k"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -3944,9 +3395,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesCustomerDimension",
-        "x-stoplight": {
-          "id": "q4ss4tmx9sfdy"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -3990,21 +3438,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "ogq1y21pikfzy"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "rkuij34nj8fax"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-project",
-                        "x-stoplight": {
-                          "id": "nlxcpfc8skx2c"
-                        }
+                        "$ref": "#/components/schemas/dim-project"
                       }
                     }
                   }
@@ -4068,9 +3507,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesProjectsDimension",
-        "x-stoplight": {
-          "id": "1w4wg6dt7kfds"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4114,21 +3550,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "tzfcfx8mv4t9y"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "cf86yqcrusucu"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "i7cnwzfkit6so"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -4165,9 +3592,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesLanguagePairDimension",
-        "x-stoplight": {
-          "id": "w4zv7iq52ok2m"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4211,21 +3635,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "mum7mpxfywm6c"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "8kj68ihm87l83"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "hpyea0aod6l4h"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -4267,9 +3682,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesApproveDateDimension",
-        "x-stoplight": {
-          "id": "ikcghqfid9s8q"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4313,21 +3725,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "a34d83d7ct4tx"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "fdemt05uh714t"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "jfzwji0on5e1g"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -4369,9 +3772,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesQuoteDateDimension",
-        "x-stoplight": {
-          "id": "ssk89brj5ceq9"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4415,21 +3815,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/fact-language-revenues",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/fact-language-revenues"
                       }
                     }
                   }
@@ -4473,9 +3864,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesMetrics",
-        "x-stoplight": {
-          "id": "wojzayo42r216"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4522,21 +3910,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "1djlu8ry1htip"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "5lkmufrdncsk6"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-currency",
-                        "x-stoplight": {
-                          "id": "4l3c4tdaejc10"
-                        }
+                        "$ref": "#/components/schemas/dim-currency"
                       }
                     }
                   }
@@ -4570,9 +3949,6 @@
           }
         },
         "operationId": "ListLanguageRevenuesCurrencyDimension",
-        "x-stoplight": {
-          "id": "htenx9zrq9ao3"
-        },
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4616,21 +3992,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "yjxygm2fgwdyd"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "74qqt5fa8p735"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-quote-approver",
-                        "x-stoplight": {
-                          "id": "kep1nvd5cc7j8"
-                        }
+                        "$ref": "#/components/schemas/dim-quote-approver"
                       }
                     }
                   }
@@ -4677,9 +4044,6 @@
           }
         },
         "operationId": "ListLanguageRevenueQuoteApprover",
-        "x-stoplight": {
-          "id": "05mt4zhgp6i0l"
-        },
         "description": "Retrieves the quote approvers present in the language revenues dataset.",
         "parameters": [
           {
@@ -4723,21 +4087,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/fact-translation-leverage",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/fact-translation-leverage"
                       }
                     }
                   }
@@ -4805,10 +4160,7 @@
             "$ref": "#/components/parameters/expand"
           }
         ],
-        "description": "Retrieves the translation leverages metrics present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "7omi2vwf25a6b"
-        }
+        "description": "Retrieves the translation leverages metrics present in the translation leverages dataset."
       }
     },
     "/translation-leverages/translation-dates": {
@@ -4831,21 +4183,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-date",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-date"
                       }
                     }
                   }
@@ -4907,10 +4250,7 @@
             "$ref": "#/components/parameters/count"
           }
         ],
-        "description": "Retrieves the translation dates present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "wlxgkc1kc2ay0"
-        }
+        "description": "Retrieves the translation dates present in the translation leverages dataset."
       }
     },
     "/translation-leverages/projects": {
@@ -4933,21 +4273,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-project",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-project"
                       }
                     }
                   }
@@ -5031,10 +4362,7 @@
             "$ref": "#/components/parameters/count"
           }
         ],
-        "description": "Retrieves the project dimension present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "fye14g6491dff"
-        }
+        "description": "Retrieves the project dimension present in the translation leverages dataset."
       }
     },
     "/translation-leverages/customers": {
@@ -5057,21 +4385,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-customer",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-customer"
                       }
                     }
                   }
@@ -5132,10 +4451,7 @@
             "$ref": "#/components/parameters/count"
           }
         ],
-        "description": "Retrieves the customers dimension present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "0ljm8rmscngke"
-        }
+        "description": "Retrieves the customers dimension present in the translation leverages dataset."
       }
     },
     "/translation-leverages/language-pairs": {
@@ -5158,21 +4474,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-language-pair",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-language-pair"
                       }
                     }
                   }
@@ -5229,10 +4536,7 @@
             "$ref": "#/components/parameters/count"
           }
         ],
-        "description": "Retrieves the language pair dimension present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "fyftjnmfbk8ph"
-        }
+        "description": "Retrieves the language pair dimension present in the translation leverages dataset."
       }
     },
     "/translation-leverages/source-files": {
@@ -5255,21 +4559,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-source-file",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-source-file"
                       }
                     }
                   }
@@ -5332,10 +4627,7 @@
             "$ref": "#/components/parameters/count"
           }
         ],
-        "description": "Retrieves the source file dimension present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "6g8p17bni7qjn"
-        }
+        "description": "Retrieves the source file dimension present in the translation leverages dataset."
       }
     },
     "/translation-leverages/leverage-bands": {
@@ -5358,21 +4650,12 @@
                   "type": "object",
                   "properties": {
                     "itemCount": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "meqmil22py5e3"
-                      }
+                      "type": "integer"
                     },
                     "items": {
                       "type": "array",
-                      "x-stoplight": {
-                        "id": "hs9sz7y5zbj33"
-                      },
                       "items": {
-                        "$ref": "#/components/schemas/dim-leverage-band",
-                        "x-stoplight": {
-                          "id": "m5szfzj5ka57e"
-                        }
+                        "$ref": "#/components/schemas/dim-leverage-band"
                       }
                     }
                   }
@@ -5427,10 +4710,7 @@
             "$ref": "#/components/parameters/expand"
           }
         ],
-        "description": "Retrieves the leverage bands dimension present in the translation leverages dataset.",
-        "x-stoplight": {
-          "id": "juyt2hzpppf0t"
-        }
+        "description": "Retrieves the leverage bands dimension present in the translation leverages dataset."
       }
     }
   },
@@ -5637,16 +4917,10 @@
             "type": "string",
             "description": "A string containing custom fields and values specific to the project. Format: 'customField1 = value1 | customField2 = value2'."
           }
-        },
-        "x-stoplight": {
-          "id": "q88adevwcd317"
         }
       },
       "fact-fts": {
         "type": "object",
-        "x-stoplight": {
-          "id": "d04bca79e1e7a"
-        },
         "examples": [
           {
             "projectId": 0,
@@ -5812,116 +5086,68 @@
           },
           "canceled": {
             "type": "boolean",
-            "description": "A boolean indicating whether the translation project was canceled.",
-            "x-stoplight": {
-              "id": "0kci7sd3j4fef"
-            }
+            "description": "A boolean indicating whether the translation project was canceled."
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "z7ivdmd1veupp"
-            },
             "description": "(Optional) Expand the project dimension associated with the project id using the $expand parameter."
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "2g4byidz903hn"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customer id using the $expand parameter."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "swu6f6xtp8oey"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the language pair id using the $expand parameter."
           },
           "sourceFile": {
             "$ref": "#/components/schemas/dim-source-file",
-            "x-stoplight": {
-              "id": "ucwmc945nraz4"
-            },
             "description": "(Optional) Expand the source file dimension associated with the source file id using the $expand parameter."
           },
           "projectCreationDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "7vk8fy2gf27i9"
-            },
             "description": "(Optional) Expand the project creation date dimension associated with the project creation date id using the $expand parameter."
           },
           "translationDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "dtspudu6wkb2f"
-            },
             "description": "(Optional) Expand the translation date dimension associated with the project translation date id using the $expand parameter."
           },
           "translator": {
             "$ref": "#/components/schemas/dim-translator",
-            "x-stoplight": {
-              "id": "hjuiywjfgsusm"
-            },
             "description": "(Optional) Expand the translator dimension associated with the translator id using the $expand parameter."
           },
           "reviewDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "vkx8lerc2b70z"
-            },
             "description": "(Optional) Expand the review date dimension associated with the review date id using the $expand parameter."
           },
           "reviewer": {
             "$ref": "#/components/schemas/dim-reviewer",
-            "x-stoplight": {
-              "id": "56zknv580zrft"
-            },
             "description": "(Optional) Expand the reviewer dimension associated with the reviewer id using the $expand parameter."
           },
           "customerReviewDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "oh3xzsresp5s0"
-            },
             "description": "(Optional) Expand the customer review date dimension associated with the customer review date id using the $expand parameter."
           },
           "customerReviewer": {
             "$ref": "#/components/schemas/dim-customer-reviewer",
-            "x-stoplight": {
-              "id": "6cq4y8ecbyrkt"
-            },
             "description": "(Optional) Expand the customer reviewer dimension associated with the customer reviewer id using the $expand parameter."
           },
           "finalizationDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "a6qwcrnfr62g1"
-            },
             "description": "(Optional) Expand the finalization date dimension associated with the finalization date id using the $expand parameter."
           }
         }
       },
       "error-details": {
         "title": "Error details",
-        "x-stoplight": {
-          "id": "3qhaf2bx584l3"
-        },
         "type": "object",
         "description": "Error details",
         "properties": {
           "code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ipi52a5huhj4d"
-            }
+            "type": "string"
           },
           "message": {
             "type": "string",
-            "x-stoplight": {
-              "id": "exw5wnpw0ntjf"
-            },
             "description": "Error description"
           }
         }
@@ -5990,10 +5216,7 @@
           }
         },
         "description": "Customer dimension",
-        "title": "Customer Dimension",
-        "x-stoplight": {
-          "id": "v1jmbizruxvld"
-        }
+        "title": "Customer Dimension"
       },
       "dim-language-pair": {
         "type": "object",
@@ -6039,10 +5262,7 @@
           }
         },
         "description": "Language Pair dimension",
-        "title": "Language Pair Dimension",
-        "x-stoplight": {
-          "id": "wsdcbytswmsot"
-        }
+        "title": "Language Pair Dimension"
       },
       "dim-source-file": {
         "type": "object",
@@ -6116,14 +5336,8 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the source file was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "buq1u3c0fj5s8"
-            },
             "format": "date-time"
           }
-        },
-        "x-stoplight": {
-          "id": "wrqiflyphu97q"
         }
       },
       "dim-date": {
@@ -6196,9 +5410,6 @@
             "description": "The full date in 'YYYY-MM-DD' format.",
             "format": "date"
           }
-        },
-        "x-stoplight": {
-          "id": "tju1scnphkrue"
         }
       },
       "dim-translator": {
@@ -6258,25 +5469,16 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the translator's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "va02qnv56yrge"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the translator's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "o7e83y4yu47t9"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the translator's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "xkaxiiggzaocl"
-            },
             "format": "date-time"
           },
           "vendorId": {
@@ -6291,9 +5493,6 @@
             "type": "boolean",
             "description": "A boolean indicating whether the translator's account has been deleted."
           }
-        },
-        "x-stoplight": {
-          "id": "qqd3n859lqu9w"
         }
       },
       "dim-reviewer": {
@@ -6353,25 +5552,16 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "u07y5mk1o9d8l"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "7nkhq024b6qf0"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "nz8qzx0llby6t"
-            },
             "format": "date-time"
           },
           "vendorId": {
@@ -6386,9 +5576,6 @@
             "type": "boolean",
             "description": "A boolean indicating whether the reviewer's account has been deleted."
           }
-        },
-        "x-stoplight": {
-          "id": "3gwkzywqps7fv"
         }
       },
       "dim-customer-reviewer": {
@@ -6446,34 +5633,22 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the customer reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "y0kc1gdppxb9w"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the customer reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "ndwbs7s5tfz0u"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the customer reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "9sjzv0ljmqxvg"
-            },
             "format": "date-time"
           },
           "deleted": {
             "type": "boolean",
             "description": "A boolean indicating whether the customer reviewer's account has been deleted."
           }
-        },
-        "x-stoplight": {
-          "id": "1qz943i9spvk2"
         }
       },
       "fact-vendor-costs": {
@@ -6485,11 +5660,11 @@
             "customerId": 1234567890,
             "languagePairId": 111111,
             "vendorOrderTemplateId": 222222,
-            "quoteCreatedAt": "2024-01-01T00:00:00.000Z",
+            "quoteCreatedAt": "2024-01-01T00:00:00Z",
             "serviceTypeId": 333,
-            "quoteReviewedAt": "2024-01-01T00:00:00.000Z",
-            "quoteApprovedAt": "2024-01-01T00:00:00.000Z",
-            "quoteUpdatedAt": "2024-01-01T00:00:00.000Z",
+            "quoteReviewedAt": "2024-01-01T00:00:00Z",
+            "quoteApprovedAt": "2024-01-01T00:00:00Z",
+            "quoteUpdatedAt": "2024-01-01T00:00:00Z",
             "fileCount": 1,
             "targetWordCount": 1000,
             "currencyId": 444444,
@@ -6573,51 +5748,30 @@
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "t2831fnpurl8b"
-            },
             "description": "(Optional) Expand the project dimension associated with the project id using the $expand parameter."
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "x5apvmyqjzz4u"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customer id using the $expand parameter."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "jwzbmhe1a27oe"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the language pair id using the $expand parameter."
           },
           "vendorOrderTemplate": {
             "$ref": "#/components/schemas/dim-vendor-order-template",
-            "x-stoplight": {
-              "id": "f75eq39m8klsz"
-            },
             "description": "(Optional) Expand the vendor order template dimension associated with the vendorOrderTemplateId using the $expand parameter."
           },
           "serviceType": {
             "$ref": "#/components/schemas/dim-service-types",
-            "x-stoplight": {
-              "id": "tlzo73clwbho2"
-            },
             "description": "(Optional) Expand the service types dimension associated with the serviceTypeId using the $expand parameter."
           },
           "currency": {
             "$ref": "#/components/schemas/dim-currency",
-            "x-stoplight": {
-              "id": "6zvycro4q2is3"
-            },
             "description": "(Optional) Expand the currency dimension associated with the currencyId using the $expand parameter."
           }
         },
-        "title": "Vendor Costs Metrics",
-        "x-stoplight": {
-          "id": "r80ehydon9lwf"
-        }
+        "title": "Vendor Costs Metrics"
       },
       "dim-currency": {
         "type": "object",
@@ -6648,10 +5802,7 @@
           }
         },
         "description": "Currency dimension",
-        "title": "Currency Dimension",
-        "x-stoplight": {
-          "id": "1627md05efegl"
-        }
+        "title": "Currency Dimension"
       },
       "dim-vendor-order-template": {
         "type": "object",
@@ -6702,18 +5853,12 @@
           "createdAt": {
             "type": "string",
             "description": "Date and time when the vendor order template was created. (ISO 8601 format)",
-            "x-stoplight": {
-              "id": "qgu8nxpo8qsju"
-            },
             "format": "date-time"
           },
           "deleted": {
             "type": "boolean",
             "description": "Indicates whether the vendor order template has been deleted (`true`) or is active (`false`)."
           }
-        },
-        "x-stoplight": {
-          "id": "g1ki1690apv5x"
         }
       },
       "dim-service-types": {
@@ -6755,16 +5900,10 @@
           }
         },
         "description": "Service Type dimension",
-        "title": "Service Type Dimension",
-        "x-stoplight": {
-          "id": "k4n4dj1sf9f6a"
-        }
+        "title": "Service Type Dimension"
       },
       "dim-owner": {
         "title": "Task Owner Dimension",
-        "x-stoplight": {
-          "id": "wkhuxjby48xbl"
-        },
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -6820,25 +5959,16 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the task owner's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "4wtzhv2587ck7"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the task owner's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "xplcx84fo2anx"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the task owner's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "rf65t6tb74tvb"
-            },
             "format": "date-time"
           },
           "vendorId": {
@@ -6857,9 +5987,6 @@
       },
       "dim-quote-approver": {
         "title": "Quote Approver Dimension",
-        "x-stoplight": {
-          "id": "62wt5qzjprbn2"
-        },
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -6936,25 +6063,16 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the quote approver's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "9gdddrvb5o7g0"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the quote approver's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "fklzw4gyliirz"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the quote approver's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "xkmjbx75z7ry5"
-            },
             "format": "date-time"
           },
           "vendorId": {
@@ -7010,10 +6128,7 @@
           }
         },
         "description": "Task Types Dimension",
-        "title": "Task Type Dimension",
-        "x-stoplight": {
-          "id": "s0pm1jc23bbpj"
-        }
+        "title": "Task Type Dimension"
       },
       "fact-tqe": {
         "type": "object",
@@ -7091,9 +6206,6 @@
           "evaluatedAt": {
             "type": "string",
             "description": "The date and time when the evaluation was conducted in 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "mr3t6i9uzify4"
-            },
             "format": "date-time"
           },
           "taskId": {
@@ -7139,77 +6251,44 @@
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "auw1nj4uo6jjw"
-            },
             "description": "(Optional) Expand the project dimension associated with the projectId using the $expand parameter.\r\n\r\n"
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "0hjkd53u3jtlx"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customerId using the $expand parameter.\r\n\r\n"
           },
           "linguist": {
             "$ref": "#/components/schemas/dim-linguist",
-            "x-stoplight": {
-              "id": "lupxf20ck5kgs"
-            },
             "description": "(Optional) Expand the linguist dimension associated with the linguistId using the $expand parameter.\r\n\r\n"
           },
           "originalTranslationOrigin": {
             "$ref": "#/components/schemas/dim-translation-origin",
-            "x-stoplight": {
-              "id": "0lxh5k7w46itr"
-            },
             "description": "(Optional) Expand the original translation origin dimension associated with the originalTranslationOriginId using the $expand parameter.\r\n"
           },
           "finalTranslationOrigin": {
             "$ref": "#/components/schemas/dim-translation-origin",
-            "x-stoplight": {
-              "id": "dxo72u5z3tlow"
-            },
             "description": "(Optional) Expand the final translation origin dimension associated with the finalTranslationOriginId using the $expand parameter.\r\n"
           },
           "taskType": {
             "$ref": "#/components/schemas/dim-task-types",
-            "x-stoplight": {
-              "id": "jr8u58awm3kyn"
-            },
             "description": "(Optional) Expand the task type dimension associated with the taskTypeId using the $expand parameter.\r\n"
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "vp4nxhzavoa8o"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the languagePairId using the $expand parameter.\r\n"
           },
           "sourceFile": {
             "$ref": "#/components/schemas/dim-source-file",
-            "x-stoplight": {
-              "id": "hxy1new9zqhms"
-            },
             "description": "(Optional) Expand the source file dimension associated with the sourceFileId using the $expand parameter.\r\n"
           },
           "translationQualityEvaluationCategory": {
             "$ref": "#/components/schemas/dim-tqe-category",
-            "x-stoplight": {
-              "id": "c65a8oifz6x8v"
-            },
             "description": "(Optional) Expand the translation quality evaluation category dimension associated with the translationQualityEvaluationCategoryId using the $expand parameter.\r\n"
           }
-        },
-        "x-stoplight": {
-          "id": "dp8z5cvhwewgi"
         }
       },
       "dim-linguist": {
         "title": "Linguist Dimension",
-        "x-stoplight": {
-          "id": "5pu4ebol4njno"
-        },
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -7265,25 +6344,16 @@
           "createdAt": {
             "type": "string",
             "description": "The date and time when the linguist's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "9bcplllnxbeqm"
-            },
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
             "description": "The date and time when the linguist's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "jzd0z5axle0om"
-            },
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date and time when the linguist's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
-            "x-stoplight": {
-              "id": "lf0zqkck8yqk1"
-            },
             "format": "date-time"
           },
           "vendorId": {
@@ -7409,56 +6479,32 @@
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "8wn06o2fwdaxj"
-            },
             "description": "(Optional) Expand the project dimension associated with the projectId using the $expand parameter."
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "tbbaxiw91b8ae"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customerId using the $expand parameter."
           },
           "taskType": {
             "$ref": "#/components/schemas/dim-task-types",
-            "x-stoplight": {
-              "id": "02epgbi3anti1"
-            },
             "description": "(Optional) Expand the task type dimension associated with the taskTypeId using the $expand parameter."
           },
           "taskState": {
             "$ref": "#/components/schemas/dim-task-states",
-            "x-stoplight": {
-              "id": "zja7q2gfw320q"
-            },
             "description": "(Optional) Expand the task state dimension associated with the taskStatusId using the $expand parameter."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "z87lz2iuktvgm"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the languageDirectionId using the $expand parameter."
           },
           "sourceFile": {
             "$ref": "#/components/schemas/dim-source-file",
-            "x-stoplight": {
-              "id": "dxlndvyivvr8n"
-            },
             "description": "(Optional) Expand the source file dimension associated with the sourceFileId using the $expand parameter."
           },
           "taskOwner": {
             "$ref": "#/components/schemas/dim-owner",
-            "x-stoplight": {
-              "id": "suf661az41ca9"
-            },
             "description": "(Optional) Expand the task owner dimension associated with the taskOwnerId using the $expand parameter."
           }
-        },
-        "x-stoplight": {
-          "id": "az9qe23uo3wlx"
         }
       },
       "dim-task-states": {
@@ -7485,10 +6531,7 @@
           }
         },
         "description": "Task States dimension",
-        "title": "Task State Dimension",
-        "x-stoplight": {
-          "id": "iieo64du9lq7y"
-        }
+        "title": "Task State Dimension"
       },
       "dim-translation-origin": {
         "type": "object",
@@ -7514,10 +6557,7 @@
           }
         },
         "description": "Translation Origin dimension",
-        "title": "Translation Origin Dimension",
-        "x-stoplight": {
-          "id": "6ffh6bqoohg88"
-        }
+        "title": "Translation Origin Dimension"
       },
       "dim-tqe-category": {
         "type": "object",
@@ -7558,169 +6598,100 @@
           }
         },
         "description": "Translation quality evaluation category",
-        "title": "Translation Quality Evaluation Category",
-        "x-stoplight": {
-          "id": "swbx3mrmisdkw"
-        }
+        "title": "Translation Quality Evaluation Category"
       },
       "fact-language-revenues": {
         "title": "fact-language-revenues",
-        "x-stoplight": {
-          "id": "430txfvyfv4bu"
-        },
         "type": "object",
         "description": "The language revenue metrics",
         "properties": {
           "customerId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "gpdp2fnw0v2v8"
-            },
             "description": "The unique identifier for the customer."
           },
           "projectId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "9vtxjpfm0dr32"
-            },
             "description": "The unique identifier for the project."
           },
           "languagePairId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "bzy4ml6uz8ao8"
-            },
             "description": "The unique identifier for the language pair."
           },
           "approveDateId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "iszl8g2wyixxh"
-            },
             "description": "The unique identifier for the quote approve date."
           },
           "currencyId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "695h6px2s9w6f"
-            },
             "description": "The unique identifier for the currency."
           },
           "quoteApproverId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "p3hmddujxrm96"
-            },
             "description": "The unique identifier for the quote approver."
           },
           "quoteDateId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "jmpf1zypjsbx5"
-            },
             "description": "The unique identifier for the quote creation date."
           },
           "translationPrice": {
             "type": "number",
-            "x-stoplight": {
-              "id": "kvgll36dnxu6w"
-            },
             "format": "double",
             "description": "The price of the translation service."
           },
           "languagePrice": {
             "type": "number",
-            "x-stoplight": {
-              "id": "boocpynw3o4n2"
-            },
             "format": "double",
             "description": "The additional language price of the translation service."
           },
           "projectAdditionalPrice": {
             "type": "number",
-            "x-stoplight": {
-              "id": "mo7m7ti8wtjp9"
-            },
             "format": "double",
             "description": "The project level additional price of the translation service."
           },
           "totalRevenue": {
             "type": "number",
-            "x-stoplight": {
-              "id": "6u419sb28wz3e"
-            },
             "format": "double",
             "description": "The total price of the project."
           },
           "savings": {
             "type": "number",
-            "x-stoplight": {
-              "id": "v4xt3zffbuww9"
-            },
             "format": "double",
             "description": "The savings obtain through the use of the automated translation features."
           },
           "wordCount": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "flngaoyo0zoxo"
-            },
             "description": "The number of words processed during the translation service."
           },
           "files": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "p0wipl2ixb15l"
-            },
             "description": "The number of target files processed during the translation service"
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "4xropztcshlip"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customer id using the $expand parameter and \"customer\" value."
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "48dy7qglqj54e"
-            },
             "description": "(Optional) Expand the project dimension associated with the project id using the $expand parameter and \"project\" value."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "pd6xlk9xfrsf5"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the language pair id using the $expand parameter and \"languagePair\" value."
           },
           "approveDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "p5rkzmjplyt28"
-            },
             "description": "(Optional) Expand the approve date dimension associated with the approve date id using the $expand parameter and \"approveDate\" value."
           },
           "currency": {
             "$ref": "#/components/schemas/dim-currency",
-            "x-stoplight": {
-              "id": "w14tjqp3qkagl"
-            },
             "description": "(Optional) Expand the currency dimension associated with the currency id using the $expand parameter and \"currency\" value."
           },
           "quoteApprover": {
             "$ref": "#/components/schemas/dim-quote-approver",
-            "x-stoplight": {
-              "id": "788eqcb1ctj8f"
-            },
             "description": "(Optional) Expand the quote approver dimension associated with the quote approver id using the $expand parameter and \"quoteApprover\" value."
           },
           "quoteDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "ldnd7j2zkzhdg"
-            },
             "description": "(Optional) Expand the quote date dimension associated with the quote date id using the $expand parameter and \"quoteDate\" value."
           }
         },
@@ -7745,124 +6716,73 @@
       },
       "fact-language-revenue-details": {
         "title": "fact-language-revenue-details",
-        "x-stoplight": {
-          "id": "7rdoa20due2xo"
-        },
         "type": "object",
         "description": "Language revenue details metrics",
         "properties": {
           "quoteDateId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "rrigf8o7gqisv"
-            },
             "description": "The unique identifier for the quote creation date."
           },
           "customerId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "088zg0sx6d0ar"
-            },
             "description": "The unique identifier for the customer."
           },
           "projectId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "w4wa5okwcfvo2"
-            },
             "description": "The unique identifier for the project."
           },
           "languagePairId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "0zai50vut837u"
-            },
             "description": "The unique identifier for the language pair."
           },
           "revenueTypeId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "i92ynlxk0kmvv"
-            },
             "description": "The unique identifier for the revenue type."
           },
           "currencyId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "v11zdwmoa7e50"
-            },
             "description": "The unique identifier for the currency."
           },
           "projectCreationDateId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "2lknvcx5pl4gw"
-            },
             "description": "The unique identifier for the project creation date."
           },
           "numberOfUnits": {
             "type": "number",
-            "x-stoplight": {
-              "id": "nukfgoafas75m"
-            },
             "format": "double",
             "description": "The number of units of the revenue type that generated the revenue."
           },
           "revenue": {
             "type": "number",
-            "x-stoplight": {
-              "id": "dn80w6lqtbtpq"
-            },
             "format": "double",
             "description": "The revenue generated by the revenue type."
           },
           "quoteDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "ligjv55awvrkp"
-            },
             "description": "(Optional) Expand the quote date dimension associated with the quote date id using the $expand parameter and \"quoteDate\" value."
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "az9ka699r1nxz"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customer id using the $expand parameter and \"customer\" value."
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "2kpm0pkkdybrl"
-            },
             "description": "(Optional) Expand the project dimension associated with the project id using the $expand parameter and \"project\" value."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "jc0ykv86dvm9x"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the language pair id using the $expand parameter and \"languagePair\" value."
           },
           "revenueType": {
             "$ref": "#/components/schemas/dim-revenue-type",
-            "x-stoplight": {
-              "id": "fh8jfo4qi8t9b"
-            },
             "description": "(Optional) Expand the revenue type dimension associated with the revenue type id using the $expand parameter and \"revenueType\" value."
           },
           "currency": {
             "$ref": "#/components/schemas/dim-currency",
-            "x-stoplight": {
-              "id": "fn3u2m1js7rq6"
-            },
             "description": "(Optional) Expand the currency dimension associated with the currency id using the $expand parameter and \"currency\" value."
           },
           "projectCreationDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "2whazg2g15pik"
-            },
             "description": "(Optional) Expand the project creation date dimension associated with the project creation date id using the $expand parameter and \"projectCreationDate\" value."
           }
         },
@@ -7882,9 +6802,6 @@
       },
       "dim-revenue-type": {
         "title": "dim-revenue-type",
-        "x-stoplight": {
-          "id": "2ks34nsuycji5"
-        },
         "type": "object",
         "description": "The revenue type dimension. \nThe dimension stores details about individual cost/revenue types.",
         "examples": [
@@ -7913,61 +6830,37 @@
         "properties": {
           "internalId": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "558ebopv5wqoj"
-            },
             "description": "The internal unique identifier of the revenue type."
           },
           "name": {
             "type": "string",
-            "x-stoplight": {
-              "id": "mm6j225rx0u7v"
-            },
             "description": "The name of the revenue type which is displayed in the Trados Enterprise Quote or Price model."
           },
           "category": {
             "type": "string",
-            "x-stoplight": {
-              "id": "9ymr21awzjd38"
-            },
             "description": "The Trados Enterprise cost/price category. This field will detail the level where the revenue type will apply. The possible values are: file, language, project."
           },
           "type": {
             "type": "string",
-            "x-stoplight": {
-              "id": "wggl5mlvc7l6n"
-            },
             "description": "Represents the way the revenue type will be applied when calculating the overall cost. \n"
           },
           "unit": {
             "type": "string",
-            "x-stoplight": {
-              "id": "ohcbngejinn4z"
-            },
             "description": "Represents the measurement that will be used when calculating the units of the revenue type. "
           }
         }
       },
       "dim-leverage-band": {
         "title": "dim-leverage-band",
-        "x-stoplight": {
-          "id": "tda8sqmuv0ldo"
-        },
         "type": "object",
         "description": "The translation leverage band dimension. \nA translation leverage band refers to a specific category or level of similarity between the content being translated and existing translations or reference material.",
         "properties": {
           "internalId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "wftsvdeltujxi"
-            },
             "description": "The internal unique identifier of the leverage band."
           },
           "bandName": {
             "type": "string",
-            "x-stoplight": {
-              "id": "aszz0hw0remyu"
-            },
             "description": "The name of the translation leverage band as it is in Trados Enterprise."
           }
         },
@@ -7980,156 +6873,90 @@
       },
       "fact-translation-leverage": {
         "title": "fact-translation-leverage",
-        "x-stoplight": {
-          "id": "fxmge5dj52nhp"
-        },
         "type": "object",
         "description": "The translation leverage metrics",
         "properties": {
           "translationDateId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "xss9o5msjwj5i"
-            },
             "description": "The unique internal identifier for the translation date."
           },
           "translationTime": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "19ifmksp600su"
-            }
+            "type": "number"
           },
           "accountId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "9hlx8boja60m7"
-            },
             "description": "The unique identifier for the account."
           },
           "customerId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "k1kj43n84e1tf"
-            },
             "description": "The unique identifier for the customer."
           },
           "projectId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "7encjapj4syuw"
-            },
             "description": "The unique identifier for the project."
           },
           "languagePairId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "o8tgapnv634i3"
-            },
             "description": "The unique identifier for the language pair."
           },
           "sourceFileId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "gy0y354x0p7lg"
-            },
             "description": "The unique internal identifier for the source file."
           },
           "bandId": {
             "type": "number",
-            "x-stoplight": {
-              "id": "q9wpdnkmfz6xu"
-            },
             "description": "The unique identifier for the leverage band."
           },
           "characterCount": {
             "type": "number",
-            "x-stoplight": {
-              "id": "0dfzpnx6q7vlg"
-            },
             "description": "The total number of characters in the source file."
           },
           "wordCount": {
             "type": "number",
-            "x-stoplight": {
-              "id": "4d1pufv1yod1i"
-            },
             "description": "The total number of words in the source file."
           },
           "segmentCount": {
             "type": "number",
-            "x-stoplight": {
-              "id": "7axch6z5vr9cf"
-            },
             "description": "The total number of segments in the source file."
           },
           "bandCharacters": {
             "type": "number",
-            "x-stoplight": {
-              "id": "1t7y8262rsijd"
-            },
             "description": "The total number of characters within the specified leverage band."
           },
           "bandWords": {
             "type": "number",
-            "x-stoplight": {
-              "id": "rj3i0ntxdwoul"
-            },
             "description": "The total number of words within the specified leverage band."
           },
           "bandSegments": {
             "type": "number",
-            "x-stoplight": {
-              "id": "0zecc8fdvjpp7"
-            },
             "description": "The total number of segments within the specified leverage band."
           },
           "canceled": {
             "type": "boolean",
-            "x-stoplight": {
-              "id": "p47xf0qlgpm49"
-            },
             "description": "A boolean flag indicating whether the specific workflow was canceled or not."
           },
           "translationDate": {
             "$ref": "#/components/schemas/dim-date",
-            "x-stoplight": {
-              "id": "0dv96orzmbter"
-            },
             "description": "(Optional) Expand the date dimension associated with the translation date id using the $expand parameter and \"translationDate\" value."
           },
           "customer": {
             "$ref": "#/components/schemas/dim-customer",
-            "x-stoplight": {
-              "id": "nrn8mnjrf2ffk"
-            },
             "description": "(Optional) Expand the customer dimension associated with the customer id using the $expand parameter and \"customer\" value."
           },
           "project": {
             "$ref": "#/components/schemas/dim-project",
-            "x-stoplight": {
-              "id": "yfnyoa67wcn9r"
-            },
             "description": "(Optional) Expand the project dimension associated with the project id using the $expand parameter and \"project\" value."
           },
           "languagePair": {
             "$ref": "#/components/schemas/dim-language-pair",
-            "x-stoplight": {
-              "id": "crbny9f1ubgsf"
-            },
             "description": "(Optional) Expand the language pair dimension associated with the language pair id using the $expand parameter and \"languagePair\" value."
           },
           "sourceFile": {
             "$ref": "#/components/schemas/dim-source-file",
-            "x-stoplight": {
-              "id": "tu8cgu0l9vdou"
-            },
             "description": "(Optional) Expand the source file dimension associated with the source file id using the $expand parameter and \"sourceFile\" value."
           },
           "leverageBand": {
             "$ref": "#/components/schemas/dim-leverage-band",
-            "x-stoplight": {
-              "id": "zmynhlceh2p0j"
-            },
             "description": "(Optional) Expand the leverage band dimension associated with the band id using the $expand parameter and \"leverageBand\" value."
           }
         }

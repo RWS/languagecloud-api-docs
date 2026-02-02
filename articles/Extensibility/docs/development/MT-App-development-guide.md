@@ -1,9 +1,3 @@
----
-tags: [Development]
-stoplight-id: y6tealkmfbf36
----
-
-
 # Machine Translation
 
 Machine Translation apps offer the possibility to use external machine translation providers within the Trados platform.

@@ -1,8 +1,4 @@
-﻿---
-stoplight-id: 1hfz3c15wpkbf
----
-
-# Multipart considerations
+﻿# Multipart considerations
 
 This page goes into deeper details for uploading files. Generally you might be interested in this subject when not using the provided SDKs and are implementing your own SDK. This page should help you debug potential problems you might encounter.
 

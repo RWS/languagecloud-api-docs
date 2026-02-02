@@ -1,7 +1,3 @@
----
-stoplight-id: b7cdff09ad767
----
-
 # Updating the App
 
 There might be times when you need to make changes to your app. Whether you want to fix bugs, correct flaws, or add new functionality, the changes should eventually reach your registered app instance. That's why RWS Trados supports app versioning.

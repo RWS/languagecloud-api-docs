@@ -1,8 +1,3 @@
----
-stoplight-id: f15btr2xmf7u9
-tags: [Development]
----
-
 # User Interface App Development Guide
 
 UI extensions offer the possibility to add custom user interface elements and functionality. Custom [buttons and panels can be added to specific places](UI-App-custom-elements-locations.md) within the user interface.

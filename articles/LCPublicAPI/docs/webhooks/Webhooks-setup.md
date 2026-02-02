@@ -1,8 +1,4 @@
-﻿---
-stoplight-id: eg4ja9nrs9wtk
----
-
-# Webhooks Setup
+﻿# Webhooks Setup
 
 A webhook is a web callback by which Trados Cloud Platform notifies an external application when a specific event occurs in a specific account in Trados Cloud Platform. You can subscribe to events by registering webhooks from within the Trados UI.
 

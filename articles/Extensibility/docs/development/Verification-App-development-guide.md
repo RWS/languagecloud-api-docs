@@ -1,8 +1,3 @@
----
-stoplight-id: 9r7ku59767q11
----
-
-
 # Verification Provider
 
 ## Overview

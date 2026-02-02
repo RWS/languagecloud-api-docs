@@ -1,9 +1,3 @@
----
-tags: [Development]
-stoplight-id: 2dlyn1ep2e2p5
----
-
-
 # Automatic Task
 
 Automatic Task extensions offer the possibility to add custom functionality within a project's workflow.

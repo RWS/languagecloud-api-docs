@@ -1,7 +1,3 @@
----
-stoplight-id: ca24im2xg3ra8
----
-
 # Trados Cloud Platform API
 
 Communication to Trados Cloud Platform API is also authenticated and the process is described in the [Trados Cloud Platform API documentation](https://languagecloud.sdl.com/lc/api-docs).
