@@ -2,29 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const apiElement = document.getElementById('api-docs');
 
-  // // Intercept clicks on links with #/operations/ or #/schemas/
-  // document.addEventListener('click', function(e) {
-  //   const link = e.target.closest('a');
-  //   if (link && link.getAttribute('href')) {
-  //     const href = link.getAttribute('href');
-  //     if (href.startsWith('#/operations/') || href.startsWith('#/schemas/')) {
-  //       e.preventDefault();
-  //       // Navigate the Stoplight Elements component to this route
-  //       if (apiElement) {
-  //         apiElement.setAttribute('router', 'memory');
-  //         // Remove the # and set as the basePath for navigation
-  //         const route = href.substring(1); // Remove leading #
-  //         apiElement.setAttribute('basePath', route);
-  //         // Force re-render by temporarily changing a property
-  //         setTimeout(() => {
-  //           window.location.hash = href;
-  //           window.scrollTo({ top: 0, behavior: 'smooth' });
-  //         }, 100);
-  //       }
-  //     }
-  //   }
-  // });
-
   // Handle initial page load with hash
   if (window.location.hash && (window.location.hash.startsWith('#/operations/') || window.location.hash.startsWith('#/schemas/'))) {
     setTimeout(() => {
@@ -279,11 +256,11 @@ document.addEventListener('DOMContentLoaded', function () {
           findAndScrollToOperation(operationId);
         }
       } else {
-        console.warn(`Tag section not found for tag: ${tagName}. Available tag sections:`,
+        console.warn('Tag section not found for tag: %s. Available tag sections:', tagName,
           Array.from(document.querySelectorAll('[data-oas-tag-id]')).map(el => el.getAttribute('data-oas-tag-id')));
       }
     } else {
-      console.warn(`No tag mapping found for operation: ${operationId}. Available operations:`, Object.keys(operationToTagMap));
+      console.warn('No tag mapping found for operation: %s. Available operations:', operationId, Object.keys(operationToTagMap));
       console.log('No fallback - operation not found in mapping');
     }
   }
