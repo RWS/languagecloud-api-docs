@@ -1,7 +1,3 @@
----
-stoplight-id: f0cb88dbb2089
----
-
 # Approvals and Support Communication
 
 ## Approval Process

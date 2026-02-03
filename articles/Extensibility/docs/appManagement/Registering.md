@@ -1,7 +1,3 @@
----
-stoplight-id: 7295d1d88211f
----
-
 # Registering the App
 
 Registration is the first step in integrating your app into the Trados platform.

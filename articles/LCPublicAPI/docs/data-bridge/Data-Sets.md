@@ -1,7 +1,3 @@
----
-stoplight-id: w743d2ir4w8v6
----
-
 # Data Sets
 
 ## File Translation Status

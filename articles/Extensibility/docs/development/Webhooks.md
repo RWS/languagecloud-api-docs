@@ -1,8 +1,3 @@
----
-stoplight-id: vh5fg9b14gm43
----
-
-
 # Webhooks
 
 Apps can specify a list of webhooks that will be registered automatically when the app is installed on an account. That allows the app to  specify a list of webhooks and consume them, allowing for asynchronous scenarios where the app can wait for events instead of polling constantly to check for a particular event or state improving performance both for the app and for Trados.

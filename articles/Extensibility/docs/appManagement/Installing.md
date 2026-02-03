@@ -1,8 +1,3 @@
----
-stoplight-id: hspobp79yp423
----
-
-
 # Installing the App
 
 After the app is successfully registered, you can proceed to install it. The installation is tenant-based, which means that all users in the tenant will be able to use the app.

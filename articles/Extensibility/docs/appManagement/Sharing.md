@@ -1,7 +1,3 @@
----
-stoplight-id: ruuiy7dsn27on
----
-
 # Sharing the App
 By default, a newly registered app is private, meaning that only the developer tenant has access to it. However, you can share your app with other tenants even if it hasn't been published yet.
 

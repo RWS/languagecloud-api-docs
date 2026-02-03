@@ -1,8 +1,3 @@
----
-stoplight-id: b309fcde3938d
----
-
-
 # Trados Cloud Platform SDK - Migration Guide v25.x.x
 
 ## Executive Summary

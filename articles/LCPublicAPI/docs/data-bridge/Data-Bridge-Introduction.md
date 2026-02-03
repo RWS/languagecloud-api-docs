@@ -1,7 +1,3 @@
----
-stoplight-id: 6xca951byllum
----
-
 # Trados Data Bridge
 
 Trados Data Bridge - technically known as the Data API - gives you secure, read-only access to your Trados Cloud data. It’s designed for reporting, analytics, and business intelligence applications, allowing external tools to connect directly without manual exports or custom connectors.

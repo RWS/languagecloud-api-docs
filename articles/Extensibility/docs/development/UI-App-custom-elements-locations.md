@@ -1,8 +1,3 @@
----
-stoplight-id: gwyrrbtyn4j2i
-tags: [Development]
----
-
 # Custom Elements and Locations
 
 The platform supports the addition of various UI elements, including **buttons** (generic, link, and dropdown) and **panels** (generic, sidebar, and tab).

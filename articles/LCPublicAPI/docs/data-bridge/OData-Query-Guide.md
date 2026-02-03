@@ -1,7 +1,3 @@
----
-stoplight-id: 26wchvrjmv96s
----
-
 # OData Query Guide for Data Bridge APIs
 
 The Trados Data Bridge API supports OData v4 query capabilities that allow you to filter, select, expand, and sort data efficiently.

@@ -1,8 +1,4 @@
-﻿---
-stoplight-id: nfdrob1smwn00
----
-
-# Multi-region
+﻿# Multi-region
 
 Trados Cloud Platform operates in multiple regions, and it's essential to know how to use the Public API correctly for each region.
 

@@ -1,7 +1,3 @@
----
-stoplight-id: 2wgukzh0bf2v8
----
-
 # Trados Data Bridge APIs for Postman
 
 We provide a [Postman](https://www.postman.com/) collection for quick and easy usage of our RESTful APIs.

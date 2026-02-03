@@ -1,7 +1,3 @@
----
-stoplight-id: j6yjjz5b5gtv5
----
-
 # Dynamic Preview
 Dynamic Preview apps offer the ability to render previews dynamically based on selections the user makes in the preview page.
 

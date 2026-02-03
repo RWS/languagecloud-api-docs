@@ -1,7 +1,3 @@
----
-stoplight-id: 015bfda96d1a6
----
-
 # Foreword
 
 This section is about managing apps in RWS Trados and it is dedicated to developers.

@@ -1,4 +1,4 @@
-﻿{
+{
   "openapi": "3.1.0",
   "info": {
     "title": "Webhooks",
@@ -16,9 +16,6 @@
     "schemas": {
       "error-task-event": {
         "title": "Error Task Event",
-        "x-stoplight": {
-          "id": "53hei492exsd5"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -75,33 +72,21 @@
           },
           "createdAt": {
             "type": "string",
-            "x-stoplight": {
-              "id": "1z6z3ny6iu7x3"
-            },
             "format": "date-time",
             "description": "The project's creation date and time.\n\nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
           },
           "completedAt": {
             "type": "string",
-            "x-stoplight": {
-              "id": "ecrmeaylm48q2"
-            },
             "format": "date-time",
             "description": "The completion timestamp  of the task. \n \nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
           },
           "dueBy": {
-            "x-stoplight": {
-              "id": "kdtzuk0xkp4q7"
-            },
             "format": "date-time",
             "type": "string",
             "description": "The project due date.\n\nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
           },
           "failedTask": {
             "$ref": "#/components/schemas/error-task-event-failed-task",
-            "x-stoplight": {
-              "id": "7nnh1uutthmv7"
-            },
             "description": "The failed task associated with the error task."
           }
         },
@@ -114,9 +99,6 @@
       },
       "error-task-event-assignees": {
         "title": "Error Task Event Assignees",
-        "x-stoplight": {
-          "id": "s85xkn7650u8e"
-        },
         "type": "object",
         "properties": {
           "type": {
@@ -135,30 +117,18 @@
       },
       "error-task-event-project": {
         "title": "Error Task Event Project",
-        "x-stoplight": {
-          "id": "eckopr6xok2et"
-        },
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "x-stoplight": {
-              "id": "ajfq6tgybax2j"
-            },
             "description": "The project identifier."
           },
           "name": {
             "type": "string",
-            "x-stoplight": {
-              "id": "rzjp8hae5tvkv"
-            },
             "description": "The project name."
           },
           "description": {
             "type": "string",
-            "x-stoplight": {
-              "id": "n1v0vgor72kqj"
-            },
             "description": "The project description."
           }
         },
@@ -168,9 +138,6 @@
       },
       "error-task-event-task-type": {
         "title": "Error Task Event Task Type",
-        "x-stoplight": {
-          "id": "ltznk09ahv2ot"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -195,9 +162,6 @@
       },
       "error-task-event-failed-task": {
         "title": "Error Task Event Failed Task",
-        "x-stoplight": {
-          "id": "m75sg71rwjyyz"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -211,22 +175,13 @@
           "errors": {
             "type": "array",
             "nullable": true,
-            "x-stoplight": {
-              "id": "1vxiv3rw0l2jb"
-            },
             "description": "The occured errors.",
             "items": {
-              "$ref": "#/components/schemas/failed-task-error",
-              "x-stoplight": {
-                "id": "q9t31xtyqjkjc"
-              }
+              "$ref": "#/components/schemas/failed-task-error"
             }
           },
           "failedTaskType": {
             "$ref": "#/components/schemas/failed-task-type",
-            "x-stoplight": {
-              "id": "1zdzlmo5rwf8k"
-            },
             "description": "The failed task type."
           }
         },
@@ -237,23 +192,14 @@
       },
       "failed-task-error": {
         "title": "Failed Task Error",
-        "x-stoplight": {
-          "id": "vxuzzu1i49b4j"
-        },
         "type": "object",
         "properties": {
           "name": {
             "type": "string",
-            "x-stoplight": {
-              "id": "bqmr3696oatti"
-            },
             "description": "The error name."
           },
           "code": {
             "type": "string",
-            "x-stoplight": {
-              "id": "n9oydkszif5ff"
-            },
             "description": "The error code."
           },
           "value": {
@@ -265,9 +211,6 @@
       },
       "failed-task-type": {
         "title": "Failed Task Type",
-        "x-stoplight": {
-          "id": "p76emn4kgpsh8"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -298,9 +241,6 @@
       },
       "project-event": {
         "title": "Project Event",
-        "x-stoplight": {
-          "id": "40162zap0jyha"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -313,22 +253,13 @@
           },
           "description": {
             "type": "string",
-            "x-stoplight": {
-              "id": "dcb6wq381ygg3"
-            },
             "description": "The project description."
           },
           "customFields": {
-            "x-stoplight": {
-              "id": "muh2tjhfs9ltf"
-            },
             "description": "The custom fields.",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/project-event-custom-field",
-              "x-stoplight": {
-                "id": "b20i05olltirw"
-              }
+              "$ref": "#/components/schemas/project-event-custom-field"
             }
           }
         },
@@ -339,30 +270,18 @@
       },
       "project-event-custom-field": {
         "title": "Project Event Custom Field",
-        "x-stoplight": {
-          "id": "d0guqykwv240s"
-        },
         "type": "object",
         "properties": {
           "id": {
             "type": "string",
-            "x-stoplight": {
-              "id": "abbecg38rphwd"
-            },
             "description": "The custom field identifier."
           },
           "key": {
             "type": "string",
-            "x-stoplight": {
-              "id": "l7xlhwt4wp0su"
-            },
             "description": "The custom field key."
           },
           "value": {
             "type": "string",
-            "x-stoplight": {
-              "id": "j23weuj2utmwr"
-            },
             "description": "The custom field value."
           }
         },
@@ -372,9 +291,6 @@
       },
       "project-group-event": {
         "title": "Project Group Event",
-        "x-stoplight": {
-          "id": "l3vwi6ikf4e28"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -393,10 +309,7 @@
             "type": "array",
             "description": "The projects added or removed.",
             "items": {
-              "$ref": "#/components/schemas/object-id",
-              "x-stoplight": {
-                "id": "brxps82jecqyz"
-              }
+              "$ref": "#/components/schemas/object-id"
             }
           }
         },
@@ -408,9 +321,6 @@
       },
       "project-template-event": {
         "title": "Project Template Event",
-        "x-stoplight": {
-          "id": "o8ma1ysm36jcu"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -423,9 +333,6 @@
           },
           "description": {
             "type": "string",
-            "x-stoplight": {
-              "id": "y0deejkcbjfsr"
-            },
             "description": "The project template description."
           }
         },
@@ -436,9 +343,6 @@
       },
       "source-file-event": {
         "title": "Source File Event",
-        "x-stoplight": {
-          "id": "fn3n4xl7xtsma"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -455,9 +359,6 @@
           },
           "project": {
             "$ref": "#/components/schemas/object-id",
-            "x-stoplight": {
-              "id": "xno4lld83psyj"
-            },
             "description": "The project containing the source file."
           }
         },
@@ -469,9 +370,6 @@
       },
       "target-file-event": {
         "title": "Target File Event",
-        "x-stoplight": {
-          "id": "ey1413boi0kir"
-        },
         "type": "object",
         "properties": {
           "id": {
@@ -484,9 +382,6 @@
           },
           "role": {
             "type": "string",
-            "x-stoplight": {
-              "id": "fgdt32i5dkqq4"
-            },
             "description": "The target file role."
           },
           "project": {
@@ -558,9 +453,6 @@
           },
           "dueBy": {
             "type": "string",
-            "x-stoplight": {
-              "id": "v75uwezxblvwo"
-            },
             "format": "date-time",
             "description": "The project due date.\n\nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
           }
@@ -679,19 +571,13 @@
             "description": "Data specific to event. Is different for each event type",
             "oneOf": [
               {
-                "$ref": "#/components/schemas/error-task-event",
-                "x-stoplight": {
-                  "id": "5vpq27b0sbchu"
-                }
+                "$ref": "#/components/schemas/error-task-event"
               },
               {
                 "$ref": "#/components/schemas/project-event"
               },
               {
-                "$ref": "#/components/schemas/project-group-event",
-                "x-stoplight": {
-                  "id": "b4klac6vfvi1s"
-                }
+                "$ref": "#/components/schemas/project-group-event"
               },
               {
                 "$ref": "#/components/schemas/project-template-event"
@@ -719,29 +605,17 @@
       },
       "webhook-batch": {
         "title": "Webhook Batch",
-        "x-stoplight": {
-          "id": "s7njqayfv05d7"
-        },
         "type": "object",
         "description": "Payload containing one or more webhook events.",
         "properties": {
           "itemCount": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "ansqaoimu1brs"
-            }
+            "type": "integer"
           },
           "items": {
             "type": "array",
-            "x-stoplight": {
-              "id": "yanc7ecpw0erh"
-            },
             "items": {
               "$ref": "#/components/schemas/webhook",
-              "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.html) page.",
-              "x-stoplight": {
-                "id": "6ff5pybiu7n07"
-              }
+              "description": "For correlation between `eventType` and `data`, please check the [Webhook Payload](../docs/webhooks/Webhooks-payload.html) page."
             }
           }
         }

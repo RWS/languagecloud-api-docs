@@ -1,7 +1,3 @@
----
-stoplight-id: h5oizt92tuhtg
----
-
 # How to report an issue
 
 When reporting an issue it is important to include as much information as you can. 

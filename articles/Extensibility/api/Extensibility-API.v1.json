@@ -294,10 +294,7 @@
             }
           }
         },
-        "x-codegen-request-body-name": "body",
-        "x-stoplight": {
-          "id": "twu3jqmmyjbcb"
-        }
+        "x-codegen-request-body-name": "body"
       }
     },
     "/lc.mtprovider.translate": {
@@ -700,9 +697,6 @@
                   },
                   "comment": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "odmfw3vh60ool"
-                    },
                     "description": "A comment about the task outcome."
                   }
                 }
@@ -1128,12 +1122,12 @@
         ]
       },
       "parameters": [
-          {
-            "$ref": "#/components/parameters/TR_ID"
-          },
-          {
-            "$ref": "#/components/parameters/x-lc-signature"
-          }
+        {
+          "$ref": "#/components/parameters/TR_ID"
+        },
+        {
+          "$ref": "#/components/parameters/x-lc-signature"
+        }
       ]
     },
     "/lc.verification.getmessagesbyculture/{culture}": {
@@ -1230,9 +1224,6 @@
                   "properties": {
                     "group": {
                       "type": "string",
-                      "x-stoplight": {
-                        "id": "kc1t8wfl70ace"
-                      },
                       "description": "group name for settings. Must be \"sdl.project.verification.qaChecker.addon\"",
                       "enum": [
                         "sdl.project.verfication.qaChecker.addon"
@@ -1240,16 +1231,10 @@
                     },
                     "systemId": {
                       "type": "string",
-                      "x-stoplight": {
-                        "id": "rwwuwxs8iz7jw"
-                      },
                       "description": "extension ID"
                     },
                     "schema": {
                       "type": "object",
-                      "x-stoplight": {
-                        "id": "58sw7o5udooku"
-                      },
                       "description": "full json schema for the settings associated with this extension"
                     }
                   }
@@ -1300,9 +1285,6 @@
     "schemas": {
       "AppDescriptor": {
         "title": "AppDescriptor",
-        "x-stoplight": {
-          "id": "0089d4934393e"
-        },
         "type": "object",
         "required": [
           "name",
@@ -1368,14 +1350,8 @@
           },
           "webhooks": {
             "type": "array",
-            "x-stoplight": {
-              "id": "uo42j8r261dsj"
-            },
             "items": {
-              "$ref": "#/components/schemas/WebhookDefinition",
-              "x-stoplight": {
-                "id": "93brp3iueljln"
-              }
+              "$ref": "#/components/schemas/WebhookDefinition"
             }
           },
           "baseUrl": {
@@ -1384,10 +1360,7 @@
             "example": "somehostname.net/service/v1"
           },
           "regionalBaseUrls": {
-            "$ref": "#/components/schemas/RegionalBaseUrls",
-            "x-stoplight": {
-              "id": "kk1ajh7a1arp3"
-            }
+            "$ref": "#/components/schemas/RegionalBaseUrls"
           },
           "standardEndpoints": {
             "type": "object",
@@ -1514,9 +1487,6 @@
       },
       "AppLifecycleEvent": {
         "title": "AppLifecycleEvent",
-        "x-stoplight": {
-          "id": "b623b3b85688e"
-        },
         "type": "object",
         "description": "Lifecycle event data for the app.\n\nThe 'data' payload can vary depending on the id of the lifecycle event. For `REGISTERED` event there is the `RegisteredEvent` data that contains the `clientCredentials`. This is in contrast to v1.3 of the descriptor, where the credentials were sent received on install.",
         "properties": {
@@ -1543,10 +1513,7 @@
                 "$ref": "#/components/schemas/RegisteredEvent"
               },
               {
-                "$ref": "#/components/schemas/UpdatedEvent",
-                "x-stoplight": {
-                  "id": "oiz0xiltgshgm"
-                }
+                "$ref": "#/components/schemas/UpdatedEvent"
               },
               {
                 "$ref": "#/components/schemas/InstalledEvent"
@@ -1561,9 +1528,6 @@
       },
       "RegisteredEvent": {
         "title": "RegisteredEvent",
-        "x-stoplight": {
-          "id": "8e353564bd405"
-        },
         "type": "object",
         "properties": {
           "clientCredentials": {
@@ -1588,9 +1552,6 @@
       },
       "UpdatedEvent": {
         "title": "UpdatedEvent",
-        "x-stoplight": {
-          "id": "doncfjujsw5a8"
-        },
         "type": "object",
         "properties": {
           "clientCredentials": {
@@ -1612,9 +1573,6 @@
       },
       "InstalledEvent": {
         "title": "InstalledEvent",
-        "x-stoplight": {
-          "id": "doncfjujsw5a9"
-        },
         "type": "object",
         "properties": {
           "region": {
@@ -1844,9 +1802,6 @@
               },
               "segmentBatchSize": {
                 "type": "integer",
-                "x-stoplight": {
-                  "id": "ntd72gzs0cw8x"
-                },
                 "description": "The maximum number of segments supported by the app on the `lc.mtprovider.translate` endpoint. Applicable only for the `html` format.",
                 "default": 200,
                 "minimum": 1
@@ -2150,14 +2105,8 @@
           },
           "options": {
             "type": "array",
-            "x-stoplight": {
-              "id": "oxz2z9ca0nq2i"
-            },
             "description": "A list of available values to choose from. They will be displayed as a dropdown list.",
             "items": {
-              "x-stoplight": {
-                "id": "p6xpgzbo4a7l9"
-              },
               "type": "string"
             }
           }
@@ -2211,9 +2160,6 @@
             "type": "array",
             "description": "A list of available values to choose from. They will be displayed as a dropdown list.",
             "items": {
-              "x-stoplight": {
-                "id": "5erw2wrdvvxsd"
-              },
               "type": "string"
             }
           }
@@ -2265,9 +2211,6 @@
       },
       "PreviewProvider.MainRequest": {
         "title": "PreviewProvider.MainRequest",
-        "x-stoplight": {
-          "id": "1ses68b45dz9s"
-        },
         "type": "object",
         "description": "Request for StartPreview or RefreshPreview",
         "properties": {
@@ -2324,9 +2267,6 @@
       },
       "PreviewProvider.FileInformation": {
         "title": "PreviewProvider.FileInformation",
-        "x-stoplight": {
-          "id": "1j64cy5rhse5v"
-        },
         "type": "object",
         "properties": {
           "name": {
@@ -2363,9 +2303,6 @@
       },
       "PreviewProvider.MainResponse": {
         "title": "PreviewProvider.MainResponse",
-        "x-stoplight": {
-          "id": "61d7pmnmxxc3f"
-        },
         "type": "object",
         "description": "Response for StartPreview and RefreshPreview",
         "properties": {
@@ -2388,9 +2325,6 @@
       },
       "PreviewProvider.FragmentToRender": {
         "title": "PreviewProvider.FragmentToRender",
-        "x-stoplight": {
-          "id": "8j8v4sxg1flul"
-        },
         "type": "object",
         "description": "The fragment object is described here: https://developers.rws.com/languagecloud-api-docs/api/bcm/Sdl.Core.Bcm.BcmModel.Fragment.html",
         "properties": {
@@ -2405,9 +2339,6 @@
       },
       "PreviewProvider.RenderedTranslation": {
         "title": "PreviewProvider.RenderedTranslation",
-        "x-stoplight": {
-          "id": "gwck0br93jn1y"
-        },
         "type": "object",
         "properties": {
           "renderedContent": {
@@ -2423,9 +2354,6 @@
       },
       "PreviewProvider.UpdateSegmentRequest": {
         "title": "PreviewProvider.UpdateSegmentRequest",
-        "x-stoplight": {
-          "id": "8lww2qzteh44k"
-        },
         "type": "object",
         "properties": {
           "previewSessionId": {
@@ -2460,9 +2388,6 @@
       },
       "PreviewProvider.UpdateSegmentResponse": {
         "title": "PreviewProvider.UpdateSegmentResponse",
-        "x-stoplight": {
-          "id": "3x2xs0b3zzolq"
-        },
         "type": "object",
         "properties": {
           "previewSessionId": {
@@ -2486,9 +2411,6 @@
         "title": "VerificationProviderExtension",
         "type": "object",
         "description": "Extension that provides for verification message generation",
-        "x-stoplight": {
-          "id": "9swy94c2yc6u1"
-        },
         "examples": [
           {
             "extensionPointId": "lc.verificationprovider",
@@ -2551,30 +2473,18 @@
                   "lc.verification.startverification": {
                     "type": "string",
                     "description": "The endpoint used to start the verification process. Must start with a slash \"/\"",
-                    "x-stoplight": {
-                      "id": "r1njwi093d1qd"
-                    },
                     "readOnly": true
                   },
                   "lc.verification.verifysegment": {
                     "type": "string",
-                    "description": "verifies an individual segment",
-                    "x-stoplight": {
-                      "id": "h4e4zzme66f3y"
-                    }
+                    "description": "verifies an individual segment"
                   },
                   "lc.verification.getmessagesbyculture": {
                     "type": "string",
-                    "description": "gets the localized resources for message types",
-                    "x-stoplight": {
-                      "id": "a2ymt9fc9pqw7"
-                    }
+                    "description": "gets the localized resources for message types"
                   },
                   "lc.verification.getsettingsschema": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "yky262mpfn26a"
-                    },
                     "description": "Gets the JSON schema which defines the settings this extension uses"
                   }
                 },
@@ -2582,9 +2492,6 @@
               },
               "validationInputType": {
                 "type": "string",
-                "x-stoplight": {
-                  "id": "uvti2xbg7ogyo"
-                },
                 "enum": [
                   "BilingualDocument",
                   "NativeSource",
@@ -2610,9 +2517,6 @@
         "title": "VerificationProvider.MainRequest",
         "type": "object",
         "description": "Request for StartVerification",
-        "x-stoplight": {
-          "id": "3xv7lx88zfcii"
-        },
         "required": [
           "inputResourceDetails",
           "callbackUrl",
@@ -2651,9 +2555,6 @@
               },
               "translationProfileId": {
                 "type": "string",
-                "x-stoplight": {
-                  "id": "9y15yckqibcdd"
-                },
                 "description": "ID used to retrieve resources from the Translation Service via the Trados Cloud Platform API"
               }
             }
@@ -2676,16 +2577,10 @@
           },
           "verifierSettings": {
             "type": "object",
-            "x-stoplight": {
-              "id": "b4wfb86uhv9cp"
-            },
             "description": "JSON settings object containing verifier specific settings"
           },
           "sessionId": {
             "type": "string",
-            "x-stoplight": {
-              "id": "5go507wf6as3d"
-            },
             "description": "ID of session this request is associated with"
           }
         }
@@ -2694,38 +2589,23 @@
         "type": "object",
         "title": "VerificationProvider.VerifySegmentRequest",
         "description": "Request for VerifySegment",
-        "x-stoplight": {
-          "id": "y2j7q6qm0vsxd"
-        },
         "properties": {
           "fragment": {
             "type": "object",
-            "description": "Bilingual Document Fragment containing segment to validate",
-            "x-stoplight": {
-              "id": "ptq0plwalyzmv"
-            }
+            "description": "Bilingual Document Fragment containing segment to validate"
           },
           "languageResourceTemplateId": {
             "type": "string",
             "format": "uuid",
-            "description": "language resource template ID",
-            "x-stoplight": {
-              "id": "8wvk4lw7vryug"
-            }
+            "description": "language resource template ID"
           },
           "translationProfileId": {
             "type": "string",
-            "x-stoplight": {
-              "id": "pyy1x36lngpbo"
-            },
             "description": "TranslationProfileId used to request resources from TranslationService"
           },
           "verifierSettings": {
             "type": "object",
-            "description": "json object containing verifier specific user settings",
-            "x-stoplight": {
-              "id": "whvz7d1gh8dtu"
-            }
+            "description": "json object containing verifier specific user settings"
           },
           "sourceLanguage": {
             "type": "string",
@@ -2736,10 +2616,7 @@
             "description": "target language"
           },
           "segmentLocation": {
-            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData",
-            "x-stoplight": {
-              "id": "ym54gmzwwl9i3"
-            }
+            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData"
           }
         },
         "required": [
@@ -2750,9 +2627,6 @@
       },
       "VerificationProvider.MainResponse": {
         "title": "VerificationProvider.MainResponse",
-        "x-stoplight": {
-          "id": "gznatp8uzouui"
-        },
         "type": "object",
         "description": "Response for StartVerification",
         "properties": {
@@ -2765,23 +2639,14 @@
           },
           "messageCount": {
             "type": "integer",
-            "x-stoplight": {
-              "id": "bru0jvpba772h"
-            },
             "description": "Number of actual messages published on the PublishMessage endpoint"
           },
           "verificationSessionId": {
             "type": "string",
-            "x-stoplight": {
-              "id": "dzi461yipp30i"
-            },
             "description": "id of session"
           },
           "verificationResult": {
             "type": "string",
-            "x-stoplight": {
-              "id": "vbjqhgfwu68hx"
-            },
             "description": "Result of operation",
             "enum": [
               "Success",
@@ -2792,9 +2657,6 @@
       },
       "VerificationProvider.VerifySegmentResponse": {
         "title": "VerificationProvider.VerifySegmentResponse",
-        "x-stoplight": {
-          "id": "j45f404aa2crf"
-        },
         "type": "object",
         "properties": {
           "verificationMessages": {
@@ -2808,9 +2670,6 @@
       },
       "VerificationProvider.SegmentIdentifierData": {
         "title": "VerificationProvider.SegmentIdentifierData",
-        "x-stoplight": {
-          "id": "yjgx014qzhpqh"
-        },
         "type": "object",
         "properties": {
           "fileId": {
@@ -2829,9 +2688,6 @@
       },
       "VerificationProvider.VerificationMessage": {
         "title": "VerificationProvider.VerificationMessage",
-        "x-stoplight": {
-          "id": "ys9ei1vpb8ip5"
-        },
         "type": "object",
         "properties": {
           "messageType": {
@@ -2839,10 +2695,7 @@
             "description": "messageType - each verifier can define its own list of messageTypes which releate to validation errors it generates"
           },
           "verifier": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "68631lv6uxvk1"
-            }
+            "type": "string"
           },
           "level": {
             "type": "string",
@@ -2872,10 +2725,7 @@
             }
           },
           "segmentLocation": {
-            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData",
-            "x-stoplight": {
-              "id": "cwqgrj79rnyyy"
-            }
+            "$ref": "#/components/schemas/VerificationProvider.SegmentIdentifierData"
           },
           "messageLocation": {
             "$ref": "#/components/schemas/VerificationProvider.MessageLocation"
@@ -2887,9 +2737,6 @@
       },
       "VerificationProvider.MessageLocation": {
         "title": "VerificationProvider.MessageLocation",
-        "x-stoplight": {
-          "id": "0ysk90t3z6qyf"
-        },
         "type": "object",
         "properties": {
           "fromLocation": {
@@ -2902,9 +2749,6 @@
       },
       "VerificationProvider.MessageTypeLocalizationData": {
         "title": "VerificationProvider.MessageTypeLocalizationData",
-        "x-stoplight": {
-          "id": "mayazpa7flukc"
-        },
         "type": "object",
         "properties": {
           "messageType": {
@@ -2926,9 +2770,6 @@
       },
       "VerificationProvider.MessageResourceResponse": {
         "title": "VerificationProvider.MessageResourceResponse",
-        "x-stoplight": {
-          "id": "fy375u9vl0du3"
-        },
         "type": "object",
         "properties": {
           "culture": {
@@ -2944,9 +2785,6 @@
       },
       "VerificationProvider.UserSettings": {
         "title": "VerificationProvider.UserSettings",
-        "x-stoplight": {
-          "id": "azw8rs1fc8s1j"
-        },
         "type": "object",
         "properties": {
           "userSettings": {
@@ -2959,9 +2797,6 @@
       },
       "VerificationProvider.UserSetting": {
         "title": "VerificationProvider.UserSetting",
-        "x-stoplight": {
-          "id": "c8u0son4uzfoz"
-        },
         "type": "object",
         "properties": {
           "name": {
@@ -3011,114 +2846,66 @@
       },
       "VerificationProvider.ValidationSetting": {
         "title": "VerificationProvider.ValidationSetting",
-        "x-stoplight": {
-          "id": "fhojfr4to2rrt"
-        },
         "type": "object",
         "properties": {
           "name1": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ph9iqzrb1sysr"
-            }
+            "type": "string"
           },
           "value1": {
-            "type": "object",
-            "x-stoplight": {
-              "id": "u9a0jzllznuiy"
-            }
+            "type": "object"
           },
           "namex": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "uy2mzp6ea1y5a"
-            }
+            "type": "string"
           },
           "valuex": {
-            "type": "object",
-            "x-stoplight": {
-              "id": "t018cshax2lyp"
-            }
+            "type": "object"
           }
         }
       },
       "VerificationProvider.ValidationSettings": {
         "title": "VerificationProvider.ValidationSettings",
-        "x-stoplight": {
-          "id": "mxex23ksn4lc5"
-        },
         "type": "object",
         "properties": {
           "group": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "cpi40cxebnzpz"
-            }
+            "type": "string"
           },
           "settings": {
-            "$ref": "#/components/schemas/VerificationProvider.ValidationSetting",
-            "x-stoplight": {
-              "id": "xdagzshuozcsq"
-            }
+            "$ref": "#/components/schemas/VerificationProvider.ValidationSetting"
           },
           "systemId": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "xsusow40six06"
-            }
+            "type": "string"
           }
         }
       },
       "VerificationProvider.ValidationSettingSchema": {
         "title": "VerificationProvider.ValidationSettingSchema",
-        "x-stoplight": {
-          "id": "3ffzxl12zjcsg"
-        },
         "type": "object",
         "properties": {
           "enabled": {
-            "type": "boolean",
-            "x-stoplight": {
-              "id": "q4uuc6bb2qv25"
-            }
+            "type": "boolean"
           },
           "verificationResourcePackage": {
             "type": "object",
-            "x-stoplight": {
-              "id": "56kdy6r6w790p"
-            },
             "properties": {
               "customsettingtype": {
                 "type": "string",
-                "x-stoplight": {
-                  "id": "w40qs5wcrelnn"
-                },
                 "enum": [
                   "file",
                   "datetime"
                 ]
               },
               "customsettingvalue": {
-                "type": "string",
-                "x-stoplight": {
-                  "id": "p3xwhc14w6tfn"
-                }
+                "type": "string"
               }
             }
           },
           "lengthcheckcharacterlimit": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "erepyg8hxdbru"
-            }
+            "type": "integer"
           }
         }
       },
       "WebhookDefinition": {
         "title": "WebhookDefinition",
-        "x-stoplight": {
-          "id": "ub9s0chbz7cjw"
-        },
         "type": "object",
         "required": [
           "url",
@@ -3126,63 +2913,39 @@
         ],
         "properties": {
           "url": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "6t9a1hi14tyh2"
-            }
+            "type": "string"
           },
           "eventTypes": {
             "type": "array",
-            "x-stoplight": {
-              "id": "9k8tfae1ixf3e"
-            },
             "items": {
-              "$ref": "#/components/schemas/WebhookEventTypeDefinition",
-              "x-stoplight": {
-                "id": "0yu6smuij46hl"
-              }
+              "$ref": "#/components/schemas/WebhookEventTypeDefinition"
             }
           }
         }
       },
       "WebhookEventTypeDefinition": {
         "title": "WebhookEventTypeDefinition",
-        "x-stoplight": {
-          "id": "5uf8vewvffqhc"
-        },
         "type": "object",
         "required": [
           "eventType"
         ],
         "properties": {
           "eventType": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "2tjal9svz3phb"
-            }
+            "type": "string"
           }
         }
       },
       "RegionalBaseUrls": {
         "title": "Regional Base URLs",
-        "x-stoplight": {
-          "id": "750k5bd32yqr8"
-        },
         "type": "object",
         "description": "The base URLs based on region.",
         "properties": {
           "eu": {
             "type": "string",
-            "x-stoplight": {
-              "id": "sxsx61aedkbgg"
-            },
             "description": "The URL for the `eu` region."
           },
           "ca": {
             "type": "string",
-            "x-stoplight": {
-              "id": "g97d5qxwdladv"
-            },
             "description": "The URL for the `ca` region."
           }
         }

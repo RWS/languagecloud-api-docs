@@ -1,9 +1,3 @@
----
-tags: [Consumer]
-stoplight-id: xmvf6rjkuqma6
----
-
-
 # Automatic Task
 
 Automatic Task apps offer the possibility to add custom functionality within a project's workflow.
