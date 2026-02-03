@@ -3531,7 +3531,7 @@
             }
           }
         },
-        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](../docs/updating-data-with-put)."
+        "description": "Updates a PerfectMatch batch mapping.\r\n\r\nPay special attention to how [updating works](../docs/Updating-data-with-PUT.html)."
       }
     },
     "/perfect-match-mappings/{mappingId}/batch-mappings/{batchMappingId}/file-mappings/{fileMappingId}/project-file": {
@@ -12621,7 +12621,7 @@
             }
           }
         },
-        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project](#/operations/GetProject) endpoint.\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating](../docs/updating-data-with-put) works.",
+        "description": "Updates a translation engine. \n\nIt can be used to update a stand-alone translation engine or a project's translation engine. \nThe identifier of a project's translation engine can be retrieved only by calling [Get Project](#/operations/GetProject) endpoint.\n\nPay special attention that some properties can not be changed for a project's translation engine. These include: name, description, definition.languageProcessingId, and language pairs can not be added/removed from definition.languagePairDefinitions. \n\nPay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
