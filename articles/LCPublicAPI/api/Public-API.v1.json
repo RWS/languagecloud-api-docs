@@ -2627,6 +2627,188 @@
         },
         "operationId": "GetGroup"
       },
+      "put": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Update Group",
+        "description": "Updates a group by . We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.md).",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/group-update-request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content\n",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the Group.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the Group could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"conflict\": the request is conflicting with existing data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "UpdateGroup"
+      },
+      "delete": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Delete Group",
+        "description": "Deletes a group by identifier.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content\n",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to delete the Group.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "DeleteGroup"
+      },
       "parameters": [
         {
           "$ref": "#/components/parameters/groupId"
@@ -2729,6 +2911,127 @@
           }
         },
         "operationId": "ListGroups"
+      },
+      "post": {
+        "tags": [
+          "Group"
+        ],
+        "summary": "Create Group",
+        "description": "Creates a group. Group roles will take effect based on the location, where the group is being created. Read more at [How to use location and folders](../docs/how-to-use-location-and-folders).",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/group-create-request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/group"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the parameter mentioned in the “name” field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed create a group.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the Location/Roles could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"conflict\": the request is conflicting with existing data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "CreateGroup"
       }
     },
     "/languages": {
@@ -20746,6 +21049,34 @@
           }
         }
       },
+      "group-additional-roles-request": {
+        "title": "Group Additional Roles Request",
+        "x-stoplight": {
+          "id": "25bc0f4edafe0"
+        },
+        "type": "object",
+        "description": "Roles granted to the group in addition to the group location.",
+        "required": [
+          "location",
+          "roles"
+        ],
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Additional roles granted to this location identifier."
+          },
+          "roles": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "uniqueItems": true,
+            "description": "The identifiers of the roles granted to the specified location.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "group-request": {
         "title": "Group Request",
         "type": "object",
@@ -20777,6 +21108,77 @@
         "required": [
           "id"
         ]
+      },
+      "group-create-request": {
+        "title": "Group Create Request",
+        "x-stoplight": {
+          "id": "27fdf1f89fe05"
+        },
+        "type": "object",
+        "description": "Group of users.",
+        "required": [
+          "name",
+          "location",
+          "roles"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/group-update-request"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The folder identifier where the group will be created."
+              }
+            }
+          }
+        ]
+      },
+      "group-update-request": {
+        "title": "Group Update Request",
+        "x-stoplight": {
+          "id": "27fdf1f89fe05"
+        },
+        "type": "object",
+        "description": "Group of users.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "The group name."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "description": "The group description."
+          },
+          "roles": {
+            "description": "The identifiers of the roles associated with the group.",
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "additionalRoles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/group-additional-roles-request"
+            }
+          },
+          "users": {
+            "type": "array",
+            "description": "The identifiers of the users who will be part of the group.",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       },
       "jwk": {
         "title": "JWK",
