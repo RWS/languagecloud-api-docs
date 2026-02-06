@@ -29165,7 +29165,8 @@
         },
         "required": [
           "languagePair",
-          "resources"
+          "resources",
+          "adjacentLanguagePair"
         ]
       },
       "translation-engine-definition-adjacent-language-pair": {
