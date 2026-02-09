@@ -2469,6 +2469,18 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           },
           {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/location"
+          },
+          {
+            "$ref": "#/components/parameters/location-strategy"
+          },
+          {
             "name": "name",
             "in": "query",
             "description": "Filter folders by name.",
