@@ -5,9 +5,10 @@
 ## 11 February 2026
 - We have extended group management capabilities. You can now [Create](../api/Public-API.v1-fv.html#/operations/CreateGroup), [Update](../api/Public-API.v1-fv.html#/operations/UpdateGroup), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteGroup) groups.
 - The available resource types returned by [Get](../api/Public-API.v1-fv.html#/operations/GetCustomField) and [List](../api/Public-API.v1-fv.html#/operations/ListCustomFields) Custom Field Definition(s) have been extended to include vendor and vendor order template (VOT).
-- The [task-event](../api/Webhooks.v1-fv.html#/schemas/task-event) payload has been enhanced to include additional information about associated source and target files, reducing the need for follow-up API calls.
-  - For target files, the payload now includes: targetFileId, fileVersionId, version, type (bcm/native), sourceFileId.
-  - For source files, the payload now includes: sourceFileId, fileVersionId, version, type (bcm/native).
+- The [task-event](../api/Webhooks.v1-fv.html#/schemas/task-event) payload has been enhanced to include apiInternalId and additional information about associated source and target files, reducing the need for follow-up API calls.
+  - Task events now include `apiInternalId` in the task details, allowing for easier identification of custom tasks.
+  - For target files, the payload now includes: `targetFileId`, `fileVersionId`, `version`, `type` (bcm/native), `sourceFileId`.
+  - For source files, the payload now includes: `sourceFileId`, `fileVersionId`, `version`, `type` (bcm/native).
 - We fixed various bugs.
 
 ## 8 December 2025
