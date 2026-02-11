@@ -20344,7 +20344,9 @@
             "description": "The resource type to which this Custom Field can be applied.",
             "enum": [
               "project",
-              "customer"
+              "customer",
+              "vendor",
+              "vendorOrderTemplate"
             ]
           },
           "isReadOnly": {
