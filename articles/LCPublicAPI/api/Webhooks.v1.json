@@ -460,6 +460,10 @@
             "format": "date-time",
             "description": "The project due date.\n\nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
           },
+          "apiInternalId": {
+            "type": "string",
+            "description": "The internal id of the task. This field is not available for non-workflow tasks"
+          },
           "input": {
             "$ref": "#/components/schemas/task-input"
           }
