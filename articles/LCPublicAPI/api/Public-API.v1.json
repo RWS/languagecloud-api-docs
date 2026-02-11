@@ -2632,7 +2632,7 @@
           "Group"
         ],
         "summary": "Update Group",
-        "description": "Updates a group by . We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.md).",
+        "description": "Updates a group by . We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.html).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"

@@ -2,6 +2,14 @@
 
 </br> 
 
+## 11 February 2026
+- We have extended group management capabilities. You can now [Create](../api/Public-API.v1-fv.html#/operations/CreateGroup), [Update](../api/Public-API.v1-fv.html#/operations/UpdateGroup), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteGroup) groups.
+- The available resource types returned by [Get](../api/Public-API.v1-fv.html#/schemas/custom-field-definition) and [List](../api/Public-API.v1-fv.html#/schemas/list-custom-field-definitions-response) Custom Field Definition(s) have been extended to include vendor and vendor order template (VOT).
+- The [task-event](../api/Webhooks.v1-fv.html#/schemas/task-input) payload has been enhanced to include additional information about associated source and target files, reducing the need for follow-up API calls.
+- For target files, the payload now includes: targetFileId, fileVersionId, version, type (bcm/native), sourceFileId.
+- For source files, the payload now includes: sourceFileId, fileVersionId, version, type (bcm/native).
+- We fixed various bugs.
+
 ## 8 December 2025
 - With this release we deliver full management capabilities for both users and applications. The new user endpoints enable [Create](../api/Public-API.v1-fv.html#/operations/CreateUser), [Update](../api/Public-API.v1-fv.html#/operations/UpdateUser), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteUser) operations, while application management now supports all CRUD operations: [Get](../api/Public-API.v1-fv.html#/operations/GetApplication), [List](../api/Public-API.v1-fv.html#/operations/ListApplications), [Create](../api/Public-API.v1-fv.html#/operations/CreateApplication), [Update](../api/Public-API.v1-fv.html#/operations/UpdateApplication), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteApplication).
 - As announced in November 2024, the `language` and `targetLanguages` fields in [Add Source File Request](../api/Public-API.v1-fv.html#/schemas/source-file-request) now use the [Language Request](../api/Public-API.v1-fv.html#/schemas/language-request) model.
