@@ -183,11 +183,15 @@
           "failedTaskType": {
             "$ref": "#/components/schemas/failed-task-type",
             "description": "The failed task type."
+          },
+          "input": {
+            "$ref": "#/components/schemas/task-input"
           }
         },
         "required": [
           "id",
-          "name"
+          "name",
+          "input"
         ]
       },
       "failed-task-error": {
@@ -455,13 +459,22 @@
             "type": "string",
             "format": "date-time",
             "description": "The project due date.\n\nGMT Timezone\n\nAllowed formats:\\\n\"YYYY-MM-DDThh:mmZ\"\\\n\"YYYY-MM-DDThh:mm:ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sZ\"\\\n\"YYYY-MM-DDThh:mm:ss.ssZ\"\\\n\"YYYY-MM-DDThh:mm:ss.sssZ\""
+          },
+          "input": {
+            "$ref": "#/components/schemas/task-input"
+          },
+          "apiInternalId": {
+            "type": "string",
+            "description": "The internal id of the task. This field is not available for non-workflow tasks",
+            "nullable": true
           }
         },
         "required": [
           "id",
           "status",
           "taskType",
-          "assignees"
+          "assignees",
+          "input"
         ]
       },
       "task-event-assignees": {
@@ -515,6 +528,99 @@
           "id",
           "key",
           "automatic"
+        ]
+      },
+      "task-input": {
+        "title": "Task Input",
+        "type": "object",
+        "x-stoplight": {
+          "id": "task-input"
+        },
+        "description": "Information about the task input. Currently only `sourceFile` and `targetFile` objects are populated in webhook events.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The input identifier."
+          },
+          "inputType": {
+            "type": "string",
+            "enum": [
+              "sourceFile",
+              "targetFile",
+              "languageDirection",
+              "project"
+            ],
+            "description": "The type of input."
+          },
+          "sourceFile": {
+            "$ref": "#/components/schemas/task-input-source-file",
+            "description": "Source file information. Present when inputType is sourceFile."
+          },
+          "targetFile": {
+            "$ref": "#/components/schemas/task-input-target-file",
+            "description": "Target file information. Present when inputType is targetFile."
+          }
+        },
+        "required": [
+          "id",
+          "inputType"
+        ]
+      },
+      "task-input-source-file": {
+        "title": "Task Input Source File",
+        "type": "object",
+        "x-stoplight": {
+          "id": "task-input-source-file"
+        },
+        "description": "Source file information for task input.",
+        "properties": {
+          "fileVersionId": {
+            "type": "string",
+            "description": "The file version identifier."
+          },
+          "version": {
+            "type": "integer",
+            "description": "The file version number."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "native",
+              "bcm"
+            ],
+            "description": "The file type."
+          }
+        },
+        "required": [
+          "fileVersionId",
+          "version",
+          "type"
+        ]
+      },
+      "task-input-target-file": {
+        "title": "Task Input Target File",
+        "type": "object",
+        "x-stoplight": {
+          "id": "task-input-target-file"
+        },
+        "description": "Target file information for task input. Extends source file with additional sourceFileId.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/task-input-source-file"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "sourceFileId": {
+                "type": "string",
+                "description": "The identifier of the source file associated with this target file."
+              }
+            },
+            "required": [
+              "sourceFileId",
+              "type"
+            ]
+          }
         ]
       },
       "webhook": {

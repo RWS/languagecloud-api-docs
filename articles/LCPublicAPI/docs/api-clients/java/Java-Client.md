@@ -73,6 +73,13 @@ ProjectCreateRequest projectCreateRequest = new ProjectCreateRequest();
 projectCreateRequest.setName("YOUR_PROJECT_NAME");
 projectCreateRequest.setDueBy(DateTime.parse("2025-01-01T00:00:00.000Z"));
 projectCreateRequest.setProjectTemplate(new ObjectIdRequest().id("YOUR_PROJECT_TEMPLATE_ID"));
+projectCreateRequest.setLocation("YOUR_PROJECT_LOCATION");
+
+List<LanguageDirectionRequest> languageDirectionRequest = List.of(new LanguageDirectionRequest()
+        .sourceLanguage(new SourceLanguageRequest("YOUR_SOURCE_LANGUAGE"))
+        .targetLanguage(new TargetLanguageRequest("YOUR_TARGET_LANGUAGE"))
+);
+projectCreateRequest.setLanguageDirections(languageDirectionRequest);
 
 // Set the `fields` query parameter so the response is populated with `projectPlan.taskConfigurations`
 ProjectApi.CreateProjectQueryParams queryParams = new ProjectApi.CreateProjectQueryParams();
