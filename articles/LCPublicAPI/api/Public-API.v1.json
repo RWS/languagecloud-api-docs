@@ -21093,6 +21093,19 @@
               "$ref": "#/components/schemas/user"
             }
           },
+          "roles": {
+            "type": "array",
+            "description": "**Note**: The identifier of `Administrator` role will not be exposed publicly and a `********` placeholder will be returned on this endpoint for the role.",
+            "items": {
+              "$ref": "#/components/schemas/role"
+            }
+          },
+          "additionalRoles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/group-additional-roles"
+            }
+          },
           "groupType": {
             "type": "string",
             "enum": [
@@ -21102,6 +21115,26 @@
               "customer"
             ],
             "description": "- default : groups in the Root folder (location) provisioned by the system, automatically. Examples: Administrator, Project Manager, Engineer, Terminologist.\r\n- customer : groups provisioned by the system, automatically, for each customer location you add. Examples: Customer Requester, Customer Reviewer.\r\n- vendor : group provisioned by the system, automatically, for each vendor location you add. Examples: Vendor Project Manager.\r\n- custom : groups you can create in a location of your choice. Examples: Project Manager, Translator."
+          }
+        }
+      },
+      "group-additional-roles": {
+        "title": "Group Additional Roles",
+        "type": "object",
+        "description": "Roles granted to the group in addition to the group location.",
+        "required": [
+          "location",
+          "roles"
+        ],
+        "properties": {
+          "location": {
+            "$ref": "#/components/schemas/folder-v2"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/role"
+            }
           }
         }
       },
