@@ -98,6 +98,10 @@
       "description": "Rate Limits"
     },
     {
+      "name": "Roles",
+      "description": "Roles"
+    },
+    {
       "name": "Schedule Template",
       "description": "Schedule Template"
     },
@@ -11120,6 +11124,56 @@
         "operationId": "ListRateLimits"
       }
     },
+    "/roles": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "summary": "List Roles",
+        "description": "Retrieves a list of all roles available for the account.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-roles-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListRoles"
+      }
+    },
     "/schedule-templates": {
       "get": {
         "summary": "List Schedule Templates",
@@ -21053,9 +21107,6 @@
       },
       "group-additional-roles-request": {
         "title": "Group Additional Roles Request",
-        "x-stoplight": {
-          "id": "25bc0f4edafe0"
-        },
         "type": "object",
         "description": "Roles granted to the group in addition to the group location.",
         "required": [
@@ -21113,9 +21164,6 @@
       },
       "group-create-request": {
         "title": "Group Create Request",
-        "x-stoplight": {
-          "id": "27fdf1f89fe05"
-        },
         "type": "object",
         "description": "Group of users.",
         "required": [
@@ -21140,9 +21188,6 @@
       },
       "group-update-request": {
         "title": "Group Update Request",
-        "x-stoplight": {
-          "id": "27fdf1f89fe05"
-        },
         "type": "object",
         "description": "Group of users.",
         "properties": {
@@ -22012,6 +22057,26 @@
           "items"
         ],
         "description": "A response for the List Rate Limits endpoint."
+      },
+      "list-roles-response": {
+        "title": "List Roles Response",
+        "type": "object",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/role"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "description": "A response for the List Roles endpoint."
       },
       "list-perfect-match-candidates-response": {
         "title": "List PerfectMatch Candidates Response",
@@ -26271,6 +26336,25 @@
         "required": [
           "projects"
         ]
+      },
+      "role": {
+        "title": "Role",
+        "type": "object",
+        "description": "Role in the account.",
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the role."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the role."
+          }
+        }
       },
       "schedule-template": {
         "title": "Schedule Template",
