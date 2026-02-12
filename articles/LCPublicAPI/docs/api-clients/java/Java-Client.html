@@ -142,6 +142,13 @@ ProjectApi projectApi = languageCloudClientProvider.getProjectClient();
 projectCreateRequest.setName(&quot;YOUR_PROJECT_NAME&quot;);
 projectCreateRequest.setDueBy(DateTime.parse(&quot;2025-01-01T00:00:00.000Z&quot;));
 projectCreateRequest.setProjectTemplate(new ObjectIdRequest().id(&quot;YOUR_PROJECT_TEMPLATE_ID&quot;));
+projectCreateRequest.setLocation(&quot;YOUR_PROJECT_LOCATION&quot;);
+
+List&lt;LanguageDirectionRequest&gt; languageDirectionRequest = List.of(new LanguageDirectionRequest()
+        .sourceLanguage(new SourceLanguageRequest(&quot;YOUR_SOURCE_LANGUAGE&quot;))
+        .targetLanguage(new TargetLanguageRequest(&quot;YOUR_TARGET_LANGUAGE&quot;))
+);
+projectCreateRequest.setLanguageDirections(languageDirectionRequest);
 
 // Set the `fields` query parameter so the response is populated with `projectPlan.taskConfigurations`
 ProjectApi.CreateProjectQueryParams queryParams = new ProjectApi.CreateProjectQueryParams();
