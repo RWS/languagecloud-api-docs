@@ -11383,7 +11383,7 @@
       },
       "put": {
         "summary": "Update Role",
-        "description": "Updates a role by identifier. Only custom roles can be updated.",
+        "description": "Updates a role by identifier.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11478,7 +11478,7 @@
       },
       "delete": {
         "summary": "Delete Role",
-        "description": "Deletes a role by identifier. Only custom roles can be deleted.",
+        "description": "Deletes a role by identifier.\n\n> Note: Only custom roles can be deleted. System roles cannot be removed.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -26794,6 +26794,7 @@
         "title": "Role",
         "type": "object",
         "description": "Role in the account.",
+        "x-internal": true,
         "properties": {
           "name": {
             "type": "string",
