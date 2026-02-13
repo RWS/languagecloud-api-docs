@@ -11130,7 +11130,7 @@
           "Roles and Permissions"
         ],
         "summary": "List Roles",
-        "description": "Retrieves a list of all roles available for the account.\n\nSee [List Permissions](#/operations/ListPermissions) for further details about permissions.",
+        "description": "Retrieves a list of all roles available for the account.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11287,7 +11287,7 @@
       ],
       "get": {
         "summary": "Get Role",
-        "description": "Retrieves a role by identifier.\n\nSee [List Permissions](#/operations/ListPermissions) for further details about permissions.",
+        "description": "Retrieves a role by identifier.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -26853,33 +26853,41 @@
           "type",
           "name"
         ],
-        "allOf": [
-          {
-            "properties": {
-              "id": {
-                "type": "string",
-                "description": "The identifier of the role."
-              },
-              "type": {
-                "type": "string",
-                "description": "The role type.",
-                "enum": [
-                  "system",
-                  "custom"
-                ]
-              }
-            }
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the role."
           },
-          {
-            "$ref": "#/components/schemas/role-no-id"
+          "type": {
+            "type": "string",
+            "description": "The role type.",
+            "enum": [
+              "system",
+              "custom"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the role."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the role."
+          },
+          "permissions": {
+            "type": "array",
+            "description": "List of permissions associated with role.",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/permission"
+            }
           }
-        ]
+        }
       },
-      "role-no-id": {
-        "title": "Role",
+      "role-update-request": {
+        "title": "Role Update Request",
         "type": "object",
-        "description": "Role in the account.",
-        "x-internal": true,
+        "description": "Role update request.",
         "properties": {
           "name": {
             "type": "string",
@@ -26895,7 +26903,7 @@
           },
           "permissions": {
             "type": "array",
-            "description": "List of permissions associated with role.",
+            "description": "List of permission names associated with role.",
             "minItems": 1,
             "items": {
               "type": "string",
@@ -26918,17 +26926,7 @@
         ],
         "allOf": [
           {
-            "$ref": "#/components/schemas/role-no-id"
-          }
-        ]
-      },
-      "role-update-request": {
-        "title": "Role Update Request",
-        "type": "object",
-        "description": "Role update request.",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/role-no-id"
+            "$ref": "#/components/schemas/role-update-request"
           }
         ]
       },
