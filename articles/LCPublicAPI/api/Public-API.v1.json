@@ -11130,7 +11130,7 @@
           "Roles and Permissions"
         ],
         "summary": "List Roles",
-        "description": "Retrieves a list of all roles available for the account.",
+        "description": "Retrieves a list of all roles available for the account.\n\nSee [List Permissions](#operation/ListPermissions) for further details about permissions.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11187,7 +11187,7 @@
           "Roles and Permissions"
         ],
         "summary": "Create Role",
-        "description": "Creates a custom role.",
+        "description": "Creates a custom role.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11287,7 +11287,7 @@
       ],
       "get": {
         "summary": "Get Role",
-        "description": "Retrieves a role by identifier.",
+        "description": "Retrieves a role by identifier.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11383,7 +11383,7 @@
       },
       "put": {
         "summary": "Update Role",
-        "description": "Updates a role by identifier.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.",
+        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11457,6 +11457,21 @@
           },
           "404": {
             "description": "Error codes:\n* \"notFound\": the role could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"duplicate\" Role with the same name already exists.",
             "content": {
               "application/json": {
                 "schema": {
@@ -22568,7 +22583,7 @@
           "itemCount",
           "items"
         ],
-        "description": "A response for the List Roles endpoint."
+        "description": "A response for the List Permissions endpoint."
       },
       "list-perfect-match-candidates-response": {
         "title": "List PerfectMatch Candidates Response",
@@ -26868,14 +26883,27 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the role."
+            "description": "Name of the role.",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the role.",
+            "minLength": 1,
+            "maxLength": 1000
           },
           "permissions": {
             "type": "array",
-            "description": "List of permissions associated with role.",
+            "description": "List of permissions associated with role. See [List Permissions](#operation/ListPermissions) for further details about permissions.",
             "minItems": 1,
             "items": {
-              "type": "string"
+              "type": "string",
+              "examples": [
+                "projectCreate",
+                "identityGroupCreate",
+                "accountUserRead"
+              ]
             }
           }
         }
@@ -26930,10 +26958,22 @@
             "description": "Human-readable description of the permission."
           },
           "category": {
-            "$ref": "#/components/schemas/permission-category"
+            "type": "string",
+            "description": "The category a permission belongs to.",
+            "examples": [
+              "Projects",
+              "User Management",
+              "Resources"
+            ]
           },
           "entityType": {
-            "$ref": "#/components/schemas/permission-entity-type"
+            "type": "string",
+            "description": "The entity type a permission applies to.",
+            "examples": [
+              "Projects",
+              "Groups",
+              "Users"
+            ]
           },
           "dependsOn": {
             "type": "array",
@@ -26952,74 +26992,6 @@
                 "accountUserRead"
               ]
             }
-          }
-        }
-      },
-      "permission-category": {
-        "title": "Permission Category",
-        "type": "object",
-        "description": "The category a permission belongs to.",
-        "required": [
-          "name",
-          "displayName"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Category identifier.",
-            "examples": [
-              "projectManagement",
-              "accountManagement",
-              "resources"
-            ]
-          },
-          "displayName": {
-            "type": "string",
-            "description": "Human-readable category name.",
-            "examples": [
-              "Projects",
-              "User Management",
-              "Resources"
-            ]
-          }
-        }
-      },
-      "permission-entity-type": {
-        "title": "Permission Entity Type",
-        "type": "object",
-        "description": "The entity type a permission applies to.",
-        "required": [
-          "name",
-          "displayName",
-          "description"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Entity type identifier.",
-            "examples": [
-              "project",
-              "group",
-              "accountUser"
-            ]
-          },
-          "displayName": {
-            "type": "string",
-            "description": "Human-readable entity type name.",
-            "examples": [
-              "Projects",
-              "Groups",
-              "Users"
-            ]
-          },
-          "description": {
-            "type": "string",
-            "description": "Description of the entity type and its permissions.",
-            "examples": [
-              "These permissions provide the ability to manage projects",
-              "These permissions provide the ability to manage groups",
-              "These permissions provide the ability to manage users"
-            ]
           }
         }
       },
