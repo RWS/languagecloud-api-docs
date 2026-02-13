@@ -26918,7 +26918,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the permission. Examples: projectCreate, identityGroupCreate, accountUserRead"
+            "description": "Name of the permission.",
+            "examples": [
+              "projectCreate",
+              "identityGroupCreate",
+              "accountUserRead"
+            ]
           },
           "description": {
             "type": "string",
@@ -26933,9 +26938,19 @@
           "dependsOn": {
             "type": "array",
             "description": "List of permission names that this permission depends on. Empty array if no dependencies.",
+            "examples": [
+              ["projectRead"],
+              ["identityGroupRead"],
+              []
+            ],
             "items": {
               "type": "string",
-              "description": "Name of a dependent permission. Examples: projectRead, identityGroupRead, accountUserRead"
+              "description": "Name of a dependent permission.",
+              "examples": [
+                "projectRead",
+                "identityGroupRead",
+                "accountUserRead"
+              ]
             }
           }
         }
@@ -26951,11 +26966,21 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Category identifier. Examples: projectManagement, accountManagement, resources"
+            "description": "Category identifier.",
+            "examples": [
+              "projectManagement",
+              "accountManagement",
+              "resources"
+            ]
           },
           "displayName": {
             "type": "string",
-            "description": "Human-readable category name. Examples: Projects, User Management, Resources"
+            "description": "Human-readable category name.",
+            "examples": [
+              "Projects",
+              "User Management",
+              "Resources"
+            ]
           }
         }
       },
@@ -26971,15 +26996,30 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Entity type identifier. Examples: project, group, accountUser"
+            "description": "Entity type identifier.",
+            "examples": [
+              "project",
+              "group",
+              "accountUser"
+            ]
           },
           "displayName": {
             "type": "string",
-            "description": "Human-readable entity type name. Examples: Projects, Groups, Users"
+            "description": "Human-readable entity type name.",
+            "examples": [
+              "Projects",
+              "Groups",
+              "Users"
+            ]
           },
           "description": {
             "type": "string",
-            "description": "Description of the entity type and its permissions."
+            "description": "Description of the entity type and its permissions.",
+            "examples": [
+              "These permissions provide the ability to manage projects",
+              "These permissions provide the ability to manage groups",
+              "These permissions provide the ability to manage users"
+            ]
           }
         }
       },
