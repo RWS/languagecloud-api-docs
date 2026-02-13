@@ -2537,6 +2537,16 @@
                 "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\":  The requested entity or one of it's dependencies attempted to retrieve data outside the allowed range. Skip+Top might be outside the supported range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
           }
         },
         "operationId": "ListFolders"
