@@ -11130,7 +11130,7 @@
           "Roles and Permissions"
         ],
         "summary": "List Roles",
-        "description": "Retrieves a list of all roles available for the account.\n\nSee [List Permissions](#operation/ListPermissions) for further details about permissions.",
+        "description": "Retrieves a list of all roles available for the account.\n\nSee [List Permissions](#/operations/ListPermissions) for further details about permissions.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11187,7 +11187,7 @@
           "Roles and Permissions"
         ],
         "summary": "Create Role",
-        "description": "Creates a custom role.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
+        "description": "Creates a custom role.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11287,7 +11287,7 @@
       ],
       "get": {
         "summary": "Get Role",
-        "description": "Retrieves a role by identifier.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
+        "description": "Retrieves a role by identifier.\n\nSee [List Permissions](#/operations/ListPermissions) for further details about permissions.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11383,7 +11383,7 @@
       },
       "put": {
         "summary": "Update Role",
-        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.\n\nSee [List Permissions](#operation/ListPermissions) for available permission names.",
+        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -26895,7 +26895,7 @@
           },
           "permissions": {
             "type": "array",
-            "description": "List of permissions associated with role. See [List Permissions](#operation/ListPermissions) for further details about permissions.",
+            "description": "List of permissions associated with role.",
             "minItems": 1,
             "items": {
               "type": "string",
