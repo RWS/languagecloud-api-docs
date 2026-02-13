@@ -11411,7 +11411,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* “empty”: Empty input for the “roleId” path parameter variable.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or system roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -11512,7 +11512,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* “empty”: Empty input for the “roleId” path parameter variable.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or system roles cannot be deleted.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
             "content": {
               "application/json": {
                 "schema": {
