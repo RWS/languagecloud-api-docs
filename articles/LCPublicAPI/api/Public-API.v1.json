@@ -11563,6 +11563,56 @@
         ]
       }
     },
+    "/permissions": {
+      "get": {
+        "tags": [
+          "Roles and Permissions"
+        ],
+        "summary": "List Permissions",
+        "description": "Retrieves a list of all permissions available for the account.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-permissions-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListPermissions"
+      }
+    },
     "/schedule-templates": {
       "get": {
         "summary": "List Schedule Templates",
@@ -22500,6 +22550,26 @@
         ],
         "description": "A response for the List Roles endpoint."
       },
+      "list-permissions-response": {
+        "title": "List Permissions Response",
+        "type": "object",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/permission"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "description": "A response for the List Roles endpoint."
+      },
       "list-perfect-match-candidates-response": {
         "title": "List PerfectMatch Candidates Response",
         "type": "object",
@@ -26833,6 +26903,85 @@
             "$ref": "#/components/schemas/role-no-id"
           }
         ]
+      },
+      "permission": {
+        "title": "Permission",
+        "type": "object",
+        "description": "A single permission which governs access to resources.",
+        "required": [
+          "name",
+          "description",
+          "category",
+          "entityType",
+          "dependsOn"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the permission. Examples: projectCreate, identityGroupCreate, accountUserRead"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the permission."
+          },
+          "category": {
+            "$ref": "#/components/schemas/permission-category"
+          },
+          "entityType": {
+            "$ref": "#/components/schemas/permission-entity-type"
+          },
+          "dependsOn": {
+            "type": "array",
+            "description": "List of permission names that this permission depends on. Empty array if no dependencies.",
+            "items": {
+              "type": "string",
+              "description": "Name of a dependent permission. Examples: projectRead, identityGroupRead, accountUserRead"
+            }
+          }
+        }
+      },
+      "permission-category": {
+        "title": "Permission Category",
+        "type": "object",
+        "description": "The category a permission belongs to.",
+        "required": [
+          "name",
+          "displayName"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Category identifier. Examples: projectManagement, accountManagement, resources"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Human-readable category name. Examples: Projects, User Management, Resources"
+          }
+        }
+      },
+      "permission-entity-type": {
+        "title": "Permission Entity Type",
+        "type": "object",
+        "description": "The entity type a permission applies to.",
+        "required": [
+          "name",
+          "displayName",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Entity type identifier. Examples: project, group, accountUser"
+          },
+          "displayName": {
+            "type": "string",
+            "description": "Human-readable entity type name. Examples: Projects, Groups, Users"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the entity type and its permissions."
+          }
+        }
       },
       "schedule-template": {
         "title": "Schedule Template",
