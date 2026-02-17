@@ -11,7 +11,7 @@ _disableToc: false
     ⤢ View Documentation Fullscreen
   </a>
   <div style="font-size: 12px; color: #666; margin-top: 5px;">
-    <em>API examples are only available when viewing in full-screen mode.</em>
+    <em>Certain documentation elements are available only when viewing in full‑screen mode.</em>
   </div>
 </div>
 
