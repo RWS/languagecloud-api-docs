@@ -29109,6 +29109,12 @@
           },
           "sequence": {
             "$ref": "#/components/schemas/remote-translation-engine-sequence"
+          },
+          "adjacentLanguagePenalty": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30,
+            "default": 0
           }
         }
       },
@@ -29159,37 +29165,17 @@
               "$ref": "#/components/schemas/language-pair-resource"
             }
           },
-          "adjacentLanguagePair": {
-            "$ref": "#/components/schemas/translation-engine-definition-adjacent-language-pair"
+          "adjacentLanguagePairs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/language-pair"
+            }
           }
         },
         "required": [
           "languagePair",
           "resources",
           "adjacentLanguagePair"
-        ]
-      },
-      "translation-engine-definition-adjacent-language-pair": {
-        "title": "Adjacent Language Pair Definition",
-        "type": "object",
-        "properties": {
-          "languagePair": {
-            "$ref": "#/components/schemas/language-pair"
-          },
-          "settings": {
-            "type": "object",
-            "properties": {
-              "tmPenalty": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 30,
-                "default": 0
-              }
-            }
-          }
-        },
-        "required": [
-          "languagePair"
         ]
       },
       "translation-memory-field": {
