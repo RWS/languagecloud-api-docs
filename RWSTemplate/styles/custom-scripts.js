@@ -130,59 +130,108 @@ document.addEventListener('DOMContentLoaded', function () {
         const operationId = operationMap[key];
 
         if (operationId) {
+          // path (operationPath) used by copy button
+          const operationPath = path;
           // 1. Create a wrapper
           const wrapper = document.createElement('span');
           wrapper.style.display = 'inline-flex';
           wrapper.style.alignItems = 'center';
 
-          // 2. Operation ID Badge
-          const idSpan = document.createElement('span');
-          idSpan.textContent = ` [${operationId}]`;
-          idSpan.style.fontSize = '12px';
-          idSpan.style.color = '#555';
-          idSpan.style.marginLeft = '12px';
-          idSpan.style.fontFamily = 'monospace';
-          idSpan.style.backgroundColor = 'rgba(0,0,0,0.05)';
-          idSpan.style.padding = '2px 6px';
-          idSpan.style.borderRadius = '4px';
-          idSpan.style.border = '1px solid #ddd';
-          idSpan.className = 'inserted-operation-id';
-          idSpan.title = 'Operation ID';
+          // 2. Operation ID Badge (badge contains copy button and inline copy button)
+          const badge = document.createElement('span');
+          badge.style.display = 'inline-flex';
+          badge.style.alignItems = 'center';
+          badge.style.fontSize = '12px';
+          badge.style.color = '#555';
+          badge.style.marginLeft = '0';
+          badge.style.fontFamily = 'monospace';
+          badge.style.backgroundColor = '#ffffff';
+          badge.style.boxShadow = '0 1px 4px rgba(0,0,0,0.08)';
+          badge.style.padding = '2px';
+          badge.style.borderRadius = '4px';
+          badge.style.border = '1px solid #ddd';
+          badge.className = 'inserted-operation-id-badge';
 
-          // 3. Anchor Link
-          const anchorId = `/operations/${operationId}`;
-          const anchorLink = document.createElement('a');
-          anchorLink.href = `#${anchorId}`;
-          anchorLink.textContent = '🔗';
-          anchorLink.style.marginLeft = '8px';
-          anchorLink.style.textDecoration = 'none';
-          anchorLink.style.fontSize = '14px';
-          anchorLink.style.cursor = 'pointer';
-          anchorLink.title = `Permalink to ${operationId}`;
+          // Copy button (click copies the operation path)
+          const copyBtn = document.createElement('button');
+          copyBtn.type = 'button';
+          copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" style="display:block;width:80%;height:80%"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" /> </svg>';
+          copyBtn.title = `Copy path: ${operationPath}`;
+          copyBtn.setAttribute('aria-label', `Copy path ${operationPath}`);
+          copyBtn.style.font = 'inherit';
+          copyBtn.style.color = 'inherit';
+          copyBtn.style.background = 'transparent';
+          copyBtn.style.border = 'none';
+          copyBtn.style.padding = '0';
+          copyBtn.style.margin = '0';
+          copyBtn.style.cursor = 'pointer';
+          copyBtn.style.display = 'inline-flex';
+          copyBtn.style.alignItems = 'center';
+          copyBtn.style.justifyContent = 'center';
+          copyBtn.style.boxSizing = 'border-box';
+          copyBtn.style.backgroundClip = 'padding-box';
+          copyBtn.style.borderRadius = '4px';
+          copyBtn.className = 'inserted-operation-id';
 
-          // Add click handler to always trigger navigation
-          anchorLink.addEventListener('click', (e) => {
+          // Copy-to-clipboard behavior (copies the operation path, e.g. "/resource/{id}")
+          copyBtn.addEventListener('click', async (e) => {
             e.preventDefault();
-            console.log(`Direct click on operation link: ${operationId}`);
-            navigateToOperation(operationId);
+            // Prevent the click from bubbling to the collapsible header
+            e.stopPropagation();
+            const textToCopy = operationPath;
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(textToCopy);
+              } else {
+                // Fallback for older browsers
+                const ta = document.createElement('textarea');
+                ta.value = textToCopy;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+              }
+
+              // Temporary feedback (show SVG checkmark briefly)
+              const original = copyBtn.innerHTML;
+              copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" style="display:block;width:80%;height:80%"> <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /> </svg>';
+              setTimeout(() => { copyBtn.innerHTML = original; }, 1000);
+            } catch (err) {
+              console.error('Copy failed', err);
+            }
           });
 
-          wrapper.appendChild(idSpan);
-          wrapper.appendChild(anchorLink);
-          container.appendChild(wrapper);
+          badge.appendChild(copyBtn);
 
-          // 4. Set the ID on the container for scrolling
+          // 3. Anchor ID 
+          const anchorId = `/operations/${operationId}`;
+
+          wrapper.appendChild(badge);
+
+          const parent = container.parentElement || container;
+          if (parent) {
+            if (getComputedStyle(parent).position === 'static') {
+              parent.style.position = 'relative';
+            }
+            wrapper.style.position = 'absolute';
+            wrapper.style.top = '50%';
+            wrapper.style.transform = 'translateY(-50%)';
+            wrapper.style.right = '12px';
+            wrapper.style.zIndex = '9999';
+            wrapper.style.pointerEvents = 'auto';
+            try { parent.style.overflow = 'visible'; } catch (e) { /* ignore */ }
+            copyBtn.style.width = '20px';
+            copyBtn.style.height = '20px';
+
+            parent.appendChild(wrapper);
+          } else {
+            // fallback to previous behavior
+            container.appendChild(wrapper);
+          }
           if (!container.id) {
             container.id = anchorId;
-          } else {
-            // Append invisible anchor target
-            const anchorTarget = document.createElement('a');
-            anchorTarget.id = anchorId;
-            anchorTarget.style.position = 'absolute';
-            anchorTarget.style.top = '-100px'; // Offset for bad headers
-            anchorTarget.style.visibility = 'hidden';
-            container.style.position = 'relative'; // Ensure absolute positioning is relative to container
-            container.appendChild(anchorTarget);
           }
 
           container.dataset.opIdInjected = 'true';

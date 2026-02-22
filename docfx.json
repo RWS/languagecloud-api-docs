@@ -19,6 +19,9 @@
       {
         "files": [
           "api/**.yml"
+        ],
+        "exclude": [
+          "_site/**"
         ]
       },
       {
@@ -27,6 +30,9 @@
           "articles/**/toc.yml",
           "toc.yml",
           "*.md"
+        ],
+        "exclude": [
+          "_site/**"
         ]
       }
     ],
@@ -37,6 +43,9 @@
           "**/*.json",
           "**/*.html",
           "**/*.js"
+        ],
+        "exclude": [
+          "_site/**"
         ]
       }
     ],
@@ -56,13 +65,21 @@
     "fileMetadataFiles": [],
     "filemetadata": {
       "langs": {
-        "api/**.yml": [ "csharp", "vb", "fsharp", "cpp" ]
+        "api/**.yml": [
+          "csharp",
+          "vb",
+          "fsharp",
+          "cpp"
+        ]
       }
     },
     "template": [
       "RWSTemplate"
     ],
-    "postProcessors": [ "ExtractSearchIndex", "EnvironmentVariableProcessor" ],
+    "postProcessors": [
+      "ExtractSearchIndex",
+      "EnvironmentVariableProcessor"
+    ],
     "globalMetadata": {
       "_enableSearch": true
     },
