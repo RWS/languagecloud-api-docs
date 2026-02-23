@@ -11904,13 +11904,22 @@
           "Task"
         ],
         "summary": "Accept Task",
-        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it.",
+        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it. Optionally, the task can be accepted on behalf of a group by providing the `acceptOnBehalfOfGroup` query parameter. In this case, the authenticated user must be a member of the specified group, and the group must be present in the task's assignee list.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
           },
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "name": "onBehalfOfGroup",
+            "in": "query",
+            "required": false,
+            "description": "The identifier of the group on behalf of which the task is being accepted. The authenticated user must be a member of the specified group, and the group must be present in the task's assignee list.",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -27083,7 +27092,7 @@
             }
           },
           "owner": {
-            "$ref": "#/components/schemas/user"
+            "$ref": "#/components/schemas/task-owner"
           },
           "assignees": {
             "type": "array",
@@ -27390,6 +27399,105 @@
             "x-default-field": true
           }
         }
+      },
+      "task-owner": {
+        "title": "Task Owner",
+        "type": "object",
+        "description": "Task owner. Based on the \"type\", the following properties can be retrieved: \"user\" or \"group\".",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "user",
+              "group"
+            ],
+            "description": "The owner type."
+          },
+          "user": {
+            "$ref": "#/components/schemas/user",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user who owns this task.</div> "
+          },
+          "group": {
+            "$ref": "#/components/schemas/group",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The group that owns this task.</div> "
+          },
+          "id": {
+            "type": "string",
+            "description": "User account identifier.",
+            "deprecated": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of this account user. For Service account users only.",
+            "deprecated": true
+          },
+          "email": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's email address. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "deprecated": true
+          },
+          "name": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's name. Retrieved only for Service users (not RWS ID users) that the authenticated entity is authorized to read.</div> ",
+            "deprecated": true
+          },
+          "firstName": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's first name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "deprecated": true
+          },
+          "lastName": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's last name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "deprecated": true
+          },
+          "anonymized": {
+            "type": "boolean",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">This shows if the authenticated entity has access to read the details of the user or not. If true, then the 'anonymizedUserName' should be retrieved.</div> ",
+            "deprecated": true
+          },
+          "anonymizedUserName": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Retrieved if the authenticated entity does not have access to read the User.</div> ",
+            "deprecated": true
+          },
+          "account": {
+            "allOf": [{ "$ref": "#/components/schemas/account" }],
+            "description": "The account the user is part of.",
+            "deprecated": true
+          },
+          "location": {
+            "allOf": [{ "$ref": "#/components/schemas/folder-v2" }],
+            "deprecated": true
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/group"
+            },
+            "deprecated": true
+          },
+          "userType": {
+            "allOf": [{ "$ref": "#/components/schemas/user-type" }],
+            "deprecated": true
+          },
+          "status": {
+            "allOf": [{ "$ref": "#/components/schemas/user-status" }],
+            "deprecated": true
+          },
+          "invitationLink": {
+            "type": "string",
+            "description": "The user's invitation link. Retrieved only for RWS ID (formerly SDL ID) users—not service users. It is available only if the user has not yet accepted the invitation (status is `inactive`).",
+            "deprecated": true
+          },
+          "membership": {
+            "allOf": [{ "$ref": "#/components/schemas/account-membership-type" }],
+            "deprecated": true
+          }
+        },
+        "required": [
+          "type"
+        ]
       },
       "task-type-outcome": {
         "title": "Task Type Outcome",
