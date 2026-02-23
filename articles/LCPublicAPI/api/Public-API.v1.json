@@ -27137,6 +27137,13 @@
           "completedAt": {
             "$ref": "#/components/schemas/date-time",
             "description": "The completion timestamp  of the task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\""
+          },
+          "taskTypeConfigValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
