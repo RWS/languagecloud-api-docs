@@ -19256,7 +19256,7 @@
           "Workflow"
         ],
         "summary": "Update Workflow",
-        "description": "Updates the workflow in terms of: name, description, and task configuration (and its details). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
+        "description": "Updates the workflow in terms of: name, description, task configuration (and its details), and task type configuration values (`taskTypeConfigValues`). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -27371,12 +27371,108 @@
               "$ref": "#/components/schemas/task-type-outcome"
             }
           },
+          "configurationDefinitions": {
+            "type": "array",
+            "description": "Defines the configurable options available for this task type. Each entry describes one configuration option including its data type, default value, allowed values and constraints.",
+            "items": {
+              "$ref": "#/components/schemas/task-type-configuration-definition"
+            }
+          },
           "location": {
             "$ref": "#/components/schemas/folder-v2"
           }
         },
         "required": [
           "id"
+        ]
+      },
+      "task-type-configuration-definition": {
+        "title": "Task Type Configuration Definition",
+        "type": "object",
+        "description": "Describes a single configurable option for a task type.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier for the configuration option (e.g. `FORCE_CLOSE_MAX_AGE`)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable name for the configuration option."
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of what this configuration option controls."
+          },
+          "dataType": {
+            "type": "string",
+            "description": "The data type of the configuration value.",
+            "enum": [
+              "integer",
+              "boolean",
+              "string"
+            ]
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Whether this configuration option is optional. If `false`, a value must always be supplied."
+          },
+          "defaultValue": {
+            "description": "The default value applied when no value is explicitly set. The type matches `dataType`. May be `null` when no default is defined.",
+            "nullable": true,
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          },
+          "options": {
+            "type": "array",
+            "nullable": true,
+            "description": "Enumerated list of accepted string values. Present only when `dataType` is `string` and the value is restricted to a fixed set. `null` when any value is allowed.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "constraints": {
+            "type": "array",
+            "description": "Validation constraints applied to the value (e.g. minimum/maximum for numeric types).",
+            "items": {
+              "$ref": "#/components/schemas/task-type-configuration-constraint"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "dataType",
+          "optional"
+        ]
+      },
+      "task-type-configuration-constraint": {
+        "title": "Task Type Configuration Constraint",
+        "type": "object",
+        "description": "A validation constraint applied to a task type configuration value.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The kind of constraint.",
+            "enum": [
+              "minValue",
+              "maxValue"
+            ]
+          },
+          "value": {
+            "description": "The constraint threshold. Type matches the parent configuration option's `dataType`.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "value"
         ]
       },
       "task-outcome": {
@@ -31184,6 +31280,13 @@
           },
           "taskTemplate": {
             "$ref": "#/components/schemas/workflow-task-template"
+          },
+          "taskTypeConfigValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this workflow task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -31230,6 +31333,12 @@
           },
           "scope": {
             "$ref": "#/components/schemas/task-configuration-scope-request"
+          },
+          "taskTypeConfigValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -31238,6 +31347,29 @@
           "assignees",
           "scope"
         ]
+      },
+      "workflow-task-type-config-value": {
+        "title": "Workflow Task Type Config Value",
+        "type": "object",
+        "description": "A key-value pair representing a task type configuration setting.\n\nThe applicable `configurationDefinitions` — listing valid configuration keys (`id`), their `dataType`, accepted `options` (for `string` types restricted to a fixed set of values), and `constraints` (e.g. min/max for `integer` types) — are returned directly in the [Get Workflow](../operation/GetWorkflow/) response under `taskConfigurations[].taskTemplate.taskType.configurationDefinitions`.",
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`)."
+          },
+          "value": {
+            "description": "The configuration value.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          }
+        }
       },
       "workflow-task-template": {
         "title": "Workflow Task Template",
