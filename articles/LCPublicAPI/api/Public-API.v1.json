@@ -11904,7 +11904,7 @@
           "Task"
         ],
         "summary": "Accept Task",
-        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it. Optionally, the task can be accepted on behalf of a group by providing the `acceptOnBehalfOfGroup` query parameter. In this case, the authenticated user must be a member of the specified group, and the group must be present in the task's assignee list.",
+        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it. Optionally, the task can be accepted on behalf of a group by providing the `onBehalfOfGroup` query parameter. In this case, the authenticated user must be a member of the specified group, and the group must be present in the task's assignee list.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -31351,7 +31351,7 @@
       "workflow-task-type-config-value": {
         "title": "Workflow Task Type Config Value",
         "type": "object",
-        "description": "A key-value pair representing a task type configuration setting.\n\nThe applicable `configurationDefinitions` — listing valid configuration keys (`id`), their `dataType`, accepted `options` (for `string` types restricted to a fixed set of values), and `constraints` (e.g. min/max for `integer` types) — are returned directly in the [Get Workflow](../operation/GetWorkflow/) response under `taskConfigurations[].taskTemplate.taskType.configurationDefinitions`.",
+        "description": "A key-value pair representing a task type configuration setting.\n\nThe applicable `configurationDefinitions` — listing valid configuration keys (`id`), their `dataType`, accepted `options` (for `string` types restricted to a fixed set of values), and `constraints` (e.g. min/max for `integer` types) — are available from the [Get Workflow](#/operations/GetWorkflow) response under `taskConfigurations[].taskTemplate.taskType.configurationDefinitions`, or from the [Get Task Type](#/operations/GetTaskType) response under `configurationDefinitions`.",
         "required": [
           "id",
           "value"
@@ -31359,7 +31359,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`)."
+            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`, `CONCURRENT_EDITING_ALLOWED`)."
           },
           "value": {
             "description": "The configuration value.",
@@ -31369,6 +31369,10 @@
               { "type": "boolean" }
             ]
           }
+        },
+        "example": {
+          "id": "CONCURRENT_EDITING_ALLOWED",
+          "value": false
         }
       },
       "workflow-task-template": {
