@@ -11904,7 +11904,7 @@
           "Task"
         ],
         "summary": "Accept Task",
-        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it. Optionally, the task can be accepted on behalf of a group by providing the `onBehalfOfGroup` query parameter. In this case, the authenticated user must be a member of the specified group, and the group must be present in the task's assignee list.",
+        "description": "Accepts a task. The authenticated user becomes the owner of the accepted task and can start work on it. Optionally, the task can be accepted on behalf of a group by providing the `onBehalfOfGroup` query parameter. In this case, the authenticated user must be a member of the specified group, and the group must be present in the task's assignee list. The `onBehalfOfGroup` parameter is allowed only if the [task](#/operations/GetTask) has `configuration.CONCURRENT_EDITING_ENABLED = true`.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -31366,7 +31366,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`, `CONCURRENT_EDITING_ALLOWED`)."
+            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`, `CONCURRENT_EDITING_ENABLED`)."
           },
           "value": {
             "description": "The configuration value.",
@@ -31378,7 +31378,7 @@
           }
         },
         "example": {
-          "id": "CONCURRENT_EDITING_ALLOWED",
+          "id": "CONCURRENT_EDITING_ENABLED",
           "value": false
         }
       },
