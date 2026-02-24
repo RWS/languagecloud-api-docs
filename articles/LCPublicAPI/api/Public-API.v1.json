@@ -25740,7 +25740,7 @@
         "description": "The configuration of a task that will be created in the future.",
         "properties": {
           "taskTemplate": {
-            "$ref": "#/components/schemas/object-id"
+            "$ref": "#/components/schemas/workflow-task-template"
           },
           "scope": {
             "$ref": "#/components/schemas/task-configuration-scope"
@@ -25763,6 +25763,13 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The due date of the future task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\"",
             "nullable": true
+          },
+          "taskTypeConfigValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -25833,6 +25840,12 @@
           },
           "dueBy": {
             "$ref": "#/components/schemas/date-time"
+          },
+          "taskTypeConfigValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -31358,7 +31371,7 @@
       "workflow-task-type-config-value": {
         "title": "Workflow Task Type Config Value",
         "type": "object",
-        "description": "A key-value pair representing a task type configuration setting.\n\nThe applicable `configurationDefinitions` — listing valid configuration keys (`id`), their `dataType`, accepted `options` (for `string` types restricted to a fixed set of values), and `constraints` (e.g. min/max for `integer` types) — are available from the [Get Workflow](#/operations/GetWorkflow) response under `taskConfigurations[].taskTemplate.taskType.configurationDefinitions`, or from the [Get Task Type](#/operations/GetTaskType) response under `configurationDefinitions`.",
+        "description": "A key-value pair representing a task type configuration setting.\n\nValid configuration keys (`id`), data types, options (for string types), and constraints (e.g., min/max for integer types) are defined in the sibling field `taskTemplate.taskType.configurationDefinitions` within the same task configuration.",
         "required": [
           "id",
           "value"
