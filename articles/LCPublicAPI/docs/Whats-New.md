@@ -2,6 +2,12 @@
 
 </br> 
 
+## 5 March 2026
+- We've exposed the last modified date as `lastModifiedAt` field for project template endpoints.
+- You can now read and update adjacent languages for a translation engine.
+- We've added pagination for [List Folders](../api/Public-API.v1-fv.html#/operations/ListFolders) endpoint.
+- We fixed various bugs.
+
 ## 12 February 2026
 - We have extended group management capabilities. You can now [Create](../api/Public-API.v1-fv.html#/operations/CreateGroup), [Update](../api/Public-API.v1-fv.html#/operations/UpdateGroup), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteGroup) groups, `roles` and `additionalRoles` are now available in [Get](../api/Public-API.v1-fv.html#/operations/GetGroup)/[List](../api/Public-API.v1-fv.html#/operations/ListGroups) operations. To support this, we have introduced a new [List Roles](../api/Public-API.v1-fv.html#/operations/ListRoles) endpoint.
 - The available resource types returned by [Get](../api/Public-API.v1-fv.html#/operations/GetCustomField) and [List](../api/Public-API.v1-fv.html#/operations/ListCustomFields) Custom Field Definition(s) have been extended to include vendor and vendor order template (VOT).
