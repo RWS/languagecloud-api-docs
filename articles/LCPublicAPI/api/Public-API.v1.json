@@ -17232,9 +17232,6 @@
           }
         },
         "operationId": "CreateTranslationMemoryAsync",
-        "x-stoplight": {
-          "id": "ubz5wlxo0apqs"
-        },
         "description": "Create a new Translation Memory.",
         "parameters": [
           {
@@ -30139,9 +30136,6 @@
       },
       "translation-memory-create-async-response": {
         "title": "Translation Memory Create Async Response",
-        "x-stoplight": {
-          "id": "maesn9uaal1ng"
-        },
         "type": "object",
         "required": [
           "id",
@@ -30150,15 +30144,9 @@
         "properties": {
           "id": {
             "type": "string",
-            "x-stoplight": {
-              "id": "7c2e0kqvcod0a"
-            },
             "description": "The unique identifier of the create operation."
           },
           "status": {
-            "x-stoplight": {
-              "id": "tyys9d503dmnc"
-            },
             "enum": [
               "inProgress",
               "done",
@@ -30176,9 +30164,6 @@
         ],
         "properties": {
           "status": {
-            "x-stoplight": {
-              "id": "mp5r1s6h89kei"
-            },
             "enum": [
               "inProgress",
               "done",
@@ -30188,9 +30173,6 @@
           },
          "translationMemoryId": {
             "type": "string",
-            "x-stoplight": {
-              "id": "2axsvp58i8gjh"
-            },
             "description": "The identifier of the created Translation Memory. The identifier will be returned only if the operation is successful."
           }
         }
