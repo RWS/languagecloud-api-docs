@@ -24353,6 +24353,12 @@
           },
           "settings": {
             "$ref": "#/components/schemas/project-template-settings-response"
+          },
+          "lastModifiedAt": {
+            "type": "string",
+            "example": "2022-01-12T12:00:00Z",
+            "description": "The date and time when the project template was modified. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
+            "format": "date-time"
           }
         }
       },
