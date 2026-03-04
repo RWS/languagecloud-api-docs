@@ -29636,6 +29636,12 @@
           },
           "sequence": {
             "$ref": "#/components/schemas/remote-translation-engine-sequence"
+          },
+          "adjacentLanguagePenalty": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30,
+            "default": 0
           }
         }
       },
@@ -29685,11 +29691,18 @@
             "items": {
               "$ref": "#/components/schemas/language-pair-resource"
             }
+          },
+          "adjacentLanguagePairs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/language-pair"
+            }
           }
         },
         "required": [
           "languagePair",
-          "resources"
+          "resources",
+          "adjacentLanguagePair"
         ]
       },
       "translation-memory-field": {
