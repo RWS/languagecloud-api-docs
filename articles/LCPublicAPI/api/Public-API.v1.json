@@ -21185,38 +21185,6 @@
           }
         }
       },
-      "group-request": {
-        "title": "Group Request",
-        "type": "object",
-        "description": "Group of users.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The group identifier."
-          },
-          "name": {
-            "type": "string",
-            "description": "The group name."
-          },
-          "description": {
-            "type": "string",
-            "description": "The group description."
-          },
-          "location": {
-            "$ref": "#/components/schemas/resource-folder-request"
-          },
-          "users": {
-            "type": "array",
-            "description": "The group users.",
-            "items": {
-              "$ref": "#/components/schemas/user-request"
-            }
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "group-create-request": {
         "title": "Group Create Request",
         "type": "object",
@@ -26343,24 +26311,6 @@
           "remainingQuota"
         ]
       },
-      "resource-folder-request": {
-        "title": "Resource Folder Request",
-        "type": "object",
-        "description": "Resource folder.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The folder identifier."
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the folder."
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "reschedule-tasks-request": {
         "description": "Reschedule tasks.",
         "properties": {
@@ -30749,51 +30699,6 @@
           }
         }
       },
-      "user-request": {
-        "title": "User Request",
-        "type": "object",
-        "description": "User in the account.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The user identifier."
-          },
-          "email": {
-            "type": "string",
-            "description": "User’s email. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "firstName": {
-            "type": "string",
-            "description": "User’s first name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "lastName": {
-            "type": "string",
-            "description": "User’s last name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "location": {
-            "$ref": "#/components/schemas/resource-folder-request"
-          },
-          "groups": {
-            "type": "array",
-            "description": "The groups.",
-            "items": {
-              "$ref": "#/components/schemas/group-request"
-            }
-          },
-          "anonymized": {
-            "type": "boolean",
-            "description": "Shows if the authenticated entity has access to read the details of the user or not. If true then the ‘anonymizedUserName’ should be retrieved.",
-            "nullable": true
-          },
-          "anonymizedUserName": {
-            "type": "string",
-            "description": "Retrieved if the authenticated entity does not have access to read the User."
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "user-create-request": {
         "title": "User Create Request",
         "type": "object",
@@ -30960,18 +30865,6 @@
         ],
         "description": "A vendor order resource."
       },
-      "vendor-order-template-request": {
-        "title": "Vendor Order Template Request",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "vendor-order-template": {
         "title": "Vendor Order Template",
         "description": "The vendor order template.",
@@ -31085,13 +30978,13 @@
             ]
           },
           "user": {
-            "$ref": "#/components/schemas/user-request"
+            "$ref": "#/components/schemas/object-id-request"
           },
           "group": {
-            "$ref": "#/components/schemas/group-request"
+            "$ref": "#/components/schemas/object-id-request"
           },
           "vendorOrderTemplate": {
-            "$ref": "#/components/schemas/vendor-order-template-request"
+            "$ref": "#/components/schemas/object-id-request"
           }
         },
         "required": [
