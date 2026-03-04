@@ -2464,7 +2464,7 @@
           "Folder"
         ],
         "summary": "List Folders",
-        "description": "Retrieves a list of all the folders in an account. Max 500.",
+        "description": "Retrieves a list of all the folders in an account.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
