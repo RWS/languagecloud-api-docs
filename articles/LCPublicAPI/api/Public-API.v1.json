@@ -26954,8 +26954,12 @@
           },
           "name": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The file version name. This is a synthetic value, typically constructed from the version number and the originating task name.</div>",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The file version name. This is a synthetic value, constructed from the version number and the task type name of the originating task.</div>",
             "x-default-field": true
+          },
+          "workflowName": {
+            "type": "string",
+            "description": "Alternative File Version Name: A synthetic identifier generated from the version number and the workflow task template name of the originating task. This value is only available when the file version is created through a workflow task. It is not generated for versions created outside the workflow."
           },
           "version": {
             "type": "integer",
@@ -27071,7 +27075,20 @@
             "nullable": true
           },
           "taskType": {
-            "$ref": "#/components/schemas/task-type"
+            "allOf": [
+            {
+              "$ref": "#/components/schemas/task-type"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "workflowName": {
+                  "type": "string",
+                  "description": "Alternative File Version Name: A synthetic identifier generated from the version number and the workflow task template name of the originating task. This value is only available when the file version is created through a workflow task. It is not generated for versions created outside the workflow."
+                }
+              }
+            }
+          ]
           },
           "input": {
             "$ref": "#/components/schemas/task-input"
