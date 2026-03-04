@@ -216,8 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
               parent.style.position = 'relative';
             }
             wrapper.style.position = 'absolute';
-            wrapper.style.top = '50%';
-            wrapper.style.transform = 'translateY(-50%)';
+            wrapper.style.top = '6px';
             wrapper.style.right = '12px';
             wrapper.style.zIndex = '9999';
             wrapper.style.pointerEvents = 'auto';
