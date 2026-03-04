@@ -17165,6 +17165,137 @@
         ]
       }
     },
+    "/translation-memory-async": {
+      "post": {
+        "summary": "Create Translation Memory Async",
+        "tags": [],
+        "responses": {
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-memory-create-async-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\r\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\r\n* \"empty\": Empty mandatory value mentioned in the \"name\" field on the error response.\r\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\r\n* \"minSize\": Minimum size not met for the value mentioned in the \"name\" field on the error response.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "ForbiddenError codes:\r\n* \"forbidden\": The authenticated user is not allowed to read the resource.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "CreateTranslationMemoryAsync",
+        "x-stoplight": {
+          "id": "ubz5wlxo0apqs"
+        },
+        "description": "Create a new Translation Memory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/translation-memory-create-request"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/translation-memory-async/{operationId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "operationId",
+          "in": "path",
+          "required": true,
+          "description": "The identifier of the Create Translation Memory operation."
+        }
+      ],
+      "get": {
+        "summary": "Poll Translation Memory Create",
+        "tags": [
+          "Translation Memory"
+        ],
+        "responses": {
+          "200": {
+            "description": "TBD",
+             "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-memory-create-operation-response"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PollTranslationMemoryCreate",
+        "description": "Polls a Translation Memory create operation. The operation is finished when the status is `done`.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ]
+      }
+    },
     "/translation-memory/field-templates": {
       "get": {
         "summary": "List Field Templates",
@@ -30005,6 +30136,64 @@
         "required": [
           "id"
         ]
+      },
+      "translation-memory-create-async-response": {
+        "title": "Translation Memory Create Async Response",
+        "x-stoplight": {
+          "id": "maesn9uaal1ng"
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7c2e0kqvcod0a"
+            },
+            "description": "The unique identifier of the create operation."
+          },
+          "status": {
+            "x-stoplight": {
+              "id": "tyys9d503dmnc"
+            },
+            "enum": [
+              "inProgress",
+              "done",
+              "failed"
+            ],
+            "description": "The status of the create operation.\r\n* `inProgress` - the import is being processed\r\n* `failed` - the import has failed due to internal errors\r\n* `done` - the import has finished successfully"
+          }
+        }
+      },
+      "translation-memory-create-operation-response": {
+        "title": "Translation Memory Create Operation Response",
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "x-stoplight": {
+              "id": "mp5r1s6h89kei"
+            },
+            "enum": [
+              "inProgress",
+              "done",
+              "failed"
+            ],
+            "description": "The status of the operation."
+          },
+         "translationMemoryId": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "2axsvp58i8gjh"
+            },
+            "description": "The identifier of the created Translation Memory. The identifier will be returned only if the operation is successful."
+          }
+        }
       },
       "translation-memory-create-request": {
         "title": "Translation Memory Create Request",
