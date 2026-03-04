@@ -2473,6 +2473,18 @@
             "$ref": "#/components/parameters/X-LC-Tenant"
           },
           {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/location"
+          },
+          {
+            "$ref": "#/components/parameters/location-strategy"
+          },
+          {
             "name": "name",
             "in": "query",
             "description": "Filter folders by name.",
@@ -2527,6 +2539,16 @@
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\":  The requested entity or one of it's dependencies attempted to retrieve data outside the allowed range. Skip+Top might be outside the supported range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
               }
             }
           }
