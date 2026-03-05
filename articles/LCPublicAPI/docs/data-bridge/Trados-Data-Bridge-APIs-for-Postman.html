@@ -111,13 +111,38 @@
 <p>For example, we can get information about a project by using the <strong>List Task Status Project Dimension</strong> request from the <strong>Task Status</strong> folder.</p>
 <p>Simply fill in your value <code>projectId eq 'stringValue'</code> from your $filter parameter section and click SEND. Optionally, you can specify additional OData querys like<br>
 <code>projectTemplateName eq 'stringValue' and projectShortId eq numericValue</code>.<br>
-For more options see below table
-| Operators| Description| Example |
-|----------|------------|---------|
-| Comparison operators| Use the <code>eq, ne, gt, ge, lt, le</code> operators to compare a property and a value.  |<code>$filter=revenue eq 100000</code>|
-| Logical operators|Use <code>and, or</code> to create more complex expressions.|<code>$filter=revenue lt 100000 and revenue gt 2000</code>|
-| Grouping operators|Use parentheses: <code>()</code>, to specify the precedence to evaluate a complex expression.|<code>$filter=(projectShortId lt 16867 and projectShortId gt 16800) and projectStatus eq 'completed'</code>|
-| Expand operator|The <code>expand</code> system query option specifies the related resources to be included. Each expandItem is evaluated relative to the entity containing the navigation or stream property being expanded.|<code>$expand=project</code>|</p>
+For more options see below table</p>
+<table>
+<thead>
+<tr>
+<th>Operators</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparison operators</td>
+<td>Use the <code>eq, ne, gt, ge, lt, le</code> operators to compare a property and a value.</td>
+<td><code>$filter=revenue eq 100000</code></td>
+</tr>
+<tr>
+<td>Logical operators</td>
+<td>Use <code>and, or</code> to create more complex expressions.</td>
+<td><code>$filter=revenue lt 100000 and revenue gt 2000</code></td>
+</tr>
+<tr>
+<td>Grouping operators</td>
+<td>Use parentheses: <code>()</code>, to specify the precedence to evaluate a complex expression.</td>
+<td><code>$filter=(projectShortId lt 16867 and projectShortId gt 16800) and projectStatus eq 'completed'</code></td>
+</tr>
+<tr>
+<td>Expand operator</td>
+<td>The <code>expand</code> system query option specifies the related resources to be included. Each expandItem is evaluated relative to the entity containing the navigation or stream property being expanded.</td>
+<td><code>$expand=project</code></td>
+</tr>
+</tbody>
+</table>
 <p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/WorkingWithFilterParameter.png?raw=true" alt="image"></p>
 <p><img src="https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicDataAPI/WorkingWithExpandParameter.png?raw=true" alt="image"></p>
 <div class="WARNING">
