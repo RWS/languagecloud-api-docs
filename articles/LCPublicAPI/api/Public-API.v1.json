@@ -26965,13 +26965,7 @@
             ]
           },
           "entityType": {
-            "type": "string",
-            "description": "The entity type a permission applies to.",
-            "examples": [
-              "Projects",
-              "Groups",
-              "Users"
-            ]
+            "$ref": "#/components/schemas/permission-entity-type"
           },
           "dependsOn": {
             "type": "array",
@@ -26990,6 +26984,30 @@
                 "accountUserRead"
               ]
             }
+          }
+        }
+      },
+      "permission-entity-type": {
+        "title": "Entity Type",
+        "type": "object",
+        "description": "The entity type a permission applies to.",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the entity type.",
+            "examples": [
+              "Projects",
+              "Groups",
+              "Users"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the entity type."
           }
         }
       },
