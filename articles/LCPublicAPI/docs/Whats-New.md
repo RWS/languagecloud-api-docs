@@ -2,7 +2,7 @@
 
 </br> 
 
-## 5 March 2026
+## 6 March 2026
 - We've exposed the last modified date as `lastModifiedAt` field for project template endpoints.
 - You can now read and update adjacent languages for a translation engine.
 - We've added pagination for [List Folders](../api/Public-API.v1-fv.html#/operations/ListFolders) endpoint.
