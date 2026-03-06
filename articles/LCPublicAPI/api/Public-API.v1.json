@@ -2464,13 +2464,25 @@
           "Folder"
         ],
         "summary": "List Folders",
-        "description": "Retrieves a list of all the folders in an account. Max 500.",
+        "description": "Retrieves a list of all the folders in an account.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
           },
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/location"
+          },
+          {
+            "$ref": "#/components/parameters/location-strategy"
           },
           {
             "name": "name",
@@ -2527,6 +2539,16 @@
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\":  The requested entity or one of it's dependencies attempted to retrieve data outside the allowed range. Skip+Top might be outside the supported range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
               }
             }
           }
@@ -21163,38 +21185,6 @@
           }
         }
       },
-      "group-request": {
-        "title": "Group Request",
-        "type": "object",
-        "description": "Group of users.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The group identifier."
-          },
-          "name": {
-            "type": "string",
-            "description": "The group name."
-          },
-          "description": {
-            "type": "string",
-            "description": "The group description."
-          },
-          "location": {
-            "$ref": "#/components/schemas/resource-folder-request"
-          },
-          "users": {
-            "type": "array",
-            "description": "The group users.",
-            "items": {
-              "$ref": "#/components/schemas/user-request"
-            }
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "group-create-request": {
         "title": "Group Create Request",
         "type": "object",
@@ -24353,6 +24343,12 @@
           },
           "settings": {
             "$ref": "#/components/schemas/project-template-settings-response"
+          },
+          "lastModifiedAt": {
+            "type": "string",
+            "example": "2022-01-12T12:00:00Z",
+            "description": "The date and time when the project template was modified. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
+            "format": "date-time"
           }
         }
       },
@@ -26313,24 +26309,6 @@
           "description",
           "limit",
           "remainingQuota"
-        ]
-      },
-      "resource-folder-request": {
-        "title": "Resource Folder Request",
-        "type": "object",
-        "description": "Resource folder.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The folder identifier."
-          },
-          "name": {
-            "type": "string",
-            "description": "The name of the folder."
-          }
-        },
-        "required": [
-          "id"
         ]
       },
       "reschedule-tasks-request": {
@@ -29630,6 +29608,12 @@
           },
           "sequence": {
             "$ref": "#/components/schemas/remote-translation-engine-sequence"
+          },
+          "adjacentLanguagePenalty": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30,
+            "default": 0
           }
         }
       },
@@ -29679,11 +29663,18 @@
             "items": {
               "$ref": "#/components/schemas/language-pair-resource"
             }
+          },
+          "adjacentLanguagePairs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/language-pair"
+            }
           }
         },
         "required": [
           "languagePair",
-          "resources"
+          "resources",
+          "adjacentLanguagePair"
         ]
       },
       "translation-memory-field": {
@@ -30708,51 +30699,6 @@
           }
         }
       },
-      "user-request": {
-        "title": "User Request",
-        "type": "object",
-        "description": "User in the account.",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The user identifier."
-          },
-          "email": {
-            "type": "string",
-            "description": "User’s email. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "firstName": {
-            "type": "string",
-            "description": "User’s first name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "lastName": {
-            "type": "string",
-            "description": "User’s last name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read."
-          },
-          "location": {
-            "$ref": "#/components/schemas/resource-folder-request"
-          },
-          "groups": {
-            "type": "array",
-            "description": "The groups.",
-            "items": {
-              "$ref": "#/components/schemas/group-request"
-            }
-          },
-          "anonymized": {
-            "type": "boolean",
-            "description": "Shows if the authenticated entity has access to read the details of the user or not. If true then the ‘anonymizedUserName’ should be retrieved.",
-            "nullable": true
-          },
-          "anonymizedUserName": {
-            "type": "string",
-            "description": "Retrieved if the authenticated entity does not have access to read the User."
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "user-create-request": {
         "title": "User Create Request",
         "type": "object",
@@ -30919,18 +30865,6 @@
         ],
         "description": "A vendor order resource."
       },
-      "vendor-order-template-request": {
-        "title": "Vendor Order Template Request",
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "vendor-order-template": {
         "title": "Vendor Order Template",
         "description": "The vendor order template.",
@@ -31044,13 +30978,13 @@
             ]
           },
           "user": {
-            "$ref": "#/components/schemas/user-request"
+            "$ref": "#/components/schemas/object-id-request"
           },
           "group": {
-            "$ref": "#/components/schemas/group-request"
+            "$ref": "#/components/schemas/object-id-request"
           },
           "vendorOrderTemplate": {
-            "$ref": "#/components/schemas/vendor-order-template-request"
+            "$ref": "#/components/schemas/object-id-request"
           }
         },
         "required": [

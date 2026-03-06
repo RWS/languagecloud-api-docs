@@ -82,9 +82,16 @@
 <h1 id="whats-new">What's new</h1>
 
 <br> 
+<h2 id="6-march-2026">6 March 2026</h2>
+<ul>
+<li>We've exposed the last modified date as <code>lastModifiedAt</code> field for project template endpoints.</li>
+<li>You can now read and update adjacent languages for a translation engine.</li>
+<li>We've added pagination for <a href="../api/Public-API.v1-fv.html#/operations/ListFolders">List Folders</a> endpoint.</li>
+<li>We fixed various bugs.</li>
+</ul>
 <h2 id="12-february-2026">12 February 2026</h2>
 <ul>
-<li>We have extended group management capabilities. You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateGroup">Create</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateGroup">Update</a>, and <a href="../api/Public-API.v1-fv.html#/operations/DeleteGroup">Delete</a> groups, <code>roles</code> and <code>additionalRoles</code> are now available in <a href="../api/Public-API.v1-fv.html#/operations/GetGroup">Get</a>/<a href="../api/Public-API.v1-fv.html#/operations/ListGroups">List</a> operations. To support this, we have introduced a new <a href="../api/Public-API.v1-fv.html#/operations/ListRoles">List Roles</a> endpoint.</li>
+<li>We have extended group management capabilities. You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateGroup">Create</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateGroup">Update</a>, and <a href="../api/Public-API.v1-fv.html#/operations/DeleteGroup">Delete</a> groups. <code>roles</code> and <code>additionalRoles</code> are now available in <a href="../api/Public-API.v1-fv.html#/operations/GetGroup">Get</a>/<a href="../api/Public-API.v1-fv.html#/operations/ListGroups">List</a> operations. To support this, we have introduced a new <a href="../api/Public-API.v1-fv.html#/operations/ListRoles">List Roles</a> endpoint.</li>
 <li>The available resource types returned by <a href="../api/Public-API.v1-fv.html#/operations/GetCustomField">Get</a> and <a href="../api/Public-API.v1-fv.html#/operations/ListCustomFields">List</a> Custom Field Definition(s) have been extended to include vendor and vendor order template (VOT).</li>
 <li>The <a href="../api/Webhooks.v1-fv.html#/schemas/task-event">task-event</a> payload has been enhanced to include <code>apiInternalId</code> and <code>input</code>. The <a href="../api/Webhooks.v1-fv.html#/schemas/error-task-event">error-task-event</a> payload has been enhanced to include <code>failedTask.input</code> information
 <ul>
