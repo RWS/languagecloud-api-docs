@@ -13367,7 +13367,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* \"empty\": Empty input in the update translation engine model. Check error details.\n* \"invalidLanguage\": Invalid language code used in language-pair\n* \"duplicate\": Duplicate resources found for the language pair specified in the error details.",
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* \"empty\": Empty input in the update translation engine model. Check error details.\n* \"invalidLanguage\": Invalid language code used in language-pair",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -13427,7 +13427,7 @@
             }
           },
           "409": {
-            "description": "Error codes:\n\n  * \"updateNotAllowed\": Property specified in error response can not be updated because the translation engine provided is a copy assigned to a project.",
+            "description": "Error codes:\n\n  * \"updateNotAllowed\": Property specified in error response can not be updated because the translation engine provided is a copy assigned to a project.\n* \"duplicate\": Duplicate resources found for the language pair specified in the error details.",
             "content": {
               "application/json": {
                 "schema": {
