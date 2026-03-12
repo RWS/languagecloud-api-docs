@@ -11225,7 +11225,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the request mentioned in the “name” field on the error response.",
+            "description": "Error codes:\n* “invalid”: Invalid input in the request mentioned in the “name” field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -11251,6 +11251,16 @@
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes: \n* \"forbidden\": the authenticated user is not allowed to create the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
               }
             }
           },
@@ -11383,7 +11393,7 @@
       },
       "put": {
         "summary": "Update Role",
-        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.\n\n> Note: Only custom roles can be updated. System roles cannot be modified.",
+        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.\n\n> Note: Only custom roles can be updated. Provisioned roles cannot be modified.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11411,7 +11421,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or system roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -11493,7 +11503,7 @@
       },
       "delete": {
         "summary": "Delete Role",
-        "description": "Deletes a role by identifier.\n\n> Note: Only custom roles can be deleted. System roles cannot be removed.",
+        "description": "Deletes a role by identifier.\n\n> Note: Only custom roles can be deleted. Provisioned roles cannot be removed.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -11512,7 +11522,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or system roles cannot be deleted.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be deleted.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
             "content": {
               "application/json": {
                 "schema": {
@@ -26862,7 +26872,7 @@
             "type": "string",
             "description": "The role type.",
             "enum": [
-              "system",
+              "provisioned",
               "custom"
             ]
           },
