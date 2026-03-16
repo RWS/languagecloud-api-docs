@@ -27549,32 +27549,32 @@
           },
           "email": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's email address. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">The user's email address. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
             "deprecated": true
           },
           "name": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's name. Retrieved only for Service users (not RWS ID users) that the authenticated entity is authorized to read.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">The user's name. Retrieved only for Service users (not RWS ID users) that the authenticated entity is authorized to read.</div> ",
             "deprecated": true
           },
           "firstName": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's first name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">The user's first name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
             "deprecated": true
           },
           "lastName": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The user's last name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">The user's last name. Retrieved only for RWS ID (formerly SDL ID) users (not service users) that the authenticated entity is authorized to read.</div> ",
             "deprecated": true
           },
           "anonymized": {
             "type": "boolean",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">This shows if the authenticated entity has access to read the details of the user or not. If true, then the 'anonymizedUserName' should be retrieved.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">This shows if the authenticated entity has access to read the details of the user or not. If true, then the 'anonymizedUserName' should be retrieved.</div> ",
             "deprecated": true
           },
           "anonymizedUserName": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Retrieved if the authenticated entity does not have access to read the User.</div> ",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-10px; font-size:11px\">default</div><div style=\"display: inline;\">Retrieved if the authenticated entity does not have access to read the User.</div> ",
             "deprecated": true
           },
           "account": {
