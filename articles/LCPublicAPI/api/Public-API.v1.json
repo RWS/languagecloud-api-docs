@@ -11225,7 +11225,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the request mentioned in the “name” field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* “invalid”: Invalid input in the request mentioned in the “name” field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -11421,7 +11421,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
