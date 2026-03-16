@@ -26908,7 +26908,6 @@
           "description": {
             "type": "string",
             "description": "Description of the role.",
-            "minLength": 1,
             "maxLength": 1000
           },
           "permissions": {
