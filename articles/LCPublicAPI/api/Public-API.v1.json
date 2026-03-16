@@ -98,8 +98,8 @@
       "description": "Rate Limits"
     },
     {
-      "name": "Roles and Permissions",
-      "description": "Roles and Permissions"
+      "name": "Role and Permission",
+      "description": "Role and Permission"
     },
     {
       "name": "Schedule Template",
@@ -11127,7 +11127,7 @@
     "/roles": {
       "get": {
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ],
         "summary": "List Roles",
         "description": "Retrieves a list of all roles available for the account.",
@@ -11184,7 +11184,7 @@
       },
       "post": {
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ],
         "summary": "Create Role",
         "description": "Creates a custom role.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.",
@@ -11388,7 +11388,7 @@
         },
         "operationId": "GetRole",
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ]
       },
       "put": {
@@ -11498,7 +11498,7 @@
         },
         "operationId": "UpdateRole",
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ]
       },
       "delete": {
@@ -11584,14 +11584,14 @@
         },
         "operationId": "DeleteRole",
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ]
       }
     },
     "/permissions": {
       "get": {
         "tags": [
-          "Roles and Permissions"
+          "Role and Permission"
         ],
         "summary": "List Permissions",
         "description": "Retrieves a list of all permissions available for the account.",
