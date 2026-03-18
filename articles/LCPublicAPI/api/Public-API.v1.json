@@ -481,9 +481,6 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
-          },
-          {
-            "$ref": "#/components/parameters/fields"
           }
         ],
         "description": "Updates an integration application.",
