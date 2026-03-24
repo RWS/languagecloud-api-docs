@@ -24,7 +24,7 @@ Example of a `webhooks` property in the app descriptor:
   "webhooks": [
     {
       "url": "/webhooks-endpoint",
-      "evenTypes": [ 
+      "eventTypes": [ 
         { 
           "eventType": "PROJECT.TASK.ACCEPTED" 
         }, 
