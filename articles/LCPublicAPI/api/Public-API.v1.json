@@ -30634,17 +30634,11 @@
       "metadata": {
         "title": "Metadata",
         "type": "object",
-        "description": "Additional metadata",
+        "description": "Additional metadata values in a key - value pair format",
         "properties": {
-            "prop1": {
-              "type": "string"
-            },
-          "prop2": {
-            "type": "string"
-          },
-          "prop3": {
-            "type": "string"
-          }
+            "additionalProperties": {
+              "type": "object"
+            }
         }
       },
       "user": {
