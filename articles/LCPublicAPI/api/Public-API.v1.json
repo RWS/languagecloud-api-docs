@@ -19256,7 +19256,7 @@
           "Workflow"
         ],
         "summary": "Update Workflow",
-        "description": "Updates the workflow in terms of: name, description, task configuration (and its details), and task type configuration values (`taskTypeConfigValues`). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
+        "description": "Updates the workflow in terms of: name, description, task configuration (and its details), and task type configuration values (`configurationValues`). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -25764,7 +25764,7 @@
             "description": "The due date of the future task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\"",
             "nullable": true
           },
-          "taskTypeConfigValues": {
+          "configurationValues": {
             "type": "array",
             "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
             "items": {
@@ -25841,7 +25841,7 @@
           "dueBy": {
             "$ref": "#/components/schemas/date-time"
           },
-          "taskTypeConfigValues": {
+          "configurationValues": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/workflow-task-type-config-value"
@@ -27151,7 +27151,7 @@
             "$ref": "#/components/schemas/date-time",
             "description": "The completion timestamp  of the task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\""
           },
-          "taskTypeConfigValues": {
+          "configurationValues": {
             "type": "array",
             "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskType.configurationDefinitions`.",
             "items": {
@@ -31301,7 +31301,7 @@
           "taskTemplate": {
             "$ref": "#/components/schemas/workflow-task-template"
           },
-          "taskTypeConfigValues": {
+          "configurationValues": {
             "type": "array",
             "description": "The task type configuration values set on this workflow task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
             "items": {
@@ -31354,7 +31354,7 @@
           "scope": {
             "$ref": "#/components/schemas/task-configuration-scope-request"
           },
-          "taskTypeConfigValues": {
+          "configurationValues": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/workflow-task-type-config-value"
