@@ -2,8 +2,9 @@
 
 UI extensions offer the possibility to add custom user interface elements and functionality. Custom [buttons and panels can be added to specific places](UI-App-custom-elements-locations.md) within the user interface.
 
-> [!CAUTION]
-> #### This feature is currently in BETA.
+> [!CAUTION] 
+> **This feature is currently in BETA.** 
+> 
 > Please note that in a future phase, we will introduce significant changes as we move towards the official release:
 > * The current implementation utilizes the authorization token of the logged-in Trados user for the Trados Cloud Platform API and the app's own API calls. In a future update, a different authorization token will be introduced for these operation.
 > * As a result, access to the Trados Cloud Platform API functionality of a UI extension app will be governed not only by the Trados user's permissions but also by the app's [scopes](App-Descriptor.md#scopes).
@@ -231,12 +232,14 @@ Note that adding `script` tags is not allowed and scripts from sources that are 
 ### Notes
 
 > [!NOTE]
-> #### Custom elements display order
+> **Custom elements display order**
+> 
 > Within a single UI extension: custom elements in your extension that have the same `location` are displayed in the same order in which they are present in your `ExtensionElement`s array.
 > 
 > With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.
 
 
 > [!NOTE]
-> #### Unexpected re-renders
+> **Unexpected re-renders**
+> 
 > A custom element's `onrender` event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding `eventHandler` gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of `onrender` `eventHandler`.

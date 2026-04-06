@@ -34,7 +34,7 @@ To configure your MongoDB follow these steps:
     ```
 2. Copy the `IPv4 Address` IP address. Note - your IP can change depending on your network settings, and you might need to update it from time to time.
 3. Go to your MongoDB `/bin` location (usually 'C:/Program Files/MongoDB/Server/\<version\>/bin'), open `mongod.cfg` as Administrator and add the copied address to the `bindIp` configuration setting. For example:
-    ```conf
+    ```
     ...
     net:
       port: 27017
