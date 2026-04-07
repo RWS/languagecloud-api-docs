@@ -82,6 +82,13 @@
 <h1 id="whats-new">What's new</h1>
 
 <br> 
+<h2 id="7-april-2026">7 April 2026</h2>
+<ul>
+<li>Task owner functionality has been extended to support groups. The <a href="../api/Public-API.v1-fv.html#/operations/GetTask">Get Task</a> endpoint now returns group information when a task is assigned to a group instead of an individual user. Webhook events have been adapted to support group ownership.</li>
+<li>Previous task owner fields linked to user have been deprecated and will be maintained for backwards compatibility for at least 6 months.</li>
+<li>We have extended custom role management capabilities. You can now <a href="../api/Public-API.v1-fv.html#/operations/CreateRole">Create</a>, <a href="../api/Public-API.v1-fv.html#/operations/UpdateRole">Update</a> and <a href="../api/Public-API.v1-fv.html#/operations/DeleteRole">Delete</a> custom roles. The <a href="../api/Public-API.v1-fv.html#/operations/GetRole">Get</a> and <a href="../api/Public-API.v1-fv.html#/operations/ListRoles">List Roles</a> endpoints have been enhanced to include detailed permissions information. We've also introduced a new <a href="../api/Public-API.v1-fv.html#/operations/ListPermissions">List Permissions</a> endpoint to support custom role management.</li>
+<li>We fixed various bugs.</li>
+</ul>
 <h2 id="6-march-2026">6 March 2026</h2>
 <ul>
 <li>We've exposed the last modified date as <code>lastModifiedAt</code> field for project template endpoints.</li>

@@ -84,7 +84,7 @@
 <p>UI extensions offer the possibility to add custom user interface elements and functionality. Custom <a href="UI-App-custom-elements-locations.html">buttons and panels can be added to specific places</a> within the user interface.</p>
 <div class="CAUTION">
 <h5>Caution</h5>
-<h4 id="this-feature-is-currently-in-beta">This feature is currently in BETA.</h4>
+<p><strong>This feature is currently in BETA.</strong></p>
 <p>Please note that in a future phase, we will introduce significant changes as we move towards the official release:</p>
 <ul>
 <li>The current implementation utilizes the authorization token of the logged-in Trados user for the Trados Cloud Platform API and the app's own API calls. In a future update, a different authorization token will be introduced for these operation.</li>
@@ -277,13 +277,13 @@ Scroll down to the button's <code>actions</code> property and notice the <code>o
 <h3 id="notes">Notes</h3>
 <div class="NOTE">
 <h5>Note</h5>
-<h4 id="custom-elements-display-order">Custom elements display order</h4>
+<p><strong>Custom elements display order</strong></p>
 <p>Within a single UI extension: custom elements in your extension that have the same <code>location</code> are displayed in the same order in which they are present in your <code>ExtensionElement</code>s array.</p>
 <p>With multiple UI extensions: the display order is determined by the order in which each UI extension's script file is loaded in the Trados UI.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<h4 id="unexpected-re-renders">Unexpected re-renders</h4>
+<p><strong>Unexpected re-renders</strong></p>
 <p>A custom element's <code>onrender</code> event can be triggered multiple times depending on state changes in the Trados UI and depending on user's interactions with Trados UI. Subsequently, the corresponding <code>eventHandler</code> gets executed multiple times. You can add logic specific to you use-case to protect your UI extension against unneeded execution of <code>onrender</code> <code>eventHandler</code>.</p>
 </div>
 

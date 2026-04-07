@@ -110,7 +110,7 @@
 </li>
 <li>Copy the <code>IPv4 Address</code> IP address. Note - your IP can change depending on your network settings, and you might need to update it from time to time.</li>
 <li>Go to your MongoDB <code>/bin</code> location (usually 'C:/Program Files/MongoDB/Server/&lt;version&gt;/bin'), open <code>mongod.cfg</code> as Administrator and add the copied address to the <code>bindIp</code> configuration setting. For example:
-<pre><code class="lang-conf">...
+<pre><code>...
 net:
   port: 27017
   bindIp: 127.0.0.1, &lt;copiedIPAddress&gt;
