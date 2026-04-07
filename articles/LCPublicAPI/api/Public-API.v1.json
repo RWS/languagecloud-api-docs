@@ -98,8 +98,8 @@
       "description": "Rate Limits"
     },
     {
-      "name": "Roles",
-      "description": "Roles"
+      "name": "Role and Permission",
+      "description": "Role and Permission"
     },
     {
       "name": "Schedule Template",
@@ -11146,7 +11146,7 @@
     "/roles": {
       "get": {
         "tags": [
-          "Roles"
+          "Role and Permission"
         ],
         "summary": "List Roles",
         "description": "Retrieves a list of all roles available for the account.",
@@ -11156,6 +11156,15 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
           }
         ],
         "responses": {
@@ -11191,6 +11200,461 @@
           }
         },
         "operationId": "ListRoles"
+      },
+      "post": {
+        "tags": [
+          "Role and Permission"
+        ],
+        "summary": "Create Role",
+        "description": "Creates a custom role.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/role-create-request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/role"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the request mentioned in the “name” field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes: \n* \"forbidden\": the authenticated user is not allowed to create the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* “duplicate”: Role with the same name already exists.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "CreateRole"
+      }
+    },
+    "/roles/{roleId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "roleId",
+          "in": "path",
+          "required": true,
+          "description": "The role identifier."
+        }
+      ],
+      "get": {
+        "summary": "Get Role",
+        "description": "Retrieves a role by identifier.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/role"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* “empty”: Empty input for the “roleId” path parameter variable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the role.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the role could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "GetRole",
+        "tags": [
+          "Role and Permission"
+        ]
+      },
+      "put": {
+        "summary": "Update Role",
+        "description": "Updates a role by identifier. Pay special attention to how [updating](../docs/Updating-data-with-PUT.html) works.\n\nSee [List Permissions](#/operations/ListPermissions) for available permission names.\n\n> Note: Only custom roles can be updated. Provisioned roles cannot be modified.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/role-update-request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to update the role.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the role could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"duplicate\" Role with the same name already exists.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "UpdateRole",
+        "tags": [
+          "Role and Permission"
+        ]
+      },
+      "delete": {
+        "summary": "Delete Role",
+        "description": "Deletes a role by identifier.\n\n> Note: Only custom roles can be deleted. Provisioned roles cannot be removed.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be deleted.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to delete the role.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the role could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "DeleteRole",
+        "tags": [
+          "Role and Permission"
+        ]
+      }
+    },
+    "/permissions": {
+      "get": {
+        "tags": [
+          "Role and Permission"
+        ],
+        "summary": "List Permissions",
+        "description": "Retrieves a list of all permissions available for the account.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-permissions-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListPermissions"
       }
     },
     "/schedule-templates": {
@@ -12931,7 +13395,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* \"empty\": Empty input in the update translation engine model. Check error details.\n* \"invalidLanguage\": Invalid language code used in language-pair\n* \"duplicate\": Duplicate resources found for the language pair specified in the error details.",
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.\n* \"empty\": Empty input in the update translation engine model. Check error details.\n* \"invalidLanguage\": Invalid language code used in language-pair",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -12991,7 +13455,7 @@
             }
           },
           "409": {
-            "description": "Error codes:\n\n  * \"updateNotAllowed\": Property specified in error response can not be updated because the translation engine provided is a copy assigned to a project.",
+            "description": "Error codes:\n\n  * \"updateNotAllowed\": Property specified in error response can not be updated because the translation engine provided is a copy assigned to a project.\n* \"duplicate\": Duplicate resources found for the language pair specified in the error details.",
             "content": {
               "application/json": {
                 "schema": {
@@ -22113,6 +22577,26 @@
         ],
         "description": "A response for the List Roles endpoint."
       },
+      "list-permissions-response": {
+        "title": "List Permissions Response",
+        "type": "object",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/permission"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "description": "A response for the List Permissions endpoint."
+      },
       "list-perfect-match-candidates-response": {
         "title": "List PerfectMatch Candidates Response",
         "type": "object",
@@ -26366,6 +26850,7 @@
         "description": "Role in the account.",
         "required": [
           "id",
+          "type",
           "name"
         ],
         "properties": {
@@ -26373,9 +26858,155 @@
             "type": "string",
             "description": "The identifier of the role."
           },
+          "type": {
+            "type": "string",
+            "description": "The role type.",
+            "enum": [
+              "provisioned",
+              "custom"
+            ]
+          },
           "name": {
             "type": "string",
             "description": "Name of the role."
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the role."
+          },
+          "permissions": {
+            "type": "array",
+            "description": "List of permissions associated with role.",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/permission"
+            }
+          }
+        }
+      },
+      "role-update-request": {
+        "title": "Role Update Request",
+        "type": "object",
+        "description": "Role update request.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the role.",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the role.",
+            "maxLength": 1000
+          },
+          "permissions": {
+            "type": "array",
+            "description": "List of permission names associated with role.",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "examples": [
+                "projectCreate",
+                "identityGroupCreate",
+                "accountUserRead"
+              ]
+            }
+          }
+        }
+      },
+      "role-create-request": {
+        "title": "Role Create Request",
+        "type": "object",
+        "description": "Role create request.",
+        "required": [
+          "name",
+          "permissions"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/role-update-request"
+          }
+        ]
+      },
+      "permission": {
+        "title": "Permission",
+        "type": "object",
+        "description": "A single permission which governs access to resources.",
+        "required": [
+          "name",
+          "description",
+          "category",
+          "entityType",
+          "dependsOn"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the permission.",
+            "examples": [
+              "projectCreate",
+              "identityGroupCreate",
+              "accountUserRead"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the permission."
+          },
+          "category": {
+            "type": "string",
+            "description": "The category a permission belongs to.",
+            "examples": [
+              "Projects",
+              "User Management",
+              "Resources"
+            ]
+          },
+          "entityType": {
+            "$ref": "#/components/schemas/permission-entity-type"
+          },
+          "dependsOn": {
+            "type": "array",
+            "description": "List of permission names that this permission depends on. Empty array if no dependencies.",
+            "examples": [
+              ["projectRead"],
+              ["identityGroupRead"],
+              []
+            ],
+            "items": {
+              "type": "string",
+              "description": "Name of a dependent permission.",
+              "examples": [
+                "projectRead",
+                "identityGroupRead",
+                "accountUserRead"
+              ]
+            }
+          }
+        }
+      },
+      "permission-entity-type": {
+        "title": "Entity Type",
+        "type": "object",
+        "description": "The entity type a permission applies to.",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the entity type.",
+            "examples": [
+              "Projects",
+              "Groups",
+              "Users"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the entity type."
           }
         }
       },
