@@ -481,9 +481,6 @@
           },
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
-          },
-          {
-            "$ref": "#/components/parameters/fields"
           }
         ],
         "description": "Updates an integration application.",
@@ -2658,7 +2655,7 @@
           "Group"
         ],
         "summary": "Update Group",
-        "description": "Updates a group by . We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.html).",
+        "description": "Updates a group. We recommend reading this page too [Updating data with PUT](../docs/Updating-data-with-PUT.html).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
