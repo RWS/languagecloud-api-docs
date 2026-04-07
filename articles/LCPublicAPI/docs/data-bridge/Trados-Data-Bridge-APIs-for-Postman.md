@@ -55,7 +55,9 @@ For example, we can get information about a project by using the **List Task Sta
 
 Simply fill in your value `projectId eq 'stringValue'` from your $filter parameter section and click SEND. Optionally, you can specify additional OData querys like  
 `projectTemplateName eq 'stringValue' and projectShortId eq numericValue`.  
-For more options see below table
+
+For more options see the table below:
+
 | Operators| Description| Example |
 |----------|------------|---------|
 | Comparison operators| Use the `eq, ne, gt, ge, lt, le` operators to compare a property and a value.  |`$filter=revenue eq 100000`|

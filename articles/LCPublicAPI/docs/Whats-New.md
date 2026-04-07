@@ -2,6 +2,12 @@
 
 </br> 
 
+## 7 April 2026
+- Task owner functionality has been extended to support groups. The [Get Task](../api/Public-API.v1-fv.html#/operations/GetTask) endpoint now returns group information when a task is assigned to a group instead of an individual user. Webhook events have been adapted to support group ownership.
+- Previous task owner fields linked to user have been deprecated and will be maintained for backwards compatibility for at least 6 months.
+- We have extended custom role management capabilities. You can now [Create](../api/Public-API.v1-fv.html#/operations/CreateRole), [Update](../api/Public-API.v1-fv.html#/operations/UpdateRole) and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteRole) custom roles. The [Get](../api/Public-API.v1-fv.html#/operations/GetRole) and [List Roles](../api/Public-API.v1-fv.html#/operations/ListRoles) endpoints have been enhanced to include detailed permissions information. We've also introduced a new [List Permissions](../api/Public-API.v1-fv.html#/operations/ListPermissions) endpoint to support custom role management.
+- We fixed various bugs.
+
 ## 6 March 2026
 - We've exposed the last modified date as `lastModifiedAt` field for project template endpoints.
 - You can now read and update adjacent languages for a translation engine.

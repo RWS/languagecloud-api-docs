@@ -624,14 +624,14 @@ article h4 {
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
-  background-color: #17151b !important;
-  color: #e6f3ff !important;
+  background-color: #2d3239 !important;
+  color: #c1cbd5 !important;
   word-break: break-all;
   word-wrap: break-word;
   border-radius: 4px;
   border: none;
   padding: 9.5px;
-  margin: 0 0 10px;
+  margin: 20px 10px;
   font-size: 13px;
 }
 
@@ -639,7 +639,6 @@ pre code {
   font-family: monospace, monospace;
   color: inherit;
   padding: 0;
-  background-color: #fafcff;
   color: inherit;
   padding: 0;
   border: none;
@@ -647,7 +646,7 @@ pre code {
 
 code {
   font-family: monospace, monospace;
-  color: #363636;
+  color: #4d4d4d;
   background-color: #fafcff;
   padding: 2px 4px;
   border-radius: 1px;
@@ -673,7 +672,7 @@ a code:hover {
 }
 
 .hljs-string {
-  color: #A5D6FF;
+  color: #afdbff;
 }
 
 .hljs-comment {
@@ -698,15 +697,19 @@ a code:hover {
 }
 
 .hljs-type {
-  color: #87ceeb;
+  color: #9ae2ff;
 }
 
 .hljs-attr {
-  color: #80CBC4;
+  color: #9ae2ff;
 }
 
 .hljs-attribute {
-  color: #87ceeb;
+  color: #9ae2ff;
+}
+
+.hljs-name {
+  color: #92e8a9;
 }
 
 .hljs-comment>.hljs-doctag {

@@ -56,8 +56,8 @@
             "description": "The project containing the error task."
           },
           "owner": {
-            "$ref": "#/components/schemas/object-id",
-            "description": "The owner's account user identifier. Returned if the task has an owner."
+            "$ref": "#/components/schemas/task-event-owner",
+            "description": "The task owner. Returned if the task has an owner."
           },
           "location": {
             "$ref": "#/components/schemas/object-id",
@@ -441,8 +441,8 @@
             "description": "The project containing the task."
           },
           "owner": {
-            "$ref": "#/components/schemas/object-id",
-            "description": "The owner's account user identifier. Returned if the task has an owner."
+            "$ref": "#/components/schemas/task-event-owner",
+            "description": "The task owner. Returned if the task has an owner."
           },
           "location": {
             "$ref": "#/components/schemas/object-id",
@@ -505,6 +505,37 @@
             "description": "The vendor order template."
           }
         }
+      },
+      "task-event-owner": {
+        "title": "Task Event Owner",
+        "type": "object",
+        "description": "Task owner. Based on the \"type\", the following properties can be retrieved: \"user\" or \"group\".",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "user",
+              "group"
+            ],
+            "description": "The owner type."
+          },
+          "user": {
+            "$ref": "#/components/schemas/object-id",
+            "description": "The user who owns this task."
+          },
+          "group": {
+            "$ref": "#/components/schemas/object-id",
+            "description": "The group that owns this task."
+          },
+          "id": {
+            "type": "string",
+            "description": "The owner's account user identifier.",
+            "deprecated": true
+          }
+        },
+        "required": [
+          "type"
+        ]
       },
       "task-event-task-type": {
         "title": "Task Event Task Type",
