@@ -4103,7 +4103,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
                 "$ref": "#/components/schemas/perfect-match-custom-file-mapping-request"
               }
