@@ -4105,7 +4105,21 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/perfect-match-custom-file-mapping-request"
+                "type": "object",
+                "required": [
+                  "properties",
+                  "file"
+                ],
+                "properties": {
+                  "properties": {
+                    "$ref": "#/components/schemas/perfect-match-custom-file-mapping-request"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The source file (binary string). Only SDLXLIFF files are accepted."
+                  }
+                }
               }
             }
           }
@@ -23193,30 +23207,16 @@
         "description": "Provide you own matching file.",
         "type": "object",
         "required": [
-          "properties",
-          "file"
+          "name",
+          "targetLanguage"
         ],
         "properties": {
-          "properties": {
-            "type": "object",
-            "required": [
-              "name",
-              "targetLanguage"
-            ],
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "The file name."
-              },
-              "targetLanguage": {
-                "type": "string"
-              }
-            }
-          },
-          "file": {
+          "name": {
             "type": "string",
-            "format": "binary",
-            "description": "The source file (binary string). Only SDLXLIFF files are accepted."
+            "description": "The file name."
+          },
+          "targetLanguage": {
+            "type": "string"
           }
         }
       },
