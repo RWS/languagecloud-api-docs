@@ -20163,6 +20163,122 @@
         }
       ]
     },
+    "/vendors/{vendorId}/order-templates": {
+      "post": {
+        "operationId": "CreateVendorOrderTemplate",
+        "summary": "Create Vendor Order Template",
+        "description": "Creates a new vendor order template for the specified vendor.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/vendor-order-template-create-request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Vendor Order Template created successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vendor-order-template-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to create vendor order templates.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the vendor could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "vendorId",
+          "in": "path",
+          "required": true,
+          "description": "The vendor identifier."
+        }
+      ]
+    },
     "/workflows/{workflowId}": {
       "get": {
         "tags": [
@@ -32164,6 +32280,194 @@
           "id"
         ]
       },
+      "vendor-order-template-response": {
+        "title": "Vendor Order Template Response",
+        "type": "object",
+        "description": "A vendor order template resource.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the vendor order template."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the vendor order template."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the vendor order template."
+          },
+          "allowQuoteEditing": {
+            "type": "boolean",
+            "description": "Whether the vendor is allowed to edit the quote."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "description": "The service type identifiers associated with this vendor order template. Use the [List Service Types](#operation/ListTranslationServiceTypes) endpoint to retrieve available values.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pricingModel": {
+            "$ref": "#/components/schemas/pricing-model",
+            "description": "The pricing model associated with this vendor order template."
+          },
+          "quoteConfiguration": {
+            "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
+          },
+          "holdingDelay": {
+            "type": "integer",
+            "description": "The delay in minutes before the quote is finalized."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom field values associated with the vendor order template.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field"
+            }
+          },
+          "languagePairs": {
+            "type": "array",
+            "description": "The language pairs supported by this vendor order template.",
+            "items": {
+              "$ref": "#/components/schemas/language-pair"
+            }
+          },
+          "configurations": {
+            "type": "array",
+            "description": "Assignee and manager assignments per language scope.",
+            "items": {
+              "$ref": "#/components/schemas/vot-configuration"
+            }
+          }
+        },
+        "required": ["id", "name"]
+      },
+      "vendor-order-template-create-request": {
+        "title": "Vendor Order Template Create Request",
+        "type": "object",
+        "description": "Request body for creating a new vendor order template.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the vendor order template.",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the vendor order template.",
+            "maxLength": 1024
+          },
+          "allowQuoteEditing": {
+            "type": "boolean",
+            "description": "Whether the vendor is allowed to edit the quote."
+          },
+          "serviceTypes": {
+            "type": "array",
+            "description": "The service type identifiers to associate with this vendor order template. Use the [List Service Types](#operation/ListTranslationServiceTypes) endpoint to retrieve available values.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pricingModelId": {
+            "type": "string",
+            "description": "The identifier of the pricing model to associate with this vendor order template."
+          },
+          "quoteConfiguration": {
+            "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
+          },
+          "holdingDelay": {
+            "type": "integer",
+            "description": "The delay in minutes before the quote is finalized. Applicable when quoteConfiguration is `hold`."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom field values to associate with the vendor order template.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
+          },
+          "shouldUpdateCustomFields": {
+            "type": "boolean",
+            "description": "When true, replaces all existing custom field values with those provided in customFields. When false, only updates matching keys."
+          },
+          "languagePairs": {
+            "type": "array",
+            "description": "The language pairs supported by this vendor order template.",
+            "items": {
+              "$ref": "#/components/schemas/language-pair"
+            }
+          },
+          "assignments": {
+            "type": "array",
+            "description": "Assignee and manager assignments per language scope.",
+            "items": {
+              "$ref": "#/components/schemas/vot-configuration"
+            }
+          }
+        },
+        "required": ["name"]
+      },
+      "vendor-order-template-quote-configuration": {
+        "title": "Vendor Order Template Quote Configuration",
+        "type": "string",
+        "description": "Defines when the vendor quote is generated.\n\n- `waitForAllFiles`: Wait for all files before generating the quote.\n- `perFileQuote`: Generate a quote for each file as it arrives.\n- `finalQuoteAfterBatchCompleted`: Generate the final quote once the batch is complete.\n- `quoteBeforeCustomerQuoteGeneration`: Generate the vendor quote before the customer quote.",
+        "enum": [
+          "waitForAllFiles",
+          "perFileQuote",
+          "finalQuoteAfterBatchCompleted",
+          "quoteBeforeCustomerQuoteGeneration"
+        ]
+      },
+      "vot-person-request": {
+        "title": "Vendor Order Template Person",
+        "type": "object",
+        "description": "A user or group assigned as a manager or assignee on a vendor order template.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["user", "group"],
+            "description": "The type of the assignee."
+          },
+          "id": {
+            "type": "string",
+            "description": "The identifier of the user or group."
+          }
+        },
+        "required": ["type", "id"]
+      },
+      "vot-configuration": {
+        "title": "Vendor Order Template Configuration",
+        "type": "object",
+        "description": "Assignee and manager overrides for a specific language scope.\n\nSet `sourceLanguageCode` only to apply overrides to all language directions sharing that source language.\nSet both `sourceLanguageCode` and `targetLanguageCode` to apply overrides to a single language direction.",
+        "properties": {
+          "sourceLanguageCode": {
+            "type": "string",
+            "description": "The source language code this override applies to. Example: `en-US`."
+          },
+          "targetLanguageCode": {
+            "type": "string",
+            "description": "The target language code this override applies to. Example: `de-DE`. When omitted, the override applies to all language directions with the given source language."
+          },
+          "managers": {
+            "type": "array",
+            "description": "The managers for tasks matching this scope.",
+            "items": {
+              "$ref": "#/components/schemas/vot-person-request"
+            }
+          },
+          "assignees": {
+            "type": "array",
+            "description": "The assignees for tasks matching this scope.",
+            "items": {
+              "$ref": "#/components/schemas/vot-person-request"
+            }
+          }
+        },
+        "required": ["sourceLanguageCode"]
+      },
+
       "key-contact": {
         "title": "Key Contact",
         "type": "object",
