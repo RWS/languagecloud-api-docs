@@ -170,6 +170,10 @@
       "description": "User"
     },
     {
+      "name": "Vendor",
+      "description": "Vendor."
+    },
+    {
       "name": "Workflow",
       "description": "Workflow"
     }
@@ -19656,6 +19660,509 @@
         }
       ]
     },
+    "/vendors": {
+      "get": {
+        "operationId": "ListVendors",
+        "summary": "List Vendors",
+        "description": "Retrieves a list of all the vendors in an account.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/location"
+          },
+          {
+            "$ref": "#/components/parameters/location-strategy"
+          },
+          {
+            "$ref": "#/components/parameters/sort"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-vendors-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\": The requested entity or one of its dependencies attempted to retrieve data outside the allowed range. Skip+Top might be outside the supported range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "CreateVendor",
+        "summary": "Create Vendor",
+        "description": "Creates a new vendor organization. A vendor represents an external LSP that can be assigned translation tasks. The key contact provided will become the primary point of contact for the vendor.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/vendor-create-request"
+              },
+              "example": {
+                "name": "Lionbridge",
+                "description": "Leading global LSP specializing in translation and localization.",
+                "keyContact": {
+                  "firstName": "John",
+                  "lastName": "Doe",
+                  "email": "john.doe@lionbridge.com"
+                },
+                "location": "5e115aa000a849dda048d6b423806d35",
+                "selfManaged": true,
+                "quoteTemplateId": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
+                "customFields": [
+                  {
+                    "key": "vendor_tier",
+                    "value": "premium"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Vendor created successfully.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vendor"
+                },
+                "example": {
+                  "id": "69e693d00000000000000000",
+                  "name": "Lionbridge",
+                  "description": "Leading global LSP specializing in translation and localization.",
+                  "keyContact": {
+                    "id": "69e693d00000000000000001",
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "email": "john.doe@lionbridge.com"
+                  },
+                  "location": {
+                    "id": "a91ec1bdc70be40ad55bfb34d76c0026",
+                    "name": "vendors"
+                  },
+                  "selfManaged": true,
+                  "quoteTemplate": {
+                    "id": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
+                    "name": "Standard Quote Template"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. The request body is invalid or a required field is missing.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized. Authentication credentials are missing or invalid.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden. The authenticated user does not have permission to create vendors.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/vendors/{vendorId}": {
+      "get": {
+        "operationId": "GetVendor",
+        "summary": "Get Vendor",
+        "description": "Retrieves a vendor by identifier.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vendor"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the vendor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the vendor could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "operationId": "UpdateVendor",
+        "summary": "Update Vendor",
+        "description": "Updates a vendor by identifier.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/vendor-update-request"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to update the vendor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the vendor could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "DeleteVendor",
+        "summary": "Delete Vendor",
+        "description": "Deletes a vendor by identifier.",
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to delete the vendor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the vendor could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "vendorId",
+          "in": "path",
+          "required": true,
+          "description": "The vendor identifier."
+        }
+      ]
+    },
     "/workflows/{workflowId}": {
       "get": {
         "tags": [
@@ -22298,6 +22805,25 @@
           "items"
         ],
         "description": "A response for the List Customers endpoint."
+      },
+      "list-vendors-response": {
+        "title": "List Vendors Response",
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "description": "The list of vendors.",
+            "items": {
+              "$ref": "#/components/schemas/vendor"
+            }
+          },
+          "itemCount": {
+            "type": "integer",
+            "description": "The number of items returned in this response."
+          }
+        },
+        "required": ["items", "itemCount"],
+        "description": "A response for the List Vendors endpoint."
       },
       "list-custom-field-definitions-response": {
         "title": "List Custom Field Definitions Response",
@@ -31637,6 +32163,168 @@
         "required": [
           "id"
         ]
+      },
+      "key-contact": {
+        "title": "Key Contact",
+        "type": "object",
+        "description": "The key contact of a vendor — the primary point of contact within the LSP organization.",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "description": "The first name of the key contact.",
+            "maxLength": 50
+          },
+          "lastName": {
+            "type": "string",
+            "description": "The last name of the key contact.",
+            "maxLength": 50
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address of the key contact.",
+            "maxLength": 50
+          }
+        },
+        "required": ["firstName", "lastName", "email"]
+      },
+      "vendor": {
+        "title": "Vendor",
+        "type": "object",
+        "description": "Represents an external LSP (Language Service Provider) organization that can be assigned translation tasks through vendor order templates.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the vendor. Generated by the system."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the vendor."
+          },
+          "description": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">A description of the vendor.</div>",
+            "x-default-field": true
+          },
+          "keyContact": {
+            "$ref": "#/components/schemas/user",
+            "description": "The user that is the primary point of contact for this vendor."
+          },
+          "location": {
+            "$ref": "#/components/schemas/folder",
+            "description": "The folder location associated with the vendor."
+          },
+          "selfManaged": {
+            "type": "boolean",
+            "description": "Indicates whether the vendor is self-managed. When true, the vendor can manage its own users."
+          },
+          "quoteTemplate": {
+            "$ref": "#/components/schemas/project-quote-template",
+            "description": "The quote template associated with this vendor."
+          },
+          "members": {
+            "type": "array",
+            "description": "The users that are members of this vendor, including the key contact and any additionally invited members.",
+            "items": {
+              "$ref": "#/components/schemas/user"
+            }
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom field values associated with the vendor.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field"
+            }
+          }
+        },
+        "required": ["id", "name"]
+      },
+      "vendor-create-request": {
+        "title": "Vendor Create Request",
+        "type": "object",
+        "description": "Request body for creating a new vendor.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the vendor.",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the vendor.",
+            "maxLength": 1024
+          },
+          "keyContact": {
+            "$ref": "#/components/schemas/key-contact",
+            "description": "The primary point of contact within the vendor organization. Required when creating a vendor."
+          },
+          "location": {
+            "type": "string",
+            "description": "The identifier of the folder under which the vendor will be created. If not provided, defaults to the `vendors` folder under the account `root`."
+          },
+          "selfManaged": {
+            "type": "boolean",
+            "description": "Indicates whether the vendor is self-managed. Defaults to true.",
+            "default": true
+          },
+          "quoteTemplateId": {
+            "type": "string",
+            "description": "The identifier of the quote template to associate with the vendor."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom field values to associate with the vendor.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
+          }
+        },
+        "required": ["name", "keyContact"]
+      },
+      "vendor-update-request": {
+        "title": "Vendor Update Request",
+        "type": "object",
+        "description": "Request body for updating an existing vendor.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the vendor.",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the vendor.",
+            "maxLength": 1024
+          },
+          "keyContactId": {
+            "type": "string",
+            "description": "The identifier of the user to set as the primary point of contact for this vendor."
+          },
+          "selfManaged": {
+            "type": "boolean",
+            "description": "Indicates whether the vendor is self-managed."
+          },
+          "quoteTemplateId": {
+            "type": "string",
+            "description": "The identifier of the quote template to associate with the vendor."
+          },
+          "members": {
+            "type": "array",
+            "description": "The members to assign to this vendor.",
+            "items": {
+              "$ref": "#/components/schemas/object-id-request"
+            }
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom field values to associate with the vendor.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
+          }
+        }
       },
       "volume-unit-type": {
         "title": "Volume Unit Type",
