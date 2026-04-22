@@ -31468,6 +31468,13 @@
             "items": {
               "$ref": "#/components/schemas/workflow-template-transition"
             }
+          },
+          "configurationValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskTemplates.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
