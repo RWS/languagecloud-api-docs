@@ -19754,7 +19754,7 @@
       "post": {
         "operationId": "CreateVendor",
         "summary": "Create Vendor",
-        "description": "Creates a new vendor organization. A vendor represents an external LSP that can be assigned translation tasks. The key contact provided will become the primary point of contact for the vendor.",
+        "description": "Creates a new vendor organization. A vendor represents an external LSP that can be assigned translation tasks. The key contact provided will become the primary point of contact for the vendor.\n\nCreating a vendor automatically provisions a dedicated folder and a `VendorProjectManager` group within the account hierarchy.\n\n**Managing vendor members:** Users can be added to a vendor by inviting them via the [Create User](#/operations/CreateUser) endpoint, specifying the auto-created `VendorProjectManager` group as one of the `groups` in the request. Users can be removed from the vendor by removing them from that group using the [Update Group](#/operations/UpdateGroup) or [Update User](#/operations/UpdateUser) endpoints.",
         "tags": [
           "Vendor"
         ],
@@ -19784,7 +19784,6 @@
                   "lastName": "Doe",
                   "email": "john.doe@lionbridge.com"
                 },
-                "location": "5e115aa000a849dda048d6b423806d35",
                 "selfManaged": true,
                 "quoteTemplateId": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
                 "customFields": [
@@ -19885,7 +19884,7 @@
       "get": {
         "operationId": "GetVendor",
         "summary": "Get Vendor",
-        "description": "Retrieves a vendor by identifier.",
+        "description": "Retrieves a vendor by identifier.\n\nUse the `fields` query parameter to include optional nested resources such as `members`. The `members` field returns the users in the vendor's `VendorProjectManager` group. To manage vendor members, use the [Create User](#/operations/CreateUser), [Update User](#/operations/UpdateUser), or [Update Group](#/operations/UpdateGroup) endpoints.",
         "tags": [
           "Vendor"
         ],
@@ -19981,7 +19980,7 @@
       "put": {
         "operationId": "UpdateVendor",
         "summary": "Update Vendor",
-        "description": "Updates a vendor by identifier.",
+        "description": "Updates a vendor by identifier. Only fields included in the request body are updated (partial update semantics).\n\n**Member management is not part of this endpoint.** To add a user to a vendor, invite them via the [Create User](#/operations/CreateUser) endpoint specifying the vendor's `VendorProjectManager` group. To remove a user from the vendor, remove them from that group using the [Update Group](#/operations/UpdateGroup) or [Update User](#/operations/UpdateUser) endpoints.",
         "tags": [
           "Vendor"
         ],
@@ -32998,7 +32997,7 @@
           },
           "members": {
             "type": "array",
-            "description": "The users that are members of this vendor, including the key contact and any additionally invited members.",
+            "description": "The users that are members of this vendor, belonging to the vendor's `VendorProjectManager` group. To add users to the vendor, invite them via the [Create User](#/operations/CreateUser) endpoint specifying the `VendorProjectManager` group. To remove users, use the [Update Group](#/operations/UpdateGroup) or [Update User](#/operations/UpdateUser) endpoints.",
             "items": {
               "$ref": "#/components/schemas/user"
             }
@@ -33016,7 +33015,7 @@
       "vendor-create-request": {
         "title": "Vendor Create Request",
         "type": "object",
-        "description": "Request body for creating a new vendor.",
+        "description": "Request body for creating a new vendor. Creating a vendor automatically provisions a dedicated folder and a `VendorProjectManager` group.",
         "properties": {
           "name": {
             "type": "string",
@@ -33032,10 +33031,6 @@
           "keyContact": {
             "$ref": "#/components/schemas/key-contact",
             "description": "The primary point of contact within the vendor organization. Required when creating a vendor."
-          },
-          "location": {
-            "type": "string",
-            "description": "The identifier of the folder under which the vendor will be created. If not provided, defaults to the `vendors` folder under the account `root`."
           },
           "selfManaged": {
             "type": "boolean",
@@ -33059,7 +33054,7 @@
       "vendor-update-request": {
         "title": "Vendor Update Request",
         "type": "object",
-        "description": "Request body for updating an existing vendor.",
+        "description": "Request body for updating an existing vendor. Only fields included in the request body are updated. Member management is not part of this endpoint — use the [Create User](#/operations/CreateUser), [Update User](#/operations/UpdateUser), or [Update Group](#/operations/UpdateGroup) endpoints to add or remove users from the vendor's `VendorProjectManager` group.",
         "properties": {
           "name": {
             "type": "string",
@@ -33083,13 +33078,6 @@
           "quoteTemplateId": {
             "type": "string",
             "description": "The identifier of the quote template to associate with the vendor."
-          },
-          "members": {
-            "type": "array",
-            "description": "The members to assign to this vendor.",
-            "items": {
-              "$ref": "#/components/schemas/object-id-request"
-            }
           },
           "customFields": {
             "type": "array",
