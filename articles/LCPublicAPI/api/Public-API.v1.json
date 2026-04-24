@@ -19819,10 +19819,16 @@
                     "lastName": "Doe",
                     "email": "john.doe@lionbridge.com"
                   },
-                  "location": {
+                  "vendorFolder": {
                     "id": "a91ec1bdc70be40ad55bfb34d76c0026",
                     "name": "vendors"
                   },
+                  "groups": [
+                    {
+                      "id": "69e693d00000000000000002",
+                      "name": "VendorProjectManager"
+                    }
+                  ],
                   "selfManaged": true,
                   "quoteTemplate": {
                     "id": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
@@ -32983,9 +32989,16 @@
             "$ref": "#/components/schemas/user",
             "description": "The user that is the primary point of contact for this vendor."
           },
-          "location": {
-            "$ref": "#/components/schemas/folder",
-            "description": "The folder location associated with the vendor."
+          "vendorFolder": {
+            "$ref": "#/components/schemas/folder-v2",
+            "description": "The folder provisioned for this vendor during creation."
+          },
+          "groups": {
+            "type": "array",
+            "description": "The groups located in this vendor's folder. Includes the auto-provisioned `VendorProjectManager` group as well as any custom groups created in the vendor folder. The `VendorProjectManager` group identifier can be used when inviting users to the vendor via the [Create User](#/operations/CreateUser) endpoint.",
+            "items": {
+              "$ref": "#/components/schemas/group"
+            }
           },
           "selfManaged": {
             "type": "boolean",
