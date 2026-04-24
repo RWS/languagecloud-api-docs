@@ -4,7 +4,12 @@
     "title": "Trados Cloud Platform API",
     "description": "The Trados Cloud Platform API",
     "version": "1.0",
-    "contact": {}
+    "contact": {},
+    "x-extensions": {
+      "x-default-field": {
+        "description": "When true, this property is included in the response by default — even when the `fields` query parameter is omitted. Properties without this annotation are only returned when explicitly requested via `fields`. The `id` property is always returned regardless."
+      }
+    }
   },
   "servers": [
     {
@@ -19776,22 +19781,39 @@
               "schema": {
                 "$ref": "#/components/schemas/vendor-create-request"
               },
-              "example": {
-                "name": "Lionbridge",
-                "description": "Leading global LSP specializing in translation and localization.",
-                "keyContact": {
-                  "firstName": "John",
-                  "lastName": "Doe",
-                  "email": "john.doe@lionbridge.com"
-                },
-                "selfManaged": true,
-                "quoteTemplateId": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
-                "customFields": [
-                  {
-                    "key": "vendor_tier",
-                    "value": "premium"
+              "examples": {
+                "selfManagedVendor": {
+                  "summary": "Self-managed vendor with quote template and custom fields",
+                  "value": {
+                    "name": "Lionbridge",
+                    "description": "Leading global LSP specializing in translation and localization.",
+                    "keyContact": {
+                      "firstName": "John",
+                      "lastName": "Doe",
+                      "email": "john.doe@lionbridge.com"
+                    },
+                    "selfManaged": true,
+                    "quoteTemplateId": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
+                    "customFields": [
+                      {
+                        "key": "vendor_tier",
+                        "value": "premium"
+                      }
+                    ]
                   }
-                ]
+                },
+                "managedVendorMinimal": {
+                  "summary": "Externally managed vendor, no quote template",
+                  "value": {
+                    "name": "TransPerfect",
+                    "keyContact": {
+                      "firstName": "Jane",
+                      "lastName": "Smith",
+                      "email": "jane.smith@transperfect.com"
+                    },
+                    "selfManaged": false
+                  }
+                }
               }
             }
           }
@@ -19809,32 +19831,74 @@
                 "schema": {
                   "$ref": "#/components/schemas/vendor"
                 },
-                "example": {
-                  "id": "69e693d00000000000000000",
-                  "name": "Lionbridge",
-                  "description": "Leading global LSP specializing in translation and localization.",
-                  "keyContact": {
-                    "id": "69e693d00000000000000001",
-                    "firstName": "John",
-                    "lastName": "Doe",
-                    "email": "john.doe@lionbridge.com"
-                  },
-                  "vendorFolder": {
-                    "id": "a91ec1bdc70be40ad55bfb34d76c0026",
-                    "name": "vendors"
-                  },
-                  "groups": [
-                    {
-                      "id": "69e693d00000000000000002",
-                      "name": "VendorProjectManager"
+                "examples": {
+                  "selfManagedVendor": {
+                    "summary": "Self-managed vendor with quote template",
+                    "value": {
+                      "id": "69e693d00000000000000000",
+                      "name": "Lionbridge",
+                      "description": "Leading global LSP specializing in translation and localization.",
+                      "keyContact": {
+                        "id": "69e693d00000000000000001",
+                        "firstName": "John",
+                        "lastName": "Doe",
+                        "email": "john.doe@lionbridge.com"
+                      },
+                      "vendorFolder": {
+                        "id": "a91ec1bdc70be40ad55bfb34d76c0026",
+                        "name": "vendors"
+                      },
+                      "groups": [
+                        {
+                          "id": "69e693d00000000000000002",
+                          "name": "VendorProjectManager"
+                        }
+                      ],
+                      "selfManaged": true,
+                      "quoteTemplate": {
+                        "id": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
+                        "name": "Standard Quote Template"
+                      }
                     }
-                  ],
-                  "selfManaged": true,
-                  "quoteTemplate": {
-                    "id": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
-                    "name": "Standard Quote Template"
+                  },
+                  "managedVendorMinimal": {
+                    "summary": "Externally managed vendor, no quote template",
+                    "value": {
+                      "id": "69e693d00000000000000003",
+                      "name": "TransPerfect",
+                      "keyContact": {
+                        "id": "69e693d00000000000000004",
+                        "firstName": "Jane",
+                        "lastName": "Smith",
+                        "email": "jane.smith@transperfect.com"
+                      },
+                      "vendorFolder": {
+                        "id": "b82fd2cec81cf51be66agc45e87d1137",
+                        "name": "vendors"
+                      },
+                      "groups": [
+                        {
+                          "id": "69e693d00000000000000005",
+                          "name": "VendorProjectManager"
+                        }
+                      ],
+                      "selfManaged": false
+                    }
                   }
                 }
+              }
+            },
+            "links": {
+              "GetVendorById": {
+                "operationId": "GetVendor",
+                "parameters": {
+                  "vendorId": "$response.body#/id"
+                },
+                "description": "Use the returned vendor `id` to retrieve the full vendor resource."
+              },
+              "CreateVendorOrderTemplate": {
+                "operationId": "CreateVendorOrderTemplate",
+                "description": "Associate this vendor with a vendor order template to enable task assignment."
               }
             }
           },
@@ -19849,6 +19913,22 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
+                },
+                "examples": {
+                  "missingRequiredField": {
+                    "summary": "Missing required field",
+                    "value": {
+                      "message": "The 'name' field is required.",
+                      "errorCode": "MISSING_REQUIRED_FIELD",
+                      "details": [
+                        {
+                          "name": "name",
+                          "code": "REQUIRED",
+                          "value": null
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -19864,6 +19944,15 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
+                },
+                "examples": {
+                  "unauthorized": {
+                    "summary": "Missing or invalid credentials",
+                    "value": {
+                      "message": "Authentication credentials are missing or invalid.",
+                      "errorCode": "UNAUTHORIZED"
+                    }
+                  }
                 }
               }
             }
@@ -19879,6 +19968,15 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
+                },
+                "examples": {
+                  "forbidden": {
+                    "summary": "Insufficient permissions",
+                    "value": {
+                      "message": "You do not have permission to create vendors.",
+                      "errorCode": "FORBIDDEN"
+                    }
+                  }
                 }
               }
             }
@@ -20147,6 +20245,21 @@
                 "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
+          },
+          "409": {
+            "description": "Error codes:\n* \"conflict\": the vendor cannot be deleted because its folder contains resources that must be removed first. The error details describe which resources are blocking deletion.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
           }
         }
       },
@@ -20236,6 +20349,21 @@
               }
             }
           },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to list vendor order templates for this vendor.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
           "404": {
             "description": "Error codes:\n* \"notFound\": the vendor could not be found by identifier.",
             "content": {
@@ -20281,6 +20409,9 @@
           },
           {
             "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
           }
         ],
         "requestBody": {
@@ -32732,7 +32863,7 @@
             }
           }
         },
-        "required": ["id", "name"]
+        "required": ["id"]
       },
       "list-vendor-order-templates-response": {
         "title": "List Vendor Order Templates Response",
@@ -32854,7 +32985,7 @@
           },
           "holdingDelay": {
             "type": "integer",
-            "description": "The delay in minutes before the quote is finalized. Applicable when quoteConfiguration is `hold`."
+            "description": "The delay in minutes before the quote is finalized. Applicable when quoteConfiguration is `finalQuoteAfterBatchCompleted`."
           },
           "customFields": {
             "type": "array",
@@ -33023,7 +33154,7 @@
             }
           }
         },
-        "required": ["id", "name"]
+        "required": ["id"]
       },
       "vendor-create-request": {
         "title": "Vendor Create Request",
@@ -33047,7 +33178,7 @@
           },
           "selfManaged": {
             "type": "boolean",
-            "description": "Indicates whether the vendor is self-managed. Defaults to true.",
+            "description": "Indicates whether the vendor can manage its own users and settings independently. When true (default), users with access to the vendor folder can manage the vendor's group membership. When false, only account-level administrators can manage the vendor. Can be updated after creation via the Update Vendor endpoint.",
             "default": true
           },
           "quoteTemplateId": {
