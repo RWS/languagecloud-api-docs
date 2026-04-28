@@ -19753,7 +19753,7 @@
           "Workflow"
         ],
         "summary": "Update Workflow",
-        "description": "Updates the workflow in terms of: name, description, and task configuration (and its details). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
+        "description": "Updates the workflow in terms of: name, description, task configuration (and its details), and task type configuration values (`configurationValues`). Observe the rules of [JSON Merge Patch Semantics](https://tools.ietf.org/html/rfc7386).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -26229,7 +26229,7 @@
         "description": "The configuration of a task that will be created in the future.",
         "properties": {
           "taskTemplate": {
-            "$ref": "#/components/schemas/object-id"
+            "$ref": "#/components/schemas/workflow-task-template"
           },
           "scope": {
             "$ref": "#/components/schemas/task-configuration-scope"
@@ -26252,6 +26252,13 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The due date of the future task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\"",
             "nullable": true
+          },
+          "configurationValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -26322,6 +26329,12 @@
           },
           "dueBy": {
             "$ref": "#/components/schemas/date-time"
+          },
+          "configurationValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -27759,6 +27772,13 @@
           "completedAt": {
             "$ref": "#/components/schemas/date-time",
             "description": "The completion timestamp  of the task. <br> UTC Timezone <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sssZ\""
+          },
+          "configurationValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -27993,12 +28013,108 @@
               "$ref": "#/components/schemas/task-type-outcome"
             }
           },
+          "configurationDefinitions": {
+            "type": "array",
+            "description": "Defines the configurable options available for this task type. Each entry describes one configuration option including its data type, default value, allowed values and constraints.",
+            "items": {
+              "$ref": "#/components/schemas/task-type-configuration-definition"
+            }
+          },
           "location": {
             "$ref": "#/components/schemas/folder-v2"
           }
         },
         "required": [
           "id"
+        ]
+      },
+      "task-type-configuration-definition": {
+        "title": "Task Type Configuration Definition",
+        "type": "object",
+        "description": "Describes a single configurable option for a task type.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier for the configuration option (e.g. `FORCE_CLOSE_MAX_AGE`)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Human-readable name for the configuration option."
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of what this configuration option controls."
+          },
+          "dataType": {
+            "type": "string",
+            "description": "The data type of the configuration value.",
+            "enum": [
+              "integer",
+              "boolean",
+              "string"
+            ]
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Whether this configuration option is optional. If `false`, a value must always be supplied."
+          },
+          "defaultValue": {
+            "description": "The default value applied when no value is explicitly set. The type matches `dataType`. May be `null` when no default is defined.",
+            "nullable": true,
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          },
+          "options": {
+            "type": "array",
+            "nullable": true,
+            "description": "Enumerated list of accepted string values. Present only when `dataType` is `string` and the value is restricted to a fixed set. `null` when any value is allowed.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "constraints": {
+            "type": "array",
+            "description": "Validation constraints applied to the value (e.g. minimum/maximum for numeric types).",
+            "items": {
+              "$ref": "#/components/schemas/task-type-configuration-constraint"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "dataType",
+          "optional"
+        ]
+      },
+      "task-type-configuration-constraint": {
+        "title": "Task Type Configuration Constraint",
+        "type": "object",
+        "description": "A validation constraint applied to a task type configuration value.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The kind of constraint.",
+            "enum": [
+              "minValue",
+              "maxValue"
+            ]
+          },
+          "value": {
+            "description": "The constraint threshold. Type matches the parent configuration option's `dataType`.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "value"
         ]
       },
       "task-outcome": {
@@ -28084,20 +28200,12 @@
             "deprecated": true
           },
           "account": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/account"
-              }
-            ],
+            "allOf": [{ "$ref": "#/components/schemas/account" }],
             "description": "The account the user is part of.",
             "deprecated": true
           },
           "location": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/folder-v2"
-              }
-            ],
+            "allOf": [{ "$ref": "#/components/schemas/folder-v2" }],
             "deprecated": true
           },
           "groups": {
@@ -28108,19 +28216,11 @@
             "deprecated": true
           },
           "userType": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/user-type"
-              }
-            ],
+            "allOf": [{ "$ref": "#/components/schemas/user-type" }],
             "deprecated": true
           },
           "status": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/user-status"
-              }
-            ],
+            "allOf": [{ "$ref": "#/components/schemas/user-status" }],
             "deprecated": true
           },
           "invitationLink": {
@@ -28129,11 +28229,7 @@
             "deprecated": true
           },
           "membership": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/account-membership-type"
-              }
-            ],
+            "allOf": [{ "$ref": "#/components/schemas/account-membership-type" }],
             "deprecated": true
           }
         },
@@ -31794,6 +31890,13 @@
           },
           "taskTemplate": {
             "$ref": "#/components/schemas/workflow-task-template"
+          },
+          "configurationValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this workflow task. Each item corresponds to a configuration key defined in `taskTemplate.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -31840,6 +31943,12 @@
           },
           "scope": {
             "$ref": "#/components/schemas/task-configuration-scope-request"
+          },
+          "configurationValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
+            }
           }
         },
         "required": [
@@ -31848,6 +31957,33 @@
           "assignees",
           "scope"
         ]
+      },
+      "workflow-task-type-config-value": {
+        "title": "Workflow Task Type Config Value",
+        "type": "object",
+        "description": "A key-value pair representing a task type configuration setting.\n\nValid configuration keys (`id`), data types, options (for string types), and constraints (e.g., min/max for integer types) are defined in the sibling field `taskTemplate.taskType.configurationDefinitions` within the same task configuration.",
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The configuration key identifier (e.g. `FORCE_CLOSE_MAX_AGE`, `EDITOR_MODE`, `CONCURRENT_EDITING_ENABLED`)."
+          },
+          "value": {
+            "description": "The configuration value.",
+            "oneOf": [
+              { "type": "string" },
+              { "type": "integer" },
+              { "type": "boolean" }
+            ]
+          }
+        },
+        "example": {
+          "id": "CONCURRENT_EDITING_ENABLED",
+          "value": false
+        }
       },
       "workflow-task-template": {
         "title": "Workflow Task Template",
@@ -31921,6 +32057,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/workflow-template-transition"
+            }
+          },
+          "configurationValues": {
+            "type": "array",
+            "description": "The task type configuration values set on this task. Each item corresponds to a configuration key defined in `taskTemplates.taskType.configurationDefinitions`.",
+            "items": {
+              "$ref": "#/components/schemas/workflow-task-type-config-value"
             }
           }
         },
