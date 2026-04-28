@@ -21621,6 +21621,12 @@
               "customer"
             ],
             "description": "- default : groups in the Root folder (location) provisioned by the system, automatically. Examples: Administrator, Project Manager, Engineer, Terminologist.\r\n- customer : groups provisioned by the system, automatically, for each customer location you add. Examples: Customer Requester, Customer Reviewer.\r\n- vendor : group provisioned by the system, automatically, for each vendor location you add. Examples: Vendor Project Manager.\r\n- custom : groups you can create in a location of your choice. Examples: Project Manager, Translator."
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
           }
         }
       },
@@ -21730,6 +21736,12 @@
             "description": "The identifiers of the users who will be part of the group.",
             "items": {
               "type": "string"
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
             }
           }
         }
@@ -31456,6 +31468,12 @@
           },
           "membership": {
             "$ref": "#/components/schemas/account-membership-type"
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
           }
         }
       },
@@ -31585,6 +31603,12 @@
             "items": {
               "type": "object",
               "$ref": "#/components/schemas/object-id"
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
             }
           }
         }
