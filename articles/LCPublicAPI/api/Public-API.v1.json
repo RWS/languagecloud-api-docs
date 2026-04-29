@@ -21623,10 +21623,7 @@
             "description": "- default : groups in the Root folder (location) provisioned by the system, automatically. Examples: Administrator, Project Manager, Engineer, Terminologist.\r\n- customer : groups provisioned by the system, automatically, for each customer location you add. Examples: Customer Requester, Customer Reviewer.\r\n- vendor : group provisioned by the system, automatically, for each vendor location you add. Examples: Vendor Project Manager.\r\n- custom : groups you can create in a location of your choice. Examples: Project Manager, Translator."
           },
           "metadata": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
+            "$ref": "#/components/schemas/metadata"
           }
         }
       },
@@ -21648,6 +21645,14 @@
               "$ref": "#/components/schemas/role"
             }
           }
+        }
+      },
+      "metadata": {
+        "title": "Metadata",
+        "type": "object",
+        "description": "Additional metadata values in a key - value pair format",
+        "additionalProperties": {
+            "type": "object"
         }
       },
       "group-additional-roles-request": {
@@ -21739,10 +21744,7 @@
             }
           },
           "metadata": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
+            "$ref": "#/components/schemas/metadata"
           }
         }
       },
@@ -31566,10 +31568,7 @@
             "$ref": "#/components/schemas/account-membership-type"
           },
           "metadata": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
+            "$ref": "#/components/schemas/metadata"
           }
         }
       },
@@ -31702,10 +31701,7 @@
             }
           },
           "metadata": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
+            "$ref": "#/components/schemas/metadata"
           }
         }
       },

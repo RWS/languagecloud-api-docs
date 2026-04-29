@@ -5,7 +5,7 @@
 ## 29 April 2026
 - Tasks can now be [accepted](../api/Public-API.v1-fv.html#/operations/AcceptTask) on behalf of a group.
 - We've exposed task type configuration definitions and values across Get and List endpoints for [Projects](../api/Public-API.v1-fv.html#/operations/GetProject), [Project Templates](../api/Public-API.v1-fv.html#/operations/GetProjectTemplate), [Workflows](../api/Public-API.v1-fv.html#/operations/GetWorkflow), [Tasks](../api/Public-API.v1-fv.html#/operations/GetTask), and [Task Types](../api/Public-API.v1-fv.html#/operations/GetTaskType).
-- Task type configuration values can now be updated when updating [Workflows](../api/Public-API.v1-fv.html#/operations/UpdateWorkflow) and [Project Plans](../api/Public-API.v1-fv.html#/operations/UpdateProject).
+- Task type configuration values can now be modified when updating [Workflows](../api/Public-API.v1-fv.html#/operations/UpdateWorkflow) and [Project Plans](../api/Public-API.v1-fv.html#/operations/UpdateProject).
 - User and group metadata definitions have been added to the contract for improved data modeling.
 - We fixed various bugs.
 
