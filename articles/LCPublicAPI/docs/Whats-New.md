@@ -2,6 +2,13 @@
 
 </br> 
 
+## 29 April 2026
+- Tasks can now be [accepted](../api/Public-API.v1-fv.html#/operations/AcceptTask) on behalf of a group.
+- We've exposed task type configuration definitions and values across Get and List endpoints for [Projects](../api/Public-API.v1-fv.html#/operations/GetProject), [Project Templates](../api/Public-API.v1-fv.html#/operations/GetProjectTemplate), [Workflows](../api/Public-API.v1-fv.html#/operations/GetWorkflow), [Tasks](../api/Public-API.v1-fv.html#/operations/GetTask), and [Task Types](../api/Public-API.v1-fv.html#/operations/GetTaskType).
+- Task type configuration values can now be updated when updating [Workflows](../api/Public-API.v1-fv.html#/operations/UpdateWorkflow) and [Project Plans](../api/Public-API.v1-fv.html#/operations/UpdateProject).
+- User and group metadata definitions have been added to the contract for improved data modeling.
+- We fixed various bugs.
+
 ## 7 April 2026
 - Task owner functionality has been extended to support groups. The [Get Task](../api/Public-API.v1-fv.html#/operations/GetTask) endpoint now returns group information when a task is assigned to a group instead of an individual user. Webhook events have been adapted to support group ownership.
 - Previous task owner fields linked to user have been deprecated and will be maintained for backwards compatibility for at least 6 months.
