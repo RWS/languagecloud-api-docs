@@ -31979,7 +31979,7 @@
               { "type": "string" },
               { "type": "integer" },
               { "type": "boolean" }
-            ]
+              ]
           }
         },
         "example": {
