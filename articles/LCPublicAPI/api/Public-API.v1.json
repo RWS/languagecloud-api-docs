@@ -21650,9 +21650,15 @@
       "metadata": {
         "title": "Metadata",
         "type": "object",
-        "description": "Additional metadata values in a key - value pair format",
+        "description": "Additional metadata values in a key–value pair format",
         "additionalProperties": {
-            "type": "object"
+          "type": "object",
+          "additionalProperties": true
+        },
+        "example": {
+          "colour": "green",
+          "flag-enabled": true,
+          "max value": 3
         }
       },
       "group-additional-roles-request": {
