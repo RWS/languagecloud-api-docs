@@ -31976,9 +31976,19 @@
           "value": {
             "description": "The configuration value.",
             "oneOf": [
-              { "type": "string" },
-              { "type": "integer" },
-              { "type": "boolean" }
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type":  "object",
+                "additionalProperties": true
+              }
               ]
           }
         },
