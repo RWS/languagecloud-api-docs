@@ -31975,21 +31975,7 @@
           },
           "value": {
             "description": "The configuration value.",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "integer"
-              },
-              {
-                "type": "boolean"
-              },
-              {
-                "type": "object",
-                "additionalProperties": true
-              }
-            ],
+            "type": ["string", "integer", "boolean", "object", "array"],
             "x-java-type": "java.lang.Object"
           }
         },
