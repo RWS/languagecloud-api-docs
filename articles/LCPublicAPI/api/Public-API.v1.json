@@ -31988,13 +31988,9 @@
               {
                 "type": "object",
                 "additionalProperties": true
-              },
-              {
-                "type": "array",
-                "items": {}
               }
-
-            ]
+            ],
+            "x-java-type": "java.lang.Object"
           }
         },
         "example": {
