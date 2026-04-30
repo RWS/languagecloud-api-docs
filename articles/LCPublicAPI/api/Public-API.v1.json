@@ -28110,8 +28110,7 @@
           },
           "value": {
             "description": "The constraint threshold. Type matches the parent configuration option's `dataType`.",
-            "type": "object",
-            "additionalProperties": true
+            "type": "object"
           }
         },
         "required": [
