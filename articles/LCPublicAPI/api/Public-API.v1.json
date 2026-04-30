@@ -28069,8 +28069,7 @@
           "defaultValue": {
             "description": "The default value applied when no value is explicitly set. The type matches `dataType`. May be `null` when no default is defined.",
             "nullable": true,
-            "type": "object",
-            "additionalProperties": true
+            "type": "object"
           },
           "options": {
             "type": "array",
@@ -31968,8 +31967,7 @@
           },
           "value": {
             "description": "The configuration value.",
-            "type": "object",
-            "additionalProperties": true
+            "type": "object"
           }
         },
         "example": {
