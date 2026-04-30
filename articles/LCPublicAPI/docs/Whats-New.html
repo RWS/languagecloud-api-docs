@@ -82,6 +82,14 @@
 <h1 id="whats-new">What's new</h1>
 
 <br> 
+<h2 id="29-april-2026">29 April 2026</h2>
+<ul>
+<li>Tasks can now be <a href="../api/Public-API.v1-fv.html#/operations/AcceptTask">accepted</a> on behalf of a group.</li>
+<li>We've exposed task type configuration definitions and values across Get and List endpoints for <a href="../api/Public-API.v1-fv.html#/operations/GetProject">Projects</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetProjectTemplate">Project Templates</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetWorkflow">Workflows</a>, <a href="../api/Public-API.v1-fv.html#/operations/GetTask">Tasks</a>, and <a href="../api/Public-API.v1-fv.html#/operations/GetTaskType">Task Types</a>.</li>
+<li>Task type configuration values can now be modified when updating <a href="../api/Public-API.v1-fv.html#/operations/UpdateWorkflow">Workflows</a> and <a href="../api/Public-API.v1-fv.html#/operations/UpdateProject">Project Plans</a>.</li>
+<li>User and group metadata definitions have been added to the contract for improved data modeling.</li>
+<li>We fixed various bugs.</li>
+</ul>
 <h2 id="7-april-2026">7 April 2026</h2>
 <ul>
 <li>Task owner functionality has been extended to support groups. The <a href="../api/Public-API.v1-fv.html#/operations/GetTask">Get Task</a> endpoint now returns group information when a task is assigned to a group instead of an individual user. Webhook events have been adapted to support group ownership.</li>
