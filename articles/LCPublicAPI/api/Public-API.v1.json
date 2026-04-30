@@ -28069,11 +28069,8 @@
           "defaultValue": {
             "description": "The default value applied when no value is explicitly set. The type matches `dataType`. May be `null` when no default is defined.",
             "nullable": true,
-            "oneOf": [
-              { "type": "string" },
-              { "type": "integer" },
-              { "type": "boolean" }
-            ]
+            "type": "object",
+            "additionalProperties": true
           },
           "options": {
             "type": "array",
@@ -28113,11 +28110,8 @@
           },
           "value": {
             "description": "The constraint threshold. Type matches the parent configuration option's `dataType`.",
-            "oneOf": [
-              { "type": "string" },
-              { "type": "integer" },
-              { "type": "boolean" }
-            ]
+            "type": "object",
+            "additionalProperties": true
           }
         },
         "required": [
