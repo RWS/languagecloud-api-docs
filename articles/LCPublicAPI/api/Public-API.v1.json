@@ -21649,12 +21649,8 @@
       },
       "metadata": {
         "title": "Metadata",
-        "type": "object",
         "description": "Additional metadata values in a key–value pair format",
-        "additionalProperties": {
-          "type": "object",
-          "additionalProperties": true
-        },
+        "additionalProperties": true,
         "example": {
           "colour": "green",
           "flag-enabled": true,
@@ -21750,7 +21746,14 @@
             }
           },
           "metadata": {
-            "$ref": "#/components/schemas/metadata"
+            "title": "Metadata",
+            "description": "Additional metadata values in a key–value pair format",
+            "additionalProperties": true,
+            "example": {
+              "colour": "green",
+              "flag-enabled": true,
+              "max value": 3
+            }
           }
         }
       },
