@@ -66,8 +66,16 @@
       "description": "Machine Translation"
     },
     {
+      "name": "Packages",
+      "description": "Packages"
+    },
+    {
       "name": "PerfectMatch Mapping",
       "description": "PerfectMatch Mapping"
+    },
+    {
+      "name": "Preference",
+      "description": "Preference"
     },
     {
       "name": "Pricing Model",
@@ -2269,6 +2277,118 @@
         ]
       }
     },
+    "/files/download/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "fileId",
+          "in": "path",
+          "required": true,
+          "description": "The file id"
+        }
+      ],
+      "get": {
+        "tags": [
+          "File"
+        ],
+        "summary": "Download the file at the given Id",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+            "200": {
+              "description": "",
+              "content": {
+                "multipart/form-data": {
+                  "schema": {
+                    "type": "object",
+                    "format": "byte",
+                    "properties": {
+                      "file": {
+                        "type": "string",
+                        "format": "binary",
+                        "description": "The .zip file to be downloaded (binary string).  "
+                      }
+                    }
+                  }
+                }
+              },
+              "headers": {
+                "X-LC-TraceId": {
+                  "$ref": "#/components/headers/X-LC-TraceId"
+                }
+              }
+            },
+            "400": {
+              "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/error-response"
+                  }
+                }
+              },
+              "headers": {
+                "X-LC-TraceId": {
+                  "$ref": "#/components/headers/X-LC-TraceId"
+                }
+              }
+            },
+            "401": {
+              "description": "The user could not be identified.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/error-response"
+                  }
+                }
+              },
+              "headers": {
+                "X-LC-TraceId": {
+                  "$ref": "#/components/headers/X-LC-TraceId"
+                }
+              }
+            },
+            "403": {
+              "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to download the file.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/error-response"
+                  }
+                }
+              },
+              "headers": {
+                "X-LC-TraceId": {
+                  "$ref": "#/components/headers/X-LC-TraceId"
+                }
+              }
+            },
+            "404": {
+              "description": "Error codes:\n* \"notFound\": the File could not be found by identifier.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/error-response"
+                  }
+                }
+              },
+              "headers": {
+                "X-LC-TraceId": {
+                  "$ref": "#/components/headers/X-LC-TraceId"
+                }
+              }
+            }
+          }
+          }
+    },
     "/folders/{folderId}": {
       "get": {
         "tags": [
@@ -4455,6 +4575,482 @@
         "tags": [
           "Machine Translation"
         ]
+      }
+    },
+    "/packages/export": {
+      "post": {
+        "summary": "Export tasks in packages",
+        "tags": [
+          "Packages"
+        ],
+      "description": "",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/Authorization"
+        },
+        {
+          "$ref": "#/components/parameters/X-LC-Tenant"
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/package-export-request"
+            }
+          }
+        }
+      },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "taskId": {
+                      "type": "string",
+                      "description": "The id of the export task created, used to check on its status. "
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to export the package.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+    }
+    },
+    "/packages/export/{taskId}": {
+      "get": {
+        "summary": "Get status of the export",
+        "tags": [
+          "Packages"
+        ],
+      "description": "",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "description": "The export task identifier."
+          }
+        ],
+      "responses": {
+        "200": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/package-export-status-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "400": {
+          "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "401": {
+          "description": "The user could not be identified.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "403": {
+          "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to view task.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "404": {
+          "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        }
+      }
+    }
+    },
+    "/packages/import": {
+      "post": {
+        "summary": "Import tasks in packages",
+        "tags": [
+          "Packages"
+        ],
+      "description": "",
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/Authorization"
+        },
+        {
+          "$ref": "#/components/parameters/X-LC-Tenant"
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/package-import-request"
+            }
+          }
+        }
+      },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "taskId": {
+                      "type": "string",
+                      "description": "The id of the export task created, used to check on its status. "
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to import a package.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the Package could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+    }
+    },
+    "/packages/import/{taskId}": {
+      "get": {
+        "summary": "Get status of the import",
+        "tags": [
+          "Packages"
+        ],
+      "description": "",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "description": "The export task identifier."
+          }
+        ],
+      "responses": {
+        "200": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/package-import-status-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "400": {
+          "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "401": {
+          "description": "The user could not be identified.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "403": {
+          "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to view the task.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        },
+        "404": {
+          "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/error-response"
+              }
+            }
+          },
+          "headers": {
+            "X-LC-TraceId": {
+              "$ref": "#/components/headers/X-LC-TraceId"
+            }
+          }
+        }
+      }
+    }
+    },
+    "/preference/getFilters": {
+      "get": {
+        "summary": "Get Filters",
+        "tags": [
+          "Preference"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-memories-filters"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
       }
     },
     "/pricing-models": {
@@ -17495,7 +18091,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/list-translation-memories-reposne"
+                  "$ref": "#/components/schemas/list-translation-memories-response"
                 }
               }
             },
@@ -22940,7 +23536,7 @@
         ],
         "description": "A response for the List Translation Engines endpoint."
       },
-      "list-translation-memories-reposne": {
+      "list-translation-memories-response": {
         "title": "List Translation Memories Response",
         "type": "object",
         "properties": {
@@ -23012,6 +23608,32 @@
             "items": {
               "$ref": "#/components/schemas/translation-service-type"
             }
+          }
+        }
+      },
+      "translation-memories-filters": {
+        "title": "Translation Memories Filters",
+        "type": "object",
+        "properties": {
+          "tmFilters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memories-filter"
+            }
+          }
+        }
+      },
+      "translation-memories-filter": {
+        "title": "Translation Memories Filter",
+        "type": "object",
+        "properties":  {
+          "name": {
+            "type": "string",
+            "description":  "Name of the filter"
+          },
+          "filterExpression": {
+            "type": "string",
+            "description": "Actual expression, you should be using at Translation Memories Import/Export"
           }
         }
       },
@@ -23767,6 +24389,128 @@
             "items": {
               "$ref": "#/components/schemas/project-cost"
             }
+          }
+        }
+      },
+      "package-export-request": {
+        "title": "Package Export Request",
+        "type": "object",
+        "required": [
+          "projectId",
+          "taskIds"
+        ],
+        "properties": {
+          "projectId": {
+            "type": "string",
+            "description": "The Id of the project"
+          },
+          "taskIds": {
+            "type": "array",
+            "description": "The Ids of the tasks being exported",
+            "items": {
+              "type": "string"
+            }
+          },
+          "includeTB": {
+            "type": "boolean",
+            "description": "Set true to include Termbases"
+          },
+          "onlinePackage": {
+            "type": "boolean",
+            "description":  "Set true for online Termbases and false for offline Termbases. Only relevant if \"includeTB\" is true"
+          },
+          "includeTM": {
+            "type": "boolean",
+            "description": "Set true to include Translation Memories"
+          },
+          "includeReferenceFiles": {
+            "type": "boolean",
+            "description": "Set true to include Reference Files"
+          },
+          "splitByLanguage": {
+            "type": "boolean",
+            "description": "Set true if you want the packages split by language"
+          },
+          "filesPerPackage": {
+            "type": "integer",
+            "description":  "Number of files per package. Only usable if \"splitByLanguage\" is set to false"
+          }
+        }
+      },
+      "package-export-status-response": {
+        "title": "Package Export Status Response",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the export task"
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of the export task",
+            "export": [
+              "Queued",
+              "InProgress",
+              "Done",
+              "Failed"
+            ]
+          },
+          "projectId": {
+            "type": "string",
+            "description": "The id of the project"
+          },
+          "taskIds": {
+            "type": "array",
+            "description": "Ids for the tasks being exported",
+            "items":  {
+              "type": "string"
+            }
+          },
+          "packageFileId": {
+            "type": "string",
+            "description": "The id for the package, use this to download the file"
+          },
+          "expiresAtUtc": {
+            "type": "string",
+            "description": "Timestamp of the expiration date, UTC timezone"
+          }
+        }
+      },
+      "package-import-request": {
+        "title": "Package Export Request",
+        "type": "object",
+        "required": [
+          "projectId",
+          "taskIds"
+        ],
+        "properties": {
+          "packageFileId": {
+            "type": "string",
+            "description": "The Id of the file uploaded for import"
+          }
+        }
+      },
+      "package-import-status-response": {
+        "title": "Package Import Status Response",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The id of the export task"
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of the export task",
+            "export": [
+              "Queued",
+              "InProgress",
+              "Done",
+              "Failed"
+            ]
+          },
+          "packageFileId": {
+            "string": "string",
+            "description": "The id for the package"
           }
         }
       },
@@ -31032,6 +31776,9 @@
                 "rejectedSignOff"
               ]
             }
+          },
+          "filterExpression": {
+            "type": "string"
           }
         },
         "required": [
@@ -31298,6 +32045,9 @@
         "properties": {
           "languageDirection": {
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
+          },
+          "filterExpression": {
+            "type": "string"
           }
         },
         "required": [
