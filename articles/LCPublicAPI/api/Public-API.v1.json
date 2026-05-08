@@ -74,10 +74,6 @@
       "description": "PerfectMatch Mapping"
     },
     {
-      "name": "Preference",
-      "description": "Preference"
-    },
-    {
       "name": "Pricing Model",
       "description": "Pricing Model"
     },
@@ -112,6 +108,10 @@
     {
       "name": "Schedule Template",
       "description": "Schedule Template"
+    },
+    {
+      "name": "Settings",
+      "description": "Settings"
     },
     {
       "name": "Source File",
@@ -2293,7 +2293,7 @@
         "tags": [
           "File"
         ],
-        "summary": "Download the file at the given Id",
+        "summary": "Download File",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4579,7 +4579,7 @@
     },
     "/packages/export": {
       "post": {
-        "summary": "Export tasks in packages",
+        "summary": "Export Tasks",
         "tags": [
           "Packages"
         ],
@@ -4688,7 +4688,7 @@
     },
     "/packages/export/{taskId}": {
       "get": {
-        "summary": "Get status of the export",
+        "summary": "Get Export Status",
         "tags": [
           "Packages"
         ],
@@ -4785,7 +4785,7 @@
     },
     "/packages/import": {
       "post": {
-        "summary": "Import tasks in packages",
+        "summary": "Import Tasks",
         "tags": [
           "Packages"
         ],
@@ -4894,7 +4894,7 @@
     },
     "/packages/import/{taskId}": {
       "get": {
-        "summary": "Get status of the import",
+        "summary": "Get Import Status",
         "tags": [
           "Packages"
         ],
@@ -4989,11 +4989,11 @@
       }
     }
     },
-    "/preference/getFilters": {
+    "/settings/getFilters": {
       "get": {
         "summary": "Get Filters",
         "tags": [
-          "Preference"
+          "Settings"
         ],
         "description": "",
         "parameters": [
