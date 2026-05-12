@@ -33124,11 +33124,12 @@
           },
           "name": {
             "type": "string",
-            "description": "The name of the vendor."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The name of the vendor.</div>",
+            "x-default-field": true
           },
           "description": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">A description of the vendor.</div>",
+            "description": "A description of the vendor.",
             "x-default-field": true
           },
           "keyContact": {
