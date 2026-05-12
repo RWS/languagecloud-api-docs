@@ -33403,20 +33403,44 @@
       },
       "vot-person-request": {
         "title": "Vendor Order Template Person",
-        "type": "object",
         "description": "A user or group assigned as a manager or assignee on a vendor order template.",
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": ["user", "group"],
-            "description": "The type of the assignee."
-          },
-          "id": {
-            "type": "string",
-            "description": "The identifier of the user or group. For `type: user`, must be the `id` of a user present in the vendor's `members` list (see [Get Vendor](#/operations/GetVendor)). For `type: group`, must be the `id` of a group present in the vendor's `groups` list."
-          }
+        "discriminator": {
+          "propertyName": "type"
         },
-        "required": ["type", "id"]
+        "oneOf": [
+          {
+            "title": "User assignment",
+            "type": "object",
+            "description": "Assigns an individual user. The `id` must be the `id` of a user present in the vendor's `members` list (see [Get Vendor](#/operations/GetVendor) with `fields=members`).",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["user"]
+              },
+              "id": {
+                "type": "string",
+                "description": "The identifier of the user."
+              }
+            },
+            "required": ["type", "id"]
+          },
+          {
+            "title": "Group assignment",
+            "type": "object",
+            "description": "Assigns a group. The `id` must be the `id` of a group present in the vendor's `groups` list (see [Get Vendor](#/operations/GetVendor)).",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["group"]
+              },
+              "id": {
+                "type": "string",
+                "description": "The identifier of the group."
+              }
+            },
+            "required": ["type", "id"]
+          }
+        ]
       },
       "vot-configuration": {
         "title": "Vendor Order Template Configuration",
