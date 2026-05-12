@@ -19980,6 +19980,21 @@
                 }
               }
             }
+          },
+          "409": {
+            "description": "Error codes:\n* “duplicate”: duplicate value for the field mentioned in the error details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
           }
         }
       }
@@ -33109,12 +33124,12 @@
           },
           "name": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The name of the vendor.</div>",
-            "x-default-field": true
+            "description": "The name of the vendor."
           },
           "description": {
             "type": "string",
-            "description": "A description of the vendor."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">A description of the vendor.</div>",
+            "x-default-field": true
           },
           "keyContact": {
             "$ref": "#/components/schemas/user",
@@ -33163,7 +33178,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor.",
+            "description": "The name of the vendor.\\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
             "minLength": 1,
             "maxLength": 50
           },
