@@ -33272,7 +33272,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor order template.",
+            "description": "The name of the vendor order template.\\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
             "minLength": 1,
             "maxLength": 50
           },
@@ -33334,7 +33334,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor order template.",
+            "description": "The name of the vendor order template. \\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
             "minLength": 1,
             "maxLength": 50
           },
@@ -33600,7 +33600,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor.",
+            "description": "The name of the vendor. \\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
             "minLength": 1,
             "maxLength": 50
           },
