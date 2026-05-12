@@ -99,6 +99,10 @@
       "description": "Quote"
     },
     {
+      "name": "Quote Template",
+      "description": "Quote Template"
+    },
+    {
       "name": "Rate Limits",
       "description": "Rate Limits"
     },
@@ -1331,6 +1335,9 @@
           },
           {
             "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/resourceType"
           }
         ],
         "tags": [
@@ -11095,6 +11102,213 @@
         "operationId": "CreateProjectTemplate"
       }
     },
+    "/quote-templates": {
+      "get": {
+        "tags": [
+          "Quote Template"
+        ],
+        "summary": "List Quote Templates",
+        "description": "Retrieves a list of all the quote templates in an account.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/location"
+          },
+          {
+            "$ref": "#/components/parameters/location-strategy"
+          },
+          {
+            "$ref": "#/components/parameters/sort"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-quote-templates-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "416": {
+            "description": "Error codes:\n* \"requestedRangeNotSatisfiable\": The requested entity or one of its dependencies attempted to retrieve data outside the allowed range. Skip+Top might be outside the supported range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "ListQuoteTemplates"
+      }
+    },
+    "/quote-templates/{quoteTemplateId}": {
+      "get": {
+        "tags": [
+          "Quote Template"
+        ],
+        "summary": "Get Quote Template",
+        "description": "Retrieves a quote template by identifier.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/project-quote-template"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": The authenticated user is not allowed to read the quote template.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": The resource could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "GetQuoteTemplate"
+      },
+      "parameters": [
+        {
+          "name": "quoteTemplateId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "description": "The identifier of the quote template."
+        }
+      ]
+    },
     "/rate-limits": {
       "get": {
         "tags": [
@@ -20025,6 +20239,69 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/vendor"
+                },
+                "examples": {
+                  "selfManagedVendor": {
+                    "summary": "Self-managed vendor with quote template and members",
+                    "value": {
+                      "id": "69e693d00000000000000000",
+                      "name": "Lionbridge",
+                      "description": "Leading global LSP specializing in translation and localization.",
+                      "keyContact": {
+                        "id": "69e693d00000000000000001",
+                        "firstName": "John",
+                        "lastName": "Doe",
+                        "email": "john.doe@lionbridge.com"
+                      },
+                      "vendorFolder": {
+                        "id": "a91ec1bdc70be40ad55bfb34d76c0026",
+                        "name": "vendors"
+                      },
+                      "groups": [
+                        {
+                          "id": "69e693d00000000000000002",
+                          "name": "VendorProjectManager"
+                        }
+                      ],
+                      "selfManaged": true,
+                      "quoteTemplate": {
+                        "id": "ab49e078-8ea1-45fc-b469-475c38a1d20b",
+                        "name": "Standard Quote Template"
+                      },
+                      "members": [
+                        {
+                          "id": "69e693d00000000000000010",
+                          "firstName": "Alice",
+                          "lastName": "Translator",
+                          "email": "alice@lionbridge.com"
+                        }
+                      ]
+                    }
+                  },
+                  "externallyManagedVendor": {
+                    "summary": "Externally managed vendor, no quote template",
+                    "value": {
+                      "id": "69e693d00000000000000003",
+                      "name": "TransPerfect",
+                      "keyContact": {
+                        "id": "69e693d00000000000000004",
+                        "firstName": "Jane",
+                        "lastName": "Smith",
+                        "email": "jane.smith@transperfect.com"
+                      },
+                      "vendorFolder": {
+                        "id": "b82fd2cec81cf51be66agc45e87d1137",
+                        "name": "vendors"
+                      },
+                      "groups": [
+                        {
+                          "id": "69e693d00000000000000005",
+                          "name": "VendorProjectManager"
+                        }
+                      ],
+                      "selfManaged": false
+                    }
+                  }
                 }
               }
             },
@@ -20099,7 +20376,7 @@
       "put": {
         "operationId": "UpdateVendor",
         "summary": "Update Vendor",
-        "description": "Updates a vendor by identifier. Only fields included in the request body are updated (partial update semantics).\n\n**Member management is not part of this endpoint.** To add a user to a vendor, invite them via the [Create User](#/operations/CreateUser) endpoint specifying the vendor's `VendorProjectManager` group. To remove a user from the vendor, remove them from that group using the [Update Group](#/operations/UpdateGroup) or [Update User](#/operations/UpdateUser) endpoints.",
+        "description": "Updates a vendor by identifier. Only fields included in the request body are updated. We recommend reading [Updating data with PUT](../docs/Updating-data-with-PUT.html) before using this endpoint.\n\n**Member management is not part of this endpoint.** To add a user to a vendor, invite them via the [Create User](#/operations/CreateUser) endpoint specifying the vendor's `VendorProjectManager` group. To remove a user from the vendor, remove them from that group using the [Update Group](#/operations/UpdateGroup) or [Update User](#/operations/UpdateUser) endpoints.",
         "tags": [
           "Vendor"
         ],
@@ -20414,7 +20691,7 @@
       "post": {
         "operationId": "CreateVendorOrderTemplate",
         "summary": "Create Vendor Order Template",
-        "description": "Creates a new vendor order template for the specified vendor.",
+        "description": "Creates a new vendor order template for the specified vendor.\n\nFor more information on creating vendor order templates, see [Creating order templates for vendors](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/creating-order-templates-for-vendors-708439).",
         "tags": [
           "Vendor"
         ],
@@ -20434,6 +20711,54 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/vendor-order-template-create-request"
+              },
+              "examples": {
+                "singleLanguagePair": {
+                  "summary": "Single language pair with one manager and one assignee",
+                  "value": {
+                    "name": "EN-FR Translation",
+                    "pricingModelId": "pm-abc123",
+                    "quoteConfiguration": "waitForAllFiles",
+                    "languagePairs": [
+                      { "source": "en-US", "target": "fr-FR" }
+                    ],
+                    "assignments": [
+                      {
+                        "languagePair": { "source": "en-US", "target": "fr-FR" },
+                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
+                        "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                      }
+                    ]
+                  }
+                },
+                "multipleLanguagePairs": {
+                  "summary": "Multiple language pairs with group assignees and holding delay",
+                  "value": {
+                    "name": "Multilingual Package",
+                    "description": "Template covering EN to DE and FR with a group-based assignee.",
+                    "pricingModelId": "pm-def456",
+                    "quoteConfiguration": "finalQuoteAfterBatchCompleted",
+                    "holdingDelay": 30,
+                    "allowQuoteEditing": true,
+                    "serviceTypes": [ "st-translation-001" ],
+                    "languagePairs": [
+                      { "source": "en-US", "target": "de-DE" },
+                      { "source": "en-US", "target": "fr-FR" }
+                    ],
+                    "assignments": [
+                      {
+                        "languagePair": { "source": "en-US", "target": "de-DE" },
+                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
+                        "assignees": [ { "type": "group", "id": "69e693d00000000000000002" } ]
+                      },
+                      {
+                        "languagePair": { "source": "en-US", "target": "fr-FR" },
+                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
+                        "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                      }
+                    ]
+                  }
+                }
               }
             }
           },
@@ -20446,6 +20771,28 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/vendor-order-template-response"
+                },
+                "examples": {
+                  "singleLanguagePair": {
+                    "summary": "Single language pair template",
+                    "value": {
+                      "id": "vot-abc123",
+                      "name": "EN-FR Translation",
+                      "quoteConfiguration": "waitForAllFiles",
+                      "allowQuoteEditing": false,
+                      "pricingModel": { "id": "pm-abc123", "name": "Standard Rate" },
+                      "languagePairs": [
+                        { "source": "en-US", "target": "fr-FR" }
+                      ],
+                      "assignments": [
+                        {
+                          "languagePair": { "source": "en-US", "target": "fr-FR" },
+                          "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
+                          "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             },
@@ -20629,7 +20976,7 @@
       "put": {
         "operationId": "UpdateVendorOrderTemplate",
         "summary": "Update Vendor Order Template",
-        "description": "Updates a vendor order template by identifier.",
+        "description": "Updates a vendor order template by identifier. Only fields included in the request body are updated. We recommend reading [Updating data with PUT](../docs/Updating-data-with-PUT.html) before using this endpoint.",
         "tags": [
           "Vendor"
         ],
@@ -23475,6 +23822,25 @@
         },
         "required": ["items", "itemCount"],
         "description": "A response for the List Vendors endpoint."
+      },
+      "list-quote-templates-response": {
+        "title": "List Quote Templates Response",
+        "type": "object",
+        "properties": {
+          "itemCount": {
+            "type": "integer",
+            "description": "The total number of quote templates matching the query."
+          },
+          "items": {
+            "type": "array",
+            "description": "The list of quote templates.",
+            "items": {
+              "$ref": "#/components/schemas/project-quote-template"
+            }
+          }
+        },
+        "required": ["itemCount", "items"],
+        "description": "A response for the List Quote Templates endpoint."
       },
       "list-custom-field-definitions-response": {
         "title": "List Custom Field Definitions Response",
@@ -32840,9 +33206,9 @@
           },
           "serviceTypes": {
             "type": "array",
-            "description": "The service type identifiers associated with this vendor order template. Use the [List Service Types](#operation/ListTranslationServiceTypes) endpoint to retrieve available values.",
+            "description": "The service types associated with this vendor order template.",
             "items": {
-              "type": "string"
+              "$ref": "#/components/schemas/translation-service-type"
             }
           },
           "pricingModel": {
@@ -32872,7 +33238,7 @@
           },
           "assignments": {
             "type": "array",
-            "description": "Assignee and manager assignments per language scope.",
+            "description": "Assignee and manager assignments per language pair. Contains exactly one entry for each language pair in `languagePairs`.",
             "items": {
               "$ref": "#/components/schemas/vot-configuration"
             }
@@ -32917,18 +33283,19 @@
           },
           "allowQuoteEditing": {
             "type": "boolean",
-            "description": "Whether the vendor is allowed to edit the quote."
+            "default": false,
+            "description": "Whether the vendor is allowed to edit the vendor quote at any time. When `false` (default), vendor project managers can only edit the quote during the Vendor Quote Review task."
           },
           "serviceTypes": {
             "type": "array",
-            "description": "The service type identifiers to associate with this vendor order template. Use the [List Service Types](#operation/ListTranslationServiceTypes) endpoint to retrieve available values.",
+            "description": "The service type identifiers to associate with this vendor order template. Use the [List Service Types](#/operations/ListTranslationServiceTypes) endpoint to retrieve available values.",
             "items": {
               "type": "string"
             }
           },
           "pricingModelId": {
             "type": "string",
-            "description": "The identifier of the pricing model to associate with this vendor order template."
+            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
           },
           "quoteConfiguration": {
             "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
@@ -32939,14 +33306,10 @@
           },
           "customFields": {
             "type": "array",
-            "description": "Custom field values to associate with the vendor order template.",
+            "description": "Custom field values to associate with the vendor order template. Use the [List Custom Field Definitions](#/operations/ListCustomFields) endpoint with `location` set to the vendor's folder identifier and `resourceType=vendorOrderTemplate` to retrieve applicable definitions.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
-          },
-          "shouldUpdateCustomFields": {
-            "type": "boolean",
-            "description": "When true, replaces all existing custom field values with those provided in customFields. When false, only updates matching keys."
           },
           "languagePairs": {
             "type": "array",
@@ -32957,7 +33320,7 @@
           },
           "assignments": {
             "type": "array",
-            "description": "Assignee and manager assignments per language scope.",
+            "description": "Assignee and manager assignments per language pair. Must contain exactly one entry for each language pair listed in `languagePairs`.",
             "items": {
               "$ref": "#/components/schemas/vot-configuration"
             }
@@ -32982,18 +33345,19 @@
           },
           "allowQuoteEditing": {
             "type": "boolean",
-            "description": "Whether the vendor is allowed to edit the quote."
+            "default": false,
+            "description": "Whether the vendor is allowed to edit the vendor quote at any time. When `false` (default), vendor project managers can only edit the quote during the Vendor Quote Review task."
           },
           "serviceTypes": {
             "type": "array",
-            "description": "The service type identifiers to associate with this vendor order template. Use the [List Service Types](#operation/ListTranslationServiceTypes) endpoint to retrieve available values.",
+            "description": "The service type identifiers to associate with this vendor order template. Use the [List Service Types](#/operations/ListTranslationServiceTypes) endpoint to retrieve available values.",
             "items": {
               "type": "string"
             }
           },
           "pricingModelId": {
             "type": "string",
-            "description": "The identifier of the pricing model to associate with this vendor order template."
+            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
           },
           "quoteConfiguration": {
             "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
@@ -33004,14 +33368,10 @@
           },
           "customFields": {
             "type": "array",
-            "description": "Custom field values to associate with the vendor order template.",
+            "description": "Custom field values to associate with the vendor order template. Use the [List Custom Field Definitions](#/operations/ListCustomFields) endpoint with `location` set to the vendor's folder identifier and `resourceType=vendorOrderTemplate` to retrieve applicable definitions.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
-          },
-          "shouldUpdateCustomFields": {
-            "type": "boolean",
-            "description": "When true, replaces all existing custom field values with those provided in customFields. When false, only updates matching keys."
           },
           "languagePairs": {
             "type": "array",
@@ -33022,18 +33382,18 @@
           },
           "assignments": {
             "type": "array",
-            "description": "Assignee and manager assignments per language scope.",
+            "description": "Assignee and manager assignments per language pair. Must contain exactly one entry for each language pair listed in `languagePairs`.",
             "items": {
               "$ref": "#/components/schemas/vot-configuration"
             }
           }
         },
-        "required": ["name"]
+        "required": ["name", "languagePairs", "assignments", "pricingModelId", "quoteConfiguration"]
       },
       "vendor-order-template-quote-configuration": {
         "title": "Vendor Order Template Quote Configuration",
         "type": "string",
-        "description": "Defines when the vendor quote is generated.\n\n- `waitForAllFiles`: Wait for all files before generating the quote.\n- `perFileQuote`: Generate a quote for each file as it arrives.\n- `finalQuoteAfterBatchCompleted`: Generate the final quote once the batch is complete.\n- `quoteBeforeCustomerQuoteGeneration`: Generate the vendor quote before the customer quote.",
+        "description": "Defines when the vendor quote is generated. For details on how each strategy behaves, see [Vendor order template strategies and their behavior](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/vendor-order-template-strategies-and-their-behavior-1170239).\n\n- `waitForAllFiles`: Wait for all files before generating the quote.\n- `perFileQuote`: Generate a quote for each file as it arrives.\n- `finalQuoteAfterBatchCompleted`: Generate the final quote once the batch is complete.\n- `quoteBeforeCustomerQuoteGeneration`: Generate the vendor quote before the customer quote.",
         "enum": [
           "waitForAllFiles",
           "perFileQuote",
@@ -33053,7 +33413,7 @@
           },
           "id": {
             "type": "string",
-            "description": "The identifier of the user or group."
+            "description": "The identifier of the user or group. For `type: user`, must be the `id` of a user present in the vendor's `members` list (see [Get Vendor](#/operations/GetVendor)). For `type: group`, must be the `id` of a group present in the vendor's `groups` list."
           }
         },
         "required": ["type", "id"]
@@ -33061,32 +33421,30 @@
       "vot-configuration": {
         "title": "Vendor Order Template Configuration",
         "type": "object",
-        "description": "Assignee and manager overrides for a specific language scope.\n\nSet `sourceLanguageCode` only to apply overrides to all language directions sharing that source language.\nSet both `sourceLanguageCode` and `targetLanguageCode` to apply overrides to a single language direction.",
+        "description": "Assignee and manager assignment for a specific language pair. Every language pair listed in `languagePairs` must have exactly one corresponding entry in `assignments`.",
         "properties": {
-          "sourceLanguageCode": {
-            "type": "string",
-            "description": "The source language code this override applies to. Example: `en-US`."
-          },
-          "targetLanguageCode": {
-            "type": "string",
-            "description": "The target language code this override applies to. Example: `de-DE`. When omitted, the override applies to all language directions with the given source language."
+          "languagePair": {
+            "$ref": "#/components/schemas/language-pair",
+            "description": "The language pair this assignment applies to."
           },
           "managers": {
             "type": "array",
-            "description": "The managers for tasks matching this scope.",
+            "description": "The vendor project managers responsible for the Vendor Quote Review task for this language pair. All entries must be members of the vendor's Vendor Project Manager group.",
+            "minItems": 1,
             "items": {
               "$ref": "#/components/schemas/vot-person-request"
             }
           },
           "assignees": {
             "type": "array",
-            "description": "The assignees for tasks matching this scope.",
+            "description": "The vendor users who will perform the actual service tasks (e.g. Translation, Linguistic Review, DTP) for this language pair. All entries must be members of the vendor's Vendor Project Manager group.",
+            "minItems": 1,
             "items": {
               "$ref": "#/components/schemas/vot-person-request"
             }
           }
         },
-        "required": ["sourceLanguageCode"]
+        "required": ["languagePair", "managers", "assignees"]
       },
 
       "key-contact": {
@@ -33199,11 +33557,11 @@
           },
           "quoteTemplateId": {
             "type": "string",
-            "description": "The identifier of the quote template to associate with the vendor."
+            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values."
           },
           "customFields": {
             "type": "array",
-            "description": "Custom field values to associate with the vendor.",
+            "description": "Custom field values to associate with the vendor. Use the [List Custom Field Definitions](#/operations/ListCustomFields) endpoint with `location` set to the vendor's folder identifier and `resourceType=vendor` to retrieve applicable definitions.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -33237,11 +33595,11 @@
           },
           "quoteTemplateId": {
             "type": "string",
-            "description": "The identifier of the quote template to associate with the vendor."
+            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values."
           },
           "customFields": {
             "type": "array",
-            "description": "Custom field values to associate with the vendor.",
+            "description": "Custom field values to associate with the vendor. Use the [List Custom Field Definitions](#/operations/ListCustomFields) endpoint with `location` set to the vendor's folder identifier and `resourceType=vendor` to retrieve applicable definitions.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -34179,6 +34537,21 @@
         "description": "A comma separated list of fields to include in the response.\n        Every value in the list should either consist of a top-level property name (excluding the items envelope for endpoints returning lists) or refer to a property of a top-level property of type object, in the following form: \"toplevelpropertyname.subpropertyname\".\n        When this query parameter is omitted, default resource representations are returned (excluding fields marked as optional). The same applies to nested objects when just specifying the top-level property name, without explicitly listing sub-property names. When specifying the fields query parameter, only the specified fields are returned.\n        The id property is always returned.",
         "schema": {
           "type": "string"
+        }
+      },
+      "resourceType": {
+        "name": "resourceType",
+        "in": "query",
+        "required": false,
+        "description": "Filters the custom field definitions by the resource type they apply to.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "project",
+            "customer",
+            "vendor",
+            "vendorOrderTemplate"
+          ]
         }
       },
       "customerId": {
