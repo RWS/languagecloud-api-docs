@@ -20714,11 +20714,11 @@
               },
               "examples": {
                 "singleLanguagePair": {
-                  "summary": "Single language pair with one manager and one assignee",
+                  "summary": "Single language pair, with one manager and one assignee, wait for all files (default delay)",
                   "value": {
                     "name": "EN-FR Translation",
                     "pricingModelId": "pm-abc123",
-                    "quoteConfiguration": "waitForAllFiles",
+                    "quoteConfiguration": { "behaviour": "waitForAllFiles" },
                     "languagePairs": [
                       { "source": "en-US", "target": "fr-FR" }
                     ],
@@ -20732,13 +20732,12 @@
                   }
                 },
                 "multipleLanguagePairs": {
-                  "summary": "Multiple language pairs with group assignees and holding delay",
+                  "summary": "Multiple language pairs with group assignees and wait for all files with custom holding delay",
                   "value": {
                     "name": "Multilingual Package",
                     "description": "Template covering EN to DE and FR with a group-based assignee.",
                     "pricingModelId": "pm-def456",
-                    "quoteConfiguration": "finalQuoteAfterBatchCompleted",
-                    "holdingDelay": 30,
+                    "quoteConfiguration": { "behaviour": "waitForAllFiles", "holdingDelay": 120 },
                     "allowQuoteEditing": true,
                     "serviceTypes": [ "st-translation-001" ],
                     "languagePairs": [
@@ -20778,7 +20777,7 @@
                     "value": {
                       "id": "vot-abc123",
                       "name": "EN-FR Translation",
-                      "quoteConfiguration": "waitForAllFiles",
+                      "quoteConfiguration": { "behaviour": "waitForAllFiles" },
                       "allowQuoteEditing": false,
                       "pricingModel": { "id": "pm-abc123", "name": "Standard Rate" },
                       "languagePairs": [
@@ -33216,11 +33215,8 @@
             "description": "The pricing model associated with this vendor order template."
           },
           "quoteConfiguration": {
-            "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
-          },
-          "holdingDelay": {
-            "type": "integer",
-            "description": "The delay in minutes before the quote is finalized."
+            "$ref": "#/components/schemas/vendor-order-template-quote-configuration",
+            "description": "Controls when and how the vendor quote is generated."
           },
           "customFields": {
             "type": "array",
@@ -33298,11 +33294,8 @@
             "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
           },
           "quoteConfiguration": {
-            "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
-          },
-          "holdingDelay": {
-            "type": "integer",
-            "description": "The delay in minutes before the quote is finalized. Applicable when quoteConfiguration is `finalQuoteAfterBatchCompleted`."
+            "$ref": "#/components/schemas/vendor-order-template-quote-configuration",
+            "description": "Controls when and how the vendor quote is generated."
           },
           "customFields": {
             "type": "array",
@@ -33360,11 +33353,8 @@
             "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
           },
           "quoteConfiguration": {
-            "$ref": "#/components/schemas/vendor-order-template-quote-configuration"
-          },
-          "holdingDelay": {
-            "type": "integer",
-            "description": "The delay in minutes before the quote is finalized. Applicable when quoteConfiguration is `finalQuoteAfterBatchCompleted`."
+            "$ref": "#/components/schemas/vendor-order-template-quote-configuration",
+            "description": "Controls when and how the vendor quote is generated."
           },
           "customFields": {
             "type": "array",
@@ -33390,16 +33380,33 @@
         },
         "required": ["name", "languagePairs", "assignments", "pricingModelId", "quoteConfiguration"]
       },
-      "vendor-order-template-quote-configuration": {
-        "title": "Vendor Order Template Quote Configuration",
+      "vot-quote-behaviour": {
+        "title": "Vendor Order Template Quote Behaviour",
         "type": "string",
-        "description": "Defines when the vendor quote is generated. For details on how each strategy behaves, see [Vendor order template strategies and their behavior](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/vendor-order-template-strategies-and-their-behavior-1170239).\n\n- `waitForAllFiles`: Wait for all files before generating the quote.\n- `perFileQuote`: Generate a quote for each file as it arrives.\n- `finalQuoteAfterBatchCompleted`: Generate the final quote once the batch is complete.\n- `quoteBeforeCustomerQuoteGeneration`: Generate the vendor quote before the customer quote.",
+        "description": "The strategy that determines when the vendor quote is generated. For details on how each strategy behaves, see [Vendor order template strategies and their behavior](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/vendor-order-template-strategies-and-their-behavior-1170239).\n\n- `waitForAllFiles`: Wait until all files assigned to the vendor have reached their task, up to `holdingDelay` minutes (default: 1440 = 24 hours). If all files have not arrived within the waiting period, the quote is generated for the files that did arrive; remaining files are added to the same quote when they arrive.\n- `perFileQuote`: Generate a separate quote for each file individually as it reaches the vendor task.\n- `finalQuoteAfterBatchCompleted`: Generate a single quote immediately after the Project Planning task is completed. This is the default strategy.\n- `quoteBeforeCustomerQuoteGeneration`: Generate the vendor quote before the customer quote is generated.",
         "enum": [
           "waitForAllFiles",
           "perFileQuote",
           "finalQuoteAfterBatchCompleted",
           "quoteBeforeCustomerQuoteGeneration"
         ]
+      },
+      "vendor-order-template-quote-configuration": {
+        "title": "Vendor Order Template Quote Configuration",
+        "type": "object",
+        "description": "Controls when and how the vendor quote is generated.",
+        "properties": {
+          "behaviour": {
+            "$ref": "#/components/schemas/vot-quote-behaviour",
+            "description": "The strategy that determines when the vendor quote is generated."
+          },
+          "holdingDelay": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "The maximum time in minutes the system waits for all files to reach the vendor task before generating the quote. Only applicable when `behaviour` is `waitForAllFiles`. Defaults to 1440 (24 hours)."
+          }
+        },
+        "required": ["behaviour"]
       },
       "vot-person-request": {
         "title": "Vendor Order Template Person",
