@@ -20466,6 +20466,16 @@
                 "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
+          },
+          "409": {
+            "description": "Error codes:\n\n“duplicate”: duplicate value for the field mentioned in the error details.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            }
           }
         }
       },
