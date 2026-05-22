@@ -33598,7 +33598,7 @@
           },
           "quoteTemplateId": {
             "type": "string",
-            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values."
+            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values. <br>The quote template must be in the same folder as the vendor or above."
           },
           "customFields": {
             "type": "array",
@@ -33636,7 +33636,7 @@
           },
           "quoteTemplateId": {
             "type": "string",
-            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values."
+            "description": "The identifier of the quote template to associate with the vendor. Use the [List Quote Templates](#/operations/ListQuoteTemplates) endpoint to retrieve available values. <br>The quote template must be in the same folder as the vendor or above."
           },
           "customFields": {
             "type": "array",
