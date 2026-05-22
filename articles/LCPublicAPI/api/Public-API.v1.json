@@ -31778,7 +31778,9 @@
             }
           },
           "filterExpression": {
-            "type": "string"
+            "type": "string",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value.",
+            "example": "!(\"usd\" <= \"2026-05-22T06:00:00.425Z\") & (\"usc\" = 1) & (\"src\" @ \"fish\")"
           }
         },
         "required": [
@@ -32047,7 +32049,9 @@
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
           },
           "filterExpression": {
-            "type": "string"
+            "type": "string",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value.",
+            "example": "!(\"usd\" <= \"2026-05-22T06:00:00.425Z\") & (\"usc\" = 1) & (\"src\" @ \"fish\")"
           }
         },
         "required": [
