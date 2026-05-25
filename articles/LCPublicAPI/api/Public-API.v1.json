@@ -33246,7 +33246,7 @@
             "type": "array",
             "description": "Assignee and manager assignments per language pair. Contains exactly one entry for each language pair in `languagePairs`.",
             "items": {
-              "$ref": "#/components/schemas/vot-configuration"
+              "$ref": "#/components/schemas/vot-configuration-response"
             }
           }
         },
@@ -33459,6 +33459,49 @@
           }
         ]
       },
+      "vot-person-response": {
+        "title": "Vendor Order Template Person",
+        "description": "A user or group assigned as a manager or assignee on a vendor order template.",
+        "discriminator": {
+          "propertyName": "type"
+        },
+        "oneOf": [
+          {
+            "title": "User assignment",
+            "type": "object",
+            "description": "The user it is assigned to",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["user"]
+              },
+              "user": {
+                "type": "object",
+                "description": "The user",
+                "$ref":"#/components/schemas/user"
+              }
+            },
+            "required": ["type", "user"]
+          },
+          {
+            "title": "Group assignment",
+            "type": "object",
+            "description": "The group it is assigned to",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["group"]
+              },
+              "group": {
+                "type": "object",
+                "description": "The group",
+                "$ref":"#/components/schemas/group"
+              }
+            },
+            "required": ["type", "group"]
+          }
+        ]
+      },
       "vot-configuration": {
         "title": "Vendor Order Template Configuration",
         "type": "object",
@@ -33482,6 +33525,34 @@
             "minItems": 1,
             "items": {
               "$ref": "#/components/schemas/vot-person-request"
+            }
+          }
+        },
+        "required": ["languagePair", "managers", "assignees"]
+      },
+      "vot-configuration-response": {
+        "title": "Vendor Order Template Configuration",
+        "type": "object",
+        "description": "Assignee and manager assignment for a specific language pair. Every language pair listed in `languagePairs` must have exactly one corresponding entry in `assignments`.",
+        "properties": {
+          "languagePair": {
+            "$ref": "#/components/schemas/language-pair",
+            "description": "The language pair this assignment applies to."
+          },
+          "managers": {
+            "type": "array",
+            "description": "The vendor project managers responsible for the Vendor Quote Review task for this language pair. All entries must be members of the vendor's Vendor Project Manager group.",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/vot-person-response"
+            }
+          },
+          "assignees": {
+            "type": "array",
+            "description": "The vendor users who will perform the actual service tasks (e.g. Translation, Linguistic Review, DTP) for this language pair. All entries must be members of the vendor's Vendor Project Manager group.",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/vot-person-response"
             }
           }
         },
