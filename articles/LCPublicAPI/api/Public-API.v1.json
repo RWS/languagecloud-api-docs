@@ -24572,6 +24572,28 @@
           }
         }
       },
+      "project-batch-tasks-settings": {
+        "title": "Project Batch Tasks Settings",
+        "type": "object",
+        "description": "Project Batch Tasks Settings",
+        "properties": {
+          "preProcessing": {
+            "$ref": "#/components/schemas/project-batch-pre-processing-settings",
+            "description": "Pre-Processing Settings"
+          }
+        }
+      },
+      "project-batch-pre-processing-settings": {
+        "title": "Project Batch Pre-Processing Settings",
+        "type": "object",
+        "properties": {
+          "reportCrossFileRepetition": {
+            "type": "boolean",
+            "default": true,
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div>"
+          }
+        }
+      },
       "project-settings-response": {
         "title": "Project Settings",
         "type": "object",
@@ -24583,6 +24605,9 @@
           "translationMemorySettings": {
             "$ref": "#/components/schemas/project-translation-memory-settings-response",
             "description": "(Not available for List Projects endpoint)"
+          },
+          "batchTasks": {
+            "$ref": "#/components/schemas/project-batch-tasks-settings"
           }
         }
       },
