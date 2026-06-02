@@ -52,9 +52,9 @@ if (-not $OutputFile) {
 # ── Resolve key paths ──────────────────────────────────────────────────────────
 $repoRoot         = $PWD.Path
 $sourceDocsDir    = Join-Path $repoRoot "articles\LCPublicAPI\docs"
-$guidesDir        = Join-Path $repoRoot "aidocs\guides"
+$guidesDir        = Join-Path $repoRoot "articles\LCPublicAPI\aidocs\guides"
 $relSourceDocsDir = 'articles/LCPublicAPI/docs'
-$relGuidesDir     = 'aidocs/guides'
+$relGuidesDir     = 'articles/LCPublicAPI/aidocs/guides'
 
 if (-not (Test-Path $sourceDocsDir)) {
     Write-Error "Source docs directory not found: $sourceDocsDir"
@@ -187,7 +187,7 @@ $suggestedTopics = @"
 $prompt = @"
 ---
 mode: agent
-description: "Generate or update Trados Language Cloud API guides in aidocs/guides/"
+description: "Generate or update Trados Language Cloud API guides in articles/LCPublicAPI/aidocs/guides/"
 ---
 
 **Execute this task now. Do not ask for clarification — follow the instructions below exactly.**
@@ -251,6 +251,8 @@ Write-Host "  2. Open Copilot Chat in agent mode"
 Write-Host "  3. Type:  #_update-prompt.md"
 Write-Host "     (or drag the file into the chat input)"
 Write-Host "  4. Send — Copilot will read source docs and write/update guides"
-Write-Host "  5. Review the changes in .\aidocs\guides\"
-Write-Host "  6. Commit when satisfied"
+Write-Host "  5. Review the changes in .\articles\LCPublicAPI\aidocs\guides\"
+Write-Host "  6. Refresh the master index:"
+Write-Host "       .\pipeline\Update-AiDocsIndex.ps1" -ForegroundColor White
+Write-Host "  7. Commit when satisfied"
 Write-Host ""

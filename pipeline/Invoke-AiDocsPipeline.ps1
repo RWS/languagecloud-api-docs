@@ -21,7 +21,7 @@
       Changed file                                      → Stage(s) triggered
       ─────────────────────────────────────────────────────────────────
       articles/LCPublicAPI/api/Public-API.v1.json       → 1 (C2M4AI) + 2 (SDK)
-      aidocs/guides/*.md                                → 3 (guide index rebuild)
+      articles/LCPublicAPI/aidocs/guides/*.md                  → 3 (guide index rebuild)
       docs/guides/*.md                                  → 3 + [A] flag AI update
 
     If no ChangedFiles are provided (or -All is set), all stages run.
@@ -93,8 +93,8 @@ $ScriptDir = $PSScriptRoot
 
 # ── Resolve absolute paths ─────────────────────────────────────────────────────
 $ApiContract  = Join-Path $RootDir "articles\LCPublicAPI\api\Public-API.v1.json"
-$ReferenceDir = Join-Path $RootDir "aidocs\reference"
-$GuidesDir    = Join-Path $RootDir "aidocs\guides"
+$ReferenceDir = Join-Path $RootDir "articles\LCPublicAPI\aidocs\reference"
+$GuidesDir    = Join-Path $RootDir "articles\LCPublicAPI\aidocs\guides"
 $ToolsDir     = Join-Path $RootDir "tools"
 $C2M4AIExe    = Join-Path $ToolsDir "C2M4AI.exe"
 $DotNetXmlFile = Join-Path $ToolsDir "Rws.LanguageCloud.Sdk.xml"
@@ -138,7 +138,7 @@ $normalised  = $ChangedFiles | ForEach-Object { $_ -replace '\\', '/' }
 
 $apiChanged  = $All -or ($normalised | Where-Object { $_ -match '(?i)articles/LCPublicAPI/api/Public-API\.v1\.json$' })
 $guideSrcChg = @($normalised | Where-Object { $_ -match '(?i)articles/LCPublicAPI/docs/.*\.md$' })
-$guideDocChg = @($normalised | Where-Object { $_ -match '(?i)aidocs/guides/.*\.md$' })
+$guideDocChg = @($normalised | Where-Object { $_ -match '(?i)articles/LCPublicAPI/aidocs/guides/.*\.md$' })
 
 # ── Banner ─────────────────────────────────────────────────────────────────────
 Write-Host ""
@@ -283,6 +283,17 @@ if ($guideSrcChg.Count -gt 0 -or ($All -and -not $DryRun)) {
     }
     Write-Host ""
     Write-Host "  Then open _update-prompt.md in VS Code and run it in Copilot agent mode." -ForegroundColor DarkGray
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  STAGE 5 — Master aidocs/index.md rebuild
+#  Runs whenever reference or guides content may have changed.
+# ─────────────────────────────────────────────────────────────────────────────
+if ($apiChanged -or $guideSrcChg -or $guideDocChg -or $All) {
+    $AiDocsDir = Join-Path $RootDir "articles\LCPublicAPI\aidocs"
+    Invoke-Stage "Stage 5 — Master AI docs index" `
+                 "$ScriptDir\Update-AiDocsIndex.ps1" `
+                 @{ AiDocsDir = $AiDocsDir }
 }
 
 Write-Host ""

@@ -21,7 +21,7 @@ All ai docs generation changes are committed to a dedicated branch.
 ### AI docs pipeline
 
 ```powershell
-# 1. Generates all reference files
+# 1. Regenerate reference docs and flag any guide changes
 .\pipeline\Invoke-AiDocsPipeline.ps1 -{params}
 
 # 2. Generate the AI prompt for guides
@@ -30,7 +30,12 @@ All ai docs generation changes are committed to a dedicated branch.
 # 3. In VS Code Copilot chat (agent mode), type:
 #    #_update-prompt.md  → send
 
-# 4. Review .\aidocs\guides\, then commit and push
+# 4. Review .\aidocs\guides\
+
+# 5. Refresh the master AI docs index
+.\pipeline\Update-AiDocsIndex.ps1
+
+# 6. Commit and push
 
 ```
 

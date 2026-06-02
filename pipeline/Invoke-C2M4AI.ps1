@@ -8,12 +8,16 @@
     Default: .\articles\LCPublicAPI\api\Public-API.v1.json
 
 .PARAMETER OutputDir
-    Path where reference .md files are written. Default: .\aidocs\reference
+    Path where reference .md files are written. Default: .\articles\LCPublicAPI\aidocs\reference
 
 .PARAMETER C2M4AIExe
     Path to C2M4AI.exe. Default: .\tools\C2M4AI.exe
     If the file does not exist at this path, run Get-C2M4AI.ps1 first
     (or use Invoke-AiDocsPipeline.ps1 which does this automatically).
+
+.PARAMETER NoSchema
+    Pass --no-schema to C2M4AI to suppress generation of Schemas.md.
+    Defaults to true — schemas are already inlined in each operation file.
 
 .PARAMETER Force
     Run C2M4AI even if the spec hash has not changed.
@@ -28,8 +32,9 @@
 #>
 param(
     [string] $ApiContract = ".\articles\LCPublicAPI\api\Public-API.v1.json",
-    [string] $OutputDir   = ".\aidocs\reference",
+    [string] $OutputDir   = ".\articles\LCPublicAPI\aidocs\reference",
     [string] $C2M4AIExe   = ".\tools\C2M4AI.exe",
+    [switch] $NoSchema    = $true,
     [switch] $Force
 )
 
@@ -84,11 +89,12 @@ if (-not (Test-Path $OutputDir)) {
 }
 
 # Run C2M4AI
+$noSchemaFlag = @(if ($NoSchema) { "--no-schema" })
 Write-Host ""
-Write-Host "Running: $C2M4AIExe $ApiContract -o $OutputDir"
+Write-Host "Running: $C2M4AIExe $ApiContract -o $OutputDir$($NoSchema ? ' --no-schema' : '')"
 Write-Host ""
 
-& $C2M4AIExe $ApiContract -o $OutputDir
+& $C2M4AIExe $ApiContract -o $OutputDir @noSchemaFlag
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "C2M4AI exited with code $LASTEXITCODE"

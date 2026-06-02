@@ -32,7 +32,8 @@
           "*.md"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "articles/LCPublicAPI/aidocs/**"
         ]
       }
     ],
@@ -43,6 +44,14 @@
           "**/*.json",
           "**/*.html",
           "**/*.js"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      },
+      {
+        "files": [
+          "articles/LCPublicAPI/aidocs/**"
         ],
         "exclude": [
           "_site/**"

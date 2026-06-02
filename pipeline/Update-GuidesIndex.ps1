@@ -10,14 +10,14 @@
     Idempotent: only writes the file when content has actually changed.
 
 .PARAMETER GuidesDir
-    Path to the aidocs/guides directory. Default: .\aidocs\guides
+    Path to the articles/LCPublicAPI/aidocs/guides directory. Default: .\articles\LCPublicAPI\aidocs\guides
 
 .EXAMPLE
     .\pipeline\Update-GuidesIndex.ps1
-    .\pipeline\Update-GuidesIndex.ps1 -GuidesDir .\aidocs\guides
+    .\pipeline\Update-GuidesIndex.ps1 -GuidesDir .\articles\LCPublicAPI\aidocs\guides
 #>
 param(
-    [string] $GuidesDir = ".\aidocs\guides"
+    [string] $GuidesDir = ".\articles\LCPublicAPI\aidocs\guides"
 )
 
 Set-StrictMode -Version Latest
