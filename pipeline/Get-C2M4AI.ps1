@@ -57,7 +57,12 @@ try {
             throw "No .exe found inside the downloaded archive: $DownloadUrl"
         }
 
-        Write-Host "  Extracting: $($exeEntry.FullName) → $OutputPath"
+        Write-Host "  Extracting: $($exeEntry.FullName) -> $OutputPath"
+        $outputDir = Split-Path $OutputPath -Parent
+        if (-not (Test-Path $outputDir)) {
+            New-Item -ItemType Directory -Path $outputDir | Out-Null
+            Write-Host "  Created directory: $outputDir"
+        }
         $entryStream = $exeEntry.Open()
         $fileStream  = [System.IO.File]::Create($OutputPath)
         try {
