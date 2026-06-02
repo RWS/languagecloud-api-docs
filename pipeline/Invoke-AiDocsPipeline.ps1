@@ -103,7 +103,7 @@ $JavaApiDir   = Join-Path $ToolsDir "java-api"
 # ── Helper: run or simulate a script ──────────────────────────────────────────
 function Invoke-Stage ([string]$label, [string]$script, [hashtable]$params) {
     Write-Host ""
-    Write-Host "─── $label ───" -ForegroundColor Yellow
+    Write-Host "--- $label ---" -ForegroundColor Yellow
 
     if ($DryRun) {
         Write-Host "[DRY RUN] Would call: $script" -ForegroundColor DarkGray
@@ -122,7 +122,7 @@ function Invoke-Stage ([string]$label, [string]$script, [hashtable]$params) {
 
 # ── Auto-detect changed files when none supplied and -All not set ──────────────
 if (-not $All -and $ChangedFiles.Count -eq 0) {
-    Write-Host "No -ChangedFiles supplied — detecting changes via git diff HEAD~1 HEAD ..." -ForegroundColor DarkGray
+    Write-Host "No -ChangedFiles supplied -- detecting changes via git diff HEAD~1 HEAD ..." -ForegroundColor DarkGray
     Push-Location $RootDir
     try   { $ChangedFiles = @(git diff --name-only HEAD~1 HEAD | Where-Object { $_ }) }
     finally { Pop-Location }
@@ -142,9 +142,9 @@ $guideDocChg = @($normalised | Where-Object { $_ -match '(?i)articles/LCPublicAP
 
 # ── Banner ─────────────────────────────────────────────────────────────────────
 Write-Host ""
-Write-Host "╔══════════════════════════════════════╗" -ForegroundColor Cyan
-Write-Host "║   AI Docs Pipeline — Deterministic   ║" -ForegroundColor Cyan
-Write-Host "╚══════════════════════════════════════╝" -ForegroundColor Cyan
+Write-Host "#======================================#" -ForegroundColor Cyan
+Write-Host "#   AI Docs Pipeline -- Deterministic   #" -ForegroundColor Cyan
+Write-Host "#======================================#" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Root          : $RootDir"
 Write-Host "Changed files : $($ChangedFiles.Count)  (use -All to ignore)"
@@ -170,7 +170,7 @@ if (-not $All -and -not $apiChanged -and
 #  subsequent runs complete in <1 s when the version hasn’t changed.
 # ─────────────────────────────────────────────────────────────────────────────
 Write-Host ""
-Write-Host "─── Stage 0 — Fetch tools and SDK packages ───" -ForegroundColor Yellow
+Write-Host "--- Stage 0 -- Fetch tools and SDK packages ---" -ForegroundColor Yellow
 
 if (-not $DryRun) {
     & "$ScriptDir\Get-C2M4AI.ps1"        -OutputPath  $C2M4AIExe
@@ -234,7 +234,7 @@ if (($guideSrcChg -or $guideDocChg -or $All) -and (Test-Path $GuidesDir)) {
                  @{ GuidesDir = $GuidesDir }
 } elseif ($guideSrcChg -or $guideDocChg -or $All) {
     Write-Host ""
-    Write-Host "─── Stage 3 — Guide index rebuild ───" -ForegroundColor Yellow
+    Write-Host "--- Stage 3 -- Guide index rebuild ---" -ForegroundColor Yellow
     Write-Host "  Skipped: guides directory does not exist yet ($GuidesDir)" -ForegroundColor DarkGray
 }
 
@@ -245,7 +245,7 @@ if (($guideSrcChg -or $guideDocChg -or $All) -and (Test-Path $GuidesDir)) {
 if ($apiChanged -and $OldApiSpec -and (Test-Path $OldApiSpec) -and -not $All) {
     if ($diff -and $diff.Removed -and $diff.Removed.Count -gt 0) {
         Write-Host ""
-        Write-Host "─── Stage 4 — Remove deleted operations ───" -ForegroundColor Yellow
+        Write-Host "--- Stage 4 -- Remove deleted operations ---" -ForegroundColor Yellow
         foreach ($opId in $diff.Removed) {
             $target = Join-Path $ReferenceDir "$opId.md"
             if (Test-Path $target) {
@@ -266,7 +266,7 @@ if ($apiChanged -and $OldApiSpec -and (Test-Path $OldApiSpec) -and -not $All) {
 # ─────────────────────────────────────────────────────────────────────────────
 if ($guideSrcChg.Count -gt 0 -or ($All -and -not $DryRun)) {
     Write-Host ""
-    Write-Host "─── Stage A — Guide content update [AI REQUIRED] ───" -ForegroundColor Magenta
+    Write-Host "--- Stage A -- Guide content update [AI REQUIRED] ---" -ForegroundColor Magenta
     Write-Host ""
     if ($guideSrcChg.Count -gt 0) {
         Write-Host "  Source docs changed:" -ForegroundColor Magenta
@@ -297,7 +297,7 @@ if ($apiChanged -or $guideSrcChg -or $guideDocChg -or $All) {
 }
 
 Write-Host ""
-Write-Host "═══════════════════════════════════════" -ForegroundColor Cyan
+Write-Host "======================================" -ForegroundColor Cyan
 Write-Host "  Pipeline complete." -ForegroundColor Cyan
-Write-Host "═══════════════════════════════════════" -ForegroundColor Cyan
+Write-Host "======================================" -ForegroundColor Cyan
 Write-Host ""

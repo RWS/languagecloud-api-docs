@@ -55,7 +55,7 @@ $markerPath = $OutputPath + ".version"
 if (-not $Force -and (Test-Path $OutputPath) -and (Test-Path $markerPath)) {
     $cached = (Get-Content $markerPath -Raw).Trim()
     if ($cached -eq $Version) {
-        Write-Host "NuGet XML already present at version $Version — skipping download." -ForegroundColor DarkGray
+        Write-Host "NuGet XML already present at version $Version -- skipping download." -ForegroundColor DarkGray
         Write-Output (Resolve-Path $OutputPath).Path
         exit 0
     }

@@ -64,7 +64,7 @@ $markerPath = Join-Path $OutputDir ".version"
 if (-not $Force -and (Test-Path $markerPath)) {
     $cached = (Get-Content $markerPath -Raw).Trim()
     if ($cached -eq $Version) {
-        Write-Host "Java SDK sources already present at version $Version — skipping download." -ForegroundColor DarkGray
+        Write-Host "Java SDK sources already present at version $Version -- skipping download." -ForegroundColor DarkGray
         Write-Output (Resolve-Path $OutputDir).Path
         exit 0
     }

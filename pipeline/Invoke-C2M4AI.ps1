@@ -75,11 +75,11 @@ if (-not $Force -and (Test-Path $hashFile)) {
         Write-Host "Use -Force to regenerate regardless."
         exit 0
     }
-    Write-Host "API spec changed — running C2M4AI."
+    Write-Host "API spec changed -- running C2M4AI."
 } elseif ($Force) {
-    Write-Host "Force mode — running C2M4AI."
+    Write-Host "Force mode -- running C2M4AI."
 } else {
-    Write-Host "No stored hash — running C2M4AI for the first time."
+    Write-Host "No stored hash -- running C2M4AI for the first time."
 }
 
 # Ensure output directory exists

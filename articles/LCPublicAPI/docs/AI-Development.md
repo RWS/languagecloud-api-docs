@@ -10,6 +10,6 @@ AI Docs are a structured documentation set derived from the live OpenAPI specifi
 
 If you are wiring up an AI agent or a tool that needs to discover and call Trados Cloud Platform API endpoints, point it at the master index:
 
-**<a href="../aidocs/index.md" target="_blank">AI Docs — Master Index</a>**
+**<a href="../aidocs/index.md" target="_blank">AI Docs - Master Index</a>**
 
 The index lists every available operation and links directly to its detail page. From there, your agent can navigate to any endpoint it needs.

@@ -78,7 +78,7 @@ $normChanged = @($ChangedSources |
 
 # Auto-detect changed sources from git when no -ChangedSources and no -All
 if (-not $isInitial -and $normChanged.Count -eq 0 -and -not $All) {
-    Write-Host "No -ChangedSources supplied — auto-detecting via git diff HEAD~1 HEAD..." -ForegroundColor DarkGray
+    Write-Host "No -ChangedSources supplied -- auto-detecting via git diff HEAD~1 HEAD..." -ForegroundColor DarkGray
     $gitOut = @(git diff --name-only HEAD~1 HEAD 2>$null | Where-Object { $_ })
     $normChanged = @($gitOut |
         ForEach-Object { ($_ -replace '\\', '/').TrimStart('.').TrimStart('/') } |
@@ -250,7 +250,7 @@ Write-Host "  1. Open VS Code"
 Write-Host "  2. Open Copilot Chat in agent mode"
 Write-Host "  3. Type:  #_update-prompt.md"
 Write-Host "     (or drag the file into the chat input)"
-Write-Host "  4. Send — Copilot will read source docs and write/update guides"
+Write-Host "  4. Send -- Copilot will read source docs and write/update guides"
 Write-Host "  5. Review the changes in .\articles\LCPublicAPI\aidocs\guides\"
 Write-Host "  6. Refresh the master index:"
 Write-Host "       .\pipeline\Update-AiDocsIndex.ps1" -ForegroundColor White
