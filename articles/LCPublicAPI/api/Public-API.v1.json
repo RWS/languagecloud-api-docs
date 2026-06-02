@@ -21102,6 +21102,21 @@
               }
             }
           },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
           "401": {
             "description": "The user could not be identified.",
             "content": {
