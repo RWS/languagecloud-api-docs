@@ -110,10 +110,6 @@
       "description": "Schedule Template"
     },
     {
-      "name": "Settings",
-      "description": "Settings"
-    },
-    {
       "name": "Source File",
       "description": "Source File"
     },
@@ -4988,70 +4984,6 @@
         }
       }
     }
-    },
-    "/settings/getFilters": {
-      "get": {
-        "summary": "Get Filters",
-        "tags": [
-          "Settings"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Authorization"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-Tenant"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/translation-memories-filters"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          },
-          "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error-response"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          },
-          "401": {
-            "description": "The user could not be identified.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error-response"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          }
-        }
-      }
     },
     "/pricing-models": {
       "get": {
@@ -19161,6 +19093,70 @@
         ]
       }
     },
+    "/translation-memory/filters": {
+      "get": {
+        "summary": "List Filters",
+        "tags": [
+          "Translation Memory Export"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/translation-memories-filters"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      }
+    },
     "/translations/lookup": {
       "post": {
         "summary": "Lookup",
@@ -23612,16 +23608,24 @@
         }
       },
       "translation-memories-filters": {
-        "title": "Translation Memories Filters",
+        "title": "List Translation Memories Filters",
         "type": "object",
         "properties": {
-          "tmFilters": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/translation-memories-filter"
             }
           }
-        }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ],
+        "description": "A response for the List Translation Memories endpoint."
       },
       "translation-memories-filter": {
         "title": "Translation Memories Filter",
