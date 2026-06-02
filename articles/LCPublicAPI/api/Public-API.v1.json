@@ -19093,70 +19093,6 @@
         ]
       }
     },
-    "/translation-memory/filters": {
-      "get": {
-        "summary": "List Filters",
-        "tags": [
-          "Translation Memory Export"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Authorization"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-Tenant"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/translation-memories-filters"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          },
-          "400": {
-            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error-response"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          },
-          "401": {
-            "description": "The user could not be identified.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error-response"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
-          }
-        }
-      }
-    },
     "/translations/lookup": {
       "post": {
         "summary": "Lookup",
@@ -23607,26 +23543,6 @@
           }
         }
       },
-      "translation-memories-filters": {
-        "title": "List Translation Memories Filters",
-        "type": "object",
-        "properties": {
-          "itemCount": {
-            "type": "integer"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/translation-memories-filter"
-            }
-          }
-        },
-        "required": [
-          "itemCount",
-          "items"
-        ],
-        "description": "A response for the List Translation Memories endpoint."
-      },
       "translation-memories-filter": {
         "title": "Translation Memories Filter",
         "type": "object",
@@ -23637,7 +23553,8 @@
           },
           "filterExpression": {
             "type": "string",
-            "description": "Actual expression, you should be using at Translation Memories Import/Export"
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value."
           }
         }
       },
@@ -31456,6 +31373,12 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The `DateTime` when the translation memory reindexing was performed.  <br> UTC Timezone  <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
             "nullable": true
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memories-filter"
+            }
           }
         },
         "required": [
@@ -31781,10 +31704,9 @@
               ]
             }
           },
-          "filterExpression": {
+          "filterExpressionName": {
             "type": "string",
-            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value.",
-            "example": "!(\"usd\" <= \"2026-05-22T06:00:00.425Z\") & (\"usc\" = 1) & (\"src\" @ \"fish\")"
+            "description": "The name of the filter expression."
           }
         },
         "required": [
@@ -32054,8 +31976,7 @@
           },
           "filterExpression": {
             "type": "string",
-            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value.",
-            "example": "!(\"usd\" <= \"2026-05-22T06:00:00.425Z\") & (\"usc\" = 1) & (\"src\" @ \"fish\")"
+            "description": "The name of the filter expression."
           }
         },
         "required": [
