@@ -23549,7 +23549,7 @@
         "properties":  {
           "name": {
             "type": "string",
-            "description":  "Name of the filter"
+            "description":  "The name of the filter, this should be used in the import/export TM request"
           },
           "filterExpression": {
             "type": "string",
@@ -31704,7 +31704,7 @@
               ]
             }
           },
-          "filterExpressionName": {
+          "filterName": {
             "type": "string",
             "description": "The name of the filter expression."
           }
@@ -31974,7 +31974,7 @@
           "languageDirection": {
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
           },
-          "filterExpression": {
+          "filterName": {
             "type": "string",
             "description": "The name of the filter expression."
           }
