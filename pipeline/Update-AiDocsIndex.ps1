@@ -38,32 +38,12 @@ Write-Host "AI docs dir : $AiDocsDir"
 Write-Host ""
 
 $referenceDir  = Join-Path $AiDocsDir "reference"
-$referenceIdx  = Join-Path $referenceDir "Index.md"
 $guidesDir     = Join-Path $AiDocsDir "guides"
-$guidesIdx     = Join-Path $guidesDir "index.md"
 $outputPath    = Join-Path $AiDocsDir "index.md"
 
 if (-not (Test-Path $referenceDir)) {
     Write-Warning "Reference directory not found: $referenceDir — skipping index generation."
     exit 0
-}
-
-# ── Count operations (all .md except Index.md, Schemas.md, components.md) ────
-$opFiles = @(Get-ChildItem $referenceDir -Filter "*.md" |
-           Where-Object { $_.Name -notin @("Index.md", "components.md") })
-$opCount = $opFiles.Count
-
-# ── Extract categories from H2 headings in reference/Index.md ────────────────
-$categories = @()
-if (Test-Path $referenceIdx) {
-    $categories = [System.IO.File]::ReadAllLines($referenceIdx) |
-                  Where-Object { $_ -match '^##\s+(.+)$' } |
-                  ForEach-Object { $matches[1].Trim() }
-}
-$categoryLine = if ($categories.Count -gt 0) {
-    "$opCount operations · " + ($categories -join " · ")
-} else {
-    "$opCount operations"
 }
 
 # ── Guide entries (each file's H1 title + first paragraph) ───────────────────
@@ -104,7 +84,7 @@ $lines = [System.Collections.Generic.List[string]]::new()
 $lines.Add("# Language Cloud Public API — AI Docs")
 $lines.Add("")
 $lines.Add("## API Reference → [reference/Index.md](./reference/Index.md)")
-$lines.Add($categoryLine)
+
 
 if ($guideFiles.Count -gt 0) {
     $lines.Add("")
