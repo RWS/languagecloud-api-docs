@@ -134,8 +134,7 @@ This is the **first time** guides are being generated. No guide files exist yet.
 1. Read all source files listed above.
 2. Design a guide structure: determine which cross-cutting topics deserve their own file.
 3. Create one `.md` file per topic in the output directory.
-4. Create `index.md` in the output directory listing all guides.
-5. The suggested initial topics are listed at the bottom of this prompt as a reference — you may deviate if you see a better structure based on the source material.
+4. The suggested initial topics are listed at the bottom of this prompt as a reference — you may deviate if you see a better structure based on the source material.
 "@
     }
     "Full refresh" {
@@ -146,7 +145,6 @@ This is a **full refresh** — regenerate all guides from scratch.
 2. For each existing guide, rewrite it with up-to-date content.
 3. If you find topics in the source material that have no corresponding guide, create new guide files.
 4. Remove any guide that no longer has relevant source material.
-5. Regenerate `index.md` to reflect the final set of guides.
 "@
     }
     "Incremental update" {
@@ -157,20 +155,19 @@ This is an **incremental update** — only the listed source files changed.
 2. Determine which existing guide(s) are affected by the changes.
 3. Update only the affected guides. Do not touch unaffected guides.
 4. If a change introduces a concept that has no home in any existing guide, create a new guide file.
-5. If a new guide was created, add it to `index.md`.
 "@
     }
 }
 
 # ── Build suggested initial topics (reference) ─────────────────────────────────
 $suggestedTopics = @"
-> **Suggested initial guide structure** (agent may deviate based on source material):
+> **Suggested examples of initial guide structure** (agent may deviate based on source material):
 >
 > | Output file | Primary source file(s) |
 > |---|---|
 > | ``auth.md`` | ``Authentication.md``, ``Service-credentials.md``, ``Service-users-and-custom-applications.md``, ``Headers-considerations.md``, ``Multi-region.md`` |
 > | ``pagination.md`` | ``Use-paging-and-sorting-for-lists.md`` |
-> | ``sparse-fieldsets.md`` | ``Use-fields-in-your-requests.md`` |
+> | ``fields.md`` | ``Use-fields-in-your-requests.md`` |
 > | ``errors.md`` | ``How-to-report-an-issue.md`` |
 > | ``rate-limits.md`` | ``API-rate-limits.md`` |
 > | ``async-polling.md`` | ``Track-projects.md``, ``Interact-with-tasks.md``, ``File-formats.md`` |
@@ -179,7 +176,6 @@ $suggestedTopics = @"
 > | ``locations-folders.md`` | ``How-to-use-location-and-folders.md`` |
 > | ``put-semantics.md`` | ``Updating-data-with-PUT.md`` |
 > | ``custom-fields.md`` | ``Custom-Fields.md`` |
-> | ``changelog.md`` | ``Whats-New.md``, ``Whats-deprecated.md`` |
 > | ``api-clients.md`` | ``api-clients/java/``, ``api-clients/net/`` |
 "@
 
@@ -190,6 +186,7 @@ mode: agent
 description: "Generate or update Trados Language Cloud API guides in articles/LCPublicAPI/aidocs/guides/"
 ---
 
+**Your task is to summarize and reorganize the source user documentation into a set of concise, AI-consumable guides focused on cross-cutting concerns and concepts.**
 **Execute this task now. Do not ask for clarification — follow the instructions below exactly.**
 
 # Guide generation — $mode
@@ -224,18 +221,8 @@ $relGuidesDir
 - All links between files must be **relative** and correct for static serving.
 - Do **not** add YAML front matter to guide files.
 - Do **not** add "last updated" timestamps.
-
-## index.md format
-
-`index.md` must use a flat Markdown table — no prose, no extra headers:
-
-``````markdown
-# Trados Language Cloud API — Guides
-
-| Guide | Description |
-|---|---|
-| [Guide Title](./guide-file.md) | One-sentence description. |
-``````
+- Do **not** add any content that cannot be directly sourced from the provided docs.
+- Do **not** add any changelog information like What's New or What's Deprecated.
 
 $suggestedTopics
 "@
@@ -252,7 +239,9 @@ Write-Host "  3. Type:  #_update-prompt.md"
 Write-Host "     (or drag the file into the chat input)"
 Write-Host "  4. Send -- Copilot will read source docs and write/update guides"
 Write-Host "  5. Review the changes in .\articles\LCPublicAPI\aidocs\guides\"
-Write-Host "  6. Refresh the master index:"
+Write-Host "  6. generate the guides index:"
+Write-Host "       .\pipeline\Update-GuidesIndex.ps1" -ForegroundColor White
+Write-Host "  7. Refresh the master index:"
 Write-Host "       .\pipeline\Update-AiDocsIndex.ps1" -ForegroundColor White
-Write-Host "  7. Commit when satisfied"
+Write-Host "  8. Commit when satisfied"
 Write-Host ""

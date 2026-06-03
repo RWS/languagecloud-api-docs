@@ -114,16 +114,12 @@ jobs:
 
           .\pipeline\Invoke-AiDocsPipeline.ps1 @params
 
-      # ── 8. Push to versioned branch ───────────────────────────────────────────
-      - name: Push to versioned branch
+      # ── 8. Commit changes to current branch ──────────────────────────────────
+      - name: Commit changes to current branch
         shell: pwsh
         run: |
-          $branch = "aidocs/${{ steps.version.outputs.version }}"
-
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
-
-          git checkout -b $branch
 
           # Stage only the aidocs/ output directory
           git add aidocs/
@@ -131,8 +127,8 @@ jobs:
 
           if ($staged) {
             git commit -m "docs: generate aidocs ${{ steps.version.outputs.version }} [skip ci]"
-            git push origin $branch --force
-            Write-Host "Branch pushed: $branch" -ForegroundColor Green
+            git push origin HEAD
+            Write-Host "Changes committed and pushed to current branch." -ForegroundColor Green
           } else {
-            Write-Host "No changes in aidocs/ — branch not created." -ForegroundColor DarkGray
+            Write-Host "No changes in aidocs/ — nothing to commit." -ForegroundColor DarkGray
           }

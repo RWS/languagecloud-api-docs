@@ -46,56 +46,13 @@ if (-not (Test-Path $referenceDir)) {
     exit 0
 }
 
-# ── Guide entries (each file's H1 title + first paragraph) ───────────────────
-$guideFiles = @()
-if (Test-Path $guidesDir) {
-    $guideFiles = @(Get-ChildItem $guidesDir -Filter "*.md" |
-                    Where-Object { $_.Name -ne "index.md" -and $_.Name -notlike "_*" } |
-                    Sort-Object Name)
-}
-
-function Get-GuideSummary ([string]$filePath) {
-    $lines  = [System.IO.File]::ReadAllLines($filePath)
-    $title  = ""
-    $desc   = ""
-    $pastH1 = $false
-    foreach ($line in $lines) {
-        $t = $line.Trim()
-        if (-not $title -and $t -match '^#\s+(.+)$') {
-            $title  = $matches[1].Trim()
-            $pastH1 = $true
-            continue
-        }
-        if ($pastH1 -and -not $desc -and $t -and
-            $t -notmatch '^#+\s' -and $t -notmatch '^\|' -and
-            $t -notmatch '^```'  -and $t -notmatch '^---') {
-            $d = $t -replace '\[([^\]]+)\]\([^)]+\)', '$1' -replace '\*\*?([^*]+)\*\*?', '$1'
-            if ($d.Length -gt 100) { $d = $d.Substring(0, 97) + "..." }
-            $desc = $d
-        }
-        if ($title -and $desc) { break }
-    }
-    if (-not $title) { $title = [System.IO.Path]::GetFileNameWithoutExtension($filePath) }
-    return [PSCustomObject]@{ Title = $title; Description = $desc }
-}
-
 # ── Build content ─────────────────────────────────────────────────────────────
 $lines = [System.Collections.Generic.List[string]]::new()
 $lines.Add("# Language Cloud Public API — AI Docs")
 $lines.Add("")
 $lines.Add("## API Reference → [reference/Index.md](./reference/Index.md)")
-
-
-if ($guideFiles.Count -gt 0) {
-    $lines.Add("")
-    $lines.Add("## Guides → [guides/index.md](./guides/index.md)")
-    foreach ($gf in $guideFiles) {
-        $info = Get-GuideSummary $gf.FullName
-        $entry = "- [$($gf.Name)](./guides/$($gf.Name)) — $($info.Title)"
-        if ($info.Description) { $entry += ": $($info.Description)" }
-        $lines.Add($entry)
-    }
-}
+$lines.Add("")
+$lines.Add("## Guides → [guides/index.md](./guides/index.md)")
 
 $indexContent = ($lines -join "`n") + "`n"
 
