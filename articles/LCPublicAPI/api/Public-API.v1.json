@@ -23554,7 +23554,7 @@
           "filterExpression": {
             "type": "string",
             "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
-            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value."
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration) for more information."
           }
         }
       },
@@ -31706,7 +31706,7 @@
           },
           "filterName": {
             "type": "string",
-            "description": "The name of the filter expression."
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory) and [LIST](Public-API.v1-fv.html#/operations/ListTranslationMemories) TM"
           }
         },
         "required": [
@@ -31976,7 +31976,7 @@
           },
           "filterName": {
             "type": "string",
-            "description": "The name of the filter expression."
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory) and [LIST](Public-API.v1-fv.html#/operations/ListTranslationMemories) TM"
           }
         },
         "required": [
