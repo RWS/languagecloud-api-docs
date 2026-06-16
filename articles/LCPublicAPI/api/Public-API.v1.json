@@ -20622,7 +20622,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -20812,7 +20812,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -20921,7 +20921,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -21017,7 +21017,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -33293,7 +33293,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor order template.\\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
+            "description": "The name of the vendor order template.",
             "minLength": 1,
             "maxLength": 50
           },
@@ -33316,7 +33316,7 @@
           },
           "pricingModelId": {
             "type": "string",
-            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
+            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder"
           },
           "quoteConfiguration": {
             "$ref": "#/components/schemas/vendor-order-template-quote-configuration",
@@ -33352,7 +33352,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the vendor order template. \\\nUnsupported characters in the name: `\\` `/` `:` ` *` `?` `\"` `<` `>` `|`",
+            "description": "The name of the vendor order template.",
             "minLength": 1,
             "maxLength": 50
           },
@@ -33375,7 +33375,7 @@
           },
           "pricingModelId": {
             "type": "string",
-            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder, or `locationStrategy=bloodline` to also include pricing models inherited from ancestor folders."
+            "description": "The identifier of the pricing model to associate with this vendor order template. Use the [List Pricing Models](#/operations/ListPricingModels) endpoint with `location` set to the vendor's folder identifier. Set `locationStrategy=location` to see only pricing models saved directly in the vendor folder."
           },
           "quoteConfiguration": {
             "$ref": "#/components/schemas/vendor-order-template-quote-configuration",
@@ -33403,7 +33403,7 @@
             }
           }
         },
-        "required": ["name", "languagePairs", "assignments", "pricingModelId", "quoteConfiguration"]
+        "required": ["name", "languagePairs", "assignments", "pricingModelId", "quoteConfiguration", "serviceTypes"]
       },
       "vot-quote-behaviour": {
         "title": "Vendor Order Template Quote Behaviour",
