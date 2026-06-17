@@ -1291,7 +1291,8 @@
           "description",
           "version",
           "releaseNotes",
-          "descriptorVersion"
+          "descriptorVersion",
+          "vendor"
         ],
         "properties": {
           "name": {
@@ -1357,7 +1358,7 @@
           "baseUrl": {
             "type": "string",
             "description": "The prefix for all calls to the app service.",
-            "example": "somehostname.net/service/v1"
+            "examples": ["somehostname.net/service/v1", "https://somehostname.net" ]
           },
           "regionalBaseUrls": {
             "$ref": "#/components/schemas/RegionalBaseUrls"
@@ -2913,7 +2914,8 @@
         ],
         "properties": {
           "url": {
-            "type": "string"
+            "type": "string",
+            "examples": [ "/webhook-receiving-endpoint" ]
           },
           "eventTypes": {
             "type": "array",
