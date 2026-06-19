@@ -31976,7 +31976,7 @@
           },
           "filterName": {
             "type": "string",
-            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory"
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
