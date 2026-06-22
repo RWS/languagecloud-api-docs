@@ -2273,118 +2273,6 @@
         ]
       }
     },
-    "/files/download/{id}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "fileId",
-          "in": "path",
-          "required": true,
-          "description": "The file id"
-        }
-      ],
-      "get": {
-        "tags": [
-          "File"
-        ],
-        "summary": "Download File",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Authorization"
-          },
-          {
-            "$ref": "#/components/parameters/X-LC-Tenant"
-          }
-        ],
-        "responses": {
-            "200": {
-              "description": "",
-              "content": {
-                "multipart/form-data": {
-                  "schema": {
-                    "type": "object",
-                    "format": "byte",
-                    "properties": {
-                      "file": {
-                        "type": "string",
-                        "format": "binary",
-                        "description": "The .zip file to be downloaded (binary string).  "
-                      }
-                    }
-                  }
-                }
-              },
-              "headers": {
-                "X-LC-TraceId": {
-                  "$ref": "#/components/headers/X-LC-TraceId"
-                }
-              }
-            },
-            "400": {
-              "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/error-response"
-                  }
-                }
-              },
-              "headers": {
-                "X-LC-TraceId": {
-                  "$ref": "#/components/headers/X-LC-TraceId"
-                }
-              }
-            },
-            "401": {
-              "description": "The user could not be identified.",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/error-response"
-                  }
-                }
-              },
-              "headers": {
-                "X-LC-TraceId": {
-                  "$ref": "#/components/headers/X-LC-TraceId"
-                }
-              }
-            },
-            "403": {
-              "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to download the file.",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/error-response"
-                  }
-                }
-              },
-              "headers": {
-                "X-LC-TraceId": {
-                  "$ref": "#/components/headers/X-LC-TraceId"
-                }
-              }
-            },
-            "404": {
-              "description": "Error codes:\n* \"notFound\": the File could not be found by identifier.",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/error-response"
-                  }
-                }
-              },
-              "headers": {
-                "X-LC-TraceId": {
-                  "$ref": "#/components/headers/X-LC-TraceId"
-                }
-              }
-            }
-          }
-          }
-    },
     "/folders/{folderId}": {
       "get": {
         "tags": [
@@ -4575,7 +4463,7 @@
     },
     "/packages/export": {
       "post": {
-        "summary": "Export Tasks",
+        "summary": "Export Package",
         "tags": [
           "Packages"
         ],
@@ -4684,7 +4572,7 @@
     },
     "/packages/export/{taskId}": {
       "get": {
-        "summary": "Get Export Status",
+        "summary": "Poll Export Package",
         "tags": [
           "Packages"
         ],
@@ -4781,7 +4669,7 @@
     },
     "/packages/import": {
       "post": {
-        "summary": "Import Tasks",
+        "summary": "Import Package",
         "tags": [
           "Packages"
         ],
@@ -4890,7 +4778,7 @@
     },
     "/packages/import/{taskId}": {
       "get": {
-        "summary": "Get Import Status",
+        "summary": "Poll Import Package",
         "tags": [
           "Packages"
         ],
@@ -24387,10 +24275,6 @@
               "type": "string"
             }
           },
-          "packageFileId": {
-            "type": "string",
-            "description": "The id for the package, use this to download the file"
-          },
           "expiresAtUtc": {
             "type": "string",
             "description": "Timestamp of the expiration date, UTC timezone"
@@ -24398,16 +24282,16 @@
         }
       },
       "package-import-request": {
-        "title": "Package Export Request",
+        "title": "Package Import Request",
         "type": "object",
         "required": [
-          "projectId",
-          "taskIds"
+          "file"
         ],
         "properties": {
-          "packageFileId": {
+          "file": {
             "type": "string",
-            "description": "The Id of the file uploaded for import"
+            "format": "binary",
+            "description": "The file to be uploaded (binary string).  "
           }
         }
       },
@@ -24417,11 +24301,11 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "The id of the export task"
+            "description": "The id of the import task"
           },
           "status": {
             "type": "string",
-            "description": "The status of the export task",
+            "description": "The status of the import task",
             "export": [
               "Queued",
               "InProgress",
@@ -24429,9 +24313,11 @@
               "Failed"
             ]
           },
-          "packageFileId": {
-            "string": "string",
-            "description": "The id for the package"
+          "createdAt": {
+            "type": "string",
+            "example": "2022-01-12T12:00:00Z",
+            "description": "The task''s creation date and time in UTC time zone.",
+            "format": "date-time"
           }
         }
       },
