@@ -32748,7 +32748,7 @@
       "email": {
         "name": "email",
         "in": "query",
-        "description": "The exact match of the email, used to filter the response list",
+        "description": "The exact match of the email, used to filter the response list.",
         "schema": {
           "type": "string"
         }
