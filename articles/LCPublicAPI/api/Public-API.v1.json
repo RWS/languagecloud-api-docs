@@ -19094,6 +19094,9 @@
           },
           {
             "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/email"
           }
         ],
         "responses": {
@@ -32738,6 +32741,14 @@
         "name": "fields",
         "in": "query",
         "description": "A comma separated list of fields to include in the response.\n        Every value in the list should either consist of a top-level property name (excluding the items envelope for endpoints returning lists) or refer to a property of a top-level property of type object, in the following form: \"toplevelpropertyname.subpropertyname\".\n        When this query parameter is omitted, default resource representations are returned (excluding fields marked as optional). The same applies to nested objects when just specifying the top-level property name, without explicitly listing sub-property names. When specifying the fields query parameter, only the specified fields are returned.\n        The id property is always returned.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "email": {
+        "name": "email",
+        "in": "query",
+        "description": "The exact match of the email, used to filter the response list",
         "schema": {
           "type": "string"
         }
