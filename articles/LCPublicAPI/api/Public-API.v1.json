@@ -20812,7 +20812,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response. \n",
             "content": {
               "application/json": {
                 "schema": {
@@ -21017,7 +21017,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"empty\": Empty input in the body parameter mentioned in the \"name\" field on the error response.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response. \n",
             "content": {
               "application/json": {
                 "schema": {
