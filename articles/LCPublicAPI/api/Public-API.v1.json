@@ -20622,7 +20622,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.\n* “maxSize”: Character number or List size exceeds the maximum allowed value for the “name” field on the error response.\n* “minSize”: Character number or List size insufficient for the “name” field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -33301,11 +33301,6 @@
             "type": "string",
             "description": "A description of the vendor order template.",
             "maxLength": 1024
-          },
-          "allowQuoteEditing": {
-            "type": "boolean",
-            "default": false,
-            "description": "Whether the vendor is allowed to edit the vendor quote at any time. When `false` (default), vendor project managers can only edit the quote during the Vendor Quote Review task."
           },
           "serviceTypes": {
             "type": "array",
