@@ -1,5 +1,10 @@
 # What's New
 
+## June 2026
+
+- We extended the information available under [App Descriptor](./development/App-Descriptor.md) and [Webhooks](./development/Webhooks.md).
+- We fixed various bugs.
+
 ## January 2026
 
 - We've documented automatic tasks expiration time. See [Submit](../api/Extensibility-API.v1-fv.html#/operations/automatictasktypeexecutetask) and [Callback](../api/Extensibility-API.v1-fv.html#/operations/automatiktasktypecallback) endpoints.
