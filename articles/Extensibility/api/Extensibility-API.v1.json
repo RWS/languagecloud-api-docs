@@ -1422,7 +1422,7 @@
           },
           "minimumVersion": {
             "type": "string",
-            "description": "Minimum version of the app that is supported. Older versions might be forcebly disabled if not upgraded."
+            "description": "Minimum version of the app that is supported. Older versions might be forcibly disabled if not upgraded."
           },
           "vendor": {
             "type": "object",
