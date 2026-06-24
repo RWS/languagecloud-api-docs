@@ -120,7 +120,7 @@ Webhooks for apps are sent in a batched format.
 
 The webhook payload description can be found in our [Trados Cloud Platform API documentation](https://eu.cloud.trados.com/lc/api-docs/batched-webhooks).
 
-Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsability of the app developer to handle the events from the batch accordingly to their `accountId` from the event body.
+Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsibility of the app developer to handle the events from the batch accordingly to their `accountId` from the event body.
 
 > [!NOTE]
 > **Note:** For *Webhook Authenticity*, ignore the described behavior in the above link and only consider the following chapter about *Signature Validation*.
