@@ -10,9 +10,12 @@ The descriptor model defines attributes that provide basic information like `nam
 
 ## Version
 
-The `version` field is used by Trados to detect newer versions of the app's descriptor. You should increase the version every time you make a change in the descriptor, otherwise, your changes won't reach the registered instance from Trados.
+The `version` field is used by Trados to detect newer versions of the app's descriptor. 
 
-The version is periodically checked by Trados by performing GET descriptor requests. 
+> [!WARNING]
+> **You must increment the version every time you make changes to the descriptor.** If the version is not updated, Trados will not detect your changes—they will be silently ignored until the version number changes. This is a common gotcha that can cause confusion when changes don't take effect.
+
+Trados periodically checks the descriptor by performing GET descriptor requests. When it detects a new version number, it will fetch the updated descriptor. If the version hasn't changed, Trados will assume the descriptor is unchanged and will not pick up any modifications you've made. 
 
 ## Base URL
 
@@ -32,26 +35,30 @@ For example, if we have in the descriptor:
 Trados will make scheduled GET requests to `https://foo.com/health` to check the health.
 
 ### Changing Base URL
-For various reasons you might want to change the host of your App and that can be done from Trados management UI. 
+
+For various reasons you might want to change the host of your App and that can be done from Trados management UI.
 
 When updating the host, you also have to update `baseUrl` to match the new host.
 
-You must still support old host as all previous installs will be calling on the `baseUrl` at the installed version. In order to be able to decomission the old host, you must make sure all consumers updated their installs to latest version.
+You must still support old host as all previous installs will be calling on the `baseUrl` at the installed version. In order to be able to decommission the old host, you must make sure all consumers updated their installs to latest version.
 
 > [!WARNING]
-> Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new `baseUrl`. See [Request Authentication](Request-Authentication.md). 
+> Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new `baseUrl`. See [Request Authentication](Request-Authentication.md).
 
 ## Standard Endpoints
 
-An app must implement a set of standard endpoints that are defined in the descriptor schema under `standardEndpoints`. Not all endpoints are required, as you can see in the descriptor schema.
+The `standardEndpoints` section is optional in the descriptor contract. However, it becomes required when the app defines `extensions`, since Trados needs to know how to interact with the app through those endpoints. If your app only registers `webhooks` and does not provide any extensions, you may omit this section entirely.
 
-All endpoint paths need to start with the leading character `/` and are relative to `baseUrl`. 
+When present, not all endpoints within `standardEndpoints` are required — refer to the descriptor schema for which ones are mandatory.
 
-Standard endpoints are defined under the `Standard` tag. The actual path should be replaced with the one you defined in the descriptor. The expected Request and Responses are defined and should be used as reference.
+All endpoint paths need to start with the leading character `/` and are relative to `baseUrl`.
+
+In the contract, standard endpoints are defined under the `Standard` tag. The actual path should be replaced with the one you defined in the descriptor. The expected Request and Responses are defined and should be used as reference.
 
 ### Lifecycle Endpoint
 
 Additionally, in the `standardEnpoints` section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an `INSTALLED` event along with some data for that account. The app should react and save the received data.
+
 - `appLifecycle` - is used for all types of events: `REGISTERED`, `UNREGISTERED`, `INSTALLED`, and `UNINSTALLED`. See the contract [here](../../api/Extensibility-API.v1-fv.html#/operations/Lifecycle).
 
 > [!NOTE]
@@ -62,11 +69,13 @@ Additionally, in the `standardEnpoints` section we can find the lifecycle endpoi
 The list of provided extensions is described under `extensions`. An app can provide none, one, or more extensions.
 
 Any extension will have the generic set of properties:
+
 - `extensionPointId` that specifies what extension point it extends. Can be only a value specified in the descriptor contract (ex: `lc.mtprovider`).
 - `extensionPointVersion` defines the version of the extension point it extends. The allowed value is defined in the descriptor contract (ex: `1.0`).
 - `name` is defined by the developer, to provide a friendly name for the extension. This is useful when the app provides multiple extensions.
 - `description` will have a summary describing the extension.
 - `configuration` defines the extension and the structure depends on the type of the extension that is implemented.
+
 ```json
 {
   ...
