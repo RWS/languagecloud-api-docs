@@ -81,7 +81,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="webhooks">Webhooks</h1>
 
-<p>Apps can specify a list of webhooks that will be registered automatically when the app is installed on an account. That allows the app to  specify a list of webhooks and consume them, allowing for asynchronous scenarios where the app can wait for events instead of polling constantly to check for a particular event or state improving performance both for the app and for Trados.</p>
+<p>Apps can specify a list of webhooks that will be registered automatically when the app is installed on an account. That allows the app to specify a list of webhooks and consume them, allowing for asynchronous scenarios where the app can wait for events instead of polling constantly to check for a particular event or state improving performance both for the app and for Trados.</p>
 <h2 id="constraints">Constraints</h2>
 <p>Not all accounts have webhooks enabled. Installing of the app requiring webhooks will be disabled (grayed out in UI) on accounts that don't have webhooks enabled.</p>
 <div class="WARNING">
@@ -111,11 +111,74 @@
   ...
 }
 </code></pre>
-<p>That example will subscribe to <code>PROJECT.TASK.ACCEPTED</code> and <code>PROJECT.TASK.CREATED</code> events and will receive these events on the <code>&lt;basePath&gt;/webhooks-endpoint</code> URL.</p>
+<p>This example will subscribe to <code>PROJECT.TASK.ACCEPTED</code> and <code>PROJECT.TASK.CREATED</code> events and will receive these events on the <code>&lt;basePath&gt;/webhooks-endpoint</code> URL.</p>
+<p>Alternatively, you can split the events across multiple endpoints:</p>
+<pre><code class="lang-json">{
+  ...
+  &quot;webhooks&quot;: [
+    {
+      &quot;url&quot;: &quot;/project-webhooks-endpoint&quot;,
+      &quot;eventTypes&quot;: [ 
+        { 
+          &quot;eventType&quot;: &quot;PROJECT.CREATED&quot; 
+        }, 
+        { 
+          &quot;eventType&quot;: &quot;PROJECT.STARTED&quot; 
+        } 
+      ]
+    },
+    {
+      &quot;url&quot;: &quot;/task-webhooks-endpoint&quot;,
+      &quot;eventTypes&quot;: [
+        {
+          &quot;eventType&quot;: &quot;PROJECT.TASK.CREATED&quot;
+        }
+      ]
+    }
+  ]
+  ...
+}
+</code></pre>
+<p>In this example, <code>PROJECT.CREATED</code> and <code>PROJECT.STARTED</code> events are routed to <code>/project-webhooks-endpoint</code>, while <code>PROJECT.TASK.CREATED</code> events are sent to a separate <code>/task-webhooks-endpoint</code>.</p>
+<h2 id="webhook-only-app">Webhook-only app</h2>
+<p>If you only need to subscribe to webhooks and do not require other extensibility features, you can register a webhook-only app. This creates a minimal app that does not require any additional endpoints.</p>
+<p>The following example shows a minimal descriptor that only requires a descriptor endpoint and a webhook receiver endpoint:</p>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;my-extension&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;description&quot;: &quot;A sample extension&quot;,
+    &quot;releaseNotes&quot;: &quot;Initial release&quot;,
+    &quot;descriptorVersion&quot;: &quot;1.4&quot;,
+    &quot;scopes&quot;: [ &quot;TENANT_READ&quot;], 
+    &quot;webhooks&quot;: [
+        {
+            &quot;url&quot;: &quot;/webhook-endpoint&quot;,
+            &quot;eventTypes&quot;: [
+                {
+                    &quot;eventType&quot;: &quot;PROJECT.CREATED&quot;
+                },
+                {
+                    &quot;eventType&quot;: &quot;PROJECT.STARTED&quot;
+                },
+                {
+                    &quot;eventType&quot;: &quot;PROJECT.TASK.CREATED&quot;
+                }
+            ]
+        }
+    ],
+    &quot;baseUrl&quot;: &quot;https://your.site&quot;,
+    &quot;vendor&quot;: { 
+        &quot;name&quot;: &quot;Your Company&quot;,
+        &quot;url&quot;: &quot;https://your.site&quot;,
+        &quot;email&quot;: &quot;support@your.site&quot;
+    }
+}
+</code></pre>
+<p>When installed, this app will register the <code>/webhook-endpoint</code> URL to receive <code>PROJECT.CREATED</code>, <code>PROJECT.STARTED</code>, and <code>PROJECT.TASK.CREATED</code> events. No other endpoints are required.</p>
 <h2 id="webhook-events-and-payloads">Webhook events and payloads</h2>
 <p>Webhooks for apps are sent in a batched format.</p>
 <p>The webhook payload description can be found in our <a href="https://eu.cloud.trados.com/lc/api-docs/batched-webhooks">Trados Cloud Platform API documentation</a>.</p>
-<p>Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsability of the app developer to handle the events from the batch accordingly to their <code>accountId</code> from the event body.</p>
+<p>Webhooks are grouped in batches by callback URL, so it is likely that events from different tenants will be included in the same batch. It is the responsibility of the app developer to handle the events from the batch accordingly to their <code>accountId</code> from the event body.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p><strong>Note:</strong> For <em>Webhook Authenticity</em>, ignore the described behavior in the above link and only consider the following chapter about <em>Signature Validation</em>.</p>

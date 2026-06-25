@@ -86,8 +86,12 @@
 <h2 id="basic-information">Basic Information</h2>
 <p>The descriptor model defines attributes that provide basic information like <code>name</code>, <code>description</code>, <code>releaseNotes</code>. The <a href="../../api/Extensibility-API.v1-fv.html#/operations/descriptor">model</a> provides documentation for all the fields.</p>
 <h2 id="version">Version</h2>
-<p>The <code>version</code> field is used by Trados to detect newer versions of the app's descriptor. You should increase the version every time you make a change in the descriptor, otherwise, your changes won't reach the registered instance from Trados.</p>
-<p>The version is periodically checked by Trados by performing GET descriptor requests.</p>
+<p>The <code>version</code> field is used by Trados to detect newer versions of the app's descriptor.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>You must increment the version every time you make changes to the descriptor.</strong> If the version is not updated, Trados will not detect your changes—they will be silently ignored until the version number changes. This is a common gotcha that can cause confusion when changes don't take effect.</p>
+</div>
+<p>Trados periodically checks the descriptor by performing GET descriptor requests. When it detects a new version number, it will fetch the updated descriptor. If the version hasn't changed, Trados will assume the descriptor is unchanged and will not pick up any modifications you've made.</p>
 <h2 id="base-url">Base URL</h2>
 <p><code>baseUrl</code> defines the base for any endpoint defined in the descriptor. All calls from Trados will be made by concatenating <code>baseUrl</code> and the path defined for an endpoint in the descriptor.</p>
 <p>For example, if we have in the descriptor:</p>
@@ -102,15 +106,16 @@
 <h3 id="changing-base-url">Changing Base URL</h3>
 <p>For various reasons you might want to change the host of your App and that can be done from Trados management UI.</p>
 <p>When updating the host, you also have to update <code>baseUrl</code> to match the new host.</p>
-<p>You must still support old host as all previous installs will be calling on the <code>baseUrl</code> at the installed version. In order to be able to decomission the old host, you must make sure all consumers updated their installs to latest version.</p>
+<p>You must still support old host as all previous installs will be calling on the <code>baseUrl</code> at the installed version. In order to be able to decommission the old host, you must make sure all consumers updated their installs to latest version.</p>
 <div class="WARNING">
 <h5>Warning</h5>
 <p>Because request authentication is based on Audience matching 'baseUrl', you must ensure that your authentication code can accept both old and new <code>baseUrl</code>. See <a href="Request-Authentication.html">Request Authentication</a>.</p>
 </div>
 <h2 id="standard-endpoints">Standard Endpoints</h2>
-<p>An app must implement a set of standard endpoints that are defined in the descriptor schema under <code>standardEndpoints</code>. Not all endpoints are required, as you can see in the descriptor schema.</p>
+<p>The <code>standardEndpoints</code> section is optional in the descriptor contract. However, it becomes required when the app defines <code>extensions</code>, since Trados needs to know how to interact with the app through those endpoints. If your app only registers <code>webhooks</code> and does not provide any extensions, you may omit this section entirely.</p>
+<p>When present, not all endpoints within <code>standardEndpoints</code> are required — refer to the descriptor schema for which ones are mandatory.</p>
 <p>All endpoint paths need to start with the leading character <code>/</code> and are relative to <code>baseUrl</code>.</p>
-<p>Standard endpoints are defined under the <code>Standard</code> tag. The actual path should be replaced with the one you defined in the descriptor. The expected Request and Responses are defined and should be used as reference.</p>
+<p>In the contract, standard endpoints are defined under the <code>Standard</code> tag. The actual path should be replaced with the one you defined in the descriptor. The expected Request and Responses are defined and should be used as reference.</p>
 <h3 id="lifecycle-endpoint">Lifecycle Endpoint</h3>
 <p>Additionally, in the <code>standardEnpoints</code> section we can find the lifecycle endpoint. This endpoint needs to handle different events sent by Trados (similar to webhooks). For instance, when the app is being installed on a certain account, Trados will send an <code>INSTALLED</code> event along with some data for that account. The app should react and save the received data.</p>
 <ul>

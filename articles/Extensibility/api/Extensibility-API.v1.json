@@ -1291,7 +1291,8 @@
           "description",
           "version",
           "releaseNotes",
-          "descriptorVersion"
+          "descriptorVersion",
+          "vendor"
         ],
         "properties": {
           "name": {
@@ -1357,7 +1358,7 @@
           "baseUrl": {
             "type": "string",
             "description": "The prefix for all calls to the app service.",
-            "example": "somehostname.net/service/v1"
+            "examples": ["https://somehostname.net/service/v1", "https://somehostname.net" ]
           },
           "regionalBaseUrls": {
             "$ref": "#/components/schemas/RegionalBaseUrls"
@@ -1421,7 +1422,7 @@
           },
           "minimumVersion": {
             "type": "string",
-            "description": "Minimum version of the app that is supported. Older versions might be forcebly disabled if not upgraded."
+            "description": "Minimum version of the app that is supported. Older versions might be forcibly disabled if not upgraded."
           },
           "vendor": {
             "type": "object",
@@ -2913,7 +2914,8 @@
         ],
         "properties": {
           "url": {
-            "type": "string"
+            "type": "string",
+            "examples": [ "/webhook-receiving-endpoint" ]
           },
           "eventTypes": {
             "type": "array",
