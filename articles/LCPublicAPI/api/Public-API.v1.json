@@ -20150,26 +20150,17 @@
             }
           },
           "403": {
-            "description": "Forbidden. The authenticated user does not have permission to create vendors.",
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            },
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to create vendor order templates.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
-                },
-                "examples": {
-                  "forbidden": {
-                    "summary": "Insufficient permissions",
-                    "value": {
-                      "message": "You do not have permission to create vendors.",
-                      "errorCode": "FORBIDDEN"
-                    }
-                  }
                 }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
           },
