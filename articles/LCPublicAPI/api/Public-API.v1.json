@@ -20120,57 +20120,32 @@
             }
           },
           "400": {
-            "description": "Bad request. The request body is invalid or a required field is missing.",
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            },
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query parameter mentioned in the \"name\" field on the error response, or provisioned roles cannot be updated.\n* \"empty\": Empty input for the \"roleId\" path parameter variable.\n* \"minSize\": Minimum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.\n* \"missing\": Missing required field for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
-                },
-                "examples": {
-                  "missingRequiredField": {
-                    "summary": "Missing required field",
-                    "value": {
-                      "message": "The 'name' field is required.",
-                      "errorCode": "MISSING_REQUIRED_FIELD",
-                      "details": [
-                        {
-                          "name": "name",
-                          "code": "REQUIRED",
-                          "value": null
-                        }
-                      ]
-                    }
-                  }
                 }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
           },
           "401": {
-            "description": "Unauthorized. Authentication credentials are missing or invalid.",
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            },
+            "description": "The user could not be identified.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error-response"
-                },
-                "examples": {
-                  "unauthorized": {
-                    "summary": "Missing or invalid credentials",
-                    "value": {
-                      "message": "Authentication credentials are missing or invalid.",
-                      "errorCode": "UNAUTHORIZED"
-                    }
-                  }
                 }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
           },
@@ -20411,7 +20386,7 @@
             }
           },
           "400": {
-            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.",
+            "description": "Error codes:\n* \"invalid\": Invalid input in the field mentioned in the \"name\" field on the error response.\n* \"maxSize\": Maximum size exceeded for the value mentioned in the \"name\" field on the error response.",
             "content": {
               "application/json": {
                 "schema": {
@@ -20471,7 +20446,7 @@
             }
           },
           "409": {
-            "description": "Error codes:\n\n“duplicate”: duplicate value for the field mentioned in the error details.",
+            "description": "Error codes:\n* \"duplicate\": duplicate value for the field mentioned in the error details.",
             "content": {
               "application/json": {
                 "schema": {
