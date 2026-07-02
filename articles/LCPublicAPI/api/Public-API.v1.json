@@ -4493,7 +4493,7 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "taskId": {
+                    "exportId": {
                       "type": "string",
                       "description": "The id of the export task created, used to check on its status. "
                     }
@@ -4582,7 +4582,7 @@
             "schema": {
               "type": "string"
             },
-            "name": "taskId",
+            "name": "exportId",
             "in": "path",
             "required": true,
             "description": "The export task identifier."
@@ -4679,7 +4679,7 @@
             "schema": {
               "type": "string"
             },
-            "name": "taskId",
+            "name": "exportId",
             "in": "path",
             "required": true,
             "description": "The export task identifier."
@@ -4789,7 +4789,7 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "taskId": {
+                    "importId": {
                       "type": "string",
                       "description": "The id of the export task created, used to check on its status. "
                     }
@@ -4878,7 +4878,7 @@
             "schema": {
               "type": "string"
             },
-            "name": "taskId",
+            "name": "importId",
             "in": "path",
             "required": true,
             "description": "The export task identifier."
@@ -24310,29 +24310,31 @@
               "type": "string"
             }
           },
-          "includeTB": {
-            "type": "boolean",
-            "description": "Set true to include Termbases"
-          },
           "onlinePackage": {
             "type": "boolean",
-            "description":  "Set true for online Termbases and false for offline Termbases. Only relevant if \"includeTB\" is true"
+            "description":  "Set true for online Termbases and false for offline Termbases. If null it will not include termbases",
+            "default": false,
+            "nullable": true
           },
           "includeTM": {
             "type": "boolean",
-            "description": "Set true to include Translation Memories"
+            "description": "Set true to include Translation Memories",
+            "default": true
           },
           "includeReferenceFiles": {
             "type": "boolean",
-            "description": "Set true to include Reference Files"
+            "description": "Set true to include Reference Files",
+            "default": true
           },
           "splitByLanguage": {
             "type": "boolean",
-            "description": "Set true if you want the packages split by language"
+            "description": "Set true if you want the packages split by language",
+            "default":  false
           },
           "filesPerPackage": {
             "type": "integer",
-            "description":  "Number of files per package. Only usable if \"splitByLanguage\" is set to false"
+            "description":  "Number of files per package. Only usable if \"splitByLanguage\" is set to false",
+            "default":  1
           }
         }
       },
@@ -24402,12 +24404,6 @@
               "Done",
               "Failed"
             ]
-          },
-          "createdAt": {
-            "type": "string",
-            "example": "2022-01-12T12:00:00Z",
-            "description": "The task''s creation date and time in UTC time zone.",
-            "format": "date-time"
           }
         }
       },
