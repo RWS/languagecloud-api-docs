@@ -32903,7 +32903,6 @@
       "translation-memory-settings-filters-response": {
         "type": "object",
         "title": "Translation Memory Filters",
-        "description": "Translation Memory filter settings.",
         "properties": {
           "hardFilter": {
             "$ref": "#/components/schemas/translation-memory-settings-hard-filter-response",
