@@ -26655,7 +26655,8 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> "
           },
           "filters": {
-            "$ref": "#/components/schemas/translation-memory-settings-filters-response"
+            "$ref": "#/components/schemas/translation-memory-settings-filters-response",
+            "x-default-field": true
           },
           "updateTranslationMemoryFields": {
             "type": "array",
