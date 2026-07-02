@@ -24897,7 +24897,7 @@
       "project-template-settings-response": {
         "title": "Project Template Settings",
         "type": "object",
-        "description": "Project Template settings. See detailed description of options on the <a href=\"https://docs.rws.com/791595/1054430/trados-enterprise---accelerate/creating-project-templates/procedure\">Official Documentation</a> page. \n\n (Not available for List Project Templates endpoint)",
+        "description": "Project Template settings. See detailed description of options on the <a href=\"https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/creating-project-templates-1054430\">Official Documentation</a> page. \n\n (Not available for List Project Templates endpoint)",
         "properties": {
           "general": {
             "$ref": "#/components/schemas/project-template-general-settings-response",
