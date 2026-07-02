@@ -26656,8 +26656,7 @@
           },
           "filters": {
             "$ref": "#/components/schemas/translation-memory-settings-filters-response",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div>",
-            "x-default-field": true
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\"></div> "
           },
           "updateTranslationMemoryFields": {
             "type": "array",
