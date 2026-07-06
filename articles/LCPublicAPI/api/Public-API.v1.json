@@ -33552,87 +33552,52 @@
       },
       "vot-person-request": {
         "title": "Vendor Order Template Person",
-        "description": "A user or group assigned as a manager or assignee on a vendor order template.",
-        "discriminator": {
-          "propertyName": "type"
-        },
-        "oneOf": [
-          {
-            "title": "User assignment",
-            "type": "object",
-            "description": "Assigns an individual user. The `id` must be the `id` of a user present in the vendor's `members` list (see [Get Vendor](#/operations/GetVendor) with `fields=members`).",
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": ["user"]
-              },
-              "id": {
-                "type": "string",
-                "description": "The identifier of the user."
-              }
-            },
-            "required": ["type", "id"]
+        "description": "A user or group assigned as a manager or assignee on a vendor order template. When `type` is `user`, `id` is the identifier of a user present in the vendor's `members` list. When `type` is `group`, `id` is the identifier of a group present in the vendor's `groups` list.",
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The kind of assignment.",
+            "enum": [
+              "user",
+              "group"
+              ]
           },
-          {
-            "title": "Group assignment",
-            "type": "object",
-            "description": "Assigns a group. The `id` must be the `id` of a group present in the vendor's `groups` list (see [Get Vendor](#/operations/GetVendor)).",
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": ["group"]
-              },
-              "id": {
-                "type": "string",
-                "description": "The identifier of the group."
-              }
-            },
-            "required": ["type", "id"]
+          "id": {
+            "type": "string",
+            "description": "The identifier of the user or group being assigned, according to `type`."
           }
-        ]
+        }
       },
       "vot-person-response": {
         "title": "Vendor Order Template Person",
-        "description": "A user or group assigned as a manager or assignee on a vendor order template.",
-        "discriminator": {
-          "propertyName": "type"
-        },
-        "oneOf": [
-          {
-            "title": "User assignment",
-            "type": "object",
-            "description": "The user it is assigned to",
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": ["user"]
-              },
-              "user": {
-                "type": "object",
-                "description": "The user",
-                "$ref":"#/components/schemas/user"
-              }
-            },
-            "required": ["type", "user"]
+        "description": "A user or group assigned as a manager or assignee on a vendor order template. When `type` is `user`, the `user` object is populated. When `type` is `group`, the `group` object is populated.",
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The kind of assignment.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
-          {
-            "title": "Group assignment",
-            "type": "object",
-            "description": "The group it is assigned to",
-            "properties": {
-              "type": {
-                "type": "string",
-                "enum": ["group"]
-              },
-              "group": {
-                "type": "object",
-                "description": "The group",
-                "$ref":"#/components/schemas/group"
-              }
-            },
-            "required": ["type", "group"]
+          "user": {
+            "description": "The user it is assigned to. Present when `type` is `user`.",
+            "$ref": "#/components/schemas/user"
+          },
+          "group": {
+            "description": "The group it is assigned to. Present when `type` is `group`.",
+            "$ref": "#/components/schemas/group"
           }
-        ]
+        }
       },
       "vot-configuration": {
         "title": "Vendor Order Template Configuration",
