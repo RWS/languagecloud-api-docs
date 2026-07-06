@@ -1,0 +1,134 @@
+name: Generate AI Docs
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Triggers
+# ──────────────────────────────────────────────────────────────────────────────
+on:
+  # Manual run only: operator supplies the release version label
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version for the output branch (e.g. v2.5.0)'
+        required: true
+        type: string
+      force_regenerate:
+        description: 'Force full regeneration'
+        required: false
+        type: boolean
+        default: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Jobs
+# ──────────────────────────────────────────────────────────────────────────────
+jobs:
+  generate-aidocs:
+    name: Generate AI Documentation
+    # C2M4AI.exe is a Windows x64 binary — must use a Windows runner
+    runs-on: windows-latest
+    permissions:
+      contents: write   # needed to push the versioned branch
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth 2 gives us HEAD and HEAD~1 for incremental spec diffing
+          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Resolve release version ───────────────────────────────────────────
+      - name: Resolve release version
+        id: version
+        shell: pwsh
+        run: |
+          if ('${{ github.event_name }}' -eq 'workflow_dispatch') {
+            $v = '${{ inputs.version }}'
+          } else {
+            # Auto-derive from api.json info.version for push and workflow_run triggers
+            $spec = Get-Content articles/LCPublicAPI/api/Public-API.v1.json | ConvertFrom-Json
+            $v = "v$($spec.info.version)"
+          }
+          Write-Host "Release version: $v"
+          "version=$v" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      # ── 3. Download C2M4AI.exe ────────────────────────────────────────────────
+      - name: Download C2M4AI
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path tools | Out-Null
+          .\pipeline\Get-C2M4AI.ps1 -OutputPath tools\C2M4AI.exe
+
+      # ── 4. Download .NET SDK XML documentation ───────────────────────────────
+      - name: Download .NET SDK XML documentation
+        shell: pwsh
+        run: .\pipeline\Get-DotNetSdkXml.ps1 -OutputPath tools\Rws.LanguageCloud.Sdk.xml
+
+      # ── 5. Download Java SDK sources ─────────────────────────────────────────
+      - name: Download Java SDK sources
+        shell: pwsh
+        run: .\pipeline\Get-JavaSdkSources.ps1 -OutputDir tools\java-api
+
+      # ── 6. Save previous api.json for incremental spec diffing ───────────────
+      - name: Save previous api.json
+        id: prev_spec
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path tools | Out-Null
+          try {
+            # git show exits non-zero when there is no previous commit (first push)
+            git show HEAD~1:articles/LCPublicAPI/api/Public-API.v1.json | Set-Content tools\prev-api.json -NoNewline
+            Write-Host "Previous spec saved to tools\prev-api.json"
+            "exists=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          } catch {
+            Write-Host "No previous commit available — will do full regeneration."
+            "exists=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      # ── 7. Run the AI Docs Pipeline ───────────────────────────────────────────
+      - name: Run AI Docs Pipeline
+        shell: pwsh
+        run: |
+          $params = @{
+            RootDir = '.'
+          }
+
+          $forceRegen    = '${{ inputs.force_regenerate }}' -eq 'true'
+          $hasPrevSpec   = '${{ steps.prev_spec.outputs.exists }}' -eq 'true'
+          $isManual      = '${{ github.event_name }}' -eq 'workflow_dispatch'
+
+          if ($forceRegen) {
+            # Explicit full rebuild: ignore hashes and re-write every file
+            $params.All   = $true
+            $params.Force = $true
+          } elseif ($isManual -or -not $hasPrevSpec) {
+            # Manual run without force, or first-ever commit: full rebuild
+            $params.All = $true
+          } else {
+            # Push-triggered incremental: pass changed files for smart routing
+            $changed = @(git diff --name-only HEAD~1 HEAD)
+            Write-Host "Changed files: $($changed -join ', ')"
+            $params.ChangedFiles = $changed
+            $params.OldApiSpec   = 'tools\prev-api.json'
+          }
+
+          .\pipeline\Invoke-AiDocsPipeline.ps1 @params
+
+      # ── 8. Commit changes to current branch ──────────────────────────────────
+      - name: Commit changes to current branch
+        shell: pwsh
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
+
+          # Stage only the aidocs/ output directory
+          git add aidocs/
+          $staged = git diff --cached --stat
+
+          if ($staged) {
+            git commit -m "docs: generate aidocs ${{ steps.version.outputs.version }} [skip ci]"
+            git push origin HEAD
+            Write-Host "Changes committed and pushed to current branch." -ForegroundColor Green
+          } else {
+            Write-Host "No changes in aidocs/ — nothing to commit." -ForegroundColor DarkGray
+          }

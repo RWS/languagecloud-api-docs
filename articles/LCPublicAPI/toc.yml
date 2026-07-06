@@ -16,6 +16,9 @@
 - name: Known issues
   href: docs/Known-Issues.md
 
+- name: AI Agent Development
+  href: docs/AI-Development.md
+
 - name: Getting started
   items:
     - name: Multi-region
