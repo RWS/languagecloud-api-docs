@@ -6917,7 +6917,15 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
       }
     },
     "/projects/{projectId}/source-files/attach-files": {
@@ -7226,7 +7234,14 @@
             }
           }
         },
-        "parameters": []
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
       },
       "parameters": [
         {
@@ -8004,7 +8019,15 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
       },
       "parameters": [
         {
@@ -8247,7 +8270,15 @@
               }
             }
           }
-        }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ]
       },
       "parameters": [
         {
