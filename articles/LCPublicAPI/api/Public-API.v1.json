@@ -4573,7 +4573,7 @@
         }
     }
     },
-    "/packages/export/{taskId}": {
+    "/packages/export/{exportId}": {
       "get": {
         "summary": "Poll Export Package",
         "tags": [
@@ -4670,7 +4670,7 @@
       }
     }
     },
-    "/packages/export/download/{taskId}": {
+    "/packages/export/download/{exportId}": {
       "get": {
         "summary": "Download Exported Packages",
         "tags": [
@@ -4869,7 +4869,7 @@
         }
     }
     },
-    "/packages/import/{taskId}": {
+    "/packages/import/{importId}": {
       "get": {
         "summary": "Poll Import Package",
         "tags": [
@@ -24370,7 +24370,7 @@
               "type": "string"
             }
           },
-          "expiresAtUtc": {
+          "expiresAt": {
             "type": "string",
             "description": "Timestamp of the expiration date, UTC timezone"
           }
