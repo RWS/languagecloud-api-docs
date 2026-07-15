@@ -4493,9 +4493,12 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "exportId": {
-                      "type": "string",
-                      "description": "The id of the export task created, used to check on its status. "
+                    "exportIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "The ids of the export tasks created, used to check on their status. "
                     }
                   }
                 }
