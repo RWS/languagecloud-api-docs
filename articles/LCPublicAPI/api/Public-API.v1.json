@@ -4766,7 +4766,7 @@
         "tags": [
           "Packages"
         ],
-      "description": "",
+      "description": "The system associates the imported package to the appropriate project and task automatically based on its contents. The .sdlproj file contains the required information. You can also check the related [UI documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
       "parameters": [
         {
           "$ref": "#/components/parameters/Authorization"
