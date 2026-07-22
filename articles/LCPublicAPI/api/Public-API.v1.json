@@ -66,8 +66,8 @@
       "description": "Machine Translation"
     },
     {
-      "name": "Packages",
-      "description": "Packages"
+      "name": "Package",
+      "description": "Package"
     },
     {
       "name": "PerfectMatch Mapping",
@@ -4461,13 +4461,13 @@
         ]
       }
     },
-    "/packages/export": {
+    "/package/export": {
       "post": {
         "summary": "Export Package",
         "tags": [
-          "Packages"
+          "Package"
         ],
-      "description": "",
+      "description": "Creates a task for exporting the selected tasks in a given number of packages, for more information check the [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/downloading-packages-for-translation-719552) on downloading packages for translation",
       "parameters": [
         {
           "$ref": "#/components/parameters/Authorization"
@@ -4554,32 +4554,17 @@
                 "$ref": "#/components/headers/X-LC-TraceId"
               }
             }
-          },
-          "404": {
-            "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error-response"
-                }
-              }
-            },
-            "headers": {
-              "X-LC-TraceId": {
-                "$ref": "#/components/headers/X-LC-TraceId"
-              }
-            }
           }
         }
     }
     },
-    "/packages/export/{exportId}": {
+    "/package/export/{exportId}": {
       "get": {
         "summary": "Poll Export Package",
         "tags": [
-          "Packages"
+          "Package"
         ],
-      "description": "",
+      "description": "Poll the status of the export task created in the [export endpoint.](#/operations/Export Package)",
         "parameters": [
           {
             "schema": {
@@ -4653,7 +4638,7 @@
           }
         },
         "404": {
-          "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
+          "description": "Error codes:\n* \"notFound\": the Package could not be found by identifier.",
           "content": {
             "application/json": {
               "schema": {
@@ -4670,13 +4655,13 @@
       }
     }
     },
-    "/packages/export/download/{exportId}": {
+    "/package/export/download/{exportId}": {
       "get": {
-        "summary": "Download Exported Packages",
+        "summary": "Download Exported Package",
         "tags": [
-          "Packages"
+          "Package"
         ],
-        "description": "",
+        "description": "Downloads an exported Package in with the .sdlppx extension",
         "parameters": [
           {
             "schema": {
@@ -4760,11 +4745,11 @@
         }
       }
     },
-    "/packages/import": {
+    "/package/import": {
       "post": {
         "summary": "Import Package",
         "tags": [
-          "Packages"
+          "Package"
         ],
       "description": "The system associates the imported package to the appropriate project and task automatically based on its contents. The .sdlproj file contains the required information. You can also check the related [UI documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
       "parameters": [
@@ -4869,13 +4854,13 @@
         }
     }
     },
-    "/packages/import/{importId}": {
+    "/package/import/{importId}": {
       "get": {
         "summary": "Poll Import Package",
         "tags": [
-          "Packages"
+          "Package"
         ],
-      "description": "",
+      "description": "Poll the status of the created at the [import endpoint](#/operations/ImportPackage)",
         "parameters": [
           {
             "schema": {
@@ -24344,6 +24329,10 @@
       "package-export-status-response": {
         "title": "Package Export Status Response",
         "type": "object",
+        "required": [
+          "id",
+          "status"
+        ],
         "properties": {
           "id": {
             "type": "string",
