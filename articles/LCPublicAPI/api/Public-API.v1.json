@@ -4477,7 +4477,7 @@
         ]
       }
     },
-    "/package/export": {
+    "/packages/export": {
       "post": {
         "summary": "Export Package",
         "operationId": "ExportPackage",
@@ -4575,7 +4575,7 @@
         }
     }
     },
-    "/package/export/{exportId}": {
+    "/packages/export/{exportId}": {
       "get": {
         "summary": "Poll Export Package",
         "tags": [
@@ -4672,7 +4672,7 @@
       }
     }
     },
-    "/package/export/download/{exportId}": {
+    "/packages/export/download/{exportId}": {
       "get": {
         "summary": "Download Exported Package",
         "tags": [
@@ -4762,7 +4762,7 @@
         }
       }
     },
-    "/package/import": {
+    "/packages/import": {
       "post": {
         "summary": "Import Package",
         "operationId": "ImportPackage",
@@ -4872,7 +4872,7 @@
         }
     }
     },
-    "/package/import/{importId}": {
+    "/packages/import/{importId}": {
       "get": {
         "summary": "Poll Import Package",
         "tags": [
