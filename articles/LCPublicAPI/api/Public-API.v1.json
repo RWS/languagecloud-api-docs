@@ -4464,11 +4464,12 @@
     "/package/export": {
       "post": {
         "summary": "Export Package",
+        "operationId": "ExportPackage",
         "tags": [
           "Package"
         ],
-      "description": "Creates a task for exporting the selected tasks in a given number of packages, for more information check the [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/downloading-packages-for-translation-719552) on downloading packages for translation",
-      "parameters": [
+        "description": "Creates a task for exporting the selected tasks in a given number of packages, for more information check the [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/downloading-packages-for-translation-719552) on downloading packages for translation",
+        "parameters": [
         {
           "$ref": "#/components/parameters/Authorization"
         },
@@ -4564,7 +4565,7 @@
         "tags": [
           "Package"
         ],
-      "description": "Poll the status of the export task created in the [export endpoint.](#/operations/Export Package)",
+        "description": "Poll the status of the export task created in the [export endpoint.](../api/Public-API.v1-fv.html#/operations/ExportPackage)",
         "parameters": [
           {
             "schema": {
@@ -4748,11 +4749,12 @@
     "/package/import": {
       "post": {
         "summary": "Import Package",
+        "operationId": "ImportPackage",
         "tags": [
           "Package"
         ],
-      "description": "The system associates the imported package to the appropriate project and task automatically based on its contents. The .sdlproj file contains the required information. You can also check the related [UI documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
-      "parameters": [
+        "description": "The system associates the imported package to the appropriate project and task automatically based on its contents. The .sdlproj file contains the required information. You can also check the related [UI documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
+        "parameters": [
         {
           "$ref": "#/components/parameters/Authorization"
         },
@@ -4860,7 +4862,7 @@
         "tags": [
           "Package"
         ],
-      "description": "Poll the status of the created at the [import endpoint](#/operations/ImportPackage)",
+      "description": "Poll the status of the created at the [import endpoint](../api/Public-API.v1-fv.html#/operations/ImportPackage)",
         "parameters": [
           {
             "schema": {
