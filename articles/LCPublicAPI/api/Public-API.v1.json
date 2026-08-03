@@ -4729,7 +4729,7 @@
             }
           },
           "404": {
-            "description": "Error codes:\n* \"notFound\": the Task could not be found by identifier.",
+            "description": "Error codes:\n* \"notFound\": the Package could not be found by identifier.",
             "content": {
               "application/json": {
                 "schema": {
