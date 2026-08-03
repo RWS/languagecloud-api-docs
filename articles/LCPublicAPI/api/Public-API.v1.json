@@ -30115,7 +30115,10 @@
               "$ref": "#/components/schemas/task-assignee-request"
             }
           }
-        }
+        },
+        "required": [
+          "assignees"
+        ]
       },
       "task-complete-request": {
         "title": "Task Complete Request",
