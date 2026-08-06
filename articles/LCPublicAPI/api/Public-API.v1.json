@@ -17708,20 +17708,13 @@
     },
     "/translation-memory/{translationMemoryId}/filter-expressions": {
       "post": {
-        "summary": "Create Filter Expression",
+        "summary": "Update Filter Expressions",
         "tags": [
           "Translation Memory"
         ],
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/filter-expression"
-                }
-              }
-            },
+          "204": {
+            "description": "No Content. The filter expressions were replaced successfully.",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -17789,8 +17782,8 @@
             }
           }
         },
-        "operationId": "BuildTranslationMemoryFilterExpression",
-        "description": "Builds a Translation Memory filter expression from a raw filter expression string. The resulting expression string can be used to filter translation units within the Translation Memory.",
+        "operationId": "UpdateTranslationMemoryFilterExpressions",
+        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units.",
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
@@ -17803,7 +17796,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/build-filter-expression-request"
+                "$ref": "#/components/schemas/update-filter-expressions-request"
               }
             }
           },
@@ -34797,17 +34790,34 @@
           }
         }
       },
-      "build-filter-expression-request": {
-        "title": "Build Filter Expression Request",
+      "update-filter-expressions-request": {
+        "title": "Update Filter Expressions Request",
         "type": "object",
-        "description": "Request body for building a Translation Memory filter expression from a raw filter expression string.",
+        "description": "Request body for replacing all filter expressions of a Translation Memory. Each entry is stored per name within the Translation Memory.",
+        "properties": {
+          "filterExpressions": {
+            "type": "array",
+            "description": "The list of filter expressions that will replace the existing ones.",
+            "items": {
+              "$ref": "#/components/schemas/filter-expression-request-item"
+            }
+          }
+        },
+        "required": [
+          "filterExpressions"
+        ]
+      },
+      "filter-expression-request-item": {
+        "title": "Filter Expression Request",
+        "type": "object",
+        "description": "A single named filter expression.",
         "properties": {
           "name": {
             "type": "string",
             "minLength": 1,
             "description": "The name of the filter."
           },
-          "filterExpression": {
+          "expression": {
             "type": "string",
             "minLength": 1,
             "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the advanced configuration documentation for more information.",
@@ -34816,20 +34826,8 @@
         },
         "required": [
           "name",
-          "filterExpression"
+          "expression"
         ]
-      },
-      "filter-expression": {
-        "title": "Filter Expression",
-        "type": "object",
-        "description": "The result of building a Translation Memory filter expression.",
-        "properties": {
-          "filterExpression": {
-            "type": "string",
-            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the advanced configuration documentation for more information.",
-            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10"
-          }
-        }
       }
     },
     "parameters": {
