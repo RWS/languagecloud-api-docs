@@ -13829,6 +13829,96 @@
         "operationId": "ListTranslationEngines"
       }
     },
+    "/termbase-entry-templates/{termbaseId}": {
+      "get": {
+        "summary": "List Termbase Entry Templates",
+        "operationId": "ListTermbaseEntryTemplates",
+        "description": "Retrieves the entry templates that are linked to the termbase.",
+        "tags": [
+          "Termbase Entry Templates"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-termbase-entry-templates-response"
+                },
+                "examples": {
+                  "termbase-entry-templates-list": {
+                    "value": {
+                      "items": [
+                        {
+                          "id": "test-id-1",
+                          "name": "test-name-1"
+                        },
+                        {
+                          "id": "test-id-2",
+                          "name": "test-name-2"
+                        }
+                      ],
+                      "itemCount": 2
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": - The authenticated user is not allowed to read the resource.\n* \"entitlementMissing\": - Your subscription does not include access to the requested type of benefit.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/termbaseId"
+        }
+      ]
+    },
     "/termbase-templates": {
       "get": {
         "summary": "List Termbase Templates",
@@ -24381,6 +24471,26 @@
           "itemCount"
         ]
       },
+      "list-termbase-entry-templates-response": {
+        "title": "List Termbase Entry Templates Response",
+        "type": "object",
+        "description": "The termbase entry templates response.",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/termbase-entry-template"
+            }
+          },
+          "itemCount": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "itemCount"
+        ]
+      },
       "list-termbases-response": {
         "title": "List Termbases Response",
         "type": "object",
@@ -30116,6 +30226,21 @@
           "id",
           "type"
         ]
+      },
+      "termbase-entry-template": {
+        "title": "Termbase Entry Template",
+        "type": "object",
+        "description": "The termbase entry template.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the termbase entry template."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the termbase entry template."
+          }
+        }
       },
       "termbase-template-update-request": {
         "title": "Termbase Template Update Request",
