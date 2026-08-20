@@ -13833,7 +13833,7 @@
         "operationId": "ListTranslationEngines"
       }
     },
-    "/termbases/{termbaseId}/entry-templates": {
+    "/termbase/{termbaseId}/entry-templates": {
       "get": {
         "summary": "List Termbase Entry Templates",
         "operationId": "ListTermbaseEntryTemplates",
