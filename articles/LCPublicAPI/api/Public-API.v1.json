@@ -13833,7 +13833,7 @@
         "operationId": "ListTranslationEngines"
       }
     },
-    "/termbase-entry-templates/{termbaseId}": {
+    "/termbases/{termbaseId}/entry-templates": {
       "get": {
         "summary": "List Termbase Entry Templates",
         "operationId": "ListTermbaseEntryTemplates",
@@ -30242,9 +30242,13 @@
           },
           "name": {
             "type": "string",
-            "description": "The name of the termbase entry template."
+            "description": "The name of the termbase entry template.",
+            "x-default-field": true
           }
-        }
+        },
+        "required": [
+          "id"
+        ]
       },
       "termbase-template-update-request": {
         "title": "Termbase Template Update Request",
