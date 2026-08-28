@@ -4468,7 +4468,7 @@
         "tags": [
           "Package"
         ],
-        "description": "Creates a task for exporting the selected tasks in a given number of packages, for more information check the [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/downloading-packages-for-translation-719552) on downloading packages for translation",
+        "description": "Creates an operation for exporting the selected tasks into a given number of packages. For more information, check the [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/downloading-packages-for-translation-719552) on downloading packages for translation.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4499,7 +4499,7 @@
                       "items": {
                         "type": "string"
                       },
-                      "description": "The ids of the export tasks created, used to check on their status. "
+                      "description": "The ids of the export operations created, used to check on their status."
                     }
                   }
                 }
@@ -4565,7 +4565,7 @@
         "tags": [
           "Package"
         ],
-        "description": "Poll the status of the export task created in the [export endpoint.](../api/Public-API.v1-fv.html#/operations/ExportPackage)",
+        "description": "Polls the status of the export operation created by the [Export Package operation](../api/Public-API.v1-fv.html#/operations/ExportPackage).",
         "parameters": [
           {
             "schema": {
@@ -4574,7 +4574,7 @@
             "name": "exportId",
             "in": "path",
             "required": true,
-            "description": "The export task identifier."
+            "description": "The export operation identifier."
           }
         ],
         "responses": {
@@ -4662,7 +4662,7 @@
         "tags": [
           "Package"
         ],
-        "description": "Downloads an exported Package in with the .sdlppx extension",
+        "description": "Downloads an exported package with the .sdlppx extension.",
         "parameters": [
           {
             "schema": {
@@ -4671,7 +4671,7 @@
             "name": "exportId",
             "in": "path",
             "required": true,
-            "description": "The export task identifier."
+            "description": "The export operation identifier."
           }
         ],
         "responses": {
@@ -4753,7 +4753,7 @@
         "tags": [
           "Package"
         ],
-        "description": "The system associates the imported package to the appropriate project and task automatically based on its contents. The .sdlproj file contains the required information. You can also check the related [UI documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
+        "description": "Creates an operation for importing a translation package. The accepted file types are .sdlppx and .sdlrpx. The system associates the imported package with the appropriate project and task automatically based on its contents, using the information contained in the file. You can also check the related [documentation](https://docs.rws.com/en-US/trados-enterprise-accelerate-791595/returning-translation-packages-719556).",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -4781,7 +4781,7 @@
                   "properties": {
                     "importId": {
                       "type": "string",
-                      "description": "The id of the export task created, used to check on its status. "
+                      "description": "The id of the import operation created, used to check on its status."
                     }
                   }
                 }
@@ -4862,7 +4862,7 @@
         "tags": [
           "Package"
         ],
-        "description": "Poll the status of the created at the [import endpoint](../api/Public-API.v1-fv.html#/operations/ImportPackage)",
+        "description": "Polls the status of the import operation created by the [Import Package operation](../api/Public-API.v1-fv.html#/operations/ImportPackage).",
         "parameters": [
           {
             "schema": {
@@ -4871,7 +4871,7 @@
             "name": "importId",
             "in": "path",
             "required": true,
-            "description": "The export task identifier."
+            "description": "The import operation identifier."
           }
         ],
         "responses": {
@@ -24369,20 +24369,28 @@
       "package-import-status-response": {
         "title": "Package Import Status Response",
         "type": "object",
+        "required": [
+          "id",
+          "status"
+        ],
         "properties": {
           "id": {
             "type": "string",
-            "description": "The id of the import task"
+            "description": "The id of the import operation"
           },
           "status": {
             "type": "string",
-            "description": "The status of the import task",
-            "export": [
+            "description": "The status of the import operation",
+            "enum": [
               "Queued",
               "InProgress",
-              "Done",
-              "Failed"
+              "Failed",
+              "Done"
             ]
+          },
+          "error": {
+            "$ref": "#/components/schemas/error-response",
+            "description": "The error details, present only when the import operation has failed."
           }
         }
       },
