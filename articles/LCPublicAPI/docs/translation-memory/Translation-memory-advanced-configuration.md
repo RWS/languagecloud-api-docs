@@ -16,12 +16,6 @@ Project template endpoints:
 - [Get Project Template](../../api/Public-API.v1-fv.html#/operations/GetProjectTemplate) - Retrieve project template details, including Translation Memory settings
 - [Update Project Template](../../api/Public-API.v1-fv.html#/operations/UpdateProjectTemplate) - Update project template configuration, including Translation Memory settings
 
-Translation Memory Import endpoint:
-- [Import Translation Memory](../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemory) - Import TUs from a file, with optional filter criteria
-
-Translation Memory Export endpoint:
-- [Export Translation Memory](../../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory) - Export TUs matching specified filter criteria
-
 ## Translation Memory filters
 
 Translation Memory filters let you apply complex criteria during TM operations. Filters can reference system and custom fields, and support multiple data types and operators.
