@@ -20697,15 +20697,33 @@
                   "value": {
                     "name": "EN-FR Translation",
                     "pricingModelId": "pm-abc123",
-                    "quoteConfiguration": { "behaviour": "waitForAllFiles" },
+                    "quoteConfiguration": {
+                      "behaviour": "waitForAllFiles"
+                    },
                     "languagePairs": [
-                      { "source": "en-US", "target": "fr-FR" }
+                      {
+                        "source": "en-US",
+                        "target": "fr-FR"
+                      }
                     ],
                     "assignments": [
                       {
-                        "languagePair": { "source": "en-US", "target": "fr-FR" },
-                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
-                        "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                        "languagePair": {
+                          "source": "en-US",
+                          "target": "fr-FR"
+                        },
+                        "managers": [
+                          {
+                            "type": "user",
+                            "id": "69e693d00000000000000010"
+                          }
+                        ],
+                        "assignees": [
+                          {
+                            "type": "user",
+                            "id": "69e693d00000000000000011"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -20716,23 +20734,60 @@
                     "name": "Multilingual Package",
                     "description": "Template covering EN to DE and FR with a group-based assignee.",
                     "pricingModelId": "pm-def456",
-                    "quoteConfiguration": { "behaviour": "waitForAllFiles", "holdingDelay": 120 },
+                    "quoteConfiguration": {
+                      "behaviour": "waitForAllFiles",
+                      "holdingDelay": 120
+                    },
                     "allowQuoteEditing": true,
-                    "serviceTypes": [ "st-translation-001" ],
+                    "serviceTypes": [
+                      "st-translation-001"
+                    ],
                     "languagePairs": [
-                      { "source": "en-US", "target": "de-DE" },
-                      { "source": "en-US", "target": "fr-FR" }
+                      {
+                        "source": "en-US",
+                        "target": "de-DE"
+                      },
+                      {
+                        "source": "en-US",
+                        "target": "fr-FR"
+                      }
                     ],
                     "assignments": [
                       {
-                        "languagePair": { "source": "en-US", "target": "de-DE" },
-                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
-                        "assignees": [ { "type": "group", "id": "69e693d00000000000000002" } ]
+                        "languagePair": {
+                          "source": "en-US",
+                          "target": "de-DE"
+                        },
+                        "managers": [
+                          {
+                            "type": "user",
+                            "id": "69e693d00000000000000010"
+                          }
+                        ],
+                        "assignees": [
+                          {
+                            "type": "group",
+                            "id": "69e693d00000000000000002"
+                          }
+                        ]
                       },
                       {
-                        "languagePair": { "source": "en-US", "target": "fr-FR" },
-                        "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
-                        "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                        "languagePair": {
+                          "source": "en-US",
+                          "target": "fr-FR"
+                        },
+                        "managers": [
+                          {
+                            "type": "user",
+                            "id": "69e693d00000000000000010"
+                          }
+                        ],
+                        "assignees": [
+                          {
+                            "type": "user",
+                            "id": "69e693d00000000000000011"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -20756,17 +20811,38 @@
                     "value": {
                       "id": "vot-abc123",
                       "name": "EN-FR Translation",
-                      "quoteConfiguration": { "behaviour": "waitForAllFiles" },
+                      "quoteConfiguration": {
+                        "behaviour": "waitForAllFiles"
+                      },
                       "allowQuoteEditing": false,
-                      "pricingModel": { "id": "pm-abc123", "name": "Standard Rate" },
+                      "pricingModel": {
+                        "id": "pm-abc123",
+                        "name": "Standard Rate"
+                      },
                       "languagePairs": [
-                        { "source": "en-US", "target": "fr-FR" }
+                        {
+                          "source": "en-US",
+                          "target": "fr-FR"
+                        }
                       ],
                       "assignments": [
                         {
-                          "languagePair": { "source": "en-US", "target": "fr-FR" },
-                          "managers": [ { "type": "user", "id": "69e693d00000000000000010" } ],
-                          "assignees": [ { "type": "user", "id": "69e693d00000000000000011" } ]
+                          "languagePair": {
+                            "source": "en-US",
+                            "target": "fr-FR"
+                          },
+                          "managers": [
+                            {
+                              "type": "user",
+                              "id": "69e693d00000000000000010"
+                            }
+                          ],
+                          "assignees": [
+                            {
+                              "type": "user",
+                              "id": "69e693d00000000000000011"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -23833,7 +23909,10 @@
             "description": "The number of items returned in this response."
           }
         },
-        "required": ["items", "itemCount"],
+        "required": [
+          "items",
+          "itemCount"
+        ],
         "description": "A response for the List Vendors endpoint."
       },
       "list-quote-templates-response": {
@@ -23852,7 +23931,10 @@
             }
           }
         },
-        "required": ["itemCount", "items"],
+        "required": [
+          "itemCount",
+          "items"
+        ],
         "description": "A response for the List Quote Templates endpoint."
       },
       "list-custom-field-definitions-response": {
@@ -29762,12 +29844,20 @@
             "deprecated": true
           },
           "account": {
-            "allOf": [{ "$ref": "#/components/schemas/account" }],
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/account"
+              }
+            ],
             "description": "The account the user is part of.",
             "deprecated": true
           },
           "location": {
-            "allOf": [{ "$ref": "#/components/schemas/folder-v2" }],
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/folder-v2"
+              }
+            ],
             "deprecated": true
           },
           "groups": {
@@ -29778,11 +29868,19 @@
             "deprecated": true
           },
           "userType": {
-            "allOf": [{ "$ref": "#/components/schemas/user-type" }],
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/user-type"
+              }
+            ],
             "deprecated": true
           },
           "status": {
-            "allOf": [{ "$ref": "#/components/schemas/user-status" }],
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/user-status"
+              }
+            ],
             "deprecated": true
           },
           "invitationLink": {
@@ -29791,7 +29889,11 @@
             "deprecated": true
           },
           "membership": {
-            "allOf": [{ "$ref": "#/components/schemas/account-membership-type" }],
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/account-membership-type"
+              }
+            ],
             "deprecated": true
           }
         },
@@ -32270,6 +32372,12 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The `DateTime` when the translation memory reindexing was performed.  <br> UTC Timezone  <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
             "nullable": true
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memories-filter"
+            }
           }
         },
         "required": [
@@ -32594,6 +32702,10 @@
                 "rejectedSignOff"
               ]
             }
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -32860,6 +32972,10 @@
         "properties": {
           "languageDirection": {
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -32875,7 +32991,8 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">Hard filter configuration for Translation Memory matching.</div> ",
             "x-default-field": true
           }
-        }
+        },
+        "description": "Translation Memory filter settings."
       },
       "translation-memory-settings-hard-filter-response": {
         "title": "Translation Memory Hard Filter",
@@ -33387,7 +33504,9 @@
             }
           }
         },
-        "required": ["id"]
+        "required": [
+          "id"
+        ]
       },
       "list-vendor-order-templates-response": {
         "title": "List Vendor Order Templates Response",
@@ -33405,7 +33524,10 @@
             "description": "The number of items returned in this response."
           }
         },
-        "required": ["items", "itemCount"],
+        "required": [
+          "items",
+          "itemCount"
+        ],
         "description": "A response for the List Vendor Order Templates endpoint."
       },
       "vendor-order-template-update-request": {
@@ -33520,7 +33642,14 @@
             }
           }
         },
-        "required": ["name", "languagePairs", "assignments", "pricingModelId", "quoteConfiguration", "serviceTypes"]
+        "required": [
+          "name",
+          "languagePairs",
+          "assignments",
+          "pricingModelId",
+          "quoteConfiguration",
+          "serviceTypes"
+        ]
       },
       "vot-quote-behaviour": {
         "title": "Vendor Order Template Quote Behaviour",
@@ -33548,7 +33677,9 @@
             "description": "The maximum time in minutes the system waits for all files to reach the vendor task before generating the quote. Only applicable when `behaviour` is `waitForAllFiles`. Defaults to 1440 (24 hours)."
           }
         },
-        "required": ["behaviour"]
+        "required": [
+          "behaviour"
+        ]
       },
       "vot-person-request": {
         "title": "Vendor Order Template Person",
@@ -33565,7 +33696,7 @@
             "enum": [
               "user",
               "group"
-              ]
+            ]
           },
           "id": {
             "type": "string",
@@ -33625,7 +33756,11 @@
             }
           }
         },
-        "required": ["languagePair", "managers", "assignees"]
+        "required": [
+          "languagePair",
+          "managers",
+          "assignees"
+        ]
       },
       "vot-configuration-response": {
         "title": "Vendor Order Template Configuration",
@@ -33653,9 +33788,12 @@
             }
           }
         },
-        "required": ["languagePair", "managers", "assignees"]
+        "required": [
+          "languagePair",
+          "managers",
+          "assignees"
+        ]
       },
-
       "key-contact": {
         "title": "Key Contact",
         "type": "object",
@@ -33678,7 +33816,11 @@
             "maxLength": 50
           }
         },
-        "required": ["firstName", "lastName", "email"]
+        "required": [
+          "firstName",
+          "lastName",
+          "email"
+        ]
       },
       "vendor": {
         "title": "Vendor",
@@ -33737,7 +33879,9 @@
             }
           }
         },
-        "required": ["id"]
+        "required": [
+          "id"
+        ]
       },
       "vendor-create-request": {
         "title": "Vendor Create Request",
@@ -33776,7 +33920,10 @@
             }
           }
         },
-        "required": ["name", "keyContact"]
+        "required": [
+          "name",
+          "keyContact"
+        ]
       },
       "vendor-update-request": {
         "title": "Vendor Update Request",
@@ -34678,6 +34825,21 @@
                 "description": "The client secret."
               }
             }
+          }
+        }
+      },
+      "translation-memories-filter": {
+        "title": "Translation Memories Filter",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the filter, this should be used in the import/export TM request"
+          },
+          "filterExpression": {
+            "type": "string",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration) for more information."
           }
         }
       }
