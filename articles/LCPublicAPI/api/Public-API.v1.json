@@ -4747,7 +4747,7 @@
             }
           },
           "409": {
-            "description": "The export task is not yet done.",
+            "description": "Error codes:\n* \"conflict\": Cannot download package export if status is not done.",
             "content": {
               "application/json": {
                 "schema": {
