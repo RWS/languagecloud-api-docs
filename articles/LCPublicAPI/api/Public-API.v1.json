@@ -13833,7 +13833,7 @@
         "operationId": "ListTranslationEngines"
       }
     },
-    "/termbase/{termbaseId}/entry-templates": {
+    "/termbases/{termbaseId}/entry-templates": {
       "get": {
         "summary": "List Termbase Entry Templates",
         "operationId": "ListTermbaseEntryTemplates",
@@ -13920,6 +13920,12 @@
       "parameters": [
         {
           "$ref": "#/components/parameters/termbaseId"
+        },
+        {
+          "$ref": "#/components/parameters/top"
+        },
+        {
+          "$ref": "#/components/parameters/skip"
         }
       ]
     },
