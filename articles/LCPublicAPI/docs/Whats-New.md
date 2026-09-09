@@ -3,7 +3,7 @@
 </br> 
 
 ## 09 September 2026
-- You can now export and import translation packages via the public API. Use [Export Package](../api/Public-API.v1-fv.html#/operations/ExportPackage), [Poll Export Package](../api/Public-API.v1-fv.html#/operations/PollExportPackage), and [Download Exported Package](../api/Public-API.v1-fv.html#/operations/DownloadExportedPackage) to generate and download `.sdlppx` packages, and [Import Package](../api/Public-API.v1-fv.html#/operations/ImportPackage) together with [Poll Import Package](../api/Public-API.v1-fv.html#/operations/PollImportPackage) to return completed `.sdlppx`/`.sdlrpx` packages.
+- You can now export and import translation packages. Use [Export Package](../api/Public-API.v1-fv.html#/operations/ExportPackage), [Poll Export Package](../api/Public-API.v1-fv.html#/operations/PollExportPackage), and [Download Exported Package](../api/Public-API.v1-fv.html#/operations/DownloadExportedPackage) to generate and download `.sdlppx` packages. Use [Import Package](../api/Public-API.v1-fv.html#/operations/ImportPackage) together with [Poll Import Package](../api/Public-API.v1-fv.html#/operations/PollImportPackage) to return completed `.sdlppx`/`.sdlrpx` packages.
 - You can now retrieve the entry templates linked to a termbase via the new [List Termbase Entry Templates](../api/Public-API.v1-fv.html#/operations/ListTermbaseEntryTemplates) endpoint.
 - We fixed various bugs.
 
