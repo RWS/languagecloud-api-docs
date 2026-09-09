@@ -34080,7 +34080,7 @@
             }
           }
         },
-        "required": ["id"]
+        "required": ["id", "name"]
       },
       "list-vendor-order-templates-response": {
         "title": "List Vendor Order Templates Response",
