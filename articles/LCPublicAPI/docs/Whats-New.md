@@ -2,6 +2,11 @@
 
 </br> 
 
+## 09 September 2026
+- You can now export and import translation packages via the public API. Use [Export Package](../api/Public-API.v1-fv.html#/operations/ExportPackage), [Poll Export Package](../api/Public-API.v1-fv.html#/operations/PollExportPackage), and [Download Exported Package](../api/Public-API.v1-fv.html#/operations/DownloadExportedPackage) to generate and download `.sdlppx` packages, and [Import Package](../api/Public-API.v1-fv.html#/operations/ImportPackage) together with [Poll Import Package](../api/Public-API.v1-fv.html#/operations/PollImportPackage) to return completed `.sdlppx`/`.sdlrpx` packages.
+- You can now retrieve the entry templates linked to a termbase via the new [List Termbase Entry Templates](../api/Public-API.v1-fv.html#/operations/ListTermbaseEntryTemplates) endpoint.
+- We fixed various bugs.
+
 ## 02 July 2026
 - With this release we deliver full vendor management capabilities. You can now [Get](../api/Public-API.v1-fv.html#/operations/GetVendor), [List](../api/Public-API.v1-fv.html#/operations/ListVendors), [Create](../api/Public-API.v1-fv.html#/operations/CreateVendor), [Update](../api/Public-API.v1-fv.html#/operations/UpdateVendor), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteVendor) vendors via the public API.
 - We have also introduced vendor order template management. You can now [Get](../api/Public-API.v1-fv.html#/operations/GetVendorOrderTemplate), [List](../api/Public-API.v1-fv.html#/operations/ListVendorOrderTemplates), [Create](../api/Public-API.v1-fv.html#/operations/CreateVendorOrderTemplate), [Update](../api/Public-API.v1-fv.html#/operations/UpdateVendorOrderTemplate), and [Delete](../api/Public-API.v1-fv.html#/operations/DeleteVendorOrderTemplate) vendor order templates.
