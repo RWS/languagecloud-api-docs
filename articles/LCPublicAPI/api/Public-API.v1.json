@@ -32379,6 +32379,12 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The `DateTime` when the translation memory reindexing was performed.  <br> UTC Timezone  <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
             "nullable": true
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memories-filter"
+            }
           }
         },
         "required": [
@@ -32703,6 +32709,10 @@
                 "rejectedSignOff"
               ]
             }
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -32969,6 +32979,10 @@
         "properties": {
           "languageDirection": {
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -34828,6 +34842,21 @@
           "name",
           "expression"
         ]
+      },
+      "translation-memories-filter": {
+        "title": "Translation Memories Filter",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the filter, this should be used in the import/export TM request"
+          },
+          "filterExpression": {
+            "type": "string",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration) for more information."
+          }
+        }
       }
     },
     "parameters": {
