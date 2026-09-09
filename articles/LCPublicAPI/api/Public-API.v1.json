@@ -6763,7 +6763,7 @@
         ],
         "summary": "Export Project Files",
         "operationId": "ExportProjectFiles",
-        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](../api/Public-API.v1-fv.html#/operations/ExportProjectFilesStatus)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
+        "description": "Generates an asynchronous export operation. To monitor the progress until completion, use the [Poll Project Files Export](../api/Public-API.v1-fv.html#/operations/ExportProjectFilesStatus)  endpoint. \n\nThis operation triggers the packaging of the project files into a `zip` format.\n\n>  **WARNING** \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -6872,7 +6872,7 @@
         ],
         "summary": "Poll Project Files Export",
         "operationId": "ExportProjectFilesStatus",
-        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](../api/Public-API.v1-fv.html#/operations/DownloadFile).\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.",
+        "description": "Retrieves the state of the export operation. \n\n Once the state is marked as `done`, you can download the generated `zip` file using the following endpoint: [Download Exported Project Files](../api/Public-API.v1-fv.html#/operations/DownloadFile).\n\n> **WARNING** \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.",
         "responses": {
           "200": {
             "description": "OK",
@@ -10012,7 +10012,7 @@
             }
           }
         },
-        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](../api/Public-API.v1-fv.html#/operations/PollQuoteReportExport) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
+        "description": "Generates an asynchronous quote export operation for the project in either PDF or Excel format. Use the [polling endpoint](../api/Public-API.v1-fv.html#/operations/PollQuoteReportExport) to check when the export is completed.  <br><br>\nBuilt-in quotes are only available in the same languages as the user interface. See [this page](https://docs.rws.com/791595/1084405/trados-enterprise---accelerate/ui-languages) for more information. <br>\nCustomers who use non-default quote templates are responsible for the implementation of a suitable localization approach.\n\n> **WARNING** \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when this export operation is initiated (not when the underlying async operation completes). Ensure you poll and download the export within this timeframe, or you will receive a `404 Not Found` error.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -10120,7 +10120,7 @@
             }
           }
         },
-        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) once the status is \"completed\". The recommended polling interval is 20 seconds.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.\n\n> [!WARNING] \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.\n",
+        "description": "Polls a quote report via an export operation. The quote report can be [downloaded](../api/Public-API.v1-fv.html#/operations/DownloadQuoteReport) once the status is \"completed\". The recommended polling interval is 20 seconds.\n\nIf the `exportId` query parameter is not provided, the polling action will return the status for the last generated export.\n\n> **WARNING** \n> The export ID has a time-to-live (TTL) of 20 minutes, starting from when the export operation was initiated (not when the underlying async operation completes). If the TTL expires, this endpoint will return a `404 Not Found` error. Ensure you poll and download the export within this timeframe.\n",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
