@@ -4582,6 +4582,7 @@
     "/packages/export/{exportId}": {
       "get": {
         "summary": "Poll Export Package",
+        "operationId": "PollExportPackage",
         "tags": [
           "Package"
         ],
@@ -4682,6 +4683,7 @@
     "/packages/export/download/{exportId}": {
       "get": {
         "summary": "Download Exported Package",
+        "operationId": "DownloadExportedPackage",
         "tags": [
           "Package"
         ],
@@ -4897,6 +4899,7 @@
     "/packages/import/{importId}": {
       "get": {
         "summary": "Poll Import Package",
+        "operationId": "PollImportPackage",
         "tags": [
           "Package"
         ],
