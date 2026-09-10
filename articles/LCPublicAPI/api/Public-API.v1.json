@@ -23062,12 +23062,13 @@
           },
           "resourceType": {
             "type": "string",
-            "description": "The resource type to which this Custom Field can be applied.",
+            "description": "The resource type to which this Custom Field can be applied. `file` applies to both source and target files.",
             "enum": [
               "project",
               "customer",
               "vendor",
-              "vendorOrderTemplate"
+              "vendorOrderTemplate",
+              "file"
             ]
           },
           "isReadOnly": {
@@ -29687,6 +29688,13 @@
           "totalWords": {
             "type": "integer",
             "description": "Word count in the source file. \r\n</br>\r\nAvailable only for translatable source files, and only after the workflow task with Task Type `convert` (File Format Conversion) was executed on the source file.\r\n</br>\r\nAvailable only on the List Source Files endpoint."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field"
+            }
           }
         }
       },
@@ -29744,6 +29752,13 @@
               "minLength": 0,
               "maxLength": 200
             }
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom Field values to set on the file at creation time. Mandatory Custom Field definitions for the `file` resource type must be supplied.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
           }
         }
       },
@@ -29760,11 +29775,15 @@
             "type": "boolean",
             "default": false,
             "description": "Option for renaming also the target files."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the source file. Providing this list replaces all existing custom fields on the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
           }
-        },
-        "required": [
-          "name"
-        ]
+        }
       },
       "source-files-update-request": {
         "title": "Source Files Update Request",
@@ -29799,11 +29818,17 @@
             "type": "boolean",
             "default": false,
             "description": "Option for renaming the target files too."
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the source file. Providing this list replaces all existing custom fields on the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
           }
         },
         "required": [
-          "id",
-          "name"
+          "id"
         ]
       },
       "source-file-attachment-request": {
@@ -29890,6 +29915,13 @@
               "type": "string",
               "maxLength": 200,
               "minLength": 0
+            }
+          },
+          "customFields": {
+            "type": "array",
+            "description": "Custom Field values to set on the file at creation time. Mandatory Custom Field definitions for the `file` resource type must be supplied.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
             }
           }
         }
@@ -30747,6 +30779,13 @@
               "canceled"
             ],
             "nullable": true
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field"
+            }
           }
         },
         "required": [
@@ -30761,11 +30800,15 @@
             "type": "string",
             "description": "The name of the target file.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.",
             "minLength": 1
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the target file. Providing this list replaces all existing custom fields on the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
           }
-        },
-        "required": [
-          "name"
-        ]
+        }
       },
       "target-files-update-request": {
         "title": "Target Files Update Request",
@@ -30795,11 +30838,17 @@
             "type": "string",
             "description": "The target file name.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.",
             "minLength": 1
+          },
+          "customFields": {
+            "type": "array",
+            "description": "The Custom Fields of the target file. Providing this list replaces all existing custom fields on the file.",
+            "items": {
+              "$ref": "#/components/schemas/custom-field-request"
+            }
           }
         },
         "required": [
-          "id",
-          "name"
+          "id"
         ]
       },
       "target-file-version": {
@@ -35663,7 +35712,8 @@
             "project",
             "customer",
             "vendor",
-            "vendorOrderTemplate"
+            "vendorOrderTemplate",
+            "file"
           ]
         }
       },
