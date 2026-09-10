@@ -23095,7 +23095,7 @@
       "custom-field-request": {
         "title": "Custom Field Request",
         "type": "object",
-        "description": "A Custom Field model used at project creation or project update.",
+        "description": "A Custom Field value to set on a resource that supports Custom Fields (as defined by the Custom Field Definition's `resourceType`). If the applicable Custom Field Definition has `isMandatory` set to `true`, a value for it must be supplied when creating or updating the resource.",
         "properties": {
           "key": {
             "type": "string",
@@ -29691,7 +29691,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field"
             }
@@ -29755,7 +29754,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "Custom Field values to set on the file at creation time. Mandatory Custom Field definitions for the `file` resource type must be supplied.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -29778,7 +29776,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the source file. Providing this list replaces all existing custom fields on the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -29821,7 +29818,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the source file. Providing this list replaces all existing custom fields on the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -29919,7 +29915,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "Custom Field values to set on the file at creation time. Mandatory Custom Field definitions for the `file` resource type must be supplied.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -30782,7 +30777,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field"
             }
@@ -30803,7 +30797,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the target file. Providing this list replaces all existing custom fields on the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -30841,7 +30834,6 @@
           },
           "customFields": {
             "type": "array",
-            "description": "The Custom Fields of the target file. Providing this list replaces all existing custom fields on the file.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
