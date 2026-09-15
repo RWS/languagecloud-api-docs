@@ -5417,21 +5417,21 @@
         "x-examples": {
           "Example 1": {
             "internalId": 1234567,
+            "ownerType": "user",
             "accountUserId": "1234abcd5678efgh9012ijkl",
-            "accountId": "2345bcde6789fgha0123ijkl",
-            "accountName": "Test Account",
             "firstName": "First",
             "lastName": "Last",
             "userEmail": "user@example.com",
             "accountUserLocationId": "N/A",
             "membership": "ROLE",
-            "status": "STATUS",
-            "authorId": "1234abcd5678efgh9012ijkl",
             "creationDate": "2023-01-01T00:00:00Z",
             "lastModificationDate": "2023-01-01T00:00:00Z",
             "deletionDate": "9999-12-31T00:00:00Z",
             "vendorId": "3456cdef7890ghij1234klmn",
             "vendorName": "Vendor Name",
+            "groupId": "N/A",
+            "groupName": "N/A",
+            "groupDescription": "N/A",
             "deleted": false
           }
         },
@@ -5441,6 +5441,14 @@
           "internalId": {
             "type": "integer",
             "description": "A unique internal identifier for the translator."
+          },
+          "ownerType": {
+            "type": "string",
+            "description": "The type of owner for the translator, indicating whether the translator is a user or a group.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
           "accountUserId": {
             "type": "string",
@@ -5468,17 +5476,17 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date and time when the translator's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the translator's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
-            "description": "The date and time when the translator's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the translator's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date and time when the translator's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the translator's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "vendorId": {
@@ -5488,6 +5496,18 @@
           "vendorName": {
             "type": "string",
             "description": "The name of the vendor associated with the translator."
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The identifier for the group associated with the translator, if applicable."
+          },
+          "groupName": {
+            "type": "string",
+            "description": "The name of the group associated with the translator, if applicable."
+          },
+          "groupDescription": {
+            "type": "string",
+            "description": "A description of the group associated with the translator, if applicable."
           },
           "deleted": {
             "type": "boolean",
@@ -5500,21 +5520,21 @@
         "x-examples": {
           "Example 1": {
             "internalId": 1234567,
+            "ownerType": "user",
             "accountUserId": "1234abcd5678efgh9012ijkl",
-            "accountId": "2345bcde6789fgha0123ijkl",
-            "accountName": "Test Account",
             "firstName": "First",
             "lastName": "Last",
             "userEmail": "user@example.com",
             "accountUserLocationId": "N/A",
             "membership": "ROLE",
-            "status": "STATUS",
-            "authorId": "N/A",
             "creationDate": "2023-01-01T00:00:00Z",
             "lastModificationDate": "2024-01-01T00:00:00Z",
             "deletionDate": "9999-12-31T00:00:00Z",
             "vendorId": "N/A",
             "vendorName": "N/A",
+            "groupId": "N/A",
+            "groupName": "N/A",
+            "groupDescription": "N/A",
             "deleted": false
           }
         },
@@ -5524,6 +5544,14 @@
           "internalId": {
             "type": "integer",
             "description": "A unique internal identifier for the reviewer."
+          },
+          "ownerType": {
+            "type": "string",
+            "description": "The type of owner for the reviewer, indicating whether it is a user or a group.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
           "accountUserId": {
             "type": "string",
@@ -5551,17 +5579,17 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date and time when the reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
-            "description": "The date and time when the reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date and time when the reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "vendorId": {
@@ -5571,6 +5599,18 @@
           "vendorName": {
             "type": "string",
             "description": "The name of the vendor associated with the reviewer."
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The identifier for the group associated with the reviewer, if applicable."
+          },
+          "groupName": {
+            "type": "string",
+            "description": "The name of the group associated with the reviewer, if applicable."
+          },
+          "groupDescription": {
+            "type": "string",
+            "description": "A description of the group associated with the reviewer, if applicable."
           },
           "deleted": {
             "type": "boolean",
@@ -5583,19 +5623,19 @@
         "x-examples": {
           "Example 1": {
             "internalId": 1234567,
+            "ownerType": "user",
             "accountUserId": "1234abcd5678efgh9012ijkl",
-            "accountId": "2345bcde6789fgha0123ijkl",
-            "accountName": "Test Account",
             "firstName": "First",
             "lastName": "Last",
             "userEmail": "user@example.com",
             "accountUserLocationId": "N/A",
             "membership": "ROLE",
-            "status": "STATUS",
-            "authorId": "N/A",
             "creationDate": "2023-01-01T00:00:00Z",
             "lastModificationDate": "2024-01-01T00:00:00Z",
             "deletionDate": "9999-12-31T00:00:00Z",
+            "groupId": "N/A",
+            "groupName": "N/A",
+            "groupDescription": "N/A",
             "deleted": false
           }
         },
@@ -5605,6 +5645,14 @@
           "internalId": {
             "type": "integer",
             "description": "A unique internal identifier for the customer reviewer."
+          },
+          "ownerType": {
+            "type": "string",
+            "description": "The type of owner for the customer reviewer, indicating whether it is a user or a group.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
           "accountUserId": {
             "type": "string",
@@ -5632,18 +5680,30 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date and time when the customer reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the customer reviewer's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
-            "description": "The date and time when the customer reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the customer reviewer's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date and time when the customer reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the customer reviewer's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The identifier for the group associated with the customer reviewer, if applicable."
+          },
+          "groupName": {
+            "type": "string",
+            "description": "The name of the group associated with the customer reviewer, if applicable."
+          },
+          "groupDescription": {
+            "type": "string",
+            "description": "The description of the group associated with the customer reviewer, if applicable."
           },
           "deleted": {
             "type": "boolean",
@@ -5908,21 +5968,21 @@
         "x-examples": {
           "Example 1": {
             "internalId": 1234567,
+            "ownerType": "user",
             "accountUserId": "1234abcd5678efgh9012ijkl",
-            "accountId": "2345bcde6789fgha0123ijkl",
-            "accountName": "Test Account",
             "firstName": "First",
             "lastName": "Last",
             "userEmail": "user@example.com",
             "accountUserLocationId": "N/A",
             "membership": "ROLE",
-            "status": "STATUS",
-            "authorId": "N/A",
             "creationDate": "2023-01-01T00:00:00Z",
             "lastModificationDate": "2024-01-01T00:00:00Z",
             "deletionDate": "9999-12-31T00:00:00Z",
             "vendorId": "N/A",
             "vendorName": "N/A",
+            "groupId": "N/A",
+            "groupName": "N/A",
+            "groupDescription": "N/A",
             "deleted": false
           }
         },
@@ -5931,6 +5991,14 @@
           "internalId": {
             "type": "integer",
             "description": "A unique internal identifier for the task owner."
+          },
+          "ownerType": {
+            "type": "string",
+            "description": "The type of owner, which can be either 'user' or 'group'.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
           "accountUserId": {
             "type": "string",
@@ -5958,17 +6026,17 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date and time when the task owner's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the task owner's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
-            "description": "The date and time when the task owner's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the task owner's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date and time when the task owner's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the task owner's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "vendorId": {
@@ -5978,6 +6046,18 @@
           "vendorName": {
             "type": "string",
             "description": "The name of the vendor associated with the task owner."
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The identifier for the group associated with the task owner, if applicable."
+          },
+          "groupName": {
+            "type": "string",
+            "description": "The name of the group associated with the task owner, if applicable."
+          },
+          "groupDescription": {
+            "type": "string",
+            "description": "The description of the group associated with the task owner, if applicable."
           },
           "deleted": {
             "type": "boolean",
@@ -6293,21 +6373,21 @@
         "x-examples": {
           "Example 1": {
             "internalId": 1234567,
+            "ownerType": "user",
             "accountUserId": "1234abcd5678efgh9012ijkl",
-            "accountId": "2345bcde6789fgha0123ijkl",
-            "accountName": "Test Account",
             "firstName": "First",
             "lastName": "Last",
             "userEmail": "user@example.com",
             "accountUserLocationId": "N/A",
             "membership": "ROLE",
-            "status": "STATUS",
-            "authorId": "N/A",
             "creationDate": "2023-01-01T00:00:00Z",
             "lastModificationDate": "2024-01-01T00:00:00Z",
             "deletionDate": "9999-12-31T00:00:00Z",
             "vendorId": "N/A",
             "vendorName": "N/A",
+            "groupId": "N/A",
+            "groupName": "N/A",
+            "groupDescription": "N/A",
             "deleted": false
           }
         },
@@ -6316,6 +6396,14 @@
           "internalId": {
             "type": "integer",
             "description": "A unique internal identifier for the linguist."
+          },
+          "ownerType": {
+            "type": "string",
+            "description": "The type of owner, which can be either 'user' or 'group'.",
+            "enum": [
+              "user",
+              "group"
+            ]
           },
           "accountUserId": {
             "type": "string",
@@ -6343,17 +6431,17 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date and time when the linguist's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the linguist's account was created. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "lastModifiedAt": {
             "type": "string",
-            "description": "The date and time when the linguist's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the linguist's account was last modified. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date and time when the linguist's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format.",
+            "description": "The date and time when the linguist's account was deleted, if applicable. Timestamp with 'YYYY-MM-DDTHH:MM:SSZ' format. '2499-12-31T00:00:00Z' for groups.",
             "format": "date-time"
           },
           "vendorId": {
@@ -6363,6 +6451,18 @@
           "vendorName": {
             "type": "string",
             "description": "The name of the vendor associated with the linguist."
+          },
+          "groupId": {
+            "type": "string",
+            "description": "The identifier for the group associated with the linguist, if applicable."
+          },
+          "groupName": {
+            "type": "string",
+            "description": "The name of the group associated with the linguist, if applicable."
+          },
+          "groupDescription": {
+            "type": "string",
+            "description": "The description of the group associated with the linguist, if applicable."
           },
           "deleted": {
             "type": "boolean",
