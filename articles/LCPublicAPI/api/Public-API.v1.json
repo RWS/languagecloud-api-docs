@@ -30833,6 +30833,10 @@
           "originatingTaskId": {
             "type": "string",
             "description": "The identifier of the task that generated the file."
+          },
+          "verification": {
+            "$ref": "#/components/schemas/verification",
+            "description": "The verification result of the target file version. Only available after the file has gone through the Automated QA Check workflow step."
           }
         },
         "required": [
@@ -34664,6 +34668,99 @@
             "description": "Custom field values to associate with the vendor. Use the [List Custom Field Definitions](#/operations/ListCustomFields) endpoint with `location` set to the vendor's folder identifier and `resourceType=vendor` to retrieve applicable definitions.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
+            }
+          }
+        }
+      },
+      "verification-message-location": {
+        "title": "Verification Message Location",
+        "type": "object",
+        "description": "The location of a verification message within a segment.",
+        "properties": {
+          "fromLocation": {
+            "type": "integer",
+            "description": "The starting position of the message location."
+          },
+          "toLocation": {
+            "type": "integer",
+            "description": "The ending position of the message location."
+          }
+        }
+      },
+      "verification-message": {
+        "title": "Verification Message",
+        "type": "object",
+        "description": "A verification message.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the verification message."
+          },
+          "messageType": {
+            "type": "string",
+            "description": "The type of the verification message."
+          },
+          "level": {
+            "type": "string",
+            "description": "The severity level of the verification message.",
+            "enum": [
+              "Error",
+              "Warning",
+              "Note"
+            ]
+          },
+          "verifier": {
+            "type": "string",
+            "description": "The verifier that produced the message."
+          },
+          "isIgnored": {
+            "type": "boolean",
+            "description": "Indicates whether the message is ignored."
+          },
+          "ignoredSource": {
+            "type": "string",
+            "description": "Indicates how the message came to be ignored.",
+            "enum": [
+              "None",
+              "ByMessageType",
+              "ByMessageId"
+            ]
+          },
+          "location": {
+            "$ref": "#/components/schemas/verification-message-location"
+          },
+          "errorArguments": {
+            "type": "array",
+            "description": "The arguments associated with the message.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isSource": {
+            "type": "boolean",
+            "description": "Indicates whether the message applies to the source segment."
+          },
+          "tagId": {
+            "type": "string",
+            "description": "The identifier of the tag the message relates to, if applicable."
+          },
+          "segmentId": {
+            "type": "string",
+            "description": "The identifier of the segment the message relates to."
+          }
+        }
+      },
+      "verification": {
+        "title": "Verification",
+        "type": "object",
+        "description": "The verification result of a target file version.",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verification messages.</div> ",
+            "x-default-field": true,
+            "items": {
+              "$ref": "#/components/schemas/verification-message"
             }
           }
         }
