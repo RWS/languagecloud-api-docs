@@ -8825,7 +8825,7 @@
             "$ref": "#/components/parameters/fields"
           },
           {
-            "$ref": "#/components/parameters/culture"
+            "$ref": "#/components/parameters/languageCode"
           }
         ],
         "responses": {
@@ -8937,7 +8937,7 @@
             "$ref": "#/components/parameters/fields"
           },
           {
-            "$ref": "#/components/parameters/culture"
+            "$ref": "#/components/parameters/languageCode"
           }
         ],
         "responses": {
@@ -35708,10 +35708,10 @@
           "type": "string"
         }
       },
-      "culture": {
-        "name": "culture",
+      "languageCode": {
+        "name": "languageCode",
         "in": "query",
-        "description": "The culture used to localize the verification message text when it is requested via the 'fields' query parameter. Defaults to \"en-US\" when omitted. If the requested culture is not recognized, the response falls back to \"en-US\".",
+        "description": "The language code used to localize the verification message text when it is requested via the 'fields' query parameter. The only supported values are \"en-US\" (default), \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\". Defaults to \"en-US\" when omitted. If the requested language code is not one of the supported values, the response falls back to \"en-US\".",
         "schema": {
           "type": "string",
           "default": "en-US"
