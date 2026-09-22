@@ -34691,10 +34691,6 @@
             "type": "string",
             "description": "The localized friendly name of the message type."
           },
-          "category": {
-            "type": "string",
-            "description": "The localized category of the message type."
-          },
           "verifier": {
             "type": "string",
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verifier that produced the message.</div> ",
