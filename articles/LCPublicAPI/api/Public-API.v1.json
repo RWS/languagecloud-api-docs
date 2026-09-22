@@ -34672,153 +34672,46 @@
           }
         }
       },
-      "verification-message-location": {
-        "title": "Verification Message Location",
-        "type": "object",
-        "description": "The location of a verification message within a segment.",
-        "properties": {
-          "fromLocation": {
-            "type": "integer",
-            "description": "The starting position of the message location."
-          },
-          "toLocation": {
-            "type": "integer",
-            "description": "The ending position of the message location."
-          }
-        }
-      },
       "verification-message": {
         "title": "Verification Message",
         "type": "object",
         "description": "A verification message.",
         "properties": {
-          "id": {
-            "type": "string",
-            "description": "The unique identifier of the verification message."
-          },
           "messageType": {
             "type": "string",
-            "description": "The type of the verification message.",
-            "enum": [
-              "unsupportedType",
-              "wordListCheck",
-              "reportAllNonExcluded",
-              "reportUntranslatedSegment",
-              "tradeMarkMissing",
-              "tradeMarkExtra",
-              "identicalSegment",
-              "segmentShorter",
-              "segmentLonger",
-              "forbiddenChar",
-              "duplicatedWord",
-              "uneditedMatch",
-              "lengthLimitationFixed",
-              "lengthLimitationContextLong",
-              "lengthLimitationContextShort",
-              "punctuationDifferences",
-              "spanishPunctuation",
-              "punctuationSpace",
-              "punctuationSpaceFrench",
-              "multipleSpaces",
-              "multipleDots",
-              "extraEndSpace",
-              "initialCaps",
-              "globalCaps",
-              "openingBracketMissing",
-              "openingBracketExtra",
-              "closingBracketMissing",
-              "closingBracketExtra",
-              "regExReport",
-              "regExReportSourceOnly",
-              "regExReportTargetOnly",
-              "regExReportGroupedTargetOnly",
-              "regExReportGroupedBoth",
-              "numberMissing",
-              "timeMissing",
-              "dateMissing",
-              "measurementMissing",
-              "numberExtra",
-              "timeExtra",
-              "dateExtra",
-              "measurementExtra",
-              "tagPairAdded",
-              "lockedContentExtra",
-              "tagAdded",
-              "tagPairDeleted",
-              "lockedContentNotCopied",
-              "tagDeleted",
-              "spaceBeforeTagPairAdded",
-              "spaceBeforeTagPairRemoved",
-              "spaceBeforeTagAdded",
-              "spaceBeforeTagRemoved",
-              "spaceAfterTagPairAdded",
-              "spaceAfterTagPairRemoved",
-              "spaceAfterTagAdded",
-              "spaceAfterTagRemoved",
-              "spaceAfterStartTagPairAdded",
-              "spaceAfterStartTagPairRemoved",
-              "spaceBeforeEndTagPairAdded",
-              "spaceBeforeEndTagPairRemoved",
-              "tagsMoved",
-              "inconsistentTranslation",
-              "customType",
-              "missingTargetTermInTB",
-              "missingTargetTermHomonym",
-              "sourceTermOccurenceMissingInTarget",
-              "missingTargetTerm",
-              "forbiddenUsageTerm",
-              "unsupportedLanguageInTB",
-              "nativeXMLValidation",
-              "nativeXMLVrpValidation"
-            ]
+            "description": "The type of the verification message."
           },
-          "level": {
+          "friendlyName": {
             "type": "string",
-            "description": "The severity level of the verification message.",
-            "enum": [
-              "error",
-              "warning",
-              "note"
-            ]
+            "description": "The localized friendly name of the message type."
+          },
+          "category": {
+            "type": "string",
+            "description": "The localized category of the message type."
           },
           "verifier": {
             "type": "string",
-            "description": "The verifier that produced the message."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verifier that produced the message.</div> ",
+            "x-default-field": true
           },
-          "isIgnored": {
-            "type": "boolean",
-            "description": "Indicates whether the message is ignored."
-          },
-          "ignoredSource": {
+          "errorMessage": {
             "type": "string",
-            "description": "Indicates how the message came to be ignored.",
-            "enum": [
-              "none",
-              "byMessageType",
-              "byMessageId"
-            ]
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
           },
-          "location": {
-            "$ref": "#/components/schemas/verification-message-location"
-          },
-          "errorArguments": {
-            "type": "array",
-            "description": "The arguments associated with the message.",
-            "items": {
-              "type": "string"
-            }
-          },
-          "isSource": {
-            "type": "boolean",
-            "description": "Indicates whether the message applies to the source segment."
-          },
-          "tagId": {
+          "detailedErrorMessage": {
             "type": "string",
-            "description": "The identifier of the tag the message relates to, if applicable."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized detailed error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
+          },
+          "suggestion": {
+            "type": "string",
+            "description": "The localized suggestion for resolving the message."
           },
           "segmentId": {
             "type": "string",
-            "description": "The identifier of the segment the message relates to."
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The identifier of the segment the message relates to.</div> ",
+            "x-default-field": true
           }
         }
       },
