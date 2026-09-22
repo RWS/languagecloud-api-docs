@@ -35715,7 +35715,7 @@
       "culture": {
         "name": "culture",
         "in": "query",
-        "description": "The culture used to localize the verification message type text (\"friendlyName\", \"category\", \"errorMessage\", \"detailedErrorMessage\", \"suggestion\") returned when \"verification.messages\" is requested via the 'fields' query parameter. Defaults to \"en-US\" when omitted. If the requested culture is not recognized, the response falls back to \"en-US\".",
+        "description": "The culture used to localize the verification message text when it is requested via the 'fields' query parameter. Defaults to \"en-US\" when omitted. If the requested culture is not recognized, the response falls back to \"en-US\".",
         "schema": {
           "type": "string",
           "default": "en-US"
