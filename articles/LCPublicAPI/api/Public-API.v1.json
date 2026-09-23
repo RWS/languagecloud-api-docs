@@ -8823,9 +8823,6 @@
           },
           {
             "$ref": "#/components/parameters/fields"
-          },
-          {
-            "$ref": "#/components/parameters/languageCode"
           }
         ],
         "responses": {
@@ -8919,6 +8916,118 @@
         }
       ]
     },
+    "/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/verification-messages": {
+      "get": {
+        "tags": [
+          "Target File"
+        ],
+        "summary": "Get Verification Messages",
+        "description": "Retrieves the verification messages of a target file version. Verification messages are only available after the file has gone through the Automated QA Check workflow step; otherwise an empty list is returned.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/languageCode"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/verification"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the project, the target file or its version could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "GetVerificationMessages"
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        },
+        {
+          "$ref": "#/components/parameters/targetFileId"
+        },
+        {
+          "$ref": "#/components/parameters/fileVersionId"
+        }
+      ]
+    },
     "/projects/{projectId}/target-files/{targetFileId}/versions": {
       "get": {
         "tags": [
@@ -8935,9 +9044,6 @@
           },
           {
             "$ref": "#/components/parameters/fields"
-          },
-          {
-            "$ref": "#/components/parameters/languageCode"
           }
         ],
         "responses": {
@@ -30839,10 +30945,6 @@
           "originatingTaskId": {
             "type": "string",
             "description": "The identifier of the task that generated the file."
-          },
-          "verification": {
-            "$ref": "#/components/schemas/verification",
-            "description": "The verification result of the target file version. Only available after the file has gone through the Automated QA Check workflow step."
           }
         },
         "required": [
@@ -35711,7 +35813,7 @@
       "languageCode": {
         "name": "languageCode",
         "in": "query",
-        "description": "Only applicable when 'verification' is included via the 'fields' query parameter (e.g. 'fields=verification'); ignored otherwise. The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\"; any unrecognized value, or omitting this parameter, falls back to \"en-US\".",
+        "description": "The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\".",
         "schema": {
           "type": "string",
           "default": "en-US"
