@@ -34796,8 +34796,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "description": "The verification message identifier.",
-            "x-default-field": true
+            "description": "The verification message identifier."
           },
           "messageType": {
             "type": "string",
