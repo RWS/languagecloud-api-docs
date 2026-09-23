@@ -8935,6 +8935,15 @@
           },
           {
             "$ref": "#/components/parameters/languageCode"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/includeIgnored"
           }
         ],
         "responses": {
@@ -8943,7 +8952,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/verification"
+                  "$ref": "#/components/schemas/list-verification-messages-response"
                 }
               }
             },
@@ -34785,6 +34794,11 @@
         "type": "object",
         "description": "A verification message.",
         "properties": {
+          "id": {
+            "type": "string",
+            "description": "The verification message identifier.",
+            "x-default-field": true
+          },
           "messageType": {
             "type": "string",
             "description": "The type of the verification message."
@@ -34817,22 +34831,30 @@
             "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The identifier of the segment the message relates to.</div> ",
             "x-default-field": true
           }
-        }
+        },
+        "required": [
+          "id"
+        ]
       },
-      "verification": {
-        "title": "Verification",
+      "list-verification-messages-response": {
+        "title": "List Verification Messages Response",
         "type": "object",
-        "description": "The verification result of a target file version.",
+        "description": "A response for the Get Verification Messages endpoint.",
         "properties": {
-          "messages": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
             "type": "array",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verification messages.</div> ",
-            "x-default-field": true,
             "items": {
               "$ref": "#/components/schemas/verification-message"
             }
           }
-        }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ]
       },
       "volume-unit-type": {
         "title": "Volume Unit Type",
@@ -35765,6 +35787,15 @@
           "type": "integer",
           "minimum": 0,
           "default": 0
+        }
+      },
+      "includeIgnored": {
+        "name": "includeIgnored",
+        "in": "query",
+        "description": "When false, excludes verification messages that have been marked as ignored. Defaults to true.",
+        "schema": {
+          "type": "boolean",
+          "default": true
         }
       },
       "location": {
