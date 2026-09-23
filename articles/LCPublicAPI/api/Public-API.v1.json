@@ -35711,7 +35711,7 @@
       "languageCode": {
         "name": "languageCode",
         "in": "query",
-        "description": "The language code used to localize the verification message text when it is requested via the 'fields' query parameter. The only supported values are \"en-US\" (default), \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\". Defaults to \"en-US\" when omitted. If the requested language code is not one of the supported values, the response falls back to \"en-US\".",
+        "description": "Only applicable when 'verification' is included via the 'fields' query parameter (e.g. 'fields=verification'); ignored otherwise. The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\"; any unrecognized value, or omitting this parameter, falls back to \"en-US\".",
         "schema": {
           "type": "string",
           "default": "en-US"
