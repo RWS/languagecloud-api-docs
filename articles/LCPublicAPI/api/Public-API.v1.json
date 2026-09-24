@@ -8916,6 +8916,127 @@
         }
       ]
     },
+    "/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/verification-messages": {
+      "get": {
+        "tags": [
+          "Target File"
+        ],
+        "summary": "Get Verification Messages",
+        "description": "Retrieves the verification messages of a target file version. Verification messages are only available after the file has gone through the Automated QA Check workflow step; otherwise an empty list is returned.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/verificationMessagesLanguageCode"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/includeIgnored"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-verification-messages-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the project, the target file or its version could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "GetVerificationMessages"
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        },
+        {
+          "$ref": "#/components/parameters/targetFileId"
+        },
+        {
+          "$ref": "#/components/parameters/fileVersionId"
+        }
+      ]
+    },
     "/projects/{projectId}/target-files/{targetFileId}/versions": {
       "get": {
         "tags": [
@@ -34668,6 +34789,72 @@
           }
         }
       },
+      "verification-message": {
+        "title": "Verification Message",
+        "type": "object",
+        "description": "A verification message.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The verification message identifier."
+          },
+          "messageType": {
+            "type": "string",
+            "description": "The type of the verification message."
+          },
+          "friendlyName": {
+            "type": "string",
+            "description": "The localized friendly name of the message type."
+          },
+          "verifier": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verifier that produced the message.</div> ",
+            "x-default-field": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
+          },
+          "detailedErrorMessage": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized detailed error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
+          },
+          "suggestion": {
+            "type": "string",
+            "description": "The localized suggestion for resolving the message."
+          },
+          "segmentId": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The identifier of the segment the message relates to.</div> ",
+            "x-default-field": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "list-verification-messages-response": {
+        "title": "List Verification Messages Response",
+        "type": "object",
+        "description": "A response for the Get Verification Messages endpoint.",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/verification-message"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ]
+      },
       "volume-unit-type": {
         "title": "Volume Unit Type",
         "type": "string",
@@ -35601,6 +35788,15 @@
           "default": 0
         }
       },
+      "includeIgnored": {
+        "name": "includeIgnored",
+        "in": "query",
+        "description": "When false, excludes verification messages that have been marked as ignored. Defaults to true.",
+        "schema": {
+          "type": "boolean",
+          "default": true
+        }
+      },
       "location": {
         "name": "location",
         "in": "query",
@@ -35642,6 +35838,15 @@
         "description": "A comma separated list of fields to include in the response.\n        Every value in the list should either consist of a top-level property name (excluding the items envelope for endpoints returning lists) or refer to a property of a top-level property of type object, in the following form: \"toplevelpropertyname.subpropertyname\".\n        When this query parameter is omitted, default resource representations are returned (excluding fields marked as optional). The same applies to nested objects when just specifying the top-level property name, without explicitly listing sub-property names. When specifying the fields query parameter, only the specified fields are returned.\n        The id property is always returned.",
         "schema": {
           "type": "string"
+        }
+      },
+      "verificationMessagesLanguageCode": {
+        "name": "languageCode",
+        "in": "query",
+        "description": "The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\".",
+        "schema": {
+          "type": "string",
+          "default": "en-US"
         }
       },
       "email": {
