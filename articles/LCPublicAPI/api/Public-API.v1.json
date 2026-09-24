@@ -8934,7 +8934,7 @@
             "$ref": "#/components/parameters/fields"
           },
           {
-            "$ref": "#/components/parameters/languageCode"
+            "$ref": "#/components/parameters/verificationMessagesLanguageCode"
           },
           {
             "$ref": "#/components/parameters/top"
@@ -35840,7 +35840,7 @@
           "type": "string"
         }
       },
-      "languageCode": {
+      "verificationMessagesLanguageCode": {
         "name": "languageCode",
         "in": "query",
         "description": "The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\".",
