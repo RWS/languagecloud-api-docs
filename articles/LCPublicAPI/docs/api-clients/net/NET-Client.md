@@ -5,7 +5,7 @@
 It is built on .NET Standard 2.0. For compatibility information, see the [Microsoft implementation support page](https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-0#net-implementation-support).
 
 > [!NOTE]
->  The .NET Client library is auto-generated from the current API contracts, so any updates to the contract will reflect as changes in the SDK client. Minor version increases do not guarantee backwards compatibility.
+> The .NET Client library is auto-generated from the current API contracts, so any updates to the contract will reflect as changes in the SDK client. Minor version increases do not guarantee backwards compatibility.
 
 ## Installation
 
@@ -20,6 +20,7 @@ We will take the project creation flow as an example to show how the API clients
 ```csharp
 using Rws.LanguageCloud.Sdk;
 ```
+
 #### 2. Get a new Project client:
 
 First step is to get an instance of `LanguageCloudClientProvider`. The constructor has 2 optional parameters `region` and `baseUrl`. When using the constructor with no parameters, the provider will be instantiated for the `eu` region. Any clients created by this instance will be calling on the EU region. If you need to specify a different region, instantiate it with the `region` specified. Region is specified by it's code, ex: `eu`, `ca`, etc, 
@@ -28,20 +29,23 @@ The second optional parameter `baseUrl` is used if you want to test the client w
 
 You can request a new API client from the `LanguageCloudClientProvider` instance. There are 3 methods exposed for each client:
 
-  - ```csharp 
+- ```csharp
     GetProjectClient (ServiceCredentials credentials, params DelegatingHandler[] handlers)
-  This method accepts a `ServiceCredentials` object which will be used to perform authentication using an implicit authentication handler. Custom handlers are also accepted.
 
-  - ```csharp 
+This method accepts a `ServiceCredentials` object which will be used to perform authentication using an implicit authentication handler. Custom handlers are also accepted.
+
+- ```csharp
     GetProjectClientNoAuth (params DelegatingHandler[] handlers) 
-  This method accepts custom handlers and does not perform any authentication implicitly. You must handle authentication in a custom handler when using this method.
 
-  - ```csharp 
-    GetProjectClient (params DelegatingHandler[] handlers)`
-  This method accepts custom handlers and can be used to authenticate using scoping/context.
+This method accepts custom handlers and does not perform any authentication implicitly. You must handle authentication in a custom handler when using this method.
+
+- ```csharp
+    GetProjectClient (params DelegatingHandler[] handlers)
+
+This method accepts custom handlers and can be used to authenticate using scoping/context.
 
 > [!WARNING]
->  On each call to GetProjectClient or GetProjectClientNoAuth a new instance is created. That means a new HttpClient for each one. You should avoid having more than one instance - and should share that using Dependency Injection or other mechanisms.
+> On each call to GetProjectClient or GetProjectClientNoAuth a new instance is created. That means a new HttpClient for each one. You should avoid having more than one instance - and should share that using Dependency Injection or other mechanisms.
 
 In this example we will use the credentials options to get a new Project Client and we won't supply any additional handlers:
 
@@ -75,7 +79,6 @@ var projectCreateRequest = new ProjectCreateRequest
 var projectCreateResponse = await projectClient.CreateProjectAsync(projectCreateRequest);
 ```
 
-
 #### 4. Attach a source file to the project via the SourceFiles client:
 
 Projects that do not contain source files cannot be started.
@@ -92,6 +95,7 @@ var clientProvider = new LanguageCloudClientProvider("eu");
 // instantiate the client
 var sourceFileClient = clientProvider.GetSourceFileClient(credentials);
 ```
+
 Then, attach a source file to the project:
 
 ```csharp
@@ -118,6 +122,7 @@ await projectClient.StartProjectAsync("YOUR_PROJECT_ID");
 ```
 
 #### 6. `GET` the project details using the Project client:
+
 ```csharp
 var myProject = await projectClient.GetProjectAsync("YOUR_PROJECT_ID");
 ```
@@ -142,22 +147,21 @@ When using `GetProjectClient` with `ServiceCredentials`, the client handles toke
 > [!WARNING]
 > While the SDK handles token management, you still need to handle [API rate limits](../../../docs/API-rate-limits.md) and implement proper handling for HTTP 429 (Too Many Requests) responses. See the [Implementation recommendations](../../../docs/API-rate-limits.md#implementation-recommendations) for guidance.
 
-
 ## Error handling
-The SDK may throw the following exceptions: 
 
-Exception Type | Exception description 
----------|----------
-**ModelDeserializationException** | Response could not be deserialized 
-**ApiUnauthorizedException** | The user could not be identified 
-**ApiPermissionException** | The user does not have permission to access this resource 
-**ApiForbiddenException** | The user does not have access to the resource 
-**ApiErrorException** | Something went wrong when performing the action 
-**ApiConnectionException** | Something went wrong when connecting to the server 
-**[TaskCanceledException](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskcanceledexception?view=netstandard-2.0)** | A timeout occurred. This exception is provided by Microsoft in System.Threading.Tasks namespace.
+The SDK may throw the following exceptions:
 
-All these exceptions inherit from `ApiClientException` and provide an `ApiErrorResponse` object which contains details about the error that occurred. 
-You may use this object in combination with the ErrorCode class to perform exception handling:
+| Exception Type | Exception description |
+| --------- | ---------- |
+| **ModelDeserializationException** | Response could not be deserialized |
+| **ApiUnauthorizedException** | The user could not be identified |
+| **ApiPermissionException** | The user does not have permission to access this resource |
+| **ApiForbiddenException** | The user does not have access to the resource |
+| **ApiErrorException** | Something went wrong when performing the action |
+| **ApiConnectionException** | Something went wrong when connecting to the server |
+| **[TaskCanceledException](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.taskcanceledexception?view=netstandard-2.0)** | A timeout occurred. This exception is provided by Microsoft in System.Threading.Tasks namespace. |
+
+All these exceptions inherit from `ApiClientException` and provide an `ApiErrorResponse` object which contains details about the error that occurred. You may use this object in combination with the ErrorCode class to perform exception handling:
 
 ```csharp
 try
@@ -186,9 +190,76 @@ catch (ApiErrorException e) where (e.ApiError.ErrorCode == ErrorCodes.MaxSize)
     }
 }
 ```
-Additionally, the `ApiErrorResponse.Details` object contains specific error data that may be useful. 
 
+Additionally, the `ApiErrorResponse.Details` object contains specific error data that may be useful. 
 
 ### Error Codes
 
 The `ErrorCodes` static class provides a series of constant strings suitable to be used for error code validation. Please check the Rest API documentation for specific codes any endpoint may return and what that value means in the specific context.
+
+## Handling Rate Limiting Errors
+
+Though there is no dedicated exception for rate limiting errors, you can still handle these by catching the `ApiErrorException` and checking the `StatusCode == 429`. Further you can check the `X-RateLimit-Limit` and the `X-RateLimit-Reset` headers to check which limit has been hit and when it resets so you can gracefully delay your requests until the reset time.
+
+See this very simple example, that is intended to make it clear how to catch and read relevant data:
+
+```csharp
+try
+{
+    await projectClient.GetProjectAsync("YOUR_PROJECT_ID");
+}
+catch (ApiErrorException e) when (e.StatusCode == 429)
+{
+    e.XHeaders?.TryGetValue("X-RateLimit-Limit", out var limitValues);
+    e.XHeaders?.TryGetValue("X-RateLimit-Reset", out var resetValues);
+
+    string limit = limitValues?.FirstOrDefault();
+    string reset = resetValues?.FirstOrDefault();
+
+    if (DateTimeOffset.TryParse(reset, out var resetTime))
+    {
+        TimeSpan delay = resetTime - DateTimeOffset.UtcNow;
+
+        if (delay > TimeSpan.Zero)
+        {
+            await Task.Delay(delay);
+        }
+
+        await projectClient.GetProjectAsync("YOUR_PROJECT_ID");
+    }
+    else
+    {
+        throw;
+    }
+}
+```
+
+If you are using [Polly](https://www.nuget.org/packages/Polly), you can wrap the call in a retry policy:
+
+```csharp
+using Polly;
+
+AsyncRetryPolicy retryPolicy = Policy
+    .Handle<ApiErrorException>(e => e.StatusCode == 429)
+    .WaitAndRetryAsync(
+        retryCount: 3,
+        sleepDurationProvider: (retryAttempt, exception, context) =>
+        {
+            if (exception is ApiErrorException apiError &&
+                apiError.XHeaders?.TryGetValue("X-RateLimit-Reset", out var resetValues) == true &&
+                DateTimeOffset.TryParse(resetValues.FirstOrDefault(), out var resetTime))
+            {
+                TimeSpan delay = resetTime - DateTimeOffset.UtcNow;
+
+                if (delay > TimeSpan.Zero)
+                {
+                    return delay;
+                }
+            }
+
+            return TimeSpan.FromSeconds(Math.Min(retryAttempt * 2, 30));
+        });
+
+var project = await retryPolicy.ExecuteAsync(
+    () => projectClient.GetProjectAsync("YOUR_PROJECT_ID"));
+```
