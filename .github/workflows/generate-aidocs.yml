@@ -1,0 +1,180 @@
+name: Generate AI Docs
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Triggers
+# ──────────────────────────────────────────────────────────────────────────────
+on:
+  workflow_dispatch:
+    inputs:
+      base_branch:
+        description: 'Base branch for the AI docs review PR (default: main)'
+        required: false
+        default: main
+        type: string
+      release_name:
+        description: 'Optional release label used in the review branch name (example: 2026.09.R1.PublicAPIService.docs)'
+        required: false
+        type: string
+      force_regenerate:
+        description: 'Force a full regeneration of the AI docs'
+        required: false
+        type: boolean
+        default: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Jobs
+# ──────────────────────────────────────────────────────────────────────────────
+jobs:
+  generate-aidocs:
+    name: Generate AI Docs review branch
+    runs-on: windows-latest
+    permissions:
+      contents: write   # push the review branch only; this workflow never creates PRs or merges
+
+    steps:
+      # ── 1. Checkout the release/base branch ─────────────────────────────────
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.base_branch || 'main' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Resolve branch metadata ───────────────────────────────────────────
+      - name: Resolve review metadata
+        id: meta
+        shell: pwsh
+        run: |
+          $base = '${{ inputs.base_branch }}'
+          if ([string]::IsNullOrWhiteSpace($base)) { $base = 'main' }
+
+          $label = '${{ inputs.release_name }}'
+          if ([string]::IsNullOrWhiteSpace($label)) {
+            $label = "auto-$([DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss'))"
+          }
+
+          $branch = "ai-docs/$label"
+
+          "base=$base" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "branch=$branch" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          "label=$label" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+          Write-Host "Base branch : $base"
+          Write-Host "Review branch: $branch"
+
+      # ── 3. Create the AI docs review branch from the chosen base ────────────
+      - name: Create AI docs review branch
+        shell: pwsh
+        run: |
+          git checkout ${{ steps.meta.outputs.base }}
+          git checkout -B "${{ steps.meta.outputs.branch }}"
+
+      # ── 4. Download required tooling and SDK artifacts ───────────────────────
+      - name: Download C2M4AI
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path tools | Out-Null
+          .\scripts\ai-docs-scripts\Get-C2M4AI.ps1 -OutputPath tools\C2M4AI.exe
+
+      - name: Download .NET SDK XML documentation
+        shell: pwsh
+        run: .\scripts\ai-docs-scripts\Get-DotNetSdkXml.ps1 -OutputPath tools\Rws.LanguageCloud.Sdk.xml
+
+      - name: Download Java SDK sources
+        shell: pwsh
+        run: .\scripts\ai-docs-scripts\Get-JavaSdkSources.ps1 -OutputDir tools\java-api
+
+      # ── 5. Run the AI Docs Pipeline on the review branch ────────────────────
+      - name: Run AI Docs Pipeline
+        shell: pwsh
+        run: |
+          $params = @{ RootDir = '.' }
+
+          if ('${{ inputs.force_regenerate }}' -eq 'true') {
+            $params.All = $true
+            $params.Force = $true
+          } else {
+            $params.All = $true
+          }
+
+          .\scripts\ai-docs-scripts\Invoke-AiDocsPipeline.ps1 @params
+
+      # ── 6. Commit generated AI docs to the review branch ────────────────────
+      - name: Commit AI docs changes
+        id: commit
+        shell: pwsh
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
+
+          git add articles/LCPublicAPI/aidocs/
+          $staged = git diff --cached --stat
+
+          if ($staged) {
+            git commit -m "docs: regenerate AI docs ${{ steps.meta.outputs.label }} [skip ci]"
+            "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            Write-Host "AI docs branch updated with generated changes." -ForegroundColor Green
+          } else {
+            "changed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            Write-Host "No AI docs changes were generated. Nothing to push." -ForegroundColor DarkGray
+          }
+
+      # ── 7. Push the review branch (no PR, no merge — a human does both) ────────
+      - name: Push review branch
+        if: steps.commit.outputs.changed == 'true'
+        shell: pwsh
+        run: git push origin "${{ steps.meta.outputs.branch }}"
+
+      # ── 8. Tell the human what to do next ──────────────────────────────────────
+      - name: Write next-steps summary
+        shell: pwsh
+        env:
+          CHANGED: ${{ steps.commit.outputs.changed }}
+          BRANCH: ${{ steps.meta.outputs.branch }}
+          BASE: ${{ steps.meta.outputs.base }}
+          SERVER: ${{ github.server_url }}
+          REPO: ${{ github.repository }}
+        run: |
+          if ($env:CHANGED -ne 'true') {
+            "## AI docs: no changes`nNothing was generated, so no branch was pushed." | Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+            return
+          }
+
+          $compare = "$($env:SERVER)/$($env:REPO)/compare/$($env:BASE)...$($env:BRANCH)?expand=1"
+          $doc     = "$($env:SERVER)/$($env:REPO)/blob/$($env:BRANCH)/scripts/ai-docs-scripts/README.md"
+
+          # Single-quoted here-string: backticks and code fences stay literal.
+          # __PLACEHOLDERS__ are replaced below.
+          $text = @'
+          ## AI docs branch is ready: `__BRANCH__`
+
+          The reference docs are done. The guides still need a person. **Do the steps in order and do not skip any.**
+
+          ### Steps
+
+          1. Open this branch in **Open VS Code**.
+          2. **Open the powershell terminal.** and run this command:
+             ```powershell
+             .\scripts\ai-docs-scripts\New-GuidesPrompt.ps1 -All
+             ```
+             You should see `Prompt written to: ...\_update-prompt.md` in green.
+
+          3. **Run the AI agent.**
+             1. Open Copilot Chat in Agent mode.
+             2. Type `#_update-prompt.md` and press Enter.
+             3. Wait until Copilot says it is finished (several minutes), then click **Keep**.
+
+          4. **Rebuild the indexes.** Paste these two lines into the terminal, one at a time, pressing Enter after each:
+             ```powershell
+             .\scripts\ai-docs-scripts\Update-GuidesIndex.ps1
+             .\scripts\ai-docs-scripts\Update-AiDocsIndex.ps1
+             ```
+             Green `Updated` or grey `Unchanged` is fine. **Red means stop and ask the docs team.**
+
+          5. **Final** - Review the changes, commit, push and open a pull request when ready. 
+
+          More detail: [Reviewer guide in the README](__DOC__)
+          '@
+
+          $text = $text.Replace('__BRANCH__', $env:BRANCH).Replace('__BASE__', $env:BASE).Replace('__COMPARE__', $compare).Replace('__DOC__', $doc)
+          $text | Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
