@@ -44,14 +44,21 @@ jobs:
       - name: Resolve review metadata
         id: meta
         shell: pwsh
+        env:
+          INPUT_BASE: ${{ inputs.base_branch }}
+          INPUT_LABEL: ${{ inputs.release_name }}
         run: |
-          $base = '${{ inputs.base_branch }}'
+          $base = $env:INPUT_BASE
           if ([string]::IsNullOrWhiteSpace($base)) { $base = 'main' }
 
-          $label = '${{ inputs.release_name }}'
+          $label = $env:INPUT_LABEL
           if ([string]::IsNullOrWhiteSpace($label)) {
             $label = "auto-$([DateTime]::UtcNow.ToString('yyyyMMdd-HHmmss'))"
           }
+
+          # Must start alphanumeric so the value can't be parsed as a git option.
+          if ($base  -notmatch '^[A-Za-z0-9][A-Za-z0-9._/-]*$') { throw "Invalid base_branch: '$base'" }
+          if ($label -notmatch '^[A-Za-z0-9][A-Za-z0-9._-]*$')  { throw "Invalid release_name: '$label'" }
 
           $branch = "ai-docs/$label"
 
@@ -65,9 +72,12 @@ jobs:
       # ── 3. Create the AI docs review branch from the chosen base ────────────
       - name: Create AI docs review branch
         shell: pwsh
+        env:
+          BASE: ${{ steps.meta.outputs.base }}
+          BRANCH: ${{ steps.meta.outputs.branch }}
         run: |
-          git checkout ${{ steps.meta.outputs.base }}
-          git checkout -B "${{ steps.meta.outputs.branch }}"
+          git checkout $env:BASE
+          git checkout -B $env:BRANCH
 
       # ── 4. Download required tooling and SDK artifacts ───────────────────────
       - name: Download C2M4AI
@@ -87,15 +97,11 @@ jobs:
       # ── 5. Run the AI Docs Pipeline on the review branch ────────────────────
       - name: Run AI Docs Pipeline
         shell: pwsh
+        env:
+          FORCE: ${{ inputs.force_regenerate }}
         run: |
-          $params = @{ RootDir = '.' }
-
-          if ('${{ inputs.force_regenerate }}' -eq 'true') {
-            $params.All = $true
-            $params.Force = $true
-          } else {
-            $params.All = $true
-          }
+          $params = @{ RootDir = '.'; All = $true }
+          if ($env:FORCE -eq 'true') { $params.Force = $true }
 
           .\scripts\ai-docs-scripts\Invoke-AiDocsPipeline.ps1 @params
 
@@ -103,6 +109,8 @@ jobs:
       - name: Commit AI docs changes
         id: commit
         shell: pwsh
+        env:
+          LABEL: ${{ steps.meta.outputs.label }}
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name  "github-actions[bot]"
@@ -111,7 +119,7 @@ jobs:
           $staged = git diff --cached --stat
 
           if ($staged) {
-            git commit -m "docs: regenerate AI docs ${{ steps.meta.outputs.label }} [skip ci]"
+            git commit -m "docs: regenerate AI docs $($env:LABEL) [skip ci]"
             "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
             Write-Host "AI docs branch updated with generated changes." -ForegroundColor Green
           } else {
@@ -123,7 +131,9 @@ jobs:
       - name: Push review branch
         if: steps.commit.outputs.changed == 'true'
         shell: pwsh
-        run: git push origin "${{ steps.meta.outputs.branch }}"
+        env:
+          BRANCH: ${{ steps.meta.outputs.branch }}
+        run: git push origin $env:BRANCH
 
       # ── 8. Tell the human what to do next ──────────────────────────────────────
       - name: Write next-steps summary
