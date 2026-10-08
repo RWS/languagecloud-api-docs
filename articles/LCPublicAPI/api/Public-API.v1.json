@@ -8922,7 +8922,7 @@
           "Target File"
         ],
         "summary": "Get Verification Messages",
-        "description": "Retrieves the verification messages of a target file version. Verification messages are only available after the file has gone through the Automated QA Check workflow step; otherwise an empty list is returned.",
+        "description": "Retrieves the verification messages of a target file version. Verification messages are only available after the file has gone through the Automated QA Check workflow step; otherwise, an empty list is returned.",
         "parameters": [
           {
             "$ref": "#/components/parameters/Authorization"
@@ -18567,7 +18567,7 @@
           }
         },
         "operationId": "UpdateTranslationMemoryFilterExpressions",
-        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units. When using custom filters make sure the project is configured correctly with the appropriate TM. New filters are only available for the user that adds them.",
+        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filters are stored per user and are only available to the user who adds them. They can be used to filter translation units. When using custom filters, make sure the project is configured with the appropriate Translation Memory. ",
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
