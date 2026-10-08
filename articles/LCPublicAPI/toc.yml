@@ -48,6 +48,9 @@
     - name: Multipart considerations
       href: docs/How-to-multipart.md
 
+    - name: Documentation for AI Agents
+      href: docs/AI-Development.md
+
 - name: Authentication
   items:
     - name: Service users and custom applications

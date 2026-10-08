@@ -1,4 +1,4 @@
-# AI Agent Development
+# Documentation for AI Agents
 
 The Trados Cloud Platform API provides a machine-readable documentation set designed specifically for AI-assisted integrations.This section gives you and your tooling everything needed to understand and call the API correctly.
 

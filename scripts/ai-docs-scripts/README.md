@@ -1,6 +1,6 @@
 ﻿# AI Docs Pipeline
 
-Generates and maintains the `aidocs/` section of the Language Cloud API docs.
+Generates and maintains the `aidocs/` section of the Trados API docs.
 
 - **`aidocs/reference/`** — fully automated from the OpenAPI spec
 - **`aidocs/guides/`** — human-reviewed, AI-assisted via VS Code Copilot
