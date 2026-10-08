@@ -12,3 +12,6 @@ _site
 *.testlog
 .vscode
 .vs
+tools/
+_update-prompt.md
+.api-spec-hash
