@@ -22,6 +22,9 @@ Translation Memory Import endpoint:
 Translation Memory Export endpoint:
 - [Export Translation Memory](../../api/Public-API.v1-fv.html#/operations/ExportTranslationMemory) - Export TUs matching specified filter criteria
 
+Translation Memory Update Filter Expression endpoint:
+- [Update Translation Memory Filter Expression](../../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemoryFilterExpressions) - Update the hard filter expression for a TM
+
 ## Translation Memory filters
 
 Translation Memory filters let you apply complex criteria during TM operations. Filters can reference system and custom fields, and support multiple data types and operators.

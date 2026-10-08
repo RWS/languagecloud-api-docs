@@ -17783,7 +17783,7 @@
           }
         },
         "operationId": "UpdateTranslationMemoryFilterExpressions",
-        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units.",
+        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units. When using custom filters make sure the project is configured correctly with the appropriate TM.",
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
@@ -34834,7 +34834,7 @@
           "expression": {
             "type": "string",
             "minLength": 1,
-            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the advanced configuration documentation for more information.",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration.html) for more information. For the System Fields we use the hard filters mapping, you can see the table in the advanced documentation.",
             "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10"
           }
         },
