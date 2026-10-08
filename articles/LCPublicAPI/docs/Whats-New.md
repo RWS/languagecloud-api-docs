@@ -3,7 +3,7 @@
 </br> 
 
 ## 08 October 2026
-- You can update your TM filters using the new [Update Translation Memory Filter Expression](../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemoryFilterExpressions) endpoint.
+- You can now update your TM filters using the new [Update Translation Memory Filter Expression](../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemoryFilterExpressions) endpoint.
 - You can get the verification messages of a target file version using the new [Get Verification Messages](../api/Public-API.v1-fv.html#/operations/GetVerificationMessages) endpoint.
 - We fixed various bugs.
 
