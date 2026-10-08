@@ -18567,7 +18567,7 @@
           }
         },
         "operationId": "UpdateTranslationMemoryFilterExpressions",
-        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units. When using custom filters make sure the project is configured correctly with the appropriate TM.",
+        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filter expressions are stored per name within each Translation Memory and can be used to filter translation units. When using custom filters make sure the project is configured correctly with the appropriate TM. New filters are only available for the user that adds them.",
         "parameters": [
           {
             "$ref": "#/components/parameters/X-LC-Tenant"
