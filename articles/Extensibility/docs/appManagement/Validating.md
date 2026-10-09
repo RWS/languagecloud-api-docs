@@ -34,7 +34,7 @@ focus: false
 
 ### Automatic Validation
 
-Some settings, especially credentials may expire after a while. The purpose of the automatic validation is to detect the instances with expired settings and mark them accordingly. A background job runs daily and checks all the installed instances. When a validation fails, that particular instance will be marked as *Not configured*, making it unusable anymore.
+Some settings, especially credentials may expire after a while. The purpose of the automatic validation is to detect the instances with expired settings and mark them accordingly. A background job runs every hour and checks all the installed instances. When a validation fails, that particular instance will be marked as *Not configured*, making it unusable anymore.
 
 ![NotConfigured](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/extensibility/app-management/NotConfigured.PNG?raw=true)
 

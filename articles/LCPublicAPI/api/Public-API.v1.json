@@ -8916,6 +8916,127 @@
         }
       ]
     },
+    "/projects/{projectId}/target-files/{targetFileId}/versions/{fileVersionId}/verification-messages": {
+      "get": {
+        "tags": [
+          "Target File"
+        ],
+        "summary": "Get Verification Messages",
+        "description": "Retrieves the verification messages of a target file version. Verification messages are only available after the file has gone through the Automated QA Check workflow step; otherwise, an empty list is returned.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/fields"
+          },
+          {
+            "$ref": "#/components/parameters/verificationMessagesLanguageCode"
+          },
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/includeIgnored"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/list-verification-messages-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the query parameter mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": the authenticated user is not allowed to read the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": the project, the target file or its version could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "GetVerificationMessages"
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/projectId"
+        },
+        {
+          "$ref": "#/components/parameters/targetFileId"
+        },
+        {
+          "$ref": "#/components/parameters/fileVersionId"
+        }
+      ]
+    },
     "/projects/{projectId}/target-files/{targetFileId}/versions": {
       "get": {
         "tags": [
@@ -18356,6 +18477,115 @@
             "$ref": "#/components/parameters/fields"
           }
         ]
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "translationMemoryId",
+          "in": "path",
+          "required": true,
+          "description": "The identifier of the translation memory"
+        }
+      ]
+    },
+    "/translation-memory/{translationMemoryId}/filter-expressions": {
+      "post": {
+        "summary": "Update Filter Expressions",
+        "tags": [
+          "Translation Memory"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content. The filter expressions were replaced successfully.",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* “invalid”: Invalid input in the request body for the field mentioned in the “name” field on the error response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": The authenticated user is not allowed to read the resource.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": The translation memory could not be found by identifier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "operationId": "UpdateTranslationMemoryFilterExpressions",
+        "description": "Replaces all filter expressions of the Translation Memory with the provided ones. Filters are stored per user and are only available to the user who adds them. They can be used to filter translation units. When using custom filters, make sure the project is configured with the appropriate Translation Memory. ",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          },
+          {
+            "$ref": "#/components/parameters/Authorization"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/update-filter-expressions-request"
+              }
+            }
+          },
+          "required": true
+        }
       },
       "parameters": [
         {
@@ -33123,6 +33353,12 @@
             "example": "2022-01-12T12:00:00Z",
             "description": "The `DateTime` when the translation memory reindexing was performed.  <br> UTC Timezone  <br> Allowed formats: <br> \"YYYY-MM-DDThh:mmZ\" <br> \"YYYY-MM-DDThh:mm:ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sZ\" <br> \"YYYY-MM-DDThh:mm:ss.ssZ\" <br> \"YYYY-MM-DDThh:mm:ss.sss",
             "nullable": true
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/translation-memories-filter"
+            }
           }
         },
         "required": [
@@ -33447,6 +33683,10 @@
                 "rejectedSignOff"
               ]
             }
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -33713,6 +33953,10 @@
         "properties": {
           "languageDirection": {
             "$ref": "#/components/schemas/translation-memory-export-language-direction"
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of the filter expression you want to apply, it's available in the response body of [GET](Public-API.v1-fv.html#/operations/GetTranslationMemory)"
           }
         },
         "required": [
@@ -34668,6 +34912,72 @@
           }
         }
       },
+      "verification-message": {
+        "title": "Verification Message",
+        "type": "object",
+        "description": "A verification message.",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The verification message identifier."
+          },
+          "messageType": {
+            "type": "string",
+            "description": "The type of the verification message."
+          },
+          "friendlyName": {
+            "type": "string",
+            "description": "The localized friendly name of the message type."
+          },
+          "verifier": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The verifier that produced the message.</div> ",
+            "x-default-field": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
+          },
+          "detailedErrorMessage": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The localized detailed error message, with error arguments substituted in.</div> ",
+            "x-default-field": true
+          },
+          "suggestion": {
+            "type": "string",
+            "description": "The localized suggestion for resolving the message."
+          },
+          "segmentId": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The identifier of the segment the message relates to.</div> ",
+            "x-default-field": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "list-verification-messages-response": {
+        "title": "List Verification Messages Response",
+        "type": "object",
+        "description": "A response for the Get Verification Messages endpoint.",
+        "properties": {
+          "itemCount": {
+            "type": "integer"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/verification-message"
+            }
+          }
+        },
+        "required": [
+          "itemCount",
+          "items"
+        ]
+      },
       "volume-unit-type": {
         "title": "Volume Unit Type",
         "type": "string",
@@ -35533,6 +35843,60 @@
             }
           }
         }
+      },
+      "update-filter-expressions-request": {
+        "title": "Update Filter Expressions Request",
+        "type": "object",
+        "description": "Request body for replacing all filter expressions of a Translation Memory. Each entry is stored per name within the Translation Memory.",
+        "properties": {
+          "filterExpressions": {
+            "type": "array",
+            "description": "The list of filter expressions that will replace the existing ones.",
+            "items": {
+              "$ref": "#/components/schemas/filter-expression-request-item"
+            }
+          }
+        },
+        "required": [
+          "filterExpressions"
+        ]
+      },
+      "filter-expression-request-item": {
+        "title": "Filter Expression Request",
+        "type": "object",
+        "description": "A single named filter expression.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the filter."
+          },
+          "expression": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration.html) for more information. For the System Fields we use the hard filters mapping, you can see the table in the advanced documentation.",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10"
+          }
+        },
+        "required": [
+          "name",
+          "expression"
+        ]
+      },
+      "translation-memories-filter": {
+        "title": "Translation Memories Filter",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the filter, this should be used in the import/export TM request"
+          },
+          "filterExpression": {
+            "type": "string",
+            "example": "(NOT \"TU confirmation level\" = \"Not Translated\" OR \"Last modified on\" > 2024-02-29T10:00:00.000Z\") AND \"Source segment length\" >= 10",
+            "description": "The filter expression is a set of atomic expressions connected by logical operators. An atomic expression describes the relationship of a field to a value. Check the [advanced configuration documentation](../docs/translation-memory/Translation-memory-advanced-configuration) for more information."
+          }
+        }
       }
     },
     "parameters": {
@@ -35601,6 +35965,15 @@
           "default": 0
         }
       },
+      "includeIgnored": {
+        "name": "includeIgnored",
+        "in": "query",
+        "description": "When false, excludes verification messages that have been marked as ignored. Defaults to true.",
+        "schema": {
+          "type": "boolean",
+          "default": true
+        }
+      },
       "location": {
         "name": "location",
         "in": "query",
@@ -35642,6 +36015,15 @@
         "description": "A comma separated list of fields to include in the response.\n        Every value in the list should either consist of a top-level property name (excluding the items envelope for endpoints returning lists) or refer to a property of a top-level property of type object, in the following form: \"toplevelpropertyname.subpropertyname\".\n        When this query parameter is omitted, default resource representations are returned (excluding fields marked as optional). The same applies to nested objects when just specifying the top-level property name, without explicitly listing sub-property names. When specifying the fields query parameter, only the specified fields are returned.\n        The id property is always returned.",
         "schema": {
           "type": "string"
+        }
+      },
+      "verificationMessagesLanguageCode": {
+        "name": "languageCode",
+        "in": "query",
+        "description": "The language code used to localize the verification message text. The verification message text is localized for \"en-US\", \"cy-GB\", \"de-DE\", \"es-ES\", \"fr-CA\", \"fr-FR\", \"it-IT\", \"ja-JP\", \"nl-NL\" and \"zh-CN\".",
+        "schema": {
+          "type": "string",
+          "default": "en-US"
         }
       },
       "email": {
