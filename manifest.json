@@ -2424,6 +2424,2306 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/api-clients.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/api-clients.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/api-lifecycle.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/api-lifecycle.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/async-polling.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/async-polling.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/auth.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/auth.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/custom-fields.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/custom-fields.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/data-bridge.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/data-bridge.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/errors.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/errors.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/fields.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/fields.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/file-formats.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/file-formats.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/file-upload.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/file-upload.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/headers.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/headers.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/index.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/index.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/language-codes.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/language-codes.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/locations-folders.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/locations-folders.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/multi-region.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/multi-region.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/pagination.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/pagination.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/projects.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/projects.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/put-semantics.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/put-semantics.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/quotes.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/quotes.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/rate-limits.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/rate-limits.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/termbases.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/termbases.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/translation-api.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/translation-api.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/translation-memory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/translation-memory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/guides/webhooks.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/guides/webhooks.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/index.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/index.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AcceptTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AcceptTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddPerfectMatchBatchMapping.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddPerfectMatchBatchMapping.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddProjectsToGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddProjectsToGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddSourceFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AddTargetFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AddTargetFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/AssignTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/AssignTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CancelProjectFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CancelProjectFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CompleteProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CompleteProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CompleteTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CompleteTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ConvertTermbaseTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ConvertTermbaseTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CopyTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CopyTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateApplication.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateApplication.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateCustomer.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateCustomer.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreatePerfectMatchMapping.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreatePerfectMatchMapping.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreatePricingModel.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreatePricingModel.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProjectGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProjectGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProjectTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateProjectTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateRole.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateRole.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateScheduleTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateScheduleTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbaseEntry.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbaseEntry.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbaseTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTermbaseTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateUser.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateUser.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateVendor.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateVendor.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/CreateVendorOrderTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/CreateVendorOrderTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteApplication.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteApplication.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteCustomer.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteCustomer.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeletePerfectMatchFileMappingForFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeletePerfectMatchFileMappingForFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeletePricingModel.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeletePricingModel.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProjectGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProjectGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProjectTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteProjectTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteRole.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteRole.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteScheduleTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteScheduleTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseEntries.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseEntries.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseEntry.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseEntry.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTermbaseTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteUser.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteUser.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteVendor.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteVendor.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteVendorOrderTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DeleteVendorOrderTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedPackage.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedPackage.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTargetFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTargetFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadExportedTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadQuoteReport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadQuoteReport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadSourceFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadSourceFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadTermbaseDefinition.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadTermbaseDefinition.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadTermbaseImportLog.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/DownloadTermbaseImportLog.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportPackage.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportPackage.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportProjectFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportProjectFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportProjectFilesStatus.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportProjectFilesStatus.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportQuoteReport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportQuoteReport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTargetFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTargetFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ExportTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetApplication.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetApplication.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetCustomField.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetCustomField.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetCustomer.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetCustomer.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetFieldTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetFieldTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetFileProcessingConfiguration.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetFileProcessingConfiguration.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetFileTypeSetting.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetFileTypeSetting.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetFolder.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetFolder.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetImportHistory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetImportHistory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetLanguageProcessingRule.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetLanguageProcessingRule.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetMyUser.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetMyUser.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetPerfectMatchCandidates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetPerfectMatchCandidates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetPerfectMatchMapping.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetPerfectMatchMapping.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetPricingModel.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetPricingModel.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectConfiguration.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectConfiguration.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetProjectTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetPublicKey.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetPublicKey.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetQuoteTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetQuoteTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetRole.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetRole.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetRootFolder.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetRootFolder.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetScheduleTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetScheduleTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetSourceFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetSourceFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetSourceFileProperties.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetSourceFileProperties.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTMImportHistory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTMImportHistory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTargetFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTargetFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTargetFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTargetFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTaskType.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTaskType.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbaseEntry.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbaseEntry.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbaseTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTermbaseTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTqaProfile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTqaProfile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTranslationEngine.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTranslationEngine.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetUser.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetUser.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetVendor.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetVendor.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetVendorOrderTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetVendorOrderTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/GetWorkflow.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/GetWorkflow.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ImportPackage.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ImportPackage.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTargetFileVersion.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTargetFileVersion.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ImportTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/Index.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/Index.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListApplications.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListApplications.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListCustomFields.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListCustomFields.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListCustomers.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListCustomers.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListFieldTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListFieldTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListFileProcessingConfigurations.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListFileProcessingConfigurations.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListFileTypeSettings.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListFileTypeSettings.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListFolders.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListFolders.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListGroups.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListGroups.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListLanguageProcessingRules.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListLanguageProcessingRules.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListLanguages.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListLanguages.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListLlmConfigurations.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListLlmConfigurations.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListMachineTranslations.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListMachineTranslations.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListMyAccounts.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListMyAccounts.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListPermissions.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListPermissions.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListPricingModels.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListPricingModels.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectGroups.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectGroups.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectTasks.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectTasks.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjectTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjects.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListProjects.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListPublicKeys.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListPublicKeys.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListQuoteTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListQuoteTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListRateLimits.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListRateLimits.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListRoles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListRoles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListScheduleTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListScheduleTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListSourceFileVersions.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListSourceFileVersions.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListSourceFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListSourceFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTargetFileVersions.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTargetFileVersions.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTargetFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTargetFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTaskTypes.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTaskTypes.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTasksAssignedToMe.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTasksAssignedToMe.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseEntries.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseEntries.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseEntryTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseEntryTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseTerms.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTermbaseTerms.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTqaProfiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTqaProfiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationEngines.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationEngines.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationMemories.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationMemories.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationServiceTypes.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListTranslationServiceTypes.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListUsers.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListUsers.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListVendorOrderTemplates.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListVendorOrderTemplates.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListVendors.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListVendors.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ListWorkflows.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ListWorkflows.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollExportPackage.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollExportPackage.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollExportTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollExportTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollFileAnalysis.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollFileAnalysis.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollImportPackage.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollImportPackage.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollQuoteReportExport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollQuoteReportExport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollTMImport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollTMImport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollTargetFileVersionExport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollTargetFileVersionExport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollTargetFileVersionImport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollTargetFileVersionImport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollTermbaseImport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollTermbaseImport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollTranslationMemoryExport.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollTranslationMemoryExport.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/PollUploadZipFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/PollUploadZipFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ReclaimTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ReclaimTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/RejectTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/RejectTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/ReleaseTask.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/ReleaseTask.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/RemoveProjectsFromGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/RemoveProjectsFromGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/RequestFileAnalysis.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/RequestFileAnalysis.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/RescheduleProjectTasks.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/RescheduleProjectTasks.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/StartProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/StartProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsAdd.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsAdd.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsConcordanceSearch.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsConcordanceSearch.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsLookup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsLookup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsUpdate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/TranslationsUpdate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateApplication.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateApplication.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateCustomField.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateCustomField.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateCustomer.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateCustomer.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchBatchMapping.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchBatchMapping.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchFileMappingWithManuallyUploadedFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchFileMappingWithManuallyUploadedFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchFileMappingWithProjectFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePerfectMatchFileMappingWithProjectFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePricingModel.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdatePricingModel.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProject.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProject.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectConfiguration.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectConfiguration.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectGroup.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectGroup.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectPricingModel.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectPricingModel.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateProjectTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateRole.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateRole.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateScheduleTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateScheduleTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceProperties.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateSourceProperties.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTargetFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTargetFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTargetFiles.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTargetFiles.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbase.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbase.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbaseEntry.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbaseEntry.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbaseTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTermbaseTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTranslationEngine.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTranslationEngine.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTranslationMemory.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateTranslationMemory.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateUser.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateUser.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateVendor.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateVendor.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateVendorOrderTemplate.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateVendorOrderTemplate.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateWorkflow.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UpdateWorkflow.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/LCPublicAPI/aidocs/reference/UploadZipFile.md",
+      "output": {
+        "resource": {
+          "relative_path": "articles/LCPublicAPI/aidocs/reference/UploadZipFile.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/LCPublicAPI/api/Data-Bridge-API.v1-fv.html",
       "output": {
         "resource": {
