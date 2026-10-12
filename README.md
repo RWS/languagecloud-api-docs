@@ -26,7 +26,7 @@ In order for you to make a contribution directly please follow the next steps:
 - Create a local branch from the main repository
 - Add your changes by modifying existing *Markdown* files or by adding new *Markdown* files
   - Adding new files will require updating the *toc.yml* files. Use the [guideline](https://dotnet.github.io/docfx/tutorial/intro_toc.html) provided by [DocFX](https://dotnet.github.io/docfx/) to learn more. 
-  - You can use tools such as *Notepad++* or *Visual Studio Code* to edit the content
+  - You can use tools such as *Notepad++* or *Visual Studio Code* to edit the content 
 - Create a Pull Request with your changes. 
   - This pull request will be reviewed for correctness by one of our technical writers
 - Once your pull request has been approved and committed into the *main* branch, an automatic pipeline will be triggered which will push your changes to the [live documentation site](https://rws.github.io/studio-api-docs/index.html)
