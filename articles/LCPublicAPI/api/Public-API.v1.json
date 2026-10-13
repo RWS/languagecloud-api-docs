@@ -34950,7 +34950,11 @@
           },
           "segmentId": {
             "type": "string",
-            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The identifier of the segment the message relates to.</div> ",
+            "description": "The identifier of the segment the message relates to, as it appears in the BCM file."
+          },
+          "segmentNumber": {
+            "type": "string",
+            "description": "<div style=\"display:inline; float:right; color:#008080; margin-top:-23px; font-size:11px\">default</div><div style=\"display: inline;\">The number of the segment the message relates to.</div> ",
             "x-default-field": true
           }
         },
