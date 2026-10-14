@@ -5,7 +5,7 @@
 ## 08 October 2026
 - You can now update your TM filters using the new [Update Translation Memory Filter Expression](../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemoryFilterExpressions) endpoint.
 - You can get the verification messages of a target file version using the new [Get Verification Messages](../api/Public-API.v1-fv.html#/operations/GetVerificationMessages) endpoint.
-- We added [AI docs](AI-Development.md), integrating agents with our documentation.
+- We have introduced [AI-readable API documentation](AI-Development.md), designed specifically for AI-assisted integrations.
 - We fixed various bugs.
 
 ## 09 September 2026
