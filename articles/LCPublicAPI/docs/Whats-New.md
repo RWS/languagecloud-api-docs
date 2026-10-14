@@ -2,6 +2,11 @@
 
 </br> 
 
+## 08 October 2026
+- You can now update your TM filters using the new [Update Translation Memory Filter Expression](../api/Public-API.v1-fv.html#/operations/UpdateTranslationMemoryFilterExpressions) endpoint.
+- You can get the verification messages of a target file version using the new [Get Verification Messages](../api/Public-API.v1-fv.html#/operations/GetVerificationMessages) endpoint.
+- We fixed various bugs.
+
 ## 09 September 2026
 - You can now export and import translation packages. Use [Export Package](../api/Public-API.v1-fv.html#/operations/ExportPackage), [Poll Export Package](../api/Public-API.v1-fv.html#/operations/PollExportPackage), and [Download Exported Package](../api/Public-API.v1-fv.html#/operations/DownloadExportedPackage) to generate and download `.sdlppx` packages. Use [Import Package](../api/Public-API.v1-fv.html#/operations/ImportPackage) together with [Poll Import Package](../api/Public-API.v1-fv.html#/operations/PollImportPackage) to return completed `.sdlppx`/`.sdlrpx` packages.
 - You can now retrieve the entry templates linked to a termbase via the new [List Termbase Entry Templates](../api/Public-API.v1-fv.html#/operations/ListTermbaseEntryTemplates) endpoint.
