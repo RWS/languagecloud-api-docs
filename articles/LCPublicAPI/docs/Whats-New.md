@@ -5,6 +5,7 @@
 ## 09 September 2026
 - You can now export and import translation packages. Use [Export Package](../api/Public-API.v1-fv.html#/operations/ExportPackage), [Poll Export Package](../api/Public-API.v1-fv.html#/operations/PollExportPackage), and [Download Exported Package](../api/Public-API.v1-fv.html#/operations/DownloadExportedPackage) to generate and download `.sdlppx` packages. Use [Import Package](../api/Public-API.v1-fv.html#/operations/ImportPackage) together with [Poll Import Package](../api/Public-API.v1-fv.html#/operations/PollImportPackage) to return completed `.sdlppx`/`.sdlrpx` packages.
 - You can now retrieve the entry templates linked to a termbase via the new [List Termbase Entry Templates](../api/Public-API.v1-fv.html#/operations/ListTermbaseEntryTemplates) endpoint.
+- We added [AI docs](AI-Development.md), integrating agents with our documentation.
 - We fixed various bugs.
 
 ## 02 July 2026
