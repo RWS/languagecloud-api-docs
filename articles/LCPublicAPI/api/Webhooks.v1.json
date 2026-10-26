@@ -620,6 +620,10 @@
               "bcm"
             ],
             "description": "The file type."
+          },
+          "sourceLanguage": {
+            "type": "string",
+            "description": "The language code of the source language of the task. Present only when available."
           }
         },
         "required": [
@@ -634,7 +638,7 @@
         "x-stoplight": {
           "id": "task-input-target-file"
         },
-        "description": "Target file information for task input. Extends source file with additional sourceFileId.",
+        "description": "Target file information for task input. Extends source file with additional sourceFileId and targetLanguage.",
         "allOf": [
           {
             "$ref": "#/components/schemas/task-input-source-file"
@@ -645,6 +649,10 @@
               "sourceFileId": {
                 "type": "string",
                 "description": "The identifier of the source file associated with this target file."
+              },
+              "targetLanguage": {
+                "type": "string",
+                "description": "The language code of the target language of the task. Present only when available."
               }
             },
             "required": [
