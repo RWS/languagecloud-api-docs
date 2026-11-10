@@ -2,7 +2,7 @@
 
 ## November 2026
 
-- We're implementing token refresh propagation in `trados-ui-extensibility` so your apps stay authenticated without user intervention.
+- As a security fix we're implementing token refresh propagation in `trados-ui-extensibility` so your apps stay authenticated without user intervention.
 
 ## June 2026
 
