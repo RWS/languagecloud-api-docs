@@ -1,5 +1,9 @@
 # What's New
 
+## November 2026
+
+- We're implementing token refresh propagation in trados-ui-extensibility so your apps stay authenticated without user intervention.
+
 ## June 2026
 
 - We extended the information available under [App Descriptor](./development/App-Descriptor.md) and [Webhooks](./development/Webhooks.md).
