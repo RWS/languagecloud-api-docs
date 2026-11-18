@@ -8468,7 +8468,7 @@
             }
           },
           "400": {
-            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.",
+            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.\n* \"missing\": a required custom field is missing, for the value mentioned in the \"name\" field on the error response.\n* \"empty\": empty value for a required custom field mentioned in the \"name\" field on the error response.\n* \"maxSize\": the maximum size was exceeded for the custom field value mentioned in the \"name\" field on the error response.\n* \"deleted\": some of the selected values were deleted and cannot be selected for some values of the \"customFields\" field.",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -8719,7 +8719,7 @@
             }
           },
           "400": {
-            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.",
+            "description": "Error responses:\n* \"invalid\": invalid input for the value mentioned in the “name” field on the error response.\n* \"missing\": a required custom field is missing, for the value mentioned in the \"name\" field on the error response.\n* \"empty\": empty value for a required custom field mentioned in the \"name\" field on the error response.\n* \"maxSize\": the maximum size was exceeded for the custom field value mentioned in the \"name\" field on the error response.\n* \"deleted\": some of the selected values were deleted and cannot be selected for some values of the \"customFields\" field.",
             "headers": {
               "X-LC-TraceId": {
                 "$ref": "#/components/headers/X-LC-TraceId"
@@ -30777,6 +30777,7 @@
           },
           "customFields": {
             "type": "array",
+            "description": "The custom fields of the target file. Only returned when explicitly requested through the `fields` query parameter (for example `fields=customFields`).",
             "items": {
               "$ref": "#/components/schemas/custom-field"
             }
@@ -30792,11 +30793,12 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the target file.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.",
+            "description": "The name of the target file.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.\\\nOptional. If omitted or blank, the name of the target file is left unchanged.",
             "minLength": 1
           },
           "customFields": {
             "type": "array",
+            "description": "The custom fields of the target file. Optional. If omitted (or empty), the custom fields of the target file are left unchanged. If provided, the list fully replaces the existing custom fields: any custom field not included in the list is removed.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
@@ -30829,11 +30831,12 @@
           },
           "name": {
             "type": "string",
-            "description": "The target file name.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.",
+            "description": "The target file name.\\\nThe name should not contain the extension.\\\nUnsupported characters in the name: `<`, `>`, `:`, `\"`, `/`, `\\`, `|`, `?`, `*`.\\\nOptional. If omitted or blank, the name of the target file is left unchanged.",
             "minLength": 1
           },
           "customFields": {
             "type": "array",
+            "description": "The custom fields of the target file. Optional. If omitted (or empty), the custom fields of the target file are left unchanged. If provided, the list fully replaces the existing custom fields: any custom field not included in the list is removed.",
             "items": {
               "$ref": "#/components/schemas/custom-field-request"
             }
