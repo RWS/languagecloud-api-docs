@@ -16965,6 +16965,207 @@
         }
       ]
     },
+    "/termbases/{termbaseId}/entries/{entryId}/languages/{language}": {
+      "delete": {
+        "summary": "Delete Termbase Entry Language",
+        "operationId": "DeleteTermbaseEntryLanguage",
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": - The authenticated user is not allowed to update the termbase entries.\n* \"entitlementMissing\": - Your subscription does not include access to the requested type of benefit.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": The entry or the language could not be found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"invalidStatus\": The termbase cannot be updated as it is currently being processed.\n* \"conflict\": The entry is currently being modified by another request. Retry the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "description": "Deletes a language, including all of its terms, from a termbase entry.<br>\nIf the entry has no other languages, the entire entry is deleted.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "tags": [
+          "Termbase"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/termbaseId"
+        },
+        {
+          "$ref": "#/components/parameters/entryId"
+        },
+        {
+          "$ref": "#/components/parameters/termbaseEntryLanguage"
+        }
+      ]
+    },
+    "/termbases/{termbaseId}/entries/{entryId}/languages/{language}/terms/{termId}": {
+      "delete": {
+        "summary": "Delete Termbase Entry Language Term",
+        "operationId": "DeleteTermbaseEntryLanguageTerm",
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": - The authenticated user is not allowed to update the termbase entries.\n* \"entitlementMissing\": - Your subscription does not include access to the requested type of benefit.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": The entry, the language or the term could not be found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "409": {
+            "description": "Error codes:\n* \"invalidStatus\": The termbase cannot be updated as it is currently being processed.\n* \"conflict\": The entry is currently being modified by another request. Retry the request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        },
+        "description": "Deletes a term from a language of a termbase entry.<br>\nIf it is the last term of the last language, the entire entry is deleted.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "tags": [
+          "Termbase"
+        ]
+      },
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/termbaseId"
+        },
+        {
+          "$ref": "#/components/parameters/entryId"
+        },
+        {
+          "$ref": "#/components/parameters/termbaseEntryLanguage"
+        },
+        {
+          "$ref": "#/components/parameters/termbaseEntryTermId"
+        }
+      ]
+    },
     "/termbases/{termbaseId}/exports": {
       "parameters": [
         {
@@ -36282,6 +36483,24 @@
           "type": "string"
         },
         "description": "The termbase entry identifier."
+      },
+      "termbaseEntryLanguage": {
+        "name": "language",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The language code of the termbase entry language (case-insensitive), for example `en-US`."
+      },
+      "termbaseEntryTermId": {
+        "name": "termId",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The termbase entry term identifier."
       },
       "humanReadableIds": {
         "name": "humanReadableIds",
