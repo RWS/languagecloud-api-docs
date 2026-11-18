@@ -36491,7 +36491,7 @@
         "schema": {
           "type": "string"
         },
-        "description": "The language code of the termbase entry language (case-insensitive), for example `en-US`."
+        "description": "The language code of the termbase entry language (case-insensitive), for example `en`."
       },
       "termbaseEntryTermId": {
         "name": "termId",
