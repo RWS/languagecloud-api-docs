@@ -52,6 +52,79 @@ For more details about translation memory imports you can also check out the [Im
 ![Import TM](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ImportTM.gif?raw=true)
 
 
+<!--LLM_GENERATED_START-->
+## Importing multiple language directions
+
+Use [Import Translation Memory Batch](../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemoryBatch) to import one uploaded file for multiple language directions in an existing translation memory:
+
+```http
+POST /public-api/v1/translation-memory/{translationMemoryId}/imports/batch
+```
+
+In Postman, choose **Body > form-data** and add these parts in this order:
+
+| Key | Type | Value |
+|---|---|---|
+| `properties` | Text | JSON containing `languageDirections` and optional shared import settings, as shown below |
+| `file` | File | The file to import (`tmx`, `sdltm`, `zip`, `tmx.gz` or `sdlxliff`) |
+
+Let Postman generate the multipart `Content-Type` header and boundary; do not use a raw JSON request body.
+
+Example value for the `properties` text part:
+
+```json
+{
+  "languageDirections": [
+    {
+      "sourceLanguageCode": "en-US",
+      "targetLanguageCode": "de-DE"
+    },
+    {
+      "sourceLanguageCode": "en-GB",
+      "targetLanguageCode": "fr-FR"
+    }
+  ],
+  "targetSegmentsDifferOption": "addNew",
+  "unknownFieldsOption": "addToTranslationMemory",
+  "onlyImportSegmentsWithConfirmationLevels": [
+    "translated",
+    "approvedTranslation"
+  ]
+}
+```
+
+The `languageDirections` array is required and must contain at least one entry. Each entry requires `sourceLanguageCode` and `targetLanguageCode`.
+
+The optional settings apply to all requested language directions:
+
+| Property | Default |
+|---|---|
+| `targetSegmentsDifferOption` | `addNew` |
+| `unknownFieldsOption` | `addToTranslationMemory` |
+| `onlyImportSegmentsWithConfirmationLevels` | `["translated", "approvedSignOff", "approvedTranslation"]` |
+| `exportInvalidTranslationUnits` | `true` |
+| `filterName` | No filter |
+
+Use the public API property names and case-sensitive values shown above, not downstream names such as `confirmationLevels`, `existingTUsUpdateMode` or `newFieldsBehaviour`. Settings belong at the top level of `properties`, not inside an `importSettings` object. `existingFieldsUpdateMode` is not supported by this endpoint.
+
+An accepted request returns HTTP `202` with an array of import IDs and initial statuses:
+
+```json
+[
+  { "id": "test-import-id-1", "status": "queued" },
+  { "id": "test-import-id-2", "status": "queued" }
+]
+```
+
+The initial `queued` status is assigned when building this response; it is not a live progress check. Poll each returned `id` separately with [Poll Translation Memory Import](../../api/Public-API.v1-fv.html#/operations/PollTMImport):
+
+```http
+GET /public-api/v1/translation-memory/imports/{importId}
+```
+
+The import completes successfully when its polled status is `done`. Other terminal statuses are `failed` and `cancelled`.
+<!--LLM_GENERATED_END-->
+
 ## Polling a translation memory import
 Some imports may take longer, depending on the size of the Translation Memory. 
 
