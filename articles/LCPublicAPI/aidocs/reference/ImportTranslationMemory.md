@@ -94,9 +94,7 @@ type: object
 properties:
   - sourceLanguageCode: type: string
   - targetLanguageCode: type: string
-  - importAsPlainText: type: boolean
   - exportInvalidTranslationUnits: type: boolean
-  - triggerRecomputeStatistics: type: boolean
   - targetSegmentsDifferOption: type: string enum: [addNew, overwrite, leaveUnchanged, keepMostRecent]
   - unknownFieldsOption: type: string enum: [skipTranslationUnit, ignore, addToTranslationMemory, failTranslationUnitImport]
   - onlyImportSegmentsWithConfirmationLevels: type: array

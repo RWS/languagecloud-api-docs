@@ -353,6 +353,8 @@
 |--------|------|-------------|-------------|-------|
 | GET | `/translation-memory/{translationMemoryId}/imports` | [GetTMImportHistory](./GetTMImportHistory.md) | Gets the import history for a translation memory. It returns the history of last 7 days. |  |
 | POST | `/translation-memory/{translationMemoryId}/imports` | [ImportTranslationMemory](./ImportTranslationMemory.md) | Generates an asynchronous import operation.  <br> <br> Read more about prerequisites and limitations on the [official documentation center](https://docs.rws.com/791595/741139/trados-enterprise/importing-tm-content). <br> Note: The order of the multipart form parameter must be implemented as such: properties first, file second. <br> Use the Poll Translation Memory Import endpoint to poll until the import status is `done`.<br> To track the progress of the import please refer to [Poll Translation Memory Import](#/operations/PollTMImport). |  |
+| POST | `/translation-memory/{translationMemoryId}/imports/batch` | [ImportTranslationMemoryBatch](./ImportTranslationMemoryBatch.md) | Generates asynchronous import operations for multiple language directions using one uploaded file. <br> Note: The order of the multipart form parameter must be implemented as such: properties first, file second. <br> Use the [Poll Translation Memory Import](#/operations/PollTMImport) endpoint with each returned import ID to poll until the import status is `done`. |  |
+
 | GET | `/translation-memory/imports/{importId}` | [PollTMImport](./PollTMImport.md) | Polls a Translation Memory import operation. The import is finished when the status is `done`. |  |
 
 ## Translation Memory Export

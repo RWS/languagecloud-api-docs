@@ -19257,6 +19257,172 @@
         ]
       }
     },
+    "/translation-memory/{translationMemoryId}/imports/batch": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "translationMemoryId",
+          "description": "The identifier of the Translation Memory.",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "Import Translation Memory Batch",
+        "operationId": "ImportTranslationMemoryBatch",
+        "description": "Generates asynchronous import operations for multiple language directions using one uploaded file. The import settings apply to all requested language directions.\n<br>\nSend the multipart form parts in this order: properties first, file second. The properties part contains JSON text with a non-empty languageDirections array and optional import settings at the top level, not inside an importSettings object.\n<br>\nThe response is an array of import identifiers and initial statuses. Each initial status is set to queued; use [Poll Translation Memory Import](#/operations/PollTMImport) with each returned id to retrieve its current status.",
+        "tags": [
+          "Translation Memory Import"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Authorization"
+          },
+          {
+            "$ref": "#/components/parameters/X-LC-Tenant"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Send properties as a JSON string in a text part, followed by the file part. For details on multipart requests please see [this article](../docs/How-to-multipart.html).",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "properties",
+                  "file"
+                ],
+                "properties": {
+                  "properties": {
+                    "$ref": "#/components/schemas/translation-memory-batch-import-request"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The file (binary string) to import into the translation memory for the requested language directions. <br>Accepted file types: <b>.tmx</b>, <b>.sdltm</b>, <b>.zip</b>, <b>.tmx.gz</b>, <b>.sdlxliff</b>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK - returned when no import has status queued or inProgress.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/translation-memory-import-response"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted - the imports have been queued for processing.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/translation-memory-import-response"
+                  }
+                },
+                "examples": {
+                  "batch-import-accepted": {
+                    "value": [
+                      {
+                        "id": "test-import-id-1",
+                        "status": "queued"
+                      },
+                      {
+                        "id": "test-import-id-2",
+                        "status": "queued"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "400": {
+            "description": "Error codes:\n* \"invalid\": Invalid input in the query/form parameter mentioned in the \"name\" field on the error response. The languageDirections array must not be empty and each entry must include sourceLanguageCode and targetLanguageCode.\n* \"empty\": Empty mandatory value mentioned in the \"name\" field on the error response.\n* \"multiPartOrder\": The multipart order in the body is not correct. The properties part must be first, followed by the file part.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "401": {
+            "description": "The user could not be identified.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "403": {
+            "description": "Error codes:\n* \"forbidden\": Not authorized to import translation memories.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          },
+          "404": {
+            "description": "Error codes:\n* \"notFound\": The translation memory or named filter could not be found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error-response"
+                }
+              }
+            },
+            "headers": {
+              "X-LC-TraceId": {
+                "$ref": "#/components/headers/X-LC-TraceId"
+              }
+            }
+          }
+        }
+      }
+    },
     "/translation-memory/imports/{importId}": {
       "parameters": [
         {
@@ -33633,19 +33799,9 @@
             "type": "string",
             "description": "The code of the target language  of the translation memory."
           },
-          "importAsPlainText": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
-          },
           "exportInvalidTranslationUnits": {
             "type": "boolean",
             "default": true
-          },
-          "triggerRecomputeStatistics": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
           },
           "targetSegmentsDifferOption": {
             "type": "string",
@@ -33693,6 +33849,110 @@
           "sourceLanguageCode",
           "targetLanguageCode"
         ]
+      },
+      "translation-memory-batch-import-request": {
+        "title": "Translation Memory Batch Import Properties",
+        "type": "object",
+        "description": "Translation Memory batch import properties sent as JSON inside a text part. Import settings are top-level properties and apply to all language directions.",
+        "properties": {
+          "languageDirections": {
+            "type": "array",
+            "description": "The language directions to import into the translation memory.",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "sourceLanguageCode": {
+                  "type": "string",
+                  "description": "The source language code of the import.",
+                  "example": "en-US"
+                },
+                "targetLanguageCode": {
+                  "type": "string",
+                  "description": "The target language code of the import.",
+                  "example": "de-DE"
+                }
+              },
+              "required": [
+                "sourceLanguageCode",
+                "targetLanguageCode"
+              ]
+            }
+          },
+          "exportInvalidTranslationUnits": {
+            "type": "boolean",
+            "description": "Save translation units that failed to import in a TMX file.",
+            "default": true
+          },
+          "targetSegmentsDifferOption": {
+            "type": "string",
+            "description": "How to handle translation units when target segments differ.",
+            "enum": [
+              "addNew",
+              "overwrite",
+              "leaveUnchanged",
+              "keepMostRecent"
+            ],
+            "default": "addNew"
+          },
+          "unknownFieldsOption": {
+            "type": "string",
+            "description": "How to handle translation units containing unknown user-defined fields.",
+            "enum": [
+              "skipTranslationUnit",
+              "ignore",
+              "addToTranslationMemory",
+              "failTranslationUnitImport"
+            ],
+            "default": "addToTranslationMemory"
+          },
+          "onlyImportSegmentsWithConfirmationLevels": {
+            "type": "array",
+            "description": "Only import segments with the listed confirmation levels. An empty array imposes no confirmation-level restriction.",
+            "items": {
+              "type": "string",
+              "enum": [
+                "translated",
+                "approvedTranslation",
+                "approvedSignOff",
+                "draft",
+                "rejectedTranslation",
+                "rejectedSignOff",
+                "notTranslated"
+              ]
+            },
+            "default": [
+              "translated",
+              "approvedSignOff",
+              "approvedTranslation"
+            ]
+          },
+          "filterName": {
+            "type": "string",
+            "description": "The name of a saved filter expression to apply to all language directions. Available filters are returned by [Get Translation Memory](Public-API.v1-fv.html#/operations/GetTranslationMemory)."
+          }
+        },
+        "required": [
+          "languageDirections"
+        ],
+        "example": {
+          "languageDirections": [
+            {
+              "sourceLanguageCode": "en-US",
+              "targetLanguageCode": "de-DE"
+            },
+            {
+              "sourceLanguageCode": "en-GB",
+              "targetLanguageCode": "fr-FR"
+            }
+          ],
+          "targetSegmentsDifferOption": "addNew",
+          "unknownFieldsOption": "addToTranslationMemory",
+          "onlyImportSegmentsWithConfirmationLevels": [
+            "translated",
+            "approvedTranslation"
+          ]
+        }
       },
       "translation-memory-import-response": {
         "title": "Translation Memory Import Response",
@@ -33833,19 +34093,9 @@
             ],
             "type": "string"
           },
-          "importAsPlainText": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
-          },
           "exportInvalidTranslationUnits": {
             "description": "This option describes if the invalid translation units were exported during the original translation memory import operation.",
             "type": "boolean"
-          },
-          "triggerRecomputeStatistics": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
           },
           "fileName": {
             "description": "The name of the file attached to the import request.",
@@ -33869,9 +34119,7 @@
           "onlyImportSegmentsWithConfirmationLevels",
           "unknownFieldsOption",
           "targetSegmentsDifferOption",
-          "importAsPlainText",
           "exportInvalidTranslationUnits",
-          "triggerRecomputeStatistics",
           "fileName",
           "sourceLanguageCode",
           "targetLanguageCode",

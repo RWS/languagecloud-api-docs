@@ -22,20 +22,18 @@ To import a translation memory, perform a `POST` request to the [Import Translat
 
 If you are not sure what properties to include, here's a short description for each of them:
 1. `sourceLanguageCode` and `targetLanguageCode` - These fields represent the language direction of your import. Make sure to provide both of them as they are required fields.
-2. `importAsPlainText` - When true, the translation units will be imported as plain text, excluding any text markup.
-3. `exportInvalidTranslationUnits` - When true, all the translation units that failed to import are saved in a `tmx` file.
-4. `triggerRecomputeStatistics` - When true, will recompute the fuzzy index statistics once the import is done.
-5. `targetSegmentsDifferOption` - Option to specify how to handle translation units in the Translation Memory, if the target segments differ.
+2. `exportInvalidTranslationUnits` - When true, all the translation units that failed to import are saved in a `tmx` file.
+3. `targetSegmentsDifferOption` - Option to specify how to handle translation units in the Translation Memory, if the target segments differ.
     - `addNew` - Add a new translation unit and leave the original translation unit with the same source untouched.
     - `overwrite` - Overwrite all the existing translation units where the source segment matches with the new content.
     - `leaveUnchanged` - Do not change the existing translation units with the same source segment and ignore the new translation unit.
     - `keepMostRecent` - Delete all the existing translation units with matching source segments and retain only the most recent translation unit
-6. `unknownFieldsOption` - Option to specify how to handle translation units and unknown fields in the Translation Memory.
+4. `unknownFieldsOption` - Option to specify how to handle translation units and unknown fields in the Translation Memory.
     - `addToTranslationMemory` - The translation unit is processed and the unknown user-defined fields are automatically added to the setup.
     - `skipTranslationUnit` - The translation units containing unknown user-defined fields are skipped.
     - `ignore` - The translation unit is processed and the unknown user-defined fields are ignored (not added to the setup).
     - `failTranslationUnitImport` - If any translation unit contains an unknown user-defined field an error is thrown.
-7. `onlyImportSegmentsWithConfirmationLevels` - Only segments with the specified confirmation levels will be imported.
+5. `onlyImportSegmentsWithConfirmationLevels` - Only segments with the specified confirmation levels will be imported.
     - `translated` - The segment has been fully translated, but not yet reviewed.
     - `approvedTranslation` - The translation has been reviewed and approved, but not signed-off.
     - `approvedSignOff` - The translation has been approved and signed-off.
@@ -51,6 +49,79 @@ For more details about translation memory imports you can also check out the [Im
 
 ![Import TM](https://github.com/RWS/language-cloud-public-api-doc-resources/blob/main/PublicAPI/ImportTM.gif?raw=true)
 
+
+<!--LLM_GENERATED_START-->
+## Importing multiple language directions
+
+Use [Import Translation Memory Batch](../../api/Public-API.v1-fv.html#/operations/ImportTranslationMemoryBatch) to import one uploaded file for multiple language directions in an existing translation memory:
+
+```http
+POST /public-api/v1/translation-memory/{translationMemoryId}/imports/batch
+```
+
+In Postman, choose **Body > form-data** and add these parts in this order:
+
+| Key | Type | Value |
+|---|---|---|
+| `properties` | Text | JSON containing `languageDirections` and optional shared import settings, as shown below |
+| `file` | File | The file to import (`tmx`, `sdltm`, `zip`, `tmx.gz` or `sdlxliff`) |
+
+Let Postman generate the multipart `Content-Type` header and boundary; do not use a raw JSON request body.
+
+Example value for the `properties` text part:
+
+```json
+{
+  "languageDirections": [
+    {
+      "sourceLanguageCode": "en-US",
+      "targetLanguageCode": "de-DE"
+    },
+    {
+      "sourceLanguageCode": "en-GB",
+      "targetLanguageCode": "fr-FR"
+    }
+  ],
+  "targetSegmentsDifferOption": "addNew",
+  "unknownFieldsOption": "addToTranslationMemory",
+  "onlyImportSegmentsWithConfirmationLevels": [
+    "translated",
+    "approvedTranslation"
+  ]
+}
+```
+
+The `languageDirections` array is required and must contain at least one entry. Each entry requires `sourceLanguageCode` and `targetLanguageCode`.
+
+The optional settings apply to all requested language directions:
+
+| Property | Default |
+|---|---|
+| `targetSegmentsDifferOption` | `addNew` |
+| `unknownFieldsOption` | `addToTranslationMemory` |
+| `onlyImportSegmentsWithConfirmationLevels` | `["translated", "approvedSignOff", "approvedTranslation"]` |
+| `exportInvalidTranslationUnits` | `true` |
+| `filterName` | No filter |
+
+Use the public API property names and case-sensitive values shown above, not downstream names such as `confirmationLevels`, `existingTUsUpdateMode` or `newFieldsBehaviour`. Settings belong at the top level of `properties`, not inside an `importSettings` object. `existingFieldsUpdateMode` is not supported by this endpoint.
+
+An accepted request returns HTTP `202` with an array of import IDs and initial statuses:
+
+```json
+[
+  { "id": "test-import-id-1", "status": "queued" },
+  { "id": "test-import-id-2", "status": "queued" }
+]
+```
+
+The initial `queued` status is assigned when building this response; it is not a live progress check. Poll each returned `id` separately with [Poll Translation Memory Import](../../api/Public-API.v1-fv.html#/operations/PollTMImport):
+
+```http
+GET /public-api/v1/translation-memory/imports/{importId}
+```
+
+The import completes successfully when its polled status is `done`. Other terminal statuses are `failed` and `cancelled`.
+<!--LLM_GENERATED_END-->
 
 ## Polling a translation memory import
 Some imports may take longer, depending on the size of the Translation Memory. 
