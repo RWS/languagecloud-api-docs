@@ -22,20 +22,18 @@ To import a translation memory, perform a `POST` request to the [Import Translat
 
 If you are not sure what properties to include, here's a short description for each of them:
 1. `sourceLanguageCode` and `targetLanguageCode` - These fields represent the language direction of your import. Make sure to provide both of them as they are required fields.
-2. `importAsPlainText` - When true, the translation units will be imported as plain text, excluding any text markup.
-3. `exportInvalidTranslationUnits` - When true, all the translation units that failed to import are saved in a `tmx` file.
-4. `triggerRecomputeStatistics` - When true, will recompute the fuzzy index statistics once the import is done.
-5. `targetSegmentsDifferOption` - Option to specify how to handle translation units in the Translation Memory, if the target segments differ.
+2. `exportInvalidTranslationUnits` - When true, all the translation units that failed to import are saved in a `tmx` file.
+3. `targetSegmentsDifferOption` - Option to specify how to handle translation units in the Translation Memory, if the target segments differ.
     - `addNew` - Add a new translation unit and leave the original translation unit with the same source untouched.
     - `overwrite` - Overwrite all the existing translation units where the source segment matches with the new content.
     - `leaveUnchanged` - Do not change the existing translation units with the same source segment and ignore the new translation unit.
     - `keepMostRecent` - Delete all the existing translation units with matching source segments and retain only the most recent translation unit
-6. `unknownFieldsOption` - Option to specify how to handle translation units and unknown fields in the Translation Memory.
+4. `unknownFieldsOption` - Option to specify how to handle translation units and unknown fields in the Translation Memory.
     - `addToTranslationMemory` - The translation unit is processed and the unknown user-defined fields are automatically added to the setup.
     - `skipTranslationUnit` - The translation units containing unknown user-defined fields are skipped.
     - `ignore` - The translation unit is processed and the unknown user-defined fields are ignored (not added to the setup).
     - `failTranslationUnitImport` - If any translation unit contains an unknown user-defined field an error is thrown.
-7. `onlyImportSegmentsWithConfirmationLevels` - Only segments with the specified confirmation levels will be imported.
+5. `onlyImportSegmentsWithConfirmationLevels` - Only segments with the specified confirmation levels will be imported.
     - `translated` - The segment has been fully translated, but not yet reviewed.
     - `approvedTranslation` - The translation has been reviewed and approved, but not signed-off.
     - `approvedSignOff` - The translation has been approved and signed-off.

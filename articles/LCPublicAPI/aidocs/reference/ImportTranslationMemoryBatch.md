@@ -142,17 +142,9 @@ properties:
           type: string
         targetLanguageCode:
           type: string
-  importAsPlainText:
-    type: boolean
-    deprecated: true
-    default: false
   exportInvalidTranslationUnits:
     type: boolean
     default: true
-  triggerRecomputeStatistics:
-    type: boolean
-    deprecated: true
-    default: false
   targetSegmentsDifferOption:
     type: string
     enum: [addNew, overwrite, leaveUnchanged, keepMostRecent]

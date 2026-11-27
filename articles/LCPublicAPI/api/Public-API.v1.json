@@ -33799,19 +33799,9 @@
             "type": "string",
             "description": "The code of the target language  of the translation memory."
           },
-          "importAsPlainText": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
-          },
           "exportInvalidTranslationUnits": {
             "type": "boolean",
             "default": true
-          },
-          "triggerRecomputeStatistics": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
           },
           "targetSegmentsDifferOption": {
             "type": "string",
@@ -33889,22 +33879,10 @@
               ]
             }
           },
-          "importAsPlainText": {
-            "type": "boolean",
-            "description": "(Deprecated) Import translation units as plain text without markup.",
-            "deprecated": true,
-            "default": false
-          },
           "exportInvalidTranslationUnits": {
             "type": "boolean",
             "description": "Save translation units that failed to import in a TMX file.",
             "default": true
-          },
-          "triggerRecomputeStatistics": {
-            "type": "boolean",
-            "description": "(Deprecated) Recompute fuzzy index statistics after import.",
-            "deprecated": true,
-            "default": false
           },
           "targetSegmentsDifferOption": {
             "type": "string",
@@ -34115,19 +34093,9 @@
             ],
             "type": "string"
           },
-          "importAsPlainText": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
-          },
           "exportInvalidTranslationUnits": {
             "description": "This option describes if the invalid translation units were exported during the original translation memory import operation.",
             "type": "boolean"
-          },
-          "triggerRecomputeStatistics": {
-            "description": "(Deprecated) The default value is set for this field, as this property is set internally.",
-            "type": "boolean",
-            "deprecated": true
           },
           "fileName": {
             "description": "The name of the file attached to the import request.",
@@ -34151,9 +34119,7 @@
           "onlyImportSegmentsWithConfirmationLevels",
           "unknownFieldsOption",
           "targetSegmentsDifferOption",
-          "importAsPlainText",
           "exportInvalidTranslationUnits",
-          "triggerRecomputeStatistics",
           "fileName",
           "sourceLanguageCode",
           "targetLanguageCode",

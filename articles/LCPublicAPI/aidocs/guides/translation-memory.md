@@ -17,9 +17,7 @@ Only `sourceLanguageCode` and `targetLanguageCode` are required; the rest have d
 | Property | Meaning |
 |---|---|
 | `sourceLanguageCode`, `targetLanguageCode` | Language direction of the import (required) |
-| `importAsPlainText` | When true, TUs are imported as plain text without markup |
 | `exportInvalidTranslationUnits` | When true, TUs that failed to import are saved in a `tmx` file |
-| `triggerRecomputeStatistics` | When true, recomputes fuzzy index statistics after import |
 | `targetSegmentsDifferOption` | Handling when target segments differ (below) |
 | `unknownFieldsOption` | Handling of unknown user-defined fields (below) |
 | `onlyImportSegmentsWithConfirmationLevels` | Only import segments with the listed confirmation levels |

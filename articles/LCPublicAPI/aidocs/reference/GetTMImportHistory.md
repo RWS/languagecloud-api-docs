@@ -127,9 +127,7 @@ properties:
       type: string enum: [translated, approvedTranslation, approvedSignOff, draft, rejectedTranslation, rejectedSignOff]
   - unknownFieldsOption: type: string enum: [skipTranslationUnit, ignore, addToTranslationMemory, failTranslationUnitImport]
   - targetSegmentsDifferOption: type: string enum: [addNew, overwrite, leaveUnchanged, keepMostRecent]
-  - importAsPlainText: type: boolean
   - exportInvalidTranslationUnits: type: boolean
-  - triggerRecomputeStatistics: type: boolean
   - fileName: type: string
   - sourceLanguageCode: type: string
   - targetLanguageCode: type: string
